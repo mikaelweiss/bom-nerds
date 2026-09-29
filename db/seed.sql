@@ -1,72 +1,95 @@
-insert into work (slug, name) values
+insert into work (id, name) values
     ('bible', 'Bible'),
     ('bom', 'Book of Mormon'),
     ('dc', 'Doctrine and Covenants'),
     ('pgp', 'Pearl of Great Price');
 
-insert into segment_kind (slug, name) values
-    ('verse', 'Verse'),
-    ('title', 'Title'),
-    ('subtitle', 'Subtitle'),
-    ('heading', 'Heading'),
-    ('superscription', 'Superscription'),
-    ('subscription', 'Subscription'),
-    ('acrostic_label', 'Acrostic label'),
-    ('testimony', 'Testimony'),
-    ('preface', 'Preface'),
-    ('note', 'Note'),
-    ('figure_explanation', 'Figure explanation'),
-    ('paragraph', 'Paragraph');
+insert into edition (id, work_id, name, language) values
+    ('kjv', 'bible', 'King James Version (1769)', 'en'),
+    ('wlc', 'bible', 'Westminster Leningrad Codex', 'hbo'),
+    ('sblgnt', 'bible', 'SBL Greek New Testament', 'grc'),
+    ('bom-2013', 'bom', 'Book of Mormon (2013)', 'en'),
+    ('dc-2013', 'dc', 'Doctrine and Covenants (2013)', 'en'),
+    ('pgp-2013', 'pgp', 'Pearl of Great Price (2013)', 'en');
 
-insert into alignment_kind (slug, name) values
-    ('same', 'Same word'),
-    ('variant', 'Variant'),
-    ('translates', 'Translates'),
-    ('parallel', 'Parallel'),
-    ('no_counterpart', 'No counterpart');
+insert into part_of_speech (id, name) values
+    ('noun', 'Noun'),
+    ('proper_noun', 'Proper noun'),
+    ('pronoun', 'Pronoun'),
+    ('verb', 'Verb'),
+    ('adjective', 'Adjective'),
+    ('adverb', 'Adverb'),
+    ('preposition', 'Preposition'),
+    ('conjunction', 'Conjunction'),
+    ('article', 'Article'),
+    ('numeral', 'Numeral'),
+    ('particle', 'Particle'),
+    ('interjection', 'Interjection');
 
-insert into entity_type (slug, parent_slug, name) values
+insert into entity_type (id, parent_id, name) values
     ('person', null, 'Person'),
     ('group', null, 'Group'),
     ('place', null, 'Place'),
+    ('city', 'place', 'City'),
+    ('land', 'place', 'Land'),
+    ('water', 'place', 'Water'),
+    ('mountain', 'place', 'Mountain'),
+    ('wilderness', 'place', 'Wilderness'),
     ('event', null, 'Event'),
     ('object', null, 'Object'),
     ('record', 'object', 'Record'),
-    ('topic', null, 'Topic'),
-    ('time_period', null, 'Time period');
+    ('office', null, 'Office'),
+    ('topic', null, 'Topic');
 
-insert into relation_type (slug, name, inverse_name) values
-    ('child_of', 'child of', 'parent of'),
-    ('spouse_of', 'spouse of', 'spouse of'),
-    ('sibling_of', 'sibling of', 'sibling of'),
-    ('descendant_of', 'descendant of', 'ancestor of'),
-    ('member_of', 'member of', 'has member'),
-    ('leader_of', 'leader of', 'led by'),
-    ('office_holder', 'holds office of', 'office held by'),
-    ('part_of', 'part of', 'has part'),
-    ('participant_in', 'participant in', 'has participant'),
-    ('took_place_at', 'took place at', 'site of'),
-    ('located_in', 'located in', 'contains'),
-    ('north_of', 'north of', 'south of'),
-    ('east_of', 'east of', 'west of'),
-    ('higher_than', 'higher than', 'lower than'),
-    ('near', 'near', 'near'),
-    ('borders', 'borders', 'borders'),
-    ('journey_to', 'journey to', 'journey from'),
-    ('named_after', 'named after', 'namesake of'),
-    ('kept_by', 'kept by', 'keeper of'),
-    ('written_by', 'written by', 'author of'),
-    ('abridged_from', 'abridged from', 'abridged into'),
-    ('handed_to', 'handed to', 'received from');
+insert into mention_kind (id, name) values
+    ('names', 'Names'),
+    ('about', 'About');
 
-insert into speech_mode (slug, name) values
+insert into speech_mode (id, name) values
     ('narration', 'Narration'),
     ('spoken', 'Spoken'),
     ('written', 'Written'),
     ('prayer', 'Prayer'),
     ('song', 'Song');
 
-insert into clause_role (slug, name) values
+insert into relationship_kind (id, name, reverse_name, two_way) values
+    ('child_of', 'child of', 'parent of', 0),
+    ('spouse_of', 'spouse of', 'spouse of', 1),
+    ('sibling_of', 'sibling of', 'sibling of', 1),
+    ('descendant_of', 'descendant of', 'ancestor of', 0),
+    ('member_of', 'member of', 'has member', 0),
+    ('leader_of', 'leader of', 'led by', 0),
+    ('holds_office', 'holds office', 'office held by', 0),
+    ('part_of', 'part of', 'has part', 0),
+    ('took_part_in', 'took part in', 'has participant', 0),
+    ('took_place_at', 'took place at', 'site of', 0),
+    ('located_in', 'located in', 'contains', 0),
+    ('north_of', 'north of', 'south of', 0),
+    ('east_of', 'east of', 'west of', 0),
+    ('higher_than', 'higher than', 'lower than', 0),
+    ('near', 'near', 'near', 1),
+    ('borders', 'borders', 'borders', 1),
+    ('journey_to', 'journey to', 'journey from', 0),
+    ('named_after', 'named after', 'namesake of', 0),
+    ('kept_by', 'kept by', 'keeper of', 0),
+    ('written_by', 'written by', 'author of', 0),
+    ('abridged_from', 'abridged from', 'abridged into', 0);
+
+insert into counting_system (id, name) values
+    ('since_lehi', 'Years since Lehi left Jerusalem'),
+    ('reign_of_judges', 'Years of the reign of the judges'),
+    ('since_sign', 'Years since the sign of Christ''s birth'),
+    ('bc_ad', 'BC/AD');
+
+insert into link_kind (id, name, two_way) values
+    ('quotes', 'Quotes', 0),
+    ('parallel', 'Parallel', 1),
+    ('same_event', 'Same event', 1),
+    ('alludes_to', 'Alludes to', 0),
+    ('fulfills', 'Fulfills', 0),
+    ('cross_reference', 'Cross-reference', 1);
+
+insert into clause_role (id, name) values
     ('subject', 'Subject'),
     ('verb', 'Verb'),
     ('object', 'Object'),
@@ -74,22 +97,8 @@ insert into clause_role (slug, name) values
     ('complement', 'Complement'),
     ('adverbial', 'Adverbial');
 
-insert into structure_kind (slug, name) values
+insert into structure_kind (id, name) values
     ('chiasm', 'Chiasm'),
     ('parallelism', 'Parallelism'),
     ('list', 'List'),
     ('acrostic', 'Acrostic');
-
-insert into link_type (slug, name) values
-    ('quotes', 'Quotes'),
-    ('parallel', 'Parallel'),
-    ('same_event', 'Same event'),
-    ('alludes', 'Alludes to'),
-    ('fulfills', 'Fulfills'),
-    ('cross_reference', 'Cross-reference');
-
-insert into calendar (slug, name) values
-    ('western', 'BC/AD'),
-    ('since_lehi', 'Years since Lehi left Jerusalem'),
-    ('reign_of_judges', 'Years of the reign of the judges'),
-    ('since_sign', 'Years since the sign of Christ''s birth');

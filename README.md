@@ -7,6 +7,9 @@ Enjoy!
 
 # Plans for now:
 
-1. decide on a standard set of tables
-2. build a few example visualizations and figure out which best help you study
-3. Get feedback and iterate
+1. Sign off on the dataset spec in [docs/decisions.md](docs/decisions.md)
+2. Build the CLI and the text scripts
+3. Run every layer on a pilot chapter and review the output
+4. Run the full tagging
+
+Visualizations and the API that serves the data are separate projects.

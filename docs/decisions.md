@@ -6,6 +6,8 @@ What this dataset holds, how it is built, and what each word in it means. Taggin
 
 Every book of scripture, tagged and linked across all four works, so other projects can build visualizations and study helps on top of it. The dataset is built once, almost entirely by AI, and is too large for people to review. Every choice here aims to give the AI as few chances to make a mistake as possible.
 
+This repository builds the dataset only. The API that serves it and the sites that visualize it are separate projects, so how fast the data is to serve plays no part in these choices.
+
 Kept out on purpose:
 
 - Numbers anyone can compute from the data, such as word counts.
@@ -60,6 +62,8 @@ Agents never touch the database. They work through a CLI that:
 
 Scripts do everything they can. AI does the rest. Each fact has one answer, and a correction replaces it.
 
+Jobs within one build step don't depend on each other, so they run massively in parallel.
+
 ### Keeping the AI from making mistakes
 
 1. **The AI copies, never counts.** It points at words by verse and quote. The CLI finds the words and assigns word numbers. The AI never sees a word number.
@@ -100,7 +104,7 @@ Works, editions, books, chapters, verses, and words. Each word keeps its exact t
 
 The Doctrine and Covenants covers sections 1 to 138. Both Official Declarations are left out. Official Declaration 2 (1978) is under copyright. Official Declaration 1 (1890) is public domain but missing from our source.
 
-Built by script from bcbooks/scriptures-json for the Book of Mormon, Doctrine and Covenants, and Pearl of Great Price, and from eBible's KJV for the Bible.
+Built by script from bcbooks/scriptures-json for the Book of Mormon, Doctrine and Covenants, and Pearl of Great Price, and from eBible's KJV for the Bible. Both are already digital, so nothing needs OCR.
 
 ### Hebrew and Greek
 
@@ -112,9 +116,9 @@ Only the KJV's content words carry Strong's numbers, so small words like "the" a
 
 ### Dictionary
 
-Each English word's headword (its dictionary form: "go" for "went") and the meaning it carries in its verse (one sense of a headword: "bear" the animal, or "bear" to carry). Hebrew and Greek words get meanings too. Their headwords come from the Hebrew and Greek layer.
+Each English word's headword (its dictionary form: "go" for "went") its part of speech, and the meaning it carries in its verse (one sense of a headword: "bear" the animal, or "bear" to carry). Hebrew and Greek words get meanings too. Their headwords come from the Hebrew and Greek layer.
 
-Built by script for English headwords, and for Hebrew and Greek meanings wherever Macula's own word senses cover them. For the rest, AI writes the meanings of each headword, one job per headword. Then AI picks each word's meaning from that list, one job per chapter.
+Built by script for English headwords and parts of speech, and for Hebrew and Greek meanings wherever Macula's own word senses cover them. For the rest, AI writes the meanings of each headword, one job per headword. Then AI picks each word's meaning from that list, one job per chapter.
 
 ```json
 { "passage": { "verse": "1 Nephi 3:7", "quote": "said" }, "meaning": "say.1" }

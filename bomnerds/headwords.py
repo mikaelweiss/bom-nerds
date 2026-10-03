@@ -24,10 +24,10 @@ ARCHAIC_VERBS = {
 TABLE = {
     **{form: (headword, "pronoun") for headword, forms in PRONOUNS.items() for form in forms.split()},
     **{form: (headword, "verb") for headword, forms in ARCHAIC_VERBS.items() for form in forms.split()},
-    "these": ("this", None), "those": ("that", None), "an": ("a", "article"),
+    "these": ("this", None), "those": ("that", None), "an": ("a", "article"), "o": ("O", "interjection"),
 }
 # Old past tenses the taggers read as other words. Each counts only where the word is a verb: "she bare a son", but "made bare".
-PAST_TENSES = {"bare": "bear", "brake": "break", "sware": "swear", "clave": "cleave", "gat": "get", "drave": "drive", "durst": "dare", "holpen": "help"}
+PAST_TENSES = {"bare": "bear", "brake": "break", "sware": "swear", "clave": "cleave", "gat": "get", "drave": "drive", "durst": "dare", "holpen": "help", "wrought": "work"}
 TITLES = {"lord", "father", "son", "god", "christ", "messiah", "savior", "saviour", "redeemer", "creator", "spirit", "ghost", "lamb"}
 
 UNIVERSAL = {
@@ -93,9 +93,9 @@ def vote(spacy, stanza, morph):
 
 
 def spelled(headword: str, pos: str, text: str) -> str:
-    """Headwords are lowercase, except proper nouns and "I"."""
-    if headword.lower() == "i":
-        return "I"
+    """Headwords are lowercase, except proper nouns, "I", and "O"."""
+    if headword.lower() in ("i", "o"):
+        return headword.upper()
     if pos == "proper_noun":
         return text if text.lower() == headword.lower() else headword[:1].upper() + headword[1:]
     return headword.lower()

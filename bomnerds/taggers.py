@@ -85,6 +85,10 @@ def run_stanza(batch):
         for sentence, parsed in zip(chunk, doc.sentences):
             _, owners = tokens(sentence)
             yield to_words(sentence, owners, [(w.lemma, w.upos, w.head - 1 if w.head else None, w.deprel) for w in parsed.words])
+        # The GPU keeps every batch's buffers until told to let go, and grows until the system kills the run.
+        del doc
+        if device == "mps":
+            torch.mps.empty_cache()
 
 
 def run_morphadorner(batch):
@@ -157,8 +161,8 @@ def tag(name: str, db: sqlite3.Connection):
     every = sentences(db)
     with open(path, encoding="utf-8") if path.exists() else open(os.devnull) as cached:
         for line, sentence in zip(cached, every):
-            first = json.loads(line)
-            if first and first[0][0] != sentence[0][0]:
+            cached = json.loads(line)
+            if cached and not sentence[0][0] <= cached[0][0] <= cached[-1][0] <= sentence[-1][0]:
                 sys.exit(f"{path} was made from different sentences. Delete it to tag again.")
     batch = every[done:]
     if not batch:
@@ -167,8 +171,9 @@ def tag(name: str, db: sqlite3.Connection):
     with open(path, "a", encoding="utf-8") as out:
         for count, result in enumerate(tagger(batch), done + 1):
             out.write(json.dumps(result, ensure_ascii=False) + "\n")
-            if count % 1000 == 0:
+            if count % 200 == 0:
                 out.flush()
+            if count % 1000 == 0:
                 print(f"{name}: {count} sentences", flush=True)
 
 

@@ -131,7 +131,7 @@ Headwords follow these conventions:
 - "These" is "this", and "those" is "that".
 - Modals keep their own headword: "should" is "should", not "shall". Their inflections fold in: "shalt" is "shall", "wilt" is "will".
 - Titles such as "Lord", "Father", and "Son" are nouns. Mentions say who they name.
-- Headwords are lowercase, except proper nouns and "I".
+- Headwords are lowercase, except proper nouns, "I", and "O".
 
 English headwords and parts of speech are built by script. A lookup table settles archaic verbs first ("hath", "saith", "spake", "doth", "art", and every "-eth" and "-est" form), because modern taggers get them wrong together. spaCy and Stanza tag the rest as the two runs, and MorphAdorner, built for Early Modern English, breaks their ties. AI decides only words all three leave unsettled.
 

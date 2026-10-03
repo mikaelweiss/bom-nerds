@@ -1,3 +1,5 @@
 scripture.db
 sources/
+cache/
+.venv/
 __pycache__/

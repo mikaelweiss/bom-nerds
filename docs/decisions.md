@@ -131,6 +131,7 @@ Headwords follow these conventions:
 - "These" is "this", and "those" is "that".
 - Modals keep their own headword: "should" is "should", not "shall". Their inflections fold in: "shalt" is "shall", "wilt" is "will".
 - Titles such as "Lord", "Father", and "Son" are nouns. Mentions say who they name.
+- Headwords are lowercase, except proper nouns and "I".
 
 English headwords and parts of speech are built by script. A lookup table settles archaic verbs first ("hath", "saith", "spake", "doth", "art", and every "-eth" and "-est" form), because modern taggers get them wrong together. spaCy and Stanza tag the rest as the two runs, and MorphAdorner, built for Early Modern English, breaks their ties. AI decides only words all three leave unsettled.
 
@@ -152,7 +153,7 @@ An ID is the entity's name. When other entities anywhere in scripture share that
 
 Types: person, group, place (city, land, water, mountain, wilderness), event, object (record), office, topic.
 
-Built by script for Bible people and places, from STEPBible and OpenBible. For the other works, AI lists what each book contains, one job per book, searching the Bible entities first so Moses or Isaiah is picked rather than made again. A merge job then combines duplicates across every book of every work. Topics are our own, built by AI, not copied from the Topical Guide.
+Built by script for Bible people and places, from STEPBible and OpenBible. TIPNR's month names and musical terms are not entities, and neither is its one record for every name of God, because those names belong to different beings. For the other works, AI lists what each book contains, one job per book, searching the Bible entities first so Moses or Isaiah is picked rather than made again. A merge job then combines duplicates across every book of every work. Topics are our own, built by AI, not copied from the Topical Guide.
 
 An agent in any other layer that finds an entity missing from the list reports it. The entity is added, and that chapter reruns. When the new entity shares a name with one already listed, the older ID gains its qualifier as well, and every chapter that mentions the name reruns, since some of those mentions may belong to the new entity.
 
@@ -171,7 +172,7 @@ Names of God follow Latter-day Saint doctrine: Jehovah and LORD in the Old Testa
 
 Built in two steps:
 
-1. Names and titles. Script for Bible names: each KJV name carries a Strong's number, and STEPBible's name list says which person or place that name means in each verse. Script for any other name or title that only one entity carries. AI for the rest.
+1. Names and titles. Script for Bible names: each KJV name carries a Strong's number, and STEPBible's name list says which person or place that name means in each verse. Script for the LORD, JAH, and GOD of the Old Testament, which render Jehovah, and for the word Jehovah anywhere. Script for any other name or title that only one entity carries. AI for the rest.
 2. Pronouns, after Speakers. Script for "I", "me", "my", and "mine", which point to the speaker, and for "thou", "thee", and "thy" when a speech has one listener. AI for the rest, with the names around each pronoun already tagged.
 
 ### Speakers
@@ -206,7 +207,7 @@ Each kind has a reverse reading for display: "child of" reads back as "parent of
   "evidence": [{ "verse": "1 Nephi 1:4", "quote": "my father, Lehi" }] }
 ```
 
-Built by script for Bible parents, siblings, spouses, and children, from STEPBible's name list. AI for the rest, one job per chapter. The same subject, kind, and object found in several chapters is one relationship with more evidence.
+Built by script for Bible parents, siblings, spouses, and children, from STEPBible's name list. These join two people only: where the table of nations calls a people the son of a man, AI decides. A script cites the first verse that names both people beside a kinship word, such as "Seth begat Enos", and AI cites the rest. AI for the rest, one job per chapter. The same subject, kind, and object found in several chapters is one relationship with more evidence.
 
 ### Journeys
 
@@ -232,7 +233,7 @@ The text's own count is a fact. The BC/AD year is our estimate unless the text s
   "evidence": { "verse": "Alma 1:1", "quote": "in the first year of the reign of the judges" } }
 ```
 
-Built by script where the text follows a fixed formula, such as "in the first year of the reign of the judges". AI for the rest.
+Built by script where the text follows a fixed formula, such as "in the first year of the reign of the judges". A year covers the events after it, until the text names another year, says the year ended, or the book ends. AI for the rest.
 
 ### Passage links
 
@@ -244,8 +245,8 @@ Kinds: quotes, parallel, same event, alludes to, fulfills, cross-reference. A li
 
 Built by:
 
-- Script: text comparison finds Book of Mormon and Doctrine and Covenants passages that closely follow the Bible, such as Isaiah in 2 Nephi and the Sermon on the Mount in 3 Nephi. These also get word matches, so every small difference shows.
-- Script: OpenBible's Bible cross-references.
+- Script: text comparison finds Book of Mormon, Doctrine and Covenants, and Pearl of Great Price passages that closely follow the Bible, such as Isaiah in 2 Nephi and the Sermon on the Mount in 3 Nephi. These also get word matches, so every small difference shows. Moses, Abraham, Joseph Smith-Matthew, and Book of Mormon passages that follow the New Testament are parallels. Every other one quotes the Bible.
+- Script: OpenBible's Bible cross-references with at least one positive vote.
 - AI: allusions, fulfillments, and cross-references between works, one job per chapter.
 
 ### Word matches
@@ -271,9 +272,9 @@ A sentence ends at a period, question mark, or exclamation mark, never at a colo
   ] }
 ```
 
-Built by script for Hebrew and Greek, from Macula.
+Built by script for Hebrew and Greek, from Macula. Macula's prepositional phrases are adverbials.
 
-For English, a script splits sentences, and spaCy and Stanza parse each one as the two runs. Clauses, subjects, and verbs they agree on are kept. Then one AI job per chapter completes every sentence, with the agreed parts given as fixed. Parsers alone settle only a quarter of sentences, because they attach long chains of "and", "for", and "that" clauses differently, and every clause span above that point changes with it.
+For English, a script splits sentences, and spaCy and Stanza parse each one as the two runs. Clauses, subjects, and verbs they agree on are kept. A clause joined to another by "and" stands beside it, not inside it. A verb part is the verb with its auxiliaries and any "not" between them: "shalt not kill". Then one AI job per chapter completes every sentence, with the agreed parts given as fixed. Parsers alone settle only a quarter of sentences, because they attach long chains of "and", "for", and "that" clauses differently, and every clause span above that point changes with it.
 
 ### Literary structures
 

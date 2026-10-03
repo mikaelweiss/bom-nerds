@@ -52,7 +52,7 @@ Terms used throughout the spec. A term only one layer uses is defined in that la
 
 ## How it is built
 
-The dataset is one SQLite database. It is exported as a SQL dump and as JSON. People correct mistakes through a web interface that writes to the same database.
+The dataset is one SQLite database. Each GitHub release publishes a copy of it and a JSON export of every table. People correct mistakes through a web interface that writes to the same database.
 
 Agents never touch the database. They work through a CLI that:
 

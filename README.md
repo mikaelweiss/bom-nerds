@@ -18,6 +18,8 @@ python3 -m unittest discover tests
 
 Sources download into `sources/` on first use. The English taggers take hours, so their output is kept in `cache/` and reused.
 
+`scripts/release.sh` publishes your `scripture.db` and a JSON export of every table as a GitHub release of the current commit. Pass `--no-upload` to build the zips in `dist/` without releasing.
+
 # Plans for now:
 
 1. Sign off on the dataset spec in [docs/decisions.md](docs/decisions.md)

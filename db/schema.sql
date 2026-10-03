@@ -105,6 +105,8 @@ create table entity_type (
     name text not null
 ) strict;
 
+-- An id gains a qualifier when another entity with the same name is added,
+-- so every reference to an entity cascades the rename.
 create table entity (
     id text primary key,
     type_id text not null references entity_type,
@@ -113,7 +115,7 @@ create table entity (
 ) strict;
 
 create table entity_name (
-    entity_id text not null references entity,
+    entity_id text not null references entity on update cascade,
     name text not null,
     is_title integer not null default 0 check (is_title in (0, 1)),
     primary key (entity_id, name)
@@ -122,7 +124,7 @@ create table entity_name (
 create index entity_name_name on entity_name (name);
 
 create table entity_book (
-    entity_id text not null references entity,
+    entity_id text not null references entity on update cascade,
     book_id text not null references book,
     primary key (entity_id, book_id)
 ) strict;
@@ -136,7 +138,7 @@ create table mention_kind (
 
 create table mention (
     id integer primary key,
-    entity_id text not null references entity,
+    entity_id text not null references entity on update cascade,
     kind_id text not null references mention_kind,
     first_word_id integer not null references word,
     last_word_id integer not null references word,
@@ -155,19 +157,21 @@ create table speech_mode (
 
 create table speech (
     id integer primary key,
-    speaker_id text not null references entity,
+    speaker_id text not null references entity on update cascade,
+    through_id text references entity on update cascade,
     mode_id text not null references speech_mode,
     first_word_id integer not null references word,
     last_word_id integer not null references word,
     unique (first_word_id, last_word_id),
-    check (first_word_id <= last_word_id)
+    check (first_word_id <= last_word_id),
+    check (through_id <> speaker_id)
 ) strict;
 
 create index speech_speaker on speech (speaker_id);
 
 create table speech_listener (
     speech_id integer not null references speech on delete cascade,
-    entity_id text not null references entity,
+    entity_id text not null references entity on update cascade,
     primary key (speech_id, entity_id)
 ) strict;
 
@@ -184,14 +188,16 @@ create table relationship_kind (
 
 create table relationship (
     id integer primary key,
-    subject_id text not null references entity,
+    subject_id text not null references entity on update cascade,
     kind_id text not null references relationship_kind,
-    object_id text not null references entity,
-    days real,
-    unique (subject_id, kind_id, object_id),
+    object_id text not null references entity on update cascade,
     check (subject_id <> object_id)
 ) strict;
 
+-- A pair of entities holds each kind once, in either direction: two-way kinds
+-- are stored once, and a one-way kind that runs both ways contradicts itself.
+create unique index relationship_pair on relationship (kind_id, min(subject_id, object_id), max(subject_id, object_id));
+create index relationship_subject on relationship (subject_id);
 create index relationship_object on relationship (object_id);
 
 create table relationship_evidence (
@@ -202,6 +208,24 @@ create table relationship_evidence (
     check (first_word_id <= last_word_id)
 ) strict;
 
+-- Journeys
+
+create table journey (
+    id integer primary key,
+    traveler_id text not null references entity on update cascade,
+    from_id text references entity on update cascade,
+    to_id text not null references entity on update cascade,
+    days real check (days > 0),
+    first_word_id integer not null references word,
+    last_word_id integer not null references word,
+    check (from_id <> to_id),
+    check (first_word_id <= last_word_id)
+) strict;
+
+create index journey_traveler on journey (traveler_id);
+create index journey_from on journey (from_id);
+create index journey_to on journey (to_id);
+
 -- Dates
 
 create table counting_system (
@@ -210,11 +234,12 @@ create table counting_system (
 ) strict;
 
 -- BC/AD years count 1 BC as 0 and 2 BC as -1, so ranges subtract cleanly.
+-- Only a BC/AD date can lack evidence, because it is our estimate wherever the text gives no year.
 create table date (
     id integer primary key,
     first_word_id integer references word,
     last_word_id integer references word,
-    entity_id text references entity,
+    entity_id text references entity on update cascade,
     relationship_id integer references relationship on delete cascade,
     system_id text not null references counting_system,
     from_year integer not null,
@@ -223,9 +248,11 @@ create table date (
     to_year integer not null,
     to_month integer check (to_month between 1 and 12),
     to_day integer check (to_day between 1 and 31),
-    evidence_first_word_id integer not null references word,
-    evidence_last_word_id integer not null references word,
+    evidence_first_word_id integer references word,
+    evidence_last_word_id integer references word,
     check ((first_word_id is null) = (last_word_id is null)),
+    check ((evidence_first_word_id is null) = (evidence_last_word_id is null)),
+    check (evidence_first_word_id is not null or system_id = 'bc_ad'),
     check ((first_word_id is not null) + (entity_id is not null) + (relationship_id is not null) = 1),
     check (first_word_id <= last_word_id),
     check (evidence_first_word_id <= evidence_last_word_id),
@@ -258,6 +285,21 @@ create table passage_link (
 
 create index passage_link_from on passage_link (from_first_word_id, from_last_word_id);
 create index passage_link_to on passage_link (to_first_word_id, to_last_word_id);
+
+-- A two-way link is stored once, from the passage that comes first.
+create trigger passage_link_two_way_insert before insert on passage_link
+when (select two_way from link_kind where id = new.kind_id)
+    and (new.from_first_word_id, new.from_last_word_id) > (new.to_first_word_id, new.to_last_word_id)
+begin
+    select raise(abort, 'a two-way link runs from the passage that comes first');
+end;
+
+create trigger passage_link_two_way_update before update on passage_link
+when (select two_way from link_kind where id = new.kind_id)
+    and (new.from_first_word_id, new.from_last_word_id) > (new.to_first_word_id, new.to_last_word_id)
+begin
+    select raise(abort, 'a two-way link runs from the passage that comes first');
+end;
 
 -- Grammar
 

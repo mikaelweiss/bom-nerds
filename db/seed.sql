@@ -69,7 +69,6 @@ insert into relationship_kind (id, name, reverse_name, two_way) values
     ('higher_than', 'higher than', 'lower than', 0),
     ('near', 'near', 'near', 1),
     ('borders', 'borders', 'borders', 1),
-    ('journey_to', 'journey to', 'journey from', 0),
     ('named_after', 'named after', 'namesake of', 0),
     ('kept_by', 'kept by', 'keeper of', 0),
     ('written_by', 'written by', 'author of', 0),

@@ -289,6 +289,45 @@ Chiasmus, parallelism, lists, and acrostics. Each structure has ordered parts. P
 
 Built by AI.
 
+### Summaries
+
+Short summaries for personal study. Each one covers a chapter, a book, or a verse range through one kind, so a reader can skim a whole work through one kind in a sitting. They are written from a Latter-day Saint perspective, in plain modern English and full sentences. A chapter or verse range gets a few sentences. A book gets a paragraph.
+
+| Kind | What it covers |
+|---|---|
+| Doctrine | What the passage teaches about God, Christ, and the plan of salvation. |
+| Principles | Lessons a reader can apply in daily life. |
+| Christ | How the passage testifies of Jesus Christ or points to Him. |
+| Covenants | Promises made with God and the ordinances tied to them. |
+| Commandments | What God asks His people to do. |
+| Prophecies | What is foretold and where it is fulfilled. |
+| Symbols | Objects, events, or people that stand for something more. |
+| Questions | Questions to think about or discuss. |
+| Key verses | The two or three most important verses and why each matters. |
+| Hard passages | Confusing verses explained simply. |
+| Connections | Where the same idea or event shows up elsewhere in scripture. |
+| Setting | When, where, and why it happened or was written. |
+| People | Who appears and what they do. |
+| Speakers | Who is talking to whom. |
+| Original words | Key Hebrew or Greek words and what they mean. Bible only. |
+| Culture | Customs and background a modern reader would miss. Bible only. |
+| Editors' comments | Where Mormon or Moroni steps in to teach. Book of Mormon only. |
+| Revelation background | Who the revelation was for, and the question or event that prompted it. Doctrine and Covenants only. |
+| Translation background | Where Moses, Abraham, and the facsimiles came from. Pearl of Great Price only. |
+
+A verse range is a unit that crosses or splits chapters, such as King Benjamin's sermon or Alma's counsel to his sons. Each range has an ID, a name, and a passage.
+
+```json
+{ "id": "king-benjamins-sermon", "name": "King Benjamin's sermon",
+  "passage": { "from": "Mosiah 2:9", "to": "Mosiah 5:15", "starts": "My brethren", "ends": "Amen" } }
+{ "kind": "doctrine", "on": { "chapter": "1 Nephi 17" },
+  "text": "The Lord gives strength and a way forward to people who keep His commandments. He guides the faithful the same way He led Israel out of Egypt. People who keep rejecting His word slowly lose the ability to feel the Spirit." }
+{ "kind": "setting", "on": { "range": "king-benjamins-sermon" }, "text": "..." }
+{ "kind": "people", "on": { "book": "Enos" }, "text": "..." }
+```
+
+The ranges are chosen and reviewed by a person before any summary is written. Built by AI: one job per kind per chapter and per range, with every earlier layer's tags shown, then one job per kind per book, which also sees that book's chapter summaries of the same kind. Agents write from the scripture text alone. The Church's chapter summaries and section headings never enter a prompt.
+
 ## Editions
 
 Every edition is equal. A tag lives on the words it was made on, and word matches carry it to every other edition. A script matches a new edition's words to the editions already there, and the new edition is tagged only where its text has no match, such as Joseph Smith Translation additions.
@@ -306,6 +345,8 @@ Each step gives the next ones context and constraints, so later questions become
 5. Speakers.
 6. Mentions of pronouns.
 7. Relationships, journeys, dates, passage links, meanings, grammar, and literary structures, in parallel.
+8. Verse ranges for summaries, chosen and reviewed by a person.
+9. Summaries of chapters and verse ranges, then of books.
 
 Before the full run, every layer runs on a pilot set, and its output is reviewed: 1 Nephi 1 to 3, 2 Nephi 12 with Isaiah 2, Mosiah 2 to 5, Genesis 5, Alma 36, and D&C 76. Together they cover speeches across chapters, Bible quotations, a genealogy, a chiasm, and a revelation.
 

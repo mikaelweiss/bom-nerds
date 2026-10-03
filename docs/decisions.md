@@ -153,7 +153,7 @@ An ID is the entity's name. When other entities anywhere in scripture share that
 
 Types: person, group, place (city, land, water, mountain, wilderness), event, object (record), office, topic.
 
-Built by script for Bible people and places, from STEPBible and OpenBible. TIPNR's month names and musical terms are not entities, and neither is its one record for every name of God, because those names belong to different beings. For the other works, AI lists what each book contains, one job per book, searching the Bible entities first so Moses or Isaiah is picked rather than made again. A merge job then combines duplicates across every book of every work. Topics are our own, built by AI, not copied from the Topical Guide.
+Built by script for Bible people and places, from STEPBible and OpenBible. TIPNR's month names and musical terms are not entities, and neither is its one record for every name of God, because those names belong to different beings. TIPNR files a people under the person or place it is named for, so words like "Levites" and "Egyptians" get a group entity of their own. It also files Israel and each tribal patriarch as one record with his tribe and its land, which become separate entities: `judah-son-of-israel`, `tribe-of-judah`, and `land-of-judah`. For the other works, AI lists what each book contains, one job per book, searching the Bible entities first so Moses or Isaiah is picked rather than made again. A merge job then combines duplicates across every book of every work. Topics are our own, built by AI, not copied from the Topical Guide.
 
 An agent in any other layer that finds an entity missing from the list reports it. The entity is added, and that chapter reruns. When the new entity shares a name with one already listed, the older ID gains its qualifier as well, and every chapter that mentions the name reruns, since some of those mentions may belong to the new entity.
 
@@ -172,7 +172,7 @@ Names of God follow Latter-day Saint doctrine: Jehovah and LORD in the Old Testa
 
 Built in two steps:
 
-1. Names and titles. Script for Bible names: each KJV name carries a Strong's number, and STEPBible's name list says which person or place that name means in each verse. Script for the LORD, JAH, and GOD of the Old Testament, which render Jehovah, and for the word Jehovah anywhere. Script for any other name or title that only one entity carries. AI for the rest.
+1. Names and titles. Script for Bible names: each KJV name carries a Strong's number, and STEPBible's name list says which person or place that name means in each verse. Script for the LORD, JAH, and GOD of the Old Testament, which render Jehovah, and for the word Jehovah anywhere. Script for any other name or title that only one entity carries. A name that can mean a patriarch, his tribe, or its land is settled by script only where the words before it say which ("tribe of Judah", "land of Judah", "king of Judah") or in Genesis, which tells of the men themselves. AI for the rest.
 2. Pronouns, after Speakers. Script for "I", "me", "my", and "mine", which point to the speaker, and for "thou", "thee", and "thy" when a speech has one listener. AI for the rest, with the names around each pronoun already tagged.
 
 ### Speakers

@@ -4,6 +4,7 @@ import json
 import re
 import sqlite3
 from collections import defaultdict
+from dataclasses import dataclass, replace
 
 from . import tipnr
 from .refs import USFM, codes
@@ -26,10 +27,92 @@ PLACE_TYPES = {
     "pool": "water", "well": "water", "wadi": "water", "ford": "water",
 }
 
+# Words such as "Levite", "Egyptian", and "Jew" name a people, not the person or place TIPNR files them under.
+# TIPNR marks most of them as group forms. This catches the rest, without catching names like "Midian".
+GENTILIC = re.compile(r"(ites?|itess|eans?)$|^Jew")
+
+
+@dataclass(frozen=True)
+class Entity:
+    id: str
+    type: str
+    name: str
+    description: str
+    names: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class Eponym:
+    """A man whose name also names the people descended from him, and the land they held."""
+
+    person: str
+    people: Entity
+    lands: tuple[Entity, ...] = ()
+    # The people that words like "Jew" name, where it differs from the people that bear his name.
+    gentilic: Entity | None = None
+    # The land that a "king of" this name rules, where the name alone settles which.
+    kingdom: str | None = None
+    # Names that always mean the people: "Jeshurun" is only ever Israel the nation.
+    people_names: tuple[str, ...] = ()
+
+
+def tribe(name: str, parents: str, land: bool = True) -> Eponym:
+    people = Entity(f"tribe-of-{slug(name)}", "group", f"Tribe of {name}", f"The tribe of Israel descended from {name}.", (name, f"children of {name}"))
+    lands = (Entity(f"land-of-{slug(name)}", "land", f"Land of {name}", f"The land given to the tribe of {name}.", (name,)),) if land else ()
+    return Eponym(f"Son of {parents}, father of the tribe of {name}.", people, lands)
+
+
+# TIPNR files each of these men, his tribe or nation, and its land as one record with one verse list, so no source says which a verse means.
+EPONYMS = {
+    "Israel@Gen.25.26-Rev": Eponym(
+        "Patriarch, son of Isaac, also named Jacob. Father of the twelve tribes.",
+        Entity("house-of-israel", "group", "House of Israel", "The people descended from Israel, the covenant people of the Lord.",
+               ("Israel", "Israelites", "children of Israel", "Jacob", "house of Jacob", "Jeshurun")),
+        (Entity("land-of-israel", "land", "Land of Israel", "The land of the twelve tribes of Israel.", ("Israel",)),
+         Entity("kingdom-of-israel", "land", "Kingdom of Israel", "The northern kingdom of the ten tribes, after the kingdom divided.", ("Israel", "Ephraim"))),
+        people_names=("Jeshurun",),
+    ),
+    "Reuben@Gen.29.32-Rev": tribe("Reuben", "Jacob and Leah"),
+    "Simeon@Gen.29.33-Rev": tribe("Simeon", "Jacob and Leah"),
+    "Levi@Gen.29.34-Rev": tribe("Levi", "Jacob and Leah", land=False),
+    "Judah@Gen.29.35-Rev": replace(
+        tribe("Judah", "Jacob and Leah"),
+        lands=(Entity("land-of-judah", "land", "Land of Judah", "The land of the tribe of Judah, which became the southern kingdom of Judah.", ("Judah", "kingdom of Judah")),),
+        gentilic=Entity("jews", "group", "Jews", "The people of the kingdom of Judah and their descendants.", ("Jew", "Jews")),
+        kingdom="land-of-judah",
+    ),
+    "Dan@Gen.30.6-1Ch": tribe("Dan", "Jacob and Bilhah"),
+    "Naphtali@Gen.30.8-Rev": tribe("Naphtali", "Jacob and Bilhah"),
+    "Gad@Gen.30.11-Rev": tribe("Gad", "Jacob and Zilpah"),
+    "Asher@Gen.30.13-Rev": tribe("Asher", "Jacob and Zilpah"),
+    "Issachar@Gen.30.18-Rev": tribe("Issachar", "Jacob and Leah"),
+    "Zebulun@Gen.30.20-Rev": tribe("Zebulun", "Jacob and Leah"),
+    "Joseph@Gen.30.24-Rev": Eponym(
+        "Son of Jacob and Rachel, ruler in Egypt, father of the tribes of Ephraim and Manasseh.",
+        Entity("tribe-of-joseph", "group", "Tribe of Joseph", "The descendants of Joseph: the tribes of Ephraim and Manasseh.",
+               ("Joseph", "house of Joseph", "children of Joseph")),
+    ),
+    "Benjamin@Gen.35.18-Rev": tribe("Benjamin", "Jacob and Rachel"),
+    "Ephraim@Gen.41.52-Zec": tribe("Ephraim", "Joseph"),
+    "Manasseh@Gen.41.51-Rev": tribe("Manasseh", "Joseph"),
+}
+
+PEOPLE_DESCRIPTIONS = {JESUS: "Followers of Jesus Christ."}
+
+
+@dataclass
+class BibleEntity:
+    entity: Entity
+    # The record its type and title come from.
+    record: tipnr.Record
+    names: set[str]
+    # The name forms whose verses give the books it appears in.
+    forms: list[tipnr.NameForm]
+
 
 def clear(db: sqlite3.Connection):
     owned = "select id from entity where id in (select value from json_each(?))"
-    ids = json.dumps([entity_id for entity_id, _ in build_ids(usable(tipnr.records()))] + [JESUS_CHRIST[0]])
+    ids = json.dumps(list(bible_entities(usable(tipnr.records()))))
     db.execute(f"delete from entity_book where entity_id in ({owned})", (ids,))
     db.execute(f"delete from entity_name where entity_id in ({owned})", (ids,))
     db.execute(f"delete from entity where id in ({owned})", (ids,))
@@ -37,20 +120,98 @@ def clear(db: sqlite3.Connection):
 
 def run(db: sqlite3.Connection):
     books = codes(db, USFM)
-    records = usable(tipnr.records())
     places = place_types()
-    for entity_id, record in build_ids(records):
-        if record.unique == JESUS:
-            entity_id, name, description = JESUS_CHRIST
-        else:
-            name, description = record.name, describe(record)
-        db.execute("insert into entity (id, type_id, name, description) values (?, ?, ?, ?)", (entity_id, entity_type(record, places), name, description))
-        names = {name, *record.names, *(form.kjv for form in record.forms if is_name(form.kjv))}
+    found = bible_entities(usable(tipnr.records()))
+    for found_entity in found.values():
+        entity, record = found_entity.entity, found_entity.record
+        db.execute("insert into entity (id, type_id, name, description) values (?, ?, ?, ?)", (entity.id, entity.type or kind(record, places), entity.name, entity.description))
         is_title = int(record.type == "Title")
-        db.executemany("insert into entity_name (entity_id, name, is_title) values (?, ?, ?)", [(entity_id, n, is_title) for n in sorted(names)])
-        appears = {books[code] for form in record.forms for code, _, _ in form.refs if code in books}
-        db.executemany("insert into entity_book (entity_id, book_id) values (?, ?)", [(entity_id, b) for b in sorted(appears)])
-    print(f"entities: {len(records)} Bible entities")
+        db.executemany("insert into entity_name (entity_id, name, is_title) values (?, ?, ?)", [(entity.id, n, is_title) for n in sorted(found_entity.names)])
+        appears = {books[code] for form in found_entity.forms for code, _, _ in form.refs if code in books}
+        db.executemany("insert into entity_book (entity_id, book_id) values (?, ?)", [(entity.id, b) for b in sorted(appears)])
+    print(f"entities: {len(found)} Bible entities")
+
+
+def bible_entities(records: list[tipnr.Record]) -> dict[str, BibleEntity]:
+    """Every Bible entity by id: each record's own entity, the people its gentilic words name, and an eponym's people and lands."""
+    people = peoples(records)
+    found = {}
+
+    def add(entity: Entity, record: tipnr.Record, names: list[str], forms: list[tipnr.NameForm]):
+        if entity.id not in found:
+            found[entity.id] = BibleEntity(entity, record, {entity.name, *entity.names}, [])
+        found[entity.id].names.update(n for n in names if is_name(n))
+        found[entity.id].forms.extend(forms)
+
+    shared = []
+    for entity_id, record in build_ids(records):
+        eponym = EPONYMS.get(record.unique)
+        if record.unique == JESUS:
+            entity = Entity(JESUS_CHRIST[0], "", *JESUS_CHRIST[1:])
+        else:
+            entity = Entity(entity_id, "", record.name, eponym.person if eponym else describe(record))
+        names = [n for name in record.names for n in split_names(name)] + [n for f in record.forms if f.kind != "Group" for n in split_names(f.kjv)]
+        forms = record.forms
+        if record.unique in people:
+            groups = [f for f in record.forms if f.kind == "Group"]
+            # A group form's own name can be the record's other name, as in "Christ|Jesus", rather than the people's.
+            own_names = {f.name for f in groups if f.name} - {record.name, *names}
+            renderings = {n for f in groups for n in split_names(f.kjv)} - {record.name}
+            gentilic = {n for n in names if GENTILIC.search(n) or n in renderings} | renderings | own_names
+            shared.append((people[record.unique], record, gentilic, groups))
+            names = [n for n in names if n not in gentilic]
+            forms = [f for f in record.forms if f not in groups]
+        if eponym:
+            names = [n for n in names if n not in eponym.people_names]
+        add(entity, record, names, forms)
+        if eponym:
+            shared.extend((shares_the_name, record, [], forms) for shares_the_name in (eponym.people, *eponym.lands))
+    for entity, record, names, forms in shared:
+        add(entity, record, names, forms)
+    return found
+
+
+def peoples(records: list[tipnr.Record]) -> dict[str, Entity]:
+    """The people that each record's gentilic words name, keyed by the record.
+
+    TIPNR already lists some peoples, such as the Jebusites, as records of their own, and their gentilic words name that record.
+    """
+    ids = {record.unique: entity_id for entity_id, record in build_ids(records)}
+    taken = set(ids.values())
+    found = {}
+    for record in records:
+        eponym = EPONYMS.get(record.unique)
+        if eponym:
+            found[record.unique] = eponym.gentilic or eponym.people
+        elif record.type != "Group" and (name := people_name(record)):
+            description = PEOPLE_DESCRIPTIONS.get(record.unique) or (f"People of {record.name}." if record.section.startswith("PLACE") else f"Descendants of {record.name}.")
+            found[record.unique] = Entity(slug(name), "" if slug(name) in taken else "group", name, description)
+    counts = defaultdict(int)
+    for entity in found.values():
+        counts[entity.id] += 1
+    return {
+        unique: replace(entity, id=f"{entity.id}-of-{ids[unique]}") if entity.type and unique not in EPONYMS and counts[entity.id] > 1 else entity
+        for unique, entity in found.items()
+    }
+
+
+def people_name(record: tipnr.Record) -> str | None:
+    """The plural of the word a record's gentilic forms use: "Levites" from "Levite", "Jesuites" from "Jesui"."""
+    words = [w for f in record.forms if f.kind == "Group" for w in (f.name, *split_names(f.kjv))]
+    words = [w for w in words if is_name(w) and " " not in w and "-" not in w and w != record.name and not w.endswith("ess")]
+    words.sort(key=lambda w: not re.search(r"(ites?|ians?|eans?|im)$", w))
+    if not words:
+        return None
+    word = words[0]
+    if word.endswith(("s", "im")):
+        return word
+    return word + "tes" if word.endswith("i") else word + "s"
+
+
+def split_names(text: str | None) -> list[str]:
+    """TIPNR lists one form's spellings together, "Ammonite,Ammon,Ammonitess", and marks word breaks with a slash, "City of/ the Lord"."""
+    names = (" ".join(n.replace("/", " ").split()) for n in (text or "").split(","))
+    return [n for n in names if n]
 
 
 def usable(records: list[tipnr.Record]) -> list[tipnr.Record]:
@@ -61,7 +222,7 @@ def is_name(text: str | None) -> bool:
     return bool(text) and text[0].isupper()
 
 
-def entity_type(record: tipnr.Record, places: dict[str, list[str]]) -> str:
+def kind(record: tipnr.Record, places: dict[str, list[str]]) -> str:
     if record.section.startswith("PLACE"):
         if "wilderness" in record.name.lower():
             return "wilderness"

@@ -24,7 +24,7 @@ ARCHAIC_VERBS = {
 TABLE = {
     **{form: (headword, "pronoun") for headword, forms in PRONOUNS.items() for form in forms.split()},
     **{form: (headword, "verb") for headword, forms in ARCHAIC_VERBS.items() for form in forms.split()},
-    "these": ("this", None), "those": ("that", None), "an": ("a", "article"), "o": ("O", "interjection"),
+    "these": ("this", None), "those": ("that", None), "an": ("a", "article"), "o": ("O", "interjection"), "yea": ("yea", "interjection"),
 }
 # Old past tenses the taggers read as other words. Each counts only where the word is a verb: "she bare a son", but "made bare".
 PAST_TENSES = {"bare": "bear", "brake": "break", "sware": "swear", "clave": "cleave", "gat": "get", "drave": "drive", "durst": "dare", "holpen": "help", "wrought": "work"}

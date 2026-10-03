@@ -11,9 +11,11 @@ REFERENCE = re.compile(r"(\w+)\.(\d+)\.(\d+)")
 
 @dataclass
 class NameForm:
+    kind: str
     strongs: str
     kjv: str | None
     refs: list[tuple[str, int, int]]
+    name: str = ""
 
 
 @dataclass
@@ -72,7 +74,10 @@ def name_form(cells: list[str]) -> NameForm | None:
         return None
     rendering = cells[index + 1] if index + 1 < len(cells) else ""
     refs = [(code.upper(), int(chapter), int(verse)) for code, chapter, verse in REFERENCE.findall(cells[index + 2] if index + 2 < len(cells) else "")]
-    return NameForm(strongs=cells[index].split("«")[0], kjv=kjv_rendering(rendering), refs=refs)
+    # A form with a name of its own is filed as "Jews|Judah@Gen.29.35-Rev".
+    names = cells[1].split("@")[0].split("|")
+    own_name = names[0].replace("_", " ") if len(names) > 1 else ""
+    return NameForm(kind=cells[0].removeprefix("– "), strongs=cells[index].split("«")[0], kjv=kjv_rendering(rendering), refs=refs, name=own_name)
 
 
 def kjv_rendering(text: str) -> str | None:

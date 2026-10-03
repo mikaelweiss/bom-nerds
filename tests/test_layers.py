@@ -1,6 +1,6 @@
 import unittest
 
-from bomnerds import dates, grammar, headwords, links, sentences, strongs, versification
+from bomnerds import dates, entities, grammar, headwords, links, mentions, sentences, strongs, tipnr, versification
 
 
 def words(text: str) -> list[tuple[int, str]]:
@@ -52,6 +52,51 @@ class LinksTest(unittest.TestCase):
     def test_runs_allow_an_added_verse(self):
         followed = {("2-nephi", 12, 1): ("isaiah", 2, 1), ("2-nephi", 12, 2): ("isaiah", 2, 2), ("2-nephi", 12, 4): ("isaiah", 2, 3), ("2-nephi", 12, 9): ("isaiah", 9, 1)}
         self.assertEqual([len(run) for run in links.runs(followed)], [3, 1])
+
+    def test_a_lone_verse_must_share_more_than_stock_words(self):
+        rarity = {"the": 0.1, "lord": 1.5, "spake": 2.5, "unto": 0.6, "saying": 2.0, "in": 0.5, "and": 0.1, "it": 1.0, "not": 1.0, "light": 6.0, "shineth": 9.0, "darkness": 6.0}
+        self.assertFalse(links.distinctive(words("the lord spake unto them saying"), words("the lord spake unto me saying"), rarity))
+        self.assertTrue(links.distinctive(
+            words("the light shineth in darkness and the darkness comprehendeth it not"), words("the light shineth in darkness and the darkness comprehended it not"), rarity
+        ))
+
+
+class EntitiesTest(unittest.TestCase):
+    def test_names_a_people_by_its_gentilic(self):
+        def record(name, *renderings):
+            return tipnr.Record(f"{name}@Gen.1.1", "PERSON(s)", "Male", [], forms=[tipnr.NameForm("Group", "H1", r, []) for r in renderings])
+
+        self.assertEqual(entities.people_name(record("Levi", "Levite")), "Levites")
+        self.assertEqual(entities.people_name(record("Ishvi", "Jesui")), "Jesuites")
+        self.assertEqual(entities.people_name(record("Cush", "Cushi,Ethiopian", "Cushitess")), "Ethiopians")
+        self.assertIsNone(entities.people_name(record("Esau", "Esau")))
+
+    def test_splits_names_tipnr_lists_together(self):
+        self.assertEqual(entities.split_names("Ammonite,Ammon"), ["Ammonite", "Ammon"])
+        self.assertEqual(entities.split_names("City of/ the Lord"), ["City of the Lord"])
+
+
+class MentionsTest(unittest.TestCase):
+    JUDAH = mentions.Name("judah-son-of-israel", "jews", frozenset({"Jew", "Jews"}), "Judah@Gen.29.35-Rev")
+
+    def meaning(self, text, book="isaiah", chapter=1):
+        texts = dict(enumerate(text.split(), 1))
+        return mentions.meaning(self.JUDAH, max(id for id, t in texts.items() if t.startswith(("Judah", "Jew"))), texts, book, chapter)
+
+    def test_the_words_before_an_eponym_settle_what_it_means(self):
+        self.assertEqual(self.meaning("the tribe of Judah"), "tribe-of-judah")
+        self.assertEqual(self.meaning("the cities of Judah"), "land-of-judah")
+        self.assertEqual(self.meaning("Hezekiah king of Judah"), "land-of-judah")
+
+    def test_an_eponym_with_nothing_to_settle_it_is_left_for_the_ai(self):
+        self.assertIsNone(self.meaning("concerning Judah and Jerusalem"))
+
+    def test_genesis_names_the_man(self):
+        self.assertEqual(self.meaning("and Judah said", "genesis", 38), "judah-son-of-israel")
+        self.assertIsNone(self.meaning("Judah is a lion's whelp", "genesis", 49))
+
+    def test_a_gentilic_word_names_the_people(self):
+        self.assertEqual(self.meaning("the Jews"), "jews")
 
 
 class SentencesTest(unittest.TestCase):

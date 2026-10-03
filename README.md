@@ -5,6 +5,15 @@ Enjoy!
 
 - Mikael Weiss
 
+# Build
+
+Needs Python 3.10 or later and nothing else.
+
+```sh
+python3 -m bomnerds.text            # creates scripture.db with every word of all four works
+python3 -m unittest discover tests
+```
+
 # Plans for now:
 
 1. Sign off on the dataset spec in [docs/decisions.md](docs/decisions.md)

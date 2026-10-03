@@ -107,6 +107,8 @@ Every layer points only at words and at the entity list. Any layer can be rebuil
 
 Works, editions, books, chapters, verses, and words. Each word keeps its exact text plus the punctuation and spacing before and after it, so every verse rebuilds exactly as printed. The KJV keeps its paragraph marks (¶), and words its translators supplied, printed in italics, are marked.
 
+Text printed between two verses, such as Psalm 119's letter headings, opens the verse after it. Text printed after a chapter's last verse, such as an epistle's closing note or a signature in the Doctrine and Covenants, ends that verse. Each of the three facsimiles in the Book of Abraham is a book, with its title as verse 0 and each numbered explanation as the verse of that number.
+
 The Doctrine and Covenants covers sections 1 to 138. Both Official Declarations are left out. Official Declaration 2 (1978) is under copyright. Official Declaration 1 (1890) is public domain but missing from our source.
 
 Built by script from bcbooks/scriptures-json for the Book of Mormon, Doctrine and Covenants, and Pearl of Great Price, and from eBible's KJV for the Bible. Both are already digital, so nothing needs OCR.

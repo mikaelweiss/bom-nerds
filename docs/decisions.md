@@ -48,7 +48,11 @@ Terms used throughout the spec. A term only one layer uses is defined in that la
 
 | Word | Meaning |
 |---|---|
-| Job | One agent answering one kind of question for one chapter. |
+| Job | One layer's answer for one chapter, or for one book, headword, or summary. |
+| Pass | Layers one session answers together, such as names and speakers. |
+| Session | One Claude Code session answering every job of its pass for a run of chapters, its batch. |
+| Plan | Every session of the build, cut once before the first starts. |
+| Review | A session that settles what a pass's writers flagged and checks a fixed sample of their work. |
 
 ## How it is built
 
@@ -56,24 +60,21 @@ The dataset is one SQLite database. Each GitHub release publishes a copy of it a
 
 Agents never touch the database. They work through a CLI that:
 
-- prints a chapter, along with every tag earlier layers placed on it
-- searches the entity list
-- checks an agent's answer and stores it
+- prints a session's prompt: each chapter with the tags earlier layers placed on it, and every entity named or tagged there
+- checks an agent's answer and stores what passes
 
-Scripts do everything they can. AI does the rest. Where two scripts answer the same question, they act as the two runs below, and AI decides only where they differ. Each fact has one answer, and a correction replaces it.
+Scripts do everything they can. AI does the rest. Where two scripts answer the same question, AI decides only where they differ. Each fact has one answer, and a correction replaces it.
 
 The text is frozen once tagging starts, because tags point at word numbers. A different text is a new edition.
 
-Jobs within one build step don't depend on each other, so they run massively in parallel.
+The build runs on a Claude Code subscription, where sessions and turns are what run out, so it uses few large sessions instead of many small ones. The plan cuts every pass into batches of about the same work before the first session starts. A pass weighs each chapter by what it must answer, such as its words and capitalized words for names or its pronouns for pronouns, so a heavy chapter fills more of a batch. Batches end early at a book's end when they are close, never cross from one work into another, and never change once cut. Sessions that wait on nothing run side by side.
 
 ### Keeping the AI from making mistakes
 
 1. **The AI copies, never counts.** It points at words by verse and quote. The CLI finds the words and assigns word numbers. The AI never sees a word number.
-2. **The AI chooses, never invents.** Entity search shows matching entries with their descriptions, with entities already found in that book first, and the AI picks one. Every kind comes from a short fixed list.
-3. **One question per job.** Each job asks one thing, such as "who is speaking" or "who does each name refer to." The CLI enforces the shape of the answer.
-4. **Every job runs twice.** Two agents from different model families answer the same job without seeing each other's work, because one model run twice repeats its own mistakes. The CLI holds both answers and compares them tag by tag. A tag agrees when every field matches, passages included, and agreed tags are stored. A decider sees each tag the two answers differ on and settles it. Only settled answers enter the database.
-
-   A job that writes text instead of choosing, such as listing a book's entities or writing a headword's meanings, can't be compared word for word. One agent writes it, and an agent from the other family checks it against the scripture and corrects it.
+2. **The AI chooses, never invents.** Every prompt lists the entities named or tagged in its chapters, with their descriptions, and the AI picks one. A name with no entity is written as unlisted, and the pass's review adds it. Every kind comes from a short fixed list.
+3. **One question per layer.** Each layer asks one thing, such as "who is speaking" or "who does each name refer to." A session answers its pass's layers one at a time, each in its own file, and the CLI enforces the shape of each answer.
+4. **One writer, then a review.** A strong model with the right context gets most tags right, so a second full answer costs far more than the few errors it finds. A writer marks the answers it is unsure of, and they are stored with the flag. Each pass ends with review sessions, one for every twenty writer sessions, that settle every flag, every finding of the checks in step 6, and every unlisted name, then read every twentieth chapter in full and fix what they find. Each review records how many lines of its sample were wrong, so each layer's error rate is known.
 5. **The CLI rejects bad answers on the spot**, with a message the agent can act on, when:
    - a quote isn't in its verse, or appears there more than once without `in` to pick one
    - a passage runs backward
@@ -82,7 +83,8 @@ Jobs within one build step don't depend on each other, so they run massively in 
    - a part sits outside the thing it belongs to, such as a clause outside its sentence
    - two speeches overlap without one sitting inside the other
    - the same fact appears twice in one answer
-6. **Checks across each finished layer** flag answers that can't be true, such as someone who is their own ancestor, a place north of itself, or a speaker who isn't a person or group. A flagged chapter reruns.
+   - an answer leaves something out: a listed pronoun or headword with no answer, or a capitalized word in no tag and not marked as naming no one
+6. **Checks across each finished pass** find answers that may not be true, such as one name tied to two entities in one book, a plural pronoun pointing at one person, two people stored as both spouses and siblings, or years running backward. The pass's review settles each one.
 
 ### Pointing at text
 
@@ -133,7 +135,7 @@ Headwords follow these conventions:
 - Titles such as "Lord", "Father", and "Son" are nouns. Mentions say who they name.
 - Headwords are lowercase, except proper nouns, "I", and "O".
 
-English headwords and parts of speech are built by script. A lookup table settles archaic verbs first ("hath", "saith", "spake", "doth", "art", and every "-eth" and "-est" form), because modern taggers get them wrong together. spaCy and Stanza tag the rest as the two runs, and MorphAdorner, built for Early Modern English, breaks their ties. AI decides only words all three leave unsettled.
+English headwords and parts of speech are built by script. A lookup table settles archaic verbs first ("hath", "saith", "spake", "doth", "art", and every "-eth" and "-est" form), because modern taggers get them wrong together. spaCy and Stanza tag the rest, and MorphAdorner, built for Early Modern English, breaks their ties. AI decides only words all three leave unsettled.
 
 Hebrew and Greek meanings come from Macula's own word senses wherever they cover a word. For the rest, AI writes the meanings of each headword, one job per headword. A word whose headword has one meaning gets it by script. AI picks the meaning of every other word from its headword's list, one job per chapter.
 
@@ -153,9 +155,9 @@ An ID is the entity's name. When other entities anywhere in scripture share that
 
 Types: person, group, place (city, land, water, mountain, wilderness), event, object (record), office, topic.
 
-Built by script for Bible people and places, from STEPBible and OpenBible. TIPNR's month names and musical terms are not entities, and neither is its one record for every name of God, because those names belong to different beings. TIPNR files a people under the person or place it is named for, so words like "Levites" and "Egyptians" get a group entity of their own. It also files Israel and each tribal patriarch as one record with his tribe and its land, which become separate entities: `judah-son-of-israel`, `tribe-of-judah`, and `land-of-judah`. For the other works, AI lists what each book contains, one job per book, searching the Bible entities first so Moses or Isaiah is picked rather than made again. A merge job then combines duplicates across every book of every work. Topics are our own, built by AI, not copied from the Topical Guide.
+Built by script for Bible people and places, from STEPBible and OpenBible. TIPNR's month names and musical terms are not entities, and neither is its one record for every name of God, because those names belong to different beings. TIPNR files a people under the person or place it is named for, so words like "Levites" and "Egyptians" get a group entity of their own. It also files Israel and each tribal patriarch as one record with his tribe and its land, which become separate entities: `judah-son-of-israel`, `tribe-of-judah`, and `land-of-judah`. For the other works, AI lists what each book contains, one job per book, or per part of a book too long for one session. It first lists what all of scripture needs that no book's text names: the narrators and the topics a reader would look up. The jobs run in reading order, and each sees every entity listed before it, so Moses or Isaiah is picked rather than made again and nothing is listed twice. Topics are our own, built by AI, not copied from the Topical Guide.
 
-An agent in any other layer that finds an entity missing from the list reports it. The entity is added, and that chapter reruns. When the new entity shares a name with one already listed, the older ID gains its qualifier as well, and every chapter that mentions the name reruns, since some of those mentions may belong to the new entity.
+The entity list is settled before any tagging starts. A tagging session that finds a name with no entity writes it as unlisted, and the pass's review adds the entity and tags it. A review gives a new entity an ID that sets it apart when it shares a name, and leaves the older ID as it is, because tags already point at it.
 
 ### Mentions
 
@@ -192,7 +194,7 @@ When a prophet delivers the Lord's words ("thus saith the Lord"), the Lord is th
   "passage": { "chapter": "D&C 1" } }
 ```
 
-Built by AI. Speeches run across chapters, so a book's chapters run in order, and each job sees which speeches are still open from the chapter before. A chapter is settled, both runs and the decider, before the next one starts, so a disagreement never carries forward. A speech ends at the end of its book, and a narration that continues into the next book is a new speech there, so books run in parallel.
+Built by AI. Speeches run across chapters, so a book's chapters are stored in order, and each chapter continues the speeches the one before it left open. The sessions of one book run in order, and each starts from the speeches the one before it left open. A speech ends at the end of its book, and a narration that continues into the next book is a new speech there, so books run in parallel.
 
 ### Relationships
 
@@ -274,7 +276,7 @@ A sentence ends at a period, question mark, or exclamation mark, never at a colo
 
 Built by script for Hebrew and Greek, from Macula. Macula's prepositional phrases are adverbials.
 
-For English, a script splits sentences, and spaCy and Stanza parse each one as the two runs. Clauses, subjects, and verbs they agree on are kept. A clause joined to another by "and" stands beside it, not inside it. A verb part is the verb with its auxiliaries and any "not" between them: "shalt not kill". Then one AI job per chapter completes every sentence, with the agreed parts given as fixed. Parsers alone settle only a quarter of sentences, because they attach long chains of "and", "for", and "that" clauses differently, and every clause span above that point changes with it.
+For English, a script splits sentences, and spaCy and Stanza parse each one. Clauses, subjects, and verbs they agree on are kept. A clause joined to another by "and" stands beside it, not inside it. A verb part is the verb with its auxiliaries and any "not" between them: "shalt not kill". Then one AI job per chapter completes every sentence, with the agreed parts given as fixed. Parsers alone settle only a quarter of sentences, because they attach long chains of "and", "for", and "that" clauses differently, and every clause span above that point changes with it.
 
 ### Literary structures
 
@@ -326,7 +328,7 @@ A verse range is a unit that crosses or splits chapters, such as King Benjamin's
 { "kind": "people", "on": { "book": "Enos" }, "text": "..." }
 ```
 
-The ranges are chosen and reviewed by a person before any summary is written. Built by AI: one job per kind per chapter and per range, with every earlier layer's tags shown, then one job per kind per book, which also sees that book's chapter summaries of the same kind. Agents write from the scripture text alone. The Church's chapter summaries and section headings never enter a prompt.
+The ranges are chosen and reviewed by a person before any summary is written. Built by AI: one job per kind per chapter and per range, with the chapter's speeches shown, then one job per kind per book, which also sees that book's chapter summaries of the same kind. Agents write from the scripture text alone. The Church's chapter summaries and section headings never enter a prompt.
 
 ## Editions
 
@@ -336,19 +338,17 @@ Editions come from digital text only. We do no OCR.
 
 ## Build order
 
-Each step gives the next ones context and constraints, so later questions become choices among things already tagged. Mistakes spread the same way, so the early steps get the most care.
+Each step gives the next ones context and constraints, so later questions become choices among things already tagged. Mistakes spread the same way, so the early steps get the most care. Scripts build the text, Hebrew and Greek, word matches, and English headwords first. The AI passes then run in order of how much they show a reader, and each starts once the passes it reads from are reviewed.
 
-1. Text.
-2. Hebrew and Greek, word matches, and English headwords. All scripts.
-3. The entity list.
-4. Mentions of names and titles.
-5. Speakers.
-6. Mentions of pronouns.
-7. Relationships, journeys, dates, passage links, meanings, grammar, and literary structures, in parallel.
-8. Verse ranges for summaries, chosen and reviewed by a person.
-9. Summaries of chapters and verse ranges, then of books.
+1. Entities: the entity list.
+2. People: names and titles, then speakers.
+3. Facts (relationships, journeys, dates) and links (passage links, literary structures), side by side.
+4. Pronouns: pronouns, then passages about an entity.
+5. Word study: English headwords the scripts left unsettled, then meanings and the meaning of each word, beside grammar.
+6. Verse ranges for summaries, chosen and reviewed by a person.
+7. Summaries of chapters and verse ranges, then of books.
 
-Before the full run, every layer runs on a pilot set, and its output is reviewed: 1 Nephi 1 to 3, 2 Nephi 12 with Isaiah 2, Mosiah 2 to 5, Genesis 5, Alma 36, and D&C 76. Together they cover speeches across chapters, Bible quotations, a genealogy, a chiasm, and a revelation.
+Before the plan is cut, the first four passes run on a pilot, on a copy of the database: 1 Nephi 1 to 12 for narrative, Isaiah 1 to 14 for poetry and quotation, and D&C 76 to 84 for revelation. Every chapter of the pilot is reviewed in full. Its error rates and token counts set each pass's batch size and model, and the pilot's tags are thrown away.
 
 ## Licensing
 

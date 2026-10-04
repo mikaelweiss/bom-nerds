@@ -53,7 +53,7 @@ class Layer:
         return chapter_scopes(db)
 
     def chapters(self, db: sqlite3.Connection, scope: str) -> list[tuple[str, int]]:
-        """The chapters a scope covers, which decide whether it is in the pilot set and what its context shows."""
+        """The chapters a scope covers, which decide what its context shows."""
         if self.scope == "chapter":
             return [split_chapter(scope)]
         if self.scope == "book":

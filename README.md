@@ -21,19 +21,20 @@ Sources download into `sources/` on first use. The English taggers take hours, s
 Claude Code sessions tag the rest through the agent CLI, following `plan.tsv`: every session of the build, cut once from counts in the database. `python3 -m bomnerds.agent --help` lists the commands.
 
 ```sh
-python3 -m bomnerds.agent plan --pilot   # cuts plan-pilot.tsv; plan without --pilot cuts plan.tsv
-python3 -m bomnerds.agent status         # how far each pass is, with each review's error counts
-scripts/run-plan --parallel 3            # runs every session in order, three at a time
+python3 -m bomnerds.agent plan     # cuts plan.tsv
+python3 -m bomnerds.agent status   # how far each pass is, with each review's error counts
+scripts/run-plan entities-001      # runs one session
+scripts/run-plan --parallel 3      # runs every session in order, three at a time
 ```
 
-Run the pilot on a copy, with `BOMNERDS_DATABASE` and `BOMNERDS_JOBS` pointing at a copied database and an empty folder, then `scripts/run-plan --pilot`. Stored answers live in `jobs/`. Rebuilding a script layer can delete AI tags in the tables it shares with them, so run `python3 -m bomnerds.agent replay` afterward to store every answer again.
+Stored answers live in `jobs/`. Rebuilding a script layer can delete AI tags in the tables it shares with them, so run `python3 -m bomnerds.agent replay` afterward to store every answer again.
 
 `scripts/release.sh` publishes your `scripture.db` and a JSON export of every table as a GitHub release of the current commit. Pass `--no-upload` to build the zips in `dist/` without releasing.
 
 # Plans for now:
 
-1. Run the pilot, then set each pass's batch size and model from its error rates and token counts
-2. Cut the plan and run it
+1. Run the first session and check its answers
+2. Run the rest of the plan
 
 Visualizations and the API that serves the data are separate projects.
 

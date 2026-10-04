@@ -348,7 +348,7 @@ Each step gives the next ones context and constraints, so later questions become
 6. Verse ranges for summaries, chosen and reviewed by a person.
 7. Summaries of chapters and verse ranges, then of books.
 
-Before the plan is cut, the first four passes run on a pilot, on a copy of the database: 1 Nephi 1 to 12 for narrative, Isaiah 1 to 14 for poetry and quotation, and D&C 76 to 84 for revelation. Every chapter of the pilot is reviewed in full. Its error rates and token counts set each pass's batch size and model, and the pilot's tags are thrown away.
+The first session runs alone, and its answers are checked before the rest of the plan runs.
 
 ## Licensing
 

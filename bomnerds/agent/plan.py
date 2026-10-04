@@ -20,14 +20,11 @@ from .jobs import JOBS, Job
 from .layer import Rejected, chapter_scopes, split_chapter
 
 PLAN = ROOT / "plan.tsv"
-PILOT_PLAN = ROOT / "plan-pilot.tsv"
 SESSIONS = JOBS / "sessions"
 COLUMNS = ("session", "pass", "model", "layers", "from", "to", "covers", "after")
 REVIEW_SPAN = 20
 # A batch ends early at a book's last unit when it is this close to its target.
 SNAP = 0.2
-# Narrative, poetry quoted across works, and revelation, each about one session of the people pass.
-PILOT = (("1-nephi", 1, 12), ("isaiah", 1, 14), ("doctrine-and-covenants", 76, 84))
 
 
 @dataclass(frozen=True)
@@ -73,11 +70,7 @@ class Session:
 
     @property
     def review(self) -> bool:
-        return self.id.removeprefix("pilot-").startswith("review-")
-
-    @property
-    def pilot(self) -> bool:
-        return self.id.startswith("pilot-")
+        return self.id.startswith("review-")
 
     @property
     def folder(self) -> Path:
@@ -306,55 +299,28 @@ def describe(db: sqlite3.Connection, p: Pass, first: str, last: str) -> str:
 # The plan
 
 
-def make(db: sqlite3.Connection, pilot: bool = False) -> list[Session]:
+def make(db: sqlite3.Connection) -> list[Session]:
     """Every session of the run, writer sessions of each pass followed by its reviews, in the order they should start."""
     from .layers import LAYERS
 
     sessions: list[Session] = []
     for p in PASSES:
-        if pilot and p.name not in ("entities", "people", "facts", "links"):
-            continue
         ordered = units(db, p)
-        if pilot:
-            ordered = pilot_units(db, p, ordered)
         if not ordered:
             continue
         batches = cut(db, p, ordered, weights(db, p, ordered))
         width = len(str(len(batches)))
-        prefix = "pilot-" if pilot else ""
-        ids = [f"{prefix}{p.name}-{n:0{max(3, width)}d}" for n in range(1, len(batches) + 1)]
+        ids = [f"{p.name}-{n:0{max(3, width)}d}" for n in range(1, len(batches) + 1)]
         for n, batch in enumerate(batches):
             after = list(p.after)
             if n and (p.chained == "all" or (p.chained == "book" and book_of(p, batch[0]) == book_of(p, batches[n - 1][-1]))):
                 after.append(ids[n - 1])
             sessions.append(Session(ids[n], p.name, p.model, p.layers, batch[0], batch[-1], describe(db, p, batch[0], batch[-1]), tuple(after)))
-        span = 1 if pilot else REVIEW_SPAN
-        for n in range(0, len(batches), span):
-            part = batches[n:n + span]
+        for n in range(0, len(batches), REVIEW_SPAN):
+            part = batches[n:n + REVIEW_SPAN]
             first, last = part[0][0], part[-1][-1]
-            sessions.append(Session(f"{prefix}review-{p.name}-{n // span + 1}", p.name, "opus", p.layers, first, last, describe(db, p, first, last), (f"{p.name}:*",)))
-    if pilot:
-        sessions = [s if not s.after else Session(s.id, s.pass_name, s.model, s.layers, s.first, s.last, s.covers, tuple(a for a in s.after if present(a, sessions))) for s in sessions]
+            sessions.append(Session(f"review-{p.name}-{n // REVIEW_SPAN + 1}", p.name, "opus", p.layers, first, last, describe(db, p, first, last), (f"{p.name}:*",)))
     return sessions
-
-
-def present(token: str, sessions: list[Session]) -> bool:
-    """Whether an after token names a session or pass in this plan."""
-    if token.endswith(":*"):
-        name = token[:-2]
-        return any(s.pass_name == name.removeprefix("review-") and s.review == name.startswith("review-") for s in sessions)
-    return any(s.id == token for s in sessions)
-
-
-def pilot_units(db: sqlite3.Connection, p: Pass, ordered: list[str]) -> list[str]:
-    """The units of a pass the pilot covers: its chapters, and for entities the whole-scripture list and every part holding one of them."""
-    from .layers import LAYERS
-
-    chapters = {f"{book}/{c}" for book, first, last in PILOT for c in range(first, last + 1)}
-    if p.unit == "entities":
-        layer = LAYERS["entities"]
-        return [u for u in ordered if u == "scripture" or {f"{b}/{c}" for b, c in layer.chapters(db, u)} & chapters]
-    return [u for u in ordered if u in chapters]
 
 
 def write(sessions: list[Session], path: Path):
@@ -365,7 +331,7 @@ def write(sessions: list[Session], path: Path):
             writer.writerow((s.id, s.pass_name, s.model, ",".join(s.layers), s.first, s.last, s.covers, " ".join(s.after)))
 
 
-def load(path: Path = PLAN) -> list[Session]:
+def load(path: Path) -> list[Session]:
     if not path.exists():
         raise Rejected(f"{path.name} does not exist. Cut it with: python3 -m bomnerds.agent plan")
     with open(path, newline="", encoding="utf-8") as source:
@@ -374,13 +340,12 @@ def load(path: Path = PLAN) -> list[Session]:
 
 
 def find(session_id: str) -> tuple[Session, list[Session]]:
-    """A session, with every session of its plan: the pilot plan for pilot sessions, the plan otherwise."""
-    path = PILOT_PLAN if session_id.startswith("pilot-") else PLAN
-    sessions = load(path)
+    """A session, with every session of the plan."""
+    sessions = load(PLAN)
     for s in sessions:
         if s.id == session_id:
             return s, sessions
-    raise Rejected(f"no session {session_id!r} in {path.name}")
+    raise Rejected(f"no session {session_id!r} in {PLAN.name}")
 
 
 def waiting_on(session: Session, sessions: list[Session]) -> list[str]:
@@ -413,12 +378,10 @@ def state(db: sqlite3.Connection, session: Session, sessions: list[Session]) -> 
 
 
 def sampled(db: sqlite3.Connection, session: Session) -> list[str]:
-    """The units a review reads in full: every unit of a pilot review, and every REVIEW_SPAN-th unit of the pass otherwise."""
+    """The units a review reads in full: every REVIEW_SPAN-th unit of the pass."""
     p = BY_NAME[session.pass_name]
     ordered = units(db, p)
     covered = ordered[ordered.index(session.first): ordered.index(session.last) + 1]
-    if session.pilot:
-        return covered
     return [u for u in covered if ordered.index(u) % REVIEW_SPAN == 0]
 
 

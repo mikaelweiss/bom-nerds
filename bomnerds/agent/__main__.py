@@ -25,12 +25,11 @@ def connect() -> sqlite3.Connection:
 
 
 def run_plan(db, args):
-    sessions = plans.make(db, pilot=args.pilot)
-    path = plans.PILOT_PLAN if args.pilot else plans.PLAN
-    plans.write(sessions, path)
+    sessions = plans.make(db)
+    plans.write(sessions, plans.PLAN)
     counts = Counter(s.pass_name for s in sessions if not s.review)
     reviews = sum(s.review for s in sessions)
-    print(f"Wrote {path.name}: {len(sessions)} sessions, {reviews} of them reviews.")
+    print(f"Wrote {plans.PLAN.name}: {len(sessions)} sessions, {reviews} of them reviews.")
     for p in plans.PASSES:
         if counts[p.name]:
             print(f"  {p.name}: {counts[p.name]} sessions, {p.model}")
@@ -53,7 +52,7 @@ def run_reset(db, args):
 
 
 def run_status(db, args):
-    sessions = plans.load(plans.PILOT_PLAN if args.pilot else plans.PLAN)
+    sessions = plans.load(plans.PLAN)
     if args.ready:
         for session in sessions:
             if not session.done() and not plans.waiting_on(session, sessions):
@@ -87,7 +86,6 @@ def parser() -> argparse.ArgumentParser:
     commands = main.add_subparsers(required=True, metavar="command")
 
     command = commands.add_parser("plan", help="cut every session of the run into plan.tsv, from counts in the database")
-    command.add_argument("--pilot", action="store_true", help="cut the pilot's sessions into plan-pilot.tsv instead")
     command.set_defaults(run=run_plan)
 
     command = commands.add_parser("batch", help="write the prompt for a session: every layer it answers, or its review")
@@ -104,7 +102,6 @@ def parser() -> argparse.ArgumentParser:
     command.set_defaults(run=run_done)
 
     command = commands.add_parser("status", help="show how far each pass of the plan is")
-    command.add_argument("--pilot", action="store_true", help="the pilot plan")
     command.add_argument("--ready", action="store_true", help="list only sessions that can start now, in plan order")
     command.add_argument("--all", action="store_true", help="list every session, done and waiting ones too")
     command.set_defaults(run=run_status)

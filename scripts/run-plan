@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-"""Runs every session of a plan file with Claude Code, a few at a time, in plan order.
+"""Runs the sessions of plan.tsv with Claude Code, a few at a time, in plan order.
 
 A session starts once the sessions it waits for are done. One that ends without being done runs again, up to ATTEMPTS times,
 RETRY_WAIT seconds later, since the usual cause is a usage limit. Each run's JSON output, token counts included, goes to jobs/logs/.
 
-    scripts/run-plan                 runs plan.tsv
-    scripts/run-plan --pilot         runs plan-pilot.tsv
+    scripts/run-plan                 runs every session
+    scripts/run-plan entities-001    runs only the sessions named
     scripts/run-plan --parallel 4    runs four sessions at once
-
-Set BOMNERDS_DATABASE and BOMNERDS_JOBS to run against a copy, as the pilot does.
 """
 
 import argparse
@@ -53,11 +51,14 @@ def command(session: plans.Session) -> list[str]:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--pilot", action="store_true")
+    parser.add_argument("sessions", nargs="*", help="the sessions to run, such as entities-001. Runs every session when none are named")
     parser.add_argument("--parallel", type=int, default=3)
     args = parser.parse_args()
-    path = plans.PILOT_PLAN if args.pilot else plans.PLAN
-    sessions = plans.load(path)
+    sessions = plans.load(plans.PLAN)
+    unknown = set(args.sessions) - {s.id for s in sessions}
+    if unknown:
+        sys.exit(f"no session {', '.join(sorted(unknown))} in {plans.PLAN.name}")
+    chosen = [s for s in sessions if s.id in args.sessions or not args.sessions]
     logs = JOBS / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     running: dict[str, subprocess.Popen] = {}
@@ -79,7 +80,7 @@ def main():
                 waiting_until[id] = time.time() + RETRY_WAIT
                 print(f"retry   {id} in {RETRY_WAIT // 60} minutes", flush=True)
         ready = [
-            s for s in sessions
+            s for s in chosen
             if not s.done() and s.id not in running and s.id not in failed and waiting_until.get(s.id, 0) <= time.time() and not plans.waiting_on(s, sessions)
         ]
         for session in ready[: max(0, args.parallel - len(running))]:
@@ -90,8 +91,12 @@ def main():
         if not running and not waiting_until.keys() - {s.id for s in sessions if s.done()} - failed:
             break
         time.sleep(POLL)
-    left = [s.id for s in sessions if not s.done()]
-    print(f"{len(sessions) - len(left)} of {len(sessions)} sessions done." + (f" Not done: {', '.join(left[:10])}" + (" and more" if len(left) > 10 else "") if left else ""))
+    for session in chosen if args.sessions else []:
+        blocking = plans.waiting_on(session, sessions)
+        if blocking and not session.done():
+            print(f"waiting {session.id} for {blocking[0]}" + (f" and {len(blocking) - 1} more" if len(blocking) > 1 else ""))
+    left = [s.id for s in chosen if not s.done()]
+    print(f"{len(chosen) - len(left)} of {len(chosen)} sessions done." + (f" Not done: {', '.join(left[:10])}" + (" and more" if len(left) > 10 else "") if left else ""))
     sys.exit(1 if left else 0)
 
 

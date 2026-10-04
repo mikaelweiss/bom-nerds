@@ -101,3 +101,24 @@ insert into structure_kind (id, name) values
     ('parallelism', 'Parallelism'),
     ('list', 'List'),
     ('acrostic', 'Acrostic');
+
+insert into summary_kind (id, name, description, work_id) values
+    ('doctrine', 'Doctrine', 'What the passage teaches about God, Christ, and the plan of salvation.', null),
+    ('principles', 'Principles', 'Lessons a reader can apply in daily life.', null),
+    ('christ', 'Christ', 'How the passage testifies of Jesus Christ or points to Him.', null),
+    ('covenants', 'Covenants', 'Promises made with God and the ordinances tied to them.', null),
+    ('commandments', 'Commandments', 'What God asks His people to do.', null),
+    ('prophecies', 'Prophecies', 'What is foretold and where it is fulfilled.', null),
+    ('symbols', 'Symbols', 'Objects, events, or people that stand for something more.', null),
+    ('questions', 'Questions', 'Questions to think about or discuss.', null),
+    ('key_verses', 'Key verses', 'The two or three most important verses and why each matters.', null),
+    ('hard_passages', 'Hard passages', 'Confusing verses explained simply.', null),
+    ('connections', 'Connections', 'Where the same idea or event shows up elsewhere in scripture.', null),
+    ('setting', 'Setting', 'When, where, and why it happened or was written.', null),
+    ('people', 'People', 'Who appears and what they do.', null),
+    ('speakers', 'Speakers', 'Who is talking to whom.', null),
+    ('original_words', 'Original words', 'Key Hebrew or Greek words and what they mean.', 'bible'),
+    ('culture', 'Culture', 'Customs and background a modern reader would miss.', 'bible'),
+    ('editors_comments', 'Editors'' comments', 'Where Mormon or Moroni steps in to teach.', 'bom'),
+    ('revelation_background', 'Revelation background', 'Who the revelation was for, and the question or event that prompted it.', 'dc'),
+    ('translation_background', 'Translation background', 'Where Moses, Abraham, and the facsimiles came from.', 'pgp');

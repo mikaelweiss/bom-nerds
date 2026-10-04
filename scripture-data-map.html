@@ -1,0 +1,1119 @@
+<meta charset="utf-8">
+<title>Scripture Data Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* One reading column of prose, with wide figures that scroll sideways on phones. Status is the only color: teal built, amber partly built, grey waiting. */
+:root {
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --ink: #18202C;
+  --muted: #5B6577;
+  --line: #CAD1DC;
+  --built: #1D7468;
+  --built-soft: #DCEFEB;
+  --part: #A86B12;
+  --part-soft: #FAEED8;
+  --wait: #7A8496;
+  --accent: #3946A3;
+  --add: #00836F;
+  --drop: #3F4FC0;
+  --display: "IBM Plex Serif", Georgia, serif;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F141B; --surface: #161D27; --ink: #E5E9F0; --muted: #98A2B3; --line: #2F3947;
+    --built: #52C2AE; --built-soft: #12302B; --part: #E2A84A; --part-soft: #362A13; --wait: #7F899B; --accent: #9AA6FF; --add: #2EA893; --drop: #7A88F2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F141B; --surface: #161D27; --ink: #E5E9F0; --muted: #98A2B3; --line: #2F3947;
+  --built: #52C2AE; --built-soft: #12302B; --part: #E2A84A; --part-soft: #362A13; --wait: #7F899B; --accent: #9AA6FF; --add: #2EA893; --drop: #7A88F2;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.6 var(--body); }
+main { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 72px; display: grid; gap: 56px; }
+h1, h2 { font-family: var(--display); font-weight: 600; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: 2.3rem; line-height: 1.15; }
+h2 { font-size: 1.45rem; line-height: 1.25; }
+p { margin: 0; max-width: 66ch; }
+code, .mono { font-family: var(--mono); font-size: 0.86em; }
+section { display: grid; gap: 16px; }
+.lede { font-size: 1.08rem; color: var(--muted); }
+.eyebrow { font: 500 0.75rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 0.85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.swatch { width: 22px; height: 12px; border-radius: 3px; border: 1.5px solid; }
+.sw-built { background: var(--built-soft); border-color: var(--built); }
+.sw-part { background: var(--part-soft); border-color: var(--part); }
+.sw-wait { border-color: var(--wait); border-style: dashed; }
+.sw-none { border-color: var(--wait); border-style: dotted; }
+
+figure { margin: 0; display: grid; gap: 12px; }
+figcaption { font-size: 0.88rem; color: var(--muted); max-width: 72ch; }
+.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.scroll svg { display: block; width: 100%; height: auto; }
+
+/* Passage figure */
+.passage { display: grid; grid-template-columns: max-content repeat(18, auto); column-gap: 10px; row-gap: 6px; align-items: end; min-width: 880px; }
+.rowlabel { grid-column: 1; font: 500 0.7rem/1.2 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-right: 8px; align-self: center; }
+.tag { position: relative; height: 30px; border-bottom: 3px solid; }
+.tag span { position: absolute; left: 0; bottom: 6px; white-space: nowrap; font-size: 0.8rem; }
+.tag.built { border-color: var(--built); color: var(--built); }
+.tag.wait { border-bottom-style: dashed; border-color: var(--wait); color: var(--muted); }
+.tok { font-family: var(--display); font-size: 1.15rem; font-weight: 500; padding-top: 4px; }
+.wid { font: 0.72rem var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.hw { font: 0.8rem var(--mono); color: var(--built); }
+
+/* Diagram SVGs */
+svg { font-family: var(--body); }
+svg .name { font: 600 13.5px var(--body); fill: var(--ink); }
+svg .tbl { font: 10.5px var(--mono); fill: var(--muted); }
+svg .num { font: 500 12.5px var(--mono); fill: var(--ink); }
+svg .note { font: 11px var(--body); fill: var(--muted); }
+svg .lbl { font: 11px var(--body); fill: var(--muted); }
+svg .hub-title { font: 600 17px var(--display); fill: var(--ink); }
+svg .rule { stroke: var(--line); }
+svg .wire { stroke: var(--wait); stroke-width: 1.3; fill: none; }
+svg .wire-dash { stroke: var(--wait); stroke-width: 1.3; fill: none; stroke-dasharray: 4 4; }
+svg .hub { fill: var(--surface); stroke: var(--ink); stroke-width: 1.4; }
+svg .b-built { fill: var(--built-soft); stroke: var(--built); stroke-width: 1.5; }
+svg .b-part { fill: var(--part-soft); stroke: var(--part); stroke-width: 1.5; }
+svg .b-wait { fill: var(--surface); stroke: var(--wait); stroke-width: 1.5; stroke-dasharray: 5 4; }
+svg .b-none { fill: var(--surface); stroke: var(--wait); stroke-width: 1.5; stroke-dasharray: 1.5 4; stroke-linecap: round; }
+svg .b-plain { fill: var(--surface); stroke: var(--ink); stroke-width: 1.3; }
+svg .arrowhead { fill: var(--wait); }
+svg .accent-wire { stroke: var(--built); stroke-width: 1.6; fill: none; }
+svg .accent-head { fill: var(--built); }
+svg .warn-wire { stroke: var(--part); stroke-width: 1.4; fill: none; stroke-dasharray: 4 4; }
+svg .warn-head { fill: var(--part); }
+
+/* Build order */
+.steps { display: grid; border-top: 1px solid var(--line); }
+.step { display: grid; grid-template-columns: 2.4rem minmax(0, 1.1fr) minmax(0, 1.6fr) minmax(0, 1.6fr); gap: 8px 20px; padding-block: 16px; border-bottom: 1px solid var(--line); align-items: start; }
+.step .n { font: 600 1.25rem/1.2 var(--display); color: var(--muted); font-variant-numeric: tabular-nums; }
+.step h3 { margin: 0; font: 600 1rem/1.3 var(--body); }
+.chip { display: inline-block; margin-top: 6px; font: 500 0.72rem/1 var(--mono); padding: 4px 7px; border-radius: 4px; border: 1.5px solid; }
+.chip.built { background: var(--built-soft); border-color: var(--built); color: var(--built); }
+.chip.part { background: var(--part-soft); border-color: var(--part); color: var(--part); }
+.chip.wait { border-color: var(--wait); border-style: dashed; color: var(--muted); }
+.chip.none { border-color: var(--wait); border-style: dotted; color: var(--muted); }
+.col-h { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.step ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; font-size: 0.92rem; }
+.step li::marker { color: var(--muted); }
+.num { font-family: var(--mono); font-size: 0.88em; font-variant-numeric: tabular-nums; }
+.parallel { grid-column: span 2; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px 20px; }
+.parallel h4 { margin: 0 0 4px; font: 600 0.92rem/1.3 var(--body); }
+.parallel .pair { display: contents; }
+
+.track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.stage { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.stage.here { border: 2px solid var(--accent); }
+.stage .k { font: 500 0.72rem/1 var(--mono); color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+.stage.here .k { color: var(--accent); }
+.stage strong { font-weight: 600; }
+.stage p { font-size: 0.88rem; color: var(--muted); }
+.pilot { display: flex; flex-wrap: wrap; gap: 8px; }
+.pilot span { font-size: 0.85rem; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.aside { font-size: 0.92rem; color: var(--muted); }
+
+/* Example visualization */
+.sw-add { background: var(--add); border-color: var(--add); }
+.sw-drop { background: var(--drop); border-color: var(--drop); }
+svg .w { font: 500 16px var(--display); fill: var(--ink); }
+svg .w.add { fill: var(--add); }
+svg .heb { font: 20px "SBL Hebrew", "Times New Roman", serif; fill: var(--ink); }
+svg .gl { font: 11px var(--mono); fill: var(--muted); }
+svg .wid-s { font: 9.5px var(--mono); fill: var(--muted); }
+svg .rowname { font: 500 10.5px var(--mono); fill: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+svg .match { stroke: var(--wait); stroke-width: 1; }
+svg .match.strong { stroke: var(--ink); stroke-width: 1.4; }
+svg .add-wash { fill: var(--add); opacity: 0.12; }
+svg .add-label { font: 600 11.5px var(--body); fill: var(--ink); }
+svg .grid { stroke: var(--line); stroke-width: 1; }
+svg .axis { stroke: var(--muted); stroke-width: 1; }
+svg .tick { font: 10px var(--mono); fill: var(--muted); }
+svg .axis-h { font: 600 11.5px var(--body); fill: var(--ink); }
+svg .rl { font: 500 12px var(--body); fill: var(--ink); }
+svg .rs { font: 11px var(--body); fill: var(--muted); }
+svg .val { font: 10.5px var(--mono); fill: var(--muted); }
+svg .add { fill: var(--add); }
+svg .drop { fill: var(--drop); }
+svg .hit { fill: transparent; }
+svg .row:hover .hit, svg .row:focus .hit { fill: var(--line); opacity: 0.45; }
+svg .row:focus { outline: none; }
+svg .row.hl .rl { font-weight: 700; }
+details summary { cursor: pointer; font-size: 0.88rem; color: var(--muted); }
+.table-wrap { overflow-x: auto; margin-top: 10px; }
+table { border-collapse: collapse; font-size: 0.85rem; width: 100%; }
+th, td { text-align: left; padding: 5px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td:nth-child(n+3), th:nth-child(n+3) { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+.sw-heb { background: var(--add); border-color: var(--add); }
+.sw-grk { background: var(--drop); border-color: var(--drop); }
+svg .rib { opacity: 0.3; transition: opacity 120ms; }
+svg .rib.heb { fill: var(--add); }
+svg .rib.grk { fill: var(--drop); }
+svg .rib:hover { opacity: 0.65; }
+svg.tracing .rib { opacity: 0.07; }
+svg.tracing .rib.on { opacity: 0.7; }
+svg .bar.heb { fill: var(--add); }
+svg .bar.grk { fill: var(--drop); }
+svg .bar.en { fill: var(--ink); }
+svg .orig { font: 17px "SBL Hebrew", "Times New Roman", serif; fill: var(--ink); }
+svg .gloss { font: 10.5px var(--mono); fill: var(--muted); }
+svg .eng { font: 600 13.5px var(--body); fill: var(--ink); }
+svg .node { cursor: default; }
+svg .node:focus { outline: none; }
+@media (prefers-reduced-motion: reduce) { svg .rib { transition: none; } }
+
+@media (max-width: 760px) {
+  h1 { font-size: 1.8rem; }
+  .step { grid-template-columns: 2rem minmax(0, 1fr); }
+  .step > :nth-child(n+3) { grid-column: 2; }
+  .parallel { grid-column: 2; grid-template-columns: minmax(0, 1fr); }
+  .parallel > .col-h { display: none; }
+  .track { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (max-width: 440px) { .track { grid-template-columns: minmax(0, 1fr); } }
+</style>
+
+<main>
+  <header style="display:grid; gap:14px">
+    <div class="eyebrow">bom-nerds · scripture.db</div>
+    <h1>Scripture Data Map</h1>
+    <p class="lede">One SQLite database. Every word of all four works gets a permanent number, and every tag points at a run of those numbers or at an entity. Counts are live from <code>scripture.db</code> as of the latest build.</p>
+    <div class="legend" aria-label="Status legend">
+      <span><i class="swatch sw-built"></i>Built by script</span>
+      <span><i class="swatch sw-part"></i>Script part built, AI part waiting</span>
+      <span><i class="swatch sw-wait"></i>Waiting on AI</span>
+      <span><i class="swatch sw-none"></i>No table yet</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>A passage is a range of word numbers</h2>
+    <p>Word ids follow reading order inside an edition. So any highlight, from one word to a whole sermon, is a first and last word id. Tags never store text. They store ranges.</p>
+    <figure>
+      <div class="scroll">
+        <div class="passage" role="img" aria-label="1 Nephi 3:7 as word ids 794163 to 794180, with a sentence, a speech, and a mention each stored as a range of those ids">
+          <div class="rowlabel">sentence</div>
+          <div class="tag built" style="grid-column: 2 / -1"><span>sentence 61281 · words 794157 to 794212 (runs past both edges)</span></div>
+
+          <div class="rowlabel">speech</div>
+          <div class="tag wait" style="grid-column: 8 / -1"><span>speech · Nephi to his father, spoken · starts at 794169</span></div>
+
+          <div class="rowlabel">mention</div>
+          <div class="tag wait" style="grid-column: 3 / 4"><span>names → nephi-son-of-lehi · 794164 to 794164</span></div>
+
+          <div class="rowlabel">word</div>
+          <div class="tok">I,</div><div class="tok">Nephi,</div><div class="tok">said</div><div class="tok">unto</div><div class="tok">my</div><div class="tok">father:</div><div class="tok">I</div><div class="tok">will</div><div class="tok">go</div><div class="tok">and</div><div class="tok">do</div><div class="tok">the</div><div class="tok">things</div><div class="tok">which</div><div class="tok">the</div><div class="tok">Lord</div><div class="tok">hath</div><div class="tok">commanded,</div>
+
+          <div class="rowlabel">id</div>
+          <div class="wid">794163</div><div class="wid">794164</div><div class="wid">794165</div><div class="wid">794166</div><div class="wid">794167</div><div class="wid">794168</div><div class="wid">794169</div><div class="wid">794170</div><div class="wid">794171</div><div class="wid">794172</div><div class="wid">794173</div><div class="wid">794174</div><div class="wid">794175</div><div class="wid">794176</div><div class="wid">794177</div><div class="wid">794178</div><div class="wid">794179</div><div class="wid">794180</div>
+
+          <div class="rowlabel">headword</div>
+          <div class="hw">I</div><div class="hw">Nephi</div><div class="hw">say</div><div class="hw">unto</div><div class="hw">I</div><div class="hw">father</div><div class="hw">I</div><div class="hw">will</div><div class="hw">go</div><div class="hw">and</div><div class="hw">do</div><div class="hw">the</div><div class="hw">thing</div><div class="hw">which</div><div class="hw">the</div><div class="hw">lord</div><div class="hw">have</div><div class="hw">command</div>
+        </div>
+      </div>
+      <figcaption>1 Nephi 3:7 as stored. Words, ids, headwords, and the sentence are real rows. The speech and the mention are examples of tags the AI layers will add. Agents never see these ids: they quote the words, and the CLI turns the quote into a range.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Every layer points at words, entities, or both</h2>
+    <p>Two hubs hold everything else up. Each layer in the middle is its own set of tables, and each can be rebuilt or dropped without touching another. Line labels name what the layer stores in that direction.</p>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1000 742" style="min-width: 780px" role="img" aria-label="Eleven layers sit between two hubs. Words on the left, entities on the right. Each layer links to words by a passage range, to entities by role, or to both. Dates can also attach to a relationship.">
+          <defs>
+            <marker id="hd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="arrowhead"/></marker>
+          </defs>
+
+          <rect class="hub" x="10" y="20" width="170" height="702" rx="10"/>
+          <text class="hub-title" x="26" y="50">Words</text>
+          <text class="num" x="26" y="72">1,813,091</text>
+          <rect class="b-built" x="26" y="84" width="40" height="6" rx="2"/>
+          <text class="note" x="72" y="90">built</text>
+          <text class="tbl" x="26" y="122">work · 4</text>
+          <text class="tbl" x="26" y="140">edition · 6</text>
+          <text class="tbl" x="26" y="158">book · 93</text>
+          <text class="tbl" x="26" y="176">edition_book</text>
+          <text class="tbl" x="26" y="194">word</text>
+          <line class="rule" x1="26" x2="164" y1="214" y2="214"/>
+          <text class="lbl" x="26" y="236">Words per edition</text>
+          <text class="tbl" x="26" y="258">kjv</text><text class="tbl" x="164" y="258" text-anchor="end">791,286</text>
+          <text class="tbl" x="26" y="276">wlc</text><text class="tbl" x="164" y="276" text-anchor="end">475,911</text>
+          <text class="tbl" x="26" y="294">bom-2013</text><text class="tbl" x="164" y="294" text-anchor="end">268,906</text>
+          <text class="tbl" x="26" y="312">sblgnt</text><text class="tbl" x="164" y="312" text-anchor="end">137,741</text>
+          <text class="tbl" x="26" y="330">dc-2013</text><text class="tbl" x="164" y="330" text-anchor="end">112,116</text>
+          <text class="tbl" x="26" y="348">pgp-2013</text><text class="tbl" x="164" y="348" text-anchor="end">27,131</text>
+          <line class="rule" x1="26" x2="164" y1="368" y2="368"/>
+          <text class="lbl" x="26" y="390">Frozen once tagging</text>
+          <text class="lbl" x="26" y="406">starts. A new text is</text>
+          <text class="lbl" x="26" y="422">a new edition.</text>
+
+          <rect class="hub" x="820" y="20" width="170" height="702" rx="10"/>
+          <text class="hub-title" x="836" y="50">Entities</text>
+          <text class="num" x="836" y="72">4,197</text>
+          <rect class="b-part" x="836" y="84" width="40" height="6" rx="2"/>
+          <text class="note" x="882" y="90">Bible only</text>
+          <text class="tbl" x="836" y="122">entity</text>
+          <text class="tbl" x="836" y="140">entity_name · 6,473</text>
+          <text class="tbl" x="836" y="158">entity_type · 13</text>
+          <text class="tbl" x="836" y="176">entity_book · 7,940</text>
+          <line class="rule" x1="836" x2="974" y1="196" y2="196"/>
+          <text class="lbl" x="836" y="218">By type</text>
+          <text class="tbl" x="836" y="240">person</text><text class="tbl" x="974" y="240" text-anchor="end">3,076</text>
+          <text class="tbl" x="836" y="258">place (6 kinds)</text><text class="tbl" x="974" y="258" text-anchor="end">1,013</text>
+          <text class="tbl" x="836" y="276">group</text><text class="tbl" x="974" y="276" text-anchor="end">88</text>
+          <text class="tbl" x="836" y="294">object</text><text class="tbl" x="974" y="294" text-anchor="end">16</text>
+          <text class="tbl" x="836" y="312">office</text><text class="tbl" x="974" y="312" text-anchor="end">4</text>
+          <text class="tbl" x="836" y="330">event, topic</text><text class="tbl" x="974" y="330" text-anchor="end">0</text>
+          <line class="rule" x1="836" x2="974" y1="350" y2="350"/>
+          <text class="lbl" x="836" y="372">Waiting on AI:</text>
+          <text class="lbl" x="836" y="388">Book of Mormon, D&amp;C,</text>
+          <text class="lbl" x="836" y="404">and PGP entities,</text>
+          <text class="lbl" x="836" y="420">topics, and a merge</text>
+          <text class="lbl" x="836" y="436">across every book.</text>
+
+          <line class="wire" x1="300" y1="56" x2="180" y2="56" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="50" text-anchor="middle">each word</text>
+          <rect class="b-part" x="300" y="34" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="52">Dictionary</text>
+          <text class="num" x="688" y="52" text-anchor="end">26,939 headwords</text>
+          <text class="tbl" x="312" y="69">word_headword · word_meaning · meaning</text>
+          <text class="note" x="688" y="69" text-anchor="end">meanings: Hebrew only</text>
+
+          <path class="wire" d="M300 109 H180" marker-end="url(#hd)"/>
+          <path class="wire" d="M300 125 H230 V109"/>
+          <text class="lbl" x="265" y="103" text-anchor="middle">two words</text>
+          <rect class="b-built" x="300" y="95" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="113">Word matches</text>
+          <text class="num" x="688" y="113" text-anchor="end">365,612</text>
+          <text class="tbl" x="312" y="130">word_match</text>
+          <text class="note" x="688" y="130" text-anchor="end">Hebrew/Greek ↔ KJV, parallels</text>
+
+          <line class="wire" x1="300" y1="178" x2="180" y2="178" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="172" text-anchor="middle">passage</text>
+          <line class="wire" x1="700" y1="178" x2="820" y2="178" marker-end="url(#hd)"/>
+          <text class="lbl" x="760" y="172" text-anchor="middle">entity</text>
+          <rect class="b-part" x="300" y="156" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="174">Mentions</text>
+          <text class="num" x="688" y="174" text-anchor="end">38,821</text>
+          <text class="tbl" x="312" y="191">mention</text>
+          <text class="note" x="688" y="191" text-anchor="end">Bible names only</text>
+
+          <line class="wire" x1="300" y1="239" x2="180" y2="239" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="233" text-anchor="middle">passage</text>
+          <line class="wire" x1="700" y1="239" x2="820" y2="239" marker-end="url(#hd)"/>
+          <text class="lbl" x="760" y="233" text-anchor="middle">speaker, listeners</text>
+          <rect class="b-wait" x="300" y="217" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="235">Speakers</text>
+          <text class="num" x="688" y="235" text-anchor="end">0</text>
+          <text class="tbl" x="312" y="252">speech · speech_listener</text>
+          <text class="note" x="688" y="252" text-anchor="end">AI, not started</text>
+
+          <line class="wire" x1="300" y1="300" x2="180" y2="300" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="294" text-anchor="middle">evidence</text>
+          <line class="wire" x1="700" y1="300" x2="820" y2="300" marker-end="url(#hd)"/>
+          <text class="lbl" x="760" y="294" text-anchor="middle">subject, object</text>
+          <rect class="b-part" x="300" y="278" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="296">Relationships</text>
+          <text class="num" x="688" y="296" text-anchor="end">4,536</text>
+          <text class="tbl" x="312" y="313">relationship · relationship_evidence</text>
+          <text class="note" x="688" y="313" text-anchor="end">Bible family only</text>
+
+          <line class="wire" x1="300" y1="361" x2="180" y2="361" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="355" text-anchor="middle">passage, evidence</text>
+          <line class="wire" x1="700" y1="361" x2="820" y2="361" marker-end="url(#hd)"/>
+          <text class="lbl" x="760" y="355" text-anchor="middle">event</text>
+          <line class="wire" x1="560" y1="339" x2="560" y2="324" marker-end="url(#hd)"/>
+          <text class="lbl" x="568" y="335">or a relationship</text>
+          <rect class="b-part" x="300" y="339" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="357">Dates</text>
+          <text class="num" x="688" y="357" text-anchor="end">73</text>
+          <text class="tbl" x="312" y="374">date · counting_system</text>
+          <text class="note" x="688" y="374" text-anchor="end">formula years only</text>
+
+          <line class="wire" x1="300" y1="422" x2="180" y2="422" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="416" text-anchor="middle">passage</text>
+          <line class="wire" x1="700" y1="422" x2="820" y2="422" marker-end="url(#hd)"/>
+          <text class="lbl" x="760" y="416" text-anchor="middle">traveler, from, to</text>
+          <rect class="b-wait" x="300" y="400" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="418">Journeys</text>
+          <text class="num" x="688" y="418" text-anchor="end">0</text>
+          <text class="tbl" x="312" y="435">journey</text>
+          <text class="note" x="688" y="435" text-anchor="end">AI, not started</text>
+
+          <path class="wire" d="M300 475 H180" marker-end="url(#hd)"/>
+          <path class="wire" d="M300 491 H230 V475"/>
+          <text class="lbl" x="265" y="469" text-anchor="middle">two passages</text>
+          <rect class="b-part" x="300" y="461" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="479">Passage links</text>
+          <text class="num" x="688" y="479" text-anchor="end">311,948</text>
+          <text class="tbl" x="312" y="496">passage_link</text>
+          <text class="note" x="688" y="496" text-anchor="end">Bible cross-refs, quotations</text>
+
+          <line class="wire" x1="300" y1="544" x2="180" y2="544" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="538" text-anchor="middle">passage</text>
+          <rect class="b-part" x="300" y="522" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="540">Grammar</text>
+          <text class="num" x="688" y="540" text-anchor="end">72,972 sentences</text>
+          <text class="tbl" x="312" y="557">sentence · clause · clause_part</text>
+          <text class="note" x="688" y="557" text-anchor="end">English partly</text>
+
+          <line class="wire" x1="300" y1="605" x2="180" y2="605" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="599" text-anchor="middle">passage</text>
+          <rect class="b-wait" x="300" y="583" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="601">Literary structures</text>
+          <text class="num" x="688" y="601" text-anchor="end">0</text>
+          <text class="tbl" x="312" y="618">structure · structure_part</text>
+          <text class="note" x="688" y="618" text-anchor="end">AI, not started</text>
+
+          <line class="wire-dash" x1="300" y1="666" x2="180" y2="666" marker-end="url(#hd)"/>
+          <text class="lbl" x="240" y="660" text-anchor="middle">chapter, book, range</text>
+          <rect class="b-none" x="300" y="644" width="400" height="44" rx="7"/>
+          <text class="name" x="312" y="662">Summaries</text>
+          <text class="num" x="688" y="662" text-anchor="end">none</text>
+          <text class="tbl" x="312" y="679">verse ranges + 19 kinds</text>
+          <text class="note" x="688" y="679" text-anchor="end">no table yet</text>
+        </svg>
+      </div>
+      <figcaption>Each arrow is a foreign key. Arrows into Words store a first and last word id. Arrows into Entities store an entity id, which cascades if the id later gains a qualifier like <code>nephi-son-of-lehi</code>. The spec defines Summaries, but <code>db/schema.sql</code> has no table for them or for verse ranges.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>How an AI tag will get in</h2>
+    <p>Scripts fill everything they can. For the rest, agents never touch the database. They work through a CLI that prints a chapter, checks each answer, and compares two independent runs.</p>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1100 330" style="min-width: 820px" role="img" aria-label="The CLI prints a chapter with earlier tags to two agents from different model families. Each answers with verse and quote. The CLI rejects bad answers back to the agent, compares the two answers tag by tag, stores agreed tags, and sends disagreements to a decider whose settled answer is stored.">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="arrowhead"/></marker>
+            <marker id="ahw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="warn-head"/></marker>
+            <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="accent-head"/></marker>
+          </defs>
+
+          <rect class="b-plain" x="10" y="135" width="120" height="60" rx="8"/>
+          <text class="name" x="70" y="161" text-anchor="middle">scripture.db</text>
+          <text class="note" x="70" y="179" text-anchor="middle">text + earlier tags</text>
+
+          <line class="wire" x1="130" y1="165" x2="178" y2="165" marker-end="url(#ah)"/>
+          <text class="lbl" x="154" y="157" text-anchor="middle">reads</text>
+
+          <rect class="b-wait" x="180" y="135" width="140" height="60" rx="8"/>
+          <text class="name" x="250" y="161" text-anchor="middle">CLI · print</text>
+          <text class="note" x="250" y="179" text-anchor="middle">one chapter, one question</text>
+
+          <path class="wire" d="M320 150 L378 82" marker-end="url(#ah)"/>
+          <path class="wire" d="M320 180 L378 248" marker-end="url(#ah)"/>
+          <text class="lbl" x="300" y="110">same job</text>
+          <text class="lbl" x="300" y="228">same job</text>
+
+          <rect class="b-plain" x="380" y="40" width="150" height="60" rx="8"/>
+          <text class="name" x="455" y="66" text-anchor="middle">Agent A</text>
+          <text class="note" x="455" y="84" text-anchor="middle">model family 1</text>
+          <rect class="b-plain" x="380" y="230" width="150" height="60" rx="8"/>
+          <text class="name" x="455" y="256" text-anchor="middle">Agent B</text>
+          <text class="note" x="455" y="274" text-anchor="middle">model family 2</text>
+
+          <path class="wire" d="M530 80 L588 150" marker-end="url(#ah)"/>
+          <path class="wire" d="M530 250 L588 180" marker-end="url(#ah)"/>
+          <text class="lbl" x="566" y="104">verse + quote</text>
+          <text class="lbl" x="566" y="234">verse + quote</text>
+
+          <rect class="b-wait" x="590" y="135" width="140" height="60" rx="8"/>
+          <text class="name" x="660" y="161" text-anchor="middle">CLI · check</text>
+          <text class="note" x="660" y="179" text-anchor="middle">quote → word ids</text>
+
+          <path class="warn-wire" d="M660 135 V22 H455 V38" marker-end="url(#ahw)"/>
+          <path class="warn-wire" d="M660 195 V312 H455 V292" marker-end="url(#ahw)"/>
+          <text class="lbl" x="668" y="44">rejects with a fix-it message</text>
+          <text class="lbl" x="668" y="294">rejects with a fix-it message</text>
+
+          <line class="wire" x1="730" y1="165" x2="788" y2="165" marker-end="url(#ah)"/>
+          <rect class="b-wait" x="790" y="135" width="120" height="60" rx="8"/>
+          <text class="name" x="850" y="161" text-anchor="middle">Compare</text>
+          <text class="note" x="850" y="179" text-anchor="middle">tag by tag</text>
+
+          <line class="accent-wire" x1="910" y1="165" x2="968" y2="165" marker-end="url(#ahg)"/>
+          <text class="lbl" x="939" y="157" text-anchor="middle">agree</text>
+
+          <line class="wire" x1="850" y1="195" x2="850" y2="238" marker-end="url(#ah)"/>
+          <text class="lbl" x="858" y="221">differ</text>
+          <rect class="b-plain" x="790" y="240" width="120" height="50" rx="8"/>
+          <text class="name" x="850" y="262" text-anchor="middle">Decider</text>
+          <text class="note" x="850" y="279" text-anchor="middle">settles each one</text>
+          <path class="accent-wire" d="M910 265 H1030 V197" marker-end="url(#ahg)"/>
+          <text class="lbl" x="940" y="258">settled</text>
+
+          <rect class="b-built" x="970" y="135" width="120" height="60" rx="8"/>
+          <text class="name" x="1030" y="161" text-anchor="middle">scripture.db</text>
+          <text class="note" x="1030" y="179" text-anchor="middle">one answer per fact</text>
+        </svg>
+      </div>
+      <figcaption>Dashed boxes are not built: the CLI is the next piece of work. Jobs that write prose instead of choosing, such as listing a book's entities or writing summaries, skip the compare step. One agent writes, and an agent from the other family checks and corrects. Checks across each finished layer then flag impossible answers, and a flagged chapter reruns.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>Each step gives the next ones context, so later questions become choices among things already tagged. Mistakes spread the same way, so the early steps get the most care.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <div><h3>Text</h3><span class="chip built">built</span></div>
+        <div><div class="col-h">Done by script</div><ul><li><span class="num">1,813,091</span> words in 6 editions, with punctuation and KJV italics kept</li></ul></div>
+        <div><div class="col-h">Left</div><ul><li>Nothing</li></ul></div>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div><h3>Hebrew and Greek, word matches, English headwords</h3><span class="chip part">mostly built</span></div>
+        <div><div class="col-h">Done by script</div><ul>
+          <li>Macula words, headwords, and grammar codes</li>
+          <li><span class="num">343,616</span> Hebrew and Greek to KJV word matches</li>
+          <li>Headwords for <span class="num">1,808,098</span> English words (lookup table, spaCy, Stanza, MorphAdorner)</li>
+          <li>Hebrew word senses on <span class="num">180,502</span> words</li>
+        </ul></div>
+        <div><div class="col-h">Left for AI</div><ul>
+          <li><span class="num">4,993</span> English words all three taggers leave unsettled</li>
+          <li>Meanings for English and Greek words, in step 7</li>
+        </ul></div>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div><h3>Entity list</h3><span class="chip part">Bible built</span></div>
+        <div><div class="col-h">Done by script</div><ul><li><span class="num">4,197</span> Bible people, groups, and places from TIPNR and OpenBible</li></ul></div>
+        <div><div class="col-h">Left for AI</div><ul><li>One job per book for the Book of Mormon, D&amp;C, and PGP</li><li>Topics</li><li>A merge of duplicates across every book</li></ul></div>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <div><h3>Mentions of names and titles</h3><span class="chip part">Bible built</span></div>
+        <div><div class="col-h">Done by script</div><ul><li><span class="num">38,821</span> Bible names by Strong's number and TIPNR verse lists, plus Jehovah and LORD</li></ul></div>
+        <div><div class="col-h">Left</div><ul><li>Script for names only one entity carries, once step 3 is complete</li><li>AI for the rest</li></ul></div>
+      </div>
+      <div class="step">
+        <div class="n">5</div>
+        <div><h3>Speakers</h3><span class="chip wait">waiting</span></div>
+        <div><div class="col-h">Done by script</div><ul><li>Nothing. This layer is all AI</li></ul></div>
+        <div><div class="col-h">Left for AI</div><ul><li>Every speech. Books run in parallel, chapters in order, each chapter settled before the next</li></ul></div>
+      </div>
+      <div class="step">
+        <div class="n">6</div>
+        <div><h3>Mentions of pronouns</h3><span class="chip wait">waiting</span></div>
+        <div><div class="col-h">Script, after step 5</div><ul><li>"I", "me", "my" point to the speaker</li><li>"thou", "thee", "thy" when a speech has one listener</li></ul></div>
+        <div><div class="col-h">Left for AI</div><ul><li>Every other pronoun, with names already tagged around it</li></ul></div>
+      </div>
+      <div class="step">
+        <div class="n">7</div>
+        <div><h3>Seven layers in parallel</h3><span class="chip part">partly built</span></div>
+        <div class="parallel">
+          <div class="col-h">Done by script</div><div class="col-h">Left for AI</div>
+          <div><h4>Relationships</h4><ul><li><span class="num">4,536</span> Bible family links by script, <span class="num">2,494</span> cited verses</li></ul></div>
+          <div><h4>&nbsp;</h4><ul><li>AI for every other kind, one job per chapter</li></ul></div>
+          <div><h4>Dates</h4><ul><li><span class="num">73</span> formula dates by script, such as "the first year of the reign of the judges"</li></ul></div>
+          <div><h4>&nbsp;</h4><ul><li>AI for the rest, plus BC/AD estimates</li></ul></div>
+          <div><h4>Passage links</h4><ul><li><span class="num">311,800</span> OpenBible cross-references, <span class="num">100</span> Bible quotations, <span class="num">48</span> parallels</li></ul></div>
+          <div><h4>&nbsp;</h4><ul><li>AI for allusions, fulfillments, and links between works</li></ul></div>
+          <div><h4>Grammar</h4><ul><li><span class="num">72,972</span> sentences. Hebrew and Greek clauses from Macula. English clauses where spaCy and Stanza agree</li></ul></div>
+          <div><h4>&nbsp;</h4><ul><li>AI completes every English sentence around the agreed parts</li></ul></div>
+          <div><h4>Meanings</h4><ul><li>Nothing yet for English and Greek</li></ul></div>
+          <div><h4>&nbsp;</h4><ul><li>AI writes each headword's meanings. Script gives single-meaning words, AI picks the rest</li></ul></div>
+          <div><h4>Journeys, literary structures</h4><ul><li>Nothing. Both are all AI</li></ul></div>
+          <div><h4>&nbsp;</h4><ul><li>One job per chapter</li></ul></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n">8</div>
+        <div><h3>Verse ranges</h3><span class="chip none">no table yet</span></div>
+        <div><div class="col-h">Who</div><ul><li>A person chooses and reviews them, such as King Benjamin's sermon</li></ul></div>
+        <div><div class="col-h">Left</div><ul><li>All of it, plus a schema table</li></ul></div>
+      </div>
+      <div class="step">
+        <div class="n">9</div>
+        <div><h3>Summaries</h3><span class="chip none">no table yet</span></div>
+        <div><div class="col-h">Who</div><ul><li>AI, one job per kind per chapter and range, then per book</li></ul></div>
+        <div><div class="col-h">Left</div><ul><li>All of it, across 19 kinds, plus a schema table</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Example visualization</div>
+    <h2>The Book of Mormon's Bible, word by word</h2>
+    <p>Word matches join the Hebrew to the KJV, and the KJV to the Book of Mormon. Chain them and any verse the Book of Mormon quotes reads across three texts at once, with every difference counted instead of spotted by eye. Before, this took two books open side by side.</p>
+    <figure>
+      <div class="scroll">
+        <svg viewBox="0 0 1092 336" style="min-width: 1000px" role="img" aria-label="2 Nephi 12:16 above Isaiah 2:16 in the KJV above the Hebrew, with lines joining matched words. The first eight Book of Mormon words, and upon all the ships of the sea, have no KJV counterpart.">
+<rect class="add-wash" x="185.0" y="52" width="305.4" height="32" rx="5"/>
+<text class="add-label" x="185.0" y="42">8 words with no match in the KJV</text>
+<line class="match" x1="509.0" y1="82" x2="509.0" y2="158"/>
+<line class="match" x1="549.4" y1="82" x2="549.4" y2="158"/>
+<line class="match" x1="589.8" y1="82" x2="589.8" y2="158"/>
+<line class="match" x1="626.0" y1="82" x2="626.0" y2="158"/>
+<line class="match" x1="670.6" y1="82" x2="670.6" y2="158"/>
+<line class="match" x1="711.0" y1="82" x2="711.0" y2="158"/>
+<line class="match" x1="764.0" y1="82" x2="764.0" y2="158"/>
+<line class="match" x1="821.2" y1="82" x2="821.2" y2="158"/>
+<line class="match" x1="861.6" y1="82" x2="861.6" y2="158"/>
+<line class="match" x1="902.0" y1="82" x2="902.0" y2="158"/>
+<line class="match" x1="959.2" y1="82" x2="959.2" y2="158"/>
+<line class="match" x1="1037.4" y1="82" x2="1037.4" y2="158"/>
+<line class="match strong" x1="670.6" y1="196" x2="679.2" y2="254"/>
+<line class="match strong" x1="764.0" y1="196" x2="731.5" y2="254"/>
+<line class="match strong" x1="959.2" y1="196" x2="1044.9" y2="254"/>
+<line class="match strong" x1="1037.4" y1="196" x2="940.4" y2="254"/>
+<text class="w add" x="190.0" y="74">And</text>
+<text class="w add" x="226.2" y="74">upon</text>
+<text class="w add" x="270.8" y="74">all</text>
+<text class="w add" x="307.0" y="74">the</text>
+<text class="w add" x="343.2" y="74">ships</text>
+<text class="w add" x="396.2" y="74">of</text>
+<text class="w add" x="424.0" y="74">the</text>
+<text class="w add" x="460.2" y="74">sea</text>
+<text class="w" x="496.4" y="74">and</text>
+<text class="w" x="532.6" y="74">upon</text>
+<text class="w" x="577.2" y="74">all</text>
+<text class="w" x="613.4" y="74">the</text>
+<text class="w" x="649.6" y="74">ships</text>
+<text class="w" x="702.6" y="74">of</text>
+<text class="w" x="730.4" y="74">Tarshish</text>
+<text class="w" x="808.6" y="74">and</text>
+<text class="w" x="844.8" y="74">upon</text>
+<text class="w" x="889.4" y="74">all</text>
+<text class="w" x="925.6" y="74">pleasant</text>
+<text class="w" x="1003.8" y="74">pictures</text>
+<text class="w" x="509.0" y="176" text-anchor="middle">And</text>
+<text class="wid-s" x="509.0" y="190" text-anchor="middle">447230</text>
+<text class="w" x="549.4" y="176" text-anchor="middle">upon</text>
+<text class="wid-s" x="549.4" y="190" text-anchor="middle">447231</text>
+<text class="w" x="589.8" y="176" text-anchor="middle">all</text>
+<text class="wid-s" x="589.8" y="190" text-anchor="middle">447232</text>
+<text class="w" x="626.0" y="176" text-anchor="middle">the</text>
+<text class="wid-s" x="626.0" y="190" text-anchor="middle">447233</text>
+<text class="w" x="670.6" y="176" text-anchor="middle">ships</text>
+<text class="wid-s" x="670.6" y="190" text-anchor="middle">447234</text>
+<text class="w" x="711.0" y="176" text-anchor="middle">of</text>
+<text class="wid-s" x="711.0" y="190" text-anchor="middle">447235</text>
+<text class="w" x="764.0" y="176" text-anchor="middle">Tarshish</text>
+<text class="wid-s" x="764.0" y="190" text-anchor="middle">447236</text>
+<text class="w" x="821.2" y="176" text-anchor="middle">and</text>
+<text class="wid-s" x="821.2" y="190" text-anchor="middle">447237</text>
+<text class="w" x="861.6" y="176" text-anchor="middle">upon</text>
+<text class="wid-s" x="861.6" y="190" text-anchor="middle">447238</text>
+<text class="w" x="902.0" y="176" text-anchor="middle">all</text>
+<text class="wid-s" x="902.0" y="190" text-anchor="middle">447239</text>
+<text class="w" x="959.2" y="176" text-anchor="middle">pleasant</text>
+<text class="wid-s" x="959.2" y="190" text-anchor="middle">447240</text>
+<text class="w" x="1037.4" y="176" text-anchor="middle">pictures</text>
+<text class="wid-s" x="1037.4" y="190" text-anchor="middle">447241</text>
+<text class="heb" x="522.5" y="280" text-anchor="middle">וְ</text>
+<text class="gl" x="522.5" y="298" text-anchor="middle">and</text>
+<text class="heb" x="574.8" y="280" text-anchor="middle">עַ֖ל</text>
+<text class="gl" x="574.8" y="298" text-anchor="middle">on</text>
+<text class="heb" x="627.0" y="280" text-anchor="middle">כָּל</text>
+<text class="gl" x="627.0" y="298" text-anchor="middle">all</text>
+<text class="heb" x="679.2" y="280" text-anchor="middle">אֳנִיּ֣וֹת</text>
+<text class="gl" x="679.2" y="298" text-anchor="middle">ships</text>
+<text class="heb" x="731.5" y="280" text-anchor="middle">תַּרְשִׁ֑ישׁ</text>
+<text class="gl" x="731.5" y="298" text-anchor="middle">Tarshish</text>
+<text class="heb" x="783.7" y="280" text-anchor="middle">וְ</text>
+<text class="gl" x="783.7" y="298" text-anchor="middle">and</text>
+<text class="heb" x="835.9" y="280" text-anchor="middle">עַ֖ל</text>
+<text class="gl" x="835.9" y="298" text-anchor="middle">on</text>
+<text class="heb" x="888.2" y="280" text-anchor="middle">כָּל</text>
+<text class="gl" x="888.2" y="298" text-anchor="middle">all</text>
+<text class="heb" x="940.4" y="280" text-anchor="middle">שְׂכִיּ֥וֹת</text>
+<text class="gl" x="940.4" y="298" text-anchor="middle">craft</text>
+<text class="heb" x="992.6" y="280" text-anchor="middle">הַ</text>
+<text class="gl" x="992.6" y="298" text-anchor="middle">the</text>
+<text class="heb" x="1044.9" y="280" text-anchor="middle">חֶמְדָּֽה</text>
+<text class="gl" x="1044.9" y="298" text-anchor="middle">pleasant</text>
+<text class="rowname" x="10" y="74">2 Nephi 12:16</text>
+<text class="rowname" x="10" y="176">Isaiah 2:16 · KJV</text>
+<text class="rowname" x="10" y="280">Isaiah 2:16 · Hebrew</text>
+</svg>
+      </div>
+      <figcaption>Every line is a real <code>word_match</code> row. The Book of Mormon opens the verse with a phrase the KJV and the Hebrew lack. The Greek Septuagint reads "every ship of the sea" here, though the Septuagint is not in this dataset. Hebrew is shown left to right in reading order, with each word's gloss. Small Hebrew words like "and" and "all" stay unmatched because the KJV carries Strong's numbers only on content words.</figcaption>
+    </figure>
+    <figure>
+      <div class="legend" aria-label="Chart legend">
+        <span><i class="swatch sw-drop"></i>KJV words with no Book of Mormon match</span>
+        <span><i class="swatch sw-add"></i>Book of Mormon words with no KJV match</span>
+      </div>
+      <div class="scroll">
+        <svg viewBox="0 0 800 862" style="min-width: 760px" role="img" aria-label="For each of 40 Book of Mormon chapters that follow the Bible, bars show KJV words missing to the left and Book of Mormon words added to the right. 3 Nephi 12 and 3 Nephi 20 differ most. 2 Nephi 17 to 22 barely differ.">
+<line class="grid" x1="453.3" x2="453.3" y1="38" y2="852"/>
+<text class="tick" x="453.3" y="32" text-anchor="middle">100</text>
+<line class="grid" x1="606.7" x2="606.7" y1="38" y2="852"/>
+<text class="tick" x="606.7" y="32" text-anchor="middle">100</text>
+<line class="grid" x1="376.7" x2="376.7" y1="38" y2="852"/>
+<text class="tick" x="376.7" y="32" text-anchor="middle">200</text>
+<line class="grid" x1="683.3" x2="683.3" y1="38" y2="852"/>
+<text class="tick" x="683.3" y="32" text-anchor="middle">200</text>
+<line class="grid" x1="300.0" x2="300.0" y1="38" y2="852"/>
+<text class="tick" x="300.0" y="32" text-anchor="middle">300</text>
+<line class="grid" x1="760.0" x2="760.0" y1="38" y2="852"/>
+<text class="tick" x="760.0" y="32" text-anchor="middle">300</text>
+<text class="axis-h" x="520" y="14" text-anchor="end">← KJV words missing</text>
+<text class="axis-h" x="540" y="14">Words the Book of Mormon adds →</text>
+<g class="row" tabindex="0"><title>1 Nephi 20 follows Isaiah 48: 572 words the same, 21 changed, 104 added, 34 KJV words missing</title>
+<rect class="hit" x="0" y="46" width="800" height="20"/>
+<text class="rl" x="10" y="60.0">1 Nephi 20</text>
+<text class="rs" x="120" y="60.0">Isaiah 48</text>
+<path class="drop" d="M529.0 50.0 H506.9 Q502.9 50.0 502.9 54.0 V58.0 Q502.9 62.0 506.9 62.0 H529.0 Z"/>
+<path class="add" d="M531.0 50.0 H606.7 Q610.7 50.0 610.7 54.0 V58.0 Q610.7 62.0 606.7 62.0 H531.0 Z"/>
+<text class="val" x="616.7" y="60.0" text-anchor="start">104</text>
+</g>
+<g class="row" tabindex="0"><title>1 Nephi 21 follows Isaiah 49: 803 words the same, 14 changed, 58 added, 18 KJV words missing</title>
+<rect class="hit" x="0" y="66" width="800" height="20"/>
+<text class="rl" x="10" y="80.0">1 Nephi 21</text>
+<text class="rs" x="120" y="80.0">Isaiah 49</text>
+<path class="drop" d="M529.0 70.0 H519.2 Q515.2 70.0 515.2 74.0 V78.0 Q515.2 82.0 519.2 82.0 H529.0 Z"/>
+<path class="add" d="M531.0 70.0 H571.5 Q575.5 70.0 575.5 74.0 V78.0 Q575.5 82.0 571.5 82.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 6 follows Isaiah 49: 181 words the same, 4 changed, 20 added, 6 KJV words missing</title>
+<rect class="hit" x="0" y="86" width="800" height="20"/>
+<text class="rl" x="10" y="100.0">2 Nephi 6</text>
+<text class="rs" x="120" y="100.0">Isaiah 49</text>
+<path class="drop" d="M529.0 90.0 H526.7 Q524.4 90.0 524.4 92.3 V99.7 Q524.4 102.0 526.7 102.0 H529.0 Z"/>
+<path class="add" d="M531.0 90.0 H542.3 Q546.3 90.0 546.3 94.0 V98.0 Q546.3 102.0 542.3 102.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 7 follows Isaiah 50: 318 words the same, 8 changed, 78 added, 39 KJV words missing</title>
+<rect class="hit" x="0" y="106" width="800" height="20"/>
+<text class="rl" x="10" y="120.0">2 Nephi 7</text>
+<text class="rs" x="120" y="120.0">Isaiah 50</text>
+<path class="drop" d="M529.0 110.0 H503.1 Q499.1 110.0 499.1 114.0 V118.0 Q499.1 122.0 503.1 122.0 H529.0 Z"/>
+<path class="add" d="M531.0 110.0 H586.8 Q590.8 110.0 590.8 114.0 V118.0 Q590.8 122.0 586.8 122.0 H531.0 Z"/>
+<text class="val" x="596.8" y="120.0" text-anchor="start">78</text>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 8 follows Isaiah 51, Isaiah 52: 774 words the same, 13 changed, 25 added, 40 KJV words missing</title>
+<rect class="hit" x="0" y="126" width="800" height="20"/>
+<text class="rl" x="10" y="140.0">2 Nephi 8</text>
+<text class="rs" x="120" y="140.0">Isaiah 51, Isaiah 52</text>
+<path class="drop" d="M529.0 130.0 H502.3 Q498.3 130.0 498.3 134.0 V138.0 Q498.3 142.0 502.3 142.0 H529.0 Z"/>
+<path class="add" d="M531.0 130.0 H546.2 Q550.2 130.0 550.2 134.0 V138.0 Q550.2 142.0 546.2 142.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 9 follows Isaiah 55: 30 words the same, 0 changed, 3 added, 2 KJV words missing</title>
+<rect class="hit" x="0" y="146" width="800" height="20"/>
+<text class="rl" x="10" y="160.0">2 Nephi 9</text>
+<text class="rs" x="120" y="160.0">Isaiah 55</text>
+<path class="drop" d="M529.0 150.0 H528.2 Q527.5 150.0 527.5 150.76666666666668 V161.23333333333332 Q527.5 162.0 528.2 162.0 H529.0 Z"/>
+<path class="add" d="M531.0 150.0 H532.1 Q533.3 150.0 533.3 151.15 V160.85 Q533.3 162.0 532.1 162.0 H531.0 Z"/>
+</g>
+<g class="row hl" tabindex="0"><title>2 Nephi 12 follows Isaiah 2: 545 words the same, 7 changed, 92 added, 15 KJV words missing</title>
+<rect class="hit" x="0" y="166" width="800" height="20"/>
+<text class="rl" x="10" y="180.0">2 Nephi 12</text>
+<text class="rs" x="120" y="180.0">Isaiah 2</text>
+<path class="drop" d="M529.0 170.0 H521.5 Q517.5 170.0 517.5 174.0 V178.0 Q517.5 182.0 521.5 182.0 H529.0 Z"/>
+<path class="add" d="M531.0 170.0 H597.5 Q601.5 170.0 601.5 174.0 V178.0 Q601.5 182.0 597.5 182.0 H531.0 Z"/>
+<text class="val" x="607.5" y="180.0" text-anchor="start">92</text>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 13 follows Isaiah 3: 527 words the same, 15 changed, 42 added, 45 KJV words missing</title>
+<rect class="hit" x="0" y="186" width="800" height="20"/>
+<text class="rl" x="10" y="200.0">2 Nephi 13</text>
+<text class="rs" x="120" y="200.0">Isaiah 3</text>
+<path class="drop" d="M529.0 190.0 H498.5 Q494.5 190.0 494.5 194.0 V198.0 Q494.5 202.0 498.5 202.0 H529.0 Z"/>
+<path class="add" d="M531.0 190.0 H559.2 Q563.2 190.0 563.2 194.0 V198.0 Q563.2 202.0 559.2 202.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 14 follows Isaiah 4: 195 words the same, 1 changed, 6 added, 13 KJV words missing</title>
+<rect class="hit" x="0" y="206" width="800" height="20"/>
+<text class="rl" x="10" y="220.0">2 Nephi 14</text>
+<text class="rs" x="120" y="220.0">Isaiah 4</text>
+<path class="drop" d="M529.0 210.0 H523.0 Q519.0 210.0 519.0 214.0 V218.0 Q519.0 222.0 523.0 222.0 H529.0 Z"/>
+<path class="add" d="M531.0 210.0 H533.3 Q535.6 210.0 535.6 212.3 V219.7 Q535.6 222.0 533.3 222.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 15 follows Isaiah 5: 811 words the same, 18 changed, 25 added, 34 KJV words missing</title>
+<rect class="hit" x="0" y="226" width="800" height="20"/>
+<text class="rl" x="10" y="240.0">2 Nephi 15</text>
+<text class="rs" x="120" y="240.0">Isaiah 5</text>
+<path class="drop" d="M529.0 230.0 H506.9 Q502.9 230.0 502.9 234.0 V238.0 Q502.9 242.0 506.9 242.0 H529.0 Z"/>
+<path class="add" d="M531.0 230.0 H546.2 Q550.2 230.0 550.2 234.0 V238.0 Q550.2 242.0 546.2 242.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 16 follows Isaiah 6: 353 words the same, 7 changed, 10 added, 6 KJV words missing</title>
+<rect class="hit" x="0" y="246" width="800" height="20"/>
+<text class="rl" x="10" y="260.0">2 Nephi 16</text>
+<text class="rs" x="120" y="260.0">Isaiah 6</text>
+<path class="drop" d="M529.0 250.0 H526.7 Q524.4 250.0 524.4 252.3 V259.7 Q524.4 262.0 526.7 262.0 H529.0 Z"/>
+<path class="add" d="M531.0 250.0 H534.8 Q538.7 250.0 538.7 253.83333333333334 V258.1666666666667 Q538.7 262.0 534.8 262.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 17 follows Isaiah 7: 671 words the same, 9 changed, 2 added, 13 KJV words missing</title>
+<rect class="hit" x="0" y="266" width="800" height="20"/>
+<text class="rl" x="10" y="280.0">2 Nephi 17</text>
+<text class="rs" x="120" y="280.0">Isaiah 7</text>
+<path class="drop" d="M529.0 270.0 H523.0 Q519.0 270.0 519.0 274.0 V278.0 Q519.0 282.0 523.0 282.0 H529.0 Z"/>
+<path class="add" d="M531.0 270.0 H531.8 Q532.5 270.0 532.5 270.76666666666665 V281.23333333333335 Q532.5 282.0 531.8 282.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 18 follows Isaiah 8: 549 words the same, 5 changed, 8 added, 4 KJV words missing</title>
+<rect class="hit" x="0" y="286" width="800" height="20"/>
+<text class="rl" x="10" y="300.0">2 Nephi 18</text>
+<text class="rs" x="120" y="300.0">Isaiah 8</text>
+<path class="drop" d="M529.0 290.0 H527.5 Q525.9 290.0 525.9 291.53333333333336 V300.46666666666664 Q525.9 302.0 527.5 302.0 H529.0 Z"/>
+<path class="add" d="M531.0 290.0 H534.1 Q537.1 290.0 537.1 293.06666666666666 V298.93333333333334 Q537.1 302.0 534.1 302.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 19 follows Isaiah 9: 573 words the same, 8 changed, 6 added, 18 KJV words missing</title>
+<rect class="hit" x="0" y="306" width="800" height="20"/>
+<text class="rl" x="10" y="320.0">2 Nephi 19</text>
+<text class="rs" x="120" y="320.0">Isaiah 9</text>
+<path class="drop" d="M529.0 310.0 H519.2 Q515.2 310.0 515.2 314.0 V318.0 Q515.2 322.0 519.2 322.0 H529.0 Z"/>
+<path class="add" d="M531.0 310.0 H533.3 Q535.6 310.0 535.6 312.3 V319.7 Q535.6 322.0 533.3 322.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 20 follows Isaiah 10: 904 words the same, 13 changed, 10 added, 11 KJV words missing</title>
+<rect class="hit" x="0" y="326" width="800" height="20"/>
+<text class="rl" x="10" y="340.0">2 Nephi 20</text>
+<text class="rs" x="120" y="340.0">Isaiah 10</text>
+<path class="drop" d="M529.0 330.0 H524.6 Q520.6 330.0 520.6 334.0 V338.0 Q520.6 342.0 524.6 342.0 H529.0 Z"/>
+<path class="add" d="M531.0 330.0 H534.8 Q538.7 330.0 538.7 333.8333333333333 V338.1666666666667 Q538.7 342.0 534.8 342.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 21 follows Isaiah 11: 512 words the same, 3 changed, 4 added, 4 KJV words missing</title>
+<rect class="hit" x="0" y="346" width="800" height="20"/>
+<text class="rl" x="10" y="360.0">2 Nephi 21</text>
+<text class="rs" x="120" y="360.0">Isaiah 11</text>
+<path class="drop" d="M529.0 350.0 H527.5 Q525.9 350.0 525.9 351.53333333333336 V360.46666666666664 Q525.9 362.0 527.5 362.0 H529.0 Z"/>
+<path class="add" d="M531.0 350.0 H532.5 Q534.1 350.0 534.1 351.53333333333336 V360.46666666666664 Q534.1 362.0 532.5 362.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 22 follows Isaiah 12: 133 words the same, 1 changed, 0 added, 0 KJV words missing</title>
+<rect class="hit" x="0" y="366" width="800" height="20"/>
+<text class="rl" x="10" y="380.0">2 Nephi 22</text>
+<text class="rs" x="120" y="380.0">Isaiah 12</text>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 23 follows Isaiah 13: 547 words the same, 10 changed, 29 added, 19 KJV words missing</title>
+<rect class="hit" x="0" y="386" width="800" height="20"/>
+<text class="rl" x="10" y="400.0">2 Nephi 23</text>
+<text class="rs" x="120" y="400.0">Isaiah 13</text>
+<path class="drop" d="M529.0 390.0 H518.4 Q514.4 390.0 514.4 394.0 V398.0 Q514.4 402.0 518.4 402.0 H529.0 Z"/>
+<path class="add" d="M531.0 390.0 H549.2 Q553.2 390.0 553.2 394.0 V398.0 Q553.2 402.0 549.2 402.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 24 follows Isaiah 14: 831 words the same, 17 changed, 40 added, 8 KJV words missing</title>
+<rect class="hit" x="0" y="406" width="800" height="20"/>
+<text class="rl" x="10" y="420.0">2 Nephi 24</text>
+<text class="rs" x="120" y="420.0">Isaiah 14</text>
+<path class="drop" d="M529.0 410.0 H525.9 Q522.9 410.0 522.9 413.06666666666666 V418.93333333333334 Q522.9 422.0 525.9 422.0 H529.0 Z"/>
+<path class="add" d="M531.0 410.0 H557.7 Q561.7 410.0 561.7 414.0 V418.0 Q561.7 422.0 557.7 422.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 26 follows Isaiah 29: 38 words the same, 3 changed, 27 added, 8 KJV words missing</title>
+<rect class="hit" x="0" y="426" width="800" height="20"/>
+<text class="rl" x="10" y="440.0">2 Nephi 26</text>
+<text class="rs" x="120" y="440.0">Isaiah 29</text>
+<path class="drop" d="M529.0 430.0 H525.9 Q522.9 430.0 522.9 433.06666666666666 V438.93333333333334 Q522.9 442.0 525.9 442.0 H529.0 Z"/>
+<path class="add" d="M531.0 430.0 H547.7 Q551.7 430.0 551.7 434.0 V438.0 Q551.7 442.0 547.7 442.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 27 follows Isaiah 29: 435 words the same, 15 changed, 161 added, 82 KJV words missing</title>
+<rect class="hit" x="0" y="446" width="800" height="20"/>
+<text class="rl" x="10" y="460.0">2 Nephi 27</text>
+<text class="rs" x="120" y="460.0">Isaiah 29</text>
+<path class="drop" d="M529.0 450.0 H470.1 Q466.1 450.0 466.1 454.0 V458.0 Q466.1 462.0 470.1 462.0 H529.0 Z"/>
+<text class="val" x="460.1" y="460.0" text-anchor="end">82</text>
+<path class="add" d="M531.0 450.0 H650.4 Q654.4 450.0 654.4 454.0 V458.0 Q654.4 462.0 650.4 462.0 H531.0 Z"/>
+<text class="val" x="660.4" y="460.0" text-anchor="start">161</text>
+</g>
+<g class="row" tabindex="0"><title>2 Nephi 30 follows Isaiah 11: 165 words the same, 2 changed, 49 added, 3 KJV words missing</title>
+<rect class="hit" x="0" y="466" width="800" height="20"/>
+<text class="rl" x="10" y="480.0">2 Nephi 30</text>
+<text class="rs" x="120" y="480.0">Isaiah 11</text>
+<path class="drop" d="M529.0 470.0 H527.9 Q526.7 470.0 526.7 471.15 V480.85 Q526.7 482.0 527.9 482.0 H529.0 Z"/>
+<path class="add" d="M531.0 470.0 H564.6 Q568.6 470.0 568.6 474.0 V478.0 Q568.6 482.0 564.6 482.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>Mosiah 12 follows Exodus 20, Isaiah 52: 162 words the same, 3 changed, 3 added, 13 KJV words missing</title>
+<rect class="hit" x="0" y="486" width="800" height="20"/>
+<text class="rl" x="10" y="500.0">Mosiah 12</text>
+<text class="rs" x="120" y="500.0">Exodus 20, Isaiah 52</text>
+<path class="drop" d="M529.0 490.0 H523.0 Q519.0 490.0 519.0 494.0 V498.0 Q519.0 502.0 523.0 502.0 H529.0 Z"/>
+<path class="add" d="M531.0 490.0 H532.1 Q533.3 490.0 533.3 491.15 V500.85 Q533.3 502.0 532.1 502.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>Mosiah 13 follows Deuteronomy 5, Exodus 20: 250 words the same, 17 changed, 24 added, 22 KJV words missing</title>
+<rect class="hit" x="0" y="506" width="800" height="20"/>
+<text class="rl" x="10" y="520.0">Mosiah 13</text>
+<text class="rs" x="120" y="520.0">Deuteronomy 5, Exodus 20</text>
+<path class="drop" d="M529.0 510.0 H516.1 Q512.1 510.0 512.1 514.0 V518.0 Q512.1 522.0 516.1 522.0 H529.0 Z"/>
+<path class="add" d="M531.0 510.0 H545.4 Q549.4 510.0 549.4 514.0 V518.0 Q549.4 522.0 545.4 522.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>Mosiah 14 follows Isaiah 53: 378 words the same, 7 changed, 6 added, 2 KJV words missing</title>
+<rect class="hit" x="0" y="526" width="800" height="20"/>
+<text class="rl" x="10" y="540.0">Mosiah 14</text>
+<text class="rs" x="120" y="540.0">Isaiah 53</text>
+<path class="drop" d="M529.0 530.0 H528.2 Q527.5 530.0 527.5 530.7666666666667 V541.2333333333333 Q527.5 542.0 528.2 542.0 H529.0 Z"/>
+<path class="add" d="M531.0 530.0 H533.3 Q535.6 530.0 535.6 532.3 V539.7 Q535.6 542.0 533.3 542.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>Mosiah 15 follows Isaiah 52: 78 words the same, 1 changed, 2 added, 0 KJV words missing</title>
+<rect class="hit" x="0" y="546" width="800" height="20"/>
+<text class="rl" x="10" y="560.0">Mosiah 15</text>
+<text class="rs" x="120" y="560.0">Isaiah 52</text>
+<path class="add" d="M531.0 550.0 H531.8 Q532.5 550.0 532.5 550.7666666666667 V561.2333333333333 Q532.5 562.0 531.8 562.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>Helaman 10 follows Matthew 18: 24 words the same, 4 changed, 11 added, 0 KJV words missing</title>
+<rect class="hit" x="0" y="566" width="800" height="20"/>
+<text class="rl" x="10" y="580.0">Helaman 10</text>
+<text class="rs" x="120" y="580.0">Matthew 18</text>
+<path class="add" d="M531.0 570.0 H535.4 Q539.4 570.0 539.4 574.0 V578.0 Q539.4 582.0 535.4 582.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 11 follows Matthew 28: 15 words the same, 0 changed, 11 added, 9 KJV words missing</title>
+<rect class="hit" x="0" y="586" width="800" height="20"/>
+<text class="rl" x="10" y="600.0">3 Nephi 11</text>
+<text class="rs" x="120" y="600.0">Matthew 28</text>
+<path class="drop" d="M529.0 590.0 H525.6 Q522.1 590.0 522.1 593.45 V598.55 Q522.1 602.0 525.6 602.0 H529.0 Z"/>
+<path class="add" d="M531.0 590.0 H535.4 Q539.4 590.0 539.4 594.0 V598.0 Q539.4 602.0 535.4 602.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 12 follows Matthew 5: 647 words the same, 28 changed, 290 added, 277 KJV words missing</title>
+<rect class="hit" x="0" y="606" width="800" height="20"/>
+<text class="rl" x="10" y="620.0">3 Nephi 12</text>
+<text class="rs" x="120" y="620.0">Matthew 5</text>
+<path class="drop" d="M529.0 610.0 H320.6 Q316.6 610.0 316.6 614.0 V618.0 Q316.6 622.0 320.6 622.0 H529.0 Z"/>
+<text class="val" x="310.6" y="620.0" text-anchor="end">277</text>
+<path class="add" d="M531.0 610.0 H749.3 Q753.3 610.0 753.3 614.0 V618.0 Q753.3 622.0 749.3 622.0 H531.0 Z"/>
+<text class="val" x="759.3" y="620.0" text-anchor="start">290</text>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 13 follows Matthew 6: 744 words the same, 15 changed, 75 added, 60 KJV words missing</title>
+<rect class="hit" x="0" y="626" width="800" height="20"/>
+<text class="rl" x="10" y="640.0">3 Nephi 13</text>
+<text class="rs" x="120" y="640.0">Matthew 6</text>
+<path class="drop" d="M529.0 630.0 H487.0 Q483.0 630.0 483.0 634.0 V638.0 Q483.0 642.0 487.0 642.0 H529.0 Z"/>
+<text class="val" x="477.0" y="640.0" text-anchor="end">60</text>
+<path class="add" d="M531.0 630.0 H584.5 Q588.5 630.0 588.5 634.0 V638.0 Q588.5 642.0 584.5 642.0 H531.0 Z"/>
+<text class="val" x="594.5" y="640.0" text-anchor="start">75</text>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 14 follows Matthew 7: 571 words the same, 12 changed, 1 added, 5 KJV words missing</title>
+<rect class="hit" x="0" y="646" width="800" height="20"/>
+<text class="rl" x="10" y="660.0">3 Nephi 14</text>
+<text class="rs" x="120" y="660.0">Matthew 7</text>
+<path class="drop" d="M529.0 650.0 H527.1 Q525.2 650.0 525.2 651.9166666666666 V660.0833333333334 Q525.2 662.0 527.1 662.0 H529.0 Z"/>
+<path class="add" d="M531.0 650.0 H531.8 Q532.5 650.0 532.5 650.75 V661.25 Q532.5 662.0 531.8 662.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 15 follows John 10: 61 words the same, 1 changed, 13 added, 0 KJV words missing</title>
+<rect class="hit" x="0" y="666" width="800" height="20"/>
+<text class="rl" x="10" y="680.0">3 Nephi 15</text>
+<text class="rs" x="120" y="680.0">John 10</text>
+<path class="add" d="M531.0 670.0 H537.0 Q541.0 670.0 541.0 674.0 V678.0 Q541.0 682.0 537.0 682.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 16 follows Isaiah 52: 78 words the same, 0 changed, 0 added, 1 KJV words missing</title>
+<rect class="hit" x="0" y="686" width="800" height="20"/>
+<text class="rl" x="10" y="700.0">3 Nephi 16</text>
+<text class="rs" x="120" y="700.0">Isaiah 52</text>
+<path class="drop" d="M529.0 690.0 H528.2 Q527.5 690.0 527.5 690.75 V701.25 Q527.5 702.0 528.2 702.0 H529.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 20 follows Acts 3, Isaiah 52, Micah 4, Micah 5: 495 words the same, 10 changed, 178 added, 130 KJV words missing</title>
+<rect class="hit" x="0" y="706" width="800" height="20"/>
+<text class="rl" x="10" y="720.0">3 Nephi 20</text>
+<text class="rs" x="120" y="720.0">Acts 3, Isaiah 52, Micah 4, Micah 5</text>
+<path class="drop" d="M529.0 710.0 H433.3 Q429.3 710.0 429.3 714.0 V718.0 Q429.3 722.0 433.3 722.0 H529.0 Z"/>
+<text class="val" x="423.3" y="720.0" text-anchor="end">130</text>
+<path class="add" d="M531.0 710.0 H663.5 Q667.5 710.0 667.5 714.0 V718.0 Q667.5 722.0 663.5 722.0 H531.0 Z"/>
+<text class="val" x="673.5" y="720.0" text-anchor="start">178</text>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 21 follows Isaiah 52, Micah 5: 207 words the same, 8 changed, 94 added, 18 KJV words missing</title>
+<rect class="hit" x="0" y="726" width="800" height="20"/>
+<text class="rl" x="10" y="740.0">3 Nephi 21</text>
+<text class="rs" x="120" y="740.0">Isaiah 52, Micah 5</text>
+<path class="drop" d="M529.0 730.0 H519.2 Q515.2 730.0 515.2 734.0 V738.0 Q515.2 742.0 519.2 742.0 H529.0 Z"/>
+<path class="add" d="M531.0 730.0 H599.1 Q603.1 730.0 603.1 734.0 V738.0 Q603.1 742.0 599.1 742.0 H531.0 Z"/>
+<text class="val" x="609.1" y="740.0" text-anchor="start">94</text>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 22 follows Isaiah 54: 482 words the same, 3 changed, 22 added, 8 KJV words missing</title>
+<rect class="hit" x="0" y="746" width="800" height="20"/>
+<text class="rl" x="10" y="760.0">3 Nephi 22</text>
+<text class="rs" x="120" y="760.0">Isaiah 54</text>
+<path class="drop" d="M529.0 750.0 H525.9 Q522.9 750.0 522.9 753.0666666666667 V758.9333333333333 Q522.9 762.0 525.9 762.0 H529.0 Z"/>
+<path class="add" d="M531.0 750.0 H543.9 Q547.9 750.0 547.9 754.0 V758.0 Q547.9 762.0 543.9 762.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 24 follows Malachi 3: 551 words the same, 6 changed, 61 added, 8 KJV words missing</title>
+<rect class="hit" x="0" y="766" width="800" height="20"/>
+<text class="rl" x="10" y="780.0">3 Nephi 24</text>
+<text class="rs" x="120" y="780.0">Malachi 3</text>
+<path class="drop" d="M529.0 770.0 H525.9 Q522.9 770.0 522.9 773.0666666666667 V778.9333333333333 Q522.9 782.0 525.9 782.0 H529.0 Z"/>
+<path class="add" d="M531.0 770.0 H573.8 Q577.8 770.0 577.8 774.0 V778.0 Q577.8 782.0 573.8 782.0 H531.0 Z"/>
+<text class="val" x="583.8" y="780.0" text-anchor="start">61</text>
+</g>
+<g class="row" tabindex="0"><title>3 Nephi 25 follows Malachi 4: 181 words the same, 2 changed, 0 added, 0 KJV words missing</title>
+<rect class="hit" x="0" y="786" width="800" height="20"/>
+<text class="rl" x="10" y="800.0">3 Nephi 25</text>
+<text class="rs" x="120" y="800.0">Malachi 4</text>
+</g>
+<g class="row" tabindex="0"><title>Mormon 9 follows Mark 16: 45 words the same, 0 changed, 23 added, 22 KJV words missing</title>
+<rect class="hit" x="0" y="806" width="800" height="20"/>
+<text class="rl" x="10" y="820.0">Mormon 9</text>
+<text class="rs" x="120" y="820.0">Mark 16</text>
+<path class="drop" d="M529.0 810.0 H516.1 Q512.1 810.0 512.1 814.0 V818.0 Q512.1 822.0 516.1 822.0 H529.0 Z"/>
+<path class="add" d="M531.0 810.0 H544.6 Q548.6 810.0 548.6 814.0 V818.0 Q548.6 822.0 544.6 822.0 H531.0 Z"/>
+</g>
+<g class="row" tabindex="0"><title>Moroni 10 follows 1 Corinthians 12: 13 words the same, 0 changed, 4 added, 4 KJV words missing</title>
+<rect class="hit" x="0" y="826" width="800" height="20"/>
+<text class="rl" x="10" y="840.0">Moroni 10</text>
+<text class="rs" x="120" y="840.0">1 Corinthians 12</text>
+<path class="drop" d="M529.0 830.0 H527.5 Q525.9 830.0 525.9 831.5333333333333 V840.4666666666667 Q525.9 842.0 527.5 842.0 H529.0 Z"/>
+<path class="add" d="M531.0 830.0 H532.5 Q534.1 830.0 534.1 831.5333333333333 V840.4666666666667 Q534.1 842.0 532.5 842.0 H531.0 Z"/>
+</g>
+<line class="axis" x1="530" x2="530" y1="38" y2="852"/>
+</svg>
+      </div>
+      <figcaption>All 40 Book of Mormon chapters that follow a Bible chapter. Together they hold 15,449 words that match the KJV exactly, 311 that match a different word, 1,617 added, and 1,001 KJV words with no counterpart. Hover a row for its full counts. 3 Nephi 12 rewrites the Sermon on the Mount the most, while 2 Nephi 17 to 22 follow Isaiah 7 to 12 almost exactly.</figcaption>
+      <details><summary>Show as a table</summary><div class="table-wrap"><table><thead><tr><th>Book of Mormon</th><th>Follows</th><th>Same</th><th>Changed</th><th>Added</th><th>KJV missing</th></tr></thead><tbody><tr><td>1 Nephi 20</td><td>Isaiah 48</td><td>572</td><td>21</td><td>104</td><td>34</td></tr><tr><td>1 Nephi 21</td><td>Isaiah 49</td><td>803</td><td>14</td><td>58</td><td>18</td></tr><tr><td>2 Nephi 6</td><td>Isaiah 49</td><td>181</td><td>4</td><td>20</td><td>6</td></tr><tr><td>2 Nephi 7</td><td>Isaiah 50</td><td>318</td><td>8</td><td>78</td><td>39</td></tr><tr><td>2 Nephi 8</td><td>Isaiah 51, Isaiah 52</td><td>774</td><td>13</td><td>25</td><td>40</td></tr><tr><td>2 Nephi 9</td><td>Isaiah 55</td><td>30</td><td>0</td><td>3</td><td>2</td></tr><tr><td>2 Nephi 12</td><td>Isaiah 2</td><td>545</td><td>7</td><td>92</td><td>15</td></tr><tr><td>2 Nephi 13</td><td>Isaiah 3</td><td>527</td><td>15</td><td>42</td><td>45</td></tr><tr><td>2 Nephi 14</td><td>Isaiah 4</td><td>195</td><td>1</td><td>6</td><td>13</td></tr><tr><td>2 Nephi 15</td><td>Isaiah 5</td><td>811</td><td>18</td><td>25</td><td>34</td></tr><tr><td>2 Nephi 16</td><td>Isaiah 6</td><td>353</td><td>7</td><td>10</td><td>6</td></tr><tr><td>2 Nephi 17</td><td>Isaiah 7</td><td>671</td><td>9</td><td>2</td><td>13</td></tr><tr><td>2 Nephi 18</td><td>Isaiah 8</td><td>549</td><td>5</td><td>8</td><td>4</td></tr><tr><td>2 Nephi 19</td><td>Isaiah 9</td><td>573</td><td>8</td><td>6</td><td>18</td></tr><tr><td>2 Nephi 20</td><td>Isaiah 10</td><td>904</td><td>13</td><td>10</td><td>11</td></tr><tr><td>2 Nephi 21</td><td>Isaiah 11</td><td>512</td><td>3</td><td>4</td><td>4</td></tr><tr><td>2 Nephi 22</td><td>Isaiah 12</td><td>133</td><td>1</td><td>0</td><td>0</td></tr><tr><td>2 Nephi 23</td><td>Isaiah 13</td><td>547</td><td>10</td><td>29</td><td>19</td></tr><tr><td>2 Nephi 24</td><td>Isaiah 14</td><td>831</td><td>17</td><td>40</td><td>8</td></tr><tr><td>2 Nephi 26</td><td>Isaiah 29</td><td>38</td><td>3</td><td>27</td><td>8</td></tr><tr><td>2 Nephi 27</td><td>Isaiah 29</td><td>435</td><td>15</td><td>161</td><td>82</td></tr><tr><td>2 Nephi 30</td><td>Isaiah 11</td><td>165</td><td>2</td><td>49</td><td>3</td></tr><tr><td>Mosiah 12</td><td>Exodus 20, Isaiah 52</td><td>162</td><td>3</td><td>3</td><td>13</td></tr><tr><td>Mosiah 13</td><td>Deuteronomy 5, Exodus 20</td><td>250</td><td>17</td><td>24</td><td>22</td></tr><tr><td>Mosiah 14</td><td>Isaiah 53</td><td>378</td><td>7</td><td>6</td><td>2</td></tr><tr><td>Mosiah 15</td><td>Isaiah 52</td><td>78</td><td>1</td><td>2</td><td>0</td></tr><tr><td>Helaman 10</td><td>Matthew 18</td><td>24</td><td>4</td><td>11</td><td>0</td></tr><tr><td>3 Nephi 11</td><td>Matthew 28</td><td>15</td><td>0</td><td>11</td><td>9</td></tr><tr><td>3 Nephi 12</td><td>Matthew 5</td><td>647</td><td>28</td><td>290</td><td>277</td></tr><tr><td>3 Nephi 13</td><td>Matthew 6</td><td>744</td><td>15</td><td>75</td><td>60</td></tr><tr><td>3 Nephi 14</td><td>Matthew 7</td><td>571</td><td>12</td><td>1</td><td>5</td></tr><tr><td>3 Nephi 15</td><td>John 10</td><td>61</td><td>1</td><td>13</td><td>0</td></tr><tr><td>3 Nephi 16</td><td>Isaiah 52</td><td>78</td><td>0</td><td>0</td><td>1</td></tr><tr><td>3 Nephi 20</td><td>Acts 3, Isaiah 52, Micah 4, Micah 5</td><td>495</td><td>10</td><td>178</td><td>130</td></tr><tr><td>3 Nephi 21</td><td>Isaiah 52, Micah 5</td><td>207</td><td>8</td><td>94</td><td>18</td></tr><tr><td>3 Nephi 22</td><td>Isaiah 54</td><td>482</td><td>3</td><td>22</td><td>8</td></tr><tr><td>3 Nephi 24</td><td>Malachi 3</td><td>551</td><td>6</td><td>61</td><td>8</td></tr><tr><td>3 Nephi 25</td><td>Malachi 4</td><td>181</td><td>2</td><td>0</td><td>0</td></tr><tr><td>Mormon 9</td><td>Mark 16</td><td>45</td><td>0</td><td>23</td><td>22</td></tr><tr><td>Moroni 10</td><td>1 Corinthians 12</td><td>13</td><td>0</td><td>4</td><td>4</td></tr></tbody></table></div></details>
+    </figure>
+  </section>
+
+  <section>
+    <div class="eyebrow">Example visualization</div>
+    <h2>Where "mercy" comes from</h2>
+    <p>Every Hebrew and Greek word is matched to the KJV words that translate it, so translation choices can be counted. Here are the original words behind eight English words for mercy and grace. One Hebrew word splits into many English words, and many originals collapse into one.</p>
+    <figure>
+      <div class="legend" aria-label="Chart legend">
+        <span><i class="swatch sw-heb"></i>Hebrew (Old Testament)</span>
+        <span><i class="swatch sw-grk"></i>Greek (New Testament)</span>
+      </div>
+      <div class="scroll">
+        <svg class="flow" viewBox="0 0 920 816" style="min-width: 760px" role="img" aria-label="A flow from Hebrew and Greek words on the left to English words on the right. Most flow from chesed lands on mercy, but chesed also becomes kindness, lovingkindness, and merciful, while mercy also comes from six other original words.">
+<path class="rib grk" data-s="G5485" data-e="grace" d="M262 40.0 C461.0 40.0 461.0 162.9 660 162.9 V249.9 C461.0 249.9 461.0 127.0 262 127.0 Z"><title>χάρις (G5485, "grace") → grace: 116 times</title></path>
+<path class="rib heb" data-s="H2580" data-e="grace" d="M262 136.5 C461.0 136.5 461.0 249.9 660 249.9 V276.9 C461.0 276.9 461.0 163.5 262 163.5 Z"><title>חֵן (H2580, "favor") → grace: 36 times</title></path>
+<path class="rib grk" data-s="G3628" data-e="mercy" d="M262 186.1 C461.0 186.1 461.0 284.9 660 284.9 V288.6 C461.0 288.6 461.0 189.9 262 189.9 Z"><title>οἰκτιρμός (G3628, "mercies") → mercy: 5 times</title></path>
+<path class="rib grk" data-s="G1653" data-e="mercy" d="M262 220.0 C461.0 220.0 461.0 288.6 660 288.6 V300.6 C461.0 300.6 461.0 232.0 262 232.0 Z"><title>ἐλεάω (G1653, "have mercy on") → mercy: 16 times</title></path>
+<path class="rib grk" data-s="G1656" data-e="mercy" d="M262 254.2 C461.0 254.2 461.0 300.6 660 300.6 V320.1 C461.0 320.1 461.0 273.8 262 273.8 Z"><title>ἔλεος (G1656, "mercy") → mercy: 26 times</title></path>
+<path class="rib heb" data-s="H7356" data-e="mercy" d="M262 289.2 C461.0 289.2 461.0 320.1 660 320.1 V342.6 C461.0 342.6 461.0 311.8 262 311.8 Z"><title>רַחֲמִים (H7356, "compassion") → mercy: 30 times</title></path>
+<path class="rib heb" data-s="H7356" data-e="compassion" d="M262 311.8 C461.0 311.8 461.0 569.9 660 569.9 V572.9 C461.0 572.9 461.0 314.8 262 314.8 Z"><title>רַחֲמִים (H7356, "compassion") → compassion: 4 times</title></path>
+<path class="rib heb" data-s="H2617" data-e="mercy" d="M262 325.0 C461.0 325.0 461.0 342.6 660 342.6 V454.4 C461.0 454.4 461.0 436.8 262 436.8 Z"><title>חֶסֶד (H2617, "steadfast love") → mercy: 149 times</title></path>
+<path class="rib heb" data-s="H2617" data-e="lovingkindness" d="M262 436.8 C461.0 436.8 461.0 498.4 660 498.4 V520.9 C461.0 520.9 461.0 459.2 262 459.2 Z"><title>חֶסֶד (H2617, "steadfast love") → lovingkindness: 30 times</title></path>
+<path class="rib heb" data-s="H2617" data-e="kindness" d="M262 459.2 C461.0 459.2 461.0 528.9 660 528.9 V558.9 C461.0 558.9 461.0 489.2 262 489.2 Z"><title>חֶסֶד (H2617, "steadfast love") → kindness: 40 times</title></path>
+<path class="rib heb" data-s="H2617" data-e="merciful" d="M262 489.2 C461.0 489.2 461.0 601.9 660 601.9 V604.9 C461.0 604.9 461.0 492.2 262 492.2 Z"><title>חֶסֶד (H2617, "steadfast love") → merciful: 4 times</title></path>
+<path class="rib heb" data-s="H7355" data-e="mercy" d="M262 500.2 C461.0 500.2 461.0 454.4 660 454.4 V478.4 C461.0 478.4 461.0 524.2 262 524.2 Z"><title>רָחַם (H7355, "have compassion on") → mercy: 32 times</title></path>
+<path class="rib heb" data-s="H7355" data-e="compassion" d="M262 524.2 C461.0 524.2 461.0 572.9 660 572.9 V578.9 C461.0 578.9 461.0 530.2 262 530.2 Z"><title>רָחַם (H7355, "have compassion on") → compassion: 8 times</title></path>
+<path class="rib grk" data-s="G5544" data-e="kindness" d="M262 551.8 C461.0 551.8 461.0 558.9 660 558.9 V561.9 C461.0 561.9 461.0 554.8 262 554.8 Z"><title>χρηστότης (G5544, "kindness") → kindness: 4 times</title></path>
+<path class="rib grk" data-s="G4697" data-e="compassion" d="M262 587.1 C461.0 587.1 461.0 578.9 660 578.9 V587.1 C461.0 587.1 461.0 595.4 262 595.4 Z"><title>σπλαγχνίζομαι (G4697, "had compassion") → compassion: 11 times</title></path>
+<path class="rib heb" data-s="H2603" data-e="mercy" d="M262 614.2 C461.0 614.2 461.0 478.4 660 478.4 V490.4 C461.0 490.4 461.0 626.2 262 626.2 Z"><title>חָנַן (H2603, "gracious") → mercy: 16 times</title></path>
+<path class="rib heb" data-s="H2603" data-e="merciful" d="M262 626.2 C461.0 626.2 461.0 604.9 660 604.9 V613.9 C461.0 613.9 461.0 635.2 262 635.2 Z"><title>חָנַן (H2603, "gracious") → merciful: 12 times</title></path>
+<path class="rib heb" data-s="H2603" data-e="pity" d="M262 635.2 C461.0 635.2 461.0 627.9 660 627.9 V630.9 C461.0 630.9 461.0 638.2 262 638.2 Z"><title>חָנַן (H2603, "gracious") → pity: 4 times</title></path>
+<path class="rib heb" data-s="H2603" data-e="gracious" d="M262 638.2 C461.0 638.2 461.0 657.6 660 657.6 V665.9 C461.0 665.9 461.0 646.5 262 646.5 Z"><title>חָנַן (H2603, "gracious") → gracious: 11 times</title></path>
+<path class="rib heb" data-s="H7349" data-e="compassion" d="M262 664.6 C461.0 664.6 461.0 587.1 660 587.1 V590.9 C461.0 590.9 461.0 668.4 262 668.4 Z"><title>רַחוּם (H7349, "compassionate") → compassion: 5 times</title></path>
+<path class="rib heb" data-s="H7349" data-e="merciful" d="M262 668.4 C461.0 668.4 461.0 613.9 660 613.9 V619.9 C461.0 619.9 461.0 674.4 262 674.4 Z"><title>רַחוּם (H7349, "compassionate") → merciful: 8 times</title></path>
+<path class="rib heb" data-s="H2550" data-e="compassion" d="M262 699.2 C461.0 699.2 461.0 590.9 660 590.9 V593.9 C461.0 593.9 461.0 702.2 262 702.2 Z"><title>חָמַל (H2550, "spare") → compassion: 4 times</title></path>
+<path class="rib heb" data-s="H2550" data-e="pity" d="M262 702.2 C461.0 702.2 461.0 630.9 660 630.9 V644.4 C461.0 644.4 461.0 715.8 262 715.8 Z"><title>חָמַל (H2550, "spare") → pity: 18 times</title></path>
+<path class="rib heb" data-s="H2347" data-e="pity" d="M262 742.9 C461.0 742.9 461.0 644.4 660 644.4 V649.6 C461.0 649.6 461.0 748.1 262 748.1 Z"><title>חוּס (H2347, "spare") → pity: 7 times</title></path>
+<path class="rib heb" data-s="H2587" data-e="gracious" d="M262 778.6 C461.0 778.6 461.0 665.9 660 665.9 V675.6 C461.0 675.6 461.0 788.4 262 788.4 Z"><title>חַנּוּן (H2587, "gracious") → gracious: 13 times</title></path>
+<g class="node" data-s="G5485" tabindex="0"><title>χάρις (G5485, "grace"): 116 matches</title>
+<rect class="bar grk" x="250" y="40.0" width="12" height="87.0" rx="2"/>
+<text class="orig" x="240" y="85.5" text-anchor="end">χάρις</text>
+<text class="gloss" x="240" y="99.5" text-anchor="end">grace · G5485 · 116</text></g>
+<g class="node" data-s="H2580" tabindex="0"><title>חֵן (H2580, "favor"): 36 matches</title>
+<rect class="bar heb" x="250" y="136.5" width="12" height="27.0" rx="2"/>
+<text class="orig" x="240" y="152.0" text-anchor="end">חֵן</text>
+<text class="gloss" x="240" y="166.0" text-anchor="end">favor · H2580 · 36</text></g>
+<g class="node" data-s="G3628" tabindex="0"><title>οἰκτιρμός (G3628, "mercies"): 5 matches</title>
+<rect class="bar grk" x="250" y="186.1" width="12" height="3.8" rx="2"/>
+<text class="orig" x="240" y="190.0" text-anchor="end">οἰκτιρμός</text>
+<text class="gloss" x="240" y="204.0" text-anchor="end">mercies · G3628 · 5</text></g>
+<g class="node" data-s="G1653" tabindex="0"><title>ἐλεάω (G1653, "have mercy on"): 16 matches</title>
+<rect class="bar grk" x="250" y="220.0" width="12" height="12.0" rx="2"/>
+<text class="orig" x="240" y="228.0" text-anchor="end">ἐλεάω</text>
+<text class="gloss" x="240" y="242.0" text-anchor="end">have mercy on · G1653 · 16</text></g>
+<g class="node" data-s="G1656" tabindex="0"><title>ἔλεος (G1656, "mercy"): 26 matches</title>
+<rect class="bar grk" x="250" y="254.2" width="12" height="19.5" rx="2"/>
+<text class="orig" x="240" y="266.0" text-anchor="end">ἔλεος</text>
+<text class="gloss" x="240" y="280.0" text-anchor="end">mercy · G1656 · 26</text></g>
+<g class="node" data-s="H7356" tabindex="0"><title>רַחֲמִים (H7356, "compassion"): 34 matches</title>
+<rect class="bar heb" x="250" y="289.2" width="12" height="25.5" rx="2"/>
+<text class="orig" x="240" y="304.0" text-anchor="end">רַחֲמִים</text>
+<text class="gloss" x="240" y="318.0" text-anchor="end">compassion · H7356 · 34</text></g>
+<g class="node" data-s="H2617" tabindex="0"><title>חֶסֶד (H2617, "steadfast love"): 223 matches</title>
+<rect class="bar heb" x="250" y="325.0" width="12" height="167.2" rx="2"/>
+<text class="orig" x="240" y="410.6" text-anchor="end">חֶסֶד</text>
+<text class="gloss" x="240" y="424.6" text-anchor="end">steadfast love · H2617 · 223</text></g>
+<g class="node" data-s="H7355" tabindex="0"><title>רָחַם (H7355, "have compassion on"): 40 matches</title>
+<rect class="bar heb" x="250" y="500.2" width="12" height="30.0" rx="2"/>
+<text class="orig" x="240" y="517.2" text-anchor="end">רָחַם</text>
+<text class="gloss" x="240" y="531.2" text-anchor="end">have compassion on · H7355 · 40</text></g>
+<g class="node" data-s="G5544" tabindex="0"><title>χρηστότης (G5544, "kindness"): 4 matches</title>
+<rect class="bar grk" x="250" y="551.8" width="12" height="3.0" rx="2"/>
+<text class="orig" x="240" y="555.2" text-anchor="end">χρηστότης</text>
+<text class="gloss" x="240" y="569.2" text-anchor="end">kindness · G5544 · 4</text></g>
+<g class="node" data-s="G4697" tabindex="0"><title>σπλαγχνίζομαι (G4697, "had compassion"): 11 matches</title>
+<rect class="bar grk" x="250" y="587.1" width="12" height="8.2" rx="2"/>
+<text class="orig" x="240" y="593.2" text-anchor="end">σπλαγχνίζομαι</text>
+<text class="gloss" x="240" y="607.2" text-anchor="end">had compassion · G4697 · 11</text></g>
+<g class="node" data-s="H2603" tabindex="0"><title>חָנַן (H2603, "gracious"): 43 matches</title>
+<rect class="bar heb" x="250" y="614.2" width="12" height="32.2" rx="2"/>
+<text class="orig" x="240" y="632.4" text-anchor="end">חָנַן</text>
+<text class="gloss" x="240" y="646.4" text-anchor="end">gracious · H2603 · 43</text></g>
+<g class="node" data-s="H7349" tabindex="0"><title>רַחוּם (H7349, "compassionate"): 13 matches</title>
+<rect class="bar heb" x="250" y="664.6" width="12" height="9.8" rx="2"/>
+<text class="orig" x="240" y="671.5" text-anchor="end">רַחוּם</text>
+<text class="gloss" x="240" y="685.5" text-anchor="end">compassionate · H7349 · 13</text></g>
+<g class="node" data-s="H2550" tabindex="0"><title>חָמַל (H2550, "spare"): 22 matches</title>
+<rect class="bar heb" x="250" y="699.2" width="12" height="16.5" rx="2"/>
+<text class="orig" x="240" y="709.5" text-anchor="end">חָמַל</text>
+<text class="gloss" x="240" y="723.5" text-anchor="end">spare · H2550 · 22</text></g>
+<g class="node" data-s="H2347" tabindex="0"><title>חוּס (H2347, "spare"): 7 matches</title>
+<rect class="bar heb" x="250" y="742.9" width="12" height="5.2" rx="2"/>
+<text class="orig" x="240" y="747.5" text-anchor="end">חוּס</text>
+<text class="gloss" x="240" y="761.5" text-anchor="end">spare · H2347 · 7</text></g>
+<g class="node" data-s="H2587" tabindex="0"><title>חַנּוּן (H2587, "gracious"): 13 matches</title>
+<rect class="bar heb" x="250" y="778.6" width="12" height="9.8" rx="2"/>
+<text class="orig" x="240" y="785.5" text-anchor="end">חַנּוּן</text>
+<text class="gloss" x="240" y="799.5" text-anchor="end">gracious · H2587 · 13</text></g>
+<g class="node" data-e="grace" tabindex="0"><title>grace: 152 matches</title>
+<rect class="bar en" x="660" y="162.9" width="12" height="114.0" rx="2"/>
+<text class="eng" x="682" y="224.9">grace <tspan class="gloss">152</tspan></text></g>
+<g class="node" data-e="mercy" tabindex="0"><title>mercy: 274 matches</title>
+<rect class="bar en" x="660" y="284.9" width="12" height="205.5" rx="2"/>
+<text class="eng" x="682" y="392.6">mercy <tspan class="gloss">274</tspan></text></g>
+<g class="node" data-e="lovingkindness" tabindex="0"><title>lovingkindness: 30 matches</title>
+<rect class="bar en" x="660" y="498.4" width="12" height="22.5" rx="2"/>
+<text class="eng" x="682" y="514.6">lovingkindness <tspan class="gloss">30</tspan></text></g>
+<g class="node" data-e="kindness" tabindex="0"><title>kindness: 44 matches</title>
+<rect class="bar en" x="660" y="528.9" width="12" height="33.0" rx="2"/>
+<text class="eng" x="682" y="550.4">kindness <tspan class="gloss">44</tspan></text></g>
+<g class="node" data-e="compassion" tabindex="0"><title>compassion: 32 matches</title>
+<rect class="bar en" x="660" y="569.9" width="12" height="24.0" rx="2"/>
+<text class="eng" x="682" y="586.9">compassion <tspan class="gloss">32</tspan></text></g>
+<g class="node" data-e="merciful" tabindex="0"><title>merciful: 24 matches</title>
+<rect class="bar en" x="660" y="601.9" width="12" height="18.0" rx="2"/>
+<text class="eng" x="682" y="615.9">merciful <tspan class="gloss">24</tspan></text></g>
+<g class="node" data-e="pity" tabindex="0"><title>pity: 29 matches</title>
+<rect class="bar en" x="660" y="627.9" width="12" height="21.8" rx="2"/>
+<text class="eng" x="682" y="643.8">pity <tspan class="gloss">29</tspan></text></g>
+<g class="node" data-e="gracious" tabindex="0"><title>gracious: 24 matches</title>
+<rect class="bar en" x="660" y="657.6" width="12" height="18.0" rx="2"/>
+<text class="eng" x="682" y="671.6">gracious <tspan class="gloss">24</tspan></text></g>
+<text class="axis-h" x="262" y="20" text-anchor="end">Hebrew and Greek</text>
+<text class="axis-h" x="660" y="20">KJV English</text>
+</svg>
+      </div>
+      <figcaption>Band width is how many times the KJV renders that word that way. Hover a word to trace its bands. חֶסֶד (chesed, 223 matches here) becomes "mercy", "kindness", "lovingkindness", and "merciful", while "mercy" draws from 7 different original words. Pairs seen fewer than 4 times are left out. Counts cover only words the Strong's matching links, so the true totals run higher.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Where the project is</h2>
+    <div class="track">
+      <div class="stage"><div class="k">Plan 1</div><strong>Sign off the spec</strong><p><code>docs/decisions.md</code></p></div>
+      <div class="stage here"><div class="k">Plan 2 · here</div><strong>CLI and script layers</strong><p>Script layers built. The agent CLI is next.</p></div>
+      <div class="stage"><div class="k">Plan 3</div><strong>Pilot set</strong><p>Run every layer on six passages and review the output.</p></div>
+      <div class="stage"><div class="k">Plan 4</div><strong>Full tagging</strong><p>Every chapter of all four works, then a release.</p></div>
+    </div>
+    <p class="aside">The pilot covers speeches across chapters, Bible quotations, a genealogy, a chiasm, and a revelation:</p>
+    <div class="pilot"><span>1 Nephi 1–3</span><span>2 Nephi 12 + Isaiah 2</span><span>Mosiah 2–5</span><span>Genesis 5</span><span>Alma 36</span><span>D&amp;C 76</span></div>
+    <p class="aside">Each GitHub release ships <code>scripture.db</code> and a JSON export of every table under CC BY 4.0. The API and visualizations are separate projects.</p>
+  </section>
+</main>
+
+<script>
+for (const svg of document.querySelectorAll("svg.flow")) {
+  const ribs = [...svg.querySelectorAll(".rib")];
+  const trace = node => {
+    svg.classList.add("tracing");
+    for (const r of ribs) r.classList.toggle("on", node.dataset.s ? r.dataset.s === node.dataset.s : r.dataset.e === node.dataset.e);
+  };
+  const clear = () => svg.classList.remove("tracing");
+  for (const node of svg.querySelectorAll(".node")) {
+    node.addEventListener("mouseenter", () => trace(node));
+    node.addEventListener("focus", () => trace(node));
+    node.addEventListener("mouseleave", clear);
+    node.addEventListener("blur", clear);
+  }
+}
+</script>

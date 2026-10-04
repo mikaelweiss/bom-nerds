@@ -41,7 +41,7 @@ def run(db: sqlite3.Connection):
                     (sentences[a[0][0]], ids.get(parent), *span),
                 ).lastrowid
                 clauses += 1
-                for role, part in sorted(first[span] & second[span]):
+                for role, part in apart(first[span] & second[span]):
                     db.execute("insert into clause_part (clause_id, role_id, first_word_id, last_word_id) values (?, ?, ?, ?)", (ids[span], role, *part))
                     parts += 1
     print(f"grammar: {clauses} English clauses and {parts} subjects and verbs both parsers agree on")
@@ -89,6 +89,14 @@ def analyse(words: list[list], texts: dict[int, str]) -> dict[tuple[int, int], s
             found.add(("verb", verb))
         result[span] = found
     return result
+
+
+def apart(parts: set[tuple[str, tuple[int, int]]]) -> list[tuple[str, tuple[int, int]]]:
+    """The parts that overlap no other part. Both parsers can agree on a subject that swallows its own verb, and neither is then right."""
+    return sorted(
+        (role, (a, b)) for role, (a, b) in parts
+        if not any((other, span) != (role, (a, b)) and span[0] <= b and a <= span[1] for other, span in parts)
+    )
 
 
 def trim(members: list[int], tags) -> list[int]:

@@ -38,6 +38,8 @@ ARTICLES = {"the", "a", "an"}
 
 
 def clear(db: sqlite3.Connection):
+    db.execute("delete from word_meaning where meaning_id in (select m.id from meaning m join headword h on h.id = m.headword_id where h.language = 'en')")
+    db.execute("delete from meaning where headword_id in (select id from headword where language = 'en')")
     db.execute(f"delete from word_headword where word_id in (select id from word where edition_id in ({','.join('?' * len(ENGLISH))}))", ENGLISH)
     db.execute("delete from headword where language = 'en'")
 
@@ -97,7 +99,8 @@ def spelled(headword: str, pos: str, text: str) -> str:
     if headword.lower() in ("i", "o"):
         return headword.upper()
     if pos == "proper_noun":
-        return text if text.lower() == headword.lower() else headword[:1].upper() + headword[1:]
+        # Small capitals print some names in full capitals, "BABYLON", and they share the name's headword.
+        return text if text.lower() == headword.lower() and not text.isupper() else headword[:1].upper() + headword[1:].lower()
     return headword.lower()
 
 
@@ -112,7 +115,11 @@ def archaic_verb(word: str, previous: str, neighbors: set[str], verbs: set[str],
     elif not word.endswith("eth"):
         return None
     stem = word[:-3]
-    candidates = [stem, stem + "e"]
+    # A one-letter stem is a name or a superlative, not a verb: "Seth", "best".
+    if len(stem) < 2:
+        return None
+    # "seeth" is "see", not "se", but "goeth" is "go".
+    candidates = [stem + "e", stem] if stem[-1] in "aeiou" else [stem, stem + "e"]
     if len(stem) > 2 and stem[-1] == stem[-2]:
         candidates.append(stem[:-1])
     if stem.endswith("i"):

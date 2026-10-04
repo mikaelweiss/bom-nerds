@@ -97,7 +97,7 @@ Agents write verse references the way people do: `1 Nephi 3:7`, `D&C 76:22`. A p
 { "chapter": "Alma 32" }
 ```
 
-In order: words inside one verse, words that appear more than once in their verse, a whole verse, whole verses, a passage that starts and ends partway through verses, and a whole chapter. In the second shape, `in` is longer words that appear once in the verse and hold the quote once, and the passage is the quote alone.
+In order: words inside one verse, words that appear more than once in their verse, a whole verse, whole verses, a passage that starts and ends partway through verses, and a whole chapter. In the second shape, `in` is longer words that appear once in the verse and hold the quote once, and the passage is the quote alone. `starts` and `ends` take `starts_in` and `ends_in` the same way, for a passage that starts or ends on words its verse repeats.
 
 ## Layers
 

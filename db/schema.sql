@@ -369,3 +369,55 @@ create table structure_part (
     unique (structure_id, position),
     check (first_word_id <= last_word_id)
 ) strict;
+
+-- Summaries
+
+-- Summary jobs are named after a range id, so the id never changes.
+create table verse_range (
+    id text primary key,
+    name text not null,
+    first_word_id integer not null references word,
+    last_word_id integer not null references word,
+    unique (first_word_id, last_word_id),
+    check (first_word_id <= last_word_id)
+) strict;
+
+-- A kind without a work applies to every work.
+create table summary_kind (
+    id text primary key,
+    name text not null,
+    description text not null,
+    work_id text references work
+) strict;
+
+-- A summary covers a chapter (book and chapter), a whole book (book alone), or a verse range.
+create table summary (
+    id integer primary key,
+    kind_id text not null references summary_kind,
+    book_id text references book,
+    chapter integer check (chapter >= 1),
+    range_id text references verse_range,
+    text text not null check (text <> ''),
+    check ((book_id is null) <> (range_id is null)),
+    check (chapter is null or book_id is not null)
+) strict;
+
+create unique index summary_chapter on summary (kind_id, book_id, chapter) where chapter is not null;
+create unique index summary_book on summary (kind_id, book_id) where book_id is not null and chapter is null;
+create unique index summary_range on summary (kind_id, range_id) where range_id is not null;
+
+create trigger summary_kind_work_insert before insert on summary
+when (select work_id from summary_kind where id = new.kind_id) <> coalesce(
+    (select work_id from book where id = new.book_id),
+    (select e.work_id from verse_range r join word w on w.id = r.first_word_id join edition e on e.id = w.edition_id where r.id = new.range_id))
+begin
+    select raise(abort, 'this summary kind does not apply to this work');
+end;
+
+create trigger summary_kind_work_update before update on summary
+when (select work_id from summary_kind where id = new.kind_id) <> coalesce(
+    (select work_id from book where id = new.book_id),
+    (select e.work_id from verse_range r join word w on w.id = r.first_word_id join edition e on e.id = w.edition_id where r.id = new.range_id))
+begin
+    select raise(abort, 'this summary kind does not apply to this work');
+end;

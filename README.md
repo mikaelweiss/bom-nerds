@@ -18,14 +18,14 @@ python3 -m unittest discover tests
 
 Sources download into `sources/` on first use. The English taggers take hours, so their output is kept in `cache/` and reused.
 
+Agents tag the rest through the agent CLI. `python3 -m bomnerds.agent --help` lists its commands, and `python3 -m bomnerds.agent job <job> --role <role>` prints everything an agent needs for one job. Answers wait in `jobs/` until they settle. Rebuilding a script layer can delete AI tags in the tables it shares with them, so run `python3 -m bomnerds.agent replay` afterward to store every settled job again.
+
 `scripts/release.sh` publishes your `scripture.db` and a JSON export of every table as a GitHub release of the current commit. Pass `--no-upload` to build the zips in `dist/` without releasing.
 
 # Plans for now:
 
-1. Sign off on the dataset spec in [docs/decisions.md](docs/decisions.md)
-2. Build the CLI and the text scripts
-3. Run every layer on the pilot set and review the output
-4. Run the full tagging
+1. Run every layer on the pilot set and review the output
+2. Run the full tagging
 
 Visualizations and the API that serves the data are separate projects.
 

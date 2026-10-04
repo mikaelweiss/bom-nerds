@@ -26,6 +26,14 @@ def clear(db: sqlite3.Connection):
 
 
 def run(db: sqlite3.Connection):
+    db.executemany("insert or ignore into relationship (subject_id, kind_id, object_id) values (?, ?, ?)", sorted(facts()))
+    cited = cite(db)
+    total = db.execute(f"select count(*) from relationship where kind_id in ({','.join('?' * len(FAMILY))})", FAMILY).fetchone()[0]
+    print(f"family: {total} relationships, {cited} with a verse as evidence")
+
+
+def facts() -> set[tuple[str, str, str]]:
+    """(subject, kind, object) for every family link between two people TIPNR records."""
     # TIPNR's table of nations calls peoples like the Jebusites sons of Canaan. Family links here join two people only.
     ids = {}
     people = []
@@ -33,7 +41,7 @@ def run(db: sqlite3.Connection):
         if record.section == "PERSON(s)" and record.type in ("Male", "Female"):
             ids[record.unique] = JESUS_CHRIST[0] if record.unique == JESUS else entity_id
             people.append(record)
-    facts = set()
+    found = set()
     for record in people:
         person = ids[record.unique]
         for kind, column, reverse in (("child_of", PARENTS, False), ("sibling_of", SIBLINGS, False), ("spouse_of", PARTNERS, False), ("child_of", OFFSPRING, True)):
@@ -43,11 +51,8 @@ def run(db: sqlite3.Connection):
                     subject, object = (other, person) if reverse else (person, other)
                     if kind != "child_of":
                         subject, object = sorted((subject, object))
-                    facts.add((subject, kind, object))
-    db.executemany("insert or ignore into relationship (subject_id, kind_id, object_id) values (?, ?, ?)", sorted(facts))
-    cited = cite(db)
-    total = db.execute(f"select count(*) from relationship where kind_id in ({','.join('?' * len(FAMILY))})", FAMILY).fetchone()[0]
-    print(f"family: {total} relationships, {cited} with a verse as evidence")
+                    found.add((subject, kind, object))
+    return found
 
 
 def cite(db: sqlite3.Connection) -> int:

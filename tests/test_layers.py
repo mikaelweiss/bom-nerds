@@ -119,6 +119,16 @@ class HeadwordsTest(unittest.TestCase):
         self.assertEqual(headwords.archaic_verb("lovest", "thou", {"thou", "lovest"}, verbs, None), "love")
         self.assertIsNone(headwords.archaic_verb("greatest", "the", {"thou", "greatest"}, verbs, None))
 
+    def test_a_one_letter_stem_is_not_a_verb(self):
+        verbs = {"se", "be", "see"}
+        self.assertIsNone(headwords.archaic_verb("seth", "and", set(), verbs, None))
+        self.assertIsNone(headwords.archaic_verb("best", "thy", {"thou", "best"}, verbs, None))
+        self.assertEqual(headwords.archaic_verb("seeth", "he", set(), verbs, None), "see")
+
+    def test_a_name_in_capitals_shares_the_names_headword(self):
+        self.assertEqual(headwords.spelled("babylon", "proper_noun", "BABYLON"), "Babylon")
+        self.assertEqual(headwords.spelled("Babylon", "proper_noun", "Babylon"), "Babylon")
+
     def test_two_runs_agree_or_morphadorner_breaks_the_tie(self):
         self.assertEqual(headwords.vote("go", "go", "went"), "go")
         self.assertEqual(headwords.vote("go", "went", "go"), "go")
@@ -144,6 +154,10 @@ class GrammarTest(unittest.TestCase):
         tags = {1: ("AUX", "aux"), 2: ("DET", "det"), 3: ("PROPN", "nsubj"), 4: ("VERB", "ROOT")}
         texts = {1: "hath", 2: "the", 3: "lord", 4: "commanded"}
         self.assertIsNone(grammar.verb_span(4, children, tags, texts))
+
+    def test_drops_agreed_parts_that_overlap(self):
+        parts = {("subject", (1, 3)), ("verb", (3, 3)), ("subject", (5, 6))}
+        self.assertEqual(grammar.apart(parts), [("subject", (5, 6))])
 
 
 if __name__ == "__main__":

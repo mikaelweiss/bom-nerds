@@ -1,13 +1,10 @@
-import contextlib
-import io
 import unittest
-from types import SimpleNamespace
 from unittest import mock
 
 from bomnerds.agent import jobs
 from bomnerds.agent.layers import LAYERS
-from bomnerds.agent.layers.links import Links, run_links
-from bomnerds.agent.prompt import prompt
+from bomnerds.agent.layers.links import Links
+from bomnerds.agent.prompt import job_text
 from bomnerds.passages import Rejected
 from tests.agent_fixtures import database, job_folder
 
@@ -125,7 +122,7 @@ class LinksTest(unittest.TestCase):
     def test_a_link_another_job_stored_is_already_tagged(self):
         self.layer.store(self.db, "isaiah/2", self.parse(CROSS))
         with self.assertRaisesRegex(Rejected, "already tagged"):
-            jobs.check(self.db, self.job, "a", [REVERSE])
+            jobs.check(self.db, self.job, [REVERSE])
 
     def test_shown_counts_the_bible_cross_references_instead_of_listing_them(self):
         self.link("quotes", ("2-nephi", 12, 2), ("isaiah", 2, 2))
@@ -133,53 +130,27 @@ class LinksTest(unittest.TestCase):
         self.link("cross_reference", ("isaiah", 2, 3), ("isaiah", 7, 14))
         shown = self.layer.shown(self.db, "kjv", "isaiah", 2)
         self.assertEqual(shown[0]["kind"], "quotes")
-        self.assertEqual(shown[1], {"kind": "cross_reference", "count": 2, "list": 'python3 -m bomnerds.agent links "Isaiah 2"'})
+        self.assertEqual(shown[1], {"kind": "cross_reference", "count": 2})
         self.assertEqual(len(shown), 2)
         self.assertEqual(self.layer.shown(self.db, "kjv", "matthew", 1), [])
 
     def test_the_prompt_lists_given_links_and_the_count(self):
         self.link("quotes", ("2-nephi", 12, 2), ("isaiah", 2, 2))
         self.link("cross_reference", ("isaiah", 2, 2), ("isaiah", 7, 14))
-        text = prompt(self.db, jobs.Job(self.layer, "isaiah/2"), "a")
+        text = job_text(self.db, jobs.Job(self.layer, "isaiah/2"))
         self.assertIn('"kind": "quotes"', text)
         self.assertIn("## Cross-references the script stored", text)
-        self.assertNotIn("## Cross-references the script stored", prompt(self.db, self.job, "a"))
+        self.assertNotIn("## Cross-references the script stored", job_text(self.db, self.job))
 
-    def test_the_links_command_lists_every_link_of_a_verse_or_chapter(self):
-        self.link("cross_reference", ("isaiah", 2, 2), ("isaiah", 7, 14))
-        self.link("quotes", ("2-nephi", 12, 2), ("isaiah", 2, 2))
-        for reference, lines in (("Isaiah 2:2", 2), ("Isaiah 2", 2), ("Isaiah 2:3", 0), ("Isaiah 7:14", 1)):
-            out = io.StringIO()
-            with contextlib.redirect_stdout(out):
-                run_links(self.db, SimpleNamespace(reference=reference))
-            self.assertEqual(len(out.getvalue().splitlines()), lines, reference)
-        out = io.StringIO()
-        with contextlib.redirect_stdout(out):
-            run_links(self.db, SimpleNamespace(reference="Isaiah 7:14"))
-        self.assertEqual(out.getvalue(), "cross_reference\tIsaiah 2:2\tIsaiah 7:14\n")
-
-    def test_agreeing_runs_settle_store_and_replay(self):
-        answer = [ALLUDES, CROSS]
-        jobs.submit(self.db, self.job, "a", answer)
-        jobs.submit(self.db, self.job, "b", [ALLUDES, REVERSE])
-        self.assertEqual(self.job.state(self.db), "settled")
+    def test_a_stored_answer_replays_and_resets(self):
+        jobs.submit(self.db, self.job, [ALLUDES, REVERSE])
+        self.assertIsNotNone(self.job.settled())
         self.assertEqual(len(self.links()), 2)
         self.db.execute("delete from passage_link")
         jobs.replay(self.db, [self.layer])
         self.assertEqual(len(self.links()), 2)
         jobs.reset(self.db, self.job)
         self.assertEqual(self.links(), [])
-
-    def test_a_decider_settles_the_links_the_runs_differ_on(self):
-        jobs.submit(self.db, self.job, "a", [ALLUDES, CROSS])
-        jobs.submit(self.db, self.job, "b", [ALLUDES])
-        self.assertEqual(self.job.state(self.db), "needs decider")
-        self.assertIn("cross_reference", prompt(self.db, self.job, "decider").split("## Only the first run")[1])
-        jobs.submit(self.db, self.job, "decider", [CROSS])
-        self.assertEqual(len(self.links()), 2)
-
-    def test_the_instructions_name_the_command_that_lists_cross_references(self):
-        self.assertIn('python3 -m bomnerds.agent links "Genesis 1:1"', self.layer.instructions)
 
 
 if __name__ == "__main__":

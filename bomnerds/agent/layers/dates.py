@@ -3,18 +3,18 @@
 import json
 
 from ...passages import chapter_span
-from ..layer import Layer, Problems, kinds, passage_of, scope_span
+from ..layer import Layer, Problems, kinds, passage_of, scope_span, where
 
 INSTRUCTIONS = """
-Date what happens in this chapter. A date is a range of years in one counting system, with a month and day when the text gives them.
+Date what happens in each chapter. A date is a range of years in one counting system, with a month and day when the text gives them.
 
 Systems: since_lehi (years since Lehi left Jerusalem), reign_of_judges (years of the reign of the judges), since_sign (years since the sign of Christ's birth), bc_ad.
 
 - "on" says what the date belongs to. Use one of:
-  - a passage inside this chapter, the words that happen in that year. A year covers the events after it, until the text names another year, says that year ended, or the chapter ends.
+  - a passage inside its chapter, the words that happen in that year. A year covers the events after it, until the text names another year, says that year ended, or the chapter ends.
   - an event, `{ "entity": "id" }`. It must be an event entity from the list.
   - a relationship listed below, `{ "relationship": { "subject": "id", "kind": "child_of", "object": "id" } }`. The date is when it was true.
-- "evidence" is the passage in this chapter that states the year. Every date needs it except a BC/AD estimate, which cites no words.
+- "evidence" is the passage in its chapter that states the year. Every date needs it except a BC/AD estimate, which cites no words.
 - Where the text gives a year, give two objects with the same "on": the text's own count with its evidence, and a bc_ad estimate with no evidence. Estimate only when you can place the year within about a century. Otherwise leave the estimate out.
 - Where the text states a BC/AD year itself, as the Doctrine and Covenants does, give one bc_ad object with its evidence.
 - BC/AD counts 1 BC as 0 and 2 BC as -1, so 600 BC is -599. AD years are as written: AD 30 is 30.
@@ -55,7 +55,7 @@ class Dates(Layer):
 
         return super().seen() + (("relationships",) if "relationships" in LAYERS else ())
 
-    def context(self, db, jobs, scope):
+    def extra(self, db, jobs, scope, batch=()):
         first, last = scope_span(db, scope)
         events = db.execute(
             "select id, name, description from entity where type_id = 'event' "
@@ -63,7 +63,7 @@ class Dates(Layer):
             (first, last),
         )
         listed = "\n".join(f"{id} {name}. {description}" for id, name, description in events)
-        return super().context(db, jobs, scope) + ("\n\n## Events named in this chapter\n\n" + listed if listed else "")
+        return "## Events named in this chapter\n\n" + listed if listed else ""
 
     def given(self, db, scope):
         return stored(db, *scope_span(db, scope))
@@ -72,7 +72,7 @@ class Dates(Layer):
         problems = Problems(db)
         tags = []
         for number, item in enumerate(problems.items(answer), 1):
-            problems.at(f"item {number}")
+            problems.at(where(number, item))
             tag = self.read(db, scope, problems, item)
             if tag:
                 tags.append(tag)

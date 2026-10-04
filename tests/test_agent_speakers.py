@@ -2,7 +2,7 @@ import unittest
 
 from bomnerds.agent import jobs
 from bomnerds.agent.layers import LAYERS
-from bomnerds.agent.prompt import prompt
+from bomnerds.agent.prompt import job_text
 from bomnerds.agent.show import show
 from bomnerds.passages import Rejected
 from tests.agent_fixtures import database, entity, job_folder
@@ -49,11 +49,10 @@ class SpeakersTest(unittest.TestCase):
         return jobs.Job(self.layer, f"mosiah/{chapter}")
 
     def settle(self, chapter, answer):
-        jobs.submit(self.db, self.job(chapter), "a", answer)
-        return jobs.submit(self.db, self.job(chapter), "b", answer)
+        return jobs.submit(self.db, self.job(chapter), answer)
 
     def check(self, chapter, answer):
-        return jobs.check(self.db, self.job(chapter), "a", answer)
+        return jobs.check(self.db, self.job(chapter), answer)
 
     def speeches(self):
         return list(self.db.execute("select speaker_id, first_word_id, last_word_id from speech order by first_word_id"))
@@ -135,25 +134,12 @@ class SpeakersTest(unittest.TestCase):
         self.settle(2, [])
         with self.assertRaisesRegex(Rejected, "last chapter of Mosiah"):
             self.check(3, [speech({"from": "Mosiah 3:1", "to": "Mosiah 3:2"}, "mormon", (), "narration", open=True)])
-        self.assertIn("## End of the book", prompt(self.db, self.job(3), "a"))
-
-    def test_a_chapter_waits_for_the_one_before_it_and_for_earlier_steps(self):
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, "mosiah/1"))
-        self.assertIn("speakers/mosiah/1 must settle first", self.layer.ready(self.db, jobs.Jobs, "mosiah/2"))
-        with self.assertRaisesRegex(Rejected, "cannot start yet"):
-            self.check(2, [])
-        self.settle(1, [])
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, "mosiah/2"))
-        earlier = [layer for layer in LAYERS.values() if layer.step < self.layer.step and layer.scope == "chapter"]
-        for layer in earlier:
-            (jobs.Job(layer, "mosiah/2").path / "settled.json").unlink()
-        if earlier:
-            self.assertIn("must settle first", self.layer.ready(self.db, jobs.Jobs, "mosiah/2"))
+        self.assertIn("## End of the book", job_text(self.db, self.job(3)))
 
     def test_a_continued_speech_is_stored_as_one_row_across_chapters(self):
         self.settle(1, [speech(OPENING, open=True)])
         self.assertEqual(self.speeches(), [("benjamin", self.word(1, 1, "My"), self.word(1, 2, "words"))])
-        context = prompt(self.db, self.job(2), "a")
+        context = job_text(self.db, self.job(2))
         self.assertIn('## Open speeches', context)
         self.assertIn('"starts": "My brethren"', context.split("## Open speeches")[1])
         self.settle(2, [speech({"from": "Mosiah 1:1", "to": "Mosiah 2:3", "starts": "My brethren"})])
@@ -192,22 +178,11 @@ class SpeakersTest(unittest.TestCase):
         self.layer.unstore(self.db, "mosiah/2", tags)
         self.assertEqual(self.tables(), before)
 
-    def test_reset_waits_for_the_chapter_that_continued_a_speech(self):
-        self.settle(1, [speech(OPENING, open=True)])
-        self.settle(2, [speech({"from": "Mosiah 1:1", "to": "Mosiah 2:3", "starts": "My brethren"})])
-        with self.assertRaisesRegex(Rejected, "Reset speakers/mosiah/2 first"):
-            jobs.reset(self.db, self.job(1))
-        self.assertEqual(self.job(1).state(self.db), "settled")
-        jobs.reset(self.db, self.job(2))
-        self.assertEqual(self.speeches(), [("benjamin", self.word(1, 1, "My"), self.word(1, 2, "words"))])
-        jobs.reset(self.db, self.job(1))
-        self.assertEqual(self.tables(), ([], []))
-
     def test_a_speech_cannot_stay_open_when_the_next_chapter_settled_without_it(self):
         self.settle(1, [])
         self.settle(2, [])
         jobs.reset(self.db, self.job(1))
-        with self.assertRaisesRegex(Rejected, "speakers/mosiah/2 is settled without continuing"):
+        with self.assertRaisesRegex(Rejected, "speakers/mosiah/2 is stored without continuing"):
             self.check(1, [speech(OPENING, open=True)])
 
     def test_has_nothing_fixed_or_given(self):
@@ -237,7 +212,7 @@ class SpeakersTest(unittest.TestCase):
         self.assertEqual(self.tables(), before)
 
     def test_the_prompt_shows_the_start_of_the_next_chapter_and_the_modes(self):
-        text = prompt(self.db, self.job(1), "a")
+        text = job_text(self.db, self.job(1))
         self.assertIn("## The start of Mosiah 2", text)
         self.assertIn("1 And again my brethren", text)
         self.assertIn("narration, spoken, written, prayer, song", text)

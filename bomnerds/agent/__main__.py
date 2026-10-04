@@ -8,13 +8,11 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from ..passages import Rejected, parse_reference
+from ..passages import Rejected
 from ..text import DATABASE
-from . import jobs
+from . import batch, jobs
+from . import plan as plans
 from .layers import LAYERS
-from .prompt import prompt
-from .search import format_results, search
-from .show import show
 
 
 def connect() -> sqlite3.Connection:
@@ -26,71 +24,55 @@ def connect() -> sqlite3.Connection:
     return db
 
 
-def load(path: str):
-    try:
-        return json.load(sys.stdin if path == "-" else open(path, encoding="utf-8"))
-    except json.JSONDecodeError as error:
-        raise Rejected(f"the answer is not valid JSON: {error}")
-    except OSError as error:
-        raise Rejected(f"cannot read the answer: {error}")
+def run_plan(db, args):
+    sessions = plans.make(db, pilot=args.pilot)
+    path = plans.PILOT_PLAN if args.pilot else plans.PLAN
+    plans.write(sessions, path)
+    counts = Counter(s.pass_name for s in sessions if not s.review)
+    reviews = sum(s.review for s in sessions)
+    print(f"Wrote {path.name}: {len(sessions)} sessions, {reviews} of them reviews.")
+    for p in plans.PASSES:
+        if counts[p.name]:
+            print(f"  {p.name}: {counts[p.name]} sessions, {p.model}")
 
 
-def run_show(db, args):
-    book, chapter, verse = parse_reference(db, args.chapter)
-    if verse is not None:
-        raise Rejected("show takes a chapter, such as \"1 Nephi 3\"")
-    layers = tuple(args.layers.split(",")) if args.layers else None
-    print(show(db, book, chapter, args.edition, layers))
-
-
-def run_search(db, args):
-    book = parse_reference(db, f"{args.book} 1")[0] if args.book else None
-    name = db.execute("select name from book where id = ?", (book,)).fetchone()[0] if book else None
-    print(format_results(search(db, args.text, book, args.type, args.limit), name))
-
-
-def run_job(db, args):
-    print(prompt(db, jobs.find(db, args.job), args.role))
-
-
-def run_check(db, args):
-    job = jobs.find(db, args.job)
-    tags = jobs.check(db, job, args.role, load(args.answer))
-    print(f"the answer passes: {len(tags)} tags")
+def run_batch(db, args):
+    print(batch.write_prompt(db, args.session))
 
 
 def run_submit(db, args):
-    job = jobs.find(db, args.job)
-    print(jobs.submit(db, job, args.role, load(args.answer)))
+    print(batch.submit(db, args.session, args.layer))
 
 
-def run_missing(db, args):
-    job = jobs.find(db, args.job)
-    types = [row[0] for row in db.execute("select id from entity_type")]
-    if args.type not in types:
-        raise Rejected(f"type {args.type!r} is not one of: {', '.join(types)}")
-    parse_reference(db, args.verse)
-    print(jobs.report_missing(db, job, {"name": args.name, "type": args.type, "description": args.description, "verse": args.verse}))
-
-
-def run_layers(db, args):
-    for layer in LAYERS.values():
-        states = Counter(job.state(db).split(":")[0] for job in jobs.listed(db, layer, args.pilot))
-        print(f"step {layer.step} {layer.name} ({layer.mode}, one job per {layer.scope}): " + ", ".join(f"{n} {s}" for s, n in sorted(states.items())))
-
-
-def run_jobs(db, args):
-    layer = LAYERS.get(args.layer)
-    if layer is None:
-        raise Rejected(f"no layer {args.layer!r}. Layers: {', '.join(LAYERS)}")
-    for job in jobs.listed(db, layer, args.pilot):
-        state = job.state(db)
-        if args.state is None or state.startswith(args.state):
-            print(f"{job.id}\t{state}")
+def run_done(db, args):
+    print(batch.done(db, args.session))
 
 
 def run_reset(db, args):
-    print(jobs.reset(db, jobs.find(db, args.job)))
+    print(batch.reset(db, args.session))
+
+
+def run_status(db, args):
+    sessions = plans.load(plans.PILOT_PLAN if args.pilot else plans.PLAN)
+    if args.ready:
+        for session in sessions:
+            if not session.done() and not plans.waiting_on(session, sessions):
+                print(f"{session.id}\t{session.model}\t{','.join(session.layers)}")
+        return
+    states = [(session, plans.state(db, session, sessions)) for session in sessions]
+    for p in plans.PASSES:
+        mine = [(s, state) for s, state in states if s.pass_name == p.name]
+        if not mine:
+            continue
+        tally = Counter(state.split(":")[0].split(" for ")[0] for _, state in mine)
+        print(f"{p.name}: " + ", ".join(f"{n} {state}" for state, n in sorted(tally.items())))
+        for s, state in mine:
+            if args.all or state not in ("done",) and not state.startswith("waiting"):
+                rates = s.folder / "rates.json"
+                rated = ""
+                if rates.exists():
+                    rated = "  errors " + ", ".join(f"{name} {wrong}/{checked}" for name, (wrong, checked) in json.loads(rates.read_text()).items())
+                print(f"  {s.id}\t{s.covers}\t{state}{rated}")
 
 
 def run_replay(db, args):
@@ -100,64 +82,40 @@ def run_replay(db, args):
     print(jobs.replay(db, [layer for name, layer in LAYERS.items() if name in args.layers or not args.layers]))
 
 
-def run_reports(db, args):
-    for report in jobs.missing_reports():
-        print(json.dumps(report, ensure_ascii=False))
-
-
 def parser() -> argparse.ArgumentParser:
     main = argparse.ArgumentParser(prog="python3 -m bomnerds.agent", description=__doc__)
     commands = main.add_subparsers(required=True, metavar="command")
 
-    command = commands.add_parser("show", help="print a chapter with every tag placed on it")
-    command.add_argument("chapter", help='such as "1 Nephi 3"')
-    command.add_argument("--edition", help="such as wlc or sblgnt. The English edition by default")
-    command.add_argument("--layers", help="comma-separated layers to show. Every layer by default")
-    command.set_defaults(run=run_show)
+    command = commands.add_parser("plan", help="cut every session of the run into plan.tsv, from counts in the database")
+    command.add_argument("--pilot", action="store_true", help="cut the pilot's sessions into plan-pilot.tsv instead")
+    command.set_defaults(run=run_plan)
 
-    command = commands.add_parser("search", help="find entities by name")
-    command.add_argument("text")
-    command.add_argument("--book", help="list the entities already found in this book first")
-    command.add_argument("--type", help="only this type and its subtypes")
-    command.add_argument("--limit", type=int, default=20)
-    command.set_defaults(run=run_search)
+    command = commands.add_parser("batch", help="write the prompt for a session: every layer it answers, or its review")
+    command.add_argument("session", help="such as people-014")
+    command.set_defaults(run=run_batch)
 
-    for name, run, help in (("job", run_job, "print what an agent reads to do a job"), ("check", run_check, "check an answer without storing it"), ("submit", run_submit, "check an answer and store it")):
-        command = commands.add_parser(name, help=help)
-        command.add_argument("job", help="such as names/1-nephi/3")
-        command.add_argument("--role", required=True, choices=["a", "b", "decider", "writer", "checker"])
-        if name != "job":
-            command.add_argument("answer", help="a JSON file, or - for standard input")
-        command.set_defaults(run=run)
+    command = commands.add_parser("submit", help="store a session's answer for one layer, or a review's fixes")
+    command.add_argument("session")
+    command.add_argument("layer", nargs="?", help="such as names. A review takes none")
+    command.set_defaults(run=run_submit)
 
-    command = commands.add_parser("missing", help="report an entity the list lacks")
-    command.add_argument("job")
-    command.add_argument("--name", required=True)
-    command.add_argument("--type", required=True)
-    command.add_argument("--description", required=True)
-    command.add_argument("--verse", required=True, help="a verse that names it")
-    command.set_defaults(run=run_missing)
+    command = commands.add_parser("done", help="mark a session done, once every section is stored")
+    command.add_argument("session")
+    command.set_defaults(run=run_done)
 
-    command = commands.add_parser("layers", help="list the layers in build order with how many jobs are in each state")
-    command.add_argument("--pilot", action="store_true", help="only jobs in the pilot set")
-    command.set_defaults(run=run_layers)
+    command = commands.add_parser("status", help="show how far each pass of the plan is")
+    command.add_argument("--pilot", action="store_true", help="the pilot plan")
+    command.add_argument("--ready", action="store_true", help="list only sessions that can start now, in plan order")
+    command.add_argument("--all", action="store_true", help="list every session, done and waiting ones too")
+    command.set_defaults(run=run_status)
 
-    command = commands.add_parser("jobs", help="list a layer's jobs and their states")
-    command.add_argument("layer")
-    command.add_argument("--pilot", action="store_true", help="only jobs in the pilot set")
-    command.add_argument("--state", help="only jobs whose state starts with this, such as settled or needs")
-    command.set_defaults(run=run_jobs)
-
-    command = commands.add_parser("reset", help="delete a job's stored tags and answers so it runs again")
-    command.add_argument("job")
+    command = commands.add_parser("reset", help="delete everything a writer session stored, so it runs again from the start")
+    command.add_argument("session")
     command.set_defaults(run=run_reset)
 
-    command = commands.add_parser("replay", help="store every settled job again, after a script layer rebuilds a table")
+    command = commands.add_parser("replay", help="store every stored answer again, after a script layer rebuilds a table")
     command.add_argument("layers", nargs="*")
     command.set_defaults(run=run_replay)
-
-    command = commands.add_parser("reports", help="list entities agents reported missing")
-    command.set_defaults(run=run_reports)
 
     for layer in LAYERS.values():
         layer.commands(commands)

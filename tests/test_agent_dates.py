@@ -6,7 +6,7 @@ from bomnerds.agent.layer import Layer
 from bomnerds.agent.layers import LAYERS
 from bomnerds.agent.layers.dates import Dates
 from bomnerds.agent.layers.names import Names
-from bomnerds.agent.prompt import prompt
+from bomnerds.agent.prompt import job_text
 from bomnerds.passages import Rejected
 from tests.agent_fixtures import database, entity, job_folder
 
@@ -170,8 +170,8 @@ class DatesTest(unittest.TestCase):
         self.assertEqual(len(given), 1)
         self.assertEqual(self.layer.given(self.db, "alma/2"), [])
         with self.assertRaisesRegex(Rejected, "already tagged"):
-            jobs.check(self.db, self.job, "a", [self.layer.render(self.db, given[0])])
-        self.assertIn('"from": 1', prompt(self.db, self.job, "a"))
+            jobs.check(self.db, self.job, [self.layer.render(self.db, given[0])])
+        self.assertIn('"from": 1', job_text(self.db, self.job))
 
     def test_given_follows_an_event_named_and_a_relationship_cited_in_the_chapter(self):
         self.db.execute("insert into date (entity_id, system_id, from_year, to_year) values ('battle-of-alma', 'bc_ad', -72, -72)")
@@ -191,45 +191,20 @@ class DatesTest(unittest.TestCase):
     def test_context_lists_the_events_the_chapter_names(self):
         fierce = self.word("fierce")
         self.db.execute("insert into mention (entity_id, kind_id, first_word_id, last_word_id) values ('battle-of-alma', 'names', ?, ?)", (fierce, fierce))
-        text = prompt(self.db, self.job, "a")
+        text = job_text(self.db, self.job)
         self.assertIn("## Events named in this chapter\n\nbattle-of-alma Battle.", text)
-        self.assertNotIn("## Events named", prompt(self.db, jobs.Job(self.layer, "alma/2"), "a"))
-
-    def test_waits_for_the_relationships_job_when_there_is_one(self):
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, "alma/1"))
-
-        class Relationships(Layer):
-            name = "relationships"
-            step = 7
-
-        with mock.patch.dict(LAYERS, {"relationships": Relationships()}):
-            self.assertEqual(self.layer.ready(self.db, jobs.Jobs, "alma/1"), "relationships/alma/1 must settle first")
-            jobs.Job(LAYERS["relationships"], "alma/1").write("settled", [])
-            self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, "alma/1"))
-
-    def test_waits_for_the_earlier_steps(self):
-        self.assertEqual(self.layer.ready(self.db, jobs.Jobs, "alma/2"), "names/alma/2 must settle first")
+        self.assertNotIn("## Events named", job_text(self.db, jobs.Job(self.layer, "alma/2")))
 
     def test_agreeing_runs_settle_store_and_replay(self):
         answer = [date({"verse": "Alma 1:2"}, evidence=SECOND_YEAR, start=2), date({"chapter": "Alma 1"}, "bc_ad", -599, evidence=None)]
-        jobs.submit(self.db, self.job, "a", answer)
-        jobs.submit(self.db, self.job, "b", list(reversed(answer)))
-        self.assertEqual(self.job.state(self.db), "settled")
+        jobs.submit(self.db, self.job, list(reversed(answer)))
+        self.assertIsNotNone(self.job.settled())
         self.assertEqual(len(self.rows()), 2)
         self.db.execute("delete from date")
         jobs.replay(self.db, [self.layer])
         self.assertEqual(len(self.rows()), 2)
         jobs.reset(self.db, self.job)
         self.assertEqual(self.rows(), [])
-
-    def test_a_decider_settles_the_dates_the_runs_differ_on(self):
-        agreed = date({"chapter": "Alma 1"}, "bc_ad", -599, evidence=None)
-        jobs.submit(self.db, self.job, "a", [agreed, date({"verse": "Alma 1:2"}, evidence=SECOND_YEAR, start=2)])
-        jobs.submit(self.db, self.job, "b", [agreed, date({"verse": "Alma 1:2"}, evidence=SECOND_YEAR, start=3)])
-        self.assertEqual(self.job.state(self.db), "needs decider")
-        jobs.submit(self.db, self.job, "decider", [date({"verse": "Alma 1:2"}, evidence=SECOND_YEAR, start=2)])
-        self.assertEqual([year for (year,) in self.db.execute("select from_year from date order by id")], [-599, 2])
-
 
 if __name__ == "__main__":
     unittest.main()

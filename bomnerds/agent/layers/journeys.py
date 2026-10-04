@@ -3,13 +3,13 @@
 import math
 
 from ...passages import chapter_span
-from ..layer import Layer, Problems, passage_of
+from ..layer import Layer, Problems, passage_of, where
 
 TRAVELERS = ("person", "group")
 PLACES = ("place",)
 
 INSTRUCTIONS = """
-Tag every journey in this chapter: someone traveling from one place to another.
+Tag every journey in each chapter: someone traveling from one place to another.
 
 - The traveler is a person or group. Places are entities of type place or one of its subtypes, such as city, land, water, mountain, or wilderness.
 - Every journey needs a destination, "to". Leave "from" out when the text does not name the starting place.
@@ -34,7 +34,7 @@ class Journeys(Layer):
         problems = Problems(db)
         tags = []
         for number, item in enumerate(problems.items(answer), 1):
-            problems.at(f"item {number}")
+            problems.at(where(number, item))
             if not problems.fields(item, ("traveler", "to", "passage"), ("from", "days")):
                 continue
             before = len(problems.messages)

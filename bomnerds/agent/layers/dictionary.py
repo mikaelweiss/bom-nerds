@@ -16,10 +16,10 @@ import unicodedata
 from collections import Counter, OrderedDict, defaultdict
 from itertools import zip_longest
 
-from ...passages import chapter_span, english_edition, load, reference
+from ...passages import chapter_span, english_edition, load, reference, verse_text
 from ...sentences import ENGLISH
 from ...taggers import CACHE
-from ..layer import Layer, Problems, chapter_scopes, kinds, passage_of, split_chapter
+from ..layer import Layer, Problems, Reading, chapter_scopes, kinds, numbered, passage_of, split_chapter, verse_number, where
 from ..show import show
 
 UNSETTLED = CACHE / "headwords-unsettled.jsonl"
@@ -55,10 +55,11 @@ Give each word listed under Words to answer its headword and part of speech. spa
 - Headwords are lowercase, except proper nouns, "I", and "O".
 - Pick the part of speech by what the word does in its sentence, from the list under This job.
 
-Answer with one object per listed word, copying its passage:
-
-{ "passage": { "verse": "Genesis 1:21", "quote": "living" }, "headword": "living", "part_of_speech": "adjective" }
 """
+
+HEADWORDS_FORMAT = """Write one line per verse under Words to answer: the chapter and verse, then each number with "=", its headword, and its part of speech.
+
+1:21  1=living adjective  2=creature noun"""
 
 MEANINGS = f"""
 Write the meanings of one headword: the distinct senses it carries in scripture, such as "bear" the animal and "bear" to carry. A later job picks one of these meanings for every word with this headword, so the list must cover every use shown under Verses and keep the senses easy to tell apart.
@@ -78,30 +79,50 @@ Answer with one object per meaning:
 WORD_MEANINGS = """
 Pick the meaning each word listed under Words to answer carries in its verse, from its headword's meanings. Words whose headword has one meaning already have it, and function words and names take none.
 
-- Words to answer groups the words under each headword's meanings. Copy each word's passage, and the reference of the meaning that fits it, such as "say.1".
+- Words to answer lists each headword's meanings, then numbers the words to answer verse by verse, each with its headword.
 - Read the whole verse, and the verses around it when the verse alone does not settle it.
 - When no meaning fits exactly, pick the closest.
 - Answer every listed word, and no others.
-
-Answer with one object per word:
-
-{ "passage": { "verse": "1 Nephi 3:7", "quote": "said" }, "meaning": "say.1" }
 """
+
+WORD_MEANINGS_FORMAT = """Write one line per verse under Words to answer: the chapter and verse, then each number with "=" and the number of the meaning that fits it.
+
+3:7  1=1  2=3"""
 
 
 class Headwords(Layer):
     name = "headwords"
     step = 2
     instructions = HEADWORDS
+    format = HEADWORDS_FORMAT
 
     def scopes(self, db):
-        """Only chapters holding a word the taggers left unsettled, because every later chapter job there waits for this one."""
+        """Only chapters holding a word the taggers left unsettled."""
         return list(unsettled(db))
 
-    def context(self, db, jobs, scope):
-        lines = [f"{json.dumps(passage_of(db, word, word), ensure_ascii=False)}  {guesses(record)}" for word, record in listed(db, scope).items()]
-        parts = ", ".join(kinds(db, "part_of_speech"))
-        return f"## This job\n\nParts of speech: {parts}.\n\n## Words to answer\n\n" + "\n".join(lines) + "\n\n" + super().context(db, jobs, scope)
+    def preamble(self, db, scopes):
+        return "## Parts of speech\n\n" + ", ".join(kinds(db, "part_of_speech"))
+
+    def text_chapters(self, db, scope):
+        return []
+
+    def extra(self, db, jobs, scope, batch=()):
+        book, chapter = split_chapter(scope)
+        edition = english_edition(db, book)
+        records = listed(db, scope)
+        blocks = []
+        for verse, words in self.listing(db, scope).items():
+            lines = [f"{reference(db, book, chapter, verse)} {verse_text(db, edition, book, chapter, verse).strip()}"]
+            lines += [f"{chapter}:{verse}  {n} {text}  {guesses(records[word])}" for n, (word, text) in enumerate(words, 1)]
+            blocks.append("\n".join(lines))
+        return "## Words to answer\n\nEach verse, then its words to answer, numbered.\n\n" + "\n\n".join(blocks)
+
+    def listing(self, db, scope) -> dict[int, list[tuple[int, str]]]:
+        """Each verse's listed words as (word id, text), in the order the prompt numbers them from 1."""
+        return verse_listing(db, list(listed(db, scope)))
+
+    def read(self, db, scope, lines):
+        return read_numbered(db, scope, lines, self.listing(db, scope), headword_item)
 
     def parse(self, db, scope, answer):
         words = listed(db, scope)
@@ -111,7 +132,7 @@ class Headwords(Layer):
         problems = Problems(db)
         tags, answered = [], {}
         for number, item in enumerate(problems.items(answer), 1):
-            problems.at(f"item {number}")
+            problems.at(where(number, item))
             if not problems.fields(item, ("passage", "headword", "part_of_speech")):
                 continue
             word = one_word(problems, item["passage"], edition, book, chapter)
@@ -169,7 +190,6 @@ class Meanings(Layer):
     name = "meanings"
     step = 7
     scope = "headword"
-    mode = "check"
     instructions = MEANINGS
 
     def scopes(self, db):
@@ -200,7 +220,10 @@ class Meanings(Layer):
     def given(self, db, scope):
         return list(db.execute("select headword_id, number, gloss, definition from meaning where headword_id = ? and definition is null order by number", (headword_of(db, scope),)))
 
-    def context(self, db, jobs, scope):
+    def text_chapters(self, db, scope):
+        return []
+
+    def extra(self, db, jobs, scope, batch=()):
         headword = headword_of(db, scope)
         language, text, strongs, gloss = db.execute("select language, text, strongs, gloss from headword where id = ?", (headword,)).fetchone()
         start = next_number(db, headword)
@@ -232,7 +255,7 @@ class Meanings(Layer):
             verses = [english_line(db, use) for use in picked]
             covered = "form and part of speech"
         lines += ["", "## Verses", "", f"{len(picked)} of the {len(uses):,} words: the first with each common {covered}, then the rest spread across every work and book that has one.", ""]
-        return "## This job\n\n" + "\n".join(lines + verses)
+        return "\n".join(lines + verses)
 
     def parse(self, db, scope, answer):
         headword = headword_of(db, scope)
@@ -283,6 +306,7 @@ class WordMeanings(Layer):
     step = 7
     scope = "edition chapter"
     instructions = WORD_MEANINGS
+    format = WORD_MEANINGS_FORMAT
 
     def scopes(self, db):
         """Every English chapter, then each Hebrew and Greek chapter with a word Macula gives no sense whose headword takes meanings."""
@@ -302,18 +326,12 @@ class WordMeanings(Layer):
         _, book, chapter = target(scope)
         return [(book, chapter)]
 
-    def ready(self, db, jobs, scope):
-        """Waits for the chapter's headwords job, then for the meanings job of every headword whose words here need a meaning."""
+    def label(self, db, scope):
         edition, book, chapter = target(scope)
-        from . import LAYERS
+        return f"{reference(db, book, chapter)} ({edition})"
 
-        if edition in ENGLISH and f"{book}/{chapter}" in LAYERS["headwords"].scope_set(db) and jobs.get("headwords", f"{book}/{chapter}").settled() is None:
-            return f"headwords/{book}/{chapter} must settle first"
-        for headword in dict.fromkeys(needs(db, scope).values()):
-            meanings_scope = headword_scope(db, headword)
-            if jobs.get("meanings", meanings_scope).settled() is None:
-                return f"meanings/{meanings_scope} must settle first"
-        return None
+    def text_chapters(self, db, scope):
+        return []
 
     def fixed(self, db, scope):
         words = needs(db, scope)
@@ -323,32 +341,47 @@ class WordMeanings(Layer):
     def already_shown(self, db, tags):
         return []
 
-    def context(self, db, jobs, scope):
-        edition, book, chapter = target(scope)
+    def chosen(self, db, scope) -> dict[int, int]:
+        """Each word that needs a meaning picked, mapped to its headword: its headword has more than one meaning."""
         words = needs(db, scope)
         numbers = meaning_numbers(db, set(words.values()))
-        chosen = {word: headword for word, headword in words.items() if len(numbers.get(headword, ())) > 1}
+        return {word: headword for word, headword in words.items() if len(numbers.get(headword, ())) > 1}
+
+    def listing(self, db, scope) -> dict[int, list[tuple[int, str]]]:
+        return verse_listing(db, list(self.chosen(db, scope)))
+
+    def extra(self, db, jobs, scope, batch=()):
+        edition, book, chapter = target(scope)
+        chosen = self.chosen(db, scope)
         renderings = kjv_renderings(db, list(chosen)) if edition in ORIGINAL else {}
-        grouped = defaultdict(list)
-        for word, headword in chosen.items():
-            grouped[headword].append(word)
         blocks = []
-        for headword, group in grouped.items():
+        for headword in dict.fromkeys(chosen.values()):
             prefix = headword_prefix(db, headword)
             lines = [f"### {prefix}"]
-            lines += [f'"{prefix}.{number}": {gloss}. {definition}' for number, gloss, definition in db.execute(f"select number, gloss, definition from meaning where headword_id = ? and {WRITTEN} order by number", (headword,))]
-            for word in group:
-                matched = renderings.get(word)
-                kjv = f"  KJV: {' '.join(text for _, text in matched)}" if matched else ("  KJV: no matched word" if edition in ORIGINAL else "")
-                lines.append(json.dumps(passage_of(db, word, word), ensure_ascii=False) + kjv)
+            lines += [f"{number}: {gloss}. {definition}" for number, gloss, definition in db.execute(f"select number, gloss, definition from meaning where headword_id = ? and {WRITTEN} order by number", (headword,))]
             blocks.append("\n".join(lines))
-        answer = "\n\n".join(blocks) if blocks else "Nothing: every word here already has its meaning. Answer with an empty array []."
-        text = show(db, book, chapter, edition, layers=())
+        words = []
+        for verse, listed_words in self.listing(db, scope).items():
+            parts = []
+            for n, (word, text) in enumerate(listed_words, 1):
+                matched = renderings.get(word)
+                kjv = f" KJV {' '.join(t for _, t in matched)}" if matched else ""
+                parts.append(f"{n} {text} ({headword_prefix(db, chosen[word])}{kjv})")
+            words.append(f"{chapter}:{verse}  " + "  ".join(parts))
+        if not words:
+            answer = "Nothing: every word here already has its meaning. Leave this section empty."
+        else:
+            answer = "\n\n".join(blocks) + "\n\n" + "\n".join(words)
+        text = show(db, book, chapter, edition, layers=(), level=2)
         if edition in ORIGINAL:
             first, last = chapter_span(db, edition, book, chapter)
             text += "\n\n" + kjv_verses(db, list(range(first, last + 1)))
-        settled = len(words) - len(chosen)
-        return f"## Words to answer\n\n{settled} other words here have a headword with one meaning, which they get by script. Leave them out.\n\n{answer}\n\n{text}"
+        return f"## Words to answer\n\n{answer}\n\n{text}"
+
+    def read(self, db, scope, lines):
+        edition, book, chapter = target(scope)
+        chosen = self.chosen(db, scope)
+        return read_numbered(db, scope, lines, self.listing(db, scope), lambda word, value: {"meaning": value if "." in value else f"{headword_prefix(db, chosen[word])}.{value}"}, chapter=chapter)
 
     def parse(self, db, scope, answer):
         edition, book, chapter = target(scope)
@@ -357,7 +390,7 @@ class WordMeanings(Layer):
         problems = Problems(db)
         tags, answered = [], {}
         for index, item in enumerate(problems.items(answer), 1):
-            problems.at(f"item {index}")
+            problems.at(where(index, item))
             if not problems.fields(item, ("passage", "meaning")):
                 continue
             word = one_word(problems, item["passage"], edition, book, chapter)
@@ -400,6 +433,51 @@ class WordMeanings(Layer):
             (first, last),
         )
         return [self.render(db, row) for row in rows]
+
+
+def verse_listing(db: sqlite3.Connection, words: list[int]) -> dict[int, list[tuple[int, str]]]:
+    """Words grouped by verse as (word id, text), in reading order, as a prompt numbers them from 1 in each verse."""
+    found: dict[int, list[tuple[int, str]]] = {}
+    for word, verse, text in db.execute("select w.id, w.verse, w.text from json_each(?) j join word w on w.id = j.value order by w.id", (json.dumps(sorted(words)),)):
+        found.setdefault(verse, []).append((word, text))
+    return found
+
+
+def headword_item(word: int, value: str) -> dict:
+    headword, _, part = value.rpartition(" ")
+    return {"headword": headword.strip(), "part_of_speech": part}
+
+
+def read_numbered(db: sqlite3.Connection, scope: str, lines: list[str], listing: dict[int, list[tuple[int, str]]], item, chapter: int | None = None) -> Reading:
+    """Turn numbered lines into items, one per listed word: its passage and the fields item(word, value) gives."""
+    if chapter is None:
+        chapter = split_chapter(scope)[1]
+    problems = Problems(db)
+    reading = Reading()
+    for number, line in enumerate(lines, 1):
+        problems.at(f"line {number}")
+        found = numbered(problems, line)
+        if found is None:
+            continue
+        key, groups = found
+        verse = verse_number(problems, key, chapter)
+        if verse is None:
+            continue
+        words = listing.get(verse)
+        if not words:
+            problems.add(f"{key} has no numbered words")
+            continue
+        for numbers, value, unsure in groups:
+            for n in numbers:
+                if not 1 <= n <= len(words):
+                    problems.add(f"{key} has words 1 to {len(words)}, not {n}")
+                    continue
+                word = words[n - 1][0]
+                reading.items.append({"passage": passage_of(db, word, word), **item(word, value)})
+                if unsure:
+                    reading.flagged.append(f"{key} {n}={value} ({words[n - 1][1]})")
+    problems.raise_any()
+    return reading
 
 
 MEMO: OrderedDict = OrderedDict()

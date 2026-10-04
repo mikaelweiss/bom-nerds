@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest import mock
 
 from bomnerds.agent import jobs
+from bomnerds.agent import plan as plans
 from bomnerds.sources import ROOT
 from bomnerds.text import slug
 from bomnerds.words import split
@@ -42,7 +43,7 @@ def entity(db: sqlite3.Connection, id: str, type_id: str, name: str, description
 
 @contextmanager
 def job_folder():
-    """Point the job store at a temporary folder for the length of a test."""
+    """Point the job store and session folders at a temporary folder for the length of a test."""
     with tempfile.TemporaryDirectory() as folder:
-        with mock.patch.object(jobs, "JOBS", Path(folder)), mock.patch.object(jobs, "MISSING", Path(folder) / "missing.jsonl"):
+        with mock.patch.object(jobs, "JOBS", Path(folder)), mock.patch.object(plans, "SESSIONS", Path(folder) / "sessions"):
             yield Path(folder)

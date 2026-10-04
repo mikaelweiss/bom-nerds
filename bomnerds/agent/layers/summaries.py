@@ -9,7 +9,7 @@ import sqlite3
 
 from ...passages import Rejected, book_key, book_name, cache, chapter_numbers, chapter_span, chapter_verses, english_edition, locate, parse_reference, reference, resolve
 from ..jobs import CLI, Job
-from ..layer import Layer, Problems, chapter_scopes, kinds, passage_of, split_chapter
+from ..layer import Layer, Problems, chapter_scopes, kinds, passage_of, split_chapter, where
 
 CHAPTER_WORDS = (15, 120)
 BOOK_WORDS = (50, 250)
@@ -18,16 +18,16 @@ SENTENCE_END = re.compile(r"[.?!][\"'”’)]*$")
 VERSES_LISTED = 3
 
 INSTRUCTIONS = """
-Write one study summary: one kind, for one chapter, verse range, or book. The kind, what it covers, and the target are under This job, at the top of Context.
+Write study summaries: each section is one kind, for one chapter, verse range, or book. The kind, what it covers, and the target are under This job in each section.
 
 - Write from a Latter-day Saint perspective, in plain modern English and full sentences. Capitalize pronouns for God: "His commandments".
 - A chapter or verse range gets a few sentences. A book gets one paragraph. Write prose: no lists, headings, or line breaks.
 - Cover only what the kind covers, and only what this passage holds. Name verses the way people write them: 1 Nephi 3:7.
-- Write from the scripture text shown here. The tags beside it come from earlier jobs and show who is named and who is speaking. Where the kind needs background the text does not give, such as setting or culture, use only well-established facts and leave out anything you are unsure of.
+- Write from the scripture text shown here. The speeches beside it show who is speaking to whom. Where the kind needs background the text does not give, such as setting or culture, use only well-established facts and leave out anything you are unsure of.
 - Never copy or paraphrase the Church's chapter summaries, section headings, footnotes, or other study helps, even from memory. Write in your own words, quoting the text only briefly.
-- When the passage holds nothing of this kind, such as no prophecy at all, answer with an empty array [] rather than stretching. An empty Writer's answer means the writer found nothing of this kind.
+- When the passage holds nothing of this kind, such as no prophecy at all, leave the section empty rather than stretching.
 
-Answer with one object, its kind and target exactly as This job gives them:
+Answer each section with one object, its kind and target exactly as This job gives them:
 
 { "kind": "doctrine", "on": { "chapter": "1 Nephi 17" },
   "text": "The Lord gives strength and a way forward to people who keep His commandments. He guides the faithful the same way He led Israel out of Egypt. People who keep rejecting His word slowly lose the ability to feel the Spirit." }
@@ -38,8 +38,9 @@ class Summaries(Layer):
     name = "summaries"
     step = 9
     scope = "kind per chapter, range, or book"
-    mode = "check"
     points = False
+    # Speeches say who is talking. Every other layer's tags would bury the text.
+    sees = ("speakers",)
     instructions = INSTRUCTIONS
 
     def scopes(self, db):
@@ -72,25 +73,20 @@ class Summaries(Layer):
             return [(book, number) for number in chapter_numbers(db, english_edition(db, book), book) if start <= number <= end]
         return [(book, number) for number in chapter_numbers(db, english_edition(db, book), book)]
 
-    def ready(self, db, jobs, scope):
-        """A book job waits for its chapter jobs of the same kind. Any other job waits for every earlier job on its chapters."""
+    def label(self, db, scope):
         kind, book, chapter, range_id = target(scope)
-        if range_id is None and chapter is None:
-            for _, number in self.chapters(db, scope):
-                if jobs.get(self.name, f"{kind}/{book}/{number}").settled() is None:
-                    return f"{self.name}/{kind}/{book}/{number} must settle first"
-            return None
-        from . import LAYERS
+        name = db.execute("select name from summary_kind where id = ?", (kind,)).fetchone()[0]
+        if chapter is not None:
+            return f"{name}: {reference(db, book, chapter)}"
+        if range_id is not None:
+            return f"{name}: {range_id}"
+        return f"{name}: {book_name(db, book)}"
 
-        earlier = [layer for layer in LAYERS.values() if layer.step < self.step]
-        for book, number in self.chapters(db, scope):
-            for layer in earlier:
-                needed = {"chapter": f"{book}/{number}", "book": book}.get(layer.scope)
-                if needed in layer.scope_set(db) and jobs.get(layer.name, needed).settled() is None:
-                    return f"{layer.name}/{needed} must settle first"
-        return None
+    def text_chapters(self, db, scope):
+        _, _, chapter, range_id = target(scope)
+        return self.chapters(db, scope) if chapter is not None or range_id is not None else []
 
-    def context(self, db, jobs, scope):
+    def extra(self, db, jobs, scope, batch=()):
         kind, book, chapter, range_id = target(scope)
         name, description = db.execute("select name, description from summary_kind where id = ?", (kind,)).fetchone()
         answer = json.dumps([{"kind": kind, "on": on_of(db, book, chapter, range_id), "text": "..."}], ensure_ascii=False)
@@ -100,26 +96,25 @@ class Summaries(Layer):
         elif range_id is not None:
             range_name, first, last = db.execute("select name, first_word_id, last_word_id from verse_range where id = ?", (range_id,)).fetchone()
             passage = json.dumps(passage_of(db, first, last), ensure_ascii=False)
-            where = f"the verse range {range_name}, {passage}. Summarize only the verses inside it. The chapters it touches are below in full. Write a few sentences: {low} to {high} words."
+            where = f"the verse range {range_name}, {passage}. Summarize only the verses inside it. The chapters it touches are shown in full above. Write a few sentences: {low} to {high} words."
         else:
-            where = f"the book {book_name(db, book)}. Write one paragraph: {low} to {high} words. Below are its chapters, each with the {name} summary other agents wrote and checked for it."
+            where = f"the book {book_name(db, book)}. Write one paragraph: {low} to {high} words. Below are its chapters, each with the {name} summary another session wrote for it."
         job = f"## This job\n\nKind: {name}. {description}\nTarget: {where}\nAnswer: {answer}"
         if chapter is None and range_id is None:
             return f"{job}\n\n{book_chapters(db, kind, name, book)}"
-        text = super().context(db, jobs, scope)
         if kind == "original_words":
-            text += "\n\n" + original_words(db, *span_of(db, book, chapter, range_id))
-        return f"{job}\n\n{text}"
+            return f"{job}\n\n" + original_words(db, *span_of(db, book, chapter, range_id))
+        return job
 
     def parse(self, db, scope, answer):
         kind, book, chapter, range_id = target(scope)
         problems = Problems(db)
         items = problems.items(answer)
         if len(items) > 1:
-            problems.add(f"answer with one summary, or an empty array when the passage holds nothing of this kind. This answer has {len(items)}")
+            problems.add(f"answer with one summary, or leave the section empty when the passage holds nothing of this kind. This answer has {len(items)}")
         tags = []
         for number, item in enumerate(items, 1):
-            problems.at(f"item {number}")
+            problems.at(where(number, item))
             if not problems.fields(item, ("kind", "on", "text")):
                 continue
             before = len(problems.messages)
@@ -193,11 +188,9 @@ class Summaries(Layer):
         if not db.execute("select 1 from verse_range where id = ?", (args.id,)).fetchone():
             raise Rejected(f"no range {args.id!r}. List them with: {CLI} ranges")
         stored = [f"{self.name}/{kind}/range/{args.id}" for (kind,) in db.execute("select kind_id from summary where range_id = ? order by kind_id", (args.id,))]
-        if stored:
-            raise Rejected(f"{args.id} has summaries. Reset these jobs first: {', '.join(stored)}")
         answered = [job.id for kind in kinds(db, "summary_kind") if any((job := Job(self, f"{kind}/range/{args.id}")).path.glob("*.json"))]
-        if answered:
-            raise Rejected(f"{args.id} has answers in {', '.join(answered)}. Reset those jobs first")
+        if stored or answered:
+            raise Rejected(f"{args.id} has summaries in {', '.join(stored or answered)}. Reset the session that wrote them first")
         with db:
             db.execute("delete from verse_range where id = ?", (args.id,))
         print(f"removed {args.id}")

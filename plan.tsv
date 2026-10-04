@@ -1,0 +1,1106 @@
+session	pass	model	layers	from	to	covers	after
+entities-001	entities	opus	entities	scripture	scripture	All of scripture	
+entities-002	entities	opus	entities	title-page	2-nephi	Title Page – 2 Nephi	entities-001
+entities-003	entities	opus	entities	jacob	mosiah/16-29	Jacob – Mosiah 29	entities-002
+entities-004	entities	opus	entities	alma/1-21	alma/22-43	Alma 1–43	entities-003
+entities-005	entities	opus	entities	alma/44-63	helaman	Alma 44 – Helaman	entities-004
+entities-006	entities	opus	entities	3-nephi	mormon	3 Nephi – Mormon	entities-005
+entities-007	entities	opus	entities	ether	moroni	Ether – Moroni	entities-006
+entities-008	entities	opus	entities	doctrine-and-covenants/1-45	doctrine-and-covenants/46-84	D&C 1–84	entities-007
+entities-009	entities	opus	entities	doctrine-and-covenants/85-109	doctrine-and-covenants/110-138	D&C 85–138	entities-008
+entities-010	entities	opus	entities	moses	articles-of-faith	Moses – Articles of Faith	entities-009
+review-entities-1	entities	opus	entities	scripture	articles-of-faith	All of scripture – Articles of Faith	entities:*
+people-001	people	sonnet	names,speakers	genesis/1	genesis/27	Genesis 1–27	review-entities:*
+people-002	people	sonnet	names,speakers	genesis/28	genesis/49	Genesis 28–49	review-entities:* people-001
+people-003	people	sonnet	names,speakers	genesis/50	exodus/23	Genesis 50 – Exodus 23	review-entities:* people-002
+people-004	people	sonnet	names,speakers	exodus/24	leviticus/9	Exodus 24 – Leviticus 9	review-entities:* people-003
+people-005	people	sonnet	names,speakers	leviticus/10	numbers/4	Leviticus 10 – Numbers 4	review-entities:* people-004
+people-006	people	sonnet	names,speakers	numbers/5	numbers/26	Numbers 5–26	review-entities:* people-005
+people-007	people	sonnet	names,speakers	numbers/27	deuteronomy/13	Numbers 27 – Deuteronomy 13	review-entities:* people-006
+people-008	people	sonnet	names,speakers	deuteronomy/14	deuteronomy/34	Deuteronomy 14–34	review-entities:* people-007
+people-009	people	sonnet	names,speakers	joshua/1	joshua/22	Joshua 1–22	review-entities:*
+people-010	people	sonnet	names,speakers	joshua/23	judges/19	Joshua 23 – Judges 19	review-entities:* people-009
+people-011	people	sonnet	names,speakers	judges/20	1-samuel/17	Judges 20 – 1 Samuel 17	review-entities:* people-010
+people-012	people	sonnet	names,speakers	1-samuel/18	2-samuel/9	1 Samuel 18 – 2 Samuel 9	review-entities:* people-011
+people-013	people	sonnet	names,speakers	2-samuel/10	2-samuel/24	2 Samuel 10–24	review-entities:* people-012
+people-014	people	sonnet	names,speakers	1-kings/1	1-kings/17	1 Kings 1–17	review-entities:*
+people-015	people	sonnet	names,speakers	1-kings/18	2-kings/13	1 Kings 18 – 2 Kings 13	review-entities:* people-014
+people-016	people	sonnet	names,speakers	2-kings/14	1-chronicles/6	2 Kings 14 – 1 Chronicles 6	review-entities:* people-015
+people-017	people	sonnet	names,speakers	1-chronicles/7	1-chronicles/29	1 Chronicles 7–29	review-entities:* people-016
+people-018	people	sonnet	names,speakers	2-chronicles/1	2-chronicles/28	2 Chronicles 1–28	review-entities:*
+people-019	people	sonnet	names,speakers	2-chronicles/29	ezra/10	2 Chronicles 29 – Ezra 10	review-entities:* people-018
+people-020	people	sonnet	names,speakers	nehemiah/1	esther/10	Nehemiah 1 – Esther 10	review-entities:*
+people-021	people	sonnet	names,speakers	job/1	psalms/18	Job 1 – Psalms 18	review-entities:*
+people-022	people	sonnet	names,speakers	psalms/19	psalms/83	Psalms 19–83	review-entities:* people-021
+people-023	people	sonnet	names,speakers	psalms/84	psalms/150	Psalms 84–150	review-entities:* people-022
+people-024	people	sonnet	names,speakers	proverbs/1	ecclesiastes/12	Proverbs 1 – Ecclesiastes 12	review-entities:*
+people-025	people	sonnet	names,speakers	song-of-solomon/1	isaiah/34	Song of Solomon 1 – Isaiah 34	review-entities:*
+people-026	people	sonnet	names,speakers	isaiah/35	isaiah/66	Isaiah 35–66	review-entities:* people-025
+people-027	people	sonnet	names,speakers	jeremiah/1	jeremiah/27	Jeremiah 1–27	review-entities:*
+people-028	people	sonnet	names,speakers	jeremiah/28	jeremiah/50	Jeremiah 28–50	review-entities:* people-027
+people-029	people	sonnet	names,speakers	jeremiah/51	ezekiel/21	Jeremiah 51 – Ezekiel 21	review-entities:* people-028
+people-030	people	sonnet	names,speakers	ezekiel/22	ezekiel/46	Ezekiel 22–46	review-entities:* people-029
+people-031	people	sonnet	names,speakers	ezekiel/47	hosea/14	Ezekiel 47 – Hosea 14	review-entities:* people-030
+people-032	people	sonnet	names,speakers	joel/1	haggai/2	Joel 1 – Haggai 2	review-entities:*
+people-033	people	sonnet	names,speakers	zechariah/1	matthew/15	Zechariah 1 – Matthew 15	review-entities:*
+people-034	people	sonnet	names,speakers	matthew/16	mark/9	Matthew 16 – Mark 9	review-entities:* people-033
+people-035	people	sonnet	names,speakers	mark/10	luke/11	Mark 10 – Luke 11	review-entities:* people-034
+people-036	people	sonnet	names,speakers	luke/12	john/8	Luke 12 – John 8	review-entities:* people-035
+people-037	people	sonnet	names,speakers	john/9	acts/10	John 9 – Acts 10	review-entities:* people-036
+people-038	people	sonnet	names,speakers	acts/11	acts/28	Acts 11–28	review-entities:* people-037
+people-039	people	sonnet	names,speakers	romans/1	1-corinthians/16	Romans 1 – 1 Corinthians 16	review-entities:*
+people-040	people	sonnet	names,speakers	2-corinthians/1	colossians/4	2 Corinthians 1 – Colossians 4	review-entities:*
+people-041	people	sonnet	names,speakers	1-thessalonians/1	james/5	1 Thessalonians 1 – James 5	review-entities:*
+people-042	people	sonnet	names,speakers	1-peter/1	revelation/22	1 Peter 1 – Revelation 22	review-entities:*
+people-043	people	sonnet	names,speakers	title-page/1	1-nephi/17	Title Page 1 – 1 Nephi 17	review-entities:*
+people-044	people	sonnet	names,speakers	1-nephi/18	2-nephi/16	1 Nephi 18 – 2 Nephi 16	review-entities:* people-043
+people-045	people	sonnet	names,speakers	2-nephi/17	jacob/5	2 Nephi 17 – Jacob 5	review-entities:* people-044
+people-046	people	sonnet	names,speakers	jacob/6	mosiah/14	Jacob 6 – Mosiah 14	review-entities:* people-045
+people-047	people	sonnet	names,speakers	mosiah/15	alma/4	Mosiah 15 – Alma 4	review-entities:* people-046
+people-048	people	sonnet	names,speakers	alma/5	alma/19	Alma 5–19	review-entities:* people-047
+people-049	people	sonnet	names,speakers	alma/20	alma/36	Alma 20–36	review-entities:* people-048
+people-050	people	sonnet	names,speakers	alma/37	alma/52	Alma 37–52	review-entities:* people-049
+people-051	people	sonnet	names,speakers	alma/53	helaman/5	Alma 53 – Helaman 5	review-entities:* people-050
+people-052	people	sonnet	names,speakers	helaman/6	3-nephi/7	Helaman 6 – 3 Nephi 7	review-entities:* people-051
+people-053	people	sonnet	names,speakers	3-nephi/8	3-nephi/30	3 Nephi 8–30	review-entities:* people-052
+people-054	people	sonnet	names,speakers	4-nephi/1	ether/9	4 Nephi 1 – Ether 9	review-entities:*
+people-055	people	sonnet	names,speakers	ether/10	moroni/10	Ether 10 – Moroni 10	review-entities:* people-054
+people-056	people	sonnet	names,speakers	doctrine-and-covenants/1	doctrine-and-covenants/39	D&C 1–39	review-entities:*
+people-057	people	sonnet	names,speakers	doctrine-and-covenants/40	doctrine-and-covenants/68	D&C 40–68	review-entities:* people-056
+people-058	people	sonnet	names,speakers	doctrine-and-covenants/69	doctrine-and-covenants/97	D&C 69–97	review-entities:* people-057
+people-059	people	sonnet	names,speakers	doctrine-and-covenants/98	doctrine-and-covenants/123	D&C 98–123	review-entities:* people-058
+people-060	people	sonnet	names,speakers	doctrine-and-covenants/124	doctrine-and-covenants/138	D&C 124–138	review-entities:* people-059
+people-061	people	sonnet	names,speakers	moses/1	articles-of-faith/1	Moses 1 – Articles of Faith 1	review-entities:*
+review-people-1	people	opus	names,speakers	genesis/1	esther/10	Genesis 1 – Esther 10	people:*
+review-people-2	people	opus	names,speakers	job/1	colossians/4	Job 1 – Colossians 4	people:*
+review-people-3	people	opus	names,speakers	1-thessalonians/1	doctrine-and-covenants/138	1 Thessalonians 1 – D&C 138	people:*
+review-people-4	people	opus	names,speakers	moses/1	articles-of-faith/1	Moses 1 – Articles of Faith 1	people:*
+facts-001	facts	sonnet	relationships,journeys,dates	genesis/1	genesis/34	Genesis 1–34	review-people:*
+facts-002	facts	sonnet	relationships,journeys,dates	genesis/35	exodus/15	Genesis 35 – Exodus 15	review-people:*
+facts-003	facts	sonnet	relationships,journeys,dates	exodus/16	exodus/40	Exodus 16–40	review-people:*
+facts-004	facts	sonnet	relationships,journeys,dates	leviticus/1	leviticus/27	Leviticus 1–27	review-people:*
+facts-005	facts	sonnet	relationships,journeys,dates	numbers/1	numbers/26	Numbers 1–26	review-people:*
+facts-006	facts	sonnet	relationships,journeys,dates	numbers/27	deuteronomy/21	Numbers 27 – Deuteronomy 21	review-people:*
+facts-007	facts	sonnet	relationships,journeys,dates	deuteronomy/22	joshua/18	Deuteronomy 22 – Joshua 18	review-people:*
+facts-008	facts	sonnet	relationships,journeys,dates	joshua/19	judges/21	Joshua 19 – Judges 21	review-people:*
+facts-009	facts	sonnet	relationships,journeys,dates	ruth/1	1-samuel/27	Ruth 1 – 1 Samuel 27	review-people:*
+facts-010	facts	sonnet	relationships,journeys,dates	1-samuel/28	2-samuel/24	1 Samuel 28 – 2 Samuel 24	review-people:*
+facts-011	facts	sonnet	relationships,journeys,dates	1-kings/1	1-kings/22	1 Kings 1–22	review-people:*
+facts-012	facts	sonnet	relationships,journeys,dates	2-kings/1	2-kings/25	2 Kings 1–25	review-people:*
+facts-013	facts	sonnet	relationships,journeys,dates	1-chronicles/1	1-chronicles/29	1 Chronicles 1–29	review-people:*
+facts-014	facts	sonnet	relationships,journeys,dates	2-chronicles/1	2-chronicles/35	2 Chronicles 1–35	review-people:*
+facts-015	facts	sonnet	relationships,journeys,dates	2-chronicles/36	esther/10	2 Chronicles 36 – Esther 10	review-people:*
+facts-016	facts	sonnet	relationships,journeys,dates	job/1	psalms/27	Job 1 – Psalms 27	review-people:*
+facts-017	facts	sonnet	relationships,journeys,dates	psalms/28	psalms/105	Psalms 28–105	review-people:*
+facts-018	facts	sonnet	relationships,journeys,dates	psalms/106	proverbs/27	Psalms 106 – Proverbs 27	review-people:*
+facts-019	facts	sonnet	relationships,journeys,dates	proverbs/28	isaiah/28	Proverbs 28 – Isaiah 28	review-people:*
+facts-020	facts	sonnet	relationships,journeys,dates	isaiah/29	isaiah/66	Isaiah 29–66	review-people:*
+facts-021	facts	sonnet	relationships,journeys,dates	jeremiah/1	jeremiah/32	Jeremiah 1–32	review-people:*
+facts-022	facts	sonnet	relationships,journeys,dates	jeremiah/33	lamentations/5	Jeremiah 33 – Lamentations 5	review-people:*
+facts-023	facts	sonnet	relationships,journeys,dates	ezekiel/1	ezekiel/32	Ezekiel 1–32	review-people:*
+facts-024	facts	sonnet	relationships,journeys,dates	ezekiel/33	daniel/11	Ezekiel 33 – Daniel 11	review-people:*
+facts-025	facts	sonnet	relationships,journeys,dates	daniel/12	zephaniah/3	Daniel 12 – Zephaniah 3	review-people:*
+facts-026	facts	sonnet	relationships,journeys,dates	haggai/1	matthew/20	Haggai 1 – Matthew 20	review-people:*
+facts-027	facts	sonnet	relationships,journeys,dates	matthew/21	mark/16	Matthew 21 – Mark 16	review-people:*
+facts-028	facts	sonnet	relationships,journeys,dates	luke/1	luke/23	Luke 1–23	review-people:*
+facts-029	facts	sonnet	relationships,journeys,dates	luke/24	john/21	Luke 24 – John 21	review-people:*
+facts-030	facts	sonnet	relationships,journeys,dates	acts/1	acts/28	Acts 1–28	review-people:*
+facts-031	facts	sonnet	relationships,journeys,dates	romans/1	2-corinthians/13	Romans 1 – 2 Corinthians 13	review-people:*
+facts-032	facts	sonnet	relationships,journeys,dates	galatians/1	hebrews/12	Galatians 1 – Hebrews 12	review-people:*
+facts-033	facts	sonnet	relationships,journeys,dates	hebrews/13	revelation/22	Hebrews 13 – Revelation 22	review-people:*
+facts-034	facts	sonnet	relationships,journeys,dates	title-page/1	1-nephi/21	Title Page 1 – 1 Nephi 21	review-people:*
+facts-035	facts	sonnet	relationships,journeys,dates	1-nephi/22	2-nephi/26	1 Nephi 22 – 2 Nephi 26	review-people:*
+facts-036	facts	sonnet	relationships,journeys,dates	2-nephi/27	words-of-mormon/1	2 Nephi 27 – Words of Mormon 1	review-people:*
+facts-037	facts	sonnet	relationships,journeys,dates	mosiah/1	mosiah/24	Mosiah 1–24	review-people:*
+facts-038	facts	sonnet	relationships,journeys,dates	mosiah/25	alma/13	Mosiah 25 – Alma 13	review-people:*
+facts-039	facts	sonnet	relationships,journeys,dates	alma/14	alma/32	Alma 14–32	review-people:*
+facts-040	facts	sonnet	relationships,journeys,dates	alma/33	alma/51	Alma 33–51	review-people:*
+facts-041	facts	sonnet	relationships,journeys,dates	alma/52	helaman/6	Alma 52 – Helaman 6	review-people:*
+facts-042	facts	sonnet	relationships,journeys,dates	helaman/7	3-nephi/12	Helaman 7 – 3 Nephi 12	review-people:*
+facts-043	facts	sonnet	relationships,journeys,dates	3-nephi/13	mormon/8	3 Nephi 13 – Mormon 8	review-people:*
+facts-044	facts	sonnet	relationships,journeys,dates	mormon/9	moroni/10	Mormon 9 – Moroni 10	review-people:*
+facts-045	facts	sonnet	relationships,journeys,dates	doctrine-and-covenants/1	doctrine-and-covenants/45	D&C 1–45	review-people:*
+facts-046	facts	sonnet	relationships,journeys,dates	doctrine-and-covenants/46	doctrine-and-covenants/84	D&C 46–84	review-people:*
+facts-047	facts	sonnet	relationships,journeys,dates	doctrine-and-covenants/85	doctrine-and-covenants/110	D&C 85–110	review-people:*
+facts-048	facts	sonnet	relationships,journeys,dates	doctrine-and-covenants/111	doctrine-and-covenants/138	D&C 111–138	review-people:*
+facts-049	facts	sonnet	relationships,journeys,dates	moses/1	articles-of-faith/1	Moses 1 – Articles of Faith 1	review-people:*
+review-facts-1	facts	opus	relationships,journeys,dates	genesis/1	isaiah/66	Genesis 1 – Isaiah 66	facts:*
+review-facts-2	facts	opus	relationships,journeys,dates	jeremiah/1	alma/51	Jeremiah 1 – Alma 51	facts:*
+review-facts-3	facts	opus	relationships,journeys,dates	alma/52	articles-of-faith/1	Alma 52 – Articles of Faith 1	facts:*
+links-001	links	opus	links,structures	genesis/1	genesis/34	Genesis 1–34	review-people:*
+links-002	links	opus	links,structures	genesis/35	exodus/15	Genesis 35 – Exodus 15	review-people:*
+links-003	links	opus	links,structures	exodus/16	exodus/40	Exodus 16–40	review-people:*
+links-004	links	opus	links,structures	leviticus/1	leviticus/27	Leviticus 1–27	review-people:*
+links-005	links	opus	links,structures	numbers/1	numbers/26	Numbers 1–26	review-people:*
+links-006	links	opus	links,structures	numbers/27	deuteronomy/21	Numbers 27 – Deuteronomy 21	review-people:*
+links-007	links	opus	links,structures	deuteronomy/22	joshua/18	Deuteronomy 22 – Joshua 18	review-people:*
+links-008	links	opus	links,structures	joshua/19	judges/21	Joshua 19 – Judges 21	review-people:*
+links-009	links	opus	links,structures	ruth/1	1-samuel/27	Ruth 1 – 1 Samuel 27	review-people:*
+links-010	links	opus	links,structures	1-samuel/28	2-samuel/24	1 Samuel 28 – 2 Samuel 24	review-people:*
+links-011	links	opus	links,structures	1-kings/1	1-kings/22	1 Kings 1–22	review-people:*
+links-012	links	opus	links,structures	2-kings/1	2-kings/25	2 Kings 1–25	review-people:*
+links-013	links	opus	links,structures	1-chronicles/1	1-chronicles/29	1 Chronicles 1–29	review-people:*
+links-014	links	opus	links,structures	2-chronicles/1	2-chronicles/35	2 Chronicles 1–35	review-people:*
+links-015	links	opus	links,structures	2-chronicles/36	esther/10	2 Chronicles 36 – Esther 10	review-people:*
+links-016	links	opus	links,structures	job/1	psalms/27	Job 1 – Psalms 27	review-people:*
+links-017	links	opus	links,structures	psalms/28	psalms/105	Psalms 28–105	review-people:*
+links-018	links	opus	links,structures	psalms/106	proverbs/27	Psalms 106 – Proverbs 27	review-people:*
+links-019	links	opus	links,structures	proverbs/28	isaiah/28	Proverbs 28 – Isaiah 28	review-people:*
+links-020	links	opus	links,structures	isaiah/29	isaiah/66	Isaiah 29–66	review-people:*
+links-021	links	opus	links,structures	jeremiah/1	jeremiah/32	Jeremiah 1–32	review-people:*
+links-022	links	opus	links,structures	jeremiah/33	lamentations/5	Jeremiah 33 – Lamentations 5	review-people:*
+links-023	links	opus	links,structures	ezekiel/1	ezekiel/32	Ezekiel 1–32	review-people:*
+links-024	links	opus	links,structures	ezekiel/33	daniel/11	Ezekiel 33 – Daniel 11	review-people:*
+links-025	links	opus	links,structures	daniel/12	zephaniah/3	Daniel 12 – Zephaniah 3	review-people:*
+links-026	links	opus	links,structures	haggai/1	matthew/20	Haggai 1 – Matthew 20	review-people:*
+links-027	links	opus	links,structures	matthew/21	mark/16	Matthew 21 – Mark 16	review-people:*
+links-028	links	opus	links,structures	luke/1	luke/23	Luke 1–23	review-people:*
+links-029	links	opus	links,structures	luke/24	john/21	Luke 24 – John 21	review-people:*
+links-030	links	opus	links,structures	acts/1	acts/28	Acts 1–28	review-people:*
+links-031	links	opus	links,structures	romans/1	2-corinthians/13	Romans 1 – 2 Corinthians 13	review-people:*
+links-032	links	opus	links,structures	galatians/1	hebrews/12	Galatians 1 – Hebrews 12	review-people:*
+links-033	links	opus	links,structures	hebrews/13	revelation/22	Hebrews 13 – Revelation 22	review-people:*
+links-034	links	opus	links,structures	title-page/1	1-nephi/21	Title Page 1 – 1 Nephi 21	review-people:*
+links-035	links	opus	links,structures	1-nephi/22	2-nephi/26	1 Nephi 22 – 2 Nephi 26	review-people:*
+links-036	links	opus	links,structures	2-nephi/27	words-of-mormon/1	2 Nephi 27 – Words of Mormon 1	review-people:*
+links-037	links	opus	links,structures	mosiah/1	mosiah/24	Mosiah 1–24	review-people:*
+links-038	links	opus	links,structures	mosiah/25	alma/13	Mosiah 25 – Alma 13	review-people:*
+links-039	links	opus	links,structures	alma/14	alma/32	Alma 14–32	review-people:*
+links-040	links	opus	links,structures	alma/33	alma/51	Alma 33–51	review-people:*
+links-041	links	opus	links,structures	alma/52	helaman/6	Alma 52 – Helaman 6	review-people:*
+links-042	links	opus	links,structures	helaman/7	3-nephi/12	Helaman 7 – 3 Nephi 12	review-people:*
+links-043	links	opus	links,structures	3-nephi/13	mormon/8	3 Nephi 13 – Mormon 8	review-people:*
+links-044	links	opus	links,structures	mormon/9	moroni/10	Mormon 9 – Moroni 10	review-people:*
+links-045	links	opus	links,structures	doctrine-and-covenants/1	doctrine-and-covenants/45	D&C 1–45	review-people:*
+links-046	links	opus	links,structures	doctrine-and-covenants/46	doctrine-and-covenants/84	D&C 46–84	review-people:*
+links-047	links	opus	links,structures	doctrine-and-covenants/85	doctrine-and-covenants/110	D&C 85–110	review-people:*
+links-048	links	opus	links,structures	doctrine-and-covenants/111	doctrine-and-covenants/138	D&C 111–138	review-people:*
+links-049	links	opus	links,structures	moses/1	articles-of-faith/1	Moses 1 – Articles of Faith 1	review-people:*
+review-links-1	links	opus	links,structures	genesis/1	isaiah/66	Genesis 1 – Isaiah 66	links:*
+review-links-2	links	opus	links,structures	jeremiah/1	alma/51	Jeremiah 1 – Alma 51	links:*
+review-links-3	links	opus	links,structures	alma/52	articles-of-faith/1	Alma 52 – Articles of Faith 1	links:*
+pronouns-001	pronouns	sonnet	pronouns,about	genesis/1	genesis/27	Genesis 1–27	review-facts:* review-links:*
+pronouns-002	pronouns	sonnet	pronouns,about	genesis/28	genesis/47	Genesis 28–47	review-facts:* review-links:*
+pronouns-003	pronouns	sonnet	pronouns,about	genesis/48	exodus/21	Genesis 48 – Exodus 21	review-facts:* review-links:*
+pronouns-004	pronouns	sonnet	pronouns,about	exodus/22	exodus/40	Exodus 22–40	review-facts:* review-links:*
+pronouns-005	pronouns	sonnet	pronouns,about	leviticus/1	leviticus/22	Leviticus 1–22	review-facts:* review-links:*
+pronouns-006	pronouns	sonnet	pronouns,about	leviticus/23	numbers/14	Leviticus 23 – Numbers 14	review-facts:* review-links:*
+pronouns-007	pronouns	sonnet	pronouns,about	numbers/15	numbers/36	Numbers 15–36	review-facts:* review-links:*
+pronouns-008	pronouns	sonnet	pronouns,about	deuteronomy/1	deuteronomy/21	Deuteronomy 1–21	review-facts:* review-links:*
+pronouns-009	pronouns	sonnet	pronouns,about	deuteronomy/22	joshua/9	Deuteronomy 22 – Joshua 9	review-facts:* review-links:*
+pronouns-010	pronouns	sonnet	pronouns,about	joshua/10	judges/9	Joshua 10 – Judges 9	review-facts:* review-links:*
+pronouns-011	pronouns	sonnet	pronouns,about	judges/10	1-samuel/8	Judges 10 – 1 Samuel 8	review-facts:* review-links:*
+pronouns-012	pronouns	sonnet	pronouns,about	1-samuel/9	1-samuel/29	1 Samuel 9–29	review-facts:* review-links:*
+pronouns-013	pronouns	sonnet	pronouns,about	1-samuel/30	2-samuel/20	1 Samuel 30 – 2 Samuel 20	review-facts:* review-links:*
+pronouns-014	pronouns	sonnet	pronouns,about	2-samuel/21	1-kings/14	2 Samuel 21 – 1 Kings 14	review-facts:* review-links:*
+pronouns-015	pronouns	sonnet	pronouns,about	1-kings/15	2-kings/10	1 Kings 15 – 2 Kings 10	review-facts:* review-links:*
+pronouns-016	pronouns	sonnet	pronouns,about	2-kings/11	1-chronicles/9	2 Kings 11 – 1 Chronicles 9	review-facts:* review-links:*
+pronouns-017	pronouns	sonnet	pronouns,about	1-chronicles/10	2-chronicles/10	1 Chronicles 10 – 2 Chronicles 10	review-facts:* review-links:*
+pronouns-018	pronouns	sonnet	pronouns,about	2-chronicles/11	2-chronicles/36	2 Chronicles 11–36	review-facts:* review-links:*
+pronouns-019	pronouns	sonnet	pronouns,about	ezra/1	nehemiah/13	Ezra 1 – Nehemiah 13	review-facts:* review-links:*
+pronouns-020	pronouns	sonnet	pronouns,about	esther/1	job/30	Esther 1 – Job 30	review-facts:* review-links:*
+pronouns-021	pronouns	sonnet	pronouns,about	job/31	psalms/37	Job 31 – Psalms 37	review-facts:* review-links:*
+pronouns-022	pronouns	sonnet	pronouns,about	psalms/38	psalms/89	Psalms 38–89	review-facts:* review-links:*
+pronouns-023	pronouns	sonnet	pronouns,about	psalms/90	psalms/147	Psalms 90–147	review-facts:* review-links:*
+pronouns-024	pronouns	sonnet	pronouns,about	psalms/148	proverbs/31	Psalms 148 – Proverbs 31	review-facts:* review-links:*
+pronouns-025	pronouns	sonnet	pronouns,about	ecclesiastes/1	isaiah/20	Ecclesiastes 1 – Isaiah 20	review-facts:* review-links:*
+pronouns-026	pronouns	sonnet	pronouns,about	isaiah/21	isaiah/49	Isaiah 21–49	review-facts:* review-links:*
+pronouns-027	pronouns	sonnet	pronouns,about	isaiah/50	jeremiah/11	Isaiah 50 – Jeremiah 11	review-facts:* review-links:*
+pronouns-028	pronouns	sonnet	pronouns,about	jeremiah/12	jeremiah/34	Jeremiah 12–34	review-facts:* review-links:*
+pronouns-029	pronouns	sonnet	pronouns,about	jeremiah/35	jeremiah/52	Jeremiah 35–52	review-facts:* review-links:*
+pronouns-030	pronouns	sonnet	pronouns,about	lamentations/1	ezekiel/20	Lamentations 1 – Ezekiel 20	review-facts:* review-links:*
+pronouns-031	pronouns	sonnet	pronouns,about	ezekiel/21	ezekiel/40	Ezekiel 21–40	review-facts:* review-links:*
+pronouns-032	pronouns	sonnet	pronouns,about	ezekiel/41	daniel/12	Ezekiel 41 – Daniel 12	review-facts:* review-links:*
+pronouns-033	pronouns	sonnet	pronouns,about	hosea/1	micah/7	Hosea 1 – Micah 7	review-facts:* review-links:*
+pronouns-034	pronouns	sonnet	pronouns,about	nahum/1	matthew/7	Nahum 1 – Matthew 7	review-facts:* review-links:*
+pronouns-035	pronouns	sonnet	pronouns,about	matthew/8	matthew/26	Matthew 8–26	review-facts:* review-links:*
+pronouns-036	pronouns	sonnet	pronouns,about	matthew/27	mark/16	Matthew 27 – Mark 16	review-facts:* review-links:*
+pronouns-037	pronouns	sonnet	pronouns,about	luke/1	luke/16	Luke 1–16	review-facts:* review-links:*
+pronouns-038	pronouns	sonnet	pronouns,about	luke/17	john/9	Luke 17 – John 9	review-facts:* review-links:*
+pronouns-039	pronouns	sonnet	pronouns,about	john/10	acts/8	John 10 – Acts 8	review-facts:* review-links:*
+pronouns-040	pronouns	sonnet	pronouns,about	acts/9	acts/28	Acts 9–28	review-facts:* review-links:*
+pronouns-041	pronouns	sonnet	pronouns,about	romans/1	1-corinthians/15	Romans 1 – 1 Corinthians 15	review-facts:* review-links:*
+pronouns-042	pronouns	sonnet	pronouns,about	1-corinthians/16	philippians/4	1 Corinthians 16 – Philippians 4	review-facts:* review-links:*
+pronouns-043	pronouns	sonnet	pronouns,about	colossians/1	hebrews/13	Colossians 1 – Hebrews 13	review-facts:* review-links:*
+pronouns-044	pronouns	sonnet	pronouns,about	james/1	revelation/22	James 1 – Revelation 22	review-facts:* review-links:*
+pronouns-045	pronouns	sonnet	pronouns,about	title-page/1	1-nephi/16	Title Page 1 – 1 Nephi 16	review-facts:* review-links:*
+pronouns-046	pronouns	sonnet	pronouns,about	1-nephi/17	2-nephi/9	1 Nephi 17 – 2 Nephi 9	review-facts:* review-links:*
+pronouns-047	pronouns	sonnet	pronouns,about	2-nephi/10	2-nephi/33	2 Nephi 10–33	review-facts:* review-links:*
+pronouns-048	pronouns	sonnet	pronouns,about	jacob/1	mosiah/4	Jacob 1 – Mosiah 4	review-facts:* review-links:*
+pronouns-049	pronouns	sonnet	pronouns,about	mosiah/5	mosiah/23	Mosiah 5–23	review-facts:* review-links:*
+pronouns-050	pronouns	sonnet	pronouns,about	mosiah/24	alma/8	Mosiah 24 – Alma 8	review-facts:* review-links:*
+pronouns-051	pronouns	sonnet	pronouns,about	alma/9	alma/21	Alma 9–21	review-facts:* review-links:*
+pronouns-052	pronouns	sonnet	pronouns,about	alma/22	alma/35	Alma 22–35	review-facts:* review-links:*
+pronouns-053	pronouns	sonnet	pronouns,about	alma/36	alma/50	Alma 36–50	review-facts:* review-links:*
+pronouns-054	pronouns	sonnet	pronouns,about	alma/51	alma/63	Alma 51–63	review-facts:* review-links:*
+pronouns-055	pronouns	sonnet	pronouns,about	helaman/1	helaman/14	Helaman 1–14	review-facts:* review-links:*
+pronouns-056	pronouns	sonnet	pronouns,about	helaman/15	3-nephi/16	Helaman 15 – 3 Nephi 16	review-facts:* review-links:*
+pronouns-057	pronouns	sonnet	pronouns,about	3-nephi/17	mormon/5	3 Nephi 17 – Mormon 5	review-facts:* review-links:*
+pronouns-058	pronouns	sonnet	pronouns,about	mormon/6	moroni/10	Mormon 6 – Moroni 10	review-facts:* review-links:*
+pronouns-059	pronouns	sonnet	pronouns,about	doctrine-and-covenants/1	doctrine-and-covenants/29	D&C 1–29	review-facts:* review-links:*
+pronouns-060	pronouns	sonnet	pronouns,about	doctrine-and-covenants/30	doctrine-and-covenants/58	D&C 30–58	review-facts:* review-links:*
+pronouns-061	pronouns	sonnet	pronouns,about	doctrine-and-covenants/59	doctrine-and-covenants/84	D&C 59–84	review-facts:* review-links:*
+pronouns-062	pronouns	sonnet	pronouns,about	doctrine-and-covenants/85	doctrine-and-covenants/104	D&C 85–104	review-facts:* review-links:*
+pronouns-063	pronouns	sonnet	pronouns,about	doctrine-and-covenants/105	doctrine-and-covenants/124	D&C 105–124	review-facts:* review-links:*
+pronouns-064	pronouns	sonnet	pronouns,about	doctrine-and-covenants/125	doctrine-and-covenants/138	D&C 125–138	review-facts:* review-links:*
+pronouns-065	pronouns	sonnet	pronouns,about	moses/1	articles-of-faith/1	Moses 1 – Articles of Faith 1	review-facts:* review-links:*
+review-pronouns-1	pronouns	opus	pronouns,about	genesis/1	job/30	Genesis 1 – Job 30	pronouns:*
+review-pronouns-2	pronouns	opus	pronouns,about	job/31	acts/28	Job 31 – Acts 28	pronouns:*
+review-pronouns-3	pronouns	opus	pronouns,about	romans/1	doctrine-and-covenants/58	Romans 1 – D&C 58	pronouns:*
+review-pronouns-4	pronouns	opus	pronouns,about	doctrine-and-covenants/59	articles-of-faith/1	D&C 59 – Articles of Faith 1	pronouns:*
+headwords-001	headwords	sonnet	headwords	genesis/1	joshua/23	Genesis 1 – Joshua 23	review-pronouns:*
+headwords-002	headwords	sonnet	headwords	judges/1	2-chronicles/36	Judges 1 – 2 Chronicles 36	review-pronouns:*
+headwords-003	headwords	sonnet	headwords	ezra/2	song-of-solomon/8	Ezra 2 – Song of Solomon 8	review-pronouns:*
+headwords-004	headwords	sonnet	headwords	isaiah/1	ezekiel/48	Isaiah 1 – Ezekiel 48	review-pronouns:*
+headwords-005	headwords	sonnet	headwords	daniel/1	john/21	Daniel 1 – John 21	review-pronouns:*
+headwords-006	headwords	sonnet	headwords	acts/1	revelation/22	Acts 1 – Revelation 22	review-pronouns:*
+headwords-007	headwords	sonnet	headwords	1-nephi/1	moroni/10	1 Nephi 1 – Moroni 10	review-pronouns:*
+headwords-008	headwords	sonnet	headwords	doctrine-and-covenants/1	doctrine-and-covenants/138	D&C 1–138	review-pronouns:*
+headwords-009	headwords	sonnet	headwords	moses/1	articles-of-faith/1	Moses 1 – Articles of Faith 1	review-pronouns:*
+review-headwords-1	headwords	opus	headwords	genesis/1	articles-of-faith/1	Genesis 1 – Articles of Faith 1	headwords:*
+meanings-001	meanings	opus	meanings	en/1	en/abyss	en/1 – en/abyss	review-headwords:*
+meanings-002	meanings	opus	meanings	en/accept	en/adversity	en/accept – en/adversity	review-headwords:*
+meanings-003	meanings	opus	meanings	en/advertise	en/allow	en/advertise – en/allow	review-headwords:*
+meanings-004	meanings	opus	meanings	en/allowance	en/anointing	en/allowance – en/anointing	review-headwords:*
+meanings-005	meanings	opus	meanings	en/anon	en/army	en/anon – en/army	review-headwords:*
+meanings-006	meanings	opus	meanings	en/arouse	en/attempt	en/arouse – en/attempt	review-headwords:*
+meanings-007	meanings	opus	meanings	en/attend	en/bank	en/attend – en/bank	review-headwords:*
+meanings-008	meanings	opus	meanings	en/banner	en/beetle	en/banner – en/beetle	review-headwords:*
+meanings-009	meanings	opus	meanings	en/befall	en/betray	en/befall – en/betray	review-headwords:*
+meanings-010	meanings	opus	meanings	en/betrayer	en/blot	en/betrayer – en/blot	review-headwords:*
+meanings-011	meanings	opus	meanings	en/blow	en/box	en/blow – en/box	review-headwords:*
+meanings-012	meanings	opus	meanings	en/boy	en/brotherly	en/boy – en/brotherly	review-headwords:*
+meanings-013	meanings	opus	meanings	en/brow	en/camel	en/brow – en/camel	review-headwords:*
+meanings-014	meanings	opus	meanings	en/camp	en/cease	en/camp – en/cease	review-headwords:*
+meanings-015	meanings	opus	meanings	en/ceaseless	en/cheek	en/ceaseless – en/cheek	review-headwords:*
+meanings-016	meanings	opus	meanings	en/cheer	en/cleanness	en/cheer – en/cleanness	review-headwords:*
+meanings-017	meanings	opus	meanings	en/cleanse	en/comfortless	en/cleanse – en/comfortless	review-headwords:*
+meanings-018	meanings	opus	meanings	en/coming	en/condemnation	en/coming – en/condemnation	review-headwords:*
+meanings-019	meanings	opus	meanings	en/condescend	en/consume	en/condescend – en/consume	review-headwords:*
+meanings-020	meanings	opus	meanings	en/consummation	en/corrupt	en/consummation – en/corrupt	review-headwords:*
+meanings-021	meanings	opus	meanings	en/corrupter	en/creation	en/corrupter – en/creation	review-headwords:*
+meanings-022	meanings	opus	meanings	en/creator	en/daily	en/creator – en/daily	review-headwords:*
+meanings-023	meanings	opus	meanings	en/dainty	en/deceiver	en/dainty – en/deceiver	review-headwords:*
+meanings-024	meanings	opus	meanings	en/deceiving	en/depart	en/deceiving – en/depart	review-headwords:*
+meanings-025	meanings	opus	meanings	en/departure	en/devour	en/departure – en/devour	review-headwords:*
+meanings-026	meanings	opus	meanings	en/devourer	en/dishonour	en/devourer – en/dishonour	review-headwords:*
+meanings-027	meanings	opus	meanings	en/disinherit	en/doing	en/disinherit – en/doing	review-headwords:*
+meanings-028	meanings	opus	meanings	en/doleful	en/dung	en/doleful – en/dung	review-headwords:*
+meanings-029	meanings	opus	meanings	en/dungeon	en/eight	en/dungeon – en/eight	review-headwords:*
+meanings-030	meanings	opus	meanings	en/eighteen	en/engrave	en/eighteen – en/engrave	review-headwords:*
+meanings-031	meanings	opus	meanings	en/engraver	en/establish	en/engraver – en/establish	review-headwords:*
+meanings-032	meanings	opus	meanings	en/establishment	en/excommunicate	en/establishment – en/excommunicate	review-headwords:*
+meanings-033	meanings	opus	meanings	en/excusable	en/fair	en/excusable – en/fair	review-headwords:*
+meanings-034	meanings	opus	meanings	en/faith	en/feast	en/faith – en/feast	review-headwords:*
+meanings-035	meanings	opus	meanings	en/feasting	en/filthiness	en/feasting – en/filthiness	review-headwords:*
+meanings-036	meanings	opus	meanings	en/filthy	en/flight	en/filthy – en/flight	review-headwords:*
+meanings-037	meanings	opus	meanings	en/flint	en/foresee	en/flint – en/foresee	review-headwords:*
+meanings-038	meanings	opus	meanings	en/foreshadow	en/fourth	en/foreshadow – en/fourth	review-headwords:*
+meanings-039	meanings	opus	meanings	en/fowl	en/fury	en/fowl – en/fury	review-headwords:*
+meanings-040	meanings	opus	meanings	en/future	en/gladness	en/future – en/gladness	review-headwords:*
+meanings-041	meanings	opus	meanings	en/glance	en/grain	en/glance – en/grain	review-headwords:*
+meanings-042	meanings	opus	meanings	en/grand	en/guile	en/grand – en/guile	review-headwords:*
+meanings-043	meanings	opus	meanings	en/guilt	en/harp	en/guilt – en/harp	review-headwords:*
+meanings-044	meanings	opus	meanings	en/harper	en/heavenly	en/harper – en/heavenly	review-headwords:*
+meanings-045	meanings	opus	meanings	en/heavily	en/hill	en/heavily – en/hill	review-headwords:*
+meanings-046	meanings	opus	meanings	en/hilt	en/horseman	en/hilt – en/horseman	review-headwords:*
+meanings-047	meanings	opus	meanings	en/hosanna	en/ignorance	en/hosanna – en/ignorance	review-headwords:*
+meanings-048	meanings	opus	meanings	en/ignorant	en/individually	en/ignorant – en/individually	review-headwords:*
+meanings-049	meanings	opus	meanings	en/indolence	en/instruction	en/indolence – en/instruction	review-headwords:*
+meanings-050	meanings	opus	meanings	en/instructor	en/join	en/instructor – en/join	review-headwords:*
+meanings-051	meanings	opus	meanings	en/joining	en/kinsfolk	en/joining – en/kinsfolk	review-headwords:*
+meanings-052	meanings	opus	meanings	en/kinsman	en/lasting	en/kinsman – en/lasting	review-headwords:*
+meanings-053	meanings	opus	meanings	en/latchet	en/leper	en/latchet – en/leper	review-headwords:*
+meanings-054	meanings	opus	meanings	en/leprosy	en/lip	en/leprosy – en/lip	review-headwords:*
+meanings-055	meanings	opus	meanings	en/liquor	en/loving	en/liquor – en/loving	review-headwords:*
+meanings-056	meanings	opus	meanings	en/lovingkindness	en/mankind	en/lovingkindness – en/mankind	review-headwords:*
+meanings-057	meanings	opus	meanings	en/manna	en/meek	en/manna – en/meek	review-headwords:*
+meanings-058	meanings	opus	meanings	en/meekness	en/millet	en/meekness – en/millet	review-headwords:*
+meanings-059	meanings	opus	meanings	en/million	en/more	en/million – en/more	review-headwords:*
+meanings-060	meanings	opus	meanings	en/moreover	en/musician	en/moreover – en/musician	review-headwords:*
+meanings-061	meanings	opus	meanings	en/musick	en/neighbour	en/musick – en/neighbour	review-headwords:*
+meanings-062	meanings	opus	meanings	en/neighing	en/now	en/neighing – en/now	review-headwords:*
+meanings-063	meanings	opus	meanings	en/nowhere	en/often	en/nowhere – en/often	review-headwords:*
+meanings-064	meanings	opus	meanings	en/oftener	en/otherwise	en/oftener – en/otherwise	review-headwords:*
+meanings-065	meanings	opus	meanings	en/ouch	en/pant	en/ouch – en/pant	review-headwords:*
+meanings-066	meanings	opus	meanings	en/pap	en/peep	en/pap – en/peep	review-headwords:*
+meanings-067	meanings	opus	meanings	en/pelican	en/physical	en/pelican – en/physical	review-headwords:*
+meanings-068	meanings	opus	meanings	en/physician	en/pleasure	en/physician – en/pleasure	review-headwords:*
+meanings-069	meanings	opus	meanings	en/pledge	en/potters	en/pledge – en/potters	review-headwords:*
+meanings-070	meanings	opus	meanings	en/pound	en/prevail	en/pound – en/prevail	review-headwords:*
+meanings-071	meanings	opus	meanings	en/prevalent	en/prompt	en/prevalent – en/prompt	review-headwords:*
+meanings-072	meanings	opus	meanings	en/promulgate	en/puff	en/promulgate – en/puff	review-headwords:*
+meanings-073	meanings	opus	meanings	en/pull	en/radiance	en/pull – en/radiance	review-headwords:*
+meanings-074	meanings	opus	meanings	en/rafter	en/recall	en/rafter – en/recall	review-headwords:*
+meanings-075	meanings	opus	meanings	en/recede	en/reject	en/recede – en/reject	review-headwords:*
+meanings-076	meanings	opus	meanings	en/rejoice	en/reprove	en/rejoice – en/reprove	review-headwords:*
+meanings-077	meanings	opus	meanings	en/reprover	en/reviling	en/reprover – en/reviling	review-headwords:*
+meanings-078	meanings	opus	meanings	en/revive	en/roebuck	en/revive – en/roebuck	review-headwords:*
+meanings-079	meanings	opus	meanings	en/roll	en/sailing	en/roll – en/sailing	review-headwords:*
+meanings-080	meanings	opus	meanings	en/sailor	en/scene	en/sailor – en/scene	review-headwords:*
+meanings-081	meanings	opus	meanings	en/scent	en/seemly	en/scent – en/seemly	review-headwords:*
+meanings-082	meanings	opus	meanings	en/seer	en/shadow	en/seer – en/shadow	review-headwords:*
+meanings-083	meanings	opus	meanings	en/shady	en/shore	en/shady – en/shore	review-headwords:*
+meanings-084	meanings	opus	meanings	en/short	en/sing	en/short – en/sing	review-headwords:*
+meanings-085	meanings	opus	meanings	en/singer	en/sluice	en/singer – en/sluice	review-headwords:*
+meanings-086	meanings	opus	meanings	en/slumber	en/song	en/slumber – en/song	review-headwords:*
+meanings-087	meanings	opus	meanings	en/soon	en/spice	en/soon – en/spice	review-headwords:*
+meanings-088	meanings	opus	meanings	en/spicery	en/state	en/spicery – en/state	review-headwords:*
+meanings-089	meanings	opus	meanings	en/stately	en/straight	en/stately – en/straight	review-headwords:*
+meanings-090	meanings	opus	meanings	en/straightway	en/subdue	en/straightway – en/subdue	review-headwords:*
+meanings-091	meanings	opus	meanings	en/subject	en/suppress	en/subject – en/suppress	review-headwords:*
+meanings-092	meanings	opus	meanings	en/supreme	en/talk	en/supreme – en/talk	review-headwords:*
+meanings-093	meanings	opus	meanings	en/talker	en/terribleness	en/talker – en/terribleness	review-headwords:*
+meanings-094	meanings	opus	meanings	en/terribly	en/thirtieth	en/terribly – en/thirtieth	review-headwords:*
+meanings-095	meanings	opus	meanings	en/thirty	en/tithe	en/thirty – en/tithe	review-headwords:*
+meanings-096	meanings	opus	meanings	en/tithing	en/transpire	en/tithing – en/transpire	review-headwords:*
+meanings-097	meanings	opus	meanings	en/trap	en/try	en/trap – en/try	review-headwords:*
+meanings-098	meanings	opus	meanings	en/tumble	en/understand	en/tumble – en/understand	review-headwords:*
+meanings-099	meanings	opus	meanings	en/understanding	en/uppermost	en/understanding – en/uppermost	review-headwords:*
+meanings-100	meanings	opus	meanings	en/upright	en/verse	en/upright – en/verse	review-headwords:*
+meanings-101	meanings	opus	meanings	en/very	en/wage	en/very – en/wage	review-headwords:*
+meanings-102	meanings	opus	meanings	en/wagon	en/weaken	en/wagon – en/weaken	review-headwords:*
+meanings-103	meanings	opus	meanings	en/weakness	en/whiteness	en/weakness – en/whiteness	review-headwords:*
+meanings-104	meanings	opus	meanings	en/whithersoever	en/wisely	en/whithersoever – en/wisely	review-headwords:*
+meanings-105	meanings	opus	meanings	en/wish	en/worth	en/wish – en/worth	review-headwords:*
+meanings-106	meanings	opus	meanings	en/worthily	en/ב	en/worthily – en/ב	review-headwords:*
+meanings-107	meanings	opus	meanings	hbo/H0001	hbo/H0233	hbo/H0001 – hbo/H0233	review-headwords:*
+meanings-108	meanings	opus	meanings	arc/H0236	hbo/H0408-2	arc/H0236 – hbo/H0408-2	review-headwords:*
+meanings-109	meanings	opus	meanings	arc/H0409	hbo/H0656	arc/H0409 – hbo/H0656	review-headwords:*
+meanings-110	meanings	opus	meanings	arc/H0671a	hbo/H0865	arc/H0671a – hbo/H0865	review-headwords:*
+meanings-111	meanings	opus	meanings	arc/H0873	hbo/H1121	arc/H0873 – hbo/H1121	review-headwords:*
+meanings-112	meanings	opus	meanings	hbo/H1129	hbo/H1481-1	hbo/H1129 – hbo/H1481-1	review-headwords:*
+meanings-113	meanings	opus	meanings	hbo/H1481-2	hbo/H2297	hbo/H1481-2 – hbo/H2297	review-headwords:*
+meanings-114	meanings	opus	meanings	arc/H2298	hbo/H3541	arc/H2298 – hbo/H3541	review-headwords:*
+meanings-115	meanings	opus	meanings	arc/H3542	hbo/H4853a	arc/H3542 – hbo/H4853a	review-headwords:*
+meanings-116	meanings	opus	meanings	hbo/H4954	hbo/H6242	hbo/H4954 – hbo/H6242	review-headwords:*
+meanings-117	meanings	opus	meanings	arc/H6243	hbo/H7652a	arc/H6243 – hbo/H7652a	review-headwords:*
+meanings-118	meanings	opus	meanings	arc/H7655	hbo/H8513	arc/H7655 – hbo/H8513	review-headwords:*
+meanings-119	meanings	opus	meanings	arc/H8523	grc/G0070	arc/H8523 – grc/G0070	review-headwords:*
+meanings-120	meanings	opus	meanings	grc/G0071	grc/G0167	grc/G0071 – grc/G0167	review-headwords:*
+meanings-121	meanings	opus	meanings	grc/G0169	grc/G0266	grc/G0169 – grc/G0266	review-headwords:*
+meanings-122	meanings	opus	meanings	grc/G0267	grc/G0373	grc/G0267 – grc/G0373	review-headwords:*
+meanings-123	meanings	opus	meanings	grc/G0374	grc/G0476	grc/G0374 – grc/G0476	review-headwords:*
+meanings-124	meanings	opus	meanings	grc/G0477	grc/G0583	grc/G0477 – grc/G0583	review-headwords:*
+meanings-125	meanings	opus	meanings	grc/G0584	grc/G0674	grc/G0584 – grc/G0674	review-headwords:*
+meanings-126	meanings	opus	meanings	grc/G0676	grc/G0772	grc/G0676 – grc/G0772	review-headwords:*
+meanings-127	meanings	opus	meanings	grc/G0776	grc/G0890	grc/G0776 – grc/G0890	review-headwords:*
+meanings-128	meanings	opus	meanings	grc/G0892	grc/G1005	grc/G0892 – grc/G1005	review-headwords:*
+meanings-129	meanings	opus	meanings	grc/G1006	grc/G1104	grc/G1006 – grc/G1104	review-headwords:*
+meanings-130	meanings	opus	meanings	grc/G1105	grc/G1193	grc/G1105 – grc/G1193	review-headwords:*
+meanings-131	meanings	opus	meanings	grc/G1194	grc/G1284	grc/G1194 – grc/G1284	review-headwords:*
+meanings-132	meanings	opus	meanings	grc/G1285	grc/G1377	grc/G1285 – grc/G1377	review-headwords:*
+meanings-133	meanings	opus	meanings	grc/G1378	grc/G1459	grc/G1378 – grc/G1459	review-headwords:*
+meanings-134	meanings	opus	meanings	grc/G1460	grc/G1550	grc/G1460 – grc/G1550	review-headwords:*
+meanings-135	meanings	opus	meanings	grc/G1551	grc/G1647	grc/G1551 – grc/G1647	review-headwords:*
+meanings-136	meanings	opus	meanings	grc/G1649	grc/G1763	grc/G1649 – grc/G1763	review-headwords:*
+meanings-137	meanings	opus	meanings	grc/G1764	grc/G1859	grc/G1764 – grc/G1859	review-headwords:*
+meanings-138	meanings	opus	meanings	grc/G1860	grc/G1963	grc/G1860 – grc/G1963	review-headwords:*
+meanings-139	meanings	opus	meanings	grc/G1964	grc/G2049	grc/G1964 – grc/G2049	review-headwords:*
+meanings-140	meanings	opus	meanings	grc/G2050	grc/G2119	grc/G2050 – grc/G2119	review-headwords:*
+meanings-141	meanings	opus	meanings	grc/G2120	grc/G2222	grc/G2120 – grc/G2222	review-headwords:*
+meanings-142	meanings	opus	meanings	grc/G2223	grc/G2319	grc/G2223 – grc/G2319	review-headwords:*
+meanings-143	meanings	opus	meanings	grc/G2320	grc/G2417	grc/G2320 – grc/G2417	review-headwords:*
+meanings-144	meanings	opus	meanings	grc/G2418	grc/G2555	grc/G2418 – grc/G2555	review-headwords:*
+meanings-145	meanings	opus	meanings	grc/G2556	grc/G2647	grc/G2556 – grc/G2647	review-headwords:*
+meanings-146	meanings	opus	meanings	grc/G2648	grc/G2750	grc/G2648 – grc/G2750	review-headwords:*
+meanings-147	meanings	opus	meanings	grc/G2751	grc/G2847	grc/G2751 – grc/G2847	review-headwords:*
+meanings-148	meanings	opus	meanings	grc/G2848	grc/G2944-2	grc/G2848 – grc/G2944-2	review-headwords:*
+meanings-149	meanings	opus	meanings	grc/G2945	grc/G3045	grc/G2945 – grc/G3045	review-headwords:*
+meanings-150	meanings	opus	meanings	grc/G3046	grc/G3149	grc/G3046 – grc/G3149	review-headwords:*
+meanings-151	meanings	opus	meanings	grc/G3150	grc/G3353	grc/G3150 – grc/G3353	review-headwords:*
+meanings-152	meanings	opus	meanings	grc/G3354	grc/G3454	grc/G3354 – grc/G3454	review-headwords:*
+meanings-153	meanings	opus	meanings	grc/G3455	grc/G3570	grc/G3455 – grc/G3570	review-headwords:*
+meanings-154	meanings	opus	meanings	grc/G3571	grc/G3663	grc/G3571 – grc/G3663	review-headwords:*
+meanings-155	meanings	opus	meanings	grc/G3664	grc/G3764	grc/G3664 – grc/G3764	review-headwords:*
+meanings-156	meanings	opus	meanings	grc/G3765	grc/G3852	grc/G3765 – grc/G3852	review-headwords:*
+meanings-157	meanings	opus	meanings	grc/G3853	grc/G3945	grc/G3853 – grc/G3945	review-headwords:*
+meanings-158	meanings	opus	meanings	grc/G3946	grc/G4038	grc/G3946 – grc/G4038	review-headwords:*
+meanings-159	meanings	opus	meanings	grc/G4039	grc/G4121	grc/G4039 – grc/G4121	review-headwords:*
+meanings-160	meanings	opus	meanings	grc/G4122	grc/G4198-1	grc/G4122 – grc/G4198-1	review-headwords:*
+meanings-161	meanings	opus	meanings	grc/G4198-2	grc/G4300	grc/G4198-2 – grc/G4300	review-headwords:*
+meanings-162	meanings	opus	meanings	grc/G4301	grc/G4393	grc/G4301 – grc/G4393	review-headwords:*
+meanings-163	meanings	opus	meanings	grc/G4394	grc/G4489	grc/G4394 – grc/G4489	review-headwords:*
+meanings-164	meanings	opus	meanings	grc/G4490	grc/G4633	grc/G4490 – grc/G4633	review-headwords:*
+meanings-165	meanings	opus	meanings	grc/G4634	grc/G4735	grc/G4634 – grc/G4735	review-headwords:*
+meanings-166	meanings	opus	meanings	grc/G4736	grc/G4845	grc/G4736 – grc/G4845	review-headwords:*
+meanings-167	meanings	opus	meanings	grc/G4846	grc/G4951	grc/G4846 – grc/G4951	review-headwords:*
+meanings-168	meanings	opus	meanings	grc/G4952	grc/G5056	grc/G4952 – grc/G5056	review-headwords:*
+meanings-169	meanings	opus	meanings	grc/G5057	grc/G5165	grc/G5057 – grc/G5165	review-headwords:*
+meanings-170	meanings	opus	meanings	grc/G5166	grc/G5274	grc/G5166 – grc/G5274	review-headwords:*
+meanings-171	meanings	opus	meanings	grc/G5275	grc/G5367	grc/G5275 – grc/G5367	review-headwords:*
+meanings-172	meanings	opus	meanings	grc/G5368	grc/G5464	grc/G5368 – grc/G5464	review-headwords:*
+meanings-173	meanings	opus	meanings	grc/G5465	grc/G5561	grc/G5465 – grc/G5561	review-headwords:*
+meanings-174	meanings	opus	meanings	grc/G5562	grc/G5624	grc/G5562 – grc/G5624	review-headwords:*
+review-meanings-1	meanings	opus	meanings	en/1	en/corrupt	en/1 – en/corrupt	meanings:*
+review-meanings-2	meanings	opus	meanings	en/corrupter	en/gladness	en/corrupter – en/gladness	meanings:*
+review-meanings-3	meanings	opus	meanings	en/glance	en/musician	en/glance – en/musician	meanings:*
+review-meanings-4	meanings	opus	meanings	en/musick	en/scene	en/musick – en/scene	meanings:*
+review-meanings-5	meanings	opus	meanings	en/scent	en/verse	en/scent – en/verse	meanings:*
+review-meanings-6	meanings	opus	meanings	en/very	grc/G0167	en/very – grc/G0167	meanings:*
+review-meanings-7	meanings	opus	meanings	grc/G0169	grc/G2119	grc/G0169 – grc/G2119	meanings:*
+review-meanings-8	meanings	opus	meanings	grc/G2120	grc/G4198-1	grc/G2120 – grc/G4198-1	meanings:*
+review-meanings-9	meanings	opus	meanings	grc/G4198-2	grc/G5624	grc/G4198-2 – grc/G5624	meanings:*
+word-meanings-001	word-meanings	sonnet	word-meanings	kjv/genesis/1	kjv/genesis/14	kjv/genesis/1 – kjv/genesis/14	review-meanings:*
+word-meanings-002	word-meanings	sonnet	word-meanings	kjv/genesis/15	kjv/genesis/26	kjv/genesis/15 – kjv/genesis/26	review-meanings:*
+word-meanings-003	word-meanings	sonnet	word-meanings	kjv/genesis/27	kjv/genesis/37	kjv/genesis/27 – kjv/genesis/37	review-meanings:*
+word-meanings-004	word-meanings	sonnet	word-meanings	kjv/genesis/38	kjv/genesis/48	kjv/genesis/38 – kjv/genesis/48	review-meanings:*
+word-meanings-005	word-meanings	sonnet	word-meanings	kjv/genesis/49	kjv/exodus/10	kjv/genesis/49 – kjv/exodus/10	review-meanings:*
+word-meanings-006	word-meanings	sonnet	word-meanings	kjv/exodus/11	kjv/exodus/21	kjv/exodus/11 – kjv/exodus/21	review-meanings:*
+word-meanings-007	word-meanings	sonnet	word-meanings	kjv/exodus/22	kjv/exodus/30	kjv/exodus/22 – kjv/exodus/30	review-meanings:*
+word-meanings-008	word-meanings	sonnet	word-meanings	kjv/exodus/31	kjv/exodus/40	kjv/exodus/31 – kjv/exodus/40	review-meanings:*
+word-meanings-009	word-meanings	sonnet	word-meanings	kjv/leviticus/1	kjv/leviticus/11	kjv/leviticus/1 – kjv/leviticus/11	review-meanings:*
+word-meanings-010	word-meanings	sonnet	word-meanings	kjv/leviticus/12	kjv/leviticus/19	kjv/leviticus/12 – kjv/leviticus/19	review-meanings:*
+word-meanings-011	word-meanings	sonnet	word-meanings	kjv/leviticus/20	kjv/leviticus/27	kjv/leviticus/20 – kjv/leviticus/27	review-meanings:*
+word-meanings-012	word-meanings	sonnet	word-meanings	kjv/numbers/1	kjv/numbers/7	kjv/numbers/1 – kjv/numbers/7	review-meanings:*
+word-meanings-013	word-meanings	sonnet	word-meanings	kjv/numbers/8	kjv/numbers/18	kjv/numbers/8 – kjv/numbers/18	review-meanings:*
+word-meanings-014	word-meanings	sonnet	word-meanings	kjv/numbers/19	kjv/numbers/29	kjv/numbers/19 – kjv/numbers/29	review-meanings:*
+word-meanings-015	word-meanings	sonnet	word-meanings	kjv/numbers/30	kjv/deuteronomy/4	kjv/numbers/30 – kjv/deuteronomy/4	review-meanings:*
+word-meanings-016	word-meanings	sonnet	word-meanings	kjv/deuteronomy/5	kjv/deuteronomy/15	kjv/deuteronomy/5 – kjv/deuteronomy/15	review-meanings:*
+word-meanings-017	word-meanings	sonnet	word-meanings	kjv/deuteronomy/16	kjv/deuteronomy/27	kjv/deuteronomy/16 – kjv/deuteronomy/27	review-meanings:*
+word-meanings-018	word-meanings	sonnet	word-meanings	kjv/deuteronomy/28	kjv/deuteronomy/34	kjv/deuteronomy/28 – kjv/deuteronomy/34	review-meanings:*
+word-meanings-019	word-meanings	sonnet	word-meanings	kjv/joshua/1	kjv/joshua/11	kjv/joshua/1 – kjv/joshua/11	review-meanings:*
+word-meanings-020	word-meanings	sonnet	word-meanings	kjv/joshua/12	kjv/joshua/24	kjv/joshua/12 – kjv/joshua/24	review-meanings:*
+word-meanings-021	word-meanings	sonnet	word-meanings	kjv/judges/1	kjv/judges/11	kjv/judges/1 – kjv/judges/11	review-meanings:*
+word-meanings-022	word-meanings	sonnet	word-meanings	kjv/judges/12	kjv/judges/21	kjv/judges/12 – kjv/judges/21	review-meanings:*
+word-meanings-023	word-meanings	sonnet	word-meanings	kjv/ruth/1	kjv/1-samuel/9	kjv/ruth/1 – kjv/1-samuel/9	review-meanings:*
+word-meanings-024	word-meanings	sonnet	word-meanings	kjv/1-samuel/10	kjv/1-samuel/19	kjv/1-samuel/10 – kjv/1-samuel/19	review-meanings:*
+word-meanings-025	word-meanings	sonnet	word-meanings	kjv/1-samuel/20	kjv/1-samuel/30	kjv/1-samuel/20 – kjv/1-samuel/30	review-meanings:*
+word-meanings-026	word-meanings	sonnet	word-meanings	kjv/1-samuel/31	kjv/2-samuel/12	kjv/1-samuel/31 – kjv/2-samuel/12	review-meanings:*
+word-meanings-027	word-meanings	sonnet	word-meanings	kjv/2-samuel/13	kjv/2-samuel/21	kjv/2-samuel/13 – kjv/2-samuel/21	review-meanings:*
+word-meanings-028	word-meanings	sonnet	word-meanings	kjv/2-samuel/22	kjv/1-kings/6	kjv/2-samuel/22 – kjv/1-kings/6	review-meanings:*
+word-meanings-029	word-meanings	sonnet	word-meanings	kjv/1-kings/7	kjv/1-kings/13	kjv/1-kings/7 – kjv/1-kings/13	review-meanings:*
+word-meanings-030	word-meanings	sonnet	word-meanings	kjv/1-kings/14	kjv/1-kings/22	kjv/1-kings/14 – kjv/1-kings/22	review-meanings:*
+word-meanings-031	word-meanings	sonnet	word-meanings	kjv/2-kings/1	kjv/2-kings/10	kjv/2-kings/1 – kjv/2-kings/10	review-meanings:*
+word-meanings-032	word-meanings	sonnet	word-meanings	kjv/2-kings/11	kjv/2-kings/21	kjv/2-kings/11 – kjv/2-kings/21	review-meanings:*
+word-meanings-033	word-meanings	sonnet	word-meanings	kjv/2-kings/22	kjv/1-chronicles/10	kjv/2-kings/22 – kjv/1-chronicles/10	review-meanings:*
+word-meanings-034	word-meanings	sonnet	word-meanings	kjv/1-chronicles/11	kjv/1-chronicles/25	kjv/1-chronicles/11 – kjv/1-chronicles/25	review-meanings:*
+word-meanings-035	word-meanings	sonnet	word-meanings	kjv/1-chronicles/26	kjv/2-chronicles/7	kjv/1-chronicles/26 – kjv/2-chronicles/7	review-meanings:*
+word-meanings-036	word-meanings	sonnet	word-meanings	kjv/2-chronicles/8	kjv/2-chronicles/22	kjv/2-chronicles/8 – kjv/2-chronicles/22	review-meanings:*
+word-meanings-037	word-meanings	sonnet	word-meanings	kjv/2-chronicles/23	kjv/2-chronicles/33	kjv/2-chronicles/23 – kjv/2-chronicles/33	review-meanings:*
+word-meanings-038	word-meanings	sonnet	word-meanings	kjv/2-chronicles/34	kjv/ezra/9	kjv/2-chronicles/34 – kjv/ezra/9	review-meanings:*
+word-meanings-039	word-meanings	sonnet	word-meanings	kjv/ezra/10	kjv/nehemiah/11	kjv/ezra/10 – kjv/nehemiah/11	review-meanings:*
+word-meanings-040	word-meanings	sonnet	word-meanings	kjv/nehemiah/12	kjv/esther/10	kjv/nehemiah/12 – kjv/esther/10	review-meanings:*
+word-meanings-041	word-meanings	sonnet	word-meanings	kjv/job/1	kjv/job/18	kjv/job/1 – kjv/job/18	review-meanings:*
+word-meanings-042	word-meanings	sonnet	word-meanings	kjv/job/19	kjv/job/36	kjv/job/19 – kjv/job/36	review-meanings:*
+word-meanings-043	word-meanings	sonnet	word-meanings	kjv/job/37	kjv/psalms/18	kjv/job/37 – kjv/psalms/18	review-meanings:*
+word-meanings-044	word-meanings	sonnet	word-meanings	kjv/psalms/19	kjv/psalms/41	kjv/psalms/19 – kjv/psalms/41	review-meanings:*
+word-meanings-045	word-meanings	sonnet	word-meanings	kjv/psalms/42	kjv/psalms/68	kjv/psalms/42 – kjv/psalms/68	review-meanings:*
+word-meanings-046	word-meanings	sonnet	word-meanings	kjv/psalms/69	kjv/psalms/89	kjv/psalms/69 – kjv/psalms/89	review-meanings:*
+word-meanings-047	word-meanings	sonnet	word-meanings	kjv/psalms/90	kjv/psalms/112	kjv/psalms/90 – kjv/psalms/112	review-meanings:*
+word-meanings-048	word-meanings	sonnet	word-meanings	kjv/psalms/113	kjv/psalms/140	kjv/psalms/113 – kjv/psalms/140	review-meanings:*
+word-meanings-049	word-meanings	sonnet	word-meanings	kjv/psalms/141	kjv/proverbs/11	kjv/psalms/141 – kjv/proverbs/11	review-meanings:*
+word-meanings-050	word-meanings	sonnet	word-meanings	kjv/proverbs/12	kjv/proverbs/25	kjv/proverbs/12 – kjv/proverbs/25	review-meanings:*
+word-meanings-051	word-meanings	sonnet	word-meanings	kjv/proverbs/26	kjv/ecclesiastes/9	kjv/proverbs/26 – kjv/ecclesiastes/9	review-meanings:*
+word-meanings-052	word-meanings	sonnet	word-meanings	kjv/ecclesiastes/10	kjv/isaiah/7	kjv/ecclesiastes/10 – kjv/isaiah/7	review-meanings:*
+word-meanings-053	word-meanings	sonnet	word-meanings	kjv/isaiah/8	kjv/isaiah/23	kjv/isaiah/8 – kjv/isaiah/23	review-meanings:*
+word-meanings-054	word-meanings	sonnet	word-meanings	kjv/isaiah/24	kjv/isaiah/36	kjv/isaiah/24 – kjv/isaiah/36	review-meanings:*
+word-meanings-055	word-meanings	sonnet	word-meanings	kjv/isaiah/37	kjv/isaiah/48	kjv/isaiah/37 – kjv/isaiah/48	review-meanings:*
+word-meanings-056	word-meanings	sonnet	word-meanings	kjv/isaiah/49	kjv/isaiah/63	kjv/isaiah/49 – kjv/isaiah/63	review-meanings:*
+word-meanings-057	word-meanings	sonnet	word-meanings	kjv/isaiah/64	kjv/jeremiah/7	kjv/isaiah/64 – kjv/jeremiah/7	review-meanings:*
+word-meanings-058	word-meanings	sonnet	word-meanings	kjv/jeremiah/8	kjv/jeremiah/19	kjv/jeremiah/8 – kjv/jeremiah/19	review-meanings:*
+word-meanings-059	word-meanings	sonnet	word-meanings	kjv/jeremiah/20	kjv/jeremiah/30	kjv/jeremiah/20 – kjv/jeremiah/30	review-meanings:*
+word-meanings-060	word-meanings	sonnet	word-meanings	kjv/jeremiah/31	kjv/jeremiah/40	kjv/jeremiah/31 – kjv/jeremiah/40	review-meanings:*
+word-meanings-061	word-meanings	sonnet	word-meanings	kjv/jeremiah/41	kjv/jeremiah/51	kjv/jeremiah/41 – kjv/jeremiah/51	review-meanings:*
+word-meanings-062	word-meanings	sonnet	word-meanings	kjv/jeremiah/52	kjv/ezekiel/6	kjv/jeremiah/52 – kjv/ezekiel/6	review-meanings:*
+word-meanings-063	word-meanings	sonnet	word-meanings	kjv/ezekiel/7	kjv/ezekiel/17	kjv/ezekiel/7 – kjv/ezekiel/17	review-meanings:*
+word-meanings-064	word-meanings	sonnet	word-meanings	kjv/ezekiel/18	kjv/ezekiel/26	kjv/ezekiel/18 – kjv/ezekiel/26	review-meanings:*
+word-meanings-065	word-meanings	sonnet	word-meanings	kjv/ezekiel/27	kjv/ezekiel/36	kjv/ezekiel/27 – kjv/ezekiel/36	review-meanings:*
+word-meanings-066	word-meanings	sonnet	word-meanings	kjv/ezekiel/37	kjv/ezekiel/45	kjv/ezekiel/37 – kjv/ezekiel/45	review-meanings:*
+word-meanings-067	word-meanings	sonnet	word-meanings	kjv/ezekiel/46	kjv/daniel/5	kjv/ezekiel/46 – kjv/daniel/5	review-meanings:*
+word-meanings-068	word-meanings	sonnet	word-meanings	kjv/daniel/6	kjv/daniel/12	kjv/daniel/6 – kjv/daniel/12	review-meanings:*
+word-meanings-069	word-meanings	sonnet	word-meanings	kjv/hosea/1	kjv/joel/3	kjv/hosea/1 – kjv/joel/3	review-meanings:*
+word-meanings-070	word-meanings	sonnet	word-meanings	kjv/amos/1	kjv/micah/4	kjv/amos/1 – kjv/micah/4	review-meanings:*
+word-meanings-071	word-meanings	sonnet	word-meanings	kjv/micah/5	kjv/haggai/2	kjv/micah/5 – kjv/haggai/2	review-meanings:*
+word-meanings-072	word-meanings	sonnet	word-meanings	kjv/zechariah/1	kjv/zechariah/14	kjv/zechariah/1 – kjv/zechariah/14	review-meanings:*
+word-meanings-073	word-meanings	sonnet	word-meanings	kjv/malachi/1	kjv/matthew/9	kjv/malachi/1 – kjv/matthew/9	review-meanings:*
+word-meanings-074	word-meanings	sonnet	word-meanings	kjv/matthew/10	kjv/matthew/19	kjv/matthew/10 – kjv/matthew/19	review-meanings:*
+word-meanings-075	word-meanings	sonnet	word-meanings	kjv/matthew/20	kjv/matthew/27	kjv/matthew/20 – kjv/matthew/27	review-meanings:*
+word-meanings-076	word-meanings	sonnet	word-meanings	kjv/matthew/28	kjv/mark/9	kjv/matthew/28 – kjv/mark/9	review-meanings:*
+word-meanings-077	word-meanings	sonnet	word-meanings	kjv/mark/10	kjv/mark/16	kjv/mark/10 – kjv/mark/16	review-meanings:*
+word-meanings-078	word-meanings	sonnet	word-meanings	kjv/luke/1	kjv/luke/8	kjv/luke/1 – kjv/luke/8	review-meanings:*
+word-meanings-079	word-meanings	sonnet	word-meanings	kjv/luke/9	kjv/luke/16	kjv/luke/9 – kjv/luke/16	review-meanings:*
+word-meanings-080	word-meanings	sonnet	word-meanings	kjv/luke/17	kjv/luke/24	kjv/luke/17 – kjv/luke/24	review-meanings:*
+word-meanings-081	word-meanings	sonnet	word-meanings	kjv/john/1	kjv/john/9	kjv/john/1 – kjv/john/9	review-meanings:*
+word-meanings-082	word-meanings	sonnet	word-meanings	kjv/john/10	kjv/john/19	kjv/john/10 – kjv/john/19	review-meanings:*
+word-meanings-083	word-meanings	sonnet	word-meanings	kjv/john/20	kjv/acts/8	kjv/john/20 – kjv/acts/8	review-meanings:*
+word-meanings-084	word-meanings	sonnet	word-meanings	kjv/acts/9	kjv/acts/18	kjv/acts/9 – kjv/acts/18	review-meanings:*
+word-meanings-085	word-meanings	sonnet	word-meanings	kjv/acts/19	kjv/acts/28	kjv/acts/19 – kjv/acts/28	review-meanings:*
+word-meanings-086	word-meanings	sonnet	word-meanings	kjv/romans/1	kjv/romans/13	kjv/romans/1 – kjv/romans/13	review-meanings:*
+word-meanings-087	word-meanings	sonnet	word-meanings	kjv/romans/14	kjv/1-corinthians/11	kjv/romans/14 – kjv/1-corinthians/11	review-meanings:*
+word-meanings-088	word-meanings	sonnet	word-meanings	kjv/1-corinthians/12	kjv/2-corinthians/9	kjv/1-corinthians/12 – kjv/2-corinthians/9	review-meanings:*
+word-meanings-089	word-meanings	sonnet	word-meanings	kjv/2-corinthians/10	kjv/ephesians/5	kjv/2-corinthians/10 – kjv/ephesians/5	review-meanings:*
+word-meanings-090	word-meanings	sonnet	word-meanings	kjv/ephesians/6	kjv/1-thessalonians/5	kjv/ephesians/6 – kjv/1-thessalonians/5	review-meanings:*
+word-meanings-091	word-meanings	sonnet	word-meanings	kjv/2-thessalonians/1	kjv/titus/3	kjv/2-thessalonians/1 – kjv/titus/3	review-meanings:*
+word-meanings-092	word-meanings	sonnet	word-meanings	kjv/philemon/1	kjv/hebrews/13	kjv/philemon/1 – kjv/hebrews/13	review-meanings:*
+word-meanings-093	word-meanings	sonnet	word-meanings	kjv/james/1	kjv/2-peter/3	kjv/james/1 – kjv/2-peter/3	review-meanings:*
+word-meanings-094	word-meanings	sonnet	word-meanings	kjv/1-john/1	kjv/revelation/8	kjv/1-john/1 – kjv/revelation/8	review-meanings:*
+word-meanings-095	word-meanings	sonnet	word-meanings	kjv/revelation/9	kjv/revelation/22	kjv/revelation/9 – kjv/revelation/22	review-meanings:*
+word-meanings-096	word-meanings	sonnet	word-meanings	bom-2013/title-page/1	bom-2013/1-nephi/10	bom-2013/title-page/1 – bom-2013/1-nephi/10	review-meanings:*
+word-meanings-097	word-meanings	sonnet	word-meanings	bom-2013/1-nephi/11	bom-2013/1-nephi/16	bom-2013/1-nephi/11 – bom-2013/1-nephi/16	review-meanings:*
+word-meanings-098	word-meanings	sonnet	word-meanings	bom-2013/1-nephi/17	bom-2013/1-nephi/22	bom-2013/1-nephi/17 – bom-2013/1-nephi/22	review-meanings:*
+word-meanings-099	word-meanings	sonnet	word-meanings	bom-2013/2-nephi/1	bom-2013/2-nephi/8	bom-2013/2-nephi/1 – bom-2013/2-nephi/8	review-meanings:*
+word-meanings-100	word-meanings	sonnet	word-meanings	bom-2013/2-nephi/9	bom-2013/2-nephi/19	bom-2013/2-nephi/9 – bom-2013/2-nephi/19	review-meanings:*
+word-meanings-101	word-meanings	sonnet	word-meanings	bom-2013/2-nephi/20	bom-2013/2-nephi/28	bom-2013/2-nephi/20 – bom-2013/2-nephi/28	review-meanings:*
+word-meanings-102	word-meanings	sonnet	word-meanings	bom-2013/2-nephi/29	bom-2013/jacob/5	bom-2013/2-nephi/29 – bom-2013/jacob/5	review-meanings:*
+word-meanings-103	word-meanings	sonnet	word-meanings	bom-2013/jacob/6	bom-2013/mosiah/2	bom-2013/jacob/6 – bom-2013/mosiah/2	review-meanings:*
+word-meanings-104	word-meanings	sonnet	word-meanings	bom-2013/mosiah/3	bom-2013/mosiah/10	bom-2013/mosiah/3 – bom-2013/mosiah/10	review-meanings:*
+word-meanings-105	word-meanings	sonnet	word-meanings	bom-2013/mosiah/11	bom-2013/mosiah/19	bom-2013/mosiah/11 – bom-2013/mosiah/19	review-meanings:*
+word-meanings-106	word-meanings	sonnet	word-meanings	bom-2013/mosiah/20	bom-2013/mosiah/27	bom-2013/mosiah/20 – bom-2013/mosiah/27	review-meanings:*
+word-meanings-107	word-meanings	sonnet	word-meanings	bom-2013/mosiah/28	bom-2013/alma/5	bom-2013/mosiah/28 – bom-2013/alma/5	review-meanings:*
+word-meanings-108	word-meanings	sonnet	word-meanings	bom-2013/alma/6	bom-2013/alma/12	bom-2013/alma/6 – bom-2013/alma/12	review-meanings:*
+word-meanings-109	word-meanings	sonnet	word-meanings	bom-2013/alma/13	bom-2013/alma/19	bom-2013/alma/13 – bom-2013/alma/19	review-meanings:*
+word-meanings-110	word-meanings	sonnet	word-meanings	bom-2013/alma/20	bom-2013/alma/26	bom-2013/alma/20 – bom-2013/alma/26	review-meanings:*
+word-meanings-111	word-meanings	sonnet	word-meanings	bom-2013/alma/27	bom-2013/alma/32	bom-2013/alma/27 – bom-2013/alma/32	review-meanings:*
+word-meanings-112	word-meanings	sonnet	word-meanings	bom-2013/alma/33	bom-2013/alma/39	bom-2013/alma/33 – bom-2013/alma/39	review-meanings:*
+word-meanings-113	word-meanings	sonnet	word-meanings	bom-2013/alma/40	bom-2013/alma/46	bom-2013/alma/40 – bom-2013/alma/46	review-meanings:*
+word-meanings-114	word-meanings	sonnet	word-meanings	bom-2013/alma/47	bom-2013/alma/52	bom-2013/alma/47 – bom-2013/alma/52	review-meanings:*
+word-meanings-115	word-meanings	sonnet	word-meanings	bom-2013/alma/53	bom-2013/alma/58	bom-2013/alma/53 – bom-2013/alma/58	review-meanings:*
+word-meanings-116	word-meanings	sonnet	word-meanings	bom-2013/alma/59	bom-2013/helaman/3	bom-2013/alma/59 – bom-2013/helaman/3	review-meanings:*
+word-meanings-117	word-meanings	sonnet	word-meanings	bom-2013/helaman/4	bom-2013/helaman/9	bom-2013/helaman/4 – bom-2013/helaman/9	review-meanings:*
+word-meanings-118	word-meanings	sonnet	word-meanings	bom-2013/helaman/10	bom-2013/helaman/16	bom-2013/helaman/10 – bom-2013/helaman/16	review-meanings:*
+word-meanings-119	word-meanings	sonnet	word-meanings	bom-2013/3-nephi/1	bom-2013/3-nephi/7	bom-2013/3-nephi/1 – bom-2013/3-nephi/7	review-meanings:*
+word-meanings-120	word-meanings	sonnet	word-meanings	bom-2013/3-nephi/8	bom-2013/3-nephi/16	bom-2013/3-nephi/8 – bom-2013/3-nephi/16	review-meanings:*
+word-meanings-121	word-meanings	sonnet	word-meanings	bom-2013/3-nephi/17	bom-2013/3-nephi/26	bom-2013/3-nephi/17 – bom-2013/3-nephi/26	review-meanings:*
+word-meanings-122	word-meanings	sonnet	word-meanings	bom-2013/3-nephi/27	bom-2013/mormon/4	bom-2013/3-nephi/27 – bom-2013/mormon/4	review-meanings:*
+word-meanings-123	word-meanings	sonnet	word-meanings	bom-2013/mormon/5	bom-2013/ether/3	bom-2013/mormon/5 – bom-2013/ether/3	review-meanings:*
+word-meanings-124	word-meanings	sonnet	word-meanings	bom-2013/ether/4	bom-2013/ether/12	bom-2013/ether/4 – bom-2013/ether/12	review-meanings:*
+word-meanings-125	word-meanings	sonnet	word-meanings	bom-2013/ether/13	bom-2013/moroni/10	bom-2013/ether/13 – bom-2013/moroni/10	review-meanings:*
+word-meanings-126	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/1	dc-2013/doctrine-and-covenants/11	dc-2013/doctrine-and-covenants/1 – dc-2013/doctrine-and-covenants/11	review-meanings:*
+word-meanings-127	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/12	dc-2013/doctrine-and-covenants/27	dc-2013/doctrine-and-covenants/12 – dc-2013/doctrine-and-covenants/27	review-meanings:*
+word-meanings-128	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/28	dc-2013/doctrine-and-covenants/42	dc-2013/doctrine-and-covenants/28 – dc-2013/doctrine-and-covenants/42	review-meanings:*
+word-meanings-129	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/43	dc-2013/doctrine-and-covenants/52	dc-2013/doctrine-and-covenants/43 – dc-2013/doctrine-and-covenants/52	review-meanings:*
+word-meanings-130	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/53	dc-2013/doctrine-and-covenants/63	dc-2013/doctrine-and-covenants/53 – dc-2013/doctrine-and-covenants/63	review-meanings:*
+word-meanings-131	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/64	dc-2013/doctrine-and-covenants/76	dc-2013/doctrine-and-covenants/64 – dc-2013/doctrine-and-covenants/76	review-meanings:*
+word-meanings-132	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/77	dc-2013/doctrine-and-covenants/88	dc-2013/doctrine-and-covenants/77 – dc-2013/doctrine-and-covenants/88	review-meanings:*
+word-meanings-133	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/89	dc-2013/doctrine-and-covenants/101	dc-2013/doctrine-and-covenants/89 – dc-2013/doctrine-and-covenants/101	review-meanings:*
+word-meanings-134	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/102	dc-2013/doctrine-and-covenants/107	dc-2013/doctrine-and-covenants/102 – dc-2013/doctrine-and-covenants/107	review-meanings:*
+word-meanings-135	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/108	dc-2013/doctrine-and-covenants/121	dc-2013/doctrine-and-covenants/108 – dc-2013/doctrine-and-covenants/121	review-meanings:*
+word-meanings-136	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/122	dc-2013/doctrine-and-covenants/128	dc-2013/doctrine-and-covenants/122 – dc-2013/doctrine-and-covenants/128	review-meanings:*
+word-meanings-137	word-meanings	sonnet	word-meanings	dc-2013/doctrine-and-covenants/129	dc-2013/doctrine-and-covenants/138	dc-2013/doctrine-and-covenants/129 – dc-2013/doctrine-and-covenants/138	review-meanings:*
+word-meanings-138	word-meanings	sonnet	word-meanings	pgp-2013/moses/1	pgp-2013/moses/7	pgp-2013/moses/1 – pgp-2013/moses/7	review-meanings:*
+word-meanings-139	word-meanings	sonnet	word-meanings	pgp-2013/moses/8	pgp-2013/joseph-smith-matthew/1	pgp-2013/moses/8 – pgp-2013/joseph-smith-matthew/1	review-meanings:*
+word-meanings-140	word-meanings	sonnet	word-meanings	pgp-2013/joseph-smith-history/1	pgp-2013/articles-of-faith/1	pgp-2013/joseph-smith-history/1 – pgp-2013/articles-of-faith/1	review-meanings:*
+word-meanings-141	word-meanings	sonnet	word-meanings	wlc/genesis/1	wlc/genesis/50	wlc/genesis/1 – wlc/genesis/50	review-meanings:*
+word-meanings-142	word-meanings	sonnet	word-meanings	wlc/exodus/1	wlc/leviticus/21	wlc/exodus/1 – wlc/leviticus/21	review-meanings:*
+word-meanings-143	word-meanings	sonnet	word-meanings	wlc/leviticus/22	wlc/numbers/36	wlc/leviticus/22 – wlc/numbers/36	review-meanings:*
+word-meanings-144	word-meanings	sonnet	word-meanings	wlc/deuteronomy/1	wlc/joshua/22	wlc/deuteronomy/1 – wlc/joshua/22	review-meanings:*
+word-meanings-145	word-meanings	sonnet	word-meanings	wlc/joshua/23	wlc/1-samuel/27	wlc/joshua/23 – wlc/1-samuel/27	review-meanings:*
+word-meanings-146	word-meanings	sonnet	word-meanings	wlc/1-samuel/28	wlc/1-kings/20	wlc/1-samuel/28 – wlc/1-kings/20	review-meanings:*
+word-meanings-147	word-meanings	sonnet	word-meanings	wlc/1-kings/21	wlc/1-chronicles/28	wlc/1-kings/21 – wlc/1-chronicles/28	review-meanings:*
+word-meanings-148	word-meanings	sonnet	word-meanings	wlc/1-chronicles/29	wlc/nehemiah/11	wlc/1-chronicles/29 – wlc/nehemiah/11	review-meanings:*
+word-meanings-149	word-meanings	sonnet	word-meanings	wlc/nehemiah/12	wlc/psalms/47	wlc/nehemiah/12 – wlc/psalms/47	review-meanings:*
+word-meanings-150	word-meanings	sonnet	word-meanings	wlc/psalms/48	wlc/psalms/150	wlc/psalms/48 – wlc/psalms/150	review-meanings:*
+word-meanings-151	word-meanings	sonnet	word-meanings	wlc/proverbs/1	wlc/isaiah/38	wlc/proverbs/1 – wlc/isaiah/38	review-meanings:*
+word-meanings-152	word-meanings	sonnet	word-meanings	wlc/isaiah/39	wlc/jeremiah/35	wlc/isaiah/39 – wlc/jeremiah/35	review-meanings:*
+word-meanings-153	word-meanings	sonnet	word-meanings	wlc/jeremiah/36	wlc/ezekiel/38	wlc/jeremiah/36 – wlc/ezekiel/38	review-meanings:*
+word-meanings-154	word-meanings	sonnet	word-meanings	wlc/ezekiel/39	wlc/micah/7	wlc/ezekiel/39 – wlc/micah/7	review-meanings:*
+word-meanings-155	word-meanings	sonnet	word-meanings	wlc/nahum/1	sblgnt/matthew/10	wlc/nahum/1 – sblgnt/matthew/10	review-meanings:*
+word-meanings-156	word-meanings	sonnet	word-meanings	sblgnt/matthew/11	sblgnt/matthew/22	sblgnt/matthew/11 – sblgnt/matthew/22	review-meanings:*
+word-meanings-157	word-meanings	sonnet	word-meanings	sblgnt/matthew/23	sblgnt/mark/5	sblgnt/matthew/23 – sblgnt/mark/5	review-meanings:*
+word-meanings-158	word-meanings	sonnet	word-meanings	sblgnt/mark/6	sblgnt/mark/16	sblgnt/mark/6 – sblgnt/mark/16	review-meanings:*
+word-meanings-159	word-meanings	sonnet	word-meanings	sblgnt/luke/1	sblgnt/luke/9	sblgnt/luke/1 – sblgnt/luke/9	review-meanings:*
+word-meanings-160	word-meanings	sonnet	word-meanings	sblgnt/luke/10	sblgnt/luke/20	sblgnt/luke/10 – sblgnt/luke/20	review-meanings:*
+word-meanings-161	word-meanings	sonnet	word-meanings	sblgnt/luke/21	sblgnt/john/6	sblgnt/luke/21 – sblgnt/john/6	review-meanings:*
+word-meanings-162	word-meanings	sonnet	word-meanings	sblgnt/john/7	sblgnt/john/18	sblgnt/john/7 – sblgnt/john/18	review-meanings:*
+word-meanings-163	word-meanings	sonnet	word-meanings	sblgnt/john/19	sblgnt/acts/9	sblgnt/john/19 – sblgnt/acts/9	review-meanings:*
+word-meanings-164	word-meanings	sonnet	word-meanings	sblgnt/acts/10	sblgnt/acts/21	sblgnt/acts/10 – sblgnt/acts/21	review-meanings:*
+word-meanings-165	word-meanings	sonnet	word-meanings	sblgnt/acts/22	sblgnt/romans/8	sblgnt/acts/22 – sblgnt/romans/8	review-meanings:*
+word-meanings-166	word-meanings	sonnet	word-meanings	sblgnt/romans/9	sblgnt/1-corinthians/11	sblgnt/romans/9 – sblgnt/1-corinthians/11	review-meanings:*
+word-meanings-167	word-meanings	sonnet	word-meanings	sblgnt/1-corinthians/12	sblgnt/2-corinthians/13	sblgnt/1-corinthians/12 – sblgnt/2-corinthians/13	review-meanings:*
+word-meanings-168	word-meanings	sonnet	word-meanings	sblgnt/galatians/1	sblgnt/philippians/4	sblgnt/galatians/1 – sblgnt/philippians/4	review-meanings:*
+word-meanings-169	word-meanings	sonnet	word-meanings	sblgnt/colossians/1	sblgnt/2-timothy/4	sblgnt/colossians/1 – sblgnt/2-timothy/4	review-meanings:*
+word-meanings-170	word-meanings	sonnet	word-meanings	sblgnt/titus/1	sblgnt/hebrews/13	sblgnt/titus/1 – sblgnt/hebrews/13	review-meanings:*
+word-meanings-171	word-meanings	sonnet	word-meanings	sblgnt/james/1	sblgnt/1-john/5	sblgnt/james/1 – sblgnt/1-john/5	review-meanings:*
+word-meanings-172	word-meanings	sonnet	word-meanings	sblgnt/2-john/1	sblgnt/revelation/22	sblgnt/2-john/1 – sblgnt/revelation/22	review-meanings:*
+review-word-meanings-1	word-meanings	opus	word-meanings	kjv/genesis/1	kjv/joshua/24	kjv/genesis/1 – kjv/joshua/24	word-meanings:*
+review-word-meanings-2	word-meanings	opus	word-meanings	kjv/judges/1	kjv/esther/10	kjv/judges/1 – kjv/esther/10	word-meanings:*
+review-word-meanings-3	word-meanings	opus	word-meanings	kjv/job/1	kjv/jeremiah/40	kjv/job/1 – kjv/jeremiah/40	word-meanings:*
+review-word-meanings-4	word-meanings	opus	word-meanings	kjv/jeremiah/41	kjv/luke/24	kjv/jeremiah/41 – kjv/luke/24	word-meanings:*
+review-word-meanings-5	word-meanings	opus	word-meanings	kjv/john/1	bom-2013/2-nephi/19	kjv/john/1 – bom-2013/2-nephi/19	word-meanings:*
+review-word-meanings-6	word-meanings	opus	word-meanings	bom-2013/2-nephi/20	bom-2013/3-nephi/16	bom-2013/2-nephi/20 – bom-2013/3-nephi/16	word-meanings:*
+review-word-meanings-7	word-meanings	opus	word-meanings	bom-2013/3-nephi/17	pgp-2013/articles-of-faith/1	bom-2013/3-nephi/17 – pgp-2013/articles-of-faith/1	word-meanings:*
+review-word-meanings-8	word-meanings	opus	word-meanings	wlc/genesis/1	sblgnt/luke/20	wlc/genesis/1 – sblgnt/luke/20	word-meanings:*
+review-word-meanings-9	word-meanings	opus	word-meanings	sblgnt/luke/21	sblgnt/revelation/22	sblgnt/luke/21 – sblgnt/revelation/22	word-meanings:*
+grammar-001	grammar	sonnet	grammar	genesis/1	genesis/8	Genesis 1–8	review-pronouns:*
+grammar-002	grammar	sonnet	grammar	genesis/9	genesis/18	Genesis 9–18	review-pronouns:*
+grammar-003	grammar	sonnet	grammar	genesis/19	genesis/24	Genesis 19–24	review-pronouns:*
+grammar-004	grammar	sonnet	grammar	genesis/25	genesis/30	Genesis 25–30	review-pronouns:*
+grammar-005	grammar	sonnet	grammar	genesis/31	genesis/36	Genesis 31–36	review-pronouns:*
+grammar-006	grammar	sonnet	grammar	genesis/37	genesis/42	Genesis 37–42	review-pronouns:*
+grammar-007	grammar	sonnet	grammar	genesis/43	genesis/49	Genesis 43–49	review-pronouns:*
+grammar-008	grammar	sonnet	grammar	genesis/50	exodus/7	Genesis 50 – Exodus 7	review-pronouns:*
+grammar-009	grammar	sonnet	grammar	exodus/8	exodus/13	Exodus 8–13	review-pronouns:*
+grammar-010	grammar	sonnet	grammar	exodus/14	exodus/20	Exodus 14–20	review-pronouns:*
+grammar-011	grammar	sonnet	grammar	exodus/21	exodus/27	Exodus 21–27	review-pronouns:*
+grammar-012	grammar	sonnet	grammar	exodus/28	exodus/32	Exodus 28–32	review-pronouns:*
+grammar-013	grammar	sonnet	grammar	exodus/33	exodus/39	Exodus 33–39	review-pronouns:*
+grammar-014	grammar	sonnet	grammar	exodus/40	leviticus/6	Exodus 40 – Leviticus 6	review-pronouns:*
+grammar-015	grammar	sonnet	grammar	leviticus/7	leviticus/13	Leviticus 7–13	review-pronouns:*
+grammar-016	grammar	sonnet	grammar	leviticus/14	leviticus/18	Leviticus 14–18	review-pronouns:*
+grammar-017	grammar	sonnet	grammar	leviticus/19	leviticus/25	Leviticus 19–25	review-pronouns:*
+grammar-018	grammar	sonnet	grammar	leviticus/26	numbers/3	Leviticus 26 – Numbers 3	review-pronouns:*
+grammar-019	grammar	sonnet	grammar	numbers/4	numbers/8	Numbers 4–8	review-pronouns:*
+grammar-020	grammar	sonnet	grammar	numbers/9	numbers/15	Numbers 9–15	review-pronouns:*
+grammar-021	grammar	sonnet	grammar	numbers/16	numbers/21	Numbers 16–21	review-pronouns:*
+grammar-022	grammar	sonnet	grammar	numbers/22	numbers/27	Numbers 22–27	review-pronouns:*
+grammar-023	grammar	sonnet	grammar	numbers/28	numbers/33	Numbers 28–33	review-pronouns:*
+grammar-024	grammar	sonnet	grammar	numbers/34	deuteronomy/3	Numbers 34 – Deuteronomy 3	review-pronouns:*
+grammar-025	grammar	sonnet	grammar	deuteronomy/4	deuteronomy/9	Deuteronomy 4–9	review-pronouns:*
+grammar-026	grammar	sonnet	grammar	deuteronomy/10	deuteronomy/16	Deuteronomy 10–16	review-pronouns:*
+grammar-027	grammar	sonnet	grammar	deuteronomy/17	deuteronomy/24	Deuteronomy 17–24	review-pronouns:*
+grammar-028	grammar	sonnet	grammar	deuteronomy/25	deuteronomy/30	Deuteronomy 25–30	review-pronouns:*
+grammar-029	grammar	sonnet	grammar	deuteronomy/31	joshua/3	Deuteronomy 31 – Joshua 3	review-pronouns:*
+grammar-030	grammar	sonnet	grammar	joshua/4	joshua/9	Joshua 4–9	review-pronouns:*
+grammar-031	grammar	sonnet	grammar	joshua/10	joshua/16	Joshua 10–16	review-pronouns:*
+grammar-032	grammar	sonnet	grammar	joshua/17	joshua/22	Joshua 17–22	review-pronouns:*
+grammar-033	grammar	sonnet	grammar	joshua/23	judges/5	Joshua 23 – Judges 5	review-pronouns:*
+grammar-034	grammar	sonnet	grammar	judges/6	judges/10	Judges 6–10	review-pronouns:*
+grammar-035	grammar	sonnet	grammar	judges/11	judges/17	Judges 11–17	review-pronouns:*
+grammar-036	grammar	sonnet	grammar	judges/18	judges/21	Judges 18–21	review-pronouns:*
+grammar-037	grammar	sonnet	grammar	ruth/1	1-samuel/3	Ruth 1 – 1 Samuel 3	review-pronouns:*
+grammar-038	grammar	sonnet	grammar	1-samuel/4	1-samuel/11	1 Samuel 4–11	review-pronouns:*
+grammar-039	grammar	sonnet	grammar	1-samuel/12	1-samuel/17	1 Samuel 12–17	review-pronouns:*
+grammar-040	grammar	sonnet	grammar	1-samuel/18	1-samuel/24	1 Samuel 18–24	review-pronouns:*
+grammar-041	grammar	sonnet	grammar	1-samuel/25	1-samuel/31	1 Samuel 25–31	review-pronouns:*
+grammar-042	grammar	sonnet	grammar	2-samuel/1	2-samuel/7	2 Samuel 1–7	review-pronouns:*
+grammar-043	grammar	sonnet	grammar	2-samuel/8	2-samuel/14	2 Samuel 8–14	review-pronouns:*
+grammar-044	grammar	sonnet	grammar	2-samuel/15	2-samuel/19	2 Samuel 15–19	review-pronouns:*
+grammar-045	grammar	sonnet	grammar	2-samuel/20	2-samuel/24	2 Samuel 20–24	review-pronouns:*
+grammar-046	grammar	sonnet	grammar	1-kings/1	1-kings/5	1 Kings 1–5	review-pronouns:*
+grammar-047	grammar	sonnet	grammar	1-kings/6	1-kings/9	1 Kings 6–9	review-pronouns:*
+grammar-048	grammar	sonnet	grammar	1-kings/10	1-kings/14	1 Kings 10–14	review-pronouns:*
+grammar-049	grammar	sonnet	grammar	1-kings/15	1-kings/20	1 Kings 15–20	review-pronouns:*
+grammar-050	grammar	sonnet	grammar	1-kings/21	2-kings/4	1 Kings 21 – 2 Kings 4	review-pronouns:*
+grammar-051	grammar	sonnet	grammar	2-kings/5	2-kings/10	2 Kings 5–10	review-pronouns:*
+grammar-052	grammar	sonnet	grammar	2-kings/11	2-kings/17	2 Kings 11–17	review-pronouns:*
+grammar-053	grammar	sonnet	grammar	2-kings/18	2-kings/23	2 Kings 18–23	review-pronouns:*
+grammar-054	grammar	sonnet	grammar	2-kings/24	1-chronicles/6	2 Kings 24 – 1 Chronicles 6	review-pronouns:*
+grammar-055	grammar	sonnet	grammar	1-chronicles/7	1-chronicles/14	1 Chronicles 7–14	review-pronouns:*
+grammar-056	grammar	sonnet	grammar	1-chronicles/15	1-chronicles/22	1 Chronicles 15–22	review-pronouns:*
+grammar-057	grammar	sonnet	grammar	1-chronicles/23	1-chronicles/29	1 Chronicles 23–29	review-pronouns:*
+grammar-058	grammar	sonnet	grammar	2-chronicles/1	2-chronicles/8	2 Chronicles 1–8	review-pronouns:*
+grammar-059	grammar	sonnet	grammar	2-chronicles/9	2-chronicles/18	2 Chronicles 9–18	review-pronouns:*
+grammar-060	grammar	sonnet	grammar	2-chronicles/19	2-chronicles/25	2 Chronicles 19–25	review-pronouns:*
+grammar-061	grammar	sonnet	grammar	2-chronicles/26	2-chronicles/32	2 Chronicles 26–32	review-pronouns:*
+grammar-062	grammar	sonnet	grammar	2-chronicles/33	ezra/2	2 Chronicles 33 – Ezra 2	review-pronouns:*
+grammar-063	grammar	sonnet	grammar	ezra/3	ezra/9	Ezra 3–9	review-pronouns:*
+grammar-064	grammar	sonnet	grammar	ezra/10	nehemiah/7	Ezra 10 – Nehemiah 7	review-pronouns:*
+grammar-065	grammar	sonnet	grammar	nehemiah/8	nehemiah/13	Nehemiah 8–13	review-pronouns:*
+grammar-066	grammar	sonnet	grammar	esther/1	esther/9	Esther 1–9	review-pronouns:*
+grammar-067	grammar	sonnet	grammar	esther/10	job/12	Esther 10 – Job 12	review-pronouns:*
+grammar-068	grammar	sonnet	grammar	job/13	job/24	Job 13–24	review-pronouns:*
+grammar-069	grammar	sonnet	grammar	job/25	job/37	Job 25–37	review-pronouns:*
+grammar-070	grammar	sonnet	grammar	job/38	psalms/12	Job 38 – Psalms 12	review-pronouns:*
+grammar-071	grammar	sonnet	grammar	psalms/13	psalms/31	Psalms 13–31	review-pronouns:*
+grammar-072	grammar	sonnet	grammar	psalms/32	psalms/46	Psalms 32–46	review-pronouns:*
+grammar-073	grammar	sonnet	grammar	psalms/47	psalms/66	Psalms 47–66	review-pronouns:*
+grammar-074	grammar	sonnet	grammar	psalms/67	psalms/78	Psalms 67–78	review-pronouns:*
+grammar-075	grammar	sonnet	grammar	psalms/79	psalms/96	Psalms 79–96	review-pronouns:*
+grammar-076	grammar	sonnet	grammar	psalms/97	psalms/109	Psalms 97–109	review-pronouns:*
+grammar-077	grammar	sonnet	grammar	psalms/110	psalms/126	Psalms 110–126	review-pronouns:*
+grammar-078	grammar	sonnet	grammar	psalms/127	psalms/150	Psalms 127–150	review-pronouns:*
+grammar-079	grammar	sonnet	grammar	proverbs/1	proverbs/12	Proverbs 1–12	review-pronouns:*
+grammar-080	grammar	sonnet	grammar	proverbs/13	proverbs/23	Proverbs 13–23	review-pronouns:*
+grammar-081	grammar	sonnet	grammar	proverbs/24	proverbs/31	Proverbs 24–31	review-pronouns:*
+grammar-082	grammar	sonnet	grammar	ecclesiastes/1	ecclesiastes/11	Ecclesiastes 1–11	review-pronouns:*
+grammar-083	grammar	sonnet	grammar	ecclesiastes/12	isaiah/4	Ecclesiastes 12 – Isaiah 4	review-pronouns:*
+grammar-084	grammar	sonnet	grammar	isaiah/5	isaiah/13	Isaiah 5–13	review-pronouns:*
+grammar-085	grammar	sonnet	grammar	isaiah/14	isaiah/24	Isaiah 14–24	review-pronouns:*
+grammar-086	grammar	sonnet	grammar	isaiah/25	isaiah/33	Isaiah 25–33	review-pronouns:*
+grammar-087	grammar	sonnet	grammar	isaiah/34	isaiah/41	Isaiah 34–41	review-pronouns:*
+grammar-088	grammar	sonnet	grammar	isaiah/42	isaiah/49	Isaiah 42–49	review-pronouns:*
+grammar-089	grammar	sonnet	grammar	isaiah/50	isaiah/60	Isaiah 50–60	review-pronouns:*
+grammar-090	grammar	sonnet	grammar	isaiah/61	jeremiah/3	Isaiah 61 – Jeremiah 3	review-pronouns:*
+grammar-091	grammar	sonnet	grammar	jeremiah/4	jeremiah/9	Jeremiah 4–9	review-pronouns:*
+grammar-092	grammar	sonnet	grammar	jeremiah/10	jeremiah/17	Jeremiah 10–17	review-pronouns:*
+grammar-093	grammar	sonnet	grammar	jeremiah/18	jeremiah/25	Jeremiah 18–25	review-pronouns:*
+grammar-094	grammar	sonnet	grammar	jeremiah/26	jeremiah/31	Jeremiah 26–31	review-pronouns:*
+grammar-095	grammar	sonnet	grammar	jeremiah/32	jeremiah/37	Jeremiah 32–37	review-pronouns:*
+grammar-096	grammar	sonnet	grammar	jeremiah/38	jeremiah/44	Jeremiah 38–44	review-pronouns:*
+grammar-097	grammar	sonnet	grammar	jeremiah/45	jeremiah/51	Jeremiah 45–51	review-pronouns:*
+grammar-098	grammar	sonnet	grammar	jeremiah/52	lamentations/5	Jeremiah 52 – Lamentations 5	review-pronouns:*
+grammar-099	grammar	sonnet	grammar	ezekiel/1	ezekiel/9	Ezekiel 1–9	review-pronouns:*
+grammar-100	grammar	sonnet	grammar	ezekiel/10	ezekiel/16	Ezekiel 10–16	review-pronouns:*
+grammar-101	grammar	sonnet	grammar	ezekiel/17	ezekiel/22	Ezekiel 17–22	review-pronouns:*
+grammar-102	grammar	sonnet	grammar	ezekiel/23	ezekiel/28	Ezekiel 23–28	review-pronouns:*
+grammar-103	grammar	sonnet	grammar	ezekiel/29	ezekiel/34	Ezekiel 29–34	review-pronouns:*
+grammar-104	grammar	sonnet	grammar	ezekiel/35	ezekiel/40	Ezekiel 35–40	review-pronouns:*
+grammar-105	grammar	sonnet	grammar	ezekiel/41	ezekiel/46	Ezekiel 41–46	review-pronouns:*
+grammar-106	grammar	sonnet	grammar	ezekiel/47	daniel/4	Ezekiel 47 – Daniel 4	review-pronouns:*
+grammar-107	grammar	sonnet	grammar	daniel/5	daniel/10	Daniel 5–10	review-pronouns:*
+grammar-108	grammar	sonnet	grammar	daniel/11	hosea/9	Daniel 11 – Hosea 9	review-pronouns:*
+grammar-109	grammar	sonnet	grammar	hosea/10	amos/3	Hosea 10 – Amos 3	review-pronouns:*
+grammar-110	grammar	sonnet	grammar	amos/4	jonah/4	Amos 4 – Jonah 4	review-pronouns:*
+grammar-111	grammar	sonnet	grammar	micah/1	nahum/3	Micah 1 – Nahum 3	review-pronouns:*
+grammar-112	grammar	sonnet	grammar	habakkuk/1	haggai/2	Habakkuk 1 – Haggai 2	review-pronouns:*
+grammar-113	grammar	sonnet	grammar	zechariah/1	zechariah/12	Zechariah 1–12	review-pronouns:*
+grammar-114	grammar	sonnet	grammar	zechariah/13	matthew/5	Zechariah 13 – Matthew 5	review-pronouns:*
+grammar-115	grammar	sonnet	grammar	matthew/6	matthew/12	Matthew 6–12	review-pronouns:*
+grammar-116	grammar	sonnet	grammar	matthew/13	matthew/18	Matthew 13–18	review-pronouns:*
+grammar-117	grammar	sonnet	grammar	matthew/19	matthew/24	Matthew 19–24	review-pronouns:*
+grammar-118	grammar	sonnet	grammar	matthew/25	matthew/28	Matthew 25–28	review-pronouns:*
+grammar-119	grammar	sonnet	grammar	mark/1	mark/6	Mark 1–6	review-pronouns:*
+grammar-120	grammar	sonnet	grammar	mark/7	mark/12	Mark 7–12	review-pronouns:*
+grammar-121	grammar	sonnet	grammar	mark/13	luke/1	Mark 13 – Luke 1	review-pronouns:*
+grammar-122	grammar	sonnet	grammar	luke/2	luke/6	Luke 2–6	review-pronouns:*
+grammar-123	grammar	sonnet	grammar	luke/7	luke/10	Luke 7–10	review-pronouns:*
+grammar-124	grammar	sonnet	grammar	luke/11	luke/15	Luke 11–15	review-pronouns:*
+grammar-125	grammar	sonnet	grammar	luke/16	luke/21	Luke 16–21	review-pronouns:*
+grammar-126	grammar	sonnet	grammar	luke/22	john/2	Luke 22 – John 2	review-pronouns:*
+grammar-127	grammar	sonnet	grammar	john/3	john/7	John 3–7	review-pronouns:*
+grammar-128	grammar	sonnet	grammar	john/8	john/12	John 8–12	review-pronouns:*
+grammar-129	grammar	sonnet	grammar	john/13	john/19	John 13–19	review-pronouns:*
+grammar-130	grammar	sonnet	grammar	john/20	acts/5	John 20 – Acts 5	review-pronouns:*
+grammar-131	grammar	sonnet	grammar	acts/6	acts/11	Acts 6–11	review-pronouns:*
+grammar-132	grammar	sonnet	grammar	acts/12	acts/17	Acts 12–17	review-pronouns:*
+grammar-133	grammar	sonnet	grammar	acts/18	acts/23	Acts 18–23	review-pronouns:*
+grammar-134	grammar	sonnet	grammar	acts/24	romans/2	Acts 24 – Romans 2	review-pronouns:*
+grammar-135	grammar	sonnet	grammar	romans/3	romans/11	Romans 3–11	review-pronouns:*
+grammar-136	grammar	sonnet	grammar	romans/12	1-corinthians/6	Romans 12 – 1 Corinthians 6	review-pronouns:*
+grammar-137	grammar	sonnet	grammar	1-corinthians/7	1-corinthians/14	1 Corinthians 7–14	review-pronouns:*
+grammar-138	grammar	sonnet	grammar	1-corinthians/15	2-corinthians/8	1 Corinthians 15 – 2 Corinthians 8	review-pronouns:*
+grammar-139	grammar	sonnet	grammar	2-corinthians/9	galatians/5	2 Corinthians 9 – Galatians 5	review-pronouns:*
+grammar-140	grammar	sonnet	grammar	galatians/6	philippians/3	Galatians 6 – Philippians 3	review-pronouns:*
+grammar-141	grammar	sonnet	grammar	philippians/4	1-thessalonians/5	Philippians 4 – 1 Thessalonians 5	review-pronouns:*
+grammar-142	grammar	sonnet	grammar	2-thessalonians/1	2-timothy/4	2 Thessalonians 1 – 2 Timothy 4	review-pronouns:*
+grammar-143	grammar	sonnet	grammar	titus/1	hebrews/9	Titus 1 – Hebrews 9	review-pronouns:*
+grammar-144	grammar	sonnet	grammar	hebrews/10	james/5	Hebrews 10 – James 5	review-pronouns:*
+grammar-145	grammar	sonnet	grammar	1-peter/1	2-peter/3	1 Peter 1 – 2 Peter 3	review-pronouns:*
+grammar-146	grammar	sonnet	grammar	1-john/1	revelation/2	1 John 1 – Revelation 2	review-pronouns:*
+grammar-147	grammar	sonnet	grammar	revelation/3	revelation/13	Revelation 3–13	review-pronouns:*
+grammar-148	grammar	sonnet	grammar	revelation/14	revelation/22	Revelation 14–22	review-pronouns:*
+grammar-149	grammar	sonnet	grammar	title-page/1	1-nephi/4	Title Page 1 – 1 Nephi 4	review-pronouns:*
+grammar-150	grammar	sonnet	grammar	1-nephi/5	1-nephi/11	1 Nephi 5–11	review-pronouns:*
+grammar-151	grammar	sonnet	grammar	1-nephi/12	1-nephi/15	1 Nephi 12–15	review-pronouns:*
+grammar-152	grammar	sonnet	grammar	1-nephi/16	1-nephi/18	1 Nephi 16–18	review-pronouns:*
+grammar-153	grammar	sonnet	grammar	1-nephi/19	1-nephi/22	1 Nephi 19–22	review-pronouns:*
+grammar-154	grammar	sonnet	grammar	2-nephi/1	2-nephi/4	2 Nephi 1–4	review-pronouns:*
+grammar-155	grammar	sonnet	grammar	2-nephi/5	2-nephi/9	2 Nephi 5–9	review-pronouns:*
+grammar-156	grammar	sonnet	grammar	2-nephi/10	2-nephi/18	2 Nephi 10–18	review-pronouns:*
+grammar-157	grammar	sonnet	grammar	2-nephi/19	2-nephi/25	2 Nephi 19–25	review-pronouns:*
+grammar-158	grammar	sonnet	grammar	2-nephi/26	2-nephi/29	2 Nephi 26–29	review-pronouns:*
+grammar-159	grammar	sonnet	grammar	2-nephi/30	jacob/3	2 Nephi 30 – Jacob 3	review-pronouns:*
+grammar-160	grammar	sonnet	grammar	jacob/4	jacob/6	Jacob 4–6	review-pronouns:*
+grammar-161	grammar	sonnet	grammar	jacob/7	omni/1	Jacob 7 – Omni 1	review-pronouns:*
+grammar-162	grammar	sonnet	grammar	words-of-mormon/1	mosiah/3	Words of Mormon 1 – Mosiah 3	review-pronouns:*
+grammar-163	grammar	sonnet	grammar	mosiah/4	mosiah/8	Mosiah 4–8	review-pronouns:*
+grammar-164	grammar	sonnet	grammar	mosiah/9	mosiah/13	Mosiah 9–13	review-pronouns:*
+grammar-165	grammar	sonnet	grammar	mosiah/14	mosiah/19	Mosiah 14–19	review-pronouns:*
+grammar-166	grammar	sonnet	grammar	mosiah/20	mosiah/24	Mosiah 20–24	review-pronouns:*
+grammar-167	grammar	sonnet	grammar	mosiah/25	mosiah/29	Mosiah 25–29	review-pronouns:*
+grammar-168	grammar	sonnet	grammar	alma/1	alma/4	Alma 1–4	review-pronouns:*
+grammar-169	grammar	sonnet	grammar	alma/5	alma/8	Alma 5–8	review-pronouns:*
+grammar-170	grammar	sonnet	grammar	alma/9	alma/12	Alma 9–12	review-pronouns:*
+grammar-171	grammar	sonnet	grammar	alma/13	alma/17	Alma 13–17	review-pronouns:*
+grammar-172	grammar	sonnet	grammar	alma/18	alma/21	Alma 18–21	review-pronouns:*
+grammar-173	grammar	sonnet	grammar	alma/22	alma/26	Alma 22–26	review-pronouns:*
+grammar-174	grammar	sonnet	grammar	alma/27	alma/30	Alma 27–30	review-pronouns:*
+grammar-175	grammar	sonnet	grammar	alma/31	alma/34	Alma 31–34	review-pronouns:*
+grammar-176	grammar	sonnet	grammar	alma/35	alma/39	Alma 35–39	review-pronouns:*
+grammar-177	grammar	sonnet	grammar	alma/40	alma/43	Alma 40–43	review-pronouns:*
+grammar-178	grammar	sonnet	grammar	alma/44	alma/47	Alma 44–47	review-pronouns:*
+grammar-179	grammar	sonnet	grammar	alma/48	alma/51	Alma 48–51	review-pronouns:*
+grammar-180	grammar	sonnet	grammar	alma/52	alma/55	Alma 52–55	review-pronouns:*
+grammar-181	grammar	sonnet	grammar	alma/56	alma/58	Alma 56–58	review-pronouns:*
+grammar-182	grammar	sonnet	grammar	alma/59	alma/62	Alma 59–62	review-pronouns:*
+grammar-183	grammar	sonnet	grammar	alma/63	helaman/4	Alma 63 – Helaman 4	review-pronouns:*
+grammar-184	grammar	sonnet	grammar	helaman/5	helaman/7	Helaman 5–7	review-pronouns:*
+grammar-185	grammar	sonnet	grammar	helaman/8	helaman/12	Helaman 8–12	review-pronouns:*
+grammar-186	grammar	sonnet	grammar	helaman/13	helaman/16	Helaman 13–16	review-pronouns:*
+grammar-187	grammar	sonnet	grammar	3-nephi/1	3-nephi/4	3 Nephi 1–4	review-pronouns:*
+grammar-188	grammar	sonnet	grammar	3-nephi/5	3-nephi/9	3 Nephi 5–9	review-pronouns:*
+grammar-189	grammar	sonnet	grammar	3-nephi/10	3-nephi/14	3 Nephi 10–14	review-pronouns:*
+grammar-190	grammar	sonnet	grammar	3-nephi/15	3-nephi/19	3 Nephi 15–19	review-pronouns:*
+grammar-191	grammar	sonnet	grammar	3-nephi/20	3-nephi/26	3 Nephi 20–26	review-pronouns:*
+grammar-192	grammar	sonnet	grammar	3-nephi/27	4-nephi/1	3 Nephi 27 – 4 Nephi 1	review-pronouns:*
+grammar-193	grammar	sonnet	grammar	mormon/1	mormon/6	Mormon 1–6	review-pronouns:*
+grammar-194	grammar	sonnet	grammar	mormon/7	ether/2	Mormon 7 – Ether 2	review-pronouns:*
+grammar-195	grammar	sonnet	grammar	ether/3	ether/8	Ether 3–8	review-pronouns:*
+grammar-196	grammar	sonnet	grammar	ether/9	ether/12	Ether 9–12	review-pronouns:*
+grammar-197	grammar	sonnet	grammar	ether/13	moroni/7	Ether 13 – Moroni 7	review-pronouns:*
+grammar-198	grammar	sonnet	grammar	moroni/8	moroni/10	Moroni 8–10	review-pronouns:*
+grammar-199	grammar	sonnet	grammar	doctrine-and-covenants/1	doctrine-and-covenants/9	D&C 1–9	review-pronouns:*
+grammar-200	grammar	sonnet	grammar	doctrine-and-covenants/10	doctrine-and-covenants/19	D&C 10–19	review-pronouns:*
+grammar-201	grammar	sonnet	grammar	doctrine-and-covenants/20	doctrine-and-covenants/28	D&C 20–28	review-pronouns:*
+grammar-202	grammar	sonnet	grammar	doctrine-and-covenants/29	doctrine-and-covenants/38	D&C 29–38	review-pronouns:*
+grammar-203	grammar	sonnet	grammar	doctrine-and-covenants/39	doctrine-and-covenants/45	D&C 39–45	review-pronouns:*
+grammar-204	grammar	sonnet	grammar	doctrine-and-covenants/46	doctrine-and-covenants/54	D&C 46–54	review-pronouns:*
+grammar-205	grammar	sonnet	grammar	doctrine-and-covenants/55	doctrine-and-covenants/61	D&C 55–61	review-pronouns:*
+grammar-206	grammar	sonnet	grammar	doctrine-and-covenants/62	doctrine-and-covenants/68	D&C 62–68	review-pronouns:*
+grammar-207	grammar	sonnet	grammar	doctrine-and-covenants/69	doctrine-and-covenants/76	D&C 69–76	review-pronouns:*
+grammar-208	grammar	sonnet	grammar	doctrine-and-covenants/77	doctrine-and-covenants/84	D&C 77–84	review-pronouns:*
+grammar-209	grammar	sonnet	grammar	doctrine-and-covenants/85	doctrine-and-covenants/88	D&C 85–88	review-pronouns:*
+grammar-210	grammar	sonnet	grammar	doctrine-and-covenants/89	doctrine-and-covenants/97	D&C 89–97	review-pronouns:*
+grammar-211	grammar	sonnet	grammar	doctrine-and-covenants/98	doctrine-and-covenants/102	D&C 98–102	review-pronouns:*
+grammar-212	grammar	sonnet	grammar	doctrine-and-covenants/103	doctrine-and-covenants/106	D&C 103–106	review-pronouns:*
+grammar-213	grammar	sonnet	grammar	doctrine-and-covenants/107	doctrine-and-covenants/109	D&C 107–109	review-pronouns:*
+grammar-214	grammar	sonnet	grammar	doctrine-and-covenants/110	doctrine-and-covenants/121	D&C 110–121	review-pronouns:*
+grammar-215	grammar	sonnet	grammar	doctrine-and-covenants/122	doctrine-and-covenants/124	D&C 122–124	review-pronouns:*
+grammar-216	grammar	sonnet	grammar	doctrine-and-covenants/125	doctrine-and-covenants/132	D&C 125–132	review-pronouns:*
+grammar-217	grammar	sonnet	grammar	doctrine-and-covenants/133	doctrine-and-covenants/138	D&C 133–138	review-pronouns:*
+grammar-218	grammar	sonnet	grammar	moses/1	moses/5	Moses 1–5	review-pronouns:*
+grammar-219	grammar	sonnet	grammar	moses/6	moses/8	Moses 6–8	review-pronouns:*
+grammar-220	grammar	sonnet	grammar	abraham/1	abraham/5	Abraham 1–5	review-pronouns:*
+grammar-221	grammar	sonnet	grammar	facsimile-1/1	articles-of-faith/1	Facsimile 1 1 – Articles of Faith 1	review-pronouns:*
+review-grammar-1	grammar	opus	grammar	genesis/1	numbers/15	Genesis 1 – Numbers 15	grammar:*
+review-grammar-2	grammar	opus	grammar	numbers/16	1-samuel/24	Numbers 16 – 1 Samuel 24	grammar:*
+review-grammar-3	grammar	opus	grammar	1-samuel/25	2-chronicles/25	1 Samuel 25 – 2 Chronicles 25	grammar:*
+review-grammar-4	grammar	opus	grammar	2-chronicles/26	proverbs/23	2 Chronicles 26 – Proverbs 23	grammar:*
+review-grammar-5	grammar	opus	grammar	proverbs/24	ezekiel/16	Proverbs 24 – Ezekiel 16	grammar:*
+review-grammar-6	grammar	opus	grammar	ezekiel/17	mark/12	Ezekiel 17 – Mark 12	grammar:*
+review-grammar-7	grammar	opus	grammar	mark/13	philippians/3	Mark 13 – Philippians 3	grammar:*
+review-grammar-8	grammar	opus	grammar	philippians/4	jacob/6	Philippians 4 – Jacob 6	grammar:*
+review-grammar-9	grammar	opus	grammar	jacob/7	alma/55	Jacob 7 – Alma 55	grammar:*
+review-grammar-10	grammar	opus	grammar	alma/56	doctrine-and-covenants/19	Alma 56 – D&C 19	grammar:*
+review-grammar-11	grammar	opus	grammar	doctrine-and-covenants/20	abraham/5	D&C 20 – Abraham 5	grammar:*
+review-grammar-12	grammar	opus	grammar	facsimile-1/1	articles-of-faith/1	Facsimile 1 1 – Articles of Faith 1	grammar:*
+summaries-001	summaries	opus	summaries	genesis/1	genesis/8	Genesis 1–8	review-word-meanings:* review-grammar:*
+summaries-002	summaries	opus	summaries	genesis/9	genesis/18	Genesis 9–18	review-word-meanings:* review-grammar:*
+summaries-003	summaries	opus	summaries	genesis/19	genesis/24	Genesis 19–24	review-word-meanings:* review-grammar:*
+summaries-004	summaries	opus	summaries	genesis/25	genesis/30	Genesis 25–30	review-word-meanings:* review-grammar:*
+summaries-005	summaries	opus	summaries	genesis/31	genesis/36	Genesis 31–36	review-word-meanings:* review-grammar:*
+summaries-006	summaries	opus	summaries	genesis/37	genesis/42	Genesis 37–42	review-word-meanings:* review-grammar:*
+summaries-007	summaries	opus	summaries	genesis/43	genesis/49	Genesis 43–49	review-word-meanings:* review-grammar:*
+summaries-008	summaries	opus	summaries	genesis/50	exodus/7	Genesis 50 – Exodus 7	review-word-meanings:* review-grammar:*
+summaries-009	summaries	opus	summaries	exodus/8	exodus/13	Exodus 8–13	review-word-meanings:* review-grammar:*
+summaries-010	summaries	opus	summaries	exodus/14	exodus/20	Exodus 14–20	review-word-meanings:* review-grammar:*
+summaries-011	summaries	opus	summaries	exodus/21	exodus/27	Exodus 21–27	review-word-meanings:* review-grammar:*
+summaries-012	summaries	opus	summaries	exodus/28	exodus/32	Exodus 28–32	review-word-meanings:* review-grammar:*
+summaries-013	summaries	opus	summaries	exodus/33	exodus/39	Exodus 33–39	review-word-meanings:* review-grammar:*
+summaries-014	summaries	opus	summaries	exodus/40	leviticus/6	Exodus 40 – Leviticus 6	review-word-meanings:* review-grammar:*
+summaries-015	summaries	opus	summaries	leviticus/7	leviticus/13	Leviticus 7–13	review-word-meanings:* review-grammar:*
+summaries-016	summaries	opus	summaries	leviticus/14	leviticus/18	Leviticus 14–18	review-word-meanings:* review-grammar:*
+summaries-017	summaries	opus	summaries	leviticus/19	leviticus/25	Leviticus 19–25	review-word-meanings:* review-grammar:*
+summaries-018	summaries	opus	summaries	leviticus/26	numbers/3	Leviticus 26 – Numbers 3	review-word-meanings:* review-grammar:*
+summaries-019	summaries	opus	summaries	numbers/4	numbers/8	Numbers 4–8	review-word-meanings:* review-grammar:*
+summaries-020	summaries	opus	summaries	numbers/9	numbers/15	Numbers 9–15	review-word-meanings:* review-grammar:*
+summaries-021	summaries	opus	summaries	numbers/16	numbers/21	Numbers 16–21	review-word-meanings:* review-grammar:*
+summaries-022	summaries	opus	summaries	numbers/22	numbers/27	Numbers 22–27	review-word-meanings:* review-grammar:*
+summaries-023	summaries	opus	summaries	numbers/28	numbers/33	Numbers 28–33	review-word-meanings:* review-grammar:*
+summaries-024	summaries	opus	summaries	numbers/34	deuteronomy/3	Numbers 34 – Deuteronomy 3	review-word-meanings:* review-grammar:*
+summaries-025	summaries	opus	summaries	deuteronomy/4	deuteronomy/9	Deuteronomy 4–9	review-word-meanings:* review-grammar:*
+summaries-026	summaries	opus	summaries	deuteronomy/10	deuteronomy/16	Deuteronomy 10–16	review-word-meanings:* review-grammar:*
+summaries-027	summaries	opus	summaries	deuteronomy/17	deuteronomy/24	Deuteronomy 17–24	review-word-meanings:* review-grammar:*
+summaries-028	summaries	opus	summaries	deuteronomy/25	deuteronomy/30	Deuteronomy 25–30	review-word-meanings:* review-grammar:*
+summaries-029	summaries	opus	summaries	deuteronomy/31	joshua/3	Deuteronomy 31 – Joshua 3	review-word-meanings:* review-grammar:*
+summaries-030	summaries	opus	summaries	joshua/4	joshua/9	Joshua 4–9	review-word-meanings:* review-grammar:*
+summaries-031	summaries	opus	summaries	joshua/10	joshua/16	Joshua 10–16	review-word-meanings:* review-grammar:*
+summaries-032	summaries	opus	summaries	joshua/17	joshua/22	Joshua 17–22	review-word-meanings:* review-grammar:*
+summaries-033	summaries	opus	summaries	joshua/23	judges/5	Joshua 23 – Judges 5	review-word-meanings:* review-grammar:*
+summaries-034	summaries	opus	summaries	judges/6	judges/10	Judges 6–10	review-word-meanings:* review-grammar:*
+summaries-035	summaries	opus	summaries	judges/11	judges/17	Judges 11–17	review-word-meanings:* review-grammar:*
+summaries-036	summaries	opus	summaries	judges/18	judges/21	Judges 18–21	review-word-meanings:* review-grammar:*
+summaries-037	summaries	opus	summaries	ruth/1	1-samuel/3	Ruth 1 – 1 Samuel 3	review-word-meanings:* review-grammar:*
+summaries-038	summaries	opus	summaries	1-samuel/4	1-samuel/11	1 Samuel 4–11	review-word-meanings:* review-grammar:*
+summaries-039	summaries	opus	summaries	1-samuel/12	1-samuel/17	1 Samuel 12–17	review-word-meanings:* review-grammar:*
+summaries-040	summaries	opus	summaries	1-samuel/18	1-samuel/24	1 Samuel 18–24	review-word-meanings:* review-grammar:*
+summaries-041	summaries	opus	summaries	1-samuel/25	1-samuel/31	1 Samuel 25–31	review-word-meanings:* review-grammar:*
+summaries-042	summaries	opus	summaries	2-samuel/1	2-samuel/7	2 Samuel 1–7	review-word-meanings:* review-grammar:*
+summaries-043	summaries	opus	summaries	2-samuel/8	2-samuel/14	2 Samuel 8–14	review-word-meanings:* review-grammar:*
+summaries-044	summaries	opus	summaries	2-samuel/15	2-samuel/19	2 Samuel 15–19	review-word-meanings:* review-grammar:*
+summaries-045	summaries	opus	summaries	2-samuel/20	2-samuel/24	2 Samuel 20–24	review-word-meanings:* review-grammar:*
+summaries-046	summaries	opus	summaries	1-kings/1	1-kings/5	1 Kings 1–5	review-word-meanings:* review-grammar:*
+summaries-047	summaries	opus	summaries	1-kings/6	1-kings/9	1 Kings 6–9	review-word-meanings:* review-grammar:*
+summaries-048	summaries	opus	summaries	1-kings/10	1-kings/14	1 Kings 10–14	review-word-meanings:* review-grammar:*
+summaries-049	summaries	opus	summaries	1-kings/15	1-kings/20	1 Kings 15–20	review-word-meanings:* review-grammar:*
+summaries-050	summaries	opus	summaries	1-kings/21	2-kings/4	1 Kings 21 – 2 Kings 4	review-word-meanings:* review-grammar:*
+summaries-051	summaries	opus	summaries	2-kings/5	2-kings/10	2 Kings 5–10	review-word-meanings:* review-grammar:*
+summaries-052	summaries	opus	summaries	2-kings/11	2-kings/17	2 Kings 11–17	review-word-meanings:* review-grammar:*
+summaries-053	summaries	opus	summaries	2-kings/18	2-kings/23	2 Kings 18–23	review-word-meanings:* review-grammar:*
+summaries-054	summaries	opus	summaries	2-kings/24	1-chronicles/6	2 Kings 24 – 1 Chronicles 6	review-word-meanings:* review-grammar:*
+summaries-055	summaries	opus	summaries	1-chronicles/7	1-chronicles/14	1 Chronicles 7–14	review-word-meanings:* review-grammar:*
+summaries-056	summaries	opus	summaries	1-chronicles/15	1-chronicles/22	1 Chronicles 15–22	review-word-meanings:* review-grammar:*
+summaries-057	summaries	opus	summaries	1-chronicles/23	1-chronicles/29	1 Chronicles 23–29	review-word-meanings:* review-grammar:*
+summaries-058	summaries	opus	summaries	2-chronicles/1	2-chronicles/8	2 Chronicles 1–8	review-word-meanings:* review-grammar:*
+summaries-059	summaries	opus	summaries	2-chronicles/9	2-chronicles/18	2 Chronicles 9–18	review-word-meanings:* review-grammar:*
+summaries-060	summaries	opus	summaries	2-chronicles/19	2-chronicles/25	2 Chronicles 19–25	review-word-meanings:* review-grammar:*
+summaries-061	summaries	opus	summaries	2-chronicles/26	2-chronicles/32	2 Chronicles 26–32	review-word-meanings:* review-grammar:*
+summaries-062	summaries	opus	summaries	2-chronicles/33	ezra/2	2 Chronicles 33 – Ezra 2	review-word-meanings:* review-grammar:*
+summaries-063	summaries	opus	summaries	ezra/3	ezra/9	Ezra 3–9	review-word-meanings:* review-grammar:*
+summaries-064	summaries	opus	summaries	ezra/10	nehemiah/7	Ezra 10 – Nehemiah 7	review-word-meanings:* review-grammar:*
+summaries-065	summaries	opus	summaries	nehemiah/8	nehemiah/13	Nehemiah 8–13	review-word-meanings:* review-grammar:*
+summaries-066	summaries	opus	summaries	esther/1	esther/9	Esther 1–9	review-word-meanings:* review-grammar:*
+summaries-067	summaries	opus	summaries	esther/10	job/12	Esther 10 – Job 12	review-word-meanings:* review-grammar:*
+summaries-068	summaries	opus	summaries	job/13	job/24	Job 13–24	review-word-meanings:* review-grammar:*
+summaries-069	summaries	opus	summaries	job/25	job/37	Job 25–37	review-word-meanings:* review-grammar:*
+summaries-070	summaries	opus	summaries	job/38	psalms/12	Job 38 – Psalms 12	review-word-meanings:* review-grammar:*
+summaries-071	summaries	opus	summaries	psalms/13	psalms/31	Psalms 13–31	review-word-meanings:* review-grammar:*
+summaries-072	summaries	opus	summaries	psalms/32	psalms/46	Psalms 32–46	review-word-meanings:* review-grammar:*
+summaries-073	summaries	opus	summaries	psalms/47	psalms/66	Psalms 47–66	review-word-meanings:* review-grammar:*
+summaries-074	summaries	opus	summaries	psalms/67	psalms/78	Psalms 67–78	review-word-meanings:* review-grammar:*
+summaries-075	summaries	opus	summaries	psalms/79	psalms/96	Psalms 79–96	review-word-meanings:* review-grammar:*
+summaries-076	summaries	opus	summaries	psalms/97	psalms/109	Psalms 97–109	review-word-meanings:* review-grammar:*
+summaries-077	summaries	opus	summaries	psalms/110	psalms/126	Psalms 110–126	review-word-meanings:* review-grammar:*
+summaries-078	summaries	opus	summaries	psalms/127	psalms/150	Psalms 127–150	review-word-meanings:* review-grammar:*
+summaries-079	summaries	opus	summaries	proverbs/1	proverbs/12	Proverbs 1–12	review-word-meanings:* review-grammar:*
+summaries-080	summaries	opus	summaries	proverbs/13	proverbs/23	Proverbs 13–23	review-word-meanings:* review-grammar:*
+summaries-081	summaries	opus	summaries	proverbs/24	proverbs/31	Proverbs 24–31	review-word-meanings:* review-grammar:*
+summaries-082	summaries	opus	summaries	ecclesiastes/1	ecclesiastes/11	Ecclesiastes 1–11	review-word-meanings:* review-grammar:*
+summaries-083	summaries	opus	summaries	ecclesiastes/12	isaiah/4	Ecclesiastes 12 – Isaiah 4	review-word-meanings:* review-grammar:*
+summaries-084	summaries	opus	summaries	isaiah/5	isaiah/13	Isaiah 5–13	review-word-meanings:* review-grammar:*
+summaries-085	summaries	opus	summaries	isaiah/14	isaiah/24	Isaiah 14–24	review-word-meanings:* review-grammar:*
+summaries-086	summaries	opus	summaries	isaiah/25	isaiah/33	Isaiah 25–33	review-word-meanings:* review-grammar:*
+summaries-087	summaries	opus	summaries	isaiah/34	isaiah/41	Isaiah 34–41	review-word-meanings:* review-grammar:*
+summaries-088	summaries	opus	summaries	isaiah/42	isaiah/49	Isaiah 42–49	review-word-meanings:* review-grammar:*
+summaries-089	summaries	opus	summaries	isaiah/50	isaiah/60	Isaiah 50–60	review-word-meanings:* review-grammar:*
+summaries-090	summaries	opus	summaries	isaiah/61	jeremiah/3	Isaiah 61 – Jeremiah 3	review-word-meanings:* review-grammar:*
+summaries-091	summaries	opus	summaries	jeremiah/4	jeremiah/9	Jeremiah 4–9	review-word-meanings:* review-grammar:*
+summaries-092	summaries	opus	summaries	jeremiah/10	jeremiah/17	Jeremiah 10–17	review-word-meanings:* review-grammar:*
+summaries-093	summaries	opus	summaries	jeremiah/18	jeremiah/25	Jeremiah 18–25	review-word-meanings:* review-grammar:*
+summaries-094	summaries	opus	summaries	jeremiah/26	jeremiah/31	Jeremiah 26–31	review-word-meanings:* review-grammar:*
+summaries-095	summaries	opus	summaries	jeremiah/32	jeremiah/37	Jeremiah 32–37	review-word-meanings:* review-grammar:*
+summaries-096	summaries	opus	summaries	jeremiah/38	jeremiah/44	Jeremiah 38–44	review-word-meanings:* review-grammar:*
+summaries-097	summaries	opus	summaries	jeremiah/45	jeremiah/51	Jeremiah 45–51	review-word-meanings:* review-grammar:*
+summaries-098	summaries	opus	summaries	jeremiah/52	lamentations/5	Jeremiah 52 – Lamentations 5	review-word-meanings:* review-grammar:*
+summaries-099	summaries	opus	summaries	ezekiel/1	ezekiel/9	Ezekiel 1–9	review-word-meanings:* review-grammar:*
+summaries-100	summaries	opus	summaries	ezekiel/10	ezekiel/16	Ezekiel 10–16	review-word-meanings:* review-grammar:*
+summaries-101	summaries	opus	summaries	ezekiel/17	ezekiel/22	Ezekiel 17–22	review-word-meanings:* review-grammar:*
+summaries-102	summaries	opus	summaries	ezekiel/23	ezekiel/28	Ezekiel 23–28	review-word-meanings:* review-grammar:*
+summaries-103	summaries	opus	summaries	ezekiel/29	ezekiel/34	Ezekiel 29–34	review-word-meanings:* review-grammar:*
+summaries-104	summaries	opus	summaries	ezekiel/35	ezekiel/40	Ezekiel 35–40	review-word-meanings:* review-grammar:*
+summaries-105	summaries	opus	summaries	ezekiel/41	ezekiel/46	Ezekiel 41–46	review-word-meanings:* review-grammar:*
+summaries-106	summaries	opus	summaries	ezekiel/47	daniel/4	Ezekiel 47 – Daniel 4	review-word-meanings:* review-grammar:*
+summaries-107	summaries	opus	summaries	daniel/5	daniel/10	Daniel 5–10	review-word-meanings:* review-grammar:*
+summaries-108	summaries	opus	summaries	daniel/11	hosea/9	Daniel 11 – Hosea 9	review-word-meanings:* review-grammar:*
+summaries-109	summaries	opus	summaries	hosea/10	amos/3	Hosea 10 – Amos 3	review-word-meanings:* review-grammar:*
+summaries-110	summaries	opus	summaries	amos/4	jonah/4	Amos 4 – Jonah 4	review-word-meanings:* review-grammar:*
+summaries-111	summaries	opus	summaries	micah/1	nahum/3	Micah 1 – Nahum 3	review-word-meanings:* review-grammar:*
+summaries-112	summaries	opus	summaries	habakkuk/1	haggai/2	Habakkuk 1 – Haggai 2	review-word-meanings:* review-grammar:*
+summaries-113	summaries	opus	summaries	zechariah/1	zechariah/12	Zechariah 1–12	review-word-meanings:* review-grammar:*
+summaries-114	summaries	opus	summaries	zechariah/13	matthew/5	Zechariah 13 – Matthew 5	review-word-meanings:* review-grammar:*
+summaries-115	summaries	opus	summaries	matthew/6	matthew/12	Matthew 6–12	review-word-meanings:* review-grammar:*
+summaries-116	summaries	opus	summaries	matthew/13	matthew/18	Matthew 13–18	review-word-meanings:* review-grammar:*
+summaries-117	summaries	opus	summaries	matthew/19	matthew/24	Matthew 19–24	review-word-meanings:* review-grammar:*
+summaries-118	summaries	opus	summaries	matthew/25	matthew/28	Matthew 25–28	review-word-meanings:* review-grammar:*
+summaries-119	summaries	opus	summaries	mark/1	mark/6	Mark 1–6	review-word-meanings:* review-grammar:*
+summaries-120	summaries	opus	summaries	mark/7	mark/12	Mark 7–12	review-word-meanings:* review-grammar:*
+summaries-121	summaries	opus	summaries	mark/13	luke/1	Mark 13 – Luke 1	review-word-meanings:* review-grammar:*
+summaries-122	summaries	opus	summaries	luke/2	luke/6	Luke 2–6	review-word-meanings:* review-grammar:*
+summaries-123	summaries	opus	summaries	luke/7	luke/10	Luke 7–10	review-word-meanings:* review-grammar:*
+summaries-124	summaries	opus	summaries	luke/11	luke/15	Luke 11–15	review-word-meanings:* review-grammar:*
+summaries-125	summaries	opus	summaries	luke/16	luke/21	Luke 16–21	review-word-meanings:* review-grammar:*
+summaries-126	summaries	opus	summaries	luke/22	john/2	Luke 22 – John 2	review-word-meanings:* review-grammar:*
+summaries-127	summaries	opus	summaries	john/3	john/7	John 3–7	review-word-meanings:* review-grammar:*
+summaries-128	summaries	opus	summaries	john/8	john/12	John 8–12	review-word-meanings:* review-grammar:*
+summaries-129	summaries	opus	summaries	john/13	john/19	John 13–19	review-word-meanings:* review-grammar:*
+summaries-130	summaries	opus	summaries	john/20	acts/5	John 20 – Acts 5	review-word-meanings:* review-grammar:*
+summaries-131	summaries	opus	summaries	acts/6	acts/11	Acts 6–11	review-word-meanings:* review-grammar:*
+summaries-132	summaries	opus	summaries	acts/12	acts/17	Acts 12–17	review-word-meanings:* review-grammar:*
+summaries-133	summaries	opus	summaries	acts/18	acts/23	Acts 18–23	review-word-meanings:* review-grammar:*
+summaries-134	summaries	opus	summaries	acts/24	romans/2	Acts 24 – Romans 2	review-word-meanings:* review-grammar:*
+summaries-135	summaries	opus	summaries	romans/3	romans/11	Romans 3–11	review-word-meanings:* review-grammar:*
+summaries-136	summaries	opus	summaries	romans/12	1-corinthians/6	Romans 12 – 1 Corinthians 6	review-word-meanings:* review-grammar:*
+summaries-137	summaries	opus	summaries	1-corinthians/7	1-corinthians/14	1 Corinthians 7–14	review-word-meanings:* review-grammar:*
+summaries-138	summaries	opus	summaries	1-corinthians/15	2-corinthians/8	1 Corinthians 15 – 2 Corinthians 8	review-word-meanings:* review-grammar:*
+summaries-139	summaries	opus	summaries	2-corinthians/9	galatians/5	2 Corinthians 9 – Galatians 5	review-word-meanings:* review-grammar:*
+summaries-140	summaries	opus	summaries	galatians/6	philippians/3	Galatians 6 – Philippians 3	review-word-meanings:* review-grammar:*
+summaries-141	summaries	opus	summaries	philippians/4	1-thessalonians/5	Philippians 4 – 1 Thessalonians 5	review-word-meanings:* review-grammar:*
+summaries-142	summaries	opus	summaries	2-thessalonians/1	2-timothy/4	2 Thessalonians 1 – 2 Timothy 4	review-word-meanings:* review-grammar:*
+summaries-143	summaries	opus	summaries	titus/1	hebrews/9	Titus 1 – Hebrews 9	review-word-meanings:* review-grammar:*
+summaries-144	summaries	opus	summaries	hebrews/10	james/5	Hebrews 10 – James 5	review-word-meanings:* review-grammar:*
+summaries-145	summaries	opus	summaries	1-peter/1	2-peter/3	1 Peter 1 – 2 Peter 3	review-word-meanings:* review-grammar:*
+summaries-146	summaries	opus	summaries	1-john/1	revelation/2	1 John 1 – Revelation 2	review-word-meanings:* review-grammar:*
+summaries-147	summaries	opus	summaries	revelation/3	revelation/13	Revelation 3–13	review-word-meanings:* review-grammar:*
+summaries-148	summaries	opus	summaries	revelation/14	revelation/22	Revelation 14–22	review-word-meanings:* review-grammar:*
+summaries-149	summaries	opus	summaries	title-page/1	1-nephi/4	Title Page 1 – 1 Nephi 4	review-word-meanings:* review-grammar:*
+summaries-150	summaries	opus	summaries	1-nephi/5	1-nephi/11	1 Nephi 5–11	review-word-meanings:* review-grammar:*
+summaries-151	summaries	opus	summaries	1-nephi/12	1-nephi/15	1 Nephi 12–15	review-word-meanings:* review-grammar:*
+summaries-152	summaries	opus	summaries	1-nephi/16	1-nephi/18	1 Nephi 16–18	review-word-meanings:* review-grammar:*
+summaries-153	summaries	opus	summaries	1-nephi/19	1-nephi/22	1 Nephi 19–22	review-word-meanings:* review-grammar:*
+summaries-154	summaries	opus	summaries	2-nephi/1	2-nephi/4	2 Nephi 1–4	review-word-meanings:* review-grammar:*
+summaries-155	summaries	opus	summaries	2-nephi/5	2-nephi/9	2 Nephi 5–9	review-word-meanings:* review-grammar:*
+summaries-156	summaries	opus	summaries	2-nephi/10	2-nephi/18	2 Nephi 10–18	review-word-meanings:* review-grammar:*
+summaries-157	summaries	opus	summaries	2-nephi/19	2-nephi/25	2 Nephi 19–25	review-word-meanings:* review-grammar:*
+summaries-158	summaries	opus	summaries	2-nephi/26	2-nephi/29	2 Nephi 26–29	review-word-meanings:* review-grammar:*
+summaries-159	summaries	opus	summaries	2-nephi/30	jacob/3	2 Nephi 30 – Jacob 3	review-word-meanings:* review-grammar:*
+summaries-160	summaries	opus	summaries	jacob/4	jacob/6	Jacob 4–6	review-word-meanings:* review-grammar:*
+summaries-161	summaries	opus	summaries	jacob/7	omni/1	Jacob 7 – Omni 1	review-word-meanings:* review-grammar:*
+summaries-162	summaries	opus	summaries	words-of-mormon/1	mosiah/3	Words of Mormon 1 – Mosiah 3	review-word-meanings:* review-grammar:*
+summaries-163	summaries	opus	summaries	mosiah/4	mosiah/8	Mosiah 4–8	review-word-meanings:* review-grammar:*
+summaries-164	summaries	opus	summaries	mosiah/9	mosiah/13	Mosiah 9–13	review-word-meanings:* review-grammar:*
+summaries-165	summaries	opus	summaries	mosiah/14	mosiah/19	Mosiah 14–19	review-word-meanings:* review-grammar:*
+summaries-166	summaries	opus	summaries	mosiah/20	mosiah/24	Mosiah 20–24	review-word-meanings:* review-grammar:*
+summaries-167	summaries	opus	summaries	mosiah/25	mosiah/29	Mosiah 25–29	review-word-meanings:* review-grammar:*
+summaries-168	summaries	opus	summaries	alma/1	alma/4	Alma 1–4	review-word-meanings:* review-grammar:*
+summaries-169	summaries	opus	summaries	alma/5	alma/8	Alma 5–8	review-word-meanings:* review-grammar:*
+summaries-170	summaries	opus	summaries	alma/9	alma/12	Alma 9–12	review-word-meanings:* review-grammar:*
+summaries-171	summaries	opus	summaries	alma/13	alma/17	Alma 13–17	review-word-meanings:* review-grammar:*
+summaries-172	summaries	opus	summaries	alma/18	alma/21	Alma 18–21	review-word-meanings:* review-grammar:*
+summaries-173	summaries	opus	summaries	alma/22	alma/26	Alma 22–26	review-word-meanings:* review-grammar:*
+summaries-174	summaries	opus	summaries	alma/27	alma/30	Alma 27–30	review-word-meanings:* review-grammar:*
+summaries-175	summaries	opus	summaries	alma/31	alma/34	Alma 31–34	review-word-meanings:* review-grammar:*
+summaries-176	summaries	opus	summaries	alma/35	alma/39	Alma 35–39	review-word-meanings:* review-grammar:*
+summaries-177	summaries	opus	summaries	alma/40	alma/43	Alma 40–43	review-word-meanings:* review-grammar:*
+summaries-178	summaries	opus	summaries	alma/44	alma/47	Alma 44–47	review-word-meanings:* review-grammar:*
+summaries-179	summaries	opus	summaries	alma/48	alma/51	Alma 48–51	review-word-meanings:* review-grammar:*
+summaries-180	summaries	opus	summaries	alma/52	alma/55	Alma 52–55	review-word-meanings:* review-grammar:*
+summaries-181	summaries	opus	summaries	alma/56	alma/58	Alma 56–58	review-word-meanings:* review-grammar:*
+summaries-182	summaries	opus	summaries	alma/59	alma/62	Alma 59–62	review-word-meanings:* review-grammar:*
+summaries-183	summaries	opus	summaries	alma/63	helaman/4	Alma 63 – Helaman 4	review-word-meanings:* review-grammar:*
+summaries-184	summaries	opus	summaries	helaman/5	helaman/7	Helaman 5–7	review-word-meanings:* review-grammar:*
+summaries-185	summaries	opus	summaries	helaman/8	helaman/12	Helaman 8–12	review-word-meanings:* review-grammar:*
+summaries-186	summaries	opus	summaries	helaman/13	helaman/16	Helaman 13–16	review-word-meanings:* review-grammar:*
+summaries-187	summaries	opus	summaries	3-nephi/1	3-nephi/4	3 Nephi 1–4	review-word-meanings:* review-grammar:*
+summaries-188	summaries	opus	summaries	3-nephi/5	3-nephi/9	3 Nephi 5–9	review-word-meanings:* review-grammar:*
+summaries-189	summaries	opus	summaries	3-nephi/10	3-nephi/14	3 Nephi 10–14	review-word-meanings:* review-grammar:*
+summaries-190	summaries	opus	summaries	3-nephi/15	3-nephi/19	3 Nephi 15–19	review-word-meanings:* review-grammar:*
+summaries-191	summaries	opus	summaries	3-nephi/20	3-nephi/26	3 Nephi 20–26	review-word-meanings:* review-grammar:*
+summaries-192	summaries	opus	summaries	3-nephi/27	4-nephi/1	3 Nephi 27 – 4 Nephi 1	review-word-meanings:* review-grammar:*
+summaries-193	summaries	opus	summaries	mormon/1	mormon/6	Mormon 1–6	review-word-meanings:* review-grammar:*
+summaries-194	summaries	opus	summaries	mormon/7	ether/2	Mormon 7 – Ether 2	review-word-meanings:* review-grammar:*
+summaries-195	summaries	opus	summaries	ether/3	ether/8	Ether 3–8	review-word-meanings:* review-grammar:*
+summaries-196	summaries	opus	summaries	ether/9	ether/12	Ether 9–12	review-word-meanings:* review-grammar:*
+summaries-197	summaries	opus	summaries	ether/13	moroni/7	Ether 13 – Moroni 7	review-word-meanings:* review-grammar:*
+summaries-198	summaries	opus	summaries	moroni/8	moroni/10	Moroni 8–10	review-word-meanings:* review-grammar:*
+summaries-199	summaries	opus	summaries	doctrine-and-covenants/1	doctrine-and-covenants/9	D&C 1–9	review-word-meanings:* review-grammar:*
+summaries-200	summaries	opus	summaries	doctrine-and-covenants/10	doctrine-and-covenants/19	D&C 10–19	review-word-meanings:* review-grammar:*
+summaries-201	summaries	opus	summaries	doctrine-and-covenants/20	doctrine-and-covenants/28	D&C 20–28	review-word-meanings:* review-grammar:*
+summaries-202	summaries	opus	summaries	doctrine-and-covenants/29	doctrine-and-covenants/38	D&C 29–38	review-word-meanings:* review-grammar:*
+summaries-203	summaries	opus	summaries	doctrine-and-covenants/39	doctrine-and-covenants/45	D&C 39–45	review-word-meanings:* review-grammar:*
+summaries-204	summaries	opus	summaries	doctrine-and-covenants/46	doctrine-and-covenants/54	D&C 46–54	review-word-meanings:* review-grammar:*
+summaries-205	summaries	opus	summaries	doctrine-and-covenants/55	doctrine-and-covenants/61	D&C 55–61	review-word-meanings:* review-grammar:*
+summaries-206	summaries	opus	summaries	doctrine-and-covenants/62	doctrine-and-covenants/68	D&C 62–68	review-word-meanings:* review-grammar:*
+summaries-207	summaries	opus	summaries	doctrine-and-covenants/69	doctrine-and-covenants/76	D&C 69–76	review-word-meanings:* review-grammar:*
+summaries-208	summaries	opus	summaries	doctrine-and-covenants/77	doctrine-and-covenants/84	D&C 77–84	review-word-meanings:* review-grammar:*
+summaries-209	summaries	opus	summaries	doctrine-and-covenants/85	doctrine-and-covenants/88	D&C 85–88	review-word-meanings:* review-grammar:*
+summaries-210	summaries	opus	summaries	doctrine-and-covenants/89	doctrine-and-covenants/97	D&C 89–97	review-word-meanings:* review-grammar:*
+summaries-211	summaries	opus	summaries	doctrine-and-covenants/98	doctrine-and-covenants/102	D&C 98–102	review-word-meanings:* review-grammar:*
+summaries-212	summaries	opus	summaries	doctrine-and-covenants/103	doctrine-and-covenants/106	D&C 103–106	review-word-meanings:* review-grammar:*
+summaries-213	summaries	opus	summaries	doctrine-and-covenants/107	doctrine-and-covenants/109	D&C 107–109	review-word-meanings:* review-grammar:*
+summaries-214	summaries	opus	summaries	doctrine-and-covenants/110	doctrine-and-covenants/121	D&C 110–121	review-word-meanings:* review-grammar:*
+summaries-215	summaries	opus	summaries	doctrine-and-covenants/122	doctrine-and-covenants/124	D&C 122–124	review-word-meanings:* review-grammar:*
+summaries-216	summaries	opus	summaries	doctrine-and-covenants/125	doctrine-and-covenants/132	D&C 125–132	review-word-meanings:* review-grammar:*
+summaries-217	summaries	opus	summaries	doctrine-and-covenants/133	doctrine-and-covenants/138	D&C 133–138	review-word-meanings:* review-grammar:*
+summaries-218	summaries	opus	summaries	moses/1	moses/5	Moses 1–5	review-word-meanings:* review-grammar:*
+summaries-219	summaries	opus	summaries	moses/6	moses/8	Moses 6–8	review-word-meanings:* review-grammar:*
+summaries-220	summaries	opus	summaries	abraham/1	abraham/5	Abraham 1–5	review-word-meanings:* review-grammar:*
+summaries-221	summaries	opus	summaries	facsimile-1/1	articles-of-faith/1	Facsimile 1 1 – Articles of Faith 1	review-word-meanings:* review-grammar:*
+review-summaries-1	summaries	opus	summaries	genesis/1	numbers/15	Genesis 1 – Numbers 15	summaries:*
+review-summaries-2	summaries	opus	summaries	numbers/16	1-samuel/24	Numbers 16 – 1 Samuel 24	summaries:*
+review-summaries-3	summaries	opus	summaries	1-samuel/25	2-chronicles/25	1 Samuel 25 – 2 Chronicles 25	summaries:*
+review-summaries-4	summaries	opus	summaries	2-chronicles/26	proverbs/23	2 Chronicles 26 – Proverbs 23	summaries:*
+review-summaries-5	summaries	opus	summaries	proverbs/24	ezekiel/16	Proverbs 24 – Ezekiel 16	summaries:*
+review-summaries-6	summaries	opus	summaries	ezekiel/17	mark/12	Ezekiel 17 – Mark 12	summaries:*
+review-summaries-7	summaries	opus	summaries	mark/13	philippians/3	Mark 13 – Philippians 3	summaries:*
+review-summaries-8	summaries	opus	summaries	philippians/4	jacob/6	Philippians 4 – Jacob 6	summaries:*
+review-summaries-9	summaries	opus	summaries	jacob/7	alma/55	Jacob 7 – Alma 55	summaries:*
+review-summaries-10	summaries	opus	summaries	alma/56	doctrine-and-covenants/19	Alma 56 – D&C 19	summaries:*
+review-summaries-11	summaries	opus	summaries	doctrine-and-covenants/20	abraham/5	D&C 20 – Abraham 5	summaries:*
+review-summaries-12	summaries	opus	summaries	facsimile-1/1	articles-of-faith/1	Facsimile 1 1 – Articles of Faith 1	summaries:*
+summary-books-001	summary-books	opus	summaries	genesis	exodus	Genesis – Exodus	review-summaries:*
+summary-books-002	summary-books	opus	summaries	leviticus	deuteronomy	Leviticus – Deuteronomy	review-summaries:*
+summary-books-003	summary-books	opus	summaries	joshua	2-samuel	Joshua – 2 Samuel	review-summaries:*
+summary-books-004	summary-books	opus	summaries	1-kings	2-chronicles	1 Kings – 2 Chronicles	review-summaries:*
+summary-books-005	summary-books	opus	summaries	ezra	psalms	Ezra – Psalms	review-summaries:*
+summary-books-006	summary-books	opus	summaries	proverbs	isaiah	Proverbs – Isaiah	review-summaries:*
+summary-books-007	summary-books	opus	summaries	jeremiah	ezekiel	Jeremiah – Ezekiel	review-summaries:*
+summary-books-008	summary-books	opus	summaries	daniel	matthew	Daniel – Matthew	review-summaries:*
+summary-books-009	summary-books	opus	summaries	mark	acts	Mark – Acts	review-summaries:*
+summary-books-010	summary-books	opus	summaries	romans	philemon	Romans – Philemon	review-summaries:*
+summary-books-011	summary-books	opus	summaries	hebrews	revelation	Hebrews – Revelation	review-summaries:*
+summary-books-012	summary-books	opus	summaries	title-page	mosiah	Title Page – Mosiah	review-summaries:*
+summary-books-013	summary-books	opus	summaries	alma	moroni	Alma – Moroni	review-summaries:*
+summary-books-014	summary-books	opus	summaries	doctrine-and-covenants	doctrine-and-covenants	D&C	review-summaries:*
+summary-books-015	summary-books	opus	summaries	moses	articles-of-faith	Moses – Articles of Faith	review-summaries:*
+review-summary-books-1	summary-books	opus	summaries	genesis	articles-of-faith	Genesis – Articles of Faith	summary-books:*

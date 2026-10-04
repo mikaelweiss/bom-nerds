@@ -7,7 +7,7 @@ from ...passages import chapter_span
 from ..layer import Layer, Problems, chapter_name, kinds, passage_of, scope_span
 
 INSTRUCTIONS = """
-Find every literary structure that starts in this chapter. Kinds:
+Find every literary structure that starts in each chapter. Kinds:
 
 - chiasm: ideas laid out and then repeated in reverse order: A, B, C, C', B', A'.
 - parallelism: lines in matching form that say the same thing again in other words, or say its opposite.
@@ -17,7 +17,7 @@ Find every literary structure that starts in this chapter. Kinds:
 Rules:
 
 - Tag a structure only where the pattern is plain in the words. Many chapters have none, and then the answer is [].
-- A structure starts in this chapter and may run on into later chapters of the same book. Read them with show.
+- A structure starts in the chapter of its section and may run on into later chapters of the same book that this prompt shows.
 - A structure has two or more parts, in reading order. Each part sits inside the structure, and parts side by side never share words.
 - A part can hold two or more parts of its own under "parts", each inside it.
 - Label chiasm parts with letters on the way in and the same letter with ' on the way back: A, B, C, C', B', A'. Label the parts of every other kind 1, 2, 3. A part inside another adds a number to its parent's label: "2.1", "2.2". Labels are unique within a structure.

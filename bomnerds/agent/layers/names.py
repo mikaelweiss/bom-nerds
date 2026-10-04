@@ -2,23 +2,30 @@
 
 import sqlite3
 
-from ...passages import chapter_span, english_edition
+from ...passages import chapter_span, english_edition, reference
 from ...words import WORD
-from ..layer import Layer, Problems, chapter_words, passage_of, scope_span, split_chapter
+from ..layer import Layer, Problems, Reading, chapter_words, passage_of, scope_span, split_chapter, unflag, where
 
 INSTRUCTIONS = """
-Tag every name and title in this chapter with the entity it refers to: "Nephi", "Jerusalem", "the Holy One of Israel", "the Lamanites".
-Pronouns such as "he" and "thee" come in a later job, so leave them out.
+Tag every name and title in each chapter with the entity it refers to: "Nephi", "Jerusalem", "the Holy One of Israel", "the Lamanites".
+Pronouns such as "he" and "thee" come in a later pass, so leave them out.
 
-- Search for each entity and pick the one this verse means. Entities already found in this book come first.
+- Pick each entity from the list under Entities: the one this verse means.
 - Tag a title or descriptive name as a whole: "the Holy One of Israel", not "Israel" inside it, unless the inner name also refers to an entity on its own.
 - Jehovah and LORD in the Old Testament name Jesus Christ, and the Father names God the Father. Where a verse names both, tag each name to its own entity.
 - One passage names one entity.
-
-Answer with one object per mention:
-
-{ "entity": "nephi-son-of-lehi", "passage": { "verse": "1 Nephi 3:7", "quote": "Nephi" } }
+- Every word listed under "Capitalized words" must be inside a tag, or marked as no name with "-" in place of the entity, as "Behold" is below.
 """
+
+FORMAT = """Write one line per mention: the chapter and verse, the quote, and the entity, joined by " | ".
+
+3:7 | Nephi | nephi-son-of-lehi
+3:16 | the Holy One of Israel | jesus-christ
+3:28 | Lemuel @ Lemuel did | lemuel
+3:29 | Behold | -
+
+When the quote appears more than once in its verse, add " @ " and longer words that appear once and hold it once, as on the Lemuel line. An error that says to add "in" means this.
+A "-" in place of the entity marks a capitalized word that names no one."""
 
 
 class Names(Layer):
@@ -26,20 +33,58 @@ class Names(Layer):
     step = 4
     instructions = INSTRUCTIONS
 
-    def ready(self, db, jobs, scope):
-        book, _ = split_chapter(scope)
-        earlier = super().ready(db, jobs, scope)
-        if earlier or db.execute("select work_id from book where id = ?", (book,)).fetchone()[0] == "bible":
-            return earlier
-        if jobs.get("entities", book).settled() is None:
-            return f"the entities job for this book, entities/{book}, must settle first"
-        return None
+    format = FORMAT
 
-    def context(self, db, jobs, scope):
+    def extra(self, db, jobs, scope, batch=()):
+        verses = {}
+        taken = covered(self.fixed(db, scope) + self.given(db, scope))
         book, chapter = split_chapter(scope)
-        candidates = book_entities(db, book, chapter)
-        listed = "\n".join(f"{id} ({type_id}) {name}. {description}" for id, type_id, name, description in candidates)
-        return super().context(db, jobs, scope) + ("\n\n## Entities found in this book whose names appear here\n\n" + listed if listed else "")
+        for word, verse, text in name_candidates(db, scope):
+            if word not in taken:
+                verses.setdefault(verse, []).append(text)
+        listed = "\n".join(f"{chapter}:{verse} {', '.join(texts)}" for verse, texts in verses.items())
+        return "## Capitalized words\n\n" + listed if listed else ""
+
+    def read(self, db, scope, lines):
+        book, chapter = split_chapter(scope)
+        problems = Problems(db)
+        reading = Reading()
+        for number, line in enumerate(lines, 1):
+            problems.at(f"line {number}")
+            text, unsure = unflag(line)
+            parts = [part.strip() for part in text.split("|")]
+            if len(parts) != 3 or not all(parts):
+                problems.add('write "verse | quote | entity", such as "3:7 | Nephi | nephi-son-of-lehi"')
+                continue
+            verse, quote, entity = parts
+            passage = verse_passage(db, book, chapter, verse, quote, problems)
+            if passage is None:
+                continue
+            if entity == "-":
+                reading.skipped.append(passage)
+                continue
+            item = {"entity": entity, "passage": passage}
+            reading.items.append(item)
+            if unsure:
+                reading.flagged.append(text)
+        problems.raise_any()
+        return reading
+
+    def complete(self, db, scope, reading):
+        problems = Problems(db)
+        # Parse reports a passage that does not resolve, so this only collects the ones that do.
+        quiet = Problems(db)
+        passages = reading.skipped + [found["passage"] for found in reading.unlisted] + [item.get("passage") for item in reading.items]
+        spans = [span for span in (quiet.passage(passage, within=scope) for passage in passages) if span]
+        taken = covered([(None, *span) for span in spans] + self.fixed(db, scope) + self.given(db, scope))
+        book, chapter = split_chapter(scope)
+        missing = {}
+        for word, verse, text in name_candidates(db, scope):
+            if word not in taken:
+                missing.setdefault(verse, []).append(text)
+        if missing:
+            problems.add("these capitalized words are in no tag. Tag each one, or mark it with \"-\" when it names no one: " + "; ".join(f"{chapter}:{verse} {', '.join(texts)}" for verse, texts in missing.items()))
+        return problems.messages
 
     def fixed(self, db, scope):
         book, chapter = split_chapter(scope)
@@ -67,7 +112,7 @@ class Names(Layer):
         problems = Problems(db)
         tags = []
         for number, item in enumerate(problems.items(answer), 1):
-            problems.at(f"item {number}")
+            problems.at(where(number, item))
             if not problems.fields(item, ("entity", "passage")):
                 continue
             entity = problems.entity(item["entity"])
@@ -121,6 +166,45 @@ def find_sole_names(db: sqlite3.Connection) -> dict[str, str]:
         for name, entities in carriers.items()
         if len(entities) == 1 and name and name[0].isupper() and not (" " not in name and name.lower() in lowercase)
     }
+
+
+def covered(tags) -> set[int]:
+    """Every word inside the passage of one of these (entity, first, last) tags."""
+    return {word for _, first, last in tags for word in range(first, last + 1)}
+
+
+def name_candidates(db: sqlite3.Connection, scope: str) -> list[tuple[int, int, str]]:
+    """(word id, verse, text) of each capitalized word inside a sentence, which a names answer tags or marks as no name."""
+    first, last = scope_span(db, scope)
+    rows = db.execute(
+        """
+        select w.id, w.verse, w.text from (
+            select id, verse, text, position, before, lag(after) over (partition by verse order by position) as prior
+            from word where id between ? and ?
+        ) w left join word_headword h on h.word_id = w.id
+        where substr(w.text, 1, 1) between 'A' and 'Z' and w.position > 1 and w.text not in ('I', 'O')
+            and w.prior not glob '*[.?!:;]*' and w.before not glob '*[(“‘"]*' and coalesce(h.part_of_speech, '') <> 'pronoun'
+        order by w.id
+        """,
+        (first, last),
+    )
+    return list(rows)
+
+
+def verse_passage(db: sqlite3.Connection, book: str, chapter: int, verse: str, quote: str, problems: Problems) -> dict | None:
+    """The passage a short line points at: "3:7" and a quote, with "quote @ longer words" when the quote appears more than once."""
+    numbers = verse.split(":")
+    if len(numbers) != 2 or not all(n.isdigit() for n in numbers):
+        problems.add(f'"{verse}" must be chapter and verse, such as {chapter}:7')
+        return None
+    if int(numbers[0]) != chapter:
+        problems.add(f"{verse} is not in chapter {chapter}. Write each line under its own chapter's heading")
+        return None
+    words, _, within = quote.partition(" @ ")
+    passage = {"verse": reference(db, book, chapter, int(numbers[1])), "quote": words.strip()}
+    if within.strip():
+        passage["in"] = within.strip()
+    return passage
 
 
 def only_pronouns(db: sqlite3.Connection, first: int, last: int) -> bool:

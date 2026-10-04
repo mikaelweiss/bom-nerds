@@ -122,21 +122,11 @@ class StructuresTest(unittest.TestCase):
         self.assertEqual(self.rows(), ([], []))
 
     def test_runs_that_agree_settle_and_reset_deletes(self):
-        jobs.submit(self.db, self.job, "a", [chiasm(), listing()])
-        jobs.submit(self.db, self.job, "b", [listing(), chiasm()])
-        self.assertEqual(self.job.state(self.db), "settled")
+        jobs.submit(self.db, self.job, [listing(), chiasm()])
+        self.assertIsNotNone(self.job.settled())
         self.assertEqual(len(self.rows()[0]), 2)
         jobs.reset(self.db, self.job)
         self.assertEqual(self.rows(), ([], []))
-
-    def test_waits_for_earlier_steps(self):
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, SCOPE))
-        earlier = [layer for layer in LAYERS.values() if layer.step < self.layer.step and layer.scope == "chapter"]
-        for layer in earlier:
-            (jobs.Job(layer, SCOPE).path / "settled.json").unlink()
-        if earlier:
-            self.assertIn("must settle first", self.layer.ready(self.db, jobs.Jobs, SCOPE))
-
 
 if __name__ == "__main__":
     unittest.main()

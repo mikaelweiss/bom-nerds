@@ -2,29 +2,28 @@
 
 import json
 
-from ...passages import chapter_span, locate, parse_reference, reference, resolve
-from ..jobs import CLI
+from ...passages import chapter_span
 from ..layer import Layer, Problems, in_chapter, kinds, passage_of, scope_span, chapter_name
 
 WRITTEN = ("alludes_to", "fulfills", "cross_reference")
 
-INSTRUCTIONS = f"""
-Link passages of this chapter to passages elsewhere in scripture. Write only these kinds:
+INSTRUCTIONS = """
+Link passages of each chapter to passages elsewhere in scripture. Write only these kinds:
 
 - alludes_to: the words echo another passage without quoting it closely.
 - fulfills: this passage tells the fulfillment of a prophecy or promise made at the other passage.
 - cross_reference: the two passages treat the same event, person, or teaching, and they are in different works (Bible, Book of Mormon, Doctrine and Covenants, Pearl of Great Price).
 
-- "from" sits in this chapter. "to" can be anywhere, and read it with show first so your quote is exact.
+- "from" sits in the chapter of its section. "to" can be anywhere. Outside this prompt's chapters, point "to" at whole verses unless you know the words exactly. When a quote misses, submit shows the verse's real text.
 - Link a verse, a run of verses, or the words that carry the connection. Use a whole chapter only when the whole chapter is the connection.
 - Link only what a careful reader would call a clear connection. Leave loose similarity out.
 - A cross-reference runs both ways, so one object covers it. Do not write it twice.
 - The script already links passages that follow the Bible closely (quotes and parallel) and every Bible cross-reference within the Bible. Do not repeat them as other kinds.
-  The Bible cross-references are too many to list here. See those of a verse or chapter with: {CLI} links "Genesis 1:1"
+  The Bible cross-references are too many to list here, so each chapter shows only how many it has. Submit refuses a link already stored.
 
 Answer with one object per link:
 
-""" + """{ "kind": "fulfills", "from": { "verse": "Matthew 1:23" }, "to": { "verse": "Isaiah 7:14" } }
+{ "kind": "fulfills", "from": { "verse": "Matthew 1:23" }, "to": { "verse": "Isaiah 7:14" } }
 """
 
 
@@ -33,10 +32,9 @@ class Links(Layer):
     step = 7
     instructions = INSTRUCTIONS
 
-    def context(self, db, jobs, scope):
+    def extra(self, db, jobs, scope, batch=()):
         _, bulk = split_links(db, *scope_span(db, scope))
-        counted = "\n\n## Cross-references the script stored\n\n" + json.dumps(bulk_line(db, scope, bulk), ensure_ascii=False) if bulk else ""
-        return super().context(db, jobs, scope) + counted
+        return "## Cross-references the script stored\n\n" + json.dumps(bulk_line(db, scope, bulk), ensure_ascii=False) if bulk else ""
 
     def given(self, db, scope):
         return split_links(db, *scope_span(db, scope))[0]
@@ -103,11 +101,6 @@ class Links(Layer):
             lines.append(bulk_line(db, f"{book_id}/{chapter}", bulk))
         return lines
 
-    def commands(self, subparsers):
-        command = subparsers.add_parser("links", help="list every link to or from a verse or chapter, Bible cross-references included")
-        command.add_argument("reference", help='such as "Alma 36:1" or "Alma 36"')
-        command.set_defaults(run=run_links)
-
 
 def split_links(db, first: int, last: int) -> tuple[list[tuple], int]:
     """The links with an end in words first through last that an agent can read, and how many Bible cross-references there are besides."""
@@ -137,7 +130,7 @@ def touching(db, first: int, last: int) -> list[tuple[tuple, bool]]:
 
 
 def bulk_line(db, scope: str, count: int) -> dict:
-    return {"kind": "cross_reference", "count": count, "list": f'{CLI} links "{chapter_name(db, scope)}"'}
+    return {"kind": "cross_reference", "count": count}
 
 
 def work_of(db, word_id: int) -> str:
@@ -146,23 +139,6 @@ def work_of(db, word_id: int) -> str:
 
 def work_name(db, work_id: str) -> str:
     return db.execute("select name from work where id = ?", (work_id,)).fetchone()[0]
-
-
-def run_links(db, args):
-    book, chapter, verse = parse_reference(db, args.reference)
-    span = resolve(db, {"chapter": reference(db, book, chapter)} if verse is None else {"verse": reference(db, book, chapter, verse)})
-    for (kind, *ends), _ in touching(db, *span):
-        print(f"{kind}\t{short(db, *ends[:2])}\t{short(db, *ends[2:])}")
-
-
-def short(db, first: int, last: int) -> str:
-    """The verses a passage touches, as people write them: "John 1:1-3"."""
-    _, book, chapter, verse = locate(db, first)
-    _, _, last_chapter, last_verse = locate(db, last)
-    start = reference(db, book, chapter, verse)
-    if (chapter, verse) == (last_chapter, last_verse):
-        return start
-    return f"{start}-{last_verse}" if chapter == last_chapter else f"{start}-{last_chapter}:{last_verse}"
 
 
 LAYERS = [Links()]

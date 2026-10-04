@@ -3,7 +3,7 @@ from unittest import mock
 
 from bomnerds.agent import jobs
 from bomnerds.agent.layers import LAYERS, relationships
-from bomnerds.agent.prompt import prompt
+from bomnerds.agent.prompt import job_text
 from bomnerds.passages import Rejected, resolve
 from tests.agent_fixtures import database, entity, job_folder
 
@@ -189,38 +189,27 @@ class RelationshipsTest(unittest.TestCase):
         self.script_relationship("seth", "child_of", "adam", self.span("5:3", "Seth"))
         self.settle_earlier("genesis/5")
         with self.assertRaisesRegex(Rejected, "already tagged"):
-            jobs.check(self.db, self.job, "a", [relationship("seth", "child_of", "adam", passage("5:3", "Seth"))])
+            jobs.check(self.db, self.job, [relationship("seth", "child_of", "adam", passage("5:3", "Seth"))])
         more = relationship("seth", "child_of", "adam", passage("5:3", "Adam lived"))
-        self.assertEqual(len(jobs.check(self.db, self.job, "a", [more])), 1)
-        self.assertIn("Already tagged", prompt(self.db, self.job, "a"))
+        self.assertEqual(len(jobs.check(self.db, self.job, [more])), 1)
+        self.assertIn("Already stored", job_text(self.db, self.job))
 
     def test_a_settled_job_adds_evidence_to_a_script_relationship_and_shows_it(self):
         self.script_relationship("seth", "child_of", "adam", self.span("5:3", "Seth"))
         self.settle_earlier("genesis/5")
         answer = [relationship("seth", "child_of", "adam", passage("5:3", "Adam lived")), ENOS_CHILD_OF_SETH]
-        jobs.submit(self.db, self.job, "a", answer)
-        self.assertEqual(self.rows()[0], [("seth", "child_of", "adam")])
-        jobs.submit(self.db, self.job, "b", list(reversed(answer)))
-        self.assertEqual(self.job.state(self.db), "settled")
+        jobs.submit(self.db, self.job, answer)
+        self.assertIsNotNone(self.job.settled())
         shown = self.layer.shown(self.db, "kjv", "genesis", 5)
         self.assertEqual([(s["subject"], s["object"], len(s["evidence"])) for s in shown], [("seth", "adam", 2), ("enos", "seth", 1)])
         self.assertEqual(shown[0]["evidence"], [passage("5:3", "Adam lived"), passage("5:3", "Seth")])
-
-    def test_a_decider_settles_what_the_runs_differ_on(self):
-        self.settle_earlier("genesis/5")
-        jobs.submit(self.db, self.job, "a", [SETH_CHILD_OF_ADAM, ENOS_CHILD_OF_SETH])
-        jobs.submit(self.db, self.job, "b", [SETH_CHILD_OF_ADAM, relationship("enos", "sibling_of", "seth", passage("5:6", "begat Enos"))])
-        self.assertEqual(self.job.state(self.db), "needs decider")
-        jobs.submit(self.db, self.job, "decider", [ENOS_CHILD_OF_SETH])
-        self.assertEqual(self.rows()[0], [("seth", "child_of", "adam"), ("enos", "child_of", "seth")])
 
     def test_reset_deletes_only_this_jobs_evidence(self):
         self.settle_earlier("genesis/5")
         self.settle_earlier("genesis/6")
         other = relationship("seth", "child_of", "adam", passage("6:1", "sons of Adam, even Seth"))
         for job, answer in ((self.job, [SETH_CHILD_OF_ADAM]), (self.second, [other])):
-            jobs.submit(self.db, job, "a", answer)
-            jobs.submit(self.db, job, "b", answer)
+            jobs.submit(self.db, job, answer)
         jobs.reset(self.db, self.job)
         self.assertEqual(self.rows()[0], [("seth", "child_of", "adam")])
         self.assertEqual(len(self.rows()[1]), 1)
@@ -230,36 +219,24 @@ class RelationshipsTest(unittest.TestCase):
     def test_reset_keeps_a_script_relationship_that_had_no_evidence_before(self):
         self.db.execute("insert into relationship (subject_id, kind_id, object_id) values ('seth', 'child_of', 'adam')")
         self.settle_earlier("genesis/5")
-        jobs.submit(self.db, self.job, "a", [SETH_CHILD_OF_ADAM])
-        jobs.submit(self.db, self.job, "b", [SETH_CHILD_OF_ADAM])
+        jobs.submit(self.db, self.job, [SETH_CHILD_OF_ADAM])
         with mock.patch.object(relationships, "script_facts", return_value={("seth", "child_of", "adam")}):
             jobs.reset(self.db, self.job)
         self.assertEqual(self.rows(), ([("seth", "child_of", "adam")], []))
 
     def test_replay_stores_settled_jobs_again(self):
         self.settle_earlier("genesis/5")
-        jobs.submit(self.db, self.job, "a", [SETH_CHILD_OF_ADAM])
-        jobs.submit(self.db, self.job, "b", [SETH_CHILD_OF_ADAM])
+        jobs.submit(self.db, self.job, [SETH_CHILD_OF_ADAM])
         before = self.rows()
         self.db.execute("delete from relationship")
         jobs.replay(self.db, [self.layer])
         self.assertEqual(self.rows(), before)
 
-    def test_waits_for_every_earlier_chapter_job_on_the_chapter(self):
-        earlier = [layer for layer in LAYERS.values() if layer.step < self.layer.step and layer.scope == "chapter" and "genesis/5" in layer.scope_set(self.db)]
-        self.assertTrue(earlier)
-        self.assertIn("must settle first", self.layer.ready(self.db, jobs.Jobs, "genesis/5"))
-        self.assertTrue(self.job.state(self.db).startswith("waiting"))
-        self.settle_earlier("genesis/5")
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, "genesis/5"))
-        self.assertEqual(self.job.state(self.db), "needs a and b")
-
     def test_the_prompt_lists_every_kind_with_how_it_reads(self):
         self.settle_earlier("genesis/5")
-        text = prompt(self.db, self.job, "a")
+        text = job_text(self.db, self.job)
         self.assertIn("child_of: subject, child of, object (reads back as parent of)", text)
         self.assertIn("spouse_of: subject, spouse of, object (two-way, stored once)", text)
-        self.assertIn("1 Nephi 1:4", text)
         self.assertIn("And Seth lived", text)
 
 

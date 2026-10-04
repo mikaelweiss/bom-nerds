@@ -2,7 +2,7 @@ import unittest
 
 from bomnerds.agent import jobs
 from bomnerds.agent.layers import LAYERS
-from bomnerds.agent.prompt import prompt
+from bomnerds.agent.prompt import job_text
 from bomnerds.agent.show import show
 from bomnerds.passages import Rejected
 from bomnerds.sentences import split
@@ -152,11 +152,11 @@ class GrammarTest(unittest.TestCase):
         self.rejects(broken, "the fixed clause .*they went.* is missing")
 
     def test_context_shows_every_sentence_with_its_fixed_parts(self):
-        context = self.layer.context(self.db, jobs.Jobs, SCOPE)
+        context = job_text(self.db, jobs.Job(self.layer, SCOPE))
         fixed = context.split("## Sentences and their fixed clauses")[1]
         self.assertEqual(fixed.count('{"sentence"'), 3)
         self.assertIn('"role": "verb", "passage": {"verse": "1 Nephi 3:1", "quote": "will go"}', fixed)
-        self.assertNotIn("Already tagged", prompt(self.db, self.job, "a"))
+        self.assertNotIn("Already tagged", job_text(self.db, self.job))
 
     def test_store_then_unstore_leaves_the_tables_as_they_were(self):
         before = self.rows()
@@ -172,36 +172,13 @@ class GrammarTest(unittest.TestCase):
 
     def test_runs_that_agree_settle_and_reset_restores_the_fixed_parts(self):
         before = self.rows()
-        jobs.submit(self.db, self.job, "a", answer())
-        jobs.submit(self.db, self.job, "b", answer())
-        self.assertEqual(self.job.state(self.db), "settled")
+        jobs.submit(self.db, self.job, answer())
+        self.assertIsNotNone(self.job.settled())
         self.assertIn('"quote": "hath commanded"', show(self.db, "1-nephi", 3))
         jobs.replay(self.db, [self.layer])
         self.assertEqual(len(self.rows()[1]), 12)
         jobs.reset(self.db, self.job)
         self.assertEqual(self.rows(), before)
-
-    def test_a_decider_settles_the_sentences_the_runs_differ_on(self):
-        other = answer()
-        other[1]["clauses"][0]["parts"][2]["role"] = "complement"
-        jobs.submit(self.db, self.job, "a", answer())
-        jobs.submit(self.db, self.job, "b", other)
-        self.assertEqual(self.job.state(self.db), "needs decider")
-        jobs.submit(self.db, self.job, "decider", answer()[1:2])
-        self.assertEqual(self.job.state(self.db), "settled")
-
-    def test_waits_for_sentences(self):
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, SCOPE))
-        self.db.execute("delete from sentence")
-        self.assertIn("no sentences", self.layer.ready(self.db, jobs.Jobs, SCOPE))
-
-    def test_waits_for_earlier_steps(self):
-        earlier = [layer for layer in LAYERS.values() if layer.step < self.layer.step and layer.scope == "chapter"]
-        for layer in earlier:
-            (jobs.Job(layer, SCOPE).path / "settled.json").unlink()
-        if earlier:
-            self.assertIn("must settle first", self.layer.ready(self.db, jobs.Jobs, SCOPE))
-
 
 if __name__ == "__main__":
     unittest.main()

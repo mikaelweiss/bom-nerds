@@ -1,6 +1,7 @@
 import unittest
 
 from bomnerds.agent import jobs
+from bomnerds.agent.prompt import job_text
 from bomnerds.agent.layers import LAYERS
 from bomnerds.agent.layers.pronouns import TAGGED
 from bomnerds.passages import Rejected
@@ -143,19 +144,19 @@ class PronounTest(unittest.TestCase):
     def test_check_rejects_the_same_fact_twice(self):
         self.settle_earlier(self.layer.step)
         with self.assertRaisesRegex(Rejected, "twice"):
-            jobs.check(self.db, self.job, "a", [mention("laban", 2, "He"), mention("laban", 2, "He")])
+            jobs.check(self.db, self.job, [mention("laban", 2, "He"), mention("laban", 2, "He")])
 
     def test_check_rejects_a_pronoun_the_script_settled(self):
         self.settle_earlier(self.layer.step)
         with self.assertRaisesRegex(Rejected, "already tagged"):
-            jobs.check(self.db, self.job, "a", [mention("nephi", 1, "my")])
+            jobs.check(self.db, self.job, [mention("nephi", 1, "my")])
 
     def test_check_rejects_a_pronoun_already_in_the_database(self):
         self.settle_earlier(self.layer.step)
         he = self.word("He", 0)
         self.db.execute("insert into mention (entity_id, kind_id, first_word_id, last_word_id) values ('jesus-christ', 'names', ?, ?)", (he, he))
         with self.assertRaisesRegex(Rejected, "already tagged"):
-            jobs.check(self.db, self.job, "a", [mention("jesus-christ", 2, "He")])
+            jobs.check(self.db, self.job, [mention("jesus-christ", 2, "He")])
 
     def test_store_then_unstore_leaves_the_table_as_it_was(self):
         before = self.mentions()
@@ -172,9 +173,8 @@ class PronounTest(unittest.TestCase):
     def test_two_agreeing_runs_store_the_script_tags_and_the_answers(self):
         self.settle_earlier(self.layer.step)
         answer = [mention("jesus-christ", 2, "He")]
-        jobs.submit(self.db, self.job, "a", answer)
-        jobs.submit(self.db, self.job, "b", answer)
-        self.assertEqual(self.job.state(self.db), "settled")
+        jobs.submit(self.db, self.job, answer)
+        self.assertIsNotNone(self.job.settled())
         stored = {(entity, first) for entity, _, first in self.db.execute("select entity_id, kind_id, first_word_id from mention")}
         self.assertIn(("jesus-christ", self.word("He", 0)), stored)
         self.assertIn(("nephi", self.word("my", 0)), stored)
@@ -182,34 +182,39 @@ class PronounTest(unittest.TestCase):
 
     def test_reset_deletes_the_script_tags_and_the_answers(self):
         self.settle_earlier(self.layer.step)
-        jobs.submit(self.db, self.job, "a", [])
-        jobs.submit(self.db, self.job, "b", [])
+        jobs.submit(self.db, self.job, [])
         self.assertTrue(self.mentions())
         jobs.reset(self.db, self.job)
         self.assertEqual(self.mentions(), [])
 
     def test_a_settled_job_replays(self):
         self.settle_earlier(self.layer.step)
-        jobs.submit(self.db, self.job, "a", [mention("jesus-christ", 2, "He")])
-        jobs.submit(self.db, self.job, "b", [mention("jesus-christ", 2, "He")])
+        jobs.submit(self.db, self.job, [mention("jesus-christ", 2, "He")])
         rows = "select entity_id, kind_id, first_word_id, last_word_id from mention order by first_word_id, entity_id"
         before = self.db.execute(rows).fetchall()
         self.db.execute("delete from mention")
         jobs.replay(self.db, [self.layer])
         self.assertEqual(self.db.execute(rows).fetchall(), before)
 
-    def test_waits_for_every_earlier_step(self):
-        self.assertRegex(self.layer.ready(self.db, jobs.Jobs, SCOPE), "must settle first")
-        self.settle_earlier(self.layer.step)
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, SCOPE))
-
-    def test_context_lists_the_pronouns_still_untagged(self):
-        context = self.layer.context(self.db, jobs.Jobs, SCOPE)
-        listed = context.split("## Pronouns you can tag")[1]
-        self.assertIn("1 Nephi 3:2: He, it", listed)
-        self.assertIn("1 Nephi 3:3: Thou, thou", listed)
-        self.assertNotIn("1 Nephi 3:1:", listed)
+    def test_context_numbers_the_pronouns_still_untagged(self):
+        listed = job_text(self.db, jobs.Job(self.layer, SCOPE)).split("## Pronouns")[1].split("## Already stored")[0]
+        self.assertIn("3:2  1 He  2 it", listed)
+        self.assertIn("3:3  1 Thou  2 thou", listed)
+        self.assertNotIn("3:1 ", listed)
         self.assertNotIn("that", listed)
+
+    def test_numbered_lines_read_as_mentions_and_flags(self):
+        reading = self.layer.read(self.db, SCOPE, ["3:2  1=jesus-christ  2=-", "3:3  1-2=lehi?"])
+        self.assertEqual([item["entity"] for item in reading.items], ["jesus-christ", "lehi", "lehi"])
+        self.assertEqual(len(reading.skipped), 1)
+        self.assertEqual(reading.flagged, ["3:3 1=lehi (Thou)", "3:3 2=lehi (thou)"])
+        self.assertEqual(self.layer.complete(self.db, SCOPE, reading), ['these pronouns have no answer. Answer each with its entity, or "-": 3:5 1'])
+
+    def test_numbered_lines_name_only_listed_pronouns(self):
+        with self.assertRaisesRegex(Rejected, "has pronouns 1 to 2, not 3"):
+            self.layer.read(self.db, SCOPE, ["3:2  3=nephi"])
+        with self.assertRaisesRegex(Rejected, "no numbered pronouns"):
+            self.layer.read(self.db, SCOPE, ["3:1  1=nephi"])
 
 
 class AboutTest(unittest.TestCase):
@@ -223,9 +228,6 @@ class AboutTest(unittest.TestCase):
         self.addCleanup(self.folder.__exit__, None, None, None)
         self.layer = LAYERS["about"]
         self.job = jobs.Job(self.layer, SCOPE)
-
-    def test_it_runs_in_step_7_beside_the_other_chapter_layers(self):
-        self.assertEqual((self.layer.step, self.layer.scope, self.layer.mode), (7, "chapter", "compare"))
 
     def test_a_valid_answer_round_trips(self):
         answer = [
@@ -258,7 +260,7 @@ class AboutTest(unittest.TestCase):
         self.settle_earlier()
         item = {"entity": "faith", "passage": {"verse": "1 Nephi 3:1"}}
         with self.assertRaisesRegex(Rejected, "twice"):
-            jobs.check(self.db, self.job, "a", [item, item])
+            jobs.check(self.db, self.job, [item, item])
 
     def test_check_rejects_what_is_already_tagged(self):
         self.settle_earlier()
@@ -266,7 +268,7 @@ class AboutTest(unittest.TestCase):
         self.db.execute("insert into mention (entity_id, kind_id, first_word_id, last_word_id) values ('faith', 'about', ?, ?)", (first, last))
         self.assertEqual(self.layer.given(self.db, SCOPE), [("faith", first, last)])
         with self.assertRaisesRegex(Rejected, "already tagged"):
-            jobs.check(self.db, self.job, "a", [{"entity": "faith", "passage": {"verse": "1 Nephi 3:1"}}])
+            jobs.check(self.db, self.job, [{"entity": "faith", "passage": {"verse": "1 Nephi 3:1"}}])
 
     def test_store_then_unstore_leaves_the_table_as_it_was(self):
         tags = self.layer.parse(self.db, SCOPE, [{"entity": "faith", "passage": {"verse": "1 Nephi 3:1"}}, {"entity": "obedience", "passage": {"verse": "1 Nephi 3:1"}}])
@@ -281,17 +283,9 @@ class AboutTest(unittest.TestCase):
     def test_two_agreeing_runs_store_the_answer(self):
         self.settle_earlier()
         answer = [{"entity": "faith", "passage": {"verse": "1 Nephi 3:2"}}]
-        jobs.submit(self.db, self.job, "a", answer)
-        jobs.submit(self.db, self.job, "b", answer)
-        self.assertEqual(self.job.state(self.db), "settled")
+        jobs.submit(self.db, self.job, answer)
+        self.assertIsNotNone(self.job.settled())
         self.assertEqual(self.db.execute("select entity_id, kind_id from mention").fetchall(), [("faith", "about")])
-
-    def test_waits_for_the_pronouns_job(self):
-        self.settle_earlier(besides=("pronouns",))
-        self.assertIn("pronouns", self.layer.ready(self.db, jobs.Jobs, SCOPE))
-        jobs.Job(LAYERS["pronouns"], SCOPE).write("settled", [])
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, SCOPE))
-
     def settle_earlier(self, besides=()):
         for layer in LAYERS.values():
             if layer.step < self.layer.step and layer.scope == "chapter" and layer.name not in besides:

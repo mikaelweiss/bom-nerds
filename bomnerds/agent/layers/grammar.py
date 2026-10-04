@@ -9,7 +9,7 @@ from ..jobs import Job, read
 from ..layer import Layer, Problems, kinds, passage_of, scope_span, split_chapter
 
 INSTRUCTIONS = """
-Complete the grammar of every sentence in this chapter: its clauses, and each clause's parts.
+Complete the grammar of every sentence in each chapter: its clauses, and each clause's parts.
 
 A clause is a group of words built around one verb. Clauses can hold clauses. Each part of a clause has one role:
 
@@ -74,20 +74,11 @@ class Grammar(Layer):
     sees = ()
     instructions = INSTRUCTIONS
 
-    def ready(self, db, jobs, scope):
-        earlier = super().ready(db, jobs, scope)
-        if earlier:
-            return earlier
-        if db.execute("select 1 from sentence where first_word_id between ? and ? limit 1", scope_span(db, scope)).fetchone() is None:
-            return "the chapter has no sentences yet. Run the scripts first: python3 -m bomnerds.build sentences taggers grammar"
-        return None
-
-    def context(self, db, jobs, scope):
+    def extra(self, db, jobs, scope, batch=()):
         book, chapter = split_chapter(scope)
         sentences = "\n".join(json.dumps(s, ensure_ascii=False) for s in self.shown(db, english_edition(db, book), book, chapter))
         return (
-            super().context(db, jobs, scope)
-            + "\n\n## Sentences and their fixed clauses\n\n"
+            "## Sentences and their fixed clauses\n\n"
             + "Every sentence of the chapter, one per line, with the clauses, subjects, and verbs two parsers agree on. "
             + "All of them are fixed: copy each line into your answer, keep everything in it, and complete it.\n\n"
             + sentences

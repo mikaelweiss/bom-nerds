@@ -6,7 +6,7 @@ from unittest import mock
 
 from bomnerds.agent import jobs
 from bomnerds.agent.layers import LAYERS, dictionary
-from bomnerds.agent.prompt import prompt
+from bomnerds.agent.prompt import job_text
 from bomnerds.agent.show import show
 from bomnerds.passages import Rejected
 from tests.agent_fixtures import database, job_folder
@@ -92,8 +92,7 @@ class DictionaryTest(unittest.TestCase):
 
     def settle(self, layer, scope, answer):
         job = jobs.Job(LAYERS[layer], scope)
-        for role in jobs.ROLES[job.layer.mode][:2]:
-            jobs.submit(self.db, job, role, answer)
+        jobs.submit(self.db, job, answer)
         return job
 
     def settle_headwords(self):
@@ -137,7 +136,7 @@ class HeadwordsTest(DictionaryTest):
         self.assertEqual(self.db.execute("select count(*) from headword where text = 'record'").fetchone(), (1,))
 
     def test_rejects_every_problem_the_spec_names(self):
-        check = lambda answer: jobs.check(self.db, jobs.Job(LAYERS["headwords"], "1-nephi/1"), "a", answer)
+        check = lambda answer: jobs.check(self.db, jobs.Job(LAYERS["headwords"], "1-nephi/1"), answer)
         with self.assertRaisesRegex(Rejected, "already has a headword"):
             check(self.answer() + [{"passage": nephi(1, "parents"), "headword": "parent", "part_of_speech": "noun"}])
         with self.assertRaisesRegex(Rejected, "no answer"):
@@ -153,19 +152,19 @@ class HeadwordsTest(DictionaryTest):
         with self.assertRaisesRegex(Rejected, "answered twice"):
             check(self.answer() + self.answer(headword="good"))
 
-    def test_later_chapter_jobs_wait_for_it(self):
-        self.assertEqual(LAYERS["names"].ready(self.db, jobs.Jobs, "1-nephi/1"), "headwords/1-nephi/1 must settle first")
-        self.settle("headwords", "1-nephi/1", self.answer())
-        self.assertNotIn("headwords", LAYERS["names"].ready(self.db, jobs.Jobs, "1-nephi/1") or "")
-
     def test_show_prints_only_the_words_it_settled(self):
         self.settle("headwords", "1-nephi/1", self.answer())
         shown = show(self.db, "1-nephi", 1, layers=("headwords",)).split("## headwords")[1]
         self.assertEqual(shown.strip().splitlines(), [json.dumps(self.answer()[0], ensure_ascii=False)])
 
-    def test_the_prompt_lists_each_word_with_the_taggers_guesses(self):
-        text = prompt(self.db, jobs.Job(LAYERS["headwords"], "1-nephi/1"), "a")
-        self.assertIn('{"verse": "1 Nephi 1:1", "quote": "goodly"}  spaCy: goodly, adjective. Stanza: good, adjective. MorphAdorner: no guess.', text)
+    def test_the_prompt_numbers_each_word_with_its_verse_and_the_taggers_guesses(self):
+        text = job_text(self.db, jobs.Job(LAYERS["headwords"], "1-nephi/1"))
+        self.assertIn("1 Nephi 1:1 I, Nephi, having been born of goodly parents, I make a record.\n1:1  1 goodly  spaCy: goodly, adjective. Stanza: good, adjective. MorphAdorner: no guess.", text)
+
+    def test_numbered_lines_read_as_headwords(self):
+        reading = LAYERS["headwords"].read(self.db, "1-nephi/1", ["1:1  1=goodly adjective?"])
+        self.assertEqual(reading.items, self.answer())
+        self.assertEqual(reading.flagged, ["1:1 1=goodly adjective (goodly)"])
 
 
 class MeaningsTest(DictionaryTest):
@@ -216,8 +215,7 @@ class MeaningsTest(DictionaryTest):
 
     def test_check_mode_stores_the_checkers_list_and_unstore_takes_word_meanings_with_it(self):
         job = jobs.Job(LAYERS["meanings"], "en/record")
-        jobs.submit(self.db, job, "writer", self.meanings("account"))
-        jobs.submit(self.db, job, "checker", self.meanings("account", "writing"))
+        jobs.submit(self.db, job, self.meanings("account", "writing"))
         self.assertEqual(list(self.db.execute("select number, gloss from meaning where headword_id = ?", (self.headword("en", "record"),))), [(1, "account"), (2, "writing")])
         before = self.rows()
         self.db.execute("insert into word_meaning (word_id, meaning_id) select ?, id from meaning where gloss = 'writing'", (self.word("record"),))
@@ -226,10 +224,10 @@ class MeaningsTest(DictionaryTest):
         self.assertEqual(list(self.db.execute("select count(*) from meaning where headword_id = ?", (self.headword("en", "record"),))), [(0,)])
 
     def test_context_counts_every_word_and_shows_how_the_kjv_translates_it(self):
-        english = LAYERS["meanings"].context(self.db, jobs.Jobs, "en/record")
+        english = job_text(self.db, jobs.Job(LAYERS["meanings"], "en/record"))
         self.assertIn("2 words: Book of Mormon 2.", english)
         self.assertIn("I make a **record**.", english)
-        hebrew = LAYERS["meanings"].context(self.db, jobs.Jobs, "hbo/H1254")
+        hebrew = job_text(self.db, jobs.Job(LAYERS["meanings"], "hbo/H1254"))
         self.assertIn("The KJV translates them as: created 1, (no matched word) 1.", hebrew)
         self.assertIn("KJV Genesis 1:1: In the beginning God **created** the heaven and the earth.", hebrew)
 
@@ -237,15 +235,6 @@ class MeaningsTest(DictionaryTest):
 class WordMeaningsTest(DictionaryTest):
     def test_jobs_cover_english_chapters_and_original_chapters_with_uncovered_words(self):
         self.assertEqual(LAYERS["word-meanings"].scopes(self.db), ["bom-2013/1-nephi/1", "kjv/genesis/1", "wlc/genesis/1"])
-
-    def test_waits_for_the_headwords_job_then_every_meanings_job(self):
-        layer = LAYERS["word-meanings"]
-        self.assertEqual(layer.ready(self.db, jobs.Jobs, "bom-2013/1-nephi/1"), "headwords/1-nephi/1 must settle first")
-        self.settle_headwords()
-        self.assertRegex(layer.ready(self.db, jobs.Jobs, "bom-2013/1-nephi/1"), "^meanings/en/")
-        for scope in LAYERS["meanings"].scopes(self.db):
-            self.settle("meanings", scope, [{"number": dictionary.next_number(self.db, dictionary.headword_of(self.db, scope)), "gloss": "sole", "definition": "The sole sense."}])
-        self.assertIsNone(layer.ready(self.db, jobs.Jobs, "bom-2013/1-nephi/1"))
 
     def test_fixed_gives_sole_meanings_and_the_agents_answer_the_rest(self):
         self.write_meanings()
@@ -281,7 +270,7 @@ class WordMeaningsTest(DictionaryTest):
         before = self.rows()
         answer = [{"passage": nephi(v, w), "meaning": f"{w}.1"} for v in (1, 2) for w in ("record", "make")]
         job = self.settle("word-meanings", "bom-2013/1-nephi/1", answer)
-        self.assertEqual(job.state(self.db), "settled")
+        self.assertIsNotNone(job.settled())
         shown = show(self.db, "1-nephi", 1, layers=("word-meanings",)).split("## word-meanings")[1].strip().splitlines()
         self.assertEqual(sorted(json.loads(line)["meaning"] for line in shown), ["make.1", "make.1", "record.1", "record.1"])
         jobs.reset(self.db, job)
@@ -289,9 +278,15 @@ class WordMeaningsTest(DictionaryTest):
 
     def test_the_prompt_groups_words_under_their_headwords_meanings(self):
         self.write_meanings()
-        text = prompt(self.db, jobs.Job(LAYERS["word-meanings"], "bom-2013/1-nephi/1"), "a")
+        text = job_text(self.db, jobs.Job(LAYERS["word-meanings"], "bom-2013/1-nephi/1"))
         words = text.split("## Words to answer")[1]
-        self.assertIn('### record\n"record.1": account. The account sense.\n"record.2": writing. The writing sense.\n{"verse": "1 Nephi 1:1", "quote": "record"}', words)
+        self.assertIn("### record\n1: account. The account sense.\n2: writing. The writing sense.", words)
+        self.assertIn("1:1  1 make (make)  2 record (record)", words)
+
+    def test_numbered_lines_read_as_meanings(self):
+        self.write_meanings()
+        reading = LAYERS["word-meanings"].read(self.db, "bom-2013/1-nephi/1", ["1:1  1=1  2=record.2"])
+        self.assertEqual([item["meaning"] for item in reading.items], ["make.1", "record.2"])
 
 
 if __name__ == "__main__":

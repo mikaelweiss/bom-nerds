@@ -1,4 +1,4 @@
-"""Relationships: facts connecting two entities, each citing the passages in this chapter that state it."""
+"""Relationships: facts connecting two entities, each citing the passages in each chapter that state it."""
 
 import sqlite3
 from functools import cache
@@ -9,11 +9,11 @@ from ...passages import Rejected, chapter_span
 from ..layer import Layer, Problems, kinds, passage_of, scope_span, split_chapter
 
 INSTRUCTIONS = f"""
-Tag every relationship between two entities that this chapter states: who is whose child, spouse, or brother, who leads or belongs to whom, where something took place, which place lies north of another, who wrote or kept a record.
+Tag every relationship between two entities that each chapter states: who is whose child, spouse, or brother, who leads or belongs to whom, where something took place, which place lies north of another, who wrote or kept a record.
 
 - The kinds are listed under Context, with how each reads from subject to object.
-- Evidence is the passages in this chapter that state the relationship. Cite the words that say it, not the whole verse, and cite at least one.
-- Tag a relationship once, with all its evidence in this chapter. A relationship found in several chapters is one relationship, so tag it here with this chapter's evidence.
+- Evidence is the passages in each chapter that state the relationship. Cite the words that say it, not the whole verse, and cite at least one.
+- Tag a relationship once in a chapter, with all its evidence there. A relationship found in several chapters is one relationship, so tag it in each with that chapter's evidence.
 - A two-way kind is tagged once, with the entities in either order. A one-way kind never runs both ways.
 - Never join an entity to itself.
 - {", ".join(FAMILY)} join two people. When the text calls a people the son of a man, use a kind that fits, such as named_after.
@@ -31,12 +31,12 @@ class Relationships(Layer):
     step = 7
     instructions = INSTRUCTIONS
 
-    def context(self, db, jobs, scope):
+    def preamble(self, db, scopes):
         rows = db.execute("select id, name, reverse_name, two_way from relationship_kind order by rowid")
         listed = "\n".join(
             f"{id}: subject, {name}, object " + ("(two-way, stored once)" if two_way else f"(reads back as {reverse})") for id, name, reverse, two_way in rows
         )
-        return super().context(db, jobs, scope) + "\n\n## Relationship kinds\n\n" + listed
+        return "## Relationship kinds\n\n" + listed
 
     def given(self, db, scope):
         return evidenced(db, *scope_span(db, scope))
@@ -74,7 +74,7 @@ class Relationships(Layer):
                 continue
             seen[pair] = (number, written)
             if kind not in two_way and db.execute("select 1 from relationship where kind_id = ? and subject_id = ? and object_id = ?", (kind, object, subject)).fetchone():
-                problems.add(f"{object} {kind} {subject} is already stored, so this would run {kind} both ways. If the text says it, an operator must correct the stored one. Otherwise leave this out")
+                problems.add(f"{object} {kind} {subject} is already stored, so this would run {kind} both ways. If the text says it, flag this line so the review corrects the stored one. Otherwise leave this out")
                 continue
             tags.append((subject, kind, object, evidence))
         problems.raise_any()
@@ -120,7 +120,7 @@ def script_facts() -> set[tuple[str, str, str]]:
 def cite(problems: Problems, scope: str, value, where: str) -> tuple[tuple[int, int], ...] | None:
     """The evidence as sorted word spans, all inside the chapter."""
     if not isinstance(value, list) or not value:
-        problems.add("evidence must be a list with at least one passage in this chapter")
+        problems.add("evidence must be a list with at least one passage in each chapter")
         return None
     spans = []
     for number, passage in enumerate(value, 1):

@@ -2,7 +2,7 @@ import unittest
 
 from bomnerds.agent import jobs
 from bomnerds.agent.layers import LAYERS
-from bomnerds.agent.prompt import prompt
+from bomnerds.agent.prompt import job_text
 from bomnerds.passages import Rejected
 from tests.agent_fixtures import database, entity, job_folder
 
@@ -131,48 +131,29 @@ class JourneysTest(unittest.TestCase):
     def test_a_settled_job_shows_its_journeys_in_reading_order(self):
         self.settle_earlier("genesis/12")
         answer = [journey("lot", "canaan", "departed", "12:4", **{"from": "haran", "days": 2.5}), TO_CANAAN]
-        jobs.submit(self.db, self.job, "a", answer)
-        jobs.submit(self.db, self.job, "b", list(reversed(answer)))
-        self.assertEqual(self.job.state(self.db), "settled")
+        jobs.submit(self.db, self.job, list(reversed(answer)))
+        self.assertIsNotNone(self.job.settled())
         self.assertEqual(self.layer.shown(self.db, "kjv", "genesis", 12), [answer[0], answer[1]])
         self.assertEqual(self.layer.shown(self.db, "kjv", "genesis", 13), [])
 
-    def test_a_decider_settles_what_the_runs_differ_on(self):
-        self.settle_earlier("genesis/12")
-        jobs.submit(self.db, self.job, "a", [TO_CANAAN])
-        jobs.submit(self.db, self.job, "b", [journey("abram", "canaan", "went forth to go into the land of Canaan", days=2)])
-        self.assertEqual(self.job.state(self.db), "needs decider")
-        jobs.submit(self.db, self.job, "decider", [TO_CANAAN])
-        self.assertEqual(len(self.rows()), 1)
-        self.assertIsNone(self.rows()[0][3])
-
     def test_reset_deletes_what_the_job_stored(self):
         self.settle_earlier("genesis/12")
-        jobs.submit(self.db, self.job, "a", [TO_CANAAN])
-        jobs.submit(self.db, self.job, "b", [TO_CANAAN])
+        jobs.submit(self.db, self.job, [TO_CANAAN])
         jobs.reset(self.db, self.job)
         self.assertEqual(self.rows(), [])
 
     def test_replay_stores_settled_jobs_again(self):
         self.settle_earlier("genesis/12")
-        jobs.submit(self.db, self.job, "a", [TO_CANAAN])
-        jobs.submit(self.db, self.job, "b", [TO_CANAAN])
+        jobs.submit(self.db, self.job, [TO_CANAAN])
         before = self.rows()
         self.db.execute("delete from journey")
         jobs.replay(self.db, [self.layer])
         self.assertEqual(self.rows(), before)
 
-    def test_waits_for_every_earlier_chapter_job_on_the_chapter(self):
-        self.assertIn("must settle first", self.layer.ready(self.db, jobs.Jobs, "genesis/12"))
-        self.assertTrue(self.job.state(self.db).startswith("waiting"))
-        self.settle_earlier("genesis/12")
-        self.assertIsNone(self.layer.ready(self.db, jobs.Jobs, "genesis/12"))
-        self.assertEqual(self.job.state(self.db), "needs a and b")
-
     def test_the_prompt_asks_the_question_and_shows_the_chapter(self):
         self.settle_earlier("genesis/12")
-        text = prompt(self.db, self.job, "a")
-        self.assertIn("Tag every journey in this chapter", text)
+        text = job_text(self.db, self.job)
+        self.assertIn("Tag every journey in each chapter", self.layer.instructions)
         self.assertIn("Now the LORD had said unto Abram", text)
         self.assertNotIn("Already tagged", text)
 

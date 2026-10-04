@@ -6,15 +6,15 @@ from typing import NamedTuple
 
 from ...passages import Rejected, book_name, chapter_numbers, chapter_span, chapter_verses, english_edition, locate, resolve
 from ..jobs import Jobs
-from ..layer import Layer, Problems, chapter_name, kinds, passage_of, scope_span, split_chapter
+from ..layer import Layer, Problems, chapter_name, kinds, passage_of, scope_span, split_chapter, where
 
 PEOPLE = ("person", "group")
 PREVIEW = 8
 
 INSTRUCTIONS = """
-Tag every speech in this chapter: a passage that one speaker says or writes to listeners, in one mode. The modes are listed under Context.
+Tag every speech in each chapter: a passage that one speaker says or writes to listeners, in one mode. The modes are listed under Modes.
 
-- The speaker and each listener are person or group entities. An unnamed speaker has an entity of its own, such as the Bible narrator. Search for it, or report it missing.
+- The speaker and each listener are person or group entities. An unnamed speaker has an entity of its own, such as the Bible narrator. Pick it from the list, or write an unlisted line for it.
 - Narration is a speech: the narrator is the speaker of the story they tell.
 - The passage runs from the speech's first word to its last. Leave out the words that introduce it, such as "he spake unto them, saying:".
 - Speeches nest. A speech quoted inside another sits inside its passage: Mormon narrates, quoting Alma, who quotes Zenos. Two speeches either share no words, or one sits wholly inside the other.
@@ -23,8 +23,8 @@ Tag every speech in this chapter: a passage that one speaker says or writes to l
 
 A speech can run across chapters, but it ends at the end of its book.
 
-- A speech that runs on past this chapter ends its passage at the chapter's last word and adds "open": true. The start of the next chapter is under Context, so you can tell.
-- Speeches under "Open speeches" began earlier and run on into this chapter. Include each one: keep its speaker, through, listeners, mode, and where its passage starts, and move where it ends to its last words in this chapter. Keep "open": true if it runs on past this chapter too.
+- A speech that runs on past its chapter ends its passage at the chapter's last word and adds "open": true. The next chapter follows in this prompt, or its start is shown, so you can tell.
+- A speech left open in the chapter before runs on into the next chapter. Include it in the next chapter's section too: keep its speaker, through, listeners, mode, and where its passage starts, and move where it ends to its last words in that chapter. Keep "open": true if it runs on past that chapter too. Speeches open from before the first chapter here are listed under "Open speeches".
 
 Answer with one object per speech. In Mosiah 2, where King Benjamin's speech runs on:
 
@@ -58,27 +58,23 @@ class Speakers(Layer):
     step = 5
     instructions = INSTRUCTIONS
 
-    def ready(self, db, jobs, scope):
-        earlier = super().ready(db, jobs, scope)
-        if earlier:
-            return earlier
-        before = neighbor(db, scope, -1)
-        if before and jobs.get(self.name, before).settled() is None:
-            return f"{self.name}/{before} must settle first, because a book's chapters run in order"
-        return None
+    ordered = True
 
-    def context(self, db, jobs, scope):
-        sections = [super().context(db, jobs, scope), "## Modes\n\n" + ", ".join(kinds(db, "speech_mode"))]
+    def preamble(self, db, scopes):
+        return "## Modes\n\n" + ", ".join(kinds(db, "speech_mode"))
+
+    def extra(self, db, jobs, scope, batch=()):
+        sections = []
         before, after = neighbor(db, scope, -1), neighbor(db, scope, 1)
-        carried = open_from(db, jobs, before)
+        carried = open_from(db, jobs, before) if before not in batch else []
         if carried:
             lines = "\n".join(json.dumps(self.render(db, speech), ensure_ascii=False) for speech in carried)
-            sections.append(f"## Open speeches\n\nThese began before {chapter_name(db, scope)} and run on into it. Continue each one in your answer.\n\n{lines}")
-        if after:
+            sections.append(f"## Open speeches\n\nThese began before {chapter_name(db, scope)} and run on into it. Continue each one in this chapter's section.\n\n{lines}")
+        if after and after not in batch:
             book, chapter = split_chapter(after)
             verses = "\n".join(f"{verse} {text.strip()}" for verse, text in chapter_verses(db, english_edition(db, book), book, chapter)[:PREVIEW])
             sections.append(f"## The start of {chapter_name(db, after)}\n\nRead it to tell whether a speech runs on past this chapter. Tag nothing in it.\n\n{verses}")
-        else:
+        elif not after:
             book, _ = split_chapter(scope)
             sections.append(f"## End of the book\n\n{chapter_name(db, scope)} is the last chapter of {book_name(db, book)}, so every speech ends in it. Leave out \"open\".")
         return "\n\n".join(sections)
@@ -92,7 +88,7 @@ class Speakers(Layer):
         modes = kinds(db, "speech_mode")
         numbered, continued = [], set()
         for number, item in enumerate(problems.items(answer), 1):
-            problems.at(f"item {number}")
+            problems.at(where(number, item))
             if not problems.fields(item, ("speaker", "listeners", "mode", "passage"), ("through", "open")):
                 continue
             count = len(problems.messages)
@@ -160,8 +156,8 @@ class Speakers(Layer):
         for speech in opened:
             if speech.first not in continued:
                 problems.add(
-                    f"{self.name}/{after} is settled without continuing {json.dumps(self.render(db, speech), ensure_ascii=False)}, "
-                    f"so it cannot stay open. An operator must reset {self.name}/{after} first"
+                    f"{self.name}/{after} is stored without continuing {json.dumps(self.render(db, speech), ensure_ascii=False)}, "
+                    f"so it cannot stay open. Close it in this chapter, or change {self.name}/{after} in the same review"
                 )
 
     def render(self, db, tag):
@@ -197,7 +193,7 @@ class Speakers(Layer):
                 later = f"{self.name}/{book}/{chapter}"
                 raise Rejected(
                     f"{self.name}/{scope} left open {json.dumps(self.render(db, speech), ensure_ascii=False)}, and {later} continued it. "
-                    f"Reset {later} first, then each chapter back to this one"
+                    f"Change {later} in the same review, so it no longer continues it"
                 )
         start, _ = scope_span(db, scope)
         for speech in speeches:

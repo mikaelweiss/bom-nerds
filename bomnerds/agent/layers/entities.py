@@ -1,21 +1,20 @@
-"""The entity list: one job per book lists what the book contains, then merge jobs combine what was listed twice."""
+"""The entity list: what all of scripture needs first, then what each book contains, in order, so a later book picks what an earlier one listed.
 
-import json
+A scope is "scripture", a book, or book/first-last for a run of chapters of a book too long for one answer.
+"""
+
 import re
 import sqlite3
-import sys
 from collections import Counter, OrderedDict, defaultdict
 from dataclasses import dataclass
 from itertools import combinations
 from math import ceil
-from pathlib import Path
 from string import ascii_lowercase
 
-from ...passages import Rejected, book_name, chapter_numbers, english_edition, parse_reference, reference
+from ...passages import book_name, chapter_numbers, english_edition, reference
 from ...text import slug
 from ...words import WORD
 from .. import jobs
-from ..jobs import CLI
 from ..layer import Layer, Problems, kinds
 
 WORKS = ("bom", "dc", "pgp")
@@ -26,18 +25,20 @@ SIMILAR = 0.8
 COMMON = {"a", "an", "and", "as", "at", "by", "for", "from", "he", "her", "his", "in", "is", "of", "on", "she", "that", "the", "to", "was", "who", "with"}
 
 ENTITIES = """
-List every entity this book names or points to: each person, group, place, event, object, office, and topic.
+List every entity these chapters name or point to: each person, group, place, event, object, office, and topic.
 
-- Read every chapter first. Context says how.
-- Pick an entity already on the list instead of adding it again. The Bible's people and places are on the list, so Moses, Isaiah, and Jerusalem are picked. Entities on the list whose names appear in this book are under Context. Search for anything else before you add it.
+- Read every chapter of a section before you answer it.
+- Pick an entity already on the list instead of adding it again. The Bible's people and places are on the list, so Moses, Isaiah, and Jerusalem are picked. Under each section are the entities on the list whose names appear in its chapters, and every entity this book already holds.
 - One entity is one being or thing. A man, the people named for him, and their land are three entities: Nephi, the Nephites, and the land of Nephi.
 - Types: person, group, place, event, object, office, topic. Use city, land, water, mountain, or wilderness instead of place when the text says which, and record for a record such as the plates of brass.
 - People and groups the text never names get an entity when they speak or act, named the way the text describes them: "the daughter of Jared".
-- Topics are subjects the book teaches about, such as faith or repentance. Add the ones a reader would look up.
+- Topics are subjects the text teaches about, such as faith or repentance. Add the ones a reader would look up.
 - Copy names from the text. "name" is the name the text uses most, "other_names" holds the other names it goes by, and "titles" holds titles that point to it, such as "the Holy One of Israel". The description is one line that says who or what it is and sets it apart.
 - An id is the name in lowercase, joined by hyphens: Sariah is sariah. When another entity on the list or in your answer has the same name, the id adds what sets this one apart: lehi-father-of-nephi. If the other one's id is the bare name, it gains what sets it apart too: give its new id in "renames" on your new entity, and pick it by its new id. The CLI checks every id and says what to fix.
 
-Answer with one object per entity. Pick one already on the list, with any names this book uses for it that the list lacks:
+The section "All of scripture" has no text. In it, add what every work needs that no single book's text names: the narrator of each work or book whose narrator is never named, such as the Bible's narrator, and the topics a reader would look up anywhere in scripture, such as faith, repentance, prayer, and the Atonement of Jesus Christ. Give each one "books": the ids of the books it belongs to, or [] for a topic that belongs to all of them. Later sections pick these.
+
+Answer with one object per entity. Pick one already on the list, with any names these chapters use for it that the list lacks:
 
 { "pick": "moses" }
 { "pick": "jesus-christ", "titles": ["the Holy One of Israel"] }
@@ -48,19 +49,9 @@ Or add one:
 { "id": "lehi-father-of-nephi", "type": "person", "name": "Lehi", "other_names": [], "description": "Prophet who led his family from Jerusalem to the promised land.", "renames": { "lehi": "lehi-in-judah" } }
 """
 
-MERGE = """
-Some entities are on the list twice, because each book listed its own. Under Context are groups of entities that share a name or have nearly the same description. Decide which entities in each group are one and the same.
-
-- Two entities are the same only when they are one person, group, place, or thing. Two men named Nephi are two people. A man, the people named for him, and their land are three entities.
-- Keep one and merge the others into it. Every tag on a merged entity moves to the kept one, its names become other names of the kept one, and the merged entity is deleted. A merge cannot be undone, so merge only when the descriptions and books leave no doubt.
-- Keep an entity from the Bible list over one made for another work. The CLI rejects merging a Bible entity away.
-- Merge only entities of one kind within one group: a person with a person, a place with a city or land.
-- Most groups have nothing to merge. Leave those out.
-
-Answer with one object per entity kept, or an empty array when nothing merges:
-
-{ "keep": "isaiah", "merge": ["isaiah-son-of-amoz"] }
-"""
+# Books longer than this many words are split into parts of about the same length, each its own scope.
+PART_WORDS = 30000
+SCRIPTURE = "scripture"
 
 
 @dataclass(frozen=True)
@@ -79,16 +70,12 @@ class New:
     titles: tuple[str, ...]
     description: str
     renames: tuple[tuple[str, str], ...] = ()
+    # Set only for entities added for all of scripture, which name their books.
+    books: tuple[str, ...] | None = None
 
     @property
     def names(self) -> tuple[str, ...]:
         return (self.name, *self.other_names, *self.titles)
-
-
-@dataclass(frozen=True)
-class Merge:
-    keep: str
-    merged: tuple[str, ...]
 
 
 @dataclass(frozen=True)
@@ -153,15 +140,51 @@ def entity_books(db: sqlite3.Connection) -> list[str]:
     ]
 
 
+def entity_scopes(db: sqlite3.Connection) -> list[str]:
+    """The whole-scripture scope, then each book, or each part of a book longer than PART_WORDS, in reading order."""
+    scopes = [SCRIPTURE]
+    for book in entity_books(db):
+        edition = english_edition(db, book)
+        sizes = list(db.execute("select chapter, count(*) from word where edition_id = ? and book_id = ? group by chapter order by chapter", (edition, book)))
+        total = sum(size for _, size in sizes)
+        parts = ceil(total / PART_WORDS)
+        if parts <= 1:
+            scopes.append(book)
+            continue
+        target, run, cuts, first = total / parts, 0, 1, sizes[0][0]
+        for i, (chapter, size) in enumerate(sizes):
+            run += size
+            if i + 1 == len(sizes) or run >= target * cuts:
+                scopes.append(f"{book}/{first}-{chapter}")
+                cuts += 1
+                if i + 1 < len(sizes):
+                    first = sizes[i + 1][0]
+    return scopes
+
+
+def split_scope(scope: str) -> tuple[str | None, int | None, int | None]:
+    """The book of an entities scope and its first and last chapter, or None for whole books and for the whole-scripture scope."""
+    if scope == SCRIPTURE:
+        return None, None, None
+    book, _, chapters = scope.partition("/")
+    if not chapters:
+        return book, None, None
+    first, _, last = chapters.partition("-")
+    return book, int(first), int(last)
+
+
 def tokens(text: str) -> list[str]:
     return [re.sub(r"'s$", "", word.replace("’", "'")) for word in WORD.findall(text)]
 
 
 class BookText:
-    """A book's words, for finding names in it."""
+    """A book's words, or the words of a run of its chapters, for finding names in it."""
 
-    def __init__(self, db: sqlite3.Connection, book: str):
-        words = tokens(" ".join(text for (text,) in db.execute("select text from word where edition_id = ? and book_id = ? order by id", (english_edition(db, book), book))))
+    def __init__(self, db: sqlite3.Connection, book: str, first: int | None = None, last: int | None = None):
+        low, high = (first, last) if first is not None else (0, 10**6)
+        words = tokens(" ".join(text for (text,) in db.execute(
+            "select text from word where edition_id = ? and book_id = ? and chapter between ? and ? order by id", (english_edition(db, book), book, low, high)
+        )))
         self.text = f" {' '.join(words)} "
         self.folded = self.text.casefold()
         self.words = set(words)
@@ -179,47 +202,56 @@ class BookText:
 TEXTS: OrderedDict = OrderedDict()
 
 
-def book_text(db: sqlite3.Connection, book: str) -> BookText:
-    if (db, book) not in TEXTS:
-        TEXTS[(db, book)] = BookText(db, book)
+def book_text(db: sqlite3.Connection, book: str, first: int | None = None, last: int | None = None) -> BookText:
+    if (db, book, first, last) not in TEXTS:
+        TEXTS[(db, book, first, last)] = BookText(db, book, first, last)
         while len(TEXTS) > 4:
             TEXTS.popitem(last=False)
-    return TEXTS[(db, book)]
+    return TEXTS[(db, book, first, last)]
 
 
 class Entities(Layer):
     name = "entities"
     step = 3
-    scope = "book"
-    mode = "check"
+    scope = "book, part of a book, or all of scripture"
+    points = False
+    ordered = True
     instructions = ENTITIES
 
     def scopes(self, db):
-        return entity_books(db)
+        return entity_scopes(db)
 
-    def ready(self, db, lookup, scope):
-        books = self.scopes(db)
-        at = books.index(scope)
-        if at and lookup.get(self.name, books[at - 1]).settled() is None:
-            return f"entities/{books[at - 1]} must settle first, so this book picks what earlier books listed"
-        return None
+    def label(self, db, scope):
+        book, first, last = split_scope(scope)
+        if book is None:
+            return "All of scripture"
+        if first is None:
+            return book_name(db, book)
+        return reference(db, book, first) if first == last else f"{reference(db, book, first)}–{last}"
 
-    def context(self, db, lookup, scope):
-        edition = english_edition(db, scope)
-        numbers = chapter_numbers(db, edition, scope)
-        first, last = reference(db, scope, numbers[0]), reference(db, scope, numbers[-1])
-        read = f'Read "{first}" before you answer:' if first == last else f'Read every chapter from "{first}" to "{last}" before you answer, each with a command like:'
-        lines = ["## Chapters", "", read, "", f'{CLI} show "{first}"']
+    def chapters(self, db, scope):
+        book, first, last = split_scope(scope)
+        if book is None:
+            return []
+        numbers = chapter_numbers(db, english_edition(db, book), book)
+        return [(book, n) for n in numbers if first is None or first <= n <= last]
+
+    def extra(self, db, lookup, scope, batch=()):
         catalog = Catalog(db)
+        if scope == SCRIPTURE:
+            found = [id for id, row in catalog.rows.items() if row.type == "topic" or not catalog.books().get(id)]
+            listed = "\n".join(catalog.line(id) for id in sorted(found))
+            return "## Already on the list\n\n" + (listed or "No topics or narrators yet.")
         found = appearing(db, catalog, scope)
-        if found:
-            lines += ["", "## Entities on the list whose names appear in this book", ""] + [catalog.line(id) for id in found]
-        return "\n".join(lines)
+        if not found:
+            return ""
+        return "## Entities on the list whose names appear here, or that this book already holds\n\n" + "\n".join(catalog.line(id) for id in found)
 
     def parse(self, db, scope, answer):
         problems = Problems(db)
         items = problems.items(answer)
         types = kinds(db, "entity_type")
+        books = {id for (id,) in db.execute("select id from book")}
         found = []
         for number, item in enumerate(items, 1):
             problems.at(f"item {number}")
@@ -227,6 +259,15 @@ class Entities(Layer):
                 tag = read_pick(problems, item)
             elif "id" in item:
                 tag = read_new(problems, item, types)
+                if tag and scope == SCRIPTURE and tag.books is None:
+                    problems.add('every entity added for all of scripture takes "books": the ids of its books, or [] for a topic')
+                    tag = None
+                elif tag and scope != SCRIPTURE and tag.books is not None:
+                    problems.add('"books" belongs only to entities added for all of scripture. This one is found in the book being read')
+                    tag = None
+                elif tag and set(tag.books or ()) - books:
+                    problems.add(f"{', '.join(sorted(set(tag.books) - books))} is not a book id")
+                    tag = None
             else:
                 problems.add('each item picks an entity with "pick" or adds one with "id", as in the examples')
                 tag = None
@@ -235,7 +276,9 @@ class Entities(Layer):
         catalog = Catalog(db)
         if answer != jobs.Job(self, scope).settled():
             check_ids(problems, catalog, found)
-        check_text(problems, catalog, book_text(db, scope), found, db.execute("select name from book where id = ?", (scope,)).fetchone()[0])
+        book, first, last = split_scope(scope)
+        if book is not None:
+            check_text(problems, catalog, book_text(db, book, first, last), found, self.label(db, scope))
         check_once(problems, found)
         problems.raise_any()
         return [tag for _, tag in found]
@@ -254,127 +297,44 @@ class Entities(Layer):
         item["description"] = tag.description
         if tag.renames:
             item["renames"] = dict(tag.renames)
+        if tag.books is not None:
+            item["books"] = list(tag.books)
         return item
 
     def store(self, db, scope, tags):
+        book = split_scope(scope)[0]
         renamed = rename(db, [pair for tag in tags if isinstance(tag, New) for pair in tag.renames])
         for tag in tags:
             if isinstance(tag, New):
                 insert(db, tag)
             else:
                 db.executemany("insert or ignore into entity_name (entity_id, name, is_title) values (?, ?, ?)", name_rows(tag))
-            db.execute("insert or ignore into entity_book (entity_id, book_id) values (?, ?)", (tag.id, scope))
+            for found in tag_books(tag, book):
+                db.execute("insert or ignore into entity_book (entity_id, book_id) values (?, ?)", (tag.id, found))
         for old, new in renamed:
             jobs.rename_entity(old, new)
 
     def unstore(self, db, scope, tags):
         # Replay deletes and stores again in one transaction, so tags in later layers may point at these entities until it commits.
         db.execute("pragma defer_foreign_keys = on")
+        book = split_scope(scope)[0]
         claimed = claimed_names(scope)
         for tag in tags:
-            db.execute("delete from entity_book where entity_id = ? and book_id = ?", (tag.id, scope))
+            for found in tag_books(tag, book):
+                if (tag.id, found) not in claimed:
+                    db.execute("delete from entity_book where entity_id = ? and book_id = ?", (tag.id, found))
             if isinstance(tag, New):
                 db.executemany("delete from entity_name where entity_id = ? and name = ?", [(tag.id, name) for name in tag.names])
                 db.execute("delete from entity where id = ?", (tag.id,))
             else:
                 db.executemany("delete from entity_name where entity_id = ? and name = ?", [(tag.id, name) for _, name, _ in name_rows(tag) if (tag.id, name) not in claimed])
 
-    def commands(self, subparsers):
-        command = subparsers.add_parser("add-entity", help="add an entity an agent reported missing, and print the jobs that must rerun")
-        command.add_argument("--job", required=True, help="the job that reported it, such as names/1-nephi/4")
-        command.add_argument("--name", required=True)
-        command.add_argument("--type", required=True)
-        command.add_argument("--description", required=True)
-        command.add_argument("--verse", required=True, help="a verse that names it. The entity is found in its book")
-        command.add_argument("--id", help="the name in lowercase joined by hyphens unless another entity shares the name")
-        command.add_argument("--other-name", action="append", default=[], dest="other_names")
-        command.add_argument("--title", action="append", default=[], dest="titles")
-        command.add_argument("--rename", action="append", default=[], metavar="OLD=NEW", help="the new id of an older entity with the same name whose id is the bare name")
-        command.set_defaults(run=add_entity)
 
-
-class Merges(Layer):
-    name = "merge"
-    step = 3
-    scope = "letter"
-    mode = "check"
-    instructions = MERGE
-
-    def scopes(self, db):
-        return list(ascii_lowercase)
-
-    def chapters(self, db, scope):
-        return []
-
-    def ready(self, db, lookup, scope):
-        for book in entity_books(db):
-            if lookup.get("entities", book).settled() is None:
-                return f"every entities job must settle first, and entities/{book} has not"
-        return None
-
-    def context(self, db, lookup, scope):
-        catalog = Catalog(db)
-        found = groups(catalog).get(scope, [])
-        if not found:
-            return "No entities in this part of the list look listed twice. Answer with an empty array."
-        books = catalog.books()
-        sections = []
-        for number, group in enumerate(found, 1):
-            lines = [f"### Group {number}", ""]
-            for id in group:
-                where = found_in(books.get(id, []))
-                bible = any(work == "bible" for _, _, work in books.get(id, []))
-                lines.append(catalog.line(id) + (f" Found in {where}." if where else "") + (" Bible list, so it can only be kept." if bible else ""))
-            sections.append("\n".join(lines))
-        return "## Groups\n\n" + "\n\n".join(sections)
-
-    def parse(self, db, scope, answer):
-        problems = Problems(db)
-        items = problems.items(answer)
-        strict = answer != jobs.Job(self, scope).settled()
-        if strict:
-            catalog = Catalog(db)
-            group_of = {id: n for n, group in enumerate(group for letter in groups(catalog).values() for group in letter) for id in group}
-            bible = {id for (id,) in db.execute("select distinct eb.entity_id from entity_book eb join book b on b.id = eb.book_id where b.work_id = 'bible'")}
-        tags, where = [], defaultdict(list)
-        for number, item in enumerate(items, 1):
-            problems.at(f"item {number}")
-            if not problems.fields(item, ("keep", "merge")):
-                continue
-            keep, merged = item["keep"], item["merge"]
-            if not isinstance(keep, str) or not isinstance(merged, list) or not merged or not all(isinstance(m, str) for m in merged):
-                problems.add('"keep" takes one id and "merge" a list of ids')
-                continue
-            if len(set(merged)) < len(merged) or keep in merged:
-                problems.add('list each id once, and leave the kept one out of "merge"')
-                continue
-            if strict and not merge_problems(problems, catalog, group_of, bible, keep, merged):
-                continue
-            for id in (keep, *merged):
-                where[id].append(number)
-            tags.append(Merge(keep, tuple(sorted(merged))))
-        for id, numbers in where.items():
-            if len(numbers) > 1:
-                problems.at("").add(f"{id} is in items {', '.join(map(str, numbers))}. Each id belongs in one item")
-        problems.raise_any()
-        return tags
-
-    def render(self, db, tag):
-        return {"keep": tag.keep, "merge": list(tag.merged)}
-
-    def store(self, db, scope, tags):
-        merged = []
-        for tag in tags:
-            for old in tag.merged:
-                if exists(db, old) and exists(db, tag.keep):
-                    repoint(db, old, tag.keep)
-                    merged.append((old, tag.keep))
-        for old, new in merged:
-            follow_merge(old, new)
-
-    def unstore(self, db, scope, tags):
-        if tags:
-            print(f"merge/{scope}: merges are never undone. The merged entities are gone and their tags belong to the kept ones.", file=sys.stderr)
+def tag_books(tag, book: str | None) -> tuple[str, ...]:
+    """The books an entities answer records an entity in: the book being read, or the books an entity for all of scripture names."""
+    if book is not None:
+        return (book,)
+    return (tag.books or ()) if isinstance(tag, New) else ()
 
 
 def read_pick(problems: Problems, item: dict) -> Pick | None:
@@ -390,7 +350,7 @@ def read_pick(problems: Problems, item: dict) -> Pick | None:
 
 
 def read_new(problems: Problems, item: dict, types: list[str]) -> New | None:
-    if not problems.fields(item, ("id", "type", "name", "other_names", "description"), ("titles", "renames")):
+    if not problems.fields(item, ("id", "type", "name", "other_names", "description"), ("titles", "renames", "books")):
         return None
     texts = [key for key in ("id", "type", "name", "description") if not isinstance(item[key], str) or not item[key].strip()]
     if texts:
@@ -413,7 +373,11 @@ def read_new(problems: Problems, item: dict, types: list[str]) -> New | None:
     if name.casefold() in {n.casefold() for n in other + titles}:
         problems.add(f'"{name}" is the name, so leave it out of other_names and titles')
         return None
-    return New(item["id"], item["type"], name, tuple(sorted(other)), tuple(sorted(titles)), description, tuple(sorted(renames.items())))
+    books = item.get("books")
+    if books is not None and (not isinstance(books, list) or not all(isinstance(book, str) for book in books)):
+        problems.add('"books" must be a list of book ids')
+        return None
+    return New(item["id"], item["type"], name, tuple(sorted(other)), tuple(sorted(titles)), description, tuple(sorted(renames.items())), None if books is None else tuple(sorted(set(books))))
 
 
 def name_list(problems: Problems, item: dict, key: str) -> list[str] | None:
@@ -535,9 +499,10 @@ def check_once(problems: Problems, found: list[tuple[int, Pick | New]]):
             problems.at("").add(f"{id} is in items {', '.join(map(str, numbers))}. List each entity once")
 
 
-def appearing(db: sqlite3.Connection, catalog: Catalog, book: str) -> list[str]:
-    """Entities whose names appear in the book, with topics matched in any case, and entities already found in it."""
-    text = book_text(db, book)
+def appearing(db: sqlite3.Connection, catalog: Catalog, scope: str) -> list[str]:
+    """Entities whose names appear in the scope's chapters, with topics matched in any case, and entities already found in its book."""
+    book, first, last = split_scope(scope)
+    text = book_text(db, book, first, last)
     names = defaultdict(set)
     for id, row in catalog.rows.items():
         names[id].add(row.name)
@@ -573,14 +538,18 @@ def exists(db: sqlite3.Connection, id: str) -> bool:
 
 
 def claimed_names(scope: str) -> set[tuple[str, str]]:
-    """Every (entity, name) another settled entities job lists, which this job's reset must leave in place."""
+    """Every (entity, name) and (entity, book) another settled entities job lists, which this job's reset must leave in place."""
     claimed = set()
-    for path in (jobs.JOBS / "entities").glob("*/settled.json"):
-        if path.parent.name == scope:
+    root = jobs.JOBS / "entities"
+    for path in root.glob("**/settled.json"):
+        other = path.parent.relative_to(root).as_posix()
+        if other == scope:
             continue
+        book = split_scope(other)[0]
         for item in jobs.read(path) or []:
             id = item.get("pick", item.get("id"))
             claimed |= {(id, name) for name in [*item.get("other_names", []), *item.get("titles", []), *([item["name"]] if "name" in item else [])]}
+            claimed |= {(id, found) for found in ([book] if book else item.get("books") or [])}
     return claimed
 
 
@@ -658,185 +627,4 @@ def found_in(books: list[tuple[str, str, str]]) -> str:
     return ", ".join(", ".join(names) if len(names) <= 4 else f"{len(names)} books of {works[work]}" for work, names in by_work.items())
 
 
-def merge_problems(problems: Problems, catalog: Catalog, group_of: dict[str, int], bible: set[str], keep: str, merged: list[str]) -> bool:
-    unknown = [id for id in (keep, *merged) if id not in catalog.rows]
-    if unknown:
-        problems.add(f"{', '.join(unknown)} is not on the entity list")
-        return False
-    before = len(problems.messages)
-    for id in merged:
-        if id in bible:
-            problems.add(f"{id} is on the Bible list, which a script builds, so keep it and merge the other into it")
-        elif catalog.rows[id].family != catalog.rows[keep].family:
-            problems.add(f"{id} is a {catalog.rows[id].type} and {keep} a {catalog.rows[keep].type}. Merge only entities of one kind")
-        elif id not in group_of or group_of.get(id) != group_of.get(keep):
-            problems.add(f"{id} and {keep} are not in one group")
-    return len(problems.messages) == before
-
-
-def repoint(db: sqlite3.Connection, old: str, new: str):
-    """Move every reference from one entity to another, dropping what would repeat, then delete the old one."""
-    for table in ("mention", "speech_listener", "entity_name", "entity_book"):
-        db.execute(f"update or ignore {table} set entity_id = ? where entity_id = ?", (new, old))
-        db.execute(f"delete from {table} where entity_id = ?", (old,))
-    db.execute("update speech set through_id = null where (speaker_id, through_id) in ((?, ?), (?, ?))", (old, new, new, old))
-    db.execute("update speech set speaker_id = ? where speaker_id = ?", (new, old))
-    db.execute("update speech set through_id = ? where through_id = ?", (new, old))
-    db.execute("update journey set from_id = null where (from_id, to_id) in ((?, ?), (?, ?))", (old, new, new, old))
-    for column in ("traveler_id", "from_id", "to_id"):
-        db.execute(f"update journey set {column} = ? where {column} = ?", (new, old))
-    db.execute("update date set entity_id = ? where entity_id = ?", (new, old))
-    db.execute("delete from relationship where (subject_id, object_id) in ((?, ?), (?, ?))", (old, new, new, old))
-    for id, subject, kind, object, two_way in db.execute(
-        "select r.id, r.subject_id, r.kind_id, r.object_id, k.two_way from relationship r join relationship_kind k on k.id = r.kind_id where ? in (r.subject_id, r.object_id)", (old,)
-    ).fetchall():
-        subject, object = (new if subject == old else subject), (new if object == old else object)
-        same = db.execute(
-            "select id, subject_id from relationship where kind_id = ? and min(subject_id, object_id) = min(?, ?) and max(subject_id, object_id) = max(?, ?) and id <> ?",
-            (kind, subject, object, subject, object, id),
-        ).fetchone()
-        if same is None:
-            db.execute("update relationship set subject_id = ?, object_id = ? where id = ?", (subject, object, id))
-            continue
-        # The same fact found under both entities keeps one row with all its evidence. A one-way fact running the other way contradicts it and is dropped.
-        if two_way or same[1] == subject:
-            db.execute("insert or ignore into relationship_evidence (relationship_id, first_word_id, last_word_id) select ?, first_word_id, last_word_id from relationship_evidence where relationship_id = ?", (same[0], id))
-            db.execute("update date set relationship_id = ? where relationship_id = ?", (same[0], id))
-        db.execute("delete from relationship where id = ?", (id,))
-    db.execute("delete from entity where id = ?", (old,))
-
-
-def follow_merge(old: str, new: str):
-    """Make saved answers point at the kept entity, as the database now does."""
-    for path in (jobs.JOBS / "entities").glob("**/*.json"):
-        items = jobs.read(path)
-        if isinstance(items, list):
-            folded = fold_into(items, old, new)
-            if folded != items:
-                write(path, folded)
-    follow_rename(old, new)
-
-
-def follow_rename(old: str, new: str):
-    """Rename an entity in saved answers, where merge answers rename only their kept ids."""
-    merges = {path: jobs.read(path) for path in (jobs.JOBS / "merge").glob("**/*.json")}
-    jobs.rename_entity(old, new)
-    # A merge answer names entities that are gone on purpose, so only its kept ids follow a rename.
-    for path, items in merges.items():
-        if isinstance(items, list):
-            kept = [{**item, "keep": new} if isinstance(item, dict) and item.get("keep") == old else item for item in items]
-            if jobs.read(path) != kept:
-                write(path, kept)
-
-
-def fold_into(items: list, old: str, new: str) -> list:
-    """An entities answer with the merged entity turned into a pick of the kept one, listed once."""
-    folded = []
-    for item in items:
-        if isinstance(item, dict):
-            if item.get("id") == old:
-                item = {"pick": new}
-            elif item.get("pick") == old:
-                item = {**item, "pick": new}
-            target = item.get("id", item.get("pick"))
-            earlier = next((i for i, f in enumerate(folded) if isinstance(f, dict) and target == new and f.get("id", f.get("pick")) == new), None)
-            if earlier is not None:
-                first, second = (item, folded[earlier]) if "id" in item else (folded[earlier], item)
-                folded[earlier] = with_names(first, second)
-                continue
-        folded.append(item)
-    return folded
-
-
-def with_names(item: dict, other: dict) -> dict:
-    combined = dict(item)
-    other_names = {*item.get("other_names", []), *other.get("other_names", [])} - {item.get("name")}
-    titles = {*item.get("titles", []), *other.get("titles", [])} - other_names - {item.get("name")}
-    if other_names or "id" in item:
-        combined["other_names"] = sorted(other_names)
-    if titles:
-        combined["titles"] = sorted(titles)
-    return combined
-
-
-def write(path: Path, value):
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-
-
-def add_entity(db: sqlite3.Connection, args):
-    """Add a reported entity, rename the older one that shares its name, and print the resets that must follow."""
-    job = jobs.find(db, args.job)
-    book = parse_reference(db, args.verse)[0]
-    renames = {}
-    for pair in args.rename:
-        old, _, new = pair.partition("=")
-        if not old or not new:
-            raise Rejected(f"--rename takes OLD=NEW, not {pair!r}")
-        renames[old] = new
-    item = {"id": args.id or slug(args.name), "type": args.type, "name": args.name, "other_names": args.other_names, "titles": args.titles, "description": args.description, "renames": renames}
-    problems = Problems(db)
-    tag = read_new(problems, item, kinds(db, "entity_type"))
-    problems.raise_any()
-    catalog = Catalog(db)
-    check_new(problems, catalog, tag, [])
-    missing_renames(problems, catalog, [(1, tag)], dict(tag.renames))
-    check_text(problems, catalog, book_text(db, book), [(1, tag)], db.execute("select name from book where id = ?", (book,)).fetchone()[0])
-    if problems.messages:
-        raise Rejected("\n".join(problems.messages) + '\nIn add-entity, "id" is --id and "renames" is --rename OLD=NEW.')
-    shared = [name for name in tag.names if any(name.casefold() in carried for carried in catalog.names.values())]
-    with db:
-        renamed = rename(db, list(tag.renames))
-        insert(db, tag)
-        db.execute("insert into entity_book (entity_id, book_id) values (?, ?)", (tag.id, book))
-    jobs.resolve_report(job.id, args.name)
-    print(f"Added {tag.id} ({tag.type}) {tag.name}, found in {book_name(db, book)}.")
-    for old, new in renamed:
-        print(f"Renamed {old} to {new}. Saved answers changed: {jobs.rename_entity(old, new)}.")
-    if shared:
-        print(f"Other entities also carry {', '.join(f'{name!r}' for name in shared)}, so chapters that name it may hold mentions of {tag.id}.")
-    rerun = reruns(db, job, shared)
-    if not rerun:
-        print("No job that must rerun has answers yet, so nothing needs a reset.")
-        return
-    print("Reset these jobs, latest step first, so they run again:")
-    for found in rerun:
-        print(f"{CLI} reset {found.id}")
-
-
-def reruns(db: sqlite3.Connection, reporting: jobs.Job, names: list[str]) -> list[jobs.Job]:
-    """The reporting job and every chapter job on a chapter that holds one of the names, where the job has answers."""
-    from . import LAYERS
-
-    chapters = chapters_naming(db, names)
-    found = [reporting]
-    for layer in sorted((layer for layer in LAYERS.values() if layer.scope == "chapter"), key=lambda layer: -layer.step):
-        found += [jobs.Job(layer, scope) for scope in chapters if scope in layer.scope_set(db)]
-    found.sort(key=lambda job: -job.layer.step)
-    seen, listed = set(), []
-    for job in found:
-        if job.id not in seen and any((job.path / f"{name}.json").exists() for name in (*jobs.ROLES[job.layer.mode], "settled")):
-            seen.add(job.id)
-            listed.append(job)
-    return listed
-
-
-def chapters_naming(db: sqlite3.Connection, names: list[str]) -> list[str]:
-    """book/chapter for every English chapter whose text holds one of the names as written, or with a capital first letter."""
-    found = {}
-    for name in names:
-        parts = tokens(name)
-        if not parts:
-            continue
-        wanted = {f" {' '.join(parts)} ", f" {' '.join([parts[0][:1].upper() + parts[0][1:], *parts[1:]])} "}
-        for edition, book, chapter, first in db.execute(
-            "select w.edition_id, w.book_id, w.chapter, min(w.id) from word w join edition e on e.id = w.edition_id "
-            "where e.language = 'en' and w.text like ? group by w.edition_id, w.book_id, w.chapter",
-            (parts[0] + "%",),
-        ).fetchall():
-            text = f" {' '.join(tokens(' '.join(t for (t,) in db.execute('select text from word where edition_id = ? and book_id = ? and chapter = ? order by id', (edition, book, chapter)))))} "
-            if any(w in text for w in wanted):
-                found[f"{book}/{chapter}"] = first
-    return sorted(found, key=found.get)
-
-
-LAYERS = [Entities(), Merges()]
+LAYERS = [Entities()]

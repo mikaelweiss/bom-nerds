@@ -40,12 +40,14 @@ def scope_of(db: sqlite3.Connection, word: int) -> str:
 
 def entities(db: sqlite3.Connection, units: list[str]) -> list[Finding]:
     """Entities that may be one listed twice: they share a name or have nearly the same description."""
+    from .layers import LAYERS
     from .layers.entities import SCRIPTURE, Catalog, found_in, groups, split_scope
 
     catalog = Catalog(db)
     books = catalog.books()
+    # Each group goes to the first scope of the whole list holding one of its books, so exactly one review settles it.
     first_scope = {}
-    for unit in units:
+    for unit in LAYERS["entities"].scopes(db):
         first_scope.setdefault(split_scope(unit)[0], unit)
     found = []
     for letter in groups(catalog).values():

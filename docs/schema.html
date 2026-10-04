@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scripture.db tables</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Serif+Hebrew:wght@400;600&family=Schibsted+Grotesk:wght@400;600;700&display=swap">
+<style>
+/* One full-height pan and zoom canvas. Six hues mark the six table families. */
+:root {
+  --bg: #EDF0EF; --surface: #FFFFFF; --ink: #17201E; --muted: #5B6864; --line: #C4CDC9; --faint: #DFE5E2;
+  --text: #4E5D68; --dict: #2B69AD; --ent: #17806C; --event: #A9640F; --gram: #AD3C58; --pass: #6549B0;
+  --sans: "Schibsted Grotesk", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --heb: "Noto Serif Hebrew", "SBL Hebrew", "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111614; --surface: #19201E; --ink: #E3E9E6; --muted: #95A29D; --line: #34403C; --faint: #26302D;
+    --text: #9DADB8; --dict: #6FA8EC; --ent: #4CC1A6; --event: #E3A04B; --gram: #EB7D96; --pass: #A892F0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111614; --surface: #19201E; --ink: #E3E9E6; --muted: #95A29D; --line: #34403C; --faint: #26302D;
+  --text: #9DADB8; --dict: #6FA8EC; --ent: #4CC1A6; --event: #E3A04B; --gram: #EB7D96; --pass: #A892F0;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); }
+main { margin: 0 auto; padding-inline: clamp(16px, 3vw, 40px); padding-block: 24px; display: grid; gap: 20px; }
+section { display: grid; gap: 12px; min-width: 0; }
+.head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; }
+h2 { font: 700 19px/1.2 var(--sans); margin: 0; text-wrap: balance; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 12px var(--mono); color: var(--muted); align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend button { font: inherit; color: inherit; background: none; border: 0; padding: 2px 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.legend button:hover, .legend button:focus-visible { color: var(--ink); }
+.legend svg { overflow: visible; }
+.dot { width: 10px; height: 10px; border-radius: 3px; background: currentColor; display: inline-block; }
+.hint { font: 12px var(--mono); color: var(--muted); }
+:focus-visible { outline: 2px solid var(--dict); outline-offset: 2px; }
+
+.erd-view { position: relative; height: calc(100vh - 150px); min-height: 420px; overflow: hidden; background: var(--surface) radial-gradient(var(--faint) 1px, transparent 1.3px) 0 0 / 18px 18px; border: 1px solid var(--line); border-radius: 12px; cursor: grab; touch-action: none; user-select: none; }
+.erd-view.panning { cursor: grabbing; }
+.erd-view > svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.zoom { position: absolute; left: 12px; bottom: 12px; display: flex; gap: 4px; z-index: 4; }
+.zoom button { font: 600 13px var(--mono); min-width: 36px; height: 32px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; cursor: pointer; }
+.zoom button:hover { background: var(--faint); }
+#panel { top: 12px; right: 12px; max-height: calc(100% - 24px); cursor: auto; user-select: text; }
+.tbl { cursor: pointer; transition: opacity .15s; }
+.tbl .frame { fill: var(--surface); stroke: currentColor; stroke-opacity: .55; stroke-width: 1.2; }
+.tbl .hd { fill: currentColor; fill-opacity: .16; }
+.tbl.empty .hd { fill: url(#hatch); }
+.tbl:hover .frame { stroke-opacity: 1; }
+.tbl.sel .frame { stroke-opacity: 1; stroke-width: 2.6; }
+.tbl .tn { font: 600 12.5px var(--mono); fill: currentColor; }
+.tbl .tc { font: 11px var(--mono); fill: var(--muted); text-anchor: end; font-variant-numeric: tabular-nums; }
+.tbl .cn { font: 11.5px var(--mono); fill: var(--ink); }
+.tbl .ct { font: 10.5px var(--mono); fill: var(--muted); text-anchor: end; }
+.tbl .stripe { fill: var(--faint); fill-opacity: .5; }
+.tbl .pk { fill: var(--event); }
+.tbl .fkm { fill: var(--dict); }
+.edge { transition: opacity .15s; }
+.edge .ln, .edge .mk { fill: none; stroke: var(--muted); stroke-opacity: .5; stroke-width: 1.2; }
+.edge.on .ln, .edge.on .mk { stroke: currentColor; stroke-opacity: 1; stroke-width: 2.2; }
+svg.focus .tbl:not(.on) { opacity: .25; }
+svg.focus .edge:not(.on) { opacity: .06; }
+.cap { font: 11px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.refs { display: flex; flex-wrap: wrap; gap: 5px 6px; align-items: center; }
+.refs .cap { margin-right: 4px; }
+.chip { font: 12px var(--mono); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; cursor: pointer; }
+.chip:hover, .chip:focus-visible { border-color: currentColor; }
+.pop { position: absolute; z-index: 5; width: 460px; max-width: calc(100vw - 48px); max-height: 460px; overflow: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 14px 40px rgb(0 0 0 / .16); padding: 14px 16px 16px; display: grid; gap: 12px; }
+.pop-top { display: flex; align-items: baseline; gap: 10px; }
+.pop-top .t { font: 600 16px var(--mono); }
+.pop-top .n { font: 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.pop-top button { margin-left: auto; font: 18px/1 var(--sans); color: var(--muted); background: none; border: 0; cursor: pointer; padding: 2px 6px; border-radius: 6px; }
+.pop-top button:hover { color: var(--ink); background: var(--faint); }
+.rows { overflow-x: auto; border-top: 1px solid var(--faint); padding-top: 10px; }
+.rows table { border-collapse: collapse; font: 11.5px var(--mono); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.rows th { text-align: left; color: var(--muted); font-weight: 400; padding: 2px 12px 4px 0; border-bottom: 1px solid var(--faint); }
+.rows td { padding: 3px 12px 3px 0; border-bottom: 1px solid var(--faint); }
+.rows td.null { color: var(--line); }
+.rows td.heb { font-family: var(--heb); font-size: 14px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main>
+  <section aria-labelledby="h-map">
+    <div class="head">
+      <h2 id="h-map">scripture.db tables</h2>
+      <div class="legend" id="groups"></div>
+    </div>
+    <div class="legend">
+      <span><svg width="12" height="12"><circle cx="6" cy="6" r="3.6" fill="var(--event)"/></svg>primary key</span>
+      <span><svg width="12" height="12"><path d="M6,1.8 l4.2,4.2 l-4.2,4.2 l-4.2,-4.2z" fill="var(--dict)"/></svg>foreign key</span>
+      <span><svg width="52" height="12"><path d="M12,6 L1,1 M12,6 L1,11 M1,6 H51 M41,1 V11 M45,1 V11" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>many → one</span>
+      <span class="hint">· drag to move · pinch or ⌘ + scroll to zoom · click a table</span>
+    </div>
+    <div class="erd-view" id="erd-view">
+      <div class="zoom"><button data-z="in" aria-label="Zoom in">+</button><button data-z="out" aria-label="Zoom out">−</button><button data-z="fit">fit</button></div>
+      <aside id="panel" class="pop" hidden></aside>
+    </div>
+  </section>
+
+</main>
+<script>
+const D = {"tables":{"book":{"count":93,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"work_id","type":"TEXT","notnull":true,"pk":0,"fk":"work","fkcol":"id"},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["1-nephi","bom","1 Nephi"],["alma","bom","Alma"],["genesis","bible","Genesis"],["john","bible","John"],["moses","pgp","Moses"]]},"clause":{"count":269252,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"sentence_id","type":"INTEGER","notnull":true,"pk":0,"fk":"sentence","fkcol":"id"},{"name":"parent_id","type":"INTEGER","notnull":false,"pk":0,"fk":"clause","fkcol":"id"},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[[1,1,null,1199440,1199450],[145961,31225,null,8,17]]},"clause_part":{"count":482271,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"clause_id","type":"INTEGER","notnull":true,"pk":0,"fk":"clause","fkcol":"id"},{"name":"role_id","type":"TEXT","notnull":true,"pk":0,"fk":"clause_role","fkcol":"id"},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[[1,1,"adverbial",1199440,1199441],[2,1,"verb",1199442,1199442],[3,1,"subject",1199443,1199443],[4,1,"object",1199444,1199450],[292637,145961,"subject",11,11],[292638,145961,"verb",12,12]]},"clause_role":{"count":6,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["subject","Subject"],["verb","Verb"],["object","Object"],["indirect_object","Indirect object"],["complement","Complement"],["adverbial","Adverbial"]]},"counting_system":{"count":4,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["since_lehi","Years since Lehi left Jerusalem"],["reign_of_judges","Years of the reign of the judges"],["since_sign","Years since the sign of Christ's birth"],["bc_ad","BC/AD"]]},"date":{"count":73,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"first_word_id","type":"INTEGER","notnull":false,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":false,"pk":0,"fk":"word","fkcol":"id"},{"name":"entity_id","type":"TEXT","notnull":false,"pk":0,"fk":"entity","fkcol":"id"},{"name":"relationship_id","type":"INTEGER","notnull":false,"pk":0,"fk":"relationship","fkcol":"id"},{"name":"system_id","type":"TEXT","notnull":true,"pk":0,"fk":"counting_system","fkcol":"id"},{"name":"from_year","type":"INTEGER","notnull":true,"pk":0},{"name":"from_month","type":"INTEGER","notnull":false,"pk":0},{"name":"from_day","type":"INTEGER","notnull":false,"pk":0},{"name":"to_year","type":"INTEGER","notnull":true,"pk":0},{"name":"to_month","type":"INTEGER","notnull":false,"pk":0},{"name":"to_day","type":"INTEGER","notnull":false,"pk":0},{"name":"evidence_first_word_id","type":"INTEGER","notnull":false,"pk":0,"fk":"word","fkcol":"id"},{"name":"evidence_last_word_id","type":"INTEGER","notnull":false,"pk":0,"fk":"word","fkcol":"id"}],"rows":[[1,866853,866890,null,null,"since_lehi",476,null,null,476,null,null,866879,866890],[2,891296,891334,null,null,"since_lehi",509,null,null,509,null,null,891324,891334],[3,891438,892377,null,null,"reign_of_judges",1,null,null,1,null,null,891446,891453]]},"edition":{"count":6,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"work_id","type":"TEXT","notnull":true,"pk":0,"fk":"work","fkcol":"id"},{"name":"name","type":"TEXT","notnull":true,"pk":0},{"name":"language","type":"TEXT","notnull":true,"pk":0}],"rows":[["kjv","bible","King James Version (1769)","en"],["wlc","bible","Westminster Leningrad Codex","hbo"],["sblgnt","bible","SBL Greek New Testament","grc"],["bom-2013","bom","Book of Mormon (2013)","en"],["dc-2013","dc","Doctrine and Covenants (2013)","en"],["pgp-2013","pgp","Pearl of Great Price (2013)","en"]]},"edition_book":{"count":159,"columns":[{"name":"edition_id","type":"TEXT","notnull":true,"pk":1,"fk":"edition","fkcol":"id"},{"name":"book_id","type":"TEXT","notnull":true,"pk":2,"fk":"book","fkcol":"id"},{"name":"position","type":"INTEGER","notnull":true,"pk":0}],"rows":[["kjv","genesis",1],["bom-2013","1-nephi",4],["wlc","genesis",1]]},"entity":{"count":4380,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"type_id","type":"TEXT","notnull":true,"pk":0,"fk":"entity_type","fkcol":"id"},{"name":"name","type":"TEXT","notnull":true,"pk":0},{"name":"description","type":"TEXT","notnull":true,"pk":0}],"rows":[["abraham","person","Abraham","Patriarch, chosen by God to father His people"],["isaac","person","Isaac","Son of Abraham; father of Jacob and Esau."],["sarah","person","Sarah","Wife of Abraham; mother of Isaac"]]},"entity_book":{"count":8700,"columns":[{"name":"entity_id","type":"TEXT","notnull":true,"pk":1,"fk":"entity","fkcol":"id"},{"name":"book_id","type":"TEXT","notnull":true,"pk":2,"fk":"book","fkcol":"id"}],"rows":[["abraham","1-chronicles"],["abraham","1-kings"],["abraham","1-peter"],["abraham","2-chronicles"]]},"entity_name":{"count":6586,"columns":[{"name":"entity_id","type":"TEXT","notnull":true,"pk":1,"fk":"entity","fkcol":"id"},{"name":"name","type":"TEXT","notnull":true,"pk":2},{"name":"is_title","type":"INTEGER","notnull":true,"pk":0}],"rows":[["abraham","Abraham",0],["abraham","Abram",0],["sarah","Sara",0],["sarah","Sarah",0],["sarah","Sarai",0]]},"entity_type":{"count":13,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"parent_id","type":"TEXT","notnull":false,"pk":0,"fk":"entity_type","fkcol":"id"},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["person",null,"Person"],["group",null,"Group"],["place",null,"Place"],["city","place","City"],["land","place","Land"],["water","place","Water"],["mountain","place","Mountain"],["wilderness","place","Wilderness"],["event",null,"Event"],["object",null,"Object"],["record","object","Record"],["office",null,"Office"],["topic",null,"Topic"]]},"headword":{"count":26914,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"language","type":"TEXT","notnull":true,"pk":0},{"name":"text","type":"TEXT","notnull":true,"pk":0},{"name":"strongs","type":"TEXT","notnull":false,"pk":0},{"name":"gloss","type":"TEXT","notnull":false,"pk":0}],"rows":[[20935,"hbo","רֵאשִׁית","H7225","beginning"],[20936,"hbo","בָּרָא","H1254","created"],[41491,"en","beginning",null,null]]},"journey":{"count":0,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"traveler_id","type":"TEXT","notnull":true,"pk":0,"fk":"entity","fkcol":"id"},{"name":"from_id","type":"TEXT","notnull":false,"pk":0,"fk":"entity","fkcol":"id"},{"name":"to_id","type":"TEXT","notnull":true,"pk":0,"fk":"entity","fkcol":"id"},{"name":"days","type":"REAL","notnull":false,"pk":0},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[]},"link_kind":{"count":6,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0},{"name":"two_way","type":"INTEGER","notnull":true,"pk":0}],"rows":[["quotes","Quotes",0],["parallel","Parallel",1],["same_event","Same event",1],["alludes_to","Alludes to",0],["fulfills","Fulfills",0],["cross_reference","Cross-reference",1]]},"meaning":{"count":12022,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"headword_id","type":"INTEGER","notnull":true,"pk":0,"fk":"headword","fkcol":"id"},{"name":"number","type":"INTEGER","notnull":true,"pk":0},{"name":"gloss","type":"TEXT","notnull":true,"pk":0},{"name":"definition","type":"TEXT","notnull":false,"pk":0}],"rows":[[1,20935,1,"beginning",null],[2,20936,1,"created",null],[3,20937,1,"God",null]]},"mention":{"count":36067,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"entity_id","type":"TEXT","notnull":true,"pk":0,"fk":"entity","fkcol":"id"},{"name":"kind_id","type":"TEXT","notnull":true,"pk":0,"fk":"mention_kind","fkcol":"id"},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[[718,"abraham","names",6628,6628],[719,"abraham","names",6641,6641],[720,"abraham","names",6668,6668]]},"mention_kind":{"count":2,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["names","Names"],["about","About"]]},"part_of_speech":{"count":12,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["noun","Noun"],["proper_noun","Proper noun"],["pronoun","Pronoun"],["verb","Verb"],["adjective","Adjective"],["adverb","Adverb"],["preposition","Preposition"],["conjunction","Conjunction"],["article","Article"],["numeral","Numeral"],["particle","Particle"],["interjection","Interjection"]]},"passage_link":{"count":311940,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"kind_id","type":"TEXT","notnull":true,"pk":0,"fk":"link_kind","fkcol":"id"},{"name":"from_first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"from_last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"to_first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"to_last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[[1,"cross_reference",8,17,805,818],[2,"cross_reference",8,17,872,899],[311801,"quotes",814188,814884,472939,473565],[311909,"parallel",18,369,1188551,1189092]]},"relationship":{"count":4536,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"subject_id","type":"TEXT","notnull":true,"pk":0,"fk":"entity","fkcol":"id"},{"name":"kind_id","type":"TEXT","notnull":true,"pk":0,"fk":"relationship_kind","fkcol":"id"},{"name":"object_id","type":"TEXT","notnull":true,"pk":0,"fk":"entity","fkcol":"id"}],"rows":[[193,"abraham","child_of","terah-son-of-nahor"],[196,"abraham","sibling_of","sarah"],[199,"abraham","spouse_of","sarah"],[2492,"isaac","child_of","abraham"]]},"relationship_evidence":{"count":2473,"columns":[{"name":"relationship_id","type":"INTEGER","notnull":true,"pk":1,"fk":"relationship","fkcol":"id"},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":2,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":3,"fk":"word","fkcol":"id"}],"rows":[[193,6622,6628],[199,6668,6680],[2492,291175,291178]]},"relationship_kind":{"count":20,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0},{"name":"reverse_name","type":"TEXT","notnull":true,"pk":0},{"name":"two_way","type":"INTEGER","notnull":true,"pk":0}],"rows":[["child_of","child of","parent of",0],["spouse_of","spouse of","spouse of",1],["sibling_of","sibling of","sibling of",1],["descendant_of","descendant of","ancestor of",0],["member_of","member of","has member",0],["leader_of","leader of","led by",0],["holds_office","holds office","office held by",0],["part_of","part of","has part",0],["took_part_in","took part in","has participant",0],["took_place_at","took place at","site of",0],["located_in","located in","contains",0],["north_of","north of","south of",0],["east_of","east of","west of",0],["higher_than","higher than","lower than",0],["near","near","near",1],["borders","borders","borders",1],["named_after","named after","namesake of",0],["kept_by","kept by","keeper of",0],["written_by","written by","author of",0],["abridged_from","abridged from","abridged into",0]]},"sentence":{"count":72972,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[[1,1199440,1199450],[31225,8,17]]},"speech":{"count":0,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"speaker_id","type":"TEXT","notnull":true,"pk":0,"fk":"entity","fkcol":"id"},{"name":"through_id","type":"TEXT","notnull":false,"pk":0,"fk":"entity","fkcol":"id"},{"name":"mode_id","type":"TEXT","notnull":true,"pk":0,"fk":"speech_mode","fkcol":"id"},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[]},"speech_listener":{"count":0,"columns":[{"name":"speech_id","type":"INTEGER","notnull":true,"pk":1,"fk":"speech","fkcol":"id"},{"name":"entity_id","type":"TEXT","notnull":true,"pk":2,"fk":"entity","fkcol":"id"}],"rows":[]},"speech_mode":{"count":5,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["narration","Narration"],["spoken","Spoken"],["written","Written"],["prayer","Prayer"],["song","Song"]]},"structure":{"count":0,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"kind_id","type":"TEXT","notnull":true,"pk":0,"fk":"structure_kind","fkcol":"id"},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[]},"structure_kind":{"count":4,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["chiasm","Chiasm"],["parallelism","Parallelism"],["list","List"],["acrostic","Acrostic"]]},"structure_part":{"count":0,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"structure_id","type":"INTEGER","notnull":true,"pk":0,"fk":"structure","fkcol":"id"},{"name":"parent_id","type":"INTEGER","notnull":false,"pk":0,"fk":"structure_part","fkcol":"id"},{"name":"position","type":"INTEGER","notnull":true,"pk":0},{"name":"label","type":"TEXT","notnull":true,"pk":0},{"name":"pairs_with_id","type":"INTEGER","notnull":false,"pk":0,"fk":"structure_part","fkcol":"id"},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[]},"summary":{"count":0,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"kind_id","type":"TEXT","notnull":true,"pk":0,"fk":"summary_kind","fkcol":"id"},{"name":"book_id","type":"TEXT","notnull":false,"pk":0,"fk":"book","fkcol":"id"},{"name":"chapter","type":"INTEGER","notnull":false,"pk":0},{"name":"range_id","type":"TEXT","notnull":false,"pk":0,"fk":"verse_range","fkcol":"id"},{"name":"text","type":"TEXT","notnull":true,"pk":0}],"rows":[]},"summary_kind":{"count":19,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0},{"name":"description","type":"TEXT","notnull":true,"pk":0},{"name":"work_id","type":"TEXT","notnull":false,"pk":0,"fk":"work","fkcol":"id"}],"rows":[["doctrine","Doctrine","What the passage teaches about God, Christ, and the plan of salvation.",null],["principles","Principles","Lessons a reader can apply in daily life.",null],["christ","Christ","How the passage testifies of Jesus Christ or points to Him.",null],["covenants","Covenants","Promises made with God and the ordinances tied to them.",null],["commandments","Commandments","What God asks His people to do.",null],["prophecies","Prophecies","What is foretold and where it is fulfilled.",null],["symbols","Symbols","Objects, events, or people that stand for something more.",null],["questions","Questions","Questions to think about or discuss.",null],["key_verses","Key verses","The two or three most important verses and why each matters.",null],["hard_passages","Hard passages","Confusing verses explained simply.",null],["connections","Connections","Where the same idea or event shows up elsewhere in scripture.",null],["setting","Setting","When, where, and why it happened or was written.",null],["people","People","Who appears and what they do.",null],["speakers","Speakers","Who is talking to whom.",null],["original_words","Original words","Key Hebrew or Greek words and what they mean.","bible"],["culture","Culture","Customs and background a modern reader would miss.","bible"],["editors_comments","Editors' comments","Where Mormon or Moroni steps in to teach.","bom"],["revelation_background","Revelation background","Who the revelation was for, and the question or event that prompted it…","dc"],["translation_background","Translation background","Where Moses, Abraham, and the facsimiles came from.","pgp"]]},"verse_range":{"count":0,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0},{"name":"first_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"},{"name":"last_word_id","type":"INTEGER","notnull":true,"pk":0,"fk":"word","fkcol":"id"}],"rows":[]},"word":{"count":1813091,"columns":[{"name":"id","type":"INTEGER","notnull":false,"pk":1},{"name":"edition_id","type":"TEXT","notnull":true,"pk":0,"fk":"edition_book","fkcol":"edition_id"},{"name":"book_id","type":"TEXT","notnull":true,"pk":0,"fk":"edition_book","fkcol":"edition_id"},{"name":"chapter","type":"INTEGER","notnull":true,"pk":0},{"name":"verse","type":"INTEGER","notnull":true,"pk":0},{"name":"position","type":"INTEGER","notnull":true,"pk":0},{"name":"text","type":"TEXT","notnull":true,"pk":0},{"name":"before","type":"TEXT","notnull":true,"pk":0},{"name":"after","type":"TEXT","notnull":true,"pk":0},{"name":"supplied","type":"INTEGER","notnull":true,"pk":0}],"rows":[[8,"kjv","genesis",1,1,1,"In",""," ",0],[9,"kjv","genesis",1,1,2,"the",""," ",0],[10,"kjv","genesis",1,1,3,"beginning",""," ",0],[11,"kjv","genesis",1,1,4,"God",""," ",0],[1199441,"wlc","genesis",1,1,2,"רֵאשִׁ֖ית",""," ",0],[1199442,"wlc","genesis",1,1,3,"בָּרָ֣א",""," ",0]]},"word_headword":{"count":1808101,"columns":[{"name":"word_id","type":"INTEGER","notnull":false,"pk":1,"fk":"word","fkcol":"id"},{"name":"headword_id","type":"INTEGER","notnull":true,"pk":0,"fk":"headword","fkcol":"id"},{"name":"part_of_speech","type":"TEXT","notnull":true,"pk":0,"fk":"part_of_speech","fkcol":"id"},{"name":"grammar","type":"TEXT","notnull":false,"pk":0}],"rows":[[10,41491,"noun",null],[11,43603,"noun",null],[1199441,20935,"noun","Ncfsa"],[1199442,20936,"verb","Vqp3ms"]]},"word_match":{"count":365530,"columns":[{"name":"word_id","type":"INTEGER","notnull":true,"pk":1,"fk":"word","fkcol":"id"},{"name":"other_word_id","type":"INTEGER","notnull":true,"pk":2,"fk":"word","fkcol":"id"}],"rows":[[10,1199441],[11,1199443],[12,1199442]]},"word_meaning":{"count":180502,"columns":[{"name":"word_id","type":"INTEGER","notnull":false,"pk":1,"fk":"word","fkcol":"id"},{"name":"meaning_id","type":"INTEGER","notnull":true,"pk":0,"fk":"meaning","fkcol":"id"}],"rows":[[1199441,1],[1199442,2],[1199443,3]]},"work":{"count":4,"columns":[{"name":"id","type":"TEXT","notnull":true,"pk":1},{"name":"name","type":"TEXT","notnull":true,"pk":0}],"rows":[["bible","Bible"],["bom","Book of Mormon"],["dc","Doctrine and Covenants"],["pgp","Pearl of Great Price"]]}}};
+const T = D.tables;
+
+const GROUPS = [
+  { id: 'gram', name: 'grammar · structures', tables: ['sentence', 'clause', 'clause_role', 'clause_part', 'structure_kind', 'structure', 'structure_part'] },
+  { id: 'pass', name: 'links · summaries', tables: ['link_kind', 'passage_link', 'verse_range', 'summary_kind', 'summary'] },
+  { id: 'text', name: 'text', tables: ['work', 'edition', 'book', 'edition_book', 'word'] },
+  { id: 'dict', name: 'dictionary', tables: ['part_of_speech', 'headword', 'meaning', 'word_headword', 'word_meaning', 'word_match'] },
+  { id: 'ent', name: 'entities', tables: ['entity_type', 'entity', 'entity_name', 'entity_book', 'mention_kind', 'mention'] },
+  { id: 'event', name: 'speech · relationships · journeys · dates', tables: ['speech_mode', 'speech', 'speech_listener', 'relationship_kind', 'relationship', 'relationship_evidence', 'journey', 'counting_system', 'date'] },
+];
+const GROUP_OF = {};
+GROUPS.forEach(g => g.tables.forEach(t => GROUP_OF[t] = g.id));
+
+const LANES = [
+  ['clause_role', 'clause_part', 'link_kind', 'structure_kind', 'structure_part', 'summary_kind', 'summary'],
+  ['clause', 'sentence', 'passage_link', 'structure', 'verse_range'],
+  ['work', 'edition', 'book', 'edition_book', 'word'],
+  ['word_match', 'word_headword', 'part_of_speech', 'headword', 'meaning', 'word_meaning'],
+  ['mention_kind', 'mention', 'entity_book', 'entity_name', 'journey'],
+  ['entity_type', 'entity', 'speech_listener', 'speech', 'speech_mode'],
+  ['relationship_kind', 'relationship', 'relationship_evidence', 'counting_system', 'date'],
+];
+const HEAD = 30, ROWH = 19, TW = 256, LANE = 330, PADX = 70, PADY = 60, GAP = 34;
+const tableH = t => HEAD + T[t].columns.length * ROWH + 8;
+const LANE_H = LANES.map(l => l.reduce((s, t) => s + tableH(t), 0) + GAP * (l.length - 1));
+const W = PADX * 2 + (LANES.length - 1) * LANE + TW, H = PADY * 2 + Math.max(...LANE_H);
+const BOX = {};
+LANES.forEach((lane, li) => {
+  let y = PADY + (Math.max(...LANE_H) - LANE_H[li]) / 2;
+  lane.forEach(t => { BOX[t] = { x: PADX + li * LANE, y, w: TW, h: tableH(t), lane: li }; y += tableH(t) + GAP; });
+});
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmt = n => n.toLocaleString('en-US');
+const short = n => n >= 1e6 ? (n / 1e6).toFixed(2) + 'M' : n >= 1e4 ? Math.round(n / 1e3) + 'k' : fmt(n);
+const gcol = t => `var(--${GROUP_OF[t]})`;
+const rowY = (t, col) => BOX[t].y + HEAD + T[t].columns.findIndex(c => c.name === col) * ROWH + ROWH / 2;
+
+function edgePath(src, scol, dst, dcol) {
+  const A = BOX[src], B = BOX[dst], y1 = rowY(src, scol), y2 = rowY(dst, dcol);
+  let x1, x2, s1, s2;
+  if (A.lane === B.lane) { x1 = x2 = A.x + A.w; s1 = s2 = 1; }
+  else if (B.lane > A.lane) { x1 = A.x + A.w; x2 = B.x; s1 = 1; s2 = -1; }
+  else { x1 = A.x; x2 = B.x + B.w; s1 = -1; s2 = 1; }
+  const bend = A.lane === B.lane ? 34 + Math.min(70, Math.abs(y2 - y1) * 0.12) : Math.max(46, Math.abs(x2 - x1) * 0.42);
+  const d = `M${x1},${y1} C${x1 + s1 * bend},${y1} ${x2 + s2 * bend},${y2} ${x2},${y2}`;
+  const crow = `M${x1 + s1 * 11},${y1} L${x1},${y1 - 5} M${x1 + s1 * 11},${y1} L${x1},${y1 + 5}`;
+  const one = `M${x2 + s2 * 7},${y2 - 5} L${x2 + s2 * 7},${y2 + 5} M${x2 + s2 * 11},${y2 - 5} L${x2 + s2 * 11},${y2 + 5}`;
+  return `<path class="ln" d="${d}"/><path class="mk" d="${crow} ${one}"/>`;
+}
+
+function buildERD() {
+  const links = [];
+  let edges = '', boxes = '';
+  for (const t of Object.keys(BOX)) {
+    T[t].columns.filter(c => c.fk).forEach(c => {
+      const i = links.length;
+      links.push([t, c.fk]);
+      edges += `<g class="edge" data-i="${i}" style="color:${gcol(t)}"><title>${t}.${c.name} → ${c.fk}.${c.fkcol}</title>${edgePath(t, c.name, c.fk, c.fkcol)}</g>`;
+    });
+  }
+  for (const [t, B] of Object.entries(BOX)) {
+    const n = T[t].count;
+    let rows = '';
+    T[t].columns.forEach((c, i) => {
+      const y = B.y + HEAD + i * ROWH + ROWH / 2;
+      if (i % 2) rows += `<rect class="stripe" x="${B.x + 1}" y="${y - ROWH / 2}" width="${B.w - 2}" height="${ROWH}"/>`;
+      if (c.pk) rows += `<circle class="pk" cx="${B.x + 12}" cy="${y}" r="3.6"/>`;
+      if (c.fk) rows += `<path class="fkm" d="M${B.x + (c.pk ? 22 : 12)},${y - 4.2} l4.2,4.2 l-4.2,4.2 l-4.2,-4.2z"/>`;
+      rows += `<text class="cn${c.fk ? ' isfk' : ''}" x="${B.x + 32}" y="${y + 4}">${c.name}</text><text class="ct" x="${B.x + B.w - 10}" y="${y + 4}">${c.type.toLowerCase()}</text>`;
+    });
+    boxes += `<g class="tbl${n ? '' : ' empty'}" data-t="${t}" tabindex="0" role="button" aria-label="${t}, ${fmt(n)} rows" style="color:${gcol(t)}">` +
+      `<rect class="frame" x="${B.x}" y="${B.y}" width="${B.w}" height="${B.h}" rx="6"/>` +
+      `<path class="hd" d="M${B.x},${B.y + HEAD} V${B.y + 6} a6,6 0 0 1 6,-6 H${B.x + B.w - 6} a6,6 0 0 1 6,6 V${B.y + HEAD}z"/>` +
+      `<text class="tn" x="${B.x + 10}" y="${B.y + 20}">${t}</text><text class="tc" x="${B.x + B.w - 10}" y="${B.y + 20}">${n ? short(n) : 'empty'}</text>` +
+      rows + `</g>`;
+  }
+  const defs = `<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" style="stroke:currentColor;stroke-opacity:.35;stroke-width:2"/></pattern></defs>`;
+  return { svg: `<svg id="erd" role="img" aria-label="Entity relationship diagram">${defs}<g class="edges">${edges}</g>${boxes}<g class="top"></g></svg>`, links };
+}
+
+
+function panelHTML(t) {
+  const tb = T[t], all = tb.rows.length === tb.count;
+  const out = [...new Set(tb.columns.filter(c => c.fk).map(c => c.fk))];
+  const inn = [...new Set(Object.keys(T).filter(o => T[o].columns.some(c => c.fk === t)))];
+  const chips = list => list.map(o => `<button class="chip" data-go="${o}" style="color:${gcol(o)}">${o}</button>`).join('');
+  const isHeb = v => typeof v === 'string' && /[֐-׿]/.test(v);
+  const rows = tb.rows.length ? `<div class="rows"><div class="cap">${all ? 'all rows' : 'sample rows'}</div><table><tr>${tb.columns.map(c => `<th>${c.name}</th>`).join('')}</tr>` +
+    tb.rows.map(r => `<tr>${r.map(v => v === null || v === '' ? `<td class="null">∅</td>` : `<td${isHeb(v) ? ' class="heb"' : ''}>${esc(v)}</td>`).join('')}</tr>`).join('') + `</table></div>` : `<div class="cap">no rows yet</div>`;
+  return `<div class="pop-top"><span class="t" style="color:${gcol(t)}">${t}</span><span class="n">${fmt(tb.count)} rows</span><button aria-label="Close" data-close>×</button></div>` +
+    (out.length ? `<div class="refs"><span class="cap">points to</span>${chips(out)}</div>` : '') +
+    (inn.length ? `<div class="refs"><span class="cap">pointed to by</span>${chips(inn)}</div>` : '') + rows;
+}
+
+function boot() {
+  const groups = document.getElementById('groups');
+  groups.innerHTML = GROUPS.map(g => `<button data-g="${g.id}" style="color:var(--${g.id})"><span class="dot"></span><span style="color:var(--muted)">${g.name}</span></button>`).join('');
+
+  const view = document.getElementById('erd-view');
+  const { svg, links } = buildERD();
+  view.insertAdjacentHTML('afterbegin', svg);
+  const svgEl = view.querySelector('svg');
+  const edgeEls = [...svgEl.querySelectorAll('.edge')];
+  const tblEls = [...svgEl.querySelectorAll('.tbl')];
+  const edgeLayer = svgEl.querySelector('.edges'), topLayer = svgEl.querySelector('.top');
+  const panel = document.getElementById('panel');
+  let sel = null;
+
+  const cam = { x: 0, y: 0, k: 1 };
+  const apply = () => svgEl.setAttribute('viewBox', `${cam.x} ${cam.y} ${view.clientWidth / cam.k} ${view.clientHeight / cam.k}`);
+  function fit() {
+    const k = Math.min(view.clientWidth / W, view.clientHeight / H);
+    cam.k = k; cam.x = -(view.clientWidth / k - W) / 2; cam.y = -(view.clientHeight / k - H) / 2;
+    apply();
+  }
+  function zoomAt(f, sx, sy) {
+    const k = Math.min(3, Math.max(0.15, cam.k * f));
+    const wx = cam.x + sx / cam.k, wy = cam.y + sy / cam.k;
+    cam.k = k; cam.x = wx - sx / k; cam.y = wy - sy / k;
+    apply();
+  }
+  function centerOn(t) {
+    const B = BOX[t];
+    if (cam.k < 0.8) cam.k = 0.9;
+    const vw = view.clientWidth - (panel.hidden ? 0 : panel.offsetWidth + 24);
+    cam.x = B.x + B.w / 2 - vw / 2 / cam.k; cam.y = B.y + B.h / 2 - view.clientHeight / 2 / cam.k;
+    apply();
+  }
+
+  function focus(set, test) {
+    svgEl.classList.toggle('focus', !!set);
+    tblEls.forEach(b => b.classList.toggle('on', !!set && set.has(b.dataset.t)));
+    edgeEls.forEach(e => {
+      const on = !!set && test(links[+e.dataset.i]);
+      e.classList.toggle('on', on);
+      (on ? topLayer : edgeLayer).appendChild(e);
+    });
+  }
+  let shown;
+  function focusTable(t) {
+    if (t === shown) return;
+    shown = t;
+    if (!t) return focus(null);
+    const set = new Set([t]);
+    links.forEach(([a, b]) => { if (a === t) set.add(b); if (b === t) set.add(a); });
+    focus(set, ([a, b]) => a === t || b === t);
+  }
+  function select(t, move) {
+    sel = t;
+    tblEls.forEach(b => b.classList.toggle('sel', b.dataset.t === t));
+    focusTable(t);
+    if (!t) { panel.hidden = true; return; }
+    panel.innerHTML = panelHTML(t);
+    panel.hidden = false;
+    if (move) centerOn(t);
+  }
+
+  let drag = null;
+  view.addEventListener('pointerdown', e => {
+    if (e.target.closest('#panel, .zoom')) return;
+    drag = { x: e.clientX, y: e.clientY, cx: cam.x, cy: cam.y, moved: false, target: e.target.closest('.tbl') };
+    view.setPointerCapture(e.pointerId);
+  });
+  view.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.moved && Math.hypot(dx, dy) < 4) return;
+    drag.moved = true;
+    view.classList.add('panning');
+    cam.x = drag.cx - dx / cam.k; cam.y = drag.cy - dy / cam.k;
+    apply();
+  });
+  view.addEventListener('pointerup', () => {
+    if (drag && !drag.moved) {
+      const t = drag.target?.dataset.t;
+      select(t && t !== sel ? t : null);
+    }
+    drag = null;
+    view.classList.remove('panning');
+  });
+  view.addEventListener('wheel', e => {
+    if (e.target.closest('#panel')) return;
+    e.preventDefault();
+    const r = view.getBoundingClientRect();
+    if (e.ctrlKey || e.metaKey) zoomAt(Math.exp(-e.deltaY * 0.01), e.clientX - r.left, e.clientY - r.top);
+    else { cam.x += e.deltaX / cam.k; cam.y += e.deltaY / cam.k; apply(); }
+  }, { passive: false });
+  svgEl.addEventListener('mouseover', e => { if (!sel && !drag) focusTable(e.target.closest('.tbl')?.dataset.t); });
+  svgEl.addEventListener('mouseleave', () => { if (!sel) focusTable(null); });
+  svgEl.addEventListener('keydown', e => {
+    const b = e.target.closest('.tbl');
+    if (b && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); select(b.dataset.t, true); }
+  });
+  panel.addEventListener('click', e => {
+    if (e.target.closest('[data-close]')) { const t = sel; select(null); svgEl.querySelector(`[data-t="${t}"]`)?.focus({ preventScroll: true }); }
+    const go = e.target.closest('[data-go]');
+    if (go) select(go.dataset.go, true);
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && sel) select(null); });
+  document.querySelector('.zoom').addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.z === 'fit') return fit();
+    zoomAt(b.dataset.z === 'in' ? 1.3 : 1 / 1.3, view.clientWidth / 2, view.clientHeight / 2);
+  });
+  groups.addEventListener('mouseover', e => {
+    const g = e.target.closest('[data-g]');
+    if (!g || sel) return;
+    const ts = new Set(GROUPS.find(x => x.id === g.dataset.g).tables);
+    shown = undefined;
+    focus(ts, ([a, b]) => ts.has(a) && ts.has(b));
+  });
+  groups.addEventListener('mouseleave', () => { if (!sel) focusTable(null); });
+  new ResizeObserver(fit).observe(view);
+  fit();
+}
+
+if (typeof document !== 'undefined') boot();
+</script>
+</body>
+</html>

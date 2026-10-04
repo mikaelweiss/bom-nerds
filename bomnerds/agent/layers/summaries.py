@@ -41,6 +41,7 @@ class Summaries(Layer):
     points = False
     # Speeches say who is talking. Every other layer's tags would bury the text.
     sees = ("speakers",)
+    entities = False
     instructions = INSTRUCTIONS
 
     def scopes(self, db):

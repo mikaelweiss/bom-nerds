@@ -111,9 +111,9 @@ def prompt(db: sqlite3.Connection, session: Session, path: str) -> str:
     sections.append("## Script findings\n\n" + ("\n\n".join(f"# {checks.heading(db, f)}\n{f.text}" for f in found) or "None."))
     sections.append("## Unlisted names\n\n" + ("\n\n".join(unlisted) or "None."))
 
-    if any(layer.points for layer in layers):
-        scopes = [scope for (name, scope) in attention if LAYERS[name].points] + [u for u in units if u in sample]
-        chapter_layer = next(layer for layer in layers if layer.points)
+    if any(layer.entities for layer in layers):
+        scopes = [scope for (name, scope) in attention if LAYERS[name].entities] + [u for u in units if u in sample]
+        chapter_layer = next(layer for layer in layers if layer.entities)
         sections.append("## Entities\n\nEvery entity named or tagged in the sections below.\n\n" + entity_list(db, chapter_layer, [s for s in dict.fromkeys(scopes) if s in set(plans.session_scopes(db, session, chapter_layer.name))]))
 
     shown = set()
@@ -143,7 +143,7 @@ def prompt(db: sqlite3.Connection, session: Session, path: str) -> str:
                         shown.add((book, chapter))
                         parts.append(show(db, book, chapter, layers=seen, level=2))
                 extra = layer.extra(db, Jobs, scope)
-                if extra and not layer.points:
+                if extra and not layer.entities:
                     parts.append(extra)
     sections.append("## Sample sections\n\nRead each in full and fix every error.\n\n" + ("\n\n".join(parts) or "None."))
     return "\n\n".join(sections) + "\n"

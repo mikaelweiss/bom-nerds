@@ -34,7 +34,7 @@ That is the chapter and verse, the words that name it, its type, and one line sa
 def prompt(db: sqlite3.Connection, session, work: list[tuple[Layer, list[str], str]]) -> str:
     """One prompt for every layer of a session: work holds each layer with its scopes still to answer and its answer file, in order."""
     layers = [layer for layer, _, _ in work]
-    points = any(layer.points for layer in layers)
+    named = any(layer.entities for layer in layers)
     names = ", ".join(layer.name for layer in layers)
     sections = [
         f"# Session {session.id}: {names}, {session.covers}",
@@ -43,16 +43,16 @@ def prompt(db: sqlite3.Connection, session, work: list[tuple[Layer, list[str], s
     ]
     for layer, scopes, path in work:
         sections.append(f"## {layer.name}\n\n" + layer.instructions.strip() + "\n\n### Answer format\n\n" + layer.format)
-    if points and any(layer.format == JSON_LINES for layer in layers if layer.points):
+    if any(layer.points and layer.format == JSON_LINES for layer in layers):
         sections.append(POINTING)
-    sections.append("## Unsure answers" + (" and missing entities" if points else "") + "\n\n" + UNSURE + ("\n\n" + UNLISTED if points else ""))
+    sections.append("## Unsure answers" + (" and missing entities" if named else "") + "\n\n" + UNSURE + ("\n\n" + UNLISTED if named else ""))
     for layer, scopes, _ in work:
         preamble = layer.preamble(db, scopes)
         if preamble:
             sections.append(preamble)
-    if points:
-        every = [scope for layer, scopes, _ in work if layer.points for scope in scopes]
-        first = next(layer for layer in layers if layer.points)
+    if named:
+        every = [scope for layer, scopes, _ in work if layer.entities for scope in scopes]
+        first = next(layer for layer in layers if layer.entities)
         sections.append("## Entities\n\nPick entities from this list. It holds every entity named or tagged in these chapters.\n\n" + entity_list(db, first, every))
     sections += parts(db, work)
     return "\n\n".join(sections) + "\n"

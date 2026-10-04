@@ -93,6 +93,7 @@ WORD_MEANINGS_FORMAT = """Write one line per verse under Words to answer: the ch
 class Headwords(Layer):
     name = "headwords"
     step = 2
+    entities = False
     instructions = HEADWORDS
     format = HEADWORDS_FORMAT
 
@@ -190,6 +191,7 @@ class Meanings(Layer):
     name = "meanings"
     step = 7
     scope = "headword"
+    entities = False
     instructions = MEANINGS
 
     def scopes(self, db):
@@ -305,6 +307,7 @@ class WordMeanings(Layer):
     name = "word-meanings"
     step = 7
     scope = "edition chapter"
+    entities = False
     instructions = WORD_MEANINGS
     format = WORD_MEANINGS_FORMAT
 

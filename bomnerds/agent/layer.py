@@ -37,8 +37,10 @@ class Layer:
     step: int
     # Every scope of one layer is the same kind: "chapter" (book/chapter), "book", or one the layer defines.
     scope: str = "chapter"
-    # False for layers whose answers name no passages or entities, so their prompts leave out how to point at text and the entity list.
+    # False for layers whose answers name no passages, so their prompts leave out how to point at text.
     points: bool = True
+    # False for layers whose answers name no entities, so their prompts leave out the entity list and unlisted lines.
+    entities: bool = True
     # Layers whose tags the job's context shows. None shows every layer from an earlier step.
     sees: tuple[str, ...] | None = None
     # True when each scope reads what the scope before it stored, so a batch stores its scopes in order and stops at the first that fails.

@@ -30,6 +30,7 @@ Answer with one object per link:
 class Links(Layer):
     name = "links"
     step = 7
+    entities = False
     instructions = INSTRUCTIONS
 
     def extra(self, db, jobs, scope, batch=()):

@@ -183,7 +183,7 @@ def submit(db: sqlite3.Connection, session_id: str, name: str | None) -> str:
 def store_section(db: sqlite3.Connection, layer: Layer, scope: str, lines: list[str]):
     """Check one section and store it, or raise Rejected with every problem in it."""
     found = []
-    if layer.points and layer.scope == "chapter":
+    if layer.entities and layer.scope == "chapter":
         found, lines = unlisted(db, scope, lines)
     reading = layer.read(db, scope, lines)
     reading.unlisted = found

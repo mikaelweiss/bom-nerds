@@ -43,6 +43,7 @@ class Structures(Layer):
     name = "structures"
     step = 7
     sees = ()
+    entities = False
     instructions = INSTRUCTIONS
 
     def parse(self, db, scope, answer):

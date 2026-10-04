@@ -72,6 +72,7 @@ class Grammar(Layer):
     name = "grammar"
     step = 7
     sees = ()
+    entities = False
     instructions = INSTRUCTIONS
 
     def extra(self, db, jobs, scope, batch=()):

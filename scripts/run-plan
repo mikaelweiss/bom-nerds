@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Runs every session of a plan file with Claude Code, a few at a time, in plan order.
+
+A session starts once the sessions it waits for are done. One that ends without being done runs again, up to ATTEMPTS times,
+RETRY_WAIT seconds later, since the usual cause is a usage limit. Each run's JSON output, token counts included, goes to jobs/logs/.
+
+    scripts/run-plan                 runs plan.tsv
+    scripts/run-plan --pilot         runs plan-pilot.tsv
+    scripts/run-plan --parallel 4    runs four sessions at once
+
+Set BOMNERDS_DATABASE and BOMNERDS_JOBS to run against a copy, as the pilot does.
+"""
+
+import argparse
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from bomnerds.agent import plan as plans  # noqa: E402
+from bomnerds.agent.jobs import CLI, JOBS  # noqa: E402
+
+ATTEMPTS = 3
+RETRY_WAIT = 600
+POLL = 15
+TOOLS = f"Read Write Edit Bash({CLI} *)"
+SYSTEM = (
+    "You run one session of the bom-nerds tagging plan: you tag scripture for a free study dataset. "
+    f"Work from the repository root, and read and write the dataset only through `{CLI}`. "
+    "Read every file the CLI names in full with the Read tool, paging through long ones, then follow it to the end."
+)
+
+
+def command(session: plans.Session) -> list[str]:
+    task = f"Run `{CLI} batch {session.id}`. It writes the session's prompt and says where. Read all of it, then follow it until `{CLI} done {session.id}` succeeds."
+    return [
+        "claude", "-p", task,
+        "--model", session.model,
+        "--system-prompt", SYSTEM,
+        "--tools", "Bash,Read,Write,Edit",
+        "--allowedTools", TOOLS,
+        "--permission-mode", "dontAsk",
+        "--setting-sources", "project",
+        "--strict-mcp-config",
+        "--disable-slash-commands",
+        "--no-session-persistence",
+        "--output-format", "json",
+    ]
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--pilot", action="store_true")
+    parser.add_argument("--parallel", type=int, default=3)
+    args = parser.parse_args()
+    path = plans.PILOT_PLAN if args.pilot else plans.PLAN
+    sessions = plans.load(path)
+    logs = JOBS / "logs"
+    logs.mkdir(parents=True, exist_ok=True)
+    running: dict[str, subprocess.Popen] = {}
+    attempts: dict[str, int] = {}
+    waiting_until: dict[str, float] = {}
+    failed: set[str] = set()
+    while True:
+        for id, process in list(running.items()):
+            if process.poll() is None:
+                continue
+            del running[id]
+            session = next(s for s in sessions if s.id == id)
+            if session.done():
+                print(f"done    {id}", flush=True)
+            elif attempts[id] >= ATTEMPTS:
+                failed.add(id)
+                print(f"failed  {id} after {ATTEMPTS} runs. See {logs}", flush=True)
+            else:
+                waiting_until[id] = time.time() + RETRY_WAIT
+                print(f"retry   {id} in {RETRY_WAIT // 60} minutes", flush=True)
+        ready = [
+            s for s in sessions
+            if not s.done() and s.id not in running and s.id not in failed and waiting_until.get(s.id, 0) <= time.time() and not plans.waiting_on(s, sessions)
+        ]
+        for session in ready[: max(0, args.parallel - len(running))]:
+            attempts[session.id] = attempts.get(session.id, 0) + 1
+            log = open(logs / f"{session.id}-{attempts[session.id]}.json", "w")
+            running[session.id] = subprocess.Popen(command(session), cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL)
+            print(f"start   {session.id} ({session.model}, {session.covers})", flush=True)
+        if not running and not waiting_until.keys() - {s.id for s in sessions if s.done()} - failed:
+            break
+        time.sleep(POLL)
+    left = [s.id for s in sessions if not s.done()]
+    print(f"{len(sessions) - len(left)} of {len(sessions)} sessions done." + (f" Not done: {', '.join(left[:10])}" + (" and more" if len(left) > 10 else "") if left else ""))
+    sys.exit(1 if left else 0)
+
+
+if __name__ == "__main__":
+    main()

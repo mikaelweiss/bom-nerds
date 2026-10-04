@@ -216,6 +216,7 @@ class Entities(Layer):
     scope = "book, part of a book, or all of scripture"
     points = False
     ordered = True
+    entities = False
     instructions = ENTITIES
 
     def scopes(self, db):

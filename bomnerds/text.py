@@ -1,6 +1,7 @@
 import sqlite3
 import sys
 import zipfile
+from collections.abc import Callable
 
 from . import lds, usfm
 from .rows import row_id
@@ -34,30 +35,48 @@ def marks(values) -> str:
 
 
 def build():
-    if DATABASE.exists():
-        sys.exit(f"{DATABASE.name} already exists. Delete it to start over.")
+    new = not DATABASE.exists()
+    db = sqlite3.connect(DATABASE)
+    db.execute("pragma foreign_keys = on")
+    if new:
+        db.executescript((ROOT / "db/schema.sql").read_text())
+    db.executescript((ROOT / "db/seed.sql").read_text())
+    added = []
+    for name, books in editions(db):
+        edition = row_id(db, "edition", name)
+        if db.execute("select 1 from edition_book where edition_id = ?", (edition,)).fetchone():
+            continue
+        with db:
+            added += add_edition(db, edition, books())
+    with db:
+        number_words(db)
+    verify(db, added)
+    summarize(db)
 
-    editions = [
-        ("Bible", KJV, bible()),
-        ("Book of Mormon", BOOK_OF_MORMON, lds.book_of_mormon(fetch("book-of-mormon.json"))),
-        ("Doctrine and Covenants", DOCTRINE_AND_COVENANTS, lds.doctrine_and_covenants(fetch("doctrine-and-covenants.json"))),
-        ("Pearl of Great Price", PEARL_OF_GREAT_PRICE, lds.pearl_of_great_price(fetch("pearl-of-great-price.json"))),
+
+def editions(db: sqlite3.Connection) -> list[tuple[str, Callable[[], list[Book]]]]:
+    from . import macula
+
+    return [
+        (KJV, bible),
+        (BOOK_OF_MORMON, lambda: lds.book_of_mormon(fetch("book-of-mormon.json"))),
+        (DOCTRINE_AND_COVENANTS, lambda: lds.doctrine_and_covenants(fetch("doctrine-and-covenants.json"))),
+        (PEARL_OF_GREAT_PRICE, lambda: lds.pearl_of_great_price(fetch("pearl-of-great-price.json"))),
+        (WLC, lambda: macula.books(db, WLC)),
+        (SBLGNT, lambda: macula.books(db, SBLGNT)),
     ]
 
-    db = sqlite3.connect(DATABASE)
-    db.executescript((ROOT / "db/schema.sql").read_text())
-    db.executescript((ROOT / "db/seed.sql").read_text())
-    parsed = []
-    with db:
-        for work_name, edition_name, books in editions:
-            work, edition = row_id(db, "work", work_name), row_id(db, "edition", edition_name)
-            for position, book in enumerate(books, 1):
-                book_id = db.execute("insert into book (work_id, name) values (?, ?)", (work, book.name)).lastrowid
-                db.execute("insert into edition_book (edition_id, book_id, work_id, position) values (?, ?, ?, ?)", (edition, book_id, work, position))
-                insert_text(db, edition, book_id, book.verses)
-                parsed.append((edition, book_id, book))
-    verify(db, parsed)
-    summarize(db)
+
+def add_edition(db: sqlite3.Connection, edition: int, books: list[Book]) -> list[tuple[int, int, Book]]:
+    work = db.execute("select work_id from edition where id = ?", (edition,)).fetchone()[0]
+    added = []
+    for position, book in enumerate(books, 1):
+        db.execute("insert into book (work_id, name) values (?, ?) on conflict do nothing", (work, book.name))
+        book_id = db.execute("select id from book where work_id = ? and name = ?", (work, book.name)).fetchone()[0]
+        db.execute("insert into edition_book (edition_id, book_id, work_id, position) values (?, ?, ?, ?)", (edition, book_id, work, position))
+        insert_text(db, edition, book_id, book.verses)
+        added.append((edition, book_id, book))
+    return added
 
 
 def insert_text(db: sqlite3.Connection, edition: int, book: int, verses: dict[tuple[int, int | None], list[Word]]):

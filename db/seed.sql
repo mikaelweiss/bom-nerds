@@ -2,13 +2,15 @@ insert into language (id, name, iso_code) values
     (1, 'English', 'en'),
     (2, 'Biblical Hebrew', 'hbo'),
     (3, 'Biblical Aramaic', 'arc'),
-    (4, 'Koine Greek', 'grc');
+    (4, 'Koine Greek', 'grc')
+on conflict do nothing;
 
 insert into work (id, name) values
     (1, 'Bible'),
     (2, 'Book of Mormon'),
     (3, 'Doctrine and Covenants'),
-    (4, 'Pearl of Great Price');
+    (4, 'Pearl of Great Price')
+on conflict do nothing;
 
 insert into edition (id, work_id, language_id, name) values
     (1, 1, 1, 'King James Version (1769)'),
@@ -16,7 +18,8 @@ insert into edition (id, work_id, language_id, name) values
     (3, 1, 4, 'SBL Greek New Testament'),
     (4, 2, 1, 'Book of Mormon (2013)'),
     (5, 3, 1, 'Doctrine and Covenants (2013)'),
-    (6, 4, 1, 'Pearl of Great Price (2013)');
+    (6, 4, 1, 'Pearl of Great Price (2013)')
+on conflict do nothing;
 
 insert into part_of_speech (id, name) values
     (1, 'Noun'),
@@ -31,7 +34,8 @@ insert into part_of_speech (id, name) values
     (10, 'Numeral'),
     (11, 'Particle'),
     (12, 'Interjection'),
-    (13, 'Suffix');
+    (13, 'Suffix')
+on conflict do nothing;
 
 insert into stem (id, name) values
     (1, 'Qal'),
@@ -80,7 +84,8 @@ insert into stem (id, name) values
     (44, 'Palpel'),
     (45, 'Ithpalpel'),
     (46, 'Ithpolel'),
-    (47, 'Ittaphal');
+    (47, 'Ittaphal')
+on conflict do nothing;
 
 insert into verb_form (id, name) values
     (1, 'Perfect'),
@@ -93,7 +98,8 @@ insert into verb_form (id, name) values
     (8, 'Active participle'),
     (9, 'Passive participle'),
     (10, 'Infinitive absolute'),
-    (11, 'Infinitive construct');
+    (11, 'Infinitive construct')
+on conflict do nothing;
 
 insert into tense (id, name) values
     (1, 'Present'),
@@ -101,7 +107,8 @@ insert into tense (id, name) values
     (3, 'Future'),
     (4, 'Aorist'),
     (5, 'Perfect'),
-    (6, 'Pluperfect');
+    (6, 'Pluperfect')
+on conflict do nothing;
 
 insert into voice (id, name) values
     (1, 'Active'),
@@ -110,7 +117,8 @@ insert into voice (id, name) values
     (4, 'Middle deponent'),
     (5, 'Passive deponent'),
     (6, 'Middle or passive deponent'),
-    (7, 'Middle or passive');
+    (7, 'Middle or passive')
+on conflict do nothing;
 
 insert into mood (id, name) values
     (1, 'Indicative'),
@@ -118,35 +126,41 @@ insert into mood (id, name) values
     (3, 'Optative'),
     (4, 'Imperative'),
     (5, 'Infinitive'),
-    (6, 'Participle');
+    (6, 'Participle')
+on conflict do nothing;
 
 insert into gender (id, name) values
     (1, 'Masculine'),
     (2, 'Feminine'),
     (3, 'Neuter'),
     (4, 'Common'),
-    (5, 'Both');
+    (5, 'Both')
+on conflict do nothing;
 
 insert into grammatical_number (id, name) values
     (1, 'Singular'),
     (2, 'Plural'),
-    (3, 'Dual');
+    (3, 'Dual')
+on conflict do nothing;
 
 insert into grammatical_case (id, name) values
     (1, 'Nominative'),
     (2, 'Genitive'),
     (3, 'Dative'),
     (4, 'Accusative'),
-    (5, 'Vocative');
+    (5, 'Vocative')
+on conflict do nothing;
 
 insert into state (id, name) values
     (1, 'Absolute'),
     (2, 'Construct'),
-    (3, 'Determined');
+    (3, 'Determined')
+on conflict do nothing;
 
 insert into degree (id, name) values
     (1, 'Comparative'),
-    (2, 'Superlative');
+    (2, 'Superlative')
+on conflict do nothing;
 
 insert into word_type (id, name) values
     (1, 'Adjective'),
@@ -175,7 +189,8 @@ insert into word_type (id, name) values
     (24, 'Possessive'),
     (25, 'Conditional'),
     (26, 'Letter'),
-    (27, 'Numeral');
+    (27, 'Numeral')
+on conflict do nothing;
 
 insert into entity_type (id, parent_id, name) values
     (1, null, 'Person'),
@@ -190,18 +205,21 @@ insert into entity_type (id, parent_id, name) values
     (10, null, 'Object'),
     (11, 10, 'Record'),
     (12, null, 'Office'),
-    (13, null, 'Topic');
+    (13, null, 'Topic')
+on conflict do nothing;
 
 insert into mention_kind (id, name) values
     (1, 'Refers to'),
-    (2, 'About');
+    (2, 'About')
+on conflict do nothing;
 
 insert into speech_mode (id, name) values
     (1, 'Narration'),
     (2, 'Spoken'),
     (3, 'Written'),
     (4, 'Prayer'),
-    (5, 'Song');
+    (5, 'Song')
+on conflict do nothing;
 
 insert into relationship_kind (id, name, reverse_name, two_way) values
     (1, 'child of', 'parent of', 0),
@@ -223,13 +241,15 @@ insert into relationship_kind (id, name, reverse_name, two_way) values
     (17, 'named after', 'namesake of', 0),
     (18, 'kept by', 'keeper of', 0),
     (19, 'written by', 'author of', 0),
-    (20, 'abridged from', 'abridged into', 0);
+    (20, 'abridged from', 'abridged into', 0)
+on conflict do nothing;
 
 insert into counting_system (id, name, needs_evidence) values
     (1, 'Years since Lehi left Jerusalem', 1),
     (2, 'Years of the reign of the judges', 1),
     (3, 'Years since the sign of Christ''s birth', 1),
-    (4, 'BC/AD', 0);
+    (4, 'BC/AD', 0)
+on conflict do nothing;
 
 insert into link_kind (id, name, two_way) values
     (1, 'Quotes', 0),
@@ -237,7 +257,8 @@ insert into link_kind (id, name, two_way) values
     (3, 'Same event', 1),
     (4, 'Alludes to', 0),
     (5, 'Fulfills', 0),
-    (6, 'Cross-reference', 1);
+    (6, 'Cross-reference', 1)
+on conflict do nothing;
 
 insert into clause_role (id, name) values
     (1, 'Subject'),
@@ -245,13 +266,15 @@ insert into clause_role (id, name) values
     (3, 'Object'),
     (4, 'Indirect object'),
     (5, 'Complement'),
-    (6, 'Adverbial');
+    (6, 'Adverbial')
+on conflict do nothing;
 
 insert into structure_kind (id, name) values
     (1, 'Chiasm'),
     (2, 'Parallelism'),
     (3, 'List'),
-    (4, 'Acrostic');
+    (4, 'Acrostic')
+on conflict do nothing;
 
 insert into summary_kind (id, name, description) values
     (1, 'Doctrine', 'What the passage teaches about God, Christ, and the plan of salvation.'),
@@ -272,7 +295,8 @@ insert into summary_kind (id, name, description) values
     (16, 'Culture', 'Customs and background a modern reader would miss.'),
     (17, 'Editors'' comments', 'Where Mormon or Moroni steps in to teach.'),
     (18, 'Revelation background', 'Who the revelation was for, and the question or event that prompted it.'),
-    (19, 'Translation background', 'Where Moses, Abraham, and the facsimiles came from.');
+    (19, 'Translation background', 'Where Moses, Abraham, and the facsimiles came from.')
+on conflict do nothing;
 
 insert into summary_kind_work (summary_kind_id, work_id) values
     (1, 1),
@@ -335,4 +359,5 @@ insert into summary_kind_work (summary_kind_id, work_id) values
     (16, 1),
     (17, 2),
     (18, 3),
-    (19, 4);
+    (19, 4)
+on conflict do nothing;

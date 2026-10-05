@@ -7,8 +7,8 @@ from . import morphology
 from .refs import OLD_TESTAMENT, USFM, bible_books
 from .rows import row_id
 from .sources import checkout, fetch
-from .text import SBLGNT, WLC, WORDS, insert_text, marks, number_words
-from .words import Word, reading_order
+from .text import KJV, SBLGNT, WLC, WORDS, marks
+from .words import Book, Word
 
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
@@ -16,6 +16,7 @@ EDITIONS = [
     (WLC, "macula-hebrew.tsv", "macula-hebrew", "*-lowfat.xml", "H"),
     (SBLGNT, "macula-greek-SBLGNT.tsv", "macula-greek", "[0-9]*.xml", "G"),
 ]
+TSV = {name: tsv for name, tsv, *_ in EDITIONS}
 
 LANGUAGES = {"H": "hbo", "A": "arc", "G": "grc"}
 
@@ -45,55 +46,69 @@ def clear(db: sqlite3.Connection):
     db.execute(f"delete from sentence where first_word_id in ({words})", editions)
     db.execute(f"delete from hebrew_word where word_id in ({words})", editions)
     db.execute(f"delete from greek_word where word_id in ({words})", editions)
-    db.execute(f"delete from word where id in ({words})", editions)
-    db.execute(f"delete from verse where chapter_id in (select id from chapter where edition_id in ({marks(editions)}))", editions)
-    db.execute(f"delete from chapter where edition_id in ({marks(editions)})", editions)
+    db.execute(f"update word set headword_id = null, meaning_id = null, part_of_speech_id = null where id in ({words})", editions)
     db.execute(f"delete from meaning where headword_id in (select id from headword where language_id in ({marks(languages)}))", languages)
     db.execute(f"delete from headword where language_id in ({marks(languages)})", languages)
-    db.execute(f"delete from edition_book where edition_id in ({marks(editions)})", editions)
+
+
+def books(db: sqlite3.Connection, name: str) -> list[Book]:
+    greek = name == SBLGNT
+    names = dict(zip(USFM, (row[0] for row in db.execute(
+        "select b.name from edition_book eb join book b on b.id = eb.book_id where eb.edition_id = ? order by eb.position", (row_id(db, "edition", KJV),)
+    ))))
+    found = {}
+    for code, chapter, verse, rows in verses(read(name)):
+        book = found.setdefault(code, Book(names[code]))
+        book.verses[(chapter, verse)] = []
+        for position, row in enumerate(rows, 1):
+            after = row["after"]
+            if position == len(rows):
+                after = after.rstrip()
+            elif not after.endswith(" ") and greek:
+                after += " "
+            book.verses[(chapter, verse)].append(Word(row["text"], after=after))
+    return [found[code] for code in USFM if code in found]
+
+
+def read(name: str) -> list[dict]:
+    return list(csv.DictReader(open(fetch(TSV[name]), encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE))
+
+
+def verses(rows: list[dict]):
+    grouped = defaultdict(list)
+    for row in rows:
+        code, chapter_verse = row["ref"].split("!")[0].split()
+        chapter, verse = map(int, chapter_verse.split(":"))
+        grouped[(code, chapter, verse)].append(row)
+    for (code, chapter, verse), found in grouped.items():
+        yield code, chapter, verse, found
 
 
 def run(db: sqlite3.Connection):
-    books = dict(zip(USFM, bible_books(db)))
-    bible = row_id(db, "work", "Bible")
     for name, tsv, repo, pattern, prefix in EDITIONS:
-        edition = row_id(db, "edition", name)
-        codes = USFM[:OLD_TESTAMENT] if prefix == "H" else USFM[OLD_TESTAMENT:]
-        db.executemany(
-            "insert into edition_book (edition_id, book_id, work_id, position) values (?, ?, ?, ?)", [(edition, books[c], bible, n) for n, c in enumerate(codes, 1)]
-        )
-        rows = list(csv.DictReader(open(fetch(tsv), encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE))
-        ids, sequences = insert_words(db, edition, rows, books)
+        rows = read(name)
+        ids, sequences = word_ids(db, row_id(db, "edition", name), rows)
         insert_headwords(db, rows, ids, prefix)
         insert_grammar(db, rows, ids, prefix)
         insert_syntax(db, checkout(repo), pattern, ids, sequences)
         print(f"{name}: {len(rows)} words")
-    number_words(db)
 
 
-def insert_words(db, edition, rows, books) -> tuple[dict[str, int], dict[int, int]]:
-    greek = edition == row_id(db, "edition", SBLGNT)
-    verses = defaultdict(lambda: defaultdict(list))
-    for row in rows:
-        book, chapter_verse = row["ref"].split("!")[0].split()
-        chapter, verse = map(int, chapter_verse.split(":"))
-        verses[books[book]][(chapter, verse)].append(row)
-    order = []
-    for book, chapters in verses.items():
-        words = {}
-        for key, found in chapters.items():
-            words[key] = []
-            for position, row in enumerate(found, 1):
-                after = row["after"]
-                if position == len(found):
-                    after = after.rstrip()
-                elif not after.endswith(" ") and greek:
-                    after += " "
-                words[key].append(Word(row["text"], after=after))
-        insert_text(db, edition, book, words)
-        order += [row for key in sorted(chapters, key=reading_order) for row in chapters[key]]
-    stored = list(db.execute(f"select w.id, w.sequence from {WORDS} where c.edition_id = ? order by w.sequence", (edition,)))
-    return {row["xml:id"]: id for row, (id, _) in zip(order, stored)}, dict(stored)
+def word_ids(db, edition, rows) -> tuple[dict[str, int], dict[int, int]]:
+    books = dict(zip(USFM, bible_books(db)))
+    stored = {
+        (book, chapter, verse, position): (id, sequence)
+        for id, sequence, book, chapter, verse, position in db.execute(
+            f"select w.id, w.sequence, c.book_id, c.number, v.number, w.position from {WORDS} where c.edition_id = ?", (edition,)
+        )
+    }
+    ids, sequences = {}, {}
+    for code, chapter, verse, found in verses(rows):
+        for position, row in enumerate(found, 1):
+            id, sequence = stored[(books[code], chapter, verse, position)]
+            ids[row["xml:id"]] = id
+            sequences[id] = sequence
+    return ids, sequences
 
 
 def strongs(row, prefix) -> str | None:

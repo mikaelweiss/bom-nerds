@@ -1,5 +1,3 @@
-"""Builds the database and its text layer: every work, edition, book, chapter, verse, and word."""
-
 import sqlite3
 import sys
 import zipfile
@@ -18,7 +16,6 @@ BOOK_OF_MORMON = "Book of Mormon (2013)"
 DOCTRINE_AND_COVENANTS = "Doctrine and Covenants (2013)"
 PEARL_OF_GREAT_PRICE = "Pearl of Great Price (2013)"
 
-# Joins a word to the chapter it sits in, for queries that filter or group by edition, book, or chapter.
 WORDS = "word w join verse v on v.id = w.verse_id join chapter c on c.id = v.chapter_id"
 
 
@@ -38,7 +35,7 @@ def marks(values) -> str:
 
 def build():
     if DATABASE.exists():
-        sys.exit(f"{DATABASE.name} already exists. Tags point at word ids, so the text is never rebuilt in place. Delete it to start over.")
+        sys.exit(f"{DATABASE.name} already exists. Delete it to start over.")
 
     editions = [
         ("Bible", KJV, bible()),
@@ -64,7 +61,6 @@ def build():
 
 
 def insert_text(db: sqlite3.Connection, edition: int, book: int, verses: dict[tuple[int, int | None], list[Word]]):
-    """Insert a book's chapters, verses, and words, in reading order after every word already stored."""
     sequence = db.execute("select coalesce(max(sequence), 0) from word").fetchone()[0]
     chapters = {}
     for (chapter, verse), words in sorted(verses.items(), key=lambda item: reading_order(item[0])):
@@ -79,18 +75,15 @@ def insert_text(db: sqlite3.Connection, edition: int, book: int, verses: dict[tu
 
 
 def number_words(db: sqlite3.Connection):
-    """Renumber word.sequence in reading order: by edition, then book, chapter, verse, and word."""
     order = (
         "select w.id, row_number() over (order by c.edition_id, eb.position, c.number, v.number nulls first, w.position) as sequence "
         f"from {WORDS} join edition_book eb on eb.edition_id = c.edition_id and eb.book_id = c.book_id"
     )
-    # Changed numbers pass through negatives, so no two words hold one number partway through.
     db.execute(f"update word set sequence = -o.sequence from ({order}) o where o.id = word.id and word.sequence <> o.sequence")
     db.execute("update word set sequence = -sequence where sequence < 0")
 
 
 def verify(db: sqlite3.Connection, parsed: list[tuple[int, int, Book]]):
-    """Every verse must read back from the database exactly as parsed."""
     stored = {}
     for edition, book, chapter, verse, text in db.execute(f"select c.edition_id, c.book_id, c.number, v.number, w.before || w.text || w.after from {WORDS} order by w.sequence"):
         key = (edition, book, chapter, verse)

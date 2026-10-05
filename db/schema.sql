@@ -1,7 +1,4 @@
--- SQLite enforces foreign keys only on connections that turn them on.
 pragma foreign_keys = on;
-
--- Text
 
 create table language (
     id integer primary key,
@@ -30,7 +27,6 @@ create table book (
     unique (work_id, name)
 ) strict;
 
--- work_id lets both foreign keys require that the edition and the book belong to the same work.
 create table edition_book (
     edition_id integer not null,
     book_id integer not null,
@@ -42,7 +38,6 @@ create table edition_book (
     foreign key (book_id, work_id) references book (id, work_id)
 ) strict;
 
--- Editions number some chapters differently, so each edition has its own.
 create table chapter (
     id integer primary key,
     edition_id integer not null,
@@ -52,7 +47,6 @@ create table chapter (
     foreign key (edition_id, book_id) references edition_book
 ) strict;
 
--- A verse without a number is the text printed before verse 1: a book title, a chapter heading, a psalm's title.
 create table verse (
     id integer primary key,
     chapter_id integer not null references chapter,
@@ -67,8 +61,6 @@ create table part_of_speech (
     name text not null unique
 ) strict;
 
--- sequence is reading order across the whole database, so a passage is every word whose sequence falls between its
--- first and last word. It is the one stored value that could be computed, because a passage needs one number to compare.
 create table word (
     id integer primary key,
     verse_id integer not null references verse,
@@ -87,8 +79,6 @@ create table word (
 ) strict;
 
 create index word_headword_meaning on word (headword_id, meaning_id);
-
--- Grammar of Hebrew, Aramaic, and Greek words
 
 create table stem (
     id integer primary key,
@@ -140,7 +130,6 @@ create table degree (
     name text not null unique
 ) strict;
 
--- The narrower kind a grammar code gives some parts of speech: a cardinal number, a personal pronoun, a negative particle.
 create table word_type (
     id integer primary key,
     name text not null unique
@@ -171,7 +160,6 @@ begin
     select raise(abort, 'a hebrew_word must be a word of a Hebrew edition');
 end;
 
--- second_form marks Robinson's "2": a second aorist, future, or perfect.
 create table greek_word (
     word_id integer primary key references word,
     word_type_id integer references word_type,
@@ -205,9 +193,6 @@ begin
     select raise(abort, 'a greek_word must be a word of a Greek edition');
 end;
 
--- Dictionary
-
--- strongs is the Strong's number as written, such as H0001b: an outside standard.
 create table headword (
     id integer primary key,
     language_id integer not null references language,
@@ -217,7 +202,6 @@ create table headword (
     unique (language_id, text, strongs)
 ) strict;
 
--- Unique on (headword_id, id) so a word's meaning must belong to its headword.
 create table meaning (
     id integer primary key,
     headword_id integer not null references headword,
@@ -228,7 +212,6 @@ create table meaning (
     unique (headword_id, id)
 ) strict;
 
--- Word matches are stored once, lower word id first.
 create table word_match (
     word_id integer not null references word,
     other_word_id integer not null references word,
@@ -238,15 +221,12 @@ create table word_match (
 
 create index word_match_other on word_match (other_word_id);
 
--- Entities
-
 create table entity_type (
     id integer primary key,
     parent_id integer references entity_type,
     name text not null unique
 ) strict;
 
--- tipnr is the entity's identifier in STEPBible's TIPNR, its unified Strong's number such as H0175: an outside standard.
 create table entity (
     id integer primary key,
     entity_type_id integer not null references entity_type,
@@ -255,7 +235,6 @@ create table entity (
     tipnr text unique
 ) strict;
 
--- Names and titles other than entity.name.
 create table entity_name (
     entity_id integer not null references entity,
     name text not null,
@@ -283,8 +262,6 @@ begin
     select raise(abort, 'an entity''s main name belongs in entity.name');
 end;
 
--- Mentions
-
 create table mention_kind (
     id integer primary key,
     name text not null unique
@@ -300,8 +277,6 @@ create table mention (
 ) strict;
 
 create index mention_first_word on mention (first_word_id, last_word_id);
-
--- Speakers
 
 create table speech_mode (
     id integer primary key,
@@ -329,8 +304,6 @@ create table speech_listener (
 
 create index speech_listener_entity on speech_listener (entity_id);
 
--- Relationships
-
 create table relationship_kind (
     id integer primary key,
     name text not null unique,
@@ -346,8 +319,6 @@ create table relationship (
     check (subject_id <> object_id)
 ) strict;
 
--- A pair of entities holds each kind once, in either direction: two-way kinds
--- are stored once, and a one-way kind that runs both ways contradicts itself.
 create unique index relationship_pair on relationship (relationship_kind_id, min(subject_id, object_id), max(subject_id, object_id));
 create index relationship_subject on relationship (subject_id);
 create index relationship_object on relationship (object_id);
@@ -358,8 +329,6 @@ create table relationship_evidence (
     last_word_id integer not null references word,
     primary key (relationship_id, first_word_id, last_word_id)
 ) strict;
-
--- Journeys
 
 create table journey (
     id integer primary key,
@@ -376,16 +345,12 @@ create index journey_traveler on journey (traveler_id);
 create index journey_from on journey (from_id);
 create index journey_to on journey (to_id);
 
--- Dates
-
--- needs_evidence is 0 for a system whose dates may be our estimate where the text gives no year.
 create table counting_system (
     id integer primary key,
     name text not null unique,
     needs_evidence integer not null check (needs_evidence in (0, 1))
 ) strict;
 
--- BC/AD years count 1 BC as 0 and 2 BC as -1, so ranges subtract cleanly.
 create table date (
     id integer primary key,
     first_word_id integer references word,
@@ -423,8 +388,6 @@ begin
     select raise(abort, 'a date in this counting system needs evidence');
 end;
 
--- Passage links
-
 create table link_kind (
     id integer primary key,
     name text not null unique,
@@ -444,7 +407,6 @@ create table passage_link (
 create index passage_link_from on passage_link (from_first_word_id, from_last_word_id);
 create index passage_link_to on passage_link (to_first_word_id, to_last_word_id);
 
--- A two-way link is stored once, from the passage that comes first.
 create trigger passage_link_two_way_insert before insert on passage_link
 when (select two_way from link_kind where id = new.link_kind_id)
     and ((select sequence from word where id = new.from_first_word_id), (select sequence from word where id = new.from_last_word_id))
@@ -460,8 +422,6 @@ when (select two_way from link_kind where id = new.link_kind_id)
 begin
     select raise(abort, 'a two-way link runs from the passage that comes first');
 end;
-
--- Grammar
 
 create table sentence (
     id integer primary key,
@@ -496,8 +456,6 @@ create table clause_part (
 
 create index clause_part_clause on clause_part (clause_id);
 
--- Literary structures
-
 create table structure_kind (
     id integer primary key,
     name text not null unique
@@ -512,7 +470,6 @@ create table structure (
 
 create index structure_first_word on structure (first_word_id, last_word_id);
 
--- Parts are numbered in reading order across the whole structure, nested parts included.
 create table structure_part (
     id integer primary key,
     structure_id integer not null references structure on delete cascade,
@@ -523,8 +480,6 @@ create table structure_part (
     last_word_id integer not null references word,
     unique (structure_id, position)
 ) strict;
-
--- Summaries
 
 create table verse_range (
     id integer primary key,
@@ -583,10 +538,6 @@ when not exists (
 begin
     select raise(abort, 'this summary kind does not apply to this work');
 end;
-
--- Passages
-
--- Every passage runs forward within one edition: both ends in the same edition, the first word no later than the last.
 
 create trigger mention_passage_insert before insert on mention
 when not (select a.sequence <= b.sequence and ca.edition_id = cb.edition_id

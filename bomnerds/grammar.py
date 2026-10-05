@@ -1,5 +1,3 @@
-"""English clauses, subjects, and verbs that spaCy's and Stanza's parses agree on."""
-
 import json
 import sqlite3
 from collections import defaultdict
@@ -8,7 +6,6 @@ from .rows import row_id
 from .taggers import CACHE
 from .text import WORDS, english_editions, marks
 
-# spaCy labels in the ClearNLP style, Stanza in Universal Dependencies. Each set names the same relations in both.
 CLAUSES = {"ROOT", "root", "ccomp", "xcomp", "advcl", "relcl", "acl", "acl:relcl", "csubj", "csubjpass", "csubj:pass", "parataxis", "conj"}
 SUBJECTS = {"nsubj", "nsubjpass", "nsubj:pass", "csubj", "csubjpass", "csubj:pass", "expl"}
 AUXILIARIES = {"aux", "auxpass", "aux:pass", "cop"}
@@ -25,7 +22,6 @@ def clear(db: sqlite3.Connection):
 
 
 def run(db: sqlite3.Connection):
-    """The taggers name words by id. Clauses are found with words counted by sequence instead, and stored with ids."""
     english = english_editions(db)
     texts, sequences, ids = {}, {}, {}
     for id, sequence, text in db.execute(f"select w.id, w.sequence, lower(w.text) from {WORDS} where c.edition_id in ({marks(english)})", english):
@@ -63,12 +59,10 @@ def run(db: sqlite3.Connection):
 
 
 def counted(words: list[list], sequences: dict[int, int]) -> list[list]:
-    """A cached parse, with each word and its head named by sequence rather than by id."""
     return [[sequences[id], lemma, pos, None if head is None else sequences[head], dep] for id, lemma, pos, head, dep in words]
 
 
 def analyse(words: list[list], texts: dict[int, str]) -> dict[tuple[int, int], set[tuple[str, tuple[int, int]]]]:
-    """Each clause span in one parse, with the subject and verb spans inside it."""
     children = defaultdict(list)
     tags = {}
     for id, _, pos, head, dep in words:
@@ -112,7 +106,6 @@ def analyse(words: list[list], texts: dict[int, str]) -> dict[tuple[int, int], s
 
 
 def apart(parts: set[tuple[str, tuple[int, int]]]) -> list[tuple[str, tuple[int, int]]]:
-    """The parts that overlap no other part. Both parsers can agree on a subject that swallows its own verb, and neither is then right."""
     return sorted(
         (role, (a, b)) for role, (a, b) in parts
         if not any((other, span) != (role, (a, b)) and span[0] <= b and a <= span[1] for other, span in parts)
@@ -128,7 +121,6 @@ def trim(members: list[int], tags) -> list[int]:
 
 
 def verb_span(id, children, tags, texts) -> tuple[int, int] | None:
-    """The verb and its auxiliaries, when they stand together: "hath commanded", "shalt not kill"."""
     copula = [c for c in children[id] if tags[c][1] == "cop"]
     main = copula[0] if copula else id
     if not copula and tags[id][0] not in VERBAL:

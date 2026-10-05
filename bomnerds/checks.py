@@ -1,12 +1,9 @@
-"""Checks across finished layers for answers that cannot be true. It flags them and changes nothing."""
-
 import sqlite3
 from collections import defaultdict
 
 from .rows import row_id
 from .text import marks
 
-# Kinds that cannot loop back on themselves: nobody is their own ancestor, and no place is north of itself.
 ORDERED = [("child of", "descendant of"), ("north of",), ("east of",), ("higher than",)]
 PEOPLE = ("Person", "Group")
 FAMILY = ("child of", "descendant of", "spouse of", "sibling of")

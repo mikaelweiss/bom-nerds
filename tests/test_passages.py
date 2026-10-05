@@ -43,7 +43,6 @@ VERSES = [
     ("Isaiah", 6, 3, "Holy, holy, holy, is the LORD of hosts."),
 ]
 
-# Macula splits prefixes into words of their own, printed joined to the word they open.
 GENESIS_HEBREW = [("", "בְּ", ""), ("", "רֵאשִׁ֖ית", " "), ("", "בָּרָ֣א", " "), ("", "אֱלֹהִ֑ים", " "), ("", "אֵ֥ת", " "), ("", "הַ", ""), ("", "שָּׁמַ֖יִם", "׃")]
 
 

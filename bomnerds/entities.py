@@ -1,5 +1,3 @@
-"""Bible people, groups, places, and other named things from STEPBible's TIPNR, with place kinds from OpenBible."""
-
 import json
 import re
 import sqlite3
@@ -11,11 +9,9 @@ from .rows import row_id
 from .sources import fetch
 from .text import marks
 
-# TIPNR files Jesus under his mortal name. Every other Bible entity takes its key from TIPNR's name.
 JESUS = "Jesus@Isa.7.14-Rev"
 JESUS_CHRIST = ("jesus-christ", "Jesus Christ", "The Son of God, who is Jehovah of the Old Testament.")
 
-# TIPNR's LORD record merges every name of God, but Latter-day Saint doctrine gives them to different beings.
 SKIPPED = {"LORD@Gen.1.1-Rev"}
 
 OTHER_TYPES = {"Supernatural": "Person", "Group": "Group", "Title": "Office", "Star": "Object", "Other": "Object"}
@@ -27,14 +23,11 @@ PLACE_TYPES = {
     "pool": "Water", "well": "Water", "wadi": "Water", "ford": "Water",
 }
 
-# Words such as "Levite", "Egyptian", and "Jew" name a people, not the person or place TIPNR files them under.
-# TIPNR marks most of them as group forms. This catches the rest, without catching names like "Midian".
 GENTILIC = re.compile(r"(ites?|itess|eans?)$|^Jew")
 
 
 @dataclass(frozen=True)
 class Entity:
-    """An entity as this module finds it. key names it here and in the modules that tag it, and is never stored."""
 
     key: str
     type: str
@@ -45,16 +38,12 @@ class Entity:
 
 @dataclass(frozen=True)
 class Eponym:
-    """A man whose name also names the people descended from him, and the land they held."""
 
     person: str
     people: Entity
     lands: tuple[Entity, ...] = ()
-    # The people that words like "Jew" name, where it differs from the people that bear his name.
     gentilic: Entity | None = None
-    # The land that a "king of" this name rules, where the name alone settles which.
     kingdom: str | None = None
-    # Names that always mean the people: "Jeshurun" is only ever Israel the nation.
     people_names: tuple[str, ...] = ()
 
 
@@ -68,7 +57,6 @@ def tribe(name: str, parents: str, land: bool = True) -> Eponym:
     return Eponym(f"Son of {parents}, father of the tribe of {name}.", people, lands)
 
 
-# TIPNR files each of these men, his tribe or nation, and its land as one record with one verse list, so no source says which a verse means.
 EPONYMS = {
     "Israel@Gen.25.26-Rev": Eponym(
         "Patriarch, son of Isaac, also named Jacob. Father of the twelve tribes.",
@@ -109,10 +97,8 @@ PEOPLE_DESCRIPTIONS = {JESUS: "Followers of Jesus Christ."}
 @dataclass
 class BibleEntity:
     entity: Entity
-    # The record its type and title come from.
     record: tipnr.Record
     names: set[str]
-    # The record's identifier, where the entity is the record itself and not a people or land split out of it.
     tipnr: str | None
 
 
@@ -143,11 +129,6 @@ def run(db: sqlite3.Connection):
 
 
 def stored_ids(db: sqlite3.Connection, found: dict[str, BibleEntity]) -> dict[str, int]:
-    """The database id of each entity found that is stored, by its key.
-
-    An entity TIPNR lists is found by its TIPNR identifier. TIPNR has none for the peoples and lands split out of its records,
-    so each of those is found by name and description, taken in the order run stores them, which tells apart the few that share both.
-    """
     listed = dict(db.execute("select tipnr, id from entity where tipnr is not null"))
     unlisted = defaultdict(list)
     for id, name, description in db.execute("select id, name, description from entity where tipnr is null order by id"):
@@ -165,7 +146,6 @@ def stored_ids(db: sqlite3.Connection, found: dict[str, BibleEntity]) -> dict[st
 
 
 def bible_entities(records: list[tipnr.Record]) -> dict[str, BibleEntity]:
-    """Every Bible entity by key: each record's own entity, the people its gentilic words name, and an eponym's people and lands."""
     people = peoples(records)
     found = {}
 
@@ -184,7 +164,6 @@ def bible_entities(records: list[tipnr.Record]) -> dict[str, BibleEntity]:
         names = [n for name in record.names for n in split_names(name)] + [n for f in record.forms if f.kind != "Group" for n in split_names(f.kjv)]
         if record.unique in people:
             groups = [f for f in record.forms if f.kind == "Group"]
-            # A group form's own name can be the record's other name, as in "Christ|Jesus", rather than the people's.
             own_names = {f.name for f in groups if f.name} - {record.name, *names}
             renderings = {n for f in groups for n in split_names(f.kjv)} - {record.name}
             gentilic = {n for n in names if GENTILIC.search(n) or n in renderings} | renderings | own_names
@@ -201,10 +180,6 @@ def bible_entities(records: list[tipnr.Record]) -> dict[str, BibleEntity]:
 
 
 def peoples(records: list[tipnr.Record]) -> dict[str, Entity]:
-    """The people that each record's gentilic words name, keyed by the record.
-
-    TIPNR already lists some peoples, such as the Jebusites, as records of their own, and their gentilic words name that record.
-    """
     keys = {record.unique: key for key, record in build_keys(records)}
     taken = set(keys.values())
     found = {}
@@ -225,7 +200,6 @@ def peoples(records: list[tipnr.Record]) -> dict[str, Entity]:
 
 
 def people_name(record: tipnr.Record) -> str | None:
-    """The plural of the word a record's gentilic forms use: "Levites" from "Levite", "Jesuites" from "Jesui"."""
     words = [w for f in record.forms if f.kind == "Group" for w in (f.name, *split_names(f.kjv))]
     words = [w for w in words if is_name(w) and " " not in w and "-" not in w and w != record.name and not w.endswith("ess")]
     words.sort(key=lambda w: not re.search(r"(ites?|ians?|eans?|im)$", w))
@@ -238,7 +212,6 @@ def people_name(record: tipnr.Record) -> str | None:
 
 
 def split_names(text: str | None) -> list[str]:
-    """TIPNR lists one form's spellings together, "Ammonite,Ammon,Ammonitess", and marks word breaks with a slash, "City of/ the Lord"."""
     names = (" ".join(n.replace("/", " ").split()) for n in (text or "").split(","))
     return [n for n in names if n]
 
@@ -268,7 +241,6 @@ def describe(record: tipnr.Record) -> str:
 
 
 def without_last_book(unique: str) -> str:
-    """OpenBible links TIPNR places as "Lehi@Jdg.15.9", without the "-2Sa" naming the last book."""
     return re.sub(r"-\w*$", "", unique)
 
 
@@ -284,7 +256,6 @@ def place_types() -> dict[str, list[str]]:
 
 
 def build_keys(records: list[tipnr.Record]) -> list[tuple[str, tipnr.Record]]:
-    """A key is the entity's name, plus what sets it apart when other entities share that name."""
     by_unique = {r.unique: r for r in records}
     groups = defaultdict(list)
     for record in records:

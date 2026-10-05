@@ -1,5 +1,3 @@
-"""Bible parents, children, siblings, and spouses from STEPBible's TIPNR."""
-
 import sqlite3
 from collections import defaultdict
 
@@ -12,15 +10,12 @@ PARENTS, SIBLINGS, PARTNERS, OFFSPRING = 2, 3, 4, 5
 CHILD_OF, SIBLING_OF, SPOUSE_OF = "child of", "sibling of", "spouse of"
 FAMILY = (CHILD_OF, SIBLING_OF, SPOUSE_OF)
 
-# A verse is evidence when it names both people with one of these words: "Seth begat Enos", "Aaron the brother of Moses".
-# Siblings are usually named together as one parent's children, with the word before both names: "the sons of Leah; Reuben and Simeon".
 CHILDREN = {"son", "sons", "daughter", "daughters", "child", "children", "firstborn"}
 KINSHIP = {
     CHILD_OF: {"begat", "begot", "beget", "bare", "born", "father", "mother"} | CHILDREN,
     SIBLING_OF: {"brother", "brethren", "sister", "sisters"} | CHILDREN,
     SPOUSE_OF: {"wife", "wives", "husband", "married", "took"},
 }
-# Two names farther apart than this are usually items in a list, not a stated relationship.
 NEARBY = 30
 
 
@@ -46,8 +41,6 @@ def run(db: sqlite3.Connection):
 
 
 def facts(records: list[tipnr.Record]) -> set[tuple[str, str, str]]:
-    """(subject, kind, object) for every family link between two people TIPNR records, each person named by entity key."""
-    # TIPNR's table of nations calls peoples like the Jebusites sons of Canaan. Family links here join two people only.
     keys = {}
     people = []
     for key, record in build_keys(records):
@@ -69,7 +62,6 @@ def facts(records: list[tipnr.Record]) -> set[tuple[str, str, str]]:
 
 
 def cite(db: sqlite3.Connection, kind_ids: dict[str, int]) -> int:
-    """Cite the first verse that names both people beside a kinship word. Words are counted by sequence."""
     mentions = defaultdict(lambda: defaultdict(list))
     reading = {}
     for entity, first, last, verse in db.execute(

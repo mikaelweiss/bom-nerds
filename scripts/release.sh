@@ -1,7 +1,4 @@
 #!/bin/sh
-# Publishes your scripture.db and a JSON export of every table as a GitHub release of the current commit.
-# Nothing is recalculated: the release is a copy of the database as it stands.
-# Pass --no-upload to build the zips in dist/ without checking git or creating the release.
 set -eu
 
 root=$(dirname "$(dirname "$(realpath "$0")")")
@@ -12,9 +9,9 @@ dist="$root/dist"
 
 if [ "${1:-}" != "--no-upload" ]; then
     [ "$(git -C "$root" branch --show-current)" = main ] || { echo "Release from main." >&2; exit 1; }
-    [ -z "$(git -C "$root" status --porcelain)" ] || { echo "Commit your changes first, so the release matches its commit." >&2; exit 1; }
+    [ -z "$(git -C "$root" status --porcelain)" ] || { echo "Commit your changes first." >&2; exit 1; }
     git -C "$root" fetch --quiet origin main
-    [ "$(git -C "$root" rev-parse HEAD)" = "$(git -C "$root" rev-parse origin/main)" ] || { echo "Push main first, so the release matches GitHub." >&2; exit 1; }
+    [ "$(git -C "$root" rev-parse HEAD)" = "$(git -C "$root" rev-parse origin/main)" ] || { echo "Push main first." >&2; exit 1; }
 fi
 
 work=$(mktemp -d)

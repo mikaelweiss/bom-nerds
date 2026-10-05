@@ -10,7 +10,6 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 class SchemaTest(unittest.TestCase):
-    """The database rejects data that cannot be true."""
 
     def setUp(self):
         db = self.db = sqlite3.connect(":memory:")

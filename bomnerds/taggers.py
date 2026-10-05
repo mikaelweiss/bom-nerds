@@ -1,9 +1,3 @@
-"""Runs spaCy, Stanza, and MorphAdorner over every English sentence, on our own words, and caches what each says about each word.
-
-Each cache line is one sentence: [[word id, lemma, part of speech, head word id, dependency], ...].
-spaCy and Stanza give universal parts of speech. MorphAdorner gives NUPOS tags and no parse.
-"""
-
 import json
 import os
 import re
@@ -22,7 +16,6 @@ POSSESSIVE = re.compile(r"(.+?)(['’]s)$")
 
 
 def sentences(db: sqlite3.Connection) -> list[list[tuple[int, str, str, str]]]:
-    """Every English sentence as (word id, before, text, after) in reading order."""
     english = english_editions(db)
     words = list(db.execute(
         f"select w.sequence, w.id, w.before, w.text, w.after from {WORDS} where c.edition_id in ({marks(english)}) order by w.sequence", english
@@ -37,7 +30,6 @@ def sentences(db: sqlite3.Connection) -> list[list[tuple[int, str, str, str]]]:
 
 
 def tokens(sentence) -> tuple[list[str], list[int]]:
-    """Split possessives so taggers see "Lord" and "'s", and remember which word each token came from."""
     found, owners = [], []
     for index, (_, _, text, _) in enumerate(sentence):
         possessive = POSSESSIVE.match(text)
@@ -48,7 +40,6 @@ def tokens(sentence) -> tuple[list[str], list[int]]:
 
 
 def to_words(sentence, owners, analyses) -> list[list]:
-    """Keep each word's first token, and point heads at the words that own them."""
     result, seen = [], set()
     for token_index, (lemma, pos, head, dep) in enumerate(analyses):
         owner = owners[token_index]
@@ -86,7 +77,6 @@ def run_stanza(batch):
         for sentence, parsed in zip(chunk, doc.sentences):
             _, owners = tokens(sentence)
             yield to_words(sentence, owners, [(w.lemma, w.upos, w.head - 1 if w.head else None, w.deprel) for w in parsed.words])
-        # The GPU keeps every batch's buffers until told to let go, and grows until the system kills the run.
         del doc
         if device == "mps":
             torch.mps.empty_cache()
@@ -119,7 +109,6 @@ def run_morphadorner(batch):
 
 
 def align_morphadorner(batch, lines, adorned):
-    """MorphAdorner tokenizes on its own, so give each word the token that covers exactly its characters."""
     position = 0
     for sentence, line in zip(batch, lines):
         starts = {}
@@ -155,7 +144,6 @@ def run(db: sqlite3.Connection):
 
 
 def tag(name: str, db: sqlite3.Connection):
-    """Tag every sentence the cache lacks. The cache survives rebuilds, because a full run takes hours."""
     CACHE.mkdir(exist_ok=True)
     path = CACHE / f"{name}.jsonl"
     done = complete_lines(path)
@@ -179,7 +167,6 @@ def tag(name: str, db: sqlite3.Connection):
 
 
 def complete_lines(path: Path) -> int:
-    """Count the finished lines, cutting off a last line a stopped run left half written."""
     if not path.exists():
         return 0
     data = path.read_bytes()

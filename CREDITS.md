@@ -2,7 +2,7 @@
 
 The dataset is licensed under [CC BY 4.0](LICENSE-DATA.txt). The code is licensed under [Apache 2.0](LICENSE.md).
 
-The dataset is built from the sources below. Each is reshaped into this project's schema: split into words, matched to other editions, and tagged. Anyone sharing the dataset must keep these credits.
+Anyone sharing the dataset must keep these credits.
 
 | Source | License | Attribution |
 |---|---|---|
@@ -17,7 +17,5 @@ The dataset is built from the sources below. Each is reshaped into this project'
 | Cherith Glosses for the Hebrew Old Testament © 2022 and for the Greek New Testament © 2023, by Andi Wu, Cherith Analytics, through MACULA | CC BY 4.0 | "Cherith Glosses, by Andi Wu, Cherith Analytics" |
 | [STEPBible TIPNR and TVTMS](https://github.com/STEPBible/STEPBible-Data), Tyndale House, Cambridge | CC BY 4.0 | "STEP Bible", linked to [www.STEPBible.org](https://www.stepbible.org) |
 | [OpenBible.info](https://www.openbible.info) cross-references and Bible geocoding data | CC BY 4.0 | "OpenBible.info", linked to [www.openbible.info](https://www.openbible.info) |
-
-MACULA's United Bible Societies columns (`domain`, `ln`, `sdbh`, `lexdomain`, `coredomain`, `contextualdomain`) are used with permission rather than under CC BY, so the dataset leaves them out.
 
 English headwords, parts of speech, and parses are produced with [spaCy](https://spacy.io) (MIT), [Stanza](https://stanfordnlp.github.io/stanza/) (Apache 2.0), and [MorphAdorner](https://morphadorner.northwestern.edu) (NCSA open source license).

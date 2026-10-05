@@ -11,8 +11,6 @@ MACULA_HEBREW = "47db250bd55d0d8577f2a94fba114ef16c35b23c"
 MACULA_GREEK = "8423afe47b9e8f24b7772e808af45c7159a6fe7e"
 STEPBIBLE = "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/b99716b0cddb648ddb95cc786a197180f2f97d48/"
 
-# The text is frozen once tagging starts, so every download is pinned by hash.
-# eBible and OpenBible republish in place, so a changed hash means new data, not an update.
 FILES = {
     "book-of-mormon.json": (SCRIPTURES_JSON + "book-of-mormon.json", "7987cacbbbf3d53a22da8d5b82023001b97467c642f4baa0d962365a536f5c60"),
     "doctrine-and-covenants.json": (SCRIPTURES_JSON + "doctrine-and-covenants.json", "eb28b47e915f2843e14cffc6b850da7566104b17dc6e0d73daaf2577647cf62d"),
@@ -27,7 +25,6 @@ FILES = {
     "morphadorner-2.0.1.zip": ("https://morphadorner.northwestern.edu/morphadorner/download/morphadorner-2.0.1.zip", "2d5f74c1d6b00252a2e13eb390f1d111cfb475518b53302495ad2819a3be2bb7"),
 }
 
-# Syntax trees are hundreds of files, so they are pinned by commit instead of by hash.
 CHECKOUTS = {
     "macula-hebrew": ("https://github.com/Clear-Bible/macula-hebrew", MACULA_HEBREW, "WLC/lowfat"),
     "macula-greek": ("https://github.com/Clear-Bible/macula-greek", MACULA_GREEK, "SBLGNT/lowfat"),

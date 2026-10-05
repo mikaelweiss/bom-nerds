@@ -1,5 +1,3 @@
-"""Runs every script layer on scripture.db, in build order. Name steps to run only those."""
-
 import sqlite3
 import sys
 import time

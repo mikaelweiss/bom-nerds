@@ -1,5 +1,3 @@
-"""Dates the text states in a fixed formula, such as "in the first year of the reign of the judges"."""
-
 import re
 import sqlite3
 from collections import defaultdict
@@ -24,7 +22,6 @@ REIGN_OF_JUDGES = "Years of the reign of the judges"
 SINCE_SIGN = "Years since the sign of Christ's birth"
 BC_AD = "BC/AD"
 
-# Each formula is the words after the number, its counting system, and whether the number follows the formula instead.
 FORMULAS = [
     ("year of the reign of the judges", REIGN_OF_JUDGES, False),
     ("years from the time that lehi left jerusalem", SINCE_LEHI, False),
@@ -35,7 +32,6 @@ FORMULAS = [
     ("year of our lord", BC_AD, True),
 ]
 
-# A year the text counts toward is not the year the passage takes place in.
 NOT_WHEN = {"until", "till", "unto"}
 
 
@@ -44,7 +40,6 @@ def clear(db: sqlite3.Connection):
 
 
 def run(db: sqlite3.Connection):
-    """Dates are found with words counted by sequence, and stored with word ids."""
     editions = [row_id(db, "edition", name) for name in (BOOK_OF_MORMON, DOCTRINE_AND_COVENANTS, PEARL_OF_GREAT_PRICE)]
     verses = defaultdict(list)
     ids = {}
@@ -96,7 +91,6 @@ def dates_in(words: list[tuple[int, str]]) -> list[tuple]:
         if text in MONTHS and written and re.fullmatch(r"\d{4}", texts[i + 2]):
             month, day, year = MONTHS.index(text) + 1, int(written.group(1)), int(texts[i + 2])
             found.append((*verse, BC_AD, year, month, day, year, month, day, words[i][0], words[i + 2][0], False))
-    # A verse that states the same date twice holds one date.
     unique = {}
     for row in found:
         unique.setdefault(row[:9], row)
@@ -104,7 +98,6 @@ def dates_in(words: list[tuple[int, str]]) -> list[tuple]:
 
 
 def extend(row: tuple, following: list[list[tuple[int, str]]], own: list[tuple[int, str]]) -> tuple:
-    """A year covers the events after it, until the text names another year, says this one ended, or the book ends."""
     year = row[3]
     if (year, True) in years_named([t for _, t in own]):
         return row
@@ -120,7 +113,6 @@ def extend(row: tuple, following: list[list[tuple[int, str]]], own: list[tuple[i
 
 
 def years_named(texts: list[str]) -> set[tuple[int, bool]]:
-    """Each "fifth year" a verse names, and whether the verse says that year ended: "thus ended the fifth year", "the fifth year had passed away"."""
     found = set()
     for index, text in enumerate(texts):
         if text != "year" or index == 0:
@@ -136,7 +128,6 @@ def years_named(texts: list[str]) -> set[tuple[int, bool]]:
 
 
 def covers(earlier: tuple, row: tuple) -> bool:
-    """A later mention of the same year inside a year already dated adds nothing."""
     return earlier[2:4] == row[2:4] and earlier[0] <= row[0] <= earlier[1]
 
 
@@ -181,7 +172,6 @@ def number(texts: list[str]) -> int | None:
 
 
 def month_and_day(texts, first, last) -> tuple[int | None, int | None, int, int]:
-    """Find "the sixth day of the month which is called April" or "the twenty-third day of December" anywhere in the verse."""
     for i in range(len(texts) - 2):
         if first <= i <= last or texts[i + 1] != "day" or texts[i + 2] != "of" or not number([texts[i]]):
             continue

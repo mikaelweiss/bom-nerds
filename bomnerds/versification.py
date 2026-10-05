@@ -1,5 +1,3 @@
-"""Reads STEPBible's TVTMS: which Hebrew or Greek verses hold each KJV verse where the two number verses differently."""
-
 import re
 import sqlite3
 from collections import defaultdict
@@ -10,14 +8,12 @@ from .sources import fetch
 from .text import KJV, SBLGNT, WLC
 from .words import reading_order
 
-# (book id, chapter, verse). A verse of None is the chapter's heading, which TVTMS calls its title.
 Verse = tuple[int, int, int | None]
 
 REFERENCE = re.compile(r"(\w+)\.(\d+):(Title|\d+)(?:\.\d+|[a-z])?(?:-(?:(\d+):)?(\d+)(?:\.\d+|[a-z])?)?")
 
 
 def mapping(db: sqlite3.Connection) -> dict[Verse, list[Verse]]:
-    """Map each KJV verse that TVTMS renumbers to the Hebrew or Greek verses that hold its text."""
     books = codes(db, USFM)
     old_testament = set(USFM[:OLD_TESTAMENT])
     english = verses(db, row_id(db, "edition", KJV))

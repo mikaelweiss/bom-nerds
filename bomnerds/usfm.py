@@ -1,5 +1,3 @@
-"""Reads eBible's KJV USFM: verse text, the words its translators supplied, and the Strong's number on each word."""
-
 import re
 
 from .words import Book, split
@@ -21,7 +19,6 @@ def parse(source: str) -> Book:
     pending: list[list[Char]] = []
 
     def flush_into_last_verse():
-        # Text after a chapter's last verse, such as an epistle's closing note, ends that verse.
         if pending and verse is not None:
             texts[(chapter, verse)] = join([texts[(chapter, verse)], *pending])
             pending.clear()
@@ -41,7 +38,6 @@ def parse(source: str) -> Book:
             number, _, rest = content.strip().partition(" ")
             verse = int(number)
             if pending:
-                # Headings before verse 1 are the chapter's heading. Headings before a later verse, like Psalm 119's ALEPH, open it.
                 if verse == 1:
                     texts[(chapter, None)] = join(pending)
                     texts[(chapter, verse)] = inline(rest)
@@ -76,7 +72,6 @@ def join(parts: list[list[Char]], separator: str = "\n") -> list[Char]:
 
 
 def inline(content: str) -> list[Char]:
-    """Strip inline markers, keeping each character's supplied flag and Strong's number, with whitespace collapsed."""
     chars: list[Char] = []
     supplied = 0
     word: list[Char] | None = None
@@ -84,7 +79,6 @@ def inline(content: str) -> list[Char]:
     for token in INLINE.split(FOOTNOTE.sub("", content)):
         if not token.startswith("\\"):
             if opened:
-                # One space after an opening marker belongs to the marker, not the text.
                 token = token.removeprefix(" ")
             target = word if word is not None else chars
             target.extend((c, supplied > 0, None) for c in token)

@@ -1,5 +1,3 @@
-"""Hebrew and Greek layer from Clear Bible's Macula: words, headwords, grammar, Hebrew word senses, and syntax."""
-
 import csv
 import sqlite3
 import xml.etree.ElementTree as ET
@@ -15,14 +13,12 @@ from .words import Word, reading_order
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
 EDITIONS = [
-    # edition, TSV, syntax checkout, lowfat file pattern, Strong's prefix
     (WLC, "macula-hebrew.tsv", "macula-hebrew", "*-lowfat.xml", "H"),
     (SBLGNT, "macula-greek-SBLGNT.tsv", "macula-greek", "[0-9]*.xml", "G"),
 ]
 
 LANGUAGES = {"H": "hbo", "A": "arc", "G": "grc"}
 
-# Robinson gives a transliterated Hebrew or Aramaic word no part of speech, so Macula's class supplies it.
 CLASSES = {"noun": "Noun", "adv": "Adverb", "verb": "Verb", "ptcl": "Particle"}
 
 ROLES = {
@@ -35,7 +31,6 @@ GREEK_COLUMNS = (
     "word_type", "tense", "second_form", "voice", "mood", "person", "grammatical_case", "gender", "grammatical_number",
     "possessor_number", "degree", "indeclinable", "crasis", "attic_form", "transliterated_from",
 )
-# The value list each feature names a row of. Features missing here are stored as they are.
 LISTS = {
     "word_type": "word_type", "stem": "stem", "verb_form": "verb_form", "gender": "gender", "grammatical_number": "grammatical_number",
     "state": "state", "tense": "tense", "voice": "voice", "mood": "mood", "grammatical_case": "grammatical_case",
@@ -77,7 +72,6 @@ def run(db: sqlite3.Connection):
 
 
 def insert_words(db, edition, rows, books) -> tuple[dict[str, int], dict[int, int]]:
-    """Insert the words, and return each Macula word's id and each word id's sequence."""
     greek = edition == row_id(db, "edition", SBLGNT)
     verses = defaultdict(lambda: defaultdict(list))
     for row in rows:
@@ -94,7 +88,6 @@ def insert_words(db, edition, rows, books) -> tuple[dict[str, int], dict[int, in
                 if position == len(found):
                     after = after.rstrip()
                 elif not after.endswith(" ") and greek:
-                    # Macula Greek drops the space after punctuation.
                     after += " "
                 words[key].append(Word(row["text"], after=after))
         insert_text(db, edition, book, words)
@@ -146,7 +139,6 @@ def most_common(counts: Counter) -> str:
 
 
 def insert_grammar(db, rows, ids, prefix):
-    """Each word's grammar code, feature by feature, and its part of speech."""
     found = {}
 
     def value(table, name):
@@ -159,7 +151,6 @@ def insert_grammar(db, rows, ids, prefix):
     for row in rows:
         features = morphology.hebrew(row["morph"], row["lang"] == "A") if prefix == "H" else morphology.greek(row["morph"])
         part_of_speech = features.pop("part_of_speech", None) or CLASSES[row["class"]]
-        # Robinson codes a Greek name that declines as a plain noun. Macula marks it proper.
         if part_of_speech == "Noun" and row.get("type") == "proper":
             part_of_speech = "Proper noun"
         if "transliterated_from" in features:

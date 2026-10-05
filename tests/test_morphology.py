@@ -81,7 +81,6 @@ class GreekTest(unittest.TestCase):
 
 
 class MaculaTest(unittest.TestCase):
-    """Every grammar code Macula gives the Westminster Leningrad Codex and the SBL Greek New Testament parses."""
 
     def codes(self, name):
         with open(fetch(name), encoding="utf-8") as rows:

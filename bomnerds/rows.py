@@ -1,5 +1,3 @@
-"""Finds a row of a fixed list from db/seed.sql by its unique name, so code never holds its id."""
-
 import sqlite3
 
 

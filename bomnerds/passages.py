@@ -1,5 +1,3 @@
-"""Turns verse references and quotes, as people write them, into word id ranges, and word id ranges back into them."""
-
 import re
 import sqlite3
 import unicodedata
@@ -20,7 +18,6 @@ SHAPES = """A passage takes one of these shapes:
 "starts" and "ends" take "starts_in" and "ends_in" the way "quote" takes "in", when their words appear more than once in the verse.
 The text printed before a chapter's first verse is its heading, written like "1 Nephi 3 heading"."""
 
-# The verse a reference names when it names a chapter's heading, the verse without a number.
 HEADING = "heading"
 
 KEYS = [
@@ -47,11 +44,10 @@ CACHED_CHAPTERS = 512
 
 
 class Rejected(Exception):
-    """A passage that does not resolve. str(error) says how to fix it."""
+    pass
 
 
 def key(text: str) -> str:
-    """The letters, marks, and digits of `text`, folded for comparison, keeping apostrophes and hyphens inside a word."""
     return "".join(letters(fold(text)))
 
 
@@ -60,7 +56,6 @@ def fold(text: str) -> str:
 
 
 def letters(folded: str) -> list[str]:
-    """What each character of folded text counts as in a match: itself, or nothing for punctuation and spacing."""
     kept = []
     for i, char in enumerate(folded):
         if is_letter(char):
@@ -107,7 +102,6 @@ class Verse:
         return "".join(b + t + a for b, t, a in self.words)
 
     def find(self, words: str) -> list[tuple[int, int]]:
-        """Every run of whole words whose letters are exactly those of `words`, as (first, last) indexes."""
         return self.find_key(key(words))
 
     def find_key(self, wanted: str) -> list[tuple[int, int]]:
@@ -121,11 +115,9 @@ class Verse:
         return found
 
     def unique(self, first: int, last: int) -> bool:
-        """Whether words first through last match nowhere else in the verse."""
         return self.find_key(self.stream[self.starts[first]:self.ends[last]]) == [(first, last)]
 
     def printed(self, first: int, last: int) -> str:
-        """Words first through last as printed, without the punctuation outside them."""
         run = self.words[first:last + 1]
         joined = "".join(b + t + a for b, t, a in run)
         return re.sub(r"\s+", " ", joined[len(run[0][0]):len(joined) - len(run[-1][2])])
@@ -133,7 +125,6 @@ class Verse:
 
 @dataclass
 class Chapter:
-    """A chapter's verses by number, the heading under HEADING, in reading order."""
 
     verses: dict[int | str, Verse]
 
@@ -192,12 +183,10 @@ def book_name(db, book_id: int) -> str:
 
 
 def english_edition(db, book_id: int) -> int:
-    """The English edition of the book's work."""
     return cache(db).english[book_id]
 
 
 def reference(db, book_id: int, chapter: int, verse: int | str | None = None) -> str:
-    """The reference as people write it, like "1 Nephi 3:7", "1 Nephi 3 heading", or "D&C 76"."""
     name = book_name(db, book_id)
     if verse is None:
         return f"{name} {chapter}"
@@ -205,17 +194,12 @@ def reference(db, book_id: int, chapter: int, verse: int | str | None = None) ->
 
 
 def parse_reference(db, text: str) -> tuple[int, int, int | str | None]:
-    """Read "1 Nephi 3:7" as (1 Nephi's id, 3, 7), "1 Nephi 3 heading" as (1 Nephi's id, 3, HEADING), and "Alma 32" as (Alma's id, 32, None).
-
-    The chapter and verse are checked against the English edition.
-    """
     book, chapter, verse = parse(db, text)
     check(db, english_edition(db, book), book, chapter, verse)
     return book, chapter, verse
 
 
 def parse(db, text: str) -> tuple[int, int, int | str | None]:
-    """Read a reference without checking that its chapter and verse exist."""
     if not isinstance(text, str):
         raise Rejected(f"{text!r} is not a reference. {EXAMPLE}")
     books = cache(db).lookup
@@ -231,7 +215,6 @@ def parse(db, text: str) -> tuple[int, int, int | str | None]:
 
 
 def check(db, edition: int, book_id: int, chapter: int, verse: int | str | None):
-    """Reject a chapter or verse the edition does not have."""
     numbers = chapter_numbers(db, edition, book_id)
     if chapter not in numbers:
         raise Rejected(f"{reference(db, book_id, chapter)} does not exist. {book_name(db, book_id)} has chapters {numbers[0]} to {numbers[-1]}.")
@@ -277,25 +260,21 @@ def verse_of(db, edition: int, book_id: int, chapter: int, verse: int | str) -> 
 
 
 def verse_text(db, edition: int, book_id: int, chapter: int, verse: int | str) -> str:
-    """The verse exactly as printed."""
     return verse_of(db, edition, book_id, chapter, verse).text
 
 
 def chapter_verses(db, edition: int, book_id: int, chapter: int) -> list[tuple[int | str, str]]:
-    """Every verse of a chapter as (verse number, text), the heading first under HEADING when the chapter has one."""
     check(db, edition, book_id, chapter, None)
     return [(number, verse.text) for number, verse in load(db, edition, book_id, chapter).verses.items()]
 
 
 def chapter_span(db, edition: int, book_id: int, chapter: int) -> tuple[int, int]:
-    """The first and last word id of a chapter."""
     check(db, edition, book_id, chapter, None)
     found = load(db, edition, book_id, chapter)
     return found.first, found.last
 
 
 def locate(db, word_id: int) -> tuple[int, int, int, int | str]:
-    """The (edition, book id, chapter, verse) a word sits in."""
     row = db.execute(f"select c.edition_id, c.book_id, c.number, v.number from {WORDS} where w.id = ?", (word_id,)).fetchone()
     if row is None:
         raise ValueError(f"no word {word_id}")
@@ -304,7 +283,6 @@ def locate(db, word_id: int) -> tuple[int, int, int, int | str]:
 
 
 def resolve(db, passage: dict, edition: int | None = None) -> tuple[int, int]:
-    """The first and last word id of a passage, in the English edition of its book unless `edition` names another."""
     if not isinstance(passage, dict) or set(passage) not in KEYS:
         keys = ", ".join(f'"{k}"' for k in passage) if isinstance(passage, dict) else ""
         raise Rejected(f"A passage with {keys or 'no keys'} is not one of the shapes. {SHAPES}")
@@ -354,7 +332,6 @@ def verse_at(db, text: str, k: str, edition: int | None, same_book: int | None =
 
 
 def pick(verse: Verse, passage: dict, k: str, within: str) -> tuple[int, int]:
-    """The run of words `passage[k]` names in the verse, narrowed by `passage[within]` when it repeats."""
     if within not in passage:
         return only(verse, passage[k], k, f'Add "{within}" with longer words around the ones you mean.')
     low, high = only(verse, passage[within], within, f'Make "{within}" longer so it appears once.')
@@ -368,7 +345,6 @@ def pick(verse: Verse, passage: dict, k: str, within: str) -> tuple[int, int]:
 
 
 def only(verse: Verse, words: str, k: str, fix: str) -> tuple[int, int]:
-    """The one run of the verse's words that matches, or a rejection that says how to fix it."""
     if not key(words):
         raise Rejected(f'"{k}" "{words}" has no words in it. Copy words from {verse.reference}, which reads:\n{verse.text}')
     found = verse.find(words)
@@ -384,7 +360,6 @@ def times(n: int) -> str:
 
 
 def render(db, first: int, last: int) -> dict:
-    """The shortest passage that resolves back to exactly words first through last."""
     edition, book, chapter, verse = locate(db, first)
     last_edition, last_book, last_chapter, last_verse = locate(db, last)
     if (edition, book) != (last_edition, last_book):
@@ -414,7 +389,6 @@ def render(db, first: int, last: int) -> dict:
 
 
 def edge(verse: Verse, runs: list[tuple[int, int]], k: str, within: str, word: int) -> dict:
-    """The shortest run that pins the passage's edge: unique alone, or else with a window that makes it unique."""
     for first, last in runs:
         if verse.unique(first, last):
             return {k: verse.printed(first, last)}
@@ -426,7 +400,6 @@ def edge(verse: Verse, runs: list[tuple[int, int]], k: str, within: str, word: i
 
 
 def quoted(verse: Verse, first: int, last: int) -> dict | None:
-    """Words first through last as a quote, with "in" when the quote alone appears more than once."""
     quote = verse.printed(first, last)
     if verse.unique(first, last):
         return {"verse": verse.reference, "quote": quote}
@@ -439,7 +412,6 @@ def quoted(verse: Verse, first: int, last: int) -> dict | None:
 
 
 def windows(first: int, last: int, length: int):
-    """Runs of words around first through last: grown one word at a time on alternating sides, then every other run, shortest first."""
     grown = []
     low, high = first, last
     grow_right = True

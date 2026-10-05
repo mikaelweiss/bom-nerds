@@ -1,5 +1,3 @@
-"""Splits the English editions into sentences, which end at a period, question mark, or exclamation mark, never at a colon, semicolon, or dash."""
-
 import sqlite3
 from itertools import groupby
 
@@ -29,10 +27,6 @@ def run(db: sqlite3.Connection):
 
 
 def split(chapter: list[tuple]) -> list[tuple[int, int]]:
-    """A chapter's sentences, as (sequence, chapter id, verse, text, after) words in, and first and last sequences out.
-
-    The heading, the verse without a number, never runs into verse 1, and a line break ends a sentence.
-    """
     sentences = []
     first = chapter[0][0]
     for word, following in zip(chapter, chapter[1:] + [None]):

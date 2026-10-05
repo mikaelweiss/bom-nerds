@@ -1,5 +1,3 @@
-"""Mentions of names that a script can settle: Bible names by Strong's number and TIPNR's verse lists, and the names of Jehovah."""
-
 import re
 import sqlite3
 from collections import defaultdict
@@ -15,10 +13,8 @@ from .versification import mapping
 
 REFERS_TO = "Refers to"
 
-# Latter-day Saint doctrine: the LORD, JAH, and GOD of the Old Testament render the name Jehovah, who is Jesus Christ.
 JEHOVAH_STRONGS = {"H3068", "H3050", "H3069"}
 
-# The two words before an eponym's name settle whether it means his people or their land: "tribe of Judah", "land of Judah".
 PEOPLE_CUES = {("tribe", "of"), ("tribes", "of"), ("children", "of"), ("house", "of")}
 LAND_CUES = {("land", "of"), ("cities", "of"), ("coast", "of"), ("coasts", "of"), ("border", "of"), ("borders", "of")}
 KINGDOM_CUES = {("king", "of"), ("kings", "of"), ("kingdom", "of")}
@@ -26,13 +22,10 @@ KINGDOM_CUES = {("king", "of"), ("kings", "of"), ("kingdom", "of")}
 
 @dataclass(frozen=True)
 class Name:
-    """One of a TIPNR record's name forms. Entities are named by their keys."""
 
     entity: str
-    # The people the record's gentilic words name, and the words that name it and not the record: "Egyptians" and not "Egypt".
     people: str | None = None
     gentilics: frozenset[str] = frozenset()
-    # The record, when it is an eponym whose name also names his people and their land.
     eponym: str | None = None
     group: bool = False
 
@@ -63,7 +56,6 @@ def run(db: sqlite3.Connection):
                 if code in books:
                     candidates[(books[code], chapter, verse, base(form.strongs))].add(name)
 
-    # Words are counted by sequence here, so the words before a name are the ones just before it in the text.
     kjv = {}
     texts = {}
     ids = {}
@@ -118,16 +110,11 @@ def run(db: sqlite3.Connection):
 
 
 def merged(names: set[Name]) -> Name:
-    """The forms of one record that share a Strong's number in a verse, as one name that is a people's only if every form is."""
     first = next(iter(names))
     return Name(first.entity, first.people, first.gentilics, first.eponym, all(n.group for n in names))
 
 
 def meaning(name: Name, first: int, texts: dict[int, str], book: str, chapter: int) -> str | None:
-    """The key of the entity a name means where it stands, or None where the words around it cannot tell.
-
-    first is the name's first word, and texts holds each word by its sequence. book is the book's name.
-    """
     word = re.sub(r"’s?$", "", texts[first])
     if name.people and (name.group or word in name.gentilics or GENTILIC.search(word)):
         return name.people
@@ -136,8 +123,6 @@ def meaning(name: Name, first: int, texts: dict[int, str], book: str, chapter: i
         return name.entity
     if word in eponym.people_names:
         return eponym.people.key
-    # Genesis tells of the men themselves, so "the house of Joseph" is his household. Only Jacob's blessing in chapter 49
-    # speaks of the tribes, and "Israel" names the whole family throughout.
     if book == "Genesis" and chapter != 49 and word != "Israel":
         return name.entity
     before = (texts.get(first - 2, "").lower(), texts.get(first - 1, "").lower())
@@ -151,6 +136,5 @@ def meaning(name: Name, first: int, texts: dict[int, str], book: str, chapter: i
 
 
 def name_words(span: list[int], texts: dict[int, str]) -> tuple[int, int] | None:
-    """Trim a tagged phrase such as "the prophet Elijah" to its capitalized words."""
     capitalized = [id for id in span if re.match(r"[A-Z]", texts[id])]
     return (capitalized[0], capitalized[-1]) if capitalized else None

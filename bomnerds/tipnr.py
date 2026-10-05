@@ -1,5 +1,3 @@
-"""Reads STEPBible's TIPNR: every person, place, and other name in the Bible, with family links and the verses each name form appears in."""
-
 import re
 from dataclasses import dataclass, field
 
@@ -21,7 +19,6 @@ class NameForm:
 @dataclass
 class Record:
     unique: str
-    # TIPNR's unified Strong's number, such as H0175: its identifier for this person or place.
     ustrong: str
     section: str
     type: str
@@ -36,7 +33,6 @@ class Record:
         return self.unique.split("@")[0].replace("_", " ")
 
     def links(self, index: int) -> list[str]:
-        """Unique names in a family column, such as "Amram@Exo.6.18-1Ch + Jochebed@Exo.6.20-Num"."""
         return re.findall(r"[^\s,+]+@[^\s,+]+", self.fields[index]) if index < len(self.fields) else []
 
 
@@ -76,14 +72,12 @@ def name_form(cells: list[str]) -> NameForm | None:
         return None
     rendering = cells[index + 1] if index + 1 < len(cells) else ""
     refs = [(code.upper(), int(chapter), int(verse)) for code, chapter, verse in REFERENCE.findall(cells[index + 2] if index + 2 < len(cells) else "")]
-    # A form with a name of its own is filed as "Jews|Judah@Gen.29.35-Rev".
     names = cells[1].split("@")[0].split("|")
     own_name = names[0].replace("_", " ") if len(names) > 1 else ""
     return NameForm(kind=cells[0].removeprefix("– "), strongs=cells[index].split("«")[0], kjv=kjv_rendering(rendering), refs=refs, name=own_name)
 
 
 def kjv_rendering(text: str) -> str | None:
-    """The words the KJV uses for a name form: "Lehi =ESV,NIV; in the jaw =KJV" gives "in the jaw"."""
     parts = [part.strip() for part in text.split(";") if part.strip()]
     for part in parts:
         words, _, versions = part.partition("=")

@@ -1,5 +1,3 @@
-"""Passage links a script can find: OpenBible's Bible cross-references, and passages outside the Bible that closely follow it, with their word matches."""
-
 import io
 import math
 import re
@@ -14,22 +12,16 @@ from .sources import fetch
 from .text import BOOK_OF_MORMON, DOCTRINE_AND_COVENANTS, KJV, PEARL_OF_GREAT_PRICE, WORDS, marks
 
 GRAM = 5
-# A five-word phrase found in more verses than this, like "and it came to pass that", says nothing about which verse is followed.
 COMMON_GRAM = 20
 CLOSE = 0.6
-# A run of followed verses may skip this many verses on either side, where one text adds or leaves out a verse.
 GAP = 2
-# A verse that follows the Bible on its own can share only stock words, as "the Lord spake unto them saying" does with Deuteronomy 2:17.
-# It counts when the words it shares are rare enough, scored as the sum of each word's log rarity across Bible verses, or run long and unbroken.
 LONE_RARITY = 26
 LONE_RUN = 12
 
-# Passages that follow the Bible usually quote it. These books retell the Bible instead.
 PARALLEL_BOOKS = {"Moses", "Abraham", "Joseph Smith\u2014Matthew"}
 FOLLOWING = (BOOK_OF_MORMON, DOCTRINE_AND_COVENANTS, PEARL_OF_GREAT_PRICE)
 QUOTES, PARALLEL, CROSS_REFERENCE = "Quotes", "Parallel", "Cross-reference"
 
-# (book id, chapter, verse). A verse of None is the chapter's heading.
 Verse = tuple[int, int, int | None]
 
 
@@ -47,7 +39,6 @@ def run(db: sqlite3.Connection):
 
 
 def verse_spans(db) -> tuple[dict[tuple[int, Verse], tuple[int, int]], dict[int, int]]:
-    """Each verse's first and last word by sequence, and the id of each of those words. Passages here are pairs of sequences."""
     spans, ids = {}, {}
     for e, b, c, v, first, last, first_id, last_id in db.execute(
         "select s.edition_id, s.book_id, s.chapter, s.verse, s.first, s.last, f.id, l.id from ("
@@ -114,7 +105,6 @@ def followed_passages(db, spans, ids):
         for verse, words in words_of.items():
             hits = Counter(v for gram in set(grams(words)) - common for v in index.get(gram, ()))
             candidates = sorted(hits.items(), key=lambda hit: (-hit[1], hit[0]))[:3]
-            # Verses that score the same, as the Gospels often do, go to the one that comes first, so a run follows one book.
             best = max(((similarity(words, bible[v]), v) for v, _ in sorted(candidates)), key=lambda scored: scored[0], default=(0, None))
             if best[0] >= CLOSE:
                 followed[verse] = best[1]
@@ -140,7 +130,6 @@ def followed_passages(db, spans, ids):
 
 
 def verse_words(db, edition: int) -> dict[Verse, list[tuple[int, str]]]:
-    """Each numbered verse's words as (word id, text), in reading order."""
     verses = defaultdict(list)
     for id, b, c, v, text in db.execute(
         f"select w.id, c.book_id, c.number, v.number, w.text from {WORDS} where c.edition_id = ? and v.number is not null order by w.sequence", (edition,)
@@ -166,7 +155,6 @@ def distinctive(a, b, rarity: dict[str, float]) -> bool:
 
 
 def word_pairs(a, b):
-    """Pair the same words, and changed words where one text swaps in as many words as it takes out."""
     matcher = SequenceMatcher(None, [t for _, t in a], [t for _, t in b], autojunk=False)
     for tag, i1, i2, j1, j2 in matcher.get_opcodes():
         if tag == "equal" or (tag == "replace" and i2 - i1 == j2 - j1):
@@ -175,7 +163,6 @@ def word_pairs(a, b):
 
 
 def runs(followed: dict[Verse, Verse]) -> list[list[tuple[Verse, Verse]]]:
-    """Group followed verses into passages: nearby verses in one chapter that follow nearby verses of one Bible book."""
     grouped = []
     for verse, target in sorted(followed.items()):
         if grouped:

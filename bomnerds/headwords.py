@@ -1,8 +1,3 @@
-"""English headwords and parts of speech: a lookup table first, then spaCy and Stanza as the two runs, with MorphAdorner breaking ties.
-
-Words all three leave unsettled get no headword.
-"""
-
 import json
 import re
 import sqlite3
@@ -21,13 +16,11 @@ ARCHAIC_VERBS = {
     "shall": "shall shalt", "will": "wilt", "can": "canst cannot", "could": "could couldest couldst", "would": "would wouldest wouldst",
     "should": "should shouldest shouldst", "may": "mayest mayst", "might": "mightest", "must": "must",
 }
-# Word: (headword, part of speech). None keeps the taggers' answer for that half.
 TABLE = {
     **{form: (headword, "Pronoun") for headword, forms in PRONOUNS.items() for form in forms.split()},
     **{form: (headword, "Verb") for headword, forms in ARCHAIC_VERBS.items() for form in forms.split()},
     "these": ("this", None), "those": ("that", None), "an": ("a", "Article"), "o": ("O", "Interjection"), "yea": ("yea", "Interjection"),
 }
-# Old past tenses the taggers read as other words. Each counts only where the word is a verb: "she bare a son", but "made bare".
 PAST_TENSES = {"bare": "bear", "brake": "break", "sware": "swear", "clave": "cleave", "gat": "get", "drave": "drive", "durst": "dare", "holpen": "help", "wrought": "work"}
 TITLES = {"lord", "father", "son", "god", "christ", "messiah", "savior", "saviour", "redeemer", "creator", "spirit", "ghost", "lamb"}
 
@@ -100,30 +93,22 @@ def vote(spacy, stanza, morph):
 
 
 def spelled(headword: str, pos: str, text: str) -> str:
-    """Headwords are lowercase, except proper nouns, "I", and "O"."""
     if headword.lower() in ("i", "o"):
         return headword.upper()
     if pos == "Proper noun":
-        # Small capitals print some names in full capitals, "BABYLON", and they share the name's headword.
         return text if text.lower() == headword.lower() and not text.isupper() else headword[:1].upper() + headword[1:].lower()
     return headword.lower()
 
 
 def archaic_verb(word: str, previous: str, neighbors: set[str], verbs: set[str], morph) -> str | None:
-    """Every "-eth" and "-est" verb form: "giveth" is "give", "lovest" is "love".
-
-    An "-est" verb has "thou" nearby, which tells it from a superlative like "the greatest".
-    """
     if word.endswith("est"):
         if "thou" not in neighbors or previous in ("the", "most"):
             return None
     elif not word.endswith("eth"):
         return None
     stem = word[:-3]
-    # A one-letter stem is a name or a superlative, not a verb: "Seth", "best".
     if len(stem) < 2:
         return None
-    # "seeth" is "see", not "se", but "goeth" is "go".
     candidates = [stem + "e", stem] if stem[-1] in "aeiou" else [stem, stem + "e"]
     if len(stem) > 2 and stem[-1] == stem[-2]:
         candidates.append(stem[:-1])
@@ -144,7 +129,6 @@ def universal(tag: str, lemma: str) -> str | None:
 
 
 def nupos(tag: str, lemma: str) -> str | None:
-    """Map MorphAdorner's NUPOS tags onto our parts of speech."""
     rules = [
         (r"np", "Proper noun"), (r"n", "Noun"), (r"pc-", "Particle"), (r"pp|p-", "Preposition"), (r"p[nosxi]|r|q-", "Pronoun"),
         (r"v", "Verb"), (r"j|ord", "Adjective"), (r"av", "Adverb"), (r"xx", "Particle"), (r"crd", "Numeral"), (r"c", "Conjunction"),

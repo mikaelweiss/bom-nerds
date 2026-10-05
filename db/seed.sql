@@ -33,8 +33,6 @@ insert into part_of_speech (id, name) values
     (12, 'Interjection'),
     (13, 'Suffix');
 
--- The values of Macula's grammar codes: OSHB morphology for Hebrew and Aramaic, Robinson's for Greek.
-
 insert into stem (id, name) values
     (1, 'Qal'),
     (2, 'Niphal'),
@@ -194,7 +192,6 @@ insert into entity_type (id, parent_id, name) values
     (12, null, 'Office'),
     (13, null, 'Topic');
 
--- "Refers to" is words that name or point to an entity, pronouns included. "About" is a passage about it.
 insert into mention_kind (id, name) values
     (1, 'Refers to'),
     (2, 'About');

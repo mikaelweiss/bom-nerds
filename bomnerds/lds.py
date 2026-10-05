@@ -1,5 +1,3 @@
-"""Reads bcbooks/scriptures-json for the Book of Mormon, Doctrine and Covenants, and Pearl of Great Price."""
-
 import json
 import re
 from pathlib import Path
@@ -73,7 +71,6 @@ def add_verses(book: Book, chapter: int, verses: list[dict]):
 
 
 def add(book: Book, chapter: int, verse: int | None, *lines: str | None):
-    """Add lines to a verse, or to the chapter's heading where verse is None, each on its own line after any text it already has."""
     lines = [line for line in lines if line]
     if not lines:
         return

@@ -1,8 +1,3 @@
-"""Reads Macula's grammar codes: OSHB morphology for Hebrew and Aramaic, Robinson's for Greek.
-
-Each code becomes its features by name, as db/seed.sql spells them. A code that does not parse completely raises ValueError.
-"""
-
 import re
 
 PARTS_OF_SPEECH = {
@@ -18,7 +13,6 @@ HEBREW_TYPES = {
     "T": {"a": "Affirmation", "e": "Exhortation", "i": "Interrogative", "m": "Demonstrative", "n": "Negative", "o": "Direct object marker", "r": "Relative"},
 }
 
-# Some type letters name a part of speech of their own, the one Greek and English words of that kind take.
 HEBREW_TYPED_PARTS = {("N", "p"): "Proper noun", ("T", "d"): "Article", ("T", "j"): "Interjection"}
 
 HEBREW_STEMS = {
@@ -28,7 +22,6 @@ HEBREW_STEMS = {
     "w": "Nithpalel", "y": "Nithpoel", "z": "Hithpoel",
 }
 
-# Aramaic gives many of the same letters to other stems.
 ARAMAIC_STEMS = {
     "q": "Peal", "Q": "Peil", "u": "Hithpeel", "p": "Pael", "P": "Ithpaal", "M": "Hithpaal", "a": "Aphel", "h": "Haphel", "s": "Saphel",
     "e": "Shaphel", "H": "Hophal", "i": "Ithpeel", "t": "Hishtaphel", "v": "Ishtaphel", "w": "Hithaphel", "o": "Polel", "z": "Ithpoel",
@@ -75,16 +68,11 @@ GREEK_NUMBERS = {"S": "Singular", "P": "Plural"}
 DEGREES = {"C": "Comparative", "S": "Superlative"}
 SUFFIX_TYPES = {"N": "Negative", "I": "Interrogative"}
 
-# Robinson writes case, number, and gender in that order, after a person where one applies: "N-NSM", "P-1NS", "F-3ASM", "S-1SNSM".
 NOMINAL = re.compile(r"(?P<person>[123])?(?P<possessor>[SP](?=[NGDAV][SP]))?(?P<case>[NGDAV])(?P<number>[SP])(?P<gender>[MFN])?")
 VERB = re.compile(r"(?P<second>2)?(?P<tense>[PIFARL])(?P<voice>[AMPDONE])(?P<mood>[ISOMNP])(?:-(?:(?P<person>[123])(?P<number>[SP])|(?P<case>[NGDAV])(?P<pnumber>[SP])(?P<gender>[MFN])))?")
 
 
 def hebrew(code: str, aramaic: bool) -> dict:
-    """The features of an OSHB code such as "Vqp3ms": qal, perfect, third person, masculine, singular.
-
-    An "x" stands for a feature the code leaves unknown or unneeded, which is left out.
-    """
     letter, rest = code[:1], code[1:]
     if letter not in PARTS_OF_SPEECH:
         raise ValueError(f"unknown part of speech in Hebrew code {code!r}")
@@ -117,7 +105,6 @@ def hebrew(code: str, aramaic: bool) -> dict:
 
 
 def greek(code: str) -> dict:
-    """The features of a Robinson code such as "V-2AAI-3S": second aorist, active, indicative, third person, singular."""
     head, _, rest = code.partition("-")
     features = {"second_form": False, "indeclinable": False, "crasis": False, "attic_form": False}
     if head in TRANSLITERATED and not rest:
@@ -170,7 +157,6 @@ def greek(code: str) -> dict:
                 features["possessor_number"] = GREEK_NUMBERS[found["possessor"]]
             if found["gender"]:
                 features["gender"] = GREEK_GENDERS[found["gender"]]
-        # A trailing "-" marks a gender the code leaves unknown: "P-AP-".
         if suffixes == [""]:
             suffixes = []
     else:

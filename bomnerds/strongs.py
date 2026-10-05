@@ -1,5 +1,3 @@
-"""Matches each Hebrew and Greek word to the KJV words that translate it, by the Strong's numbers eBible puts on KJV words."""
-
 import re
 import sqlite3
 from collections import defaultdict
@@ -58,7 +56,6 @@ def base(number: str) -> str:
 
 
 def translation_units(words: list[tuple[int, tuple[str, ...]]]) -> dict[str, list[list[int]]]:
-    """Group consecutive KJV words that carry the same Strong's numbers, since eBible tags a phrase like "It is written" as one translation."""
     units = defaultdict(list)
     previous = None
     for id, numbers in words:

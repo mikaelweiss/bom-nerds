@@ -13,8 +13,8 @@ import sys
 import tempfile
 from pathlib import Path
 
-from .sentences import ENGLISH
 from .sources import ROOT, fetch
+from .text import WORDS, english_editions, marks
 
 CACHE = ROOT / "cache"
 TAGGERS = ("spacy", "stanza", "morphadorner")
@@ -23,16 +23,17 @@ POSSESSIVE = re.compile(r"(.+?)(['’]s)$")
 
 def sentences(db: sqlite3.Connection) -> list[list[tuple[int, str, str, str]]]:
     """Every English sentence as (word id, before, text, after) in reading order."""
-    words = {}
-    for id, before, text, after in db.execute(
-        f"select id, before, text, after from word where edition_id in ({','.join('?' * len(ENGLISH))})", ENGLISH
-    ):
-        words[id] = (id, before, text, after)
+    english = english_editions(db)
+    words = list(db.execute(
+        f"select w.sequence, w.id, w.before, w.text, w.after from {WORDS} where c.edition_id in ({marks(english)}) order by w.sequence", english
+    ))
+    index = {word[0]: i for i, word in enumerate(words)}
     spans = db.execute(
-        f"select s.first_word_id, s.last_word_id from sentence s join word w on w.id = s.first_word_id where w.edition_id in ({','.join('?' * len(ENGLISH))}) order by s.first_word_id",
-        ENGLISH,
+        f"select w.sequence, l.sequence from sentence s join word l on l.id = s.last_word_id, {WORDS} "
+        f"where w.id = s.first_word_id and c.edition_id in ({marks(english)}) order by w.sequence",
+        english,
     )
-    return [[words[id] for id in range(first, last + 1)] for first, last in spans]
+    return [[word[1:] for word in words[index[first]:index[last] + 1]] for first, last in spans]
 
 
 def tokens(sentence) -> tuple[list[str], list[int]]:
@@ -162,7 +163,7 @@ def tag(name: str, db: sqlite3.Connection):
     with open(path, encoding="utf-8") if path.exists() else open(os.devnull) as cached:
         for line, sentence in zip(cached, every):
             cached = json.loads(line)
-            if cached and not sentence[0][0] <= cached[0][0] <= cached[-1][0] <= sentence[-1][0]:
+            if not {word[0] for word in cached} <= {word[0] for word in sentence}:
                 sys.exit(f"{path} was made from different sentences. Delete it to tag again.")
     batch = every[done:]
     if not batch:

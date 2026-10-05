@@ -16,7 +16,7 @@ class DatesTest(unittest.TestCase):
 
     def test_finds_the_year_a_verse_takes_place_in(self):
         [date] = dates.dates_in(words("Now it came to pass in the first year of the reign of the judges"))
-        self.assertEqual(date[2:4], ("reign_of_judges", 1))
+        self.assertEqual(date[2:4], (dates.REIGN_OF_JUDGES, 1))
 
     def test_a_year_counted_toward_is_not_when(self):
         self.assertEqual(dates.dates_in(words("there was much peace until the fifth year of the reign of the judges")), [])
@@ -30,14 +30,15 @@ class DatesTest(unittest.TestCase):
 
     def test_reads_the_day_and_month(self):
         [date] = dates.dates_in(words("on the sixteenth day of February in the year of our Lord one thousand eight hundred and thirty-two"))
-        self.assertEqual(date[2:6], ("bc_ad", 1832, 2, 16))
+        self.assertEqual(date[2:6], (dates.BC_AD, 1832, 2, 16))
 
 
 class VersificationTest(unittest.TestCase):
     def test_expands_titles_and_ranges_across_chapters(self):
-        known = {"psalms": [("psalms", 3, n) for n in range(0, 9)], "revelation": [("revelation", 12, 17), ("revelation", 12, 18), ("revelation", 13, 1)]}
+        known = {"psalms": [("psalms", 3, n) for n in (None, *range(1, 9))], "revelation": [("revelation", 12, 17), ("revelation", 12, 18), ("revelation", 13, 1)]}
         books = {"PSA": "psalms", "REV": "revelation"}
-        self.assertEqual(versification.expand("Psa.3:Title", books, known), [("psalms", 3, 0)])
+        self.assertEqual(versification.expand("Psa.3:Title", books, known), [("psalms", 3, None)])
+        self.assertEqual(versification.expand("Psa.3:Title-2", books, known), [("psalms", 3, None), ("psalms", 3, 1), ("psalms", 3, 2)])
         self.assertEqual(versification.expand("Rev.12:18-13:1", books, known), [("revelation", 12, 18), ("revelation", 13, 1)])
         self.assertEqual(versification.expand("Absent [=Psa.3:1]", books, known), [])
 
@@ -64,12 +65,17 @@ class LinksTest(unittest.TestCase):
 class EntitiesTest(unittest.TestCase):
     def test_names_a_people_by_its_gentilic(self):
         def record(name, *renderings):
-            return tipnr.Record(f"{name}@Gen.1.1", "PERSON(s)", "Male", [], forms=[tipnr.NameForm("Group", "H1", r, []) for r in renderings])
+            return tipnr.Record(f"{name}@Gen.1.1", "H1", "PERSON(s)", "Male", [], forms=[tipnr.NameForm("Group", "H1", r, []) for r in renderings])
 
         self.assertEqual(entities.people_name(record("Levi", "Levite")), "Levites")
         self.assertEqual(entities.people_name(record("Ishvi", "Jesui")), "Jesuites")
         self.assertEqual(entities.people_name(record("Cush", "Cushi,Ethiopian", "Cushitess")), "Ethiopians")
         self.assertIsNone(entities.people_name(record("Esau", "Esau")))
+
+    def test_an_entity_carries_its_tipnr_identifier_and_a_people_split_from_it_has_none(self):
+        record = tipnr.Record("Abiezer@Num.26.30-Jdg", "H0044G", "PERSON(s)", "Male", [], forms=[tipnr.NameForm("Group", "H0050", "Abiezrite", [])])
+        found = entities.bible_entities([record])
+        self.assertEqual({f.entity.name: f.tipnr for f in found.values()}, {"Abiezer": "H0044G", "Abiezrites": None})
 
     def test_splits_names_tipnr_lists_together(self):
         self.assertEqual(entities.split_names("Ammonite,Ammon"), ["Ammonite", "Ammon"])
@@ -79,7 +85,7 @@ class EntitiesTest(unittest.TestCase):
 class MentionsTest(unittest.TestCase):
     JUDAH = mentions.Name("judah-son-of-israel", "jews", frozenset({"Jew", "Jews"}), "Judah@Gen.29.35-Rev")
 
-    def meaning(self, text, book="isaiah", chapter=1):
+    def meaning(self, text, book="Isaiah", chapter=1):
         texts = dict(enumerate(text.split(), 1))
         return mentions.meaning(self.JUDAH, max(id for id, t in texts.items() if t.startswith(("Judah", "Jew"))), texts, book, chapter)
 
@@ -88,12 +94,12 @@ class MentionsTest(unittest.TestCase):
         self.assertEqual(self.meaning("the cities of Judah"), "land-of-judah")
         self.assertEqual(self.meaning("Hezekiah king of Judah"), "land-of-judah")
 
-    def test_an_eponym_with_nothing_to_settle_it_is_left_for_the_ai(self):
+    def test_an_eponym_with_nothing_to_settle_it_is_left_unsettled(self):
         self.assertIsNone(self.meaning("concerning Judah and Jerusalem"))
 
     def test_genesis_names_the_man(self):
-        self.assertEqual(self.meaning("and Judah said", "genesis", 38), "judah-son-of-israel")
-        self.assertIsNone(self.meaning("Judah is a lion's whelp", "genesis", 49))
+        self.assertEqual(self.meaning("and Judah said", "Genesis", 38), "judah-son-of-israel")
+        self.assertIsNone(self.meaning("Judah is a lion's whelp", "Genesis", 49))
 
     def test_a_gentilic_word_names_the_people(self):
         self.assertEqual(self.meaning("the Jews"), "jews")
@@ -102,12 +108,14 @@ class MentionsTest(unittest.TestCase):
 class SentencesTest(unittest.TestCase):
     def test_ends_at_a_period_but_not_after_an_initial_or_jun(self):
         chapter = [
-            (1, "dc", "doctrine-and-covenants", 102, 1, "Samuel", " "), (2, "dc", "doctrine-and-covenants", 102, 1, "H", ". "),
-            (3, "dc", "doctrine-and-covenants", 102, 1, "Smith", ", "), (4, "dc", "doctrine-and-covenants", 102, 1, "Jun", "., "),
-            (5, "dc", "doctrine-and-covenants", 102, 1, "spoke", ": "), (6, "dc", "doctrine-and-covenants", 102, 1, "Amen", ". "),
-            (7, "dc", "doctrine-and-covenants", 102, 1, "Then", " "), (8, "dc", "doctrine-and-covenants", 102, 1, "rose", "."),
+            (1, 102, 1, "Samuel", " "), (2, 102, 1, "H", ". "), (3, 102, 1, "Smith", ", "), (4, 102, 1, "Jun", "., "),
+            (5, 102, 1, "spoke", ": "), (6, 102, 1, "Amen", ". "), (7, 102, 1, "Then", " "), (8, 102, 1, "rose", "."),
         ]
         self.assertEqual(sentences.split(chapter), [(1, 6), (7, 8)])
+
+    def test_the_heading_never_runs_into_verse_one(self):
+        chapter = [(1, 5, None, "Lehi", " "), (2, 5, None, "prophesies", ""), (3, 5, 1, "For", " "), (4, 5, 1, "behold", ".")]
+        self.assertEqual(sentences.split(chapter), [(1, 2), (3, 4)])
 
 
 class HeadwordsTest(unittest.TestCase):
@@ -126,8 +134,8 @@ class HeadwordsTest(unittest.TestCase):
         self.assertEqual(headwords.archaic_verb("seeth", "he", set(), verbs, None), "see")
 
     def test_a_name_in_capitals_shares_the_names_headword(self):
-        self.assertEqual(headwords.spelled("babylon", "proper_noun", "BABYLON"), "Babylon")
-        self.assertEqual(headwords.spelled("Babylon", "proper_noun", "Babylon"), "Babylon")
+        self.assertEqual(headwords.spelled("babylon", "Proper noun", "BABYLON"), "Babylon")
+        self.assertEqual(headwords.spelled("Babylon", "Proper noun", "Babylon"), "Babylon")
 
     def test_two_runs_agree_or_morphadorner_breaks_the_tie(self):
         self.assertEqual(headwords.vote("go", "go", "went"), "go")
@@ -135,11 +143,11 @@ class HeadwordsTest(unittest.TestCase):
         self.assertIsNone(headwords.vote("go", "went", "goes"))
 
     def test_nupos_tags(self):
-        self.assertEqual(headwords.nupos("pp-f", "of"), "preposition")
-        self.assertEqual(headwords.nupos("pns11", "i"), "pronoun")
-        self.assertEqual(headwords.nupos("np1", "Nephi"), "proper_noun")
-        self.assertEqual(headwords.nupos("vvz", "give"), "verb")
-        self.assertEqual(headwords.nupos("dt", "the"), "article")
+        self.assertEqual(headwords.nupos("pp-f", "of"), "Preposition")
+        self.assertEqual(headwords.nupos("pns11", "i"), "Pronoun")
+        self.assertEqual(headwords.nupos("np1", "Nephi"), "Proper noun")
+        self.assertEqual(headwords.nupos("vvz", "give"), "Verb")
+        self.assertEqual(headwords.nupos("dt", "the"), "Article")
 
 
 class GrammarTest(unittest.TestCase):
@@ -156,8 +164,8 @@ class GrammarTest(unittest.TestCase):
         self.assertIsNone(grammar.verb_span(4, children, tags, texts))
 
     def test_drops_agreed_parts_that_overlap(self):
-        parts = {("subject", (1, 3)), ("verb", (3, 3)), ("subject", (5, 6))}
-        self.assertEqual(grammar.apart(parts), [("subject", (5, 6))])
+        parts = {(grammar.SUBJECT, (1, 3)), (grammar.VERB, (3, 3)), (grammar.SUBJECT, (5, 6))}
+        self.assertEqual(grammar.apart(parts), [(grammar.SUBJECT, (5, 6))])
 
 
 if __name__ == "__main__":

@@ -6,11 +6,14 @@ from collections import defaultdict
 from dataclasses import dataclass
 
 from . import tipnr
-from .entities import EPONYMS, GENTILIC, JESUS, JESUS_CHRIST, bible_entities, build_ids, is_name, peoples, usable
+from .entities import EPONYMS, GENTILIC, JESUS, JESUS_CHRIST, bible_entities, build_keys, is_name, peoples, stored_ids, usable
 from .refs import OLD_TESTAMENT, USFM, codes
+from .rows import row_id
 from .strongs import base, translation_units
-from .text import bible, slug
+from .text import KJV, WORDS, bible, english_editions, marks
 from .versification import mapping
+
+REFERS_TO = "Refers to"
 
 # Latter-day Saint doctrine: the LORD, JAH, and GOD of the Old Testament render the name Jehovah, who is Jesus Christ.
 JEHOVAH_STRONGS = {"H3068", "H3050", "H3069"}
@@ -23,7 +26,7 @@ KINGDOM_CUES = {("king", "of"), ("kings", "of"), ("kingdom", "of")}
 
 @dataclass(frozen=True)
 class Name:
-    """One of a TIPNR record's name forms."""
+    """One of a TIPNR record's name forms. Entities are named by their keys."""
 
     entity: str
     # The people the record's gentilic words name, and the words that name it and not the record: "Egyptians" and not "Egypt".
@@ -35,7 +38,7 @@ class Name:
 
 
 def clear(db: sqlite3.Connection):
-    db.execute("delete from mention where kind_id = 'names'")
+    db.execute("delete from mention where mention_kind_id = ?", (row_id(db, "mention_kind", REFERS_TO),))
 
 
 def run(db: sqlite3.Connection):
@@ -46,29 +49,35 @@ def run(db: sqlite3.Connection):
     people = peoples(records)
     entities = bible_entities(records)
     candidates = defaultdict(set)
-    for entity_id, record in build_ids(records):
+    for key, record in build_keys(records):
         if record.unique == JESUS:
-            entity_id = JESUS_CHRIST[0]
+            key = JESUS_CHRIST[0]
         group = people.get(record.unique)
-        gentilics = frozenset(entities[group.id].names - entities[entity_id].names) if group else frozenset()
+        gentilics = frozenset(entities[group.key].names - entities[key].names) if group else frozenset()
         eponym = record.unique if record.unique in EPONYMS else None
         for form in record.forms:
             if not is_name(form.kjv):
                 continue
-            name = Name(entity_id, group.id if group else None, gentilics, eponym, form.kind == "Group")
+            name = Name(key, group.key if group else None, gentilics, eponym, form.kind == "Group")
             for code, chapter, verse in form.refs:
                 if code in books:
                     candidates[(books[code], chapter, verse, base(form.strongs))].add(name)
 
+    # Words are counted by sequence here, so the words before a name are the ones just before it in the text.
     kjv = {}
     texts = {}
-    for id, b, c, v, p, text in db.execute("select id, book_id, chapter, verse, position, text from word where edition_id = 'kjv'"):
-        kjv[(b, c, v, p)] = id
-        texts[id] = text
+    ids = {}
+    for id, sequence, b, c, v, p, text in db.execute(
+        f"select w.id, w.sequence, c.book_id, c.number, v.number, w.position, w.text from {WORDS} where c.edition_id = ?", (row_id(db, "edition", KJV),)
+    ):
+        kjv[(b, c, v, p)] = sequence
+        texts[sequence] = text
+        ids[sequence] = id
+    book_ids = dict(db.execute("select name, id from book where work_id = ?", (row_id(db, "work", "Bible"),)))
     found = set()
     ambiguous = unsettled = 0
     for book in bible():
-        book_id = slug(book.name)
+        book_id = book_ids[book.name]
         for (chapter, verse), words in book.verses.items():
             refs = [(book_id, chapter, verse), *renumbered.get((book_id, chapter, verse), [])]
             units = translation_units([(kjv[(book_id, chapter, verse, n)], w.strongs) for n, w in enumerate(words, 1)])
@@ -87,15 +96,21 @@ def run(db: sqlite3.Connection):
                     words_named = name_words(span, texts)
                     if not words_named:
                         continue
-                    entity = meaning(name, words_named[0], texts, book_id, chapter)
+                    entity = meaning(name, words_named[0], texts, book.name, chapter)
                     if entity:
-                        found.add((entity, *words_named))
+                        found.add((entity, ids[words_named[0]], ids[words_named[1]]))
                     else:
                         unsettled += 1
 
-    for id, in db.execute("select id from word where lower(text) = 'jehovah' and edition_id not in ('wlc', 'sblgnt')"):
+    english = english_editions(db)
+    for id, in db.execute(f"select w.id from {WORDS} where lower(w.text) = 'jehovah' and c.edition_id in ({marks(english)})", english):
         found.add((JESUS_CHRIST[0], id, id))
-    db.executemany("insert into mention (entity_id, kind_id, first_word_id, last_word_id) values (?, 'names', ?, ?)", sorted(found))
+    entity_ids = stored_ids(db, entities)
+    kind = row_id(db, "mention_kind", REFERS_TO)
+    db.executemany(
+        "insert into mention (entity_id, mention_kind_id, first_word_id, last_word_id) values (?, ?, ?, ?)",
+        sorted((entity_ids[entity], kind, first, last) for entity, first, last in found),
+    )
     print(
         f"mentions: {len(found)} name mentions, {ambiguous} words left where several entities carry the name, "
         f"{unsettled} where a name may mean a man, his people, or their land"
@@ -109,7 +124,10 @@ def merged(names: set[Name]) -> Name:
 
 
 def meaning(name: Name, first: int, texts: dict[int, str], book: str, chapter: int) -> str | None:
-    """The entity a name means where it stands, or None where only the AI can tell."""
+    """The key of the entity a name means where it stands, or None where the words around it cannot tell.
+
+    first is the name's first word, and texts holds each word by its sequence. book is the book's name.
+    """
     word = re.sub(r"’s?$", "", texts[first])
     if name.people and (name.group or word in name.gentilics or GENTILIC.search(word)):
         return name.people
@@ -117,16 +135,16 @@ def meaning(name: Name, first: int, texts: dict[int, str], book: str, chapter: i
     if not eponym:
         return name.entity
     if word in eponym.people_names:
-        return eponym.people.id
+        return eponym.people.key
     # Genesis tells of the men themselves, so "the house of Joseph" is his household. Only Jacob's blessing in chapter 49
     # speaks of the tribes, and "Israel" names the whole family throughout.
-    if book == "genesis" and chapter != 49 and word != "Israel":
+    if book == "Genesis" and chapter != 49 and word != "Israel":
         return name.entity
     before = (texts.get(first - 2, "").lower(), texts.get(first - 1, "").lower())
     if before in PEOPLE_CUES:
-        return eponym.people.id
+        return eponym.people.key
     if before in LAND_CUES and eponym.lands:
-        return eponym.lands[0].id
+        return eponym.lands[0].key
     if before in KINGDOM_CUES and eponym.kingdom:
         return eponym.kingdom
     return None

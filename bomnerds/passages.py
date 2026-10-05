@@ -1,4 +1,4 @@
-"""Turns the verse references and quotes agents write into word id ranges, and word id ranges back into them."""
+"""Turns verse references and quotes, as people write them, into word id ranges, and word id ranges back into them."""
 
 import re
 import sqlite3
@@ -7,6 +7,9 @@ from collections import OrderedDict
 from dataclasses import dataclass, field
 from itertools import accumulate
 
+from .rows import row_id
+from .text import WORDS
+
 SHAPES = """A passage takes one of these shapes:
 { "verse": "1 Nephi 3:7", "quote": "Nephi" }
 { "verse": "1 Nephi 3:7", "quote": "I", "in": "I will go" }
@@ -14,7 +17,11 @@ SHAPES = """A passage takes one of these shapes:
 { "from": "Alma 32:21", "to": "Alma 32:43" }
 { "from": "Mosiah 2:9", "to": "Mosiah 5:15", "starts": "My brethren", "ends": "Amen" }
 { "chapter": "Alma 32" }
-"starts" and "ends" take "starts_in" and "ends_in" the way "quote" takes "in", when their words appear more than once in the verse."""
+"starts" and "ends" take "starts_in" and "ends_in" the way "quote" takes "in", when their words appear more than once in the verse.
+The text printed before a chapter's first verse is its heading, written like "1 Nephi 3 heading"."""
+
+# The verse a reference names when it names a chapter's heading, the verse without a number.
+HEADING = "heading"
 
 KEYS = [
     {"verse", "quote"},
@@ -25,13 +32,13 @@ KEYS = [
 ]
 
 ALIASES = {
-    "d&c": "doctrine-and-covenants",
-    "js-m": "joseph-smith-matthew",
-    "js-h": "joseph-smith-history",
-    "psalm": "psalms",
+    "d&c": "Doctrine and Covenants",
+    "js-m": "Joseph Smith\u2014Matthew",
+    "js-h": "Joseph Smith\u2014History",
+    "psalm": "Psalms",
 }
 
-SHORT_NAMES = {"doctrine-and-covenants": "D&C"}
+SHORT_NAMES = {"Doctrine and Covenants": "D&C"}
 
 EXAMPLE = 'Write one like "1 Nephi 3:7" or "Alma 32".'
 JOINERS = "'\u2019-"
@@ -40,7 +47,7 @@ CACHED_CHAPTERS = 512
 
 
 class Rejected(Exception):
-    """An answer the agent must fix. str(error) is a message the agent can act on."""
+    """A passage that does not resolve. str(error) says how to fix it."""
 
 
 def key(text: str) -> str:
@@ -73,6 +80,7 @@ def is_letter(char: str) -> bool:
 class Verse:
     reference: str
     ids: list[int]
+    sequences: list[int]
     words: list[tuple[str, str, str]]
 
     def __post_init__(self):
@@ -125,7 +133,9 @@ class Verse:
 
 @dataclass
 class Chapter:
-    verses: dict[int, Verse]
+    """A chapter's verses by number, the heading under HEADING, in reading order."""
+
+    verses: dict[int | str, Verse]
 
     @property
     def first(self) -> int:
@@ -138,11 +148,12 @@ class Chapter:
 
 @dataclass
 class Cache:
-    names: dict[str, str]
-    lookup: dict[str, str]
-    editions: dict[str, set[str]]
-    english: dict[str, str]
-    chapter_numbers: dict[tuple[str, str], list[int]] = field(default_factory=dict)
+    names: dict[int, str]
+    lookup: dict[str, int]
+    editions: dict[int, set[int]]
+    english: dict[int, int]
+    edition_names: dict[int, str]
+    chapter_numbers: dict[tuple[int, int], list[int]] = field(default_factory=dict)
     chapters: OrderedDict = field(default_factory=OrderedDict)
 
 
@@ -155,12 +166,15 @@ def cache(db: sqlite3.Connection) -> Cache:
         return connections[db]
     names = dict(db.execute("select id, name from book"))
     lookup = {book_key(name): book for book, name in names.items()}
-    lookup.update({alias: book for alias, book in ALIASES.items() if book in names})
+    lookup.update({alias: lookup[book_key(name)] for alias, name in ALIASES.items() if book_key(name) in lookup})
     editions = {}
     for edition, book in db.execute("select edition_id, book_id from edition_book"):
         editions.setdefault(book, set()).add(edition)
-    english = dict(db.execute("select eb.book_id, e.id from edition_book eb join edition e on e.id = eb.edition_id where e.language = 'en'"))
-    connections[db] = Cache(names, lookup, editions, english)
+    english = dict(db.execute(
+        "select eb.book_id, e.id from edition_book eb join edition e on e.id = eb.edition_id where e.language_id = ?", (row_id(db, "language", "en", "iso_code"),)
+    ))
+    edition_names = dict(db.execute("select id, name from edition"))
+    connections[db] = Cache(names, lookup, editions, english, edition_names)
     while len(connections) > CACHED_CONNECTIONS:
         connections.popitem(last=False)
     return connections[db]
@@ -172,37 +186,43 @@ def book_key(name: str) -> str:
     return re.sub(r"\s+", " ", name)
 
 
-def book_name(db, book_id: str) -> str:
-    return SHORT_NAMES.get(book_id) or cache(db).names[book_id]
+def book_name(db, book_id: int) -> str:
+    name = cache(db).names[book_id]
+    return SHORT_NAMES.get(name, name)
 
 
-def english_edition(db, book_id: str) -> str:
+def english_edition(db, book_id: int) -> int:
     """The English edition of the book's work."""
     return cache(db).english[book_id]
 
 
-def reference(db, book_id: str, chapter: int, verse: int | None = None) -> str:
-    """The reference as people write it, like "1 Nephi 3:7" or "D&C 76"."""
+def reference(db, book_id: int, chapter: int, verse: int | str | None = None) -> str:
+    """The reference as people write it, like "1 Nephi 3:7", "1 Nephi 3 heading", or "D&C 76"."""
     name = book_name(db, book_id)
-    return f"{name} {chapter}" if verse is None else f"{name} {chapter}:{verse}"
+    if verse is None:
+        return f"{name} {chapter}"
+    return f"{name} {chapter} {HEADING}" if verse == HEADING else f"{name} {chapter}:{verse}"
 
 
-def parse_reference(db, text: str) -> tuple[str, int, int | None]:
-    """Read "1 Nephi 3:7" as ("1-nephi", 3, 7) and "Alma 32" as ("alma", 32, None), checked against the English edition."""
+def parse_reference(db, text: str) -> tuple[int, int, int | str | None]:
+    """Read "1 Nephi 3:7" as (1 Nephi's id, 3, 7), "1 Nephi 3 heading" as (1 Nephi's id, 3, HEADING), and "Alma 32" as (Alma's id, 32, None).
+
+    The chapter and verse are checked against the English edition.
+    """
     book, chapter, verse = parse(db, text)
     check(db, english_edition(db, book), book, chapter, verse)
     return book, chapter, verse
 
 
-def parse(db, text: str) -> tuple[str, int, int | None]:
+def parse(db, text: str) -> tuple[int, int, int | str | None]:
     """Read a reference without checking that its chapter and verse exist."""
     if not isinstance(text, str):
         raise Rejected(f"{text!r} is not a reference. {EXAMPLE}")
     books = cache(db).lookup
-    match = re.fullmatch(r"\s*(.+)\s+(\d+)(?:\s*:\s*(\d+))?\s*", text)
+    match = re.fullmatch(r"\s*(.+)\s+(\d+)(?:\s*:\s*(\d+)|\s+((?i:heading)))?\s*", text)
     if match and book_key(match.group(1)) in books:
-        name, chapter, verse = match.groups()
-        return books[book_key(name)], int(chapter), None if verse is None else int(verse)
+        name, chapter, verse, heading = match.groups()
+        return books[book_key(name)], int(chapter), HEADING if heading else None if verse is None else int(verse)
     if book_key(text) in books:
         raise Rejected(f'"{text.strip()}" needs a chapter, like "{reference(db, books[book_key(text)], 1)}".')
     if match:
@@ -210,82 +230,80 @@ def parse(db, text: str) -> tuple[str, int, int | None]:
     raise Rejected(f'"{text}" is not a reference. {EXAMPLE}')
 
 
-def check(db, edition: str, book_id: str, chapter: int, verse: int | None):
+def check(db, edition: int, book_id: int, chapter: int, verse: int | str | None):
     """Reject a chapter or verse the edition does not have."""
     numbers = chapter_numbers(db, edition, book_id)
     if chapter not in numbers:
         raise Rejected(f"{reference(db, book_id, chapter)} does not exist. {book_name(db, book_id)} has chapters {numbers[0]} to {numbers[-1]}.")
     verses = load(db, edition, book_id, chapter).verses
     if verse is not None and verse not in verses:
-        raise Rejected(f"{reference(db, book_id, chapter, verse)} does not exist. {reference(db, book_id, chapter)} has verses {min(verses)} to {max(verses)}.")
+        numbered = [v for v in verses if v != HEADING]
+        raise Rejected(f"{reference(db, book_id, chapter, verse)} does not exist. {reference(db, book_id, chapter)} has verses {min(numbered)} to {max(numbered)}.")
 
 
-def chapter_numbers(db, edition: str, book_id: str) -> list[int]:
+def chapter_numbers(db, edition: int, book_id: int) -> list[int]:
     numbers = cache(db).chapter_numbers
     if (edition, book_id) not in numbers:
-        found = []
-        chapter = -1
-        while row := db.execute(
-            "select chapter from word where edition_id = ? and book_id = ? and chapter > ? order by chapter limit 1", (edition, book_id, chapter)
-        ).fetchone():
-            chapter = row[0]
-            found.append(chapter)
-        numbers[(edition, book_id)] = found
+        numbers[(edition, book_id)] = [row[0] for row in db.execute(
+            "select number from chapter where edition_id = ? and book_id = ? order by number", (edition, book_id)
+        )]
     return numbers[(edition, book_id)]
 
 
-def load(db, edition: str, book_id: str, chapter: int) -> Chapter:
+def load(db, edition: int, book_id: int, chapter: int) -> Chapter:
     chapters = cache(db).chapters
     wanted = (edition, book_id, chapter)
     if wanted in chapters:
         chapters.move_to_end(wanted)
         return chapters[wanted]
     grouped = {}
-    for verse, word_id, before, text, after in db.execute(
-        "select verse, id, before, text, after from word where edition_id = ? and book_id = ? and chapter = ? order by verse, position",
+    for verse, word_id, sequence, before, text, after in db.execute(
+        f"select v.number, w.id, w.sequence, w.before, w.text, w.after from {WORDS} where c.edition_id = ? and c.book_id = ? and c.number = ? order by w.sequence",
         (edition, book_id, chapter),
     ):
-        ids, words = grouped.setdefault(verse, ([], []))
+        ids, sequences, words = grouped.setdefault(HEADING if verse is None else verse, ([], [], []))
         ids.append(word_id)
+        sequences.append(sequence)
         words.append((before, text, after))
-    chapters[wanted] = Chapter({v: Verse(reference(db, book_id, chapter, v), ids, words) for v, (ids, words) in grouped.items()})
+    chapters[wanted] = Chapter({v: Verse(reference(db, book_id, chapter, v), *found) for v, found in grouped.items()})
     while len(chapters) > CACHED_CHAPTERS:
         chapters.popitem(last=False)
     return chapters[wanted]
 
 
-def verse_of(db, edition: str, book_id: str, chapter: int, verse: int) -> Verse:
+def verse_of(db, edition: int, book_id: int, chapter: int, verse: int | str) -> Verse:
     check(db, edition, book_id, chapter, verse)
     return load(db, edition, book_id, chapter).verses[verse]
 
 
-def verse_text(db, edition: str, book_id: str, chapter: int, verse: int) -> str:
+def verse_text(db, edition: int, book_id: int, chapter: int, verse: int | str) -> str:
     """The verse exactly as printed."""
     return verse_of(db, edition, book_id, chapter, verse).text
 
 
-def chapter_verses(db, edition: str, book_id: str, chapter: int) -> list[tuple[int, str]]:
-    """Every verse of a chapter as (verse number, text), verse 0 included when present."""
+def chapter_verses(db, edition: int, book_id: int, chapter: int) -> list[tuple[int | str, str]]:
+    """Every verse of a chapter as (verse number, text), the heading first under HEADING when the chapter has one."""
     check(db, edition, book_id, chapter, None)
     return [(number, verse.text) for number, verse in load(db, edition, book_id, chapter).verses.items()]
 
 
-def chapter_span(db, edition: str, book_id: str, chapter: int) -> tuple[int, int]:
+def chapter_span(db, edition: int, book_id: int, chapter: int) -> tuple[int, int]:
     """The first and last word id of a chapter."""
     check(db, edition, book_id, chapter, None)
     found = load(db, edition, book_id, chapter)
     return found.first, found.last
 
 
-def locate(db, word_id: int) -> tuple[str, str, int, int]:
+def locate(db, word_id: int) -> tuple[int, int, int, int | str]:
     """The (edition, book id, chapter, verse) a word sits in."""
-    row = db.execute("select edition_id, book_id, chapter, verse from word where id = ?", (word_id,)).fetchone()
+    row = db.execute(f"select c.edition_id, c.book_id, c.number, v.number from {WORDS} where w.id = ?", (word_id,)).fetchone()
     if row is None:
         raise ValueError(f"no word {word_id}")
-    return row
+    edition, book, chapter, verse = row
+    return edition, book, chapter, HEADING if verse is None else verse
 
 
-def resolve(db, passage: dict, edition: str | None = None) -> tuple[int, int]:
+def resolve(db, passage: dict, edition: int | None = None) -> tuple[int, int]:
     """The first and last word id of a passage, in the English edition of its book unless `edition` names another."""
     if not isinstance(passage, dict) or set(passage) not in KEYS:
         keys = ", ".join(f'"{k}"' for k in passage) if isinstance(passage, dict) else ""
@@ -311,22 +329,22 @@ def resolve(db, passage: dict, edition: str | None = None) -> tuple[int, int]:
     end = verse_at(db, passage["to"], "to", edition, parse(db, passage["from"])[0])
     first = pick(start, passage, "starts", "starts_in")[0] if "starts" in passage else 0
     last = pick(end, passage, "ends", "ends_in")[1] if "ends" in passage else len(end.ids) - 1
-    if start.ids[first] > end.ids[last]:
+    if start.sequences[first] > end.sequences[last]:
         if start.reference == end.reference:
             raise Rejected(f'The passage runs backward: "ends" "{passage["ends"]}" comes before "starts" "{passage["starts"]}" in {start.reference}.')
         raise Rejected(f'The passage runs backward: "to" {end.reference} comes before "from" {start.reference}.')
     return start.ids[first], end.ids[last]
 
 
-def edition_for(db, book_id: str, edition: str | None) -> str:
+def edition_for(db, book_id: int, edition: int | None) -> int:
     if edition is None:
         return english_edition(db, book_id)
     if edition not in cache(db).editions.get(book_id, ()):
-        raise Rejected(f"{book_name(db, book_id)} is not in the {edition} edition.")
+        raise Rejected(f"{book_name(db, book_id)} is not in the {cache(db).edition_names[edition]}.")
     return edition
 
 
-def verse_at(db, text: str, k: str, edition: str | None, same_book: str | None = None) -> Verse:
+def verse_at(db, text: str, k: str, edition: int | None, same_book: int | None = None) -> Verse:
     book, chapter, verse = parse(db, text)
     if verse is None:
         raise Rejected(f'"{k}" takes a verse, like "{reference(db, book, chapter, 1)}", not "{text}".')
@@ -350,7 +368,7 @@ def pick(verse: Verse, passage: dict, k: str, within: str) -> tuple[int, int]:
 
 
 def only(verse: Verse, words: str, k: str, fix: str) -> tuple[int, int]:
-    """The one run of the verse's words that matches, or a rejection the agent can act on."""
+    """The one run of the verse's words that matches, or a rejection that says how to fix it."""
     if not key(words):
         raise Rejected(f'"{k}" "{words}" has no words in it. Copy words from {verse.reference}, which reads:\n{verse.text}')
     found = verse.find(words)
@@ -367,8 +385,6 @@ def times(n: int) -> str:
 
 def render(db, first: int, last: int) -> dict:
     """The shortest passage that resolves back to exactly words first through last."""
-    if first > last:
-        raise ValueError(f"word {first} comes after word {last}")
     edition, book, chapter, verse = locate(db, first)
     last_edition, last_book, last_chapter, last_verse = locate(db, last)
     if (edition, book) != (last_edition, last_book):
@@ -376,6 +392,8 @@ def render(db, first: int, last: int) -> dict:
     start = load(db, edition, book, chapter).verses[verse]
     end = load(db, edition, book, last_chapter).verses[last_verse]
     i, j = start.ids.index(first), end.ids.index(last)
+    if start.sequences[i] > end.sequences[j]:
+        raise ValueError(f"word {first} comes after word {last}")
     whole_start, whole_end = i == 0, j == len(end.ids) - 1
     one_verse = (chapter, verse) == (last_chapter, last_verse)
 

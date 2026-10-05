@@ -1,7 +1,9 @@
 """Book codes each source uses for the 66 books of the Bible, in KJV order."""
 
-import re
 import sqlite3
+
+from .rows import row_id
+from .text import KJV
 
 # USFM codes. STEPBible and Macula use the same codes in mixed case.
 USFM = """GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL
@@ -14,18 +16,13 @@ Matt Mark Luke John Acts Rom 1Cor 2Cor Gal Eph Phil Col 1Thess 2Thess 1Tim 2Tim 
 OLD_TESTAMENT = 39
 
 
-def bible_books(db: sqlite3.Connection) -> list[str]:
-    books = [row[0] for row in db.execute("select book_id from edition_book where edition_id = 'kjv' order by position")]
+def bible_books(db: sqlite3.Connection) -> list[int]:
+    books = [row[0] for row in db.execute("select book_id from edition_book where edition_id = ? order by position", (row_id(db, "edition", KJV),))]
     assert len(books) == len(USFM), "the KJV must hold the 66 books"
     return books
 
 
-def codes(db: sqlite3.Connection, scheme: list[str]) -> dict[str, str]:
+def codes(db: sqlite3.Connection, scheme: list[str]) -> dict[str, int]:
     """Map each code in a scheme, in any case, to our book id."""
     return {code.upper(): book for code, book in zip(scheme, bible_books(db))}
 
-
-def parse_osis(reference: str, books: dict[str, str]) -> tuple[str, int, int]:
-    """Read "Gen.1.1" as (book id, chapter, verse)."""
-    book, chapter, verse = re.fullmatch(r"(\w+)\.(\d+)\.(\d+)", reference).groups()
-    return books[book.upper()], int(chapter), int(verse)

@@ -11,7 +11,7 @@ def book_of_mormon(path: Path) -> list[Book]:
     source = json.loads(path.read_text())
     page = source["title_page"]
     title_page = Book("Title Page")
-    add(title_page, 1, 0, page["title"], page["subtitle"])
+    add(title_page, 1, None, page["title"], page["subtitle"])
     for number, paragraph in enumerate(page["text"], 1):
         add(title_page, 1, number, paragraph)
     add(title_page, 1, len(page["text"]), page["translated_by"])
@@ -19,7 +19,7 @@ def book_of_mormon(path: Path) -> list[Book]:
 
     for testimony in source["testimonies"]:
         book = Book(testimony["title"])
-        add(book, 1, 0, testimony["title"])
+        add(book, 1, None, testimony["title"])
         add(book, 1, 1, testimony["text"], *testimony["witnesses"])
         books.append(book)
 
@@ -27,8 +27,8 @@ def book_of_mormon(path: Path) -> list[Book]:
         book = Book(entry["book"])
         for chapter in entry["chapters"]:
             if chapter["chapter"] == 1:
-                add(book, 1, 0, entry["full_title"], entry.get("full_subtitle"), entry.get("heading"))
-            add(book, chapter["chapter"], 0, chapter.get("heading"))
+                add(book, 1, None, entry["full_title"], entry.get("full_subtitle"), entry.get("heading"))
+            add(book, chapter["chapter"], None, chapter.get("heading"))
             add_verses(book, chapter["chapter"], chapter["verses"])
         books.append(book)
     return books
@@ -48,7 +48,7 @@ def pearl_of_great_price(path: Path) -> list[Book]:
     books = []
     for entry in source["books"]:
         book = Book(entry["book"])
-        add(book, 1, 0, entry["full_title"], entry.get("full_subtitle"))
+        add(book, 1, None, entry["full_title"], entry.get("full_subtitle"))
         for chapter in entry["chapters"]:
             add_verses(book, chapter["chapter"], chapter["verses"])
         books.append(book)
@@ -59,7 +59,7 @@ def pearl_of_great_price(path: Path) -> list[Book]:
 
 def facsimile_book(facsimile: dict) -> Book:
     book = Book(f"Facsimile {facsimile['number']}")
-    add(book, 1, 0, facsimile["title"])
+    add(book, 1, None, facsimile["title"])
     for explanation in facsimile["explanations"]:
         number, text = re.fullmatch(r"(\d+)\. (.*)", explanation, re.S).groups()
         add(book, 1, int(number), text)
@@ -72,8 +72,8 @@ def add_verses(book: Book, chapter: int, verses: list[dict]):
         add(book, chapter, verse["verse"], verse["text"])
 
 
-def add(book: Book, chapter: int, verse: int, *lines: str | None):
-    """Add lines to a verse, each on its own line after any text the verse already has."""
+def add(book: Book, chapter: int, verse: int | None, *lines: str | None):
+    """Add lines to a verse, or to the chapter's heading where verse is None, each on its own line after any text it already has."""
     lines = [line for line in lines if line]
     if not lines:
         return

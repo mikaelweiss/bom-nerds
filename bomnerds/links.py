@@ -9,7 +9,9 @@ from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 
 from .refs import OLD_TESTAMENT, OSIS, codes, bible_books
+from .rows import row_id
 from .sources import fetch
+from .text import BOOK_OF_MORMON, DOCTRINE_AND_COVENANTS, KJV, PEARL_OF_GREAT_PRICE, WORDS, marks
 
 GRAM = 5
 # A five-word phrase found in more verses than this, like "and it came to pass that", says nothing about which verse is followed.
@@ -23,31 +25,43 @@ LONE_RARITY = 26
 LONE_RUN = 12
 
 # Passages that follow the Bible usually quote it. These books retell the Bible instead.
-PARALLEL_BOOKS = {"moses", "abraham", "joseph-smith-matthew"}
+PARALLEL_BOOKS = {"Moses", "Abraham", "Joseph Smith\u2014Matthew"}
+FOLLOWING = (BOOK_OF_MORMON, DOCTRINE_AND_COVENANTS, PEARL_OF_GREAT_PRICE)
+QUOTES, PARALLEL, CROSS_REFERENCE = "Quotes", "Parallel", "Cross-reference"
 
-Verse = tuple[str, int, int]
+# (book id, chapter, verse). A verse of None is the chapter's heading.
+Verse = tuple[int, int, int | None]
 
 
 def clear(db: sqlite3.Connection):
-    db.execute("delete from passage_link where kind_id in ('cross_reference', 'quotes', 'parallel')")
-    other = "select id from word where edition_id in ('bom-2013', 'dc-2013', 'pgp-2013')"
-    db.execute(f"delete from word_match where other_word_id in ({other})")
+    kinds = [row_id(db, "link_kind", name) for name in (CROSS_REFERENCE, QUOTES, PARALLEL)]
+    db.execute(f"delete from passage_link where link_kind_id in ({marks(kinds)})", kinds)
+    editions = [row_id(db, "edition", name) for name in FOLLOWING]
+    db.execute(f"delete from word_match where other_word_id in (select w.id from {WORDS} where c.edition_id in ({marks(editions)}))", editions)
 
 
 def run(db: sqlite3.Connection):
-    spans = verse_spans(db)
-    cross_references(db, spans)
-    followed_passages(db, spans)
+    spans, ids = verse_spans(db)
+    cross_references(db, spans, ids)
+    followed_passages(db, spans, ids)
 
 
-def verse_spans(db) -> dict[tuple[str, Verse], tuple[int, int]]:
-    return {(e, (b, c, v)): (first, last) for e, b, c, v, first, last in db.execute(
-        "select edition_id, book_id, chapter, verse, min(id), max(id) from word group by edition_id, book_id, chapter, verse"
-    )}
+def verse_spans(db) -> tuple[dict[tuple[int, Verse], tuple[int, int]], dict[int, int]]:
+    """Each verse's first and last word by sequence, and the id of each of those words. Passages here are pairs of sequences."""
+    spans, ids = {}, {}
+    for e, b, c, v, first, last, first_id, last_id in db.execute(
+        "select s.edition_id, s.book_id, s.chapter, s.verse, s.first, s.last, f.id, l.id from ("
+        f"select c.edition_id, c.book_id, c.number as chapter, v.number as verse, min(w.sequence) as first, max(w.sequence) as last from {WORDS} group by v.id"
+        ") s join word f on f.sequence = s.first join word l on l.sequence = s.last"
+    ):
+        spans[(e, (b, c, v))] = (first, last)
+        ids[first], ids[last] = first_id, last_id
+    return spans, ids
 
 
-def cross_references(db, spans):
+def cross_references(db, spans, ids):
     books = codes(db, OSIS)
+    kjv = row_id(db, "edition", KJV)
     found = set()
     with zipfile.ZipFile(fetch("cross-references.zip")) as archive:
         lines = io.TextIOWrapper(archive.open("cross_references.txt"), encoding="utf-8").read().splitlines()[1:]
@@ -55,31 +69,34 @@ def cross_references(db, spans):
         source, target, votes = line.split("\t")[:3]
         if int(votes) <= 0:
             continue
-        a, b = passage(source, books, spans), passage(target, books, spans)
+        a, b = passage(source, books, spans, kjv), passage(target, books, spans, kjv)
         if a and b and a != b:
             found.add((*min(a, b), *max(a, b)))
     db.executemany(
-        "insert into passage_link (kind_id, from_first_word_id, from_last_word_id, to_first_word_id, to_last_word_id) values ('cross_reference', ?, ?, ?, ?)",
-        sorted(found),
+        "insert into passage_link (link_kind_id, from_first_word_id, from_last_word_id, to_first_word_id, to_last_word_id) values (?, ?, ?, ?, ?)",
+        [(row_id(db, "link_kind", CROSS_REFERENCE), *(ids[s] for s in link)) for link in sorted(found)],
     )
     print(f"links: {len(found)} cross-references")
 
 
-def passage(reference, books, spans) -> tuple[int, int] | None:
+def passage(reference, books, spans, kjv) -> tuple[int, int] | None:
     ends = []
     for part in reference.split("-"):
         match = re.fullmatch(r"(\w+)\.(\d+)\.(\d+)", part)
         if not match or match.group(1).upper() not in books:
             return None
         verse = (books[match.group(1).upper()], int(match.group(2)), int(match.group(3)))
-        if ("kjv", verse) not in spans:
+        if (kjv, verse) not in spans:
             return None
-        ends.append(spans[("kjv", verse)])
+        ends.append(spans[(kjv, verse)])
     return ends[0][0], ends[-1][1]
 
 
-def followed_passages(db, spans):
-    bible = verse_words(db, "kjv")
+def followed_passages(db, spans, ids):
+    kjv = row_id(db, "edition", KJV)
+    parallel_books = {id for id, name in db.execute("select id, name from book") if name in PARALLEL_BOOKS}
+    bom = row_id(db, "edition", BOOK_OF_MORMON)
+    bible = verse_words(db, kjv)
     old_testament = set(bible_books(db)[:OLD_TESTAMENT])
     index = defaultdict(set)
     for verse, words in bible.items():
@@ -91,13 +108,14 @@ def followed_passages(db, spans):
 
     links = []
     pairs = set()
-    for edition in ("bom-2013", "dc-2013", "pgp-2013"):
+    for edition in (row_id(db, "edition", name) for name in FOLLOWING):
         followed = {}
         words_of = verse_words(db, edition)
         for verse, words in words_of.items():
             hits = Counter(v for gram in set(grams(words)) - common for v in index.get(gram, ()))
             candidates = sorted(hits.items(), key=lambda hit: (-hit[1], hit[0]))[:3]
-            best = max(((similarity(words, bible[v]), v) for v, _ in candidates), default=(0, None))
+            # Verses that score the same, as the Gospels often do, go to the one that comes first, so a run follows one book.
+            best = max(((similarity(words, bible[v]), v) for v, _ in sorted(candidates)), key=lambda scored: scored[0], default=(0, None))
             if best[0] >= CLOSE:
                 followed[verse] = best[1]
         for run in runs(followed):
@@ -105,24 +123,28 @@ def followed_passages(db, spans):
                 continue
             source = (spans[(edition, run[0][0])][0], spans[(edition, run[-1][0])][1])
             targets = sorted(target for _, target in run)
-            target = (spans[("kjv", targets[0])][0], spans[("kjv", targets[-1])][1])
+            target = (spans[(kjv, targets[0])][0], spans[(kjv, targets[-1])][1])
             for verse, followed_verse in run:
                 pairs.update(word_pairs(words_of[verse], bible[followed_verse]))
             book = run[0][0][0]
-            if book in PARALLEL_BOOKS or (edition == "bom-2013" and targets[0][0] not in old_testament):
-                links.append(("parallel", *min(source, target), *max(source, target)))
+            if book in parallel_books or (edition == bom and targets[0][0] not in old_testament):
+                links.append((PARALLEL, *min(source, target), *max(source, target)))
             else:
-                links.append(("quotes", *source, *target))
+                links.append((QUOTES, *source, *target))
     db.executemany(
-        "insert into passage_link (kind_id, from_first_word_id, from_last_word_id, to_first_word_id, to_last_word_id) values (?, ?, ?, ?, ?)", links
+        "insert into passage_link (link_kind_id, from_first_word_id, from_last_word_id, to_first_word_id, to_last_word_id) values (?, ?, ?, ?, ?)",
+        [(row_id(db, "link_kind", kind), *(ids[s] for s in ends)) for kind, *ends in links],
     )
     db.executemany("insert or ignore into word_match (word_id, other_word_id) values (?, ?)", sorted(pairs))
     print(f"links: {len(links)} passages that follow the Bible, {len(pairs)} word matches inside them")
 
 
-def verse_words(db, edition) -> dict[Verse, list[tuple[int, str]]]:
+def verse_words(db, edition: int) -> dict[Verse, list[tuple[int, str]]]:
+    """Each numbered verse's words as (word id, text), in reading order."""
     verses = defaultdict(list)
-    for id, b, c, v, text in db.execute("select id, book_id, chapter, verse, text from word where edition_id = ? and verse > 0 order by id", (edition,)):
+    for id, b, c, v, text in db.execute(
+        f"select w.id, c.book_id, c.number, v.number, w.text from {WORDS} where c.edition_id = ? and v.number is not null order by w.sequence", (edition,)
+    ):
         verses[(b, c, v)].append((id, text.lower().replace("’", "'")))
     return verses
 

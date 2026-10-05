@@ -1,10 +1,10 @@
 # Dataset spec
 
-What this dataset holds, how it is built, and what each word in it means. Tagging starts once this spec is signed off.
+What this dataset holds and what each part of it means.
 
 ## Goal
 
-Every book of scripture, tagged and linked across all four works, so other projects can build visualizations and study helps on top of it. The dataset is built once, almost entirely by AI, and is too large for people to review. Every choice here aims to give the AI as few chances to make a mistake as possible.
+Every book of scripture, tagged and linked across all four works, so other projects can build visualizations and study helps on top of it.
 
 This repository builds the dataset only. The API that serves it and the sites that visualize it are separate projects, so how fast the data is to serve plays no part in these choices.
 
@@ -25,91 +25,56 @@ Terms used throughout the spec. A term only one layer uses is defined in that la
 | Work | One of the four: the Bible, the Book of Mormon, the Doctrine and Covenants, the Pearl of Great Price. |
 | Edition | One printing of a work's text. The Bible also has a Hebrew edition (Old Testament) and a Greek edition (New Testament). |
 | Book | Genesis, 1 Nephi, Moses. The Doctrine and Covenants is one book whose chapters are its sections. The Book of Mormon's title page and the witnesses' testimonies are books of their own. |
-| Chapter | A numbered chapter, or a section of the Doctrine and Covenants. |
-| Verse | A numbered verse. Text printed before verse 1 of a chapter, such as a book's title and heading, a chapter heading, or a Psalm title, is verse 0. |
-| Word | One word, with the punctuation and spacing around it stored beside it. Each word has a permanent number that only the database uses. In Hebrew, each prefix and suffix Macula separates is a word of its own, so each carries one headword and its own KJV match. |
+| Chapter | A numbered chapter, or a section of the Doctrine and Covenants. Each edition has its own chapters, because editions number some chapters differently. |
+| Verse | A numbered verse. Text printed before verse 1 of a chapter, such as a book's title and heading, a chapter heading, or a Psalm title, is a verse with no number. |
+| Word | One word, with the punctuation and spacing around it stored beside it. In Hebrew, each prefix and suffix Macula separates is a word of its own, so each carries one headword and its own KJV match. |
 
 ### Passages
 
 | Word | Meaning |
 |---|---|
-| Passage | A run of consecutive words in one edition, like a highlighted stretch of text. |
-| Quote | The exact words an agent copies from a verse to point at a passage. The CLI turns the quote into a passage, and only the passage is stored. |
+| Passage | A run of consecutive words in one edition, like a highlighted stretch of text. It is stored as its first and last word. |
 
 ### Tags
 
 | Word | Meaning |
 |---|---|
 | Tag | One fact about one or more passages, like a note beside a highlight: "these words refer to Nephi." Mentions, speeches, relationships, journeys, dates, passage links, word matches, meanings, clauses, and literary structures are all tags, each defined in its layer's section. |
-| Layer | One part of the dataset, built and stored on its own: the text, the entity list, or every tag of one kind. In the database, a layer is a table and a tag is a row in it. |
+| Layer | One part of the dataset, built and stored on its own: the text, the entity list, or every tag of one kind. In the database, a layer is one or more tables and a tag is a row. |
 | Entity | A person, group, place, event, object, office, or topic that tags point to. One entity is the same everywhere it appears, in every work. |
-
-### Doing the work
-
-| Word | Meaning |
-|---|---|
-| Job | One layer's answer for one chapter, or for one book, headword, or summary. |
-| Pass | Layers one session answers together, such as names and speakers. |
-| Session | One Claude Code session answering every job of its pass for a run of chapters, its batch. |
-| Plan | Every session of the build, cut once before the first starts. |
-| Review | A session that settles what a pass's writers flagged and checks a fixed sample of their work. |
 
 ## How it is built
 
-The dataset is one SQLite database. Each GitHub release publishes a copy of it and a JSON export of every table. People correct mistakes through a web interface that writes to the same database.
-
-Agents never touch the database. They work through a CLI that:
-
-- prints a session's prompt: each chapter with the tags earlier layers placed on it, and every entity named or tagged there
-- checks an agent's answer and stores what passes
+The dataset is one SQLite database, `scripture.db`. Each GitHub release publishes a copy of it and a JSON export of every table. People correct mistakes through a web interface that writes to the same database.
 
 Scripts do everything they can. AI does the rest. Where two scripts answer the same question, AI decides only where they differ. Each fact has one answer, and a correction replaces it.
 
-The text is frozen once tagging starts, because tags point at word numbers. A different text is a new edition.
+`bomnerds.text` builds the text of every English edition. `bomnerds.build` then runs the script layers in this order: Hebrew and Greek, word matches, entities, mentions, family relationships, passage links, dates, sentences, the English taggers, English headwords, English grammar, and checks. The checks flag answers that cannot be true, such as someone who is their own ancestor, and change nothing.
 
-The build runs on a Claude Code subscription, where sessions and turns are what run out, so it uses few large sessions instead of many small ones. The plan cuts every pass into batches of about the same work before the first session starts. A pass weighs each chapter by what it must answer, such as its words and capitalized words for names or its pronouns for pronouns, so a heavy chapter fills more of a batch. Batches end early at a book's end when they are close, never cross from one work into another, and never change once cut. Sessions that wait on nothing run side by side.
+The text is frozen once tagging starts, because tags point at word ids. A different text is a new edition.
 
-### Keeping the AI from making mistakes
+## Schema
 
-1. **The AI copies, never counts.** It points at words by verse and quote. The CLI finds the words and assigns word numbers. The AI never sees a word number.
-2. **The AI chooses, never invents.** Every prompt lists the entities named or tagged in its chapters, with their descriptions, and the AI picks one. A name with no entity is written as unlisted, and the pass's review adds it. Every kind comes from a short fixed list.
-3. **One question per layer.** Each layer asks one thing, such as "who is speaking" or "who does each name refer to." A session answers its pass's layers one at a time, each in its own file, and the CLI enforces the shape of each answer.
-4. **One writer, then a review.** A strong model with the right context gets most tags right, so a second full answer costs far more than the few errors it finds. A writer marks the answers it is unsure of, and they are stored with the flag. Each pass ends with review sessions, one for every twenty writer sessions, that settle every flag, every finding of the checks in step 6, and every unlisted name, then read every twentieth chapter in full and fix what they find. Each review records how many lines of its sample were wrong, so each layer's error rate is known.
-5. **The CLI rejects bad answers on the spot**, with a message the agent can act on, when:
-   - a quote isn't in its verse, or appears there more than once without `in` to pick one
-   - a passage runs backward
-   - an entity isn't on the list
-   - a kind isn't on its layer's list
-   - a part sits outside the thing it belongs to, such as a clause outside its sentence
-   - two speeches overlap without one sitting inside the other
-   - the same fact appears twice in one answer
-   - an answer leaves something out: a listed pronoun or headword with no answer, or a capitalized word in no tag and not marked as naming no one
-6. **Checks across each finished pass** find answers that may not be true, such as one name tied to two entities in one book, a plural pronoun pointing at one person, two people stored as both spouses and siblings, or years running backward. The pass's review settles each one.
+`db/schema.sql` defines every table, and `db/seed.sql` fills the fixed lists.
 
-### Pointing at text
-
-Agents write verse references the way people do: `1 Nephi 3:7`, `D&C 76:22`. A passage takes one of these shapes:
-
-```json
-{ "verse": "1 Nephi 3:7", "quote": "Nephi" }
-{ "verse": "1 Nephi 3:7", "quote": "I", "in": "I will go" }
-{ "verse": "1 Nephi 3:7" }
-{ "from": "Alma 32:21", "to": "Alma 32:43" }
-{ "from": "Mosiah 2:9", "to": "Mosiah 5:15", "starts": "My brethren", "ends": "Amen" }
-{ "chapter": "Alma 32" }
-```
-
-In order: words inside one verse, words that appear more than once in their verse, a whole verse, whole verses, a passage that starts and ends partway through verses, and a whole chapter. In the second shape, `in` is longer words that appear once in the verse and hold the quote once, and the passage is the quote alone. `starts` and `ends` take `starts_in` and `ends_in` the same way, for a passage that starts or ends on words its verse repeats.
+- Every table has an integer key that identifies a row and means nothing else. An identifier from outside, such as a Strong's number or a TIPNR identifier, is a column named for its source.
+- Each fact is stored once, and nothing that can be computed is stored. The one exception is `word.sequence`, each word's place in reading order across the whole database, because a passage needs one number to compare.
+- Each column holds one value.
+- Every list of kinds, such as parts of speech, relationship kinds, and speech modes, is a table of its own. Code finds a row of one by its name.
+- Tables are singular. A foreign key is named `<table>_id`, or for its role where a table points at another in more than one way: `speaker_id`, `subject_id`, `first_word_id`.
+- The database rejects bad data. Foreign keys, checks, and triggers keep every passage inside one edition and running forward, keep a word's meaning on its own headword, keep an entity's main name out of its other names, require evidence for a date in a counting system that needs it, store a two-way link once, and keep a summary kind to the works it applies to.
 
 ## Layers
 
-Every layer points only at words and at the entity list. Any layer can be rebuilt or dropped without touching the others. Each example below is an answer as an agent writes it.
+Every layer points only at words and at the entity list. Any layer can be rebuilt or dropped without touching the others.
 
 ### Text
 
-Works, editions, books, chapters, verses, and words. Each word keeps its exact text plus the punctuation and spacing before and after it, so every verse rebuilds exactly as printed. The KJV keeps its paragraph marks (¶), and words its translators supplied, printed in italics, are marked.
+Tables: `language`, `work`, `edition`, `book`, `edition_book`, `chapter`, `verse`, `word`.
 
-Text printed between two verses, such as Psalm 119's letter headings, opens the verse after it. Text printed after a chapter's last verse, such as an epistle's closing note or a signature in the Doctrine and Covenants, ends that verse. Each of the three facsimiles in the Book of Abraham is a book, with its title as verse 0 and each numbered explanation as the verse of that number.
+Works, editions, books, chapters, verses, and words. `edition_book` lists the books each edition holds, in its own order. Each word keeps its exact text plus the punctuation and spacing before and after it, so every verse rebuilds exactly as printed. The KJV keeps its paragraph marks (¶), and words its translators supplied, printed in italics, are marked `supplied`.
+
+Text printed between two verses, such as Psalm 119's letter headings, opens the verse after it. Text printed after a chapter's last verse, such as an epistle's closing note or a signature in the Doctrine and Covenants, ends that verse. Each of the three facsimiles in the Book of Abraham is a book, with its title as the verse with no number and each numbered explanation as the verse of that number.
 
 The Doctrine and Covenants covers sections 1 to 138. Both Official Declarations are left out. Official Declaration 2 (1978) is under copyright. Official Declaration 1 (1890) is public domain but missing from our source.
 
@@ -117,15 +82,21 @@ Built by script from bcbooks/scriptures-json for the Book of Mormon, Doctrine an
 
 ### Hebrew and Greek
 
-The Hebrew Old Testament (Westminster Leningrad Codex) and Greek New Testament (SBL Greek New Testament) as their own editions. Each word has its headword, Strong's number, and grammar code (tense, person, number, and so on). Each Hebrew or Greek word is matched to the KJV words that translate it.
+Tables: `hebrew_word`, `greek_word`, and their value lists `word_type`, `stem`, `verb_form`, `tense`, `voice`, `mood`, `gender`, `grammatical_number`, `grammatical_case`, `state`, `degree`.
 
-Built by script. The words come from Clear Bible's Macula. The matching uses the Strong's number eBible puts on each KJV word, and STEPBible's verse maps where Hebrew and English number verses differently.
+The Hebrew Old Testament (Westminster Leningrad Codex) and Greek New Testament (SBL Greek New Testament) as their own editions. Each word has its headword, Strong's number, and part of speech. Its grammar code is split into one column per feature: a Hebrew or Aramaic word's stem, verb form, person, gender, number, and state, and a Greek word's tense, voice, mood, person, case, gender, number, and degree. `word_type` is the narrower kind a code gives some parts of speech, such as a cardinal number or a personal pronoun. A `hebrew_word` belongs only to a word of the Hebrew edition, and a `greek_word` only to a word of the Greek edition. Each Hebrew or Greek word is matched to the KJV words that translate it.
+
+Parts of speech are one list for every language, so a Hebrew article is an Article and a Hebrew interjection an Interjection, as in Greek and English.
+
+Built by script. The words and grammar codes come from Clear Bible's Macula, which uses OSHB morphology for Hebrew and Aramaic and Robinson's for Greek. A code that does not parse stops the build. The matching uses the Strong's number eBible puts on each KJV word, and STEPBible's verse maps where Hebrew and English number verses differently.
 
 Only the KJV's content words carry Strong's numbers, so small words like "the" and "of" stay unmatched. The KJV New Testament was also translated from a different Greek text, so some Greek and KJV words have no match.
 
 ### Dictionary
 
-Each English word's headword (its dictionary form: "go" for "went") its part of speech, and the meaning it carries in its verse (one sense of a headword: "bear" the animal, or "bear" to carry). Hebrew and Greek words get meanings too. Their headwords come from the Hebrew and Greek layer.
+Tables: `headword`, `meaning`, `part_of_speech`, and the word's `headword_id`, `meaning_id`, and `part_of_speech_id`.
+
+Each English word's headword (its dictionary form: "go" for "went") its part of speech, and the meaning it carries in its verse (one sense of a headword: "bear" the animal, or "bear" to carry). Hebrew and Greek words get meanings too. Their headwords come from the Hebrew and Greek layer, with each one's Strong's number in `headword.strongs`. A word's meaning must be a meaning of its headword.
 
 Headwords follow these conventions:
 
@@ -137,161 +108,124 @@ Headwords follow these conventions:
 
 English headwords and parts of speech are built by script. A lookup table settles archaic verbs first ("hath", "saith", "spake", "doth", "art", and every "-eth" and "-est" form), because modern taggers get them wrong together. spaCy and Stanza tag the rest, and MorphAdorner, built for Early Modern English, breaks their ties. AI decides only words all three leave unsettled.
 
-Hebrew and Greek meanings come from Macula's own word senses wherever they cover a word. For the rest, AI writes the meanings of each headword, one job per headword. A word whose headword has one meaning gets it by script. AI picks the meaning of every other word from its headword's list, one job per chapter.
-
-```json
-{ "passage": { "verse": "1 Nephi 3:7", "quote": "said" }, "meaning": "say.1" }
-```
+Hebrew and Greek meanings come from Macula's own word senses wherever they cover a word. AI writes the rest.
 
 ### Entities
 
-The list of every entity. Each has an ID, a type, a name, other names and titles, a one-line description, and the books it appears in.
+Tables: `entity`, `entity_type`, `entity_name`.
 
-An ID is the entity's name. When other entities anywhere in scripture share that name, the ID adds what sets this one apart: `nephi-son-of-lehi`, `nephi-son-of-helaman`.
-
-```json
-{ "id": "nephi-son-of-lehi", "type": "person", "name": "Nephi", "other_names": [], "description": "Son of Lehi. Wrote 1 and 2 Nephi." }
-```
+The list of every entity. Each has a type, a name, other names and titles, and a one-line description. An entity's main name lives only in `entity.name`, and `entity_name` holds the rest, each marked as a title or not. Two entities may share a name and a description. What tells them apart is everything tagged to them, and for an entity from TIPNR, its identifier there.
 
 Types: person, group, place (city, land, water, mountain, wilderness), event, object (record), office, topic.
 
-Built by script for Bible people and places, from STEPBible and OpenBible. TIPNR's month names and musical terms are not entities, and neither is its one record for every name of God, because those names belong to different beings. TIPNR files a people under the person or place it is named for, so words like "Levites" and "Egyptians" get a group entity of their own. It also files Israel and each tribal patriarch as one record with his tribe and its land, which become separate entities: `judah-son-of-israel`, `tribe-of-judah`, and `land-of-judah`. For the other works, AI lists what each book contains, one job per book, or per part of a book too long for one session. It first lists what all of scripture needs that no book's text names: the narrators and the topics a reader would look up. The jobs run in reading order, and each sees every entity listed before it, so Moses or Isaiah is picked rather than made again and nothing is listed twice. Topics are our own, built by AI, not copied from the Topical Guide.
+Built by script for Bible people and places, from STEPBible's TIPNR, with place kinds from OpenBible. `entity.tipnr` holds TIPNR's identifier for each of its records, its unified Strong's number such as H0175 for Aaron. OpenBible only gives a place its kind, and it divides some TIPNR places into several of its own, so its identifiers are not stored. TIPNR's month names and musical terms are not entities, and neither is its one record for every name of God, because those names belong to different beings. TIPNR files a people under the person or place it is named for, so words like "Levites" and "Egyptians" get a group entity of their own. It also files Israel and each tribal patriarch as one record with his tribe and its land, which become separate entities: Judah, the Tribe of Judah, and the Land of Judah. These peoples and lands are not TIPNR records, so they have no TIPNR identifier.
 
-The entity list is settled before any tagging starts. A tagging session that finds a name with no entity writes it as unlisted, and the pass's review adds the entity and tags it. A review gives a new entity an ID that sets it apart when it shares a name, and leaves the older ID as it is, because tags already point at it.
+Entities for the other works are built by AI. The list also holds what no verse names: the narrators, and the topics a reader would look up. Topics are our own, not copied from the Topical Guide.
 
 ### Mentions
 
+Tables: `mention`, `mention_kind`.
+
 Every passage that names or points to an entity, including titles and pronouns. Two kinds:
 
-- `names`: the words name or point to the entity: "Nephi", "he", "the Holy One of Israel".
-- `about`: the passage is about the entity without naming it. Topics attach this way.
+- Refers to: the words name or point to the entity: "Nephi", "he", "the Holy One of Israel".
+- About: the passage is about the entity without naming it. Topics attach this way.
 
-Names of God follow Latter-day Saint doctrine: Jehovah and LORD in the Old Testament name Jesus Christ, and the Father names God the Father. Where a verse names both, as in Psalm 110:1, each name is tagged to its own entity.
+Names of God follow Latter-day Saint doctrine: Jehovah and LORD in the Old Testament name Jesus Christ, and the Father names God the Father. Where a verse names both, as in Psalm 110:1, each name is tagged to its own entity. "I", "me", "my", and "mine" point to the speaker.
 
-```json
-{ "entity": "nephi-son-of-lehi", "kind": "names", "passage": { "verse": "1 Nephi 3:7", "quote": "Nephi" } }
-```
-
-Built in two steps:
-
-1. Names and titles. Script for Bible names: each KJV name carries a Strong's number, and STEPBible's name list says which person or place that name means in each verse. Script for the LORD, JAH, and GOD of the Old Testament, which render Jehovah, and for the word Jehovah anywhere. Script for any other name or title that only one entity carries. A name that can mean a patriarch, his tribe, or its land is settled by script only where the words before it say which ("tribe of Judah", "land of Judah", "king of Judah") or in Genesis, which tells of the men themselves. AI for the rest.
-2. Pronouns, after Speakers. Script for "I", "me", "my", and "mine", which point to the speaker, and for "thou", "thee", and "thy" when a speech has one listener. AI for the rest, with the names around each pronoun already tagged.
+Built by script for Bible names: each KJV name carries a Strong's number, and STEPBible's name list says which person or place that name means in each verse. Script for the LORD, JAH, and GOD of the Old Testament, which render Jehovah, and for the word Jehovah anywhere. A name that can mean a patriarch, his tribe, or its land is settled by script only where the words before it say which ("tribe of Judah", "land of Judah", "king of Judah") or in Genesis, which tells of the men themselves. AI tags the rest.
 
 ### Speakers
 
-A speech is a passage that one speaker says or writes to listeners, in one mode. Speeches nest: Mormon narrates, quoting Alma, who quotes Zenos. A speech sitting inside another speech's passage is quoted by it, so nesting needs no extra field.
+Tables: `speech`, `speech_listener`, `speech_mode`.
+
+A speech is a passage that one speaker says or writes to listeners, in one mode. Speeches nest: Mormon narrates, quoting Alma, who quotes Zenos. A speech sitting inside another speech's passage is quoted by it, so nesting needs no extra column.
 
 Modes: narration, spoken, written, prayer, song.
 
 Every speaker is an entity. An unnamed speaker gets an entity of its own, such as "the Bible narrator".
 
-When a prophet delivers the Lord's words ("thus saith the Lord"), the Lord is the speaker and the prophet is named in `through`.
+When a prophet delivers the Lord's words ("thus saith the Lord"), the Lord is the speaker and the prophet is `through_id`.
 
-```json
-{ "speaker": "king-benjamin", "listeners": ["people-of-king-benjamin"], "mode": "spoken",
-  "passage": { "from": "Mosiah 2:9", "to": "Mosiah 5:15", "starts": "My brethren", "ends": "Amen" } }
-{ "speaker": "jesus-christ", "through": "joseph-smith", "listeners": ["members-of-the-church"], "mode": "spoken",
-  "passage": { "chapter": "D&C 1" } }
-```
+A speech ends at the end of its book. A narration that continues into the next book is a new speech there.
 
-Built by AI. Speeches run across chapters, so a book's chapters are stored in order, and each chapter continues the speeches the one before it left open. The sessions of one book run in order, and each starts from the speeches the one before it left open. A speech ends at the end of its book, and a narration that continues into the next book is a new speech there, so books run in parallel.
+Built by AI.
 
 ### Relationships
+
+Tables: `relationship`, `relationship_kind`, `relationship_evidence`.
 
 Facts connecting two entities. Each cites the passages that support it and can be dated (see Dates).
 
 Kinds: child of, spouse of, sibling of, descendant of, member of, leader of, holds office, part of, took part in, took place at, located in, north of, east of, higher than, near, borders, named after, kept by, written by, abridged from.
 
-Each kind has a reverse reading for display: "child of" reads back as "parent of", "north of" as "south of". Two entities hold each kind once, in either direction. Two-way kinds (spouse of, sibling of, near, borders) are stored once, and a one-way kind running both ways contradicts itself.
+Each kind has a reverse reading for display: "child of" reads back as "parent of", "north of" as "south of". Two entities hold each kind once, in either direction. Two-way kinds (spouse of, sibling of, near, borders) are stored once, and a one-way kind running both ways contradicts itself. The same subject, kind, and object stated in several places is one relationship with more evidence.
 
-```json
-{ "subject": "nephi-son-of-lehi", "kind": "child_of", "object": "lehi-father-of-nephi",
-  "evidence": [{ "verse": "1 Nephi 1:4", "quote": "my father, Lehi" }] }
-```
-
-Built by script for Bible parents, siblings, spouses, and children, from STEPBible's name list. These join two people only: where the table of nations calls a people the son of a man, AI decides. A script cites the first verse that names both people beside a kinship word, such as "Seth begat Enos", and AI cites the rest. AI for the rest, one job per chapter. The same subject, kind, and object found in several chapters is one relationship with more evidence.
+Built by script for Bible parents, siblings, spouses, and children, from STEPBible's name list. These join two people only. A script cites the first verse that names both people beside a kinship word, such as "Seth begat Enos". AI tags the rest.
 
 ### Journeys
 
-Someone traveling from one place to another, citing the words that tell it, with the days of travel when the text gives them. The starting place is left empty when the text doesn't say. Each journey is its own fact, so Alma traveling to Gideon twice is two journeys.
+Table: `journey`.
 
-```json
-{ "traveler": "family-of-lehi", "to": "valley-of-lemuel", "days": 3,
-  "passage": { "verse": "1 Nephi 2:6", "quote": "when he had traveled three days in the wilderness" } }
-```
+Someone traveling from one place to another, citing the words that tell it, with the days of travel when the text gives them. The starting place is empty when the text doesn't say. Each journey is its own fact, so Alma traveling to Gideon twice is two journeys.
 
-Built by AI, one job per chapter.
+Built by AI.
 
 ### Dates
 
-A date is a year range in one counting system (a way the text counts years), with month and day when the text gives them. A date attaches to a passage (when it takes place), an event, or a relationship (when it was true), and cites the words that state it.
+Tables: `date`, `counting_system`.
+
+A date is a year range in one counting system (a way the text counts years), with month and day when the text gives them. A date attaches to exactly one of a passage (when it takes place), an entity such as an event, or a relationship (when it was true), and cites the words that state it.
 
 Counting systems: years since Lehi left Jerusalem, years of the reign of the judges, years since the sign of Christ's birth, and BC/AD.
 
-The text's own count is a fact. The BC/AD year is our estimate unless the text states it, as the Doctrine and Covenants does, and an estimate cites no words. Both are stored, as separate rows on the same target. BC/AD years count 1 BC as 0 and 2 BC as -1, so ranges subtract cleanly.
+The text's own count is a fact, and a date in it must cite its words. The BC/AD year is our estimate unless the text states it, as the Doctrine and Covenants does, and an estimate cites no words. Both are stored, as separate rows on the same target. BC/AD years count 1 BC as 0 and 2 BC as -1, so ranges subtract cleanly.
 
-```json
-{ "on": { "chapter": "Alma 1" }, "system": "reign_of_judges", "from": 1, "to": 1,
-  "evidence": { "verse": "Alma 1:1", "quote": "in the first year of the reign of the judges" } }
-```
-
-Built by script where the text follows a fixed formula, such as "in the first year of the reign of the judges". A year covers the events after it, until the text names another year, says the year ended, or the book ends. AI for the rest.
+Built by script where the text follows a fixed formula, such as "in the first year of the reign of the judges". A year covers the events after it, until the text names another year, says the year ended, or the book ends. AI tags the rest.
 
 ### Passage links
 
-Kinds: quotes, parallel, same event, alludes to, fulfills, cross-reference. A link runs from one passage to another. Two-way kinds (parallel, same event, cross-reference) are stored once.
+Tables: `passage_link`, `link_kind`.
 
-```json
-{ "kind": "quotes", "from": { "chapter": "2 Nephi 12" }, "to": { "chapter": "Isaiah 2" } }
-```
+Kinds: quotes, parallel, same event, alludes to, fulfills, cross-reference. A link runs from one passage to another. Two-way kinds (parallel, same event, cross-reference) are stored once, from the passage that comes first.
 
 Built by:
 
 - Script: text comparison finds Book of Mormon, Doctrine and Covenants, and Pearl of Great Price passages that closely follow the Bible, such as Isaiah in 2 Nephi and the Sermon on the Mount in 3 Nephi. These also get word matches, so every small difference shows. Moses, Abraham, Joseph Smith-Matthew, and Book of Mormon passages that follow the New Testament are parallels. Every other one quotes the Bible.
 - Script: OpenBible's Bible cross-references with at least one positive vote.
-- AI: allusions, fulfillments, and cross-references between works, one job per chapter.
+- AI: allusions, fulfillments, and cross-references between works.
 
 ### Word matches
 
-Two words that correspond: across editions, between Hebrew or Greek and the KJV, and inside parallel passages. Whether the pair is the same word, a changed word, or a translation shows from the words themselves. A word with no match has no counterpart there.
+Table: `word_match`.
+
+Two words that correspond: across editions, between Hebrew or Greek and the KJV, and inside parallel passages. Each pair is stored once, lower word id first. Whether the pair is the same word, a changed word, or a translation shows from the words themselves. A word with no match has no counterpart there.
 
 Built by script.
 
 ### Grammar
 
+Tables: `sentence`, `clause`, `clause_part`, `clause_role`.
+
 Sentences, their clauses, and each clause's parts. A clause is a group of words built around one verb, and clauses can hold clauses. Parts: subject, verb, object, indirect object, complement, adverbial.
 
 A sentence ends at a period, question mark, or exclamation mark, never at a colon, semicolon, or dash. In this text a colon usually opens a speech ("said unto my father: I will go"), so the speech stays inside its sentence as the object of the verb. Words that join clauses, such as "when", "that", and "for", belong to no part. A person commanded or told is the object: in "the Lord hath commanded me", "me" is the object.
 
-```json
-{ "sentence": { "verse": "1 Nephi 3:7" },
-  "clauses": [
-    { "passage": { "verse": "1 Nephi 3:7", "quote": "I, Nephi, said unto my father" }, "parts": [
-      { "role": "subject", "passage": { "verse": "1 Nephi 3:7", "quote": "I, Nephi" } },
-      { "role": "verb", "passage": { "verse": "1 Nephi 3:7", "quote": "said" } },
-      { "role": "indirect_object", "passage": { "verse": "1 Nephi 3:7", "quote": "unto my father" } }
-    ] }
-  ] }
-```
-
 Built by script for Hebrew and Greek, from Macula. Macula's prepositional phrases are adverbials.
 
-For English, a script splits sentences, and spaCy and Stanza parse each one. Clauses, subjects, and verbs they agree on are kept. A clause joined to another by "and" stands beside it, not inside it. A verb part is the verb with its auxiliaries and any "not" between them: "shalt not kill". Then one AI job per chapter completes every sentence, with the agreed parts given as fixed. Parsers alone settle only a quarter of sentences, because they attach long chains of "and", "for", and "that" clauses differently, and every clause span above that point changes with it.
+For English, a script splits sentences, and spaCy and Stanza parse each one. Clauses, subjects, and verbs they agree on are kept. A clause joined to another by "and" stands beside it, not inside it. A verb part is the verb with its auxiliaries and any "not" between them: "shalt not kill". AI completes each sentence around the agreed parts. Parsers alone settle only a quarter of sentences, because they attach long chains of "and", "for", and "that" clauses differently, and every clause span above that point changes with it.
 
 ### Literary structures
 
-Chiasmus, parallelism, lists, and acrostics. Each structure has ordered parts. Parts can hold parts, and a chiasm part names its partner (A' pairs with A).
+Tables: `structure`, `structure_part`, `structure_kind`.
 
-```json
-{ "kind": "chiasm", "passage": { "from": "Alma 36:1", "to": "Alma 36:30" }, "parts": [
-  { "label": "A", "passage": { "verse": "Alma 36:1" } },
-  { "label": "A'", "passage": { "verse": "Alma 36:30" }, "pairs_with": "A" }
-] }
-```
+Chiasmus, parallelism, lists, and acrostics. Each structure has parts numbered in reading order across the whole structure. Parts can hold parts, and a chiasm part names its partner (A' pairs with A).
 
 Built by AI.
 
 ### Summaries
+
+Tables: `summary`, `summary_kind`, `summary_kind_work`, `verse_range`.
 
 Short summaries for personal study. Each one covers a chapter, a book, or a verse range through one kind, so a reader can skim a whole work through one kind in a sitting. They are written from a Latter-day Saint perspective, in plain modern English and full sentences. A chapter or verse range gets a few sentences. A book gets a paragraph.
 
@@ -317,38 +251,17 @@ Short summaries for personal study. Each one covers a chapter, a book, or a vers
 | Revelation background | Who the revelation was for, and the question or event that prompted it. Doctrine and Covenants only. |
 | Translation background | Where Moses, Abraham, and the facsimiles came from. Pearl of Great Price only. |
 
-A verse range is a unit that crosses or splits chapters, such as King Benjamin's sermon or Alma's counsel to his sons. Each range has an ID, a name, and a passage.
+`summary_kind_work` lists the works each kind applies to.
 
-```json
-{ "id": "king-benjamins-sermon", "name": "King Benjamin's sermon",
-  "passage": { "from": "Mosiah 2:9", "to": "Mosiah 5:15", "starts": "My brethren", "ends": "Amen" } }
-{ "kind": "doctrine", "on": { "chapter": "1 Nephi 17" },
-  "text": "The Lord gives strength and a way forward to people who keep His commandments. He guides the faithful the same way He led Israel out of Egypt. People who keep rejecting His word slowly lose the ability to feel the Spirit." }
-{ "kind": "setting", "on": { "range": "king-benjamins-sermon" }, "text": "..." }
-{ "kind": "people", "on": { "book": "Enos" }, "text": "..." }
-```
+A verse range is a unit that crosses or splits chapters, such as King Benjamin's sermon or Alma's counsel to his sons. Each range has a name and a passage. A person chooses the ranges.
 
-The ranges are chosen and reviewed by a person before any summary is written. Built by AI: one job per kind per chapter and per range, with the chapter's speeches shown, then one job per kind per book, which also sees that book's chapter summaries of the same kind. Agents write from the scripture text alone. The Church's chapter summaries and section headings never enter a prompt.
+Summaries are written by AI from the scripture text alone. The Church's chapter summaries and section headings are never a source.
 
 ## Editions
 
 Every edition is equal. A tag lives on the words it was made on, and word matches carry it to every other edition. A script matches a new edition's words to the editions already there, and the new edition is tagged only where its text has no match, such as Joseph Smith Translation additions.
 
 Editions come from digital text only. We do no OCR.
-
-## Build order
-
-Each step gives the next ones context and constraints, so later questions become choices among things already tagged. Mistakes spread the same way, so the early steps get the most care. Scripts build the text, Hebrew and Greek, word matches, and English headwords first. The AI passes then run in order of how much they show a reader, and each starts once the passes it reads from are reviewed.
-
-1. Entities: the entity list.
-2. People: names and titles, then speakers.
-3. Facts (relationships, journeys, dates) and links (passage links, literary structures), side by side.
-4. Pronouns: pronouns, then passages about an entity.
-5. Word study: English headwords the scripts left unsettled, then meanings and the meaning of each word, beside grammar.
-6. Verse ranges for summaries, chosen and reviewed by a person.
-7. Summaries of chapters and verse ranges, then of books.
-
-The first session runs alone, and its answers are checked before the rest of the plan runs.
 
 ## Licensing
 

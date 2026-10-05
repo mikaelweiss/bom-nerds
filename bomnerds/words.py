@@ -16,8 +16,16 @@ class Word:
 
 @dataclass
 class Book:
+    """A book's words by (chapter, verse). A verse of None is the text printed before verse 1."""
+
     name: str
-    verses: dict[tuple[int, int], list[Word]] = field(default_factory=dict)
+    verses: dict[tuple[int, int | None], list[Word]] = field(default_factory=dict)
+
+
+def reading_order(key: tuple[int, int | None]) -> tuple[int, bool, int]:
+    """Sort (chapter, verse) keys as printed, each chapter's heading first."""
+    chapter, verse = key
+    return chapter, verse is not None, verse or 0
 
 
 def split(text: str, supplied: list[bool] | None = None, strongs: list[str | None] | None = None) -> list[Word]:

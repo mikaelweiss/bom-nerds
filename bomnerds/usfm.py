@@ -17,7 +17,7 @@ def parse(source: str) -> Book:
     name = None
     chapter = None
     verse = None
-    texts: dict[tuple[int, int], list[Char]] = {}
+    texts: dict[tuple[int, int | None], list[Char]] = {}
     pending: list[list[Char]] = []
 
     def flush_into_last_verse():
@@ -41,9 +41,9 @@ def parse(source: str) -> Book:
             number, _, rest = content.strip().partition(" ")
             verse = int(number)
             if pending:
-                # Headings before verse 1 are verse 0. Headings before a later verse, like Psalm 119's ALEPH, open it.
+                # Headings before verse 1 are the chapter's heading. Headings before a later verse, like Psalm 119's ALEPH, open it.
                 if verse == 1:
-                    texts[(chapter, 0)] = join(pending)
+                    texts[(chapter, None)] = join(pending)
                     texts[(chapter, verse)] = inline(rest)
                 else:
                     texts[(chapter, verse)] = join([*pending, inline(rest)])

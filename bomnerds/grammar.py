@@ -1,11 +1,12 @@
-"""English clauses, subjects, and verbs that spaCy's and Stanza's parses agree on. The AI completes every sentence around them."""
+"""English clauses, subjects, and verbs that spaCy's and Stanza's parses agree on."""
 
 import json
 import sqlite3
 from collections import defaultdict
 
-from .sentences import ENGLISH
+from .rows import row_id
 from .taggers import CACHE
+from .text import WORDS, english_editions, marks
 
 # spaCy labels in the ClearNLP style, Stanza in Universal Dependencies. Each set names the same relations in both.
 CLAUSES = {"ROOT", "root", "ccomp", "xcomp", "advcl", "relcl", "acl", "acl:relcl", "csubj", "csubjpass", "csubj:pass", "parataxis", "conj"}
@@ -14,37 +15,56 @@ AUXILIARIES = {"aux", "auxpass", "aux:pass", "cop"}
 JOINERS = {"cc"}
 VERBAL = {"VERB", "AUX"}
 NEGATIONS = {"not", "never"}
+SUBJECT, VERB = "Subject", "Verb"
 
 
 def clear(db: sqlite3.Connection):
-    english = f"select id from word where edition_id in ({','.join('?' * len(ENGLISH))})"
-    db.execute(f"delete from clause where sentence_id in (select id from sentence where first_word_id in ({english}))", ENGLISH)
+    english = english_editions(db)
+    words = f"select w.id from {WORDS} where c.edition_id in ({marks(english)})"
+    db.execute(f"delete from clause where sentence_id in (select id from sentence where first_word_id in ({words}))", english)
 
 
 def run(db: sqlite3.Connection):
-    texts = dict(db.execute(f"select id, lower(text) from word where edition_id in ({','.join('?' * len(ENGLISH))})", ENGLISH))
+    """The taggers name words by id. Clauses are found with words counted by sequence instead, and stored with ids."""
+    english = english_editions(db)
+    texts, sequences, ids = {}, {}, {}
+    for id, sequence, text in db.execute(f"select w.id, w.sequence, lower(w.text) from {WORDS} where c.edition_id in ({marks(english)})", english):
+        texts[sequence] = text
+        sequences[id] = sequence
+        ids[sequence] = id
     sentences = dict(db.execute("select first_word_id, id from sentence"))
+    roles = {role: row_id(db, "clause_role", role) for role in (SUBJECT, VERB)}
     clauses = parts = 0
     with open(CACHE / "spacy.jsonl", encoding="utf-8") as spacy, open(CACHE / "stanza.jsonl", encoding="utf-8") as stanza:
         for a, b in zip(spacy, stanza):
             a, b = json.loads(a), json.loads(b)
             if not a or a[0][0] != b[0][0]:
                 continue
+            sentence = sentences[a[0][0]]
+            a, b = counted(a, sequences), counted(b, sequences)
             first = analyse(a, texts)
             second = analyse(b, texts)
             agreed = sorted(first.keys() & second.keys(), key=lambda span: (span[0], -span[1]))
-            ids = {}
+            stored = {}
             for span in agreed:
-                parent = min((s for s in ids if s != span and s[0] <= span[0] and span[1] <= s[1]), key=lambda s: s[1] - s[0], default=None)
-                ids[span] = db.execute(
+                parent = min((s for s in stored if s != span and s[0] <= span[0] and span[1] <= s[1]), key=lambda s: s[1] - s[0], default=None)
+                stored[span] = db.execute(
                     "insert into clause (sentence_id, parent_id, first_word_id, last_word_id) values (?, ?, ?, ?)",
-                    (sentences[a[0][0]], ids.get(parent), *span),
+                    (sentence, stored.get(parent), ids[span[0]], ids[span[1]]),
                 ).lastrowid
                 clauses += 1
                 for role, part in apart(first[span] & second[span]):
-                    db.execute("insert into clause_part (clause_id, role_id, first_word_id, last_word_id) values (?, ?, ?, ?)", (ids[span], role, *part))
+                    db.execute(
+                        "insert into clause_part (clause_id, clause_role_id, first_word_id, last_word_id) values (?, ?, ?, ?)",
+                        (stored[span], roles[role], ids[part[0]], ids[part[1]]),
+                    )
                     parts += 1
     print(f"grammar: {clauses} English clauses and {parts} subjects and verbs both parsers agree on")
+
+
+def counted(words: list[list], sequences: dict[int, int]) -> list[list]:
+    """A cached parse, with each word and its head named by sequence rather than by id."""
+    return [[sequences[id], lemma, pos, None if head is None else sequences[head], dep] for id, lemma, pos, head, dep in words]
 
 
 def analyse(words: list[list], texts: dict[int, str]) -> dict[tuple[int, int], set[tuple[str, tuple[int, int]]]]:
@@ -83,10 +103,10 @@ def analyse(words: list[list], texts: dict[int, str]) -> dict[tuple[int, int], s
         for child in children[id]:
             if tags[child][1] in SUBJECTS:
                 subject = sorted(subtree(child))
-                found.add(("subject", (subject[0], subject[-1])))
+                found.add((SUBJECT, (subject[0], subject[-1])))
         verb = verb_span(id, children, tags, texts)
         if verb:
-            found.add(("verb", verb))
+            found.add((VERB, verb))
         result[span] = found
     return result
 

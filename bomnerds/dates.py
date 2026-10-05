@@ -4,6 +4,9 @@ import re
 import sqlite3
 from collections import defaultdict
 
+from .rows import row_id
+from .text import BOOK_OF_MORMON, DOCTRINE_AND_COVENANTS, PEARL_OF_GREAT_PRICE, WORDS, marks
+
 UNITS = "one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
 ORDINAL_UNITS = "first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth seventeenth eighteenth nineteenth".split()
 TENS = "twenty thirty forty fifty sixty seventy eighty ninety".split()
@@ -16,15 +19,20 @@ MULTIPLIERS = {"hundred": 100, "hundredth": 100, "thousand": 1000, "thousandth":
 ORDINALS = set(ORDINAL_UNITS) | set(ORDINAL_TENS) | {"hundredth", "thousandth"}
 MONTHS = "january february march april may june july august september october november december".split()
 
+SINCE_LEHI = "Years since Lehi left Jerusalem"
+REIGN_OF_JUDGES = "Years of the reign of the judges"
+SINCE_SIGN = "Years since the sign of Christ's birth"
+BC_AD = "BC/AD"
+
 # Each formula is the words after the number, its counting system, and whether the number follows the formula instead.
 FORMULAS = [
-    ("year of the reign of the judges", "reign_of_judges", False),
-    ("years from the time that lehi left jerusalem", "since_lehi", False),
-    ("years from the time lehi left jerusalem", "since_lehi", False),
-    ("year from the coming of christ", "since_sign", False),
-    ("years from the coming of christ", "since_sign", False),
-    ("years since the coming of our lord", "bc_ad", False),
-    ("year of our lord", "bc_ad", True),
+    ("year of the reign of the judges", REIGN_OF_JUDGES, False),
+    ("years from the time that lehi left jerusalem", SINCE_LEHI, False),
+    ("years from the time lehi left jerusalem", SINCE_LEHI, False),
+    ("year from the coming of christ", SINCE_SIGN, False),
+    ("years from the coming of christ", SINCE_SIGN, False),
+    ("years since the coming of our lord", BC_AD, False),
+    ("year of our lord", BC_AD, True),
 ]
 
 # A year the text counts toward is not the year the passage takes place in.
@@ -36,11 +44,15 @@ def clear(db: sqlite3.Connection):
 
 
 def run(db: sqlite3.Connection):
+    """Dates are found with words counted by sequence, and stored with word ids."""
+    editions = [row_id(db, "edition", name) for name in (BOOK_OF_MORMON, DOCTRINE_AND_COVENANTS, PEARL_OF_GREAT_PRICE)]
     verses = defaultdict(list)
-    for id, book, chapter, verse, text in db.execute(
-        "select id, book_id, chapter, verse, text from word where edition_id in ('bom-2013', 'dc-2013', 'pgp-2013') order by id"
+    ids = {}
+    for id, sequence, book, verse, text in db.execute(
+        f"select w.id, w.sequence, c.book_id, v.id, w.text from {WORDS} where c.edition_id in ({marks(editions)}) order by w.sequence", editions
     ):
-        verses[(book, chapter, verse)].append((id, text.lower()))
+        verses[(book, verse)].append((sequence, text.lower()))
+        ids[sequence] = id
     rows = []
     keys = list(verses)
     for index, key in enumerate(keys):
@@ -49,10 +61,11 @@ def run(db: sqlite3.Connection):
                 row = extend(row, [verses[k] for k in keys[index + 1:] if k[0] == key[0]], verses[key])
             if not any(covers(earlier, row) for earlier in rows):
                 rows.append(row[:-1])
+    systems = {name: row_id(db, "counting_system", name) for name in {row[2] for row in rows}}
     db.executemany(
-        "insert into date (first_word_id, last_word_id, system_id, from_year, from_month, from_day, to_year, to_month, to_day, evidence_first_word_id, evidence_last_word_id) "
+        "insert into date (first_word_id, last_word_id, counting_system_id, from_year, from_month, from_day, to_year, to_month, to_day, evidence_first_word_id, evidence_last_word_id) "
         "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-        rows,
+        [(ids[first], ids[last], systems[system], *when, ids[evidence_first], ids[evidence_last]) for first, last, system, *when, evidence_first, evidence_last in rows],
     )
     print(f"dates: {len(rows)} dates stated in a fixed formula")
 
@@ -76,13 +89,13 @@ def dates_in(words: list[tuple[int, str]]) -> list[tuple]:
             if year is None or NOT_WHEN & set(texts[max(0, first - 2):first]):
                 continue
             month, day, first, last = month_and_day(texts, first, last)
-            in_that_year = phrase[0] == "year" and system != "bc_ad"
+            in_that_year = phrase[0] == "year" and system != BC_AD
             found.append((*verse, system, year, month, day, year, month, day, words[first][0], words[last][0], in_that_year))
     for i, text in enumerate(texts[:-2]):
         written = re.fullmatch(r"(\d+)(?:st|nd|rd|th)?", texts[i + 1])
         if text in MONTHS and written and re.fullmatch(r"\d{4}", texts[i + 2]):
             month, day, year = MONTHS.index(text) + 1, int(written.group(1)), int(texts[i + 2])
-            found.append((*verse, "bc_ad", year, month, day, year, month, day, words[i][0], words[i + 2][0], False))
+            found.append((*verse, BC_AD, year, month, day, year, month, day, words[i][0], words[i + 2][0], False))
     # A verse that states the same date twice holds one date.
     unique = {}
     for row in found:

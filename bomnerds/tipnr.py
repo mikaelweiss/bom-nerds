@@ -21,6 +21,8 @@ class NameForm:
 @dataclass
 class Record:
     unique: str
+    # TIPNR's unified Strong's number, such as H0175: its identifier for this person or place.
+    ustrong: str
     section: str
     type: str
     fields: list[str]
@@ -51,7 +53,7 @@ def records() -> list[Record]:
             continue
         record = RECORD.match(first)
         if record and section and not section.startswith("EXCLUDED"):
-            current = Record(unique=f"{record.group(1)}@{record.group(2)}", section=section, type=cells[8] if len(cells) > 8 else "", fields=cells)
+            current = Record(unique=f"{record.group(1)}@{record.group(2)}", ustrong=record.group(3), section=section, type=cells[8] if len(cells) > 8 else "", fields=cells)
             found.append(current)
         elif current is None:
             continue

@@ -1,7 +1,7 @@
 import unittest
 
 from bomnerds import usfm
-from bomnerds.words import rebuild, split
+from bomnerds.words import reading_order, rebuild, split
 
 BOOK = r"""\id PSA Psalms
 \h Psalms
@@ -28,6 +28,9 @@ class SplitTest(unittest.TestCase):
             [("¶ ", "Lehi's", " "), ("", "sons", ", "), ("(", "Laman", " "), ("", "and", " "), ("", "Sam", ") "), ("", "went", "--"), ("", "fast", ".")],
         )
 
+    def test_reading_order_puts_each_heading_before_verse_one(self):
+        self.assertEqual(sorted([(2, 1), (1, 2), (2, None), (1, 1), (1, None)], key=reading_order), [(1, None), (1, 1), (1, 2), (2, None), (2, 1)])
+
     def test_rebuilds_exactly(self):
         text = "The Book of Mormon\nAn Account--Written; by Moroni, Jun.: Amen."
         self.assertEqual(rebuild(split(text)), text)
@@ -40,8 +43,8 @@ class UsfmTest(unittest.TestCase):
     def text(self, chapter, verse):
         return rebuild(self.book.verses[(chapter, verse)])
 
-    def test_titles_before_verse_one_are_verse_zero(self):
-        self.assertEqual(self.text(1, 0), "The Book of Psalms\nA Psalm of David.")
+    def test_titles_before_verse_one_are_the_chapter_heading(self):
+        self.assertEqual(self.text(1, None), "The Book of Psalms\nA Psalm of David.")
 
     def test_markers_and_footnotes_leave_only_the_text(self):
         self.assertEqual(self.text(1, 1), "¶ In the beginning was the LORD.")

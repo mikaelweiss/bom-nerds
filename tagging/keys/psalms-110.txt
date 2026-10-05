@@ -1,0 +1,38 @@
+M 110:0 "David" #4837
+M 110:1 "LORD" #8553
+M 110:1 "my Lord" #5793
+M 110:1 "my" #4837
+M 110:1 "thou" #5793
+M 110:1 "my"#2 #8553
+M 110:1 "I" #8553
+M 110:1 "thine" #5793
+M 110:1 "thy" #5793
+M 110:2 "LORD" #8553
+M 110:2 "thy" #5793
+M 110:2 "Zion" #7896
+M 110:2 "thou" #5793
+M 110:2 "thine" #5793
+M 110:3 "Thy" #5793
+M 110:3 "thy"#2 #5793
+M 110:3 "thou" #5793
+M 110:3 "thy"#3 #5793
+M 110:4 "LORD" #8553
+M 110:4 "Thou" #5793
+M 110:4 "order of Melchizedek" +melchizedek-priesthood
+M 110:4 "Melchizedek" #6211
+M 110:5 "Lord" #5793
+M 110:5 "thy" #8553
+M 110:5 "his" #5793
+M 110:6 "He" #5793
+M 110:6 "heathen" #8552
+M 110:6 "he"#2 #5793
+M 110:6 "he"#3 #5793
+M 110:7 "He" #5793
+M 110:7 "he"#2 #5793
+E +melchizedek-priesthood | office | Melchizedek Priesthood | The priesthood order named after Melchizedek, in which Jesus Christ is a priest for ever.
+N +melchizedek-priesthood | order of Melchizedek | name
+X #5956 | David
+R #5793 | holds office | +melchizedek-priesthood | 110:4 "Thou art a priest for ever after the order of Melchizedek"
+S #4837 | song | #5793, #8553 | 110:1 "The LORD" .. 110:7 "head"
+S #8553 | spoken | #5793 | 110:1 "Sit thou at my right hand until I make thine enemies thy footstool"
+S #8553 | spoken | #5793 | 110:4 "Thou art a priest for ever after the order of Melchizedek"

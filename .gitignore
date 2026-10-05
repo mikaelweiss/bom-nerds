@@ -1,2 +1,4 @@
 scripture.db
 dist/
+tagging/runs/
+__pycache__/

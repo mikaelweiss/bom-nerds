@@ -1,0 +1,325 @@
+E +nephi | person | Nephi | Son of Lehi who wrote First and Second Nephi and led the Nephites.
+E +lehi | person | Lehi | Prophet of Jerusalem and father of Nephi who led his family to the promised land.
+E +sariah | person | Sariah | Wife of Lehi and mother of Nephi.
+E +laman | person | Laman | Eldest son of Lehi and ancestor of the Lamanites.
+E +lemuel | person | Lemuel | Second son of Lehi, who joined Laman in rebelling against Nephi.
+E +sam | person | Sam | Third son of Lehi, who followed Nephi.
+E +ishmael | person | Ishmael | Man of Jerusalem whose family joined Lehi's in the wilderness and whose daughters married Lehi's sons.
+E +daughters-of-ishmael | group | Daughters of Ishmael | Ishmael's daughters, who married Lehi's sons and Zoram.
+E +lehis-family | group | Lehi's family | The household of Lehi and Sariah that left Jerusalem and crossed the sea to the promised land.
+E +land-of-jerusalem | land | Land of Jerusalem | The region around the city of Jerusalem in Judah, where Lehi lived.
+E +wilderness | wilderness | Arabian wilderness | The wilderness near the Red Sea that Lehi's family crossed between Jerusalem and Bountiful.
+E +bountiful | land | Bountiful | The fruitful land by the sea in Arabia where Nephi built his ship.
+E +irreantum | water | Irreantum | The sea by Bountiful, whose name means many waters, that Lehi's family crossed to the promised land.
+E +promised-land | land | Promised land | The land in the Americas the Lord led Lehi's family to.
+E +nephis-ship | object | Nephi's ship | The ship Nephi built at Bountiful that carried Lehi's family to the promised land.
+E +plates-of-brass | record | Plates of brass | Laban's brass plates holding the Jewish scriptures and the genealogy of Lehi's fathers.
+E +record-of-lehi | record | Record of Lehi | Lehi's own record of his visions, dreams, and prophecies, which Nephi abridged.
+E +first-nephi | record | First Book of Nephi | The first book of the Book of Mormon, Nephi's account of his family's journey from Jerusalem to the promised land.
+E +small-plates | record | Small plates of Nephi | The plates Nephi made for the sacred record of his people, holding First Nephi through Omni.
+E +lehis-book | record | Book of Lehi's vision | The book a heavenly being gave Lehi in vision, foretelling the destruction of Jerusalem.
+E +lehis-vision | event | Lehi's vision of God's throne | Lehi's vision at his Jerusalem home of God enthroned, of One descending with twelve, and of a book of prophecy.
+E +twelve-apostles | group | Twelve Apostles | The twelve men Jesus chose in Judea to be his apostles.
+E +jerusalem-prophets | group | Prophets warning Jerusalem | The many prophets who called Jerusalem to repent in the first year of Zedekiah's reign.
+E +destruction-of-jerusalem | event | Destruction of Jerusalem | Babylon's conquest and destruction of Jerusalem about 587 BC.
+E +babylonian-exile | event | Babylonian exile | The deportation of the Jews from Judah to Babylon in the sixth century BC.
+N #8553 | Lord | title
+N #8553 | Lord God Almighty | title
+N +plates-of-brass | record of the Jews | title
+N +irreantum | large waters | title
+M 1:0 "First Book of Nephi" +first-nephi
+M 1:0 "Nephi" +nephi
+M 1:0 "Lehi" +lehi
+M 1:0 "his" +lehi
+M 1:0 "his wife" +sariah
+M 1:0 "Sariah" +sariah
+M 1:0 "his"#2 +lehi
+M 1:0 "his four sons" +laman
+M 1:0 "his four sons" +lemuel
+M 1:0 "his four sons" +sam
+M 1:0 "his four sons" +nephi
+M 1:0 "eldest" +laman
+M 1:0 "Laman" +laman
+M 1:0 "Lemuel" +lemuel
+M 1:0 "Sam" +sam
+M 1:0 "Nephi"#2 +nephi
+M 1:0 "Lord" #5793
+M 1:0 "Lehi"#2 +lehi
+M 1:0 "land of Jerusalem" +land-of-jerusalem
+M 1:0 "Jerusalem" #7896
+M 1:0 "he" +lehi
+M 1:0 "people" #8438
+M 1:0 "their" #8438
+M 1:0 "they" #8438
+M 1:0 "his"#3 +lehi
+M 1:0 "He"#2 +lehi
+M 1:0 "wilderness" +wilderness
+M 1:0 "his family" +lehis-family
+M 1:0 "his"#4 +lehi
+M 1:0 "Nephi"#3 +nephi
+M 1:0 "his"#5 +nephi
+M 1:0 "his brethren" +laman
+M 1:0 "his brethren" +lemuel
+M 1:0 "his brethren" +sam
+M 1:0 "land of Jerusalem"#2 +land-of-jerusalem
+M 1:0 "Jerusalem"#2 #7896
+M 1:0 "record of the Jews" +plates-of-brass
+M 1:0 "Jews" #8438
+M 1:0 "their"#2 +nephi
+M 1:0 "their"#2 +laman
+M 1:0 "their"#2 +lemuel
+M 1:0 "their"#2 +sam
+M 1:0 "They"#2 +laman
+M 1:0 "They"#2 +lemuel
+M 1:0 "They"#2 +sam
+M 1:0 "They"#2 +nephi
+M 1:0 "daughters of Ishmael" +daughters-of-ishmael
+M 1:0 "Ishmael" +ishmael
+M 1:0 "They"#3 +lehis-family
+M 1:0 "wilderness"#2 +wilderness
+M 1:0 "Their"#4 +lehis-family
+M 1:0 "wilderness"#3 +wilderness
+M 1:0 "their"#5 +lehis-family
+M 1:0 "They"#4 +lehis-family
+M 1:0 "large waters" +irreantum
+M 1:0 "Nephi's brethren" +laman
+M 1:0 "Nephi's brethren" +lemuel
+M 1:0 "Nephi's" +nephi
+M 1:0 "him" +nephi
+M 1:0 "He"#3 +nephi
+M 1:0 "them" +laman
+M 1:0 "them" +lemuel
+M 1:0 "ship" +nephis-ship
+M 1:0 "They"#5 +lehis-family
+M 1:0 "place" +bountiful
+M 1:0 "Bountiful" +bountiful
+M 1:0 "They"#6 +lehis-family
+M 1:0 "large waters"#2 +irreantum
+M 1:0 "promised land" +promised-land
+M 1:0 "This" +first-nephi
+M 1:0 "account of Nephi" +first-nephi
+M 1:0 "Nephi"#4 +nephi
+M 1:0 "I" +nephi
+M 1:0 "Nephi"#5 +nephi
+M 1:0 "this record" +first-nephi
+M 1:1 "I" +nephi
+M 1:1 "Nephi" +nephi
+M 1:1 "goodly parents" +lehi
+M 1:1 "goodly parents" +sariah
+M 1:1 "I"#2 +nephi
+M 1:1 "my father" +lehi
+M 1:1 "my" +nephi
+M 1:1 "my"#2 +nephi
+M 1:1 "Lord" #5793
+M 1:1 "my"#3 +nephi
+M 1:1 "God" #8553
+M 1:1 "I"#3 +nephi
+M 1:1 "record of my proceedings in my days" +first-nephi
+M 1:1 "my"#4 +nephi
+M 1:1 "my"#5 +nephi
+M 1:2 "I" +nephi
+M 1:2 "record" +first-nephi
+M 1:2 "my father" +lehi
+M 1:2 "my" +nephi
+M 1:2 "Jews" #8438
+M 1:2 "Egyptians" #8391
+M 1:3 "I" +nephi
+M 1:3 "record which I make" +first-nephi
+M 1:3 "I"#2 +nephi
+M 1:3 "I"#3 +nephi
+M 1:3 "it" +first-nephi
+M 1:3 "mine" +nephi
+M 1:3 "I"#4 +nephi
+M 1:3 "it"#2 +first-nephi
+M 1:3 "my" +nephi
+M 1:4 "Zedekiah" #7276
+M 1:4 "king of Judah" #7276
+M 1:4 "Judah" #8440
+M 1:4 "my father" +lehi
+M 1:4 "my" +nephi
+M 1:4 "Lehi" +lehi
+M 1:4 "Jerusalem" #7896
+M 1:4 "his" +lehi
+M 1:4 "many prophets" +jerusalem-prophets
+M 1:4 "people" #8438
+M 1:4 "they" #8438
+M 1:4 "great city Jerusalem" #7896
+A 1:4 "the great city Jerusalem must be destroyed" +destruction-of-jerusalem
+M 1:5 "my father" +lehi
+M 1:5 "my" +nephi
+M 1:5 "Lehi" +lehi
+M 1:5 "he" +lehi
+M 1:5 "Lord" #5793
+M 1:5 "his" +lehi
+M 1:5 "his people" #8438
+M 1:5 "his"#2 +lehi
+M 1:6 "he" +lehi
+M 1:6 "Lord" #5793
+M 1:6 "him" +lehi
+M 1:6 "he"#2 +lehi
+M 1:6 "he"#3 +lehi
+M 1:6 "he"#4 +lehi
+M 1:7 "he" +lehi
+M 1:7 "his" +lehi
+M 1:7 "Jerusalem" #7896
+M 1:7 "he"#2 +lehi
+M 1:7 "himself" +lehi
+M 1:7 "his"#2 +lehi
+M 1:7 "Spirit" #8554
+M 1:7 "he"#3 +lehi
+M 1:8 "Spirit" #8554
+M 1:8 "he" +lehi
+M 1:8 "vision" +lehis-vision
+M 1:8 "he"#2 +lehi
+M 1:8 "he"#3 +lehi
+M 1:8 "he"#4 +lehi
+M 1:8 "God" #8553
+M 1:8 "his" #8553
+M 1:8 "their God" #8553
+A 1:8 "And being thus overcome" .. 1:15 "unto him" +lehis-vision
+M 1:9 "he" +lehi
+M 1:9 "One" #5793
+M 1:9 "he"#2 +lehi
+M 1:9 "his" #5793
+M 1:10 "he" +lehi
+M 1:10 "twelve others" +twelve-apostles
+M 1:10 "him" #5793
+M 1:10 "their" +twelve-apostles
+M 1:11 "they" #5793
+M 1:11 "they" +twelve-apostles
+M 1:11 "first" #5793
+M 1:11 "my father" +lehi
+M 1:11 "my" +nephi
+M 1:11 "him" +lehi
+M 1:11 "book" +lehis-book
+M 1:11 "him"#2 +lehi
+M 1:11 "he" +lehi
+M 1:12 "he" +lehi
+M 1:12 "he"#2 +lehi
+M 1:12 "Spirit of the Lord" #8554
+M 1:12 "Lord" #5793
+M 1:13 "he" +lehi
+M 1:13 "Jerusalem" #7896
+M 1:13 "I" #5793
+M 1:13 "thine" #7896
+M 1:13 "my father" +lehi
+M 1:13 "my" +nephi
+M 1:13 "Jerusalem"#2 #7896
+M 1:13 "it" #7896
+M 1:13 "inhabitants thereof" #8438
+M 1:13 "thereof" #7896
+M 1:13 "Babylon" #7514
+A 1:13 "that it should be destroyed" .. 1:13 "Babylon" +destruction-of-jerusalem
+A 1:13 "many should be carried away captive into Babylon" +babylonian-exile
+M 1:14 "my father" +lehi
+M 1:14 "my" +nephi
+M 1:14 "he" +lehi
+M 1:14 "Lord" #8553
+M 1:14 "thy" #8553
+M 1:14 "Lord God Almighty" #8553
+M 1:14 "Thy"#2 #8553
+M 1:14 "thy"#3 #8553
+M 1:14 "thou" #8553
+M 1:14 "thou"#2 #8553
+M 1:14 "thee" #8553
+M 1:15 "my father" +lehi
+M 1:15 "my" +nephi
+M 1:15 "his God" #8553
+M 1:15 "his" +lehi
+M 1:15 "his"#2 +lehi
+M 1:15 "his"#3 +lehi
+M 1:15 "he" +lehi
+M 1:15 "Lord" #5793
+M 1:15 "him" +lehi
+M 1:16 "I" +nephi
+M 1:16 "Nephi" +nephi
+M 1:16 "my father" +lehi
+M 1:16 "my" +nephi
+M 1:16 "he" +lehi
+M 1:16 "he"#2 +lehi
+M 1:16 "he"#3 +lehi
+M 1:16 "he"#4 +lehi
+M 1:16 "his children" +laman
+M 1:16 "his children" +lemuel
+M 1:16 "his children" +sam
+M 1:16 "his children" +nephi
+M 1:16 "his" +lehi
+M 1:16 "I"#2 +nephi
+M 1:17 "I" +nephi
+M 1:17 "account of my proceedings in my days" +first-nephi
+M 1:17 "my" +nephi
+M 1:17 "my"#2 +nephi
+M 1:17 "I"#2 +nephi
+M 1:17 "record of my father" +record-of-lehi
+M 1:17 "my father" +lehi
+M 1:17 "my"#3 +nephi
+M 1:17 "plates which I have made with mine own hands" +small-plates
+M 1:17 "I"#3 +nephi
+M 1:17 "mine" +nephi
+M 1:17 "I"#4 +nephi
+M 1:17 "record of my father"#2 +record-of-lehi
+M 1:17 "my father"#2 +lehi
+M 1:17 "my"#4 +nephi
+M 1:17 "I"#5 +nephi
+M 1:17 "account of mine own life" +first-nephi
+M 1:17 "mine"#2 +nephi
+M 1:18 "I" +nephi
+M 1:18 "Lord" #5793
+M 1:18 "my father" +lehi
+M 1:18 "my" +nephi
+M 1:18 "Lehi" +lehi
+M 1:18 "destruction of Jerusalem" +destruction-of-jerusalem
+M 1:18 "Jerusalem" #7896
+M 1:18 "he" +lehi
+M 1:18 "people" #8438
+M 1:18 "them" #8438
+M 1:18 "he"#2 +lehi
+M 1:19 "Jews" #8438
+M 1:19 "him" +lehi
+M 1:19 "he" +lehi
+M 1:19 "them" #8438
+M 1:19 "he"#2 +lehi
+M 1:19 "their" #8438
+M 1:19 "their"#2 #8438
+M 1:19 "he"#3 +lehi
+M 1:19 "he"#4 +lehi
+M 1:19 "he"#5 +lehi
+M 1:19 "book" +lehis-book
+M 1:19 "Messiah" #5793
+M 1:20 "Jews" #8438
+M 1:20 "they" #8438
+M 1:20 "him" +lehi
+M 1:20 "they"#2 #8438
+M 1:20 "they"#3 #8438
+M 1:20 "his" +lehi
+M 1:20 "they"#4 #8438
+M 1:20 "I" +nephi
+M 1:20 "Nephi" +nephi
+M 1:20 "Lord" #5793
+M 1:20 "he" #5793
+R +sariah | spouse of | +lehi | 1:0 "Lehi and his wife Sariah"
+R +laman | child of | +lehi | 1:0 "his four sons" .. 1:0 "Sam and Nephi"
+R +lemuel | child of | +lehi | 1:0 "his four sons" .. 1:0 "Sam and Nephi"
+R +sam | child of | +lehi | 1:0 "his four sons" .. 1:0 "Sam and Nephi"
+R +nephi | child of | +lehi | 1:0 "his four sons" .. 1:0 "Sam and Nephi"; 1:4 "my father Lehi"
+R +daughters-of-ishmael | child of | +ishmael | 1:0 "daughters of Ishmael"
+R #7276 | leader of | #8440 | 1:4 "Zedekiah king of Judah"
+R +first-nephi | written by | +nephi | 1:0 "I Nephi wrote this record"; 1:1 "I make a record of my proceedings in my days"
+R +record-of-lehi | written by | +lehi | 1:16 "the things which my father hath written"; 1:17 "the record of my father"
+R +first-nephi | abridged from | +record-of-lehi | 1:17 "I make an abridgment of the record of my father"
+R +small-plates | written by | +nephi | 1:17 "I make an abridgment of the record of my father upon plates which I have made with mine own hands"
+S #5793 | written | #7896 | 1:13 "Wo wo unto Jerusalem for I have seen thine abominations" | through +lehi
+S +lehi | prayer | #8553 | 1:14 "Great and marvelous are thy works" .. 1:14 "perish"
+J +lehi | +land-of-jerusalem | +wilderness | 3 | 1:0 "He taketh three days journey into the wilderness with his family"
+J +lehis-family | +land-of-jerusalem | +wilderness | 3 | 1:0 "He taketh three days journey into the wilderness with his family"
+J +nephi | - | +land-of-jerusalem | - | 1:0 "Nephi taketh his brethren and returneth to the land of Jerusalem after the record of the Jews"
+J +laman | - | +land-of-jerusalem | - | 1:0 "Nephi taketh his brethren and returneth to the land of Jerusalem after the record of the Jews"
+J +lemuel | - | +land-of-jerusalem | - | 1:0 "Nephi taketh his brethren and returneth to the land of Jerusalem after the record of the Jews"
+J +sam | - | +land-of-jerusalem | - | 1:0 "Nephi taketh his brethren and returneth to the land of Jerusalem after the record of the Jews"
+J +lehis-family | - | +wilderness | - | 1:0 "They take their families and depart into the wilderness"
+J +lehis-family | - | +irreantum | - | 1:0 "They come to the large waters"
+J +lehis-family | - | +promised-land | - | 1:0 "They cross the large waters into the promised land"
+J +lehi | - | #7896 | - | 1:7 "he returned to his own house at Jerusalem"
+D 1:4 "commencement of the first year of the reign of Zedekiah king of Judah" | bc/ad | -596 | -596 | -
+D +destruction-of-jerusalem | bc/ad | -586 | -585 | -
+D +babylonian-exile | bc/ad | -596 | -537 | -

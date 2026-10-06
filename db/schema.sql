@@ -232,8 +232,27 @@ create table entity (
     entity_type_id integer not null references entity_type,
     name text not null,
     description text not null,
-    tipnr text unique
+    tipnr text unique,
+    latitude real check (latitude between -90 and 90),
+    longitude real check (longitude between -180 and 180),
+    check ((latitude is null) = (longitude is null))
 ) strict;
+
+create trigger entity_location_insert before insert on entity
+when new.latitude is not null and not exists (
+    select 1 from entity_type t left join entity_type p on p.id = t.parent_id
+    where t.id = new.entity_type_id and 'Place' in (t.name, p.name))
+begin
+    select raise(abort, 'only a place has coordinates');
+end;
+
+create trigger entity_location_update before update of entity_type_id, latitude on entity
+when new.latitude is not null and not exists (
+    select 1 from entity_type t left join entity_type p on p.id = t.parent_id
+    where t.id = new.entity_type_id and 'Place' in (t.name, p.name))
+begin
+    select raise(abort, 'only a place has coordinates');
+end;
 
 create table entity_name (
     entity_id integer not null references entity,

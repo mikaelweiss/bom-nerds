@@ -304,16 +304,32 @@ create table speech_mode (
 
 create table speech (
     id integer primary key,
-    speaker_id integer not null references entity,
     through_id integer references entity,
     speech_mode_id integer not null references speech_mode,
     first_word_id integer not null references word,
     last_word_id integer not null references word,
-    unique (first_word_id, last_word_id),
-    check (through_id <> speaker_id)
+    unique (first_word_id, last_word_id)
 ) strict;
 
-create index speech_speaker on speech (speaker_id);
+create table speech_speaker (
+    speech_id integer not null references speech on delete cascade,
+    entity_id integer not null references entity,
+    primary key (speech_id, entity_id)
+) strict;
+
+create index speech_speaker_entity on speech_speaker (entity_id);
+
+create trigger speech_speaker_not_through before insert on speech_speaker
+when new.entity_id = (select through_id from speech where id = new.speech_id)
+begin
+    select raise(abort, 'a speaker cannot also be the messenger');
+end;
+
+create trigger speech_through_not_speaker before update of through_id on speech
+when new.through_id in (select entity_id from speech_speaker where speech_id = new.id)
+begin
+    select raise(abort, 'a speaker cannot also be the messenger');
+end;
 
 create table speech_listener (
     speech_id integer not null references speech on delete cascade,

@@ -22,7 +22,7 @@ N <entity> | <other name> | title
 N <entity> | <other name> | name
 X <entity> | <other name>
 R <entity> | <relationship kind> | <entity> | <span>; <span>
-S <speaker> | <mode> | <listener>, <listener> | <span>
+S <speaker>, <speaker> | <mode> | <listener>, <listener> | <span>
 S <speaker> | <mode> | <listener> | <span> | through <entity>
 J <traveler> | <from or -> | <to> | <days or -> | <span>
 D <span or entity> | <counting system> | <from> | <to> | <evidence span or ->
@@ -32,5 +32,5 @@ D <span or entity> | <counting system> | <from> | <to> | <evidence span or ->
 - `E` defines a new entity, or corrects an existing one's type, name, or description.
 - `N` adds an other name. `X` removes a wrong one.
 - `R` is a relationship and the spans that state it.
-- `S` is a speech. Leave the listener list empty when no listener is named or meant.
+- `S` is a speech. List every speaker who says the words together. Leave the listener list empty when no listener is named or meant.
 - `J` is a journey. `D` is a date: `<from>` and `<to>` are a year, or year-month-day.

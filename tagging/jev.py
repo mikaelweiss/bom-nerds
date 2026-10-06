@@ -114,8 +114,8 @@ def judge(db: sqlite3.Connection, p: tag.Passage) -> tuple[str, dict, dict]:
             (s, k, o), spans = next(iter(a.relationships.items()))
             text = f"Does the passage state that {d(s)} is {kinds[k]} {d(o)}? The cited evidence is " + "; ".join(span(*x) for x in spans) + "."
         elif a.speeches:
-            speaker, mode, listeners, first, last, through = a.speeches[0]
-            text = (f"Are exactly the words {span(first, last)} the {modes[mode]} words of {d(speaker)}"
+            speakers, mode, listeners, first, last, through = a.speeches[0]
+            text = (f"Are exactly the words {span(first, last)} the {modes[mode]} words of {' and '.join(d(x) for x in speakers)}"
                     + (f", spoken to {', '.join(d(x) for x in listeners)}" if listeners else "")
                     + (f", delivered through {d(through)}" if through else "") + "?")
         elif a.journeys:

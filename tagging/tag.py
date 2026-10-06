@@ -155,11 +155,12 @@ def current(db: sqlite3.Connection, p: Passage) -> list[str]:
         s, k, o = db.execute("select subject_id, relationship_kind_id, object_id from relationship where id = ?", (rid,)).fetchone()
         lines.append(f"R #{s} | {kinds[k]} | #{o} | {'; '.join(spans)}")
     modes = dict(db.execute("select id, name from speech_mode"))
-    for sid, speaker, through, mode, first, last in db.execute(
-        "select id, speaker_id, through_id, speech_mode_id, first_word_id, last_word_id from speech where first_word_id between ? and ?", (low, high)
+    for sid, through, mode, first, last in db.execute(
+        "select id, through_id, speech_mode_id, first_word_id, last_word_id from speech where first_word_id between ? and ?", (low, high)
     ):
+        speakers = ", ".join(f"#{e}" for e, in db.execute("select entity_id from speech_speaker where speech_id = ?", (sid,)))
         listeners = ", ".join(f"#{e}" for e, in db.execute("select entity_id from speech_listener where speech_id = ?", (sid,)))
-        lines.append(f"S #{speaker} | {modes[mode]} | {listeners} | {span_text(p, first, last)}" + (f" | through #{through}" if through else ""))
+        lines.append(f"S {speakers} | {modes[mode]} | {listeners} | {span_text(p, first, last)}" + (f" | through #{through}" if through else ""))
     for traveler, start, end, days, first, last in db.execute(
         "select traveler_id, from_id, to_id, days, first_word_id, last_word_id from journey where first_word_id between ? and ?", (low, high)
     ):
@@ -331,11 +332,14 @@ def read_line(line: str, p: Passage, named: dict, answer: Answer):
         answer.relationships.setdefault(key, set()).update(resolve(p, x) for x in spans.split(";") if x.strip())
     elif tag == "S":
         fields = field_list(line, 4)
-        speaker, mode, listeners, span = fields[:4]
+        speakers, mode, listeners, span = fields[:4]
         through = None
         if len(fields) > 4:
             through = entity_ref(fields[4].removeprefix("through").strip())
-        answer.speeches.append((entity_ref(speaker), lookup(named["mode"], mode, "mode"), frozenset(entity_ref(x) for x in listeners.split(",") if x.strip()), *resolve(p, span), through))
+        speakers = frozenset(entity_ref(x) for x in speakers.split(",") if x.strip())
+        if not speakers:
+            raise ValueError("a speech needs a speaker")
+        answer.speeches.append((speakers, lookup(named["mode"], mode, "mode"), frozenset(entity_ref(x) for x in listeners.split(",") if x.strip()), *resolve(p, span), through))
     elif tag == "J":
         traveler, start, end, days, span = field_list(line, 5)[:5]
         answer.journeys.append((entity_ref(traveler), None if start == "-" else entity_ref(start), entity_ref(end), None if days == "-" else float(days), *resolve(p, span)))
@@ -364,10 +368,11 @@ def items(db: sqlite3.Connection, p: Passage, answer: Answer, m=lambda e: e) -> 
         s, o = m(s), m(o)
         key = ("R", k, *sorted((s, o))) if k in two_way else ("R", k, s, o)
         found[key] = f"R {s} | {names['kind'][k]} | {o} | " + "; ".join(span_text(p, a, b) for a, b in sorted(spans))
-    for speaker, mode, listeners, a, b, through in answer.speeches:
+    for speakers, mode, listeners, a, b, through in answer.speeches:
+        said = frozenset(m(x) for x in speakers)
         heard = frozenset(m(x) for x in listeners)
-        found[("S", m(speaker), mode, a, b, heard, through and m(through))] = (
-            f"S {m(speaker)} | {names['mode'][mode]} | {', '.join(sorted(heard))} | {span_text(p, a, b)}" + (f" | through {m(through)}" if through else ""))
+        found[("S", said, mode, a, b, heard, through and m(through))] = (
+            f"S {', '.join(sorted(said))} | {names['mode'][mode]} | {', '.join(sorted(heard))} | {span_text(p, a, b)}" + (f" | through {m(through)}" if through else ""))
     for traveler, start, end, days, a, b in answer.journeys:
         found[("J", m(traveler), start and m(start), m(end), a, b)] = (
             f"J {m(traveler)} | {m(start) if start else '-'} | {m(end)} | {days if days else '-'} | {span_text(p, a, b)}")
@@ -549,8 +554,9 @@ def apply(db: sqlite3.Connection, p: Passage, answer: Answer):
             if not db.execute("select 1 from relationship_evidence where relationship_id = ?", (rid,)).fetchone():
                 db.execute("delete from relationship where id = ?", (rid,))
         db.execute(f"delete from speech where first_word_id {owned}")
-        for speaker, mode, listeners, a, b, through in answer.speeches:
-            sid = db.execute("insert into speech (speaker_id, through_id, speech_mode_id, first_word_id, last_word_id) values (?, ?, ?, ?, ?)", (eid(speaker), eid(through) if through else None, mode, a, b)).lastrowid
+        for speakers, mode, listeners, a, b, through in answer.speeches:
+            sid = db.execute("insert into speech (through_id, speech_mode_id, first_word_id, last_word_id) values (?, ?, ?, ?)", (eid(through) if through else None, mode, a, b)).lastrowid
+            db.executemany("insert into speech_speaker (speech_id, entity_id) values (?, ?)", [(sid, eid(x)) for x in speakers])
             db.executemany("insert into speech_listener (speech_id, entity_id) values (?, ?)", [(sid, eid(x)) for x in listeners])
         db.execute(f"delete from journey where first_word_id {owned}")
         db.executemany("insert into journey (traveler_id, from_id, to_id, days, first_word_id, last_word_id) values (?, ?, ?, ?, ?, ?)", [(eid(t), eid(f) if f else None, eid(e), d, a, b) for t, f, e, d, a, b in answer.journeys])

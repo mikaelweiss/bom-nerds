@@ -39,7 +39,7 @@ Tag every word or phrase that refers to an entity: names, titles, pronouns, and 
 
 ## Speeches
 
-- A speech is the words one speaker says, writes, prays, or sings to listeners. Cover exactly those words.
+- A speech is the words one or more speakers say, write, pray, or sing to listeners. Cover exactly those words. People who say the same words together are all speakers of one speech.
 - Every speaker and listener is an entity. An unnamed speaker gets an entity of its own.
 - When someone delivers another's words, as a prophet delivers the Lord's, the original speaker is the speaker and the messenger is `through_id`.
 - Speeches nest: a quoted speech sits inside the speech that quotes it.

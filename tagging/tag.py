@@ -205,6 +205,13 @@ def candidates(db: sqlite3.Connection, p: Passage, shown: list[str]) -> list[int
     found |= {s for s, o in db.execute(
         f"select subject_id, object_id from relationship where relationship_kind_id in (1, 2, 3) and object_id in ({','.join('?' * len(named))})", named)}
     found |= {i for i, in db.execute(f"select id from entity where name in ({','.join('?' * len(GODHEAD))})", GODHEAD)}
+    found |= {i for i, in db.execute("select e.id from entity e join entity_type t on t.id = e.entity_type_id where t.name = 'Topic'")}
+    found |= {i for i, in db.execute(
+        """select m.entity_id from mention m join word w on w.id = m.first_word_id join verse v on v.id = w.verse_id
+           join chapter c on c.id = v.chapter_id join book b on b.id = c.book_id
+           where b.work_id = (select work_id from book where id = ?) group by m.entity_id order by count(*) desc limit 150""",
+        (p.book_id,),
+    )}
     return sorted(found)
 
 
@@ -217,9 +224,18 @@ def entity_lines(db: sqlite3.Connection, ids: list[int]) -> list[str]:
     return lines
 
 
-def prompt(db: sqlite3.Connection, p: Passage) -> str:
+def prompt(db: sqlite3.Connection, p: Passage, prefill: dict | None = None) -> str:
     shown = current(db, p)
     named = lists(db)
+    checked = []
+    if prefill:
+        settled = set(prefill["settled"])
+        shown = [line for line in shown if line not in settled]
+        checked = [
+            "# Checked tags\n\nThese mention tags are checked and final. Leave them out of your answer: they are added to it. "
+            "Tag everything else in the passage, including any other entity the same words refer to.\n\n" + ("\n".join(prefill["settled"]) or "(none)"),
+            "# Tags to check\n\nAn automatic check read these current tags differently. Decide each one from the passage.\n\n" + ("\n".join(prefill["flags"]) or "(none)"),
+        ]
     verses = [f"{c}:{v} " + "".join(f"{b}{t}{a}" for _, t, b, a in p.words[(c, v)]).strip() for _, c, v in p.verses]
     parts = [
         "You are tagging one passage of scripture. Follow the rules and the answer format below. Everything you need is in this message: do not use tools or read files. Reply with the answer lines only.",
@@ -229,7 +245,20 @@ def prompt(db: sqlite3.Connection, p: Passage) -> str:
         "# Entities that may appear\n\n" + "\n".join(entity_lines(db, candidates(db, p, shown))),
         f"# Passage: {p.label} ({p.edition})\n\n" + "\n".join(verses),
         "# Current tags\n\n" + ("\n".join(shown) or "(none)"),
+        *checked,
     ]
+    return "\n\n".join(parts) + "\n"
+
+
+def review_prompt(db: sqlite3.Connection, p: Passage, answer_text: str, flags: str | None) -> str:
+    parts = [
+        prompt(db, p),
+        "# Your answer\n\nThis is your answer for the passage. Check every line against the rules and the passage, fix what is wrong, "
+        "add what is missing, and reply with the complete corrected answer lines only.\n\n" + answer_text.strip(),
+    ]
+    if flags is not None:
+        parts.append("# Flags\n\nAn automatic classifier read these mentions differently from your answer. It is often right but not always. "
+                     "Decide each one from the passage.\n\n" + (flags.strip() or "(none)"))
     return "\n\n".join(parts) + "\n"
 
 
@@ -576,6 +605,46 @@ def claude_usage(transcript: Path) -> dict:
     return {"model": model, **total}
 
 
+def prefill_path(label: str) -> Path:
+    return RUNS / "prefill" / (key_path(label).stem + ".json")
+
+
+def with_prefill(p: Passage, answer_text: str, use: bool) -> str:
+    return "\n".join(json.loads(prefill_path(p.label).read_text())["settled"] + [answer_text]) if use else answer_text
+
+
+def results(db: sqlite3.Connection):
+    """Rescores the latest run of each configuration on each passage against the current keys."""
+    rows = defaultdict(lambda: defaultdict(int))
+    passages = {}
+    latest = {}
+    for line in (RUNS / "results.jsonl").read_text().splitlines():
+        row = json.loads(line)
+        latest[(row["label"], row["passage"])] = row
+    for row in latest.values():
+        answer = RUNS / f"{row['run']}.txt"
+        if not answer.exists():
+            continue
+        p = passages.setdefault(row["passage"], passage(db, row["passage"]))
+        if not key_path(p.label).exists():
+            continue
+        key, contested = load_key(db, p)
+        s = score(db, p, parse(db, p, answer.read_text()), key, contested)
+        total = rows[row["label"]]
+        total["passages"] += 1
+        for category in ("all", "mentions"):
+            for k in ("right", "missed", "extra"):
+                total[f"{category} {k}"] += s[category][k]
+        u = row["usage"]
+        total["claude in"] += u.get("cache_creation_input_tokens", 0) + u.get("cache_read_input_tokens", 0) + (u.get("input_tokens", 0) if "model" in u else 0)
+        total["out"] += u.get("output_tokens", 0) + u.get("outputTokens", 0)
+    f1 = lambda t, c: finish({k: t[f"{c} {k}"] for k in ("right", "missed", "extra")})
+    print(f"{'configuration':44} {'n':>2} {'F1':>6} {'P':>6} {'R':>6} {'ment F1':>8} {'claude in':>10} {'out':>8}")
+    for label, t in sorted(rows.items(), key=lambda x: -f1(x[1], "all")["f1"]):
+        a, m = f1(t, "all"), f1(t, "mentions")
+        print(f"{label:44} {t['passages']:2} {a['f1']:6.3f} {a['precision']:6.3f} {a['recall']:6.3f} {m['f1']:8.3f} {t['claude in']:10} {t['out']:8}")
+
+
 def key_path(label: str) -> Path:
     return KEYS / (re.sub(r"[^\w]+", "-", label).strip("-").lower() + ".txt")
 
@@ -612,7 +681,13 @@ def main():
     parser = argparse.ArgumentParser(description="Tag passages of scripture.db with AI agents, and benchmark the agents against answer keys.")
     parser.add_argument("--db", type=Path, default=DATABASE)
     commands = parser.add_subparsers(dest="command", required=True)
-    commands.add_parser("prompt", help="print the prompt for a passage").add_argument("passage")
+    c = commands.add_parser("prompt", help="print the prompt for a passage")
+    c.add_argument("passage")
+    c.add_argument("--prefill", action="store_true", help="include the passage's Jev prefill")
+    c = commands.add_parser("review-prompt", help="print a prompt asking a model to check and correct an answer")
+    c.add_argument("passage")
+    c.add_argument("answer", type=Path)
+    c.add_argument("--flags", type=Path, help="Jev's flags on the answer")
     c = commands.add_parser("check", help="list unreadable lines in an answer")
     c.add_argument("passage")
     c.add_argument("answer", type=Path)
@@ -624,12 +699,15 @@ def main():
     c.add_argument("runner", choices=["codex", "cursor"])
     c.add_argument("model")
     c.add_argument("--effort")
+    c.add_argument("--prefill", action="store_true", help="give the model the passage's Jev prefill and add its checked tags to the answer")
     c = commands.add_parser("record", help="record a Claude subagent's answer, with usage from its transcript")
     c.add_argument("passage")
     c.add_argument("label")
     c.add_argument("answer", type=Path)
     c.add_argument("transcript", type=Path)
     c.add_argument("--output-tokens", type=int, help="output tokens measured outside the transcript, which undercounts them")
+    c.add_argument("--prefill", action="store_true", help="add the passage's Jev checked tags to the answer")
+    commands.add_parser("results", help="rescore every recorded run against the current keys")
     c = commands.add_parser("disputes", help="write a blind judging prompt for every tag where the key and the given answers disagree")
     c.add_argument("passage")
     c.add_argument("answers", type=Path, nargs="+")
@@ -646,10 +724,14 @@ def main():
     c.add_argument("answer", type=Path)
     args = parser.parse_args()
 
-    db = sqlite3.connect(args.db)
+    db = sqlite3.connect(args.db, timeout=60)
+    if args.command == "results":
+        return results(db)
     p = passage(db, args.passage)
     if args.command == "prompt":
-        print(prompt(db, p), end="")
+        print(prompt(db, p, json.loads(prefill_path(p.label).read_text()) if args.prefill else None), end="")
+    elif args.command == "review-prompt":
+        print(review_prompt(db, p, args.answer.read_text(), args.flags.read_text() if args.flags else None), end="")
     elif args.command == "check":
         errors = parse(db, p, args.answer.read_text()).errors
         print("\n".join(errors) or "ok")
@@ -681,15 +763,24 @@ def main():
         contested_path(p.label).write_text(contested)
         print(json.dumps(counts, indent=1))
     elif args.command == "run":
-        answer, usage, seconds = run(args.runner, args.model, args.effort, prompt(db, p))
-        record(db, p, f"{args.runner}:{args.model}:{args.effort or 'default'}", answer, usage, seconds)
+        answer, usage, seconds = run(args.runner, args.model, args.effort, prompt(db, p, json.loads(prefill_path(p.label).read_text()) if args.prefill else None))
+        label = f"{args.runner}:{args.model}:{args.effort or 'default'}" + (":prefill" if args.prefill else "")
+        record(db, p, label, with_prefill(p, answer, args.prefill), usage, seconds)
     elif args.command == "record":
         usage = claude_usage(args.transcript)
         if args.output_tokens is not None:
             usage["output_tokens"] = args.output_tokens
-        record(db, p, args.label, args.answer.read_text(), usage, None)
+        record(db, p, args.label, with_prefill(p, args.answer.read_text(), args.prefill), usage, None)
     elif args.command == "apply":
-        apply(db, p, parse(db, p, args.answer.read_text()))
+        answer = parse(db, p, args.answer.read_text())
+        for attempt in range(60):
+            try:
+                apply(db, p, answer)
+                break
+            except sqlite3.OperationalError as error:
+                if "locked" not in str(error) or attempt == 59:
+                    raise
+                time.sleep(30)
         print(f"applied {args.answer} to {p.label}")
 
 

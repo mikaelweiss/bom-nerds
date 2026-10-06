@@ -184,32 +184,26 @@ def spans(p: tag.Passage, names: set[str], main: set[str]) -> list[tuple[int, in
 
 
 def tag_mentions(db: sqlite3.Connection, p: tag.Passage, window: int = 3) -> tuple[str, list[dict], dict]:
-    key = tag.parse(db, p, tag.key_path(p.label).read_text()) if tag.key_path(p.label).exists() else tag.Answer()
-    new = {ref: e for ref, e in key.entities.items() if ref.startswith("+") and not re.match(r"\+r\d+\.", ref)}
     pool = tag.candidates(db, p, tag.current(db, p))
     names = {}
     for i in pool:
         for n, in db.execute("select name from entity where id = ? union select name from entity_name where entity_id = ?", (i, i)):
             names.setdefault(n, set()).add(f"#{i}")
-    for ref, (_, name, _) in new.items():
-        names.setdefault(name, set()).add(ref)
-    for ref, name, _ in key.names:
-        names.setdefault(name, set()).add(ref)
-    main = {n for n, in db.execute("select name from entity")} | {e[1] for e in new.values()}
+    main = {n for n, in db.execute("select name from entity")}
     found = spans(p, set(names), main)
     godhead = [f"#{i}" for i, in db.execute(f"select id from entity where name in ({','.join('?' * len(tag.GODHEAD))})", tag.GODHEAD)]
-    label = lambda ref: f"{(new[ref][1] if ref in new else db.execute('select name from entity where id = ?', (int(ref[1:]),)).fetchone()[0])} {ref}"
+    label = lambda ref: f"{db.execute('select name from entity where id = ?', (int(ref[1:]),)).fetchone()[0]} {ref}"
     lines, details = [], []
     usage = {"input_tokens": 0, "output_tokens": 0, "requests": 0}
     for index, (_, c, v) in enumerate(p.verses):
-        nearby = set(godhead) | set(new)
+        nearby = set(godhead)
         for j in range(max(0, index - window), min(len(p.verses), index + window + 1)):
             text = " " + " ".join(re.sub(r"[^\w'’-]", "", w[1]) for w in p.words[p.verses[j][1:]]) + " "
             nearby |= {ref for n, refs in names.items() if f" {n} " in text or n not in main and f" {n.lower()} " in text.lower() for ref in refs}
         options = sorted(nearby, key=label)[:254]
         context = [f"{p.verses[j][1]}:{p.verses[j][2]} {verse_text(p, *p.verses[j][1:])}"
                    for j in range(max(0, index - window), min(len(p.verses), index + window + 1))]
-        entity_list = [f"{label(ref)}: {describe(db, ref, new)}" for ref in options]
+        entity_list = [f"{label(ref)}: {describe(db, ref, {})}" for ref in options]
         state = {"rules": tag.RULES.read_text(), "context": context, "entities": entity_list}
         questions = {}
         here = [s for s in found if s[0] == index]
@@ -239,10 +233,45 @@ def tag_mentions(db: sqlite3.Connection, p: tag.Passage, window: int = 3) -> tup
                 chosen = members or chosen
             for ref in chosen:
                 lines.append(f"M {tag.span_text(p, first, last)} {ref}")
-            details.append({"span": tag.span_text(p, first, last), "kind": kind, "chosen": chosen, "confidence": choice["confidence"],
+            details.append({"span": tag.span_text(p, first, last), "first": first, "last": last, "kind": kind, "chosen": chosen, "confidence": choice["confidence"],
                             "top": sorted(choice["probabilities"].items(), key=lambda x: -x[1])[:3]})
-    definitions = [tag.entity_definition(ref, e, tag.lists(db)) for ref, e in new.items()]
-    return "\n".join(definitions + lines) + "\n", details, usage
+    return "\n".join(lines) + "\n", details, usage
+
+
+def prefill(db: sqlite3.Connection, p: tag.Passage, threshold: float) -> tuple[dict, dict]:
+    """Settles the single-referent words Jev is sure of, and lists current tags it confidently reads differently."""
+    _, details, usage = tag_mentions(db, p)
+    tagged = {}
+    for a, b, e, kind in tag.parse(db, p, "\n".join(tag.current(db, p))).mentions:
+        if kind == 1:
+            tagged.setdefault((a, b), set()).add(e)
+    settled, flags = [], []
+    for d in details:
+        if d["kind"] == "group" or d["confidence"] < threshold:
+            continue
+        settled += [f"M {d['span']} {ref}" for ref in d["chosen"]]
+        chose = ", ".join(d["chosen"]) or "no entity"
+        flags += [f"M {d['span']} {ref} (the check chose {chose})" for ref in tagged.get((d["first"], d["last"]), set()) - set(d["chosen"])]
+    return {"threshold": threshold, "settled": settled, "flags": flags, "details": details}, usage
+
+
+def check(db: sqlite3.Connection, p: tag.Passage, answer_text: str, threshold: float) -> tuple[list[str], dict]:
+    """Lists the answer's mentions Jev confidently reads differently, and the mentions Jev is sure of that the answer lacks."""
+    _, details, usage = tag_mentions(db, p)
+    written = {}
+    for a, b, e, kind in tag.parse(db, p, answer_text).mentions:
+        if kind == 1:
+            written.setdefault((a, b), set()).add(e)
+    flags = []
+    for d in details:
+        if d["kind"] == "group" or d["confidence"] < threshold:
+            continue
+        chose = set(d["chosen"])
+        have = written.get((d["first"], d["last"]), set())
+        jev = ", ".join(sorted(chose)) or "no entity"
+        flags += [f"M {d['span']} {ref} (the check reads these words as {jev})" for ref in sorted(have - chose) if chose or not ref.startswith("+")]
+        flags += [f"M {d['span']} {ref} (the check found this mention missing)" for ref in sorted(chose - have)]
+    return flags, usage
 
 
 def main():
@@ -251,6 +280,14 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("judge", help="judge the passage's disputed tags").add_argument("passage")
     commands.add_parser("mentions", help="tag every name, pronoun, and person noun in the passage").add_argument("passage")
+    c = commands.add_parser("check", help="flag an answer's mentions that Jev confidently reads differently")
+    c.add_argument("passage")
+    c.add_argument("answer", type=Path)
+    c.add_argument("out", type=Path)
+    c.add_argument("--threshold", type=float, default=0.95)
+    c = commands.add_parser("prefill", help="settle the mentions Jev is sure of, for a model to finish the passage")
+    c.add_argument("passage")
+    c.add_argument("--threshold", type=float, default=0.95)
     args = parser.parse_args()
     db = sqlite3.connect(args.db)
     p = tag.passage(db, args.passage)
@@ -262,6 +299,17 @@ def main():
         out.write_text(verdicts)
         out.with_suffix(".json").write_text(json.dumps(probabilities, indent=1))
         print(f"{out} ({time.monotonic() - started:.0f}s, {usage})")
+    elif args.command == "check":
+        flags, usage = check(db, p, args.answer.read_text(), args.threshold)
+        args.out.parent.mkdir(parents=True, exist_ok=True)
+        args.out.write_text("\n".join(flags) + "\n")
+        print(f"{args.out}: {len(flags)} flags ({usage})")
+    elif args.command == "prefill":
+        found, usage = prefill(db, p, args.threshold)
+        out = tag.prefill_path(p.label)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps({**found, "usage": usage}, indent=1))
+        print(f"{out}: {len(found['settled'])} settled, {len(found['flags'])} flagged ({time.monotonic() - started:.0f}s, {usage})")
     else:
         answer, details, usage = tag_mentions(db, p)
         tag.record(db, p, "jev:mentions", answer, usage, time.monotonic() - started)

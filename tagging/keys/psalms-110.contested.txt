@@ -1,0 +1,11 @@
+E +r2.psalm110 | record | Psalm 110 | A psalm of David describing his Lord as an everlasting priest after the order of Melchizedek.
+E +r2.christ_people | group | Christ's people | The people of Christ who willingly serve in the day of his power.
+E +r2.christ_enemies | group | Christ's enemies | The enemies whom God promises to make Christ's footstool.
+E +r3.psalm-110 | record | Psalm 110 | A psalm of David in which the LORD seats David's Lord as king and priest after the order of Melchizedek.
+M 110:1 "thine enemies" +r2.christ_enemies
+M 110:1 "thy footstool" +r2.christ_enemies
+S #4837 | Song |  | 110:1 "The LORD said" .. 110:7 "up the head"
+S #4837 | Song | #5793, #8553 | 110:1 "The LORD said" .. 110:7 "up the head"
+M 110:2 "thine enemies" +r2.christ_enemies
+M 110:3 "Thy people" +r2.christ_people
+M 110:4 "priest" #5793

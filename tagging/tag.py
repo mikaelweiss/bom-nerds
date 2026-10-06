@@ -17,6 +17,7 @@ RULES = ROOT / "docs" / "tagging.md"
 FORMAT = ROOT / "tagging" / "answer.md"
 KEYS = ROOT / "tagging" / "keys"
 RUNS = ROOT / "tagging" / "runs"
+PANEL = RUNS / "panel"
 GODHEAD = ("Jesus Christ", "God the Father", "Holy Ghost")
 
 SPAN = r'(\d+):(\d+) "([^"]*)"(?:#(\d+))?'
@@ -182,7 +183,8 @@ def ymd(y, m, d) -> str:
 
 
 def candidates(db: sqlite3.Connection, p: Passage, shown: list[str]) -> list[int]:
-    found = {int(i) for i in re.findall(r'(?<!")#(\d+)', "\n".join(shown))}
+    tagged = {int(i) for i in re.findall(r'(?<!")#(\d+)', "\n".join(shown))}
+    found = set(tagged)
     chapters = range(min(p.chapters) - 1, max(p.chapters) + 2)
     found |= {i for i, in db.execute(
         f"""select distinct m.entity_id from mention m join word w on w.id = m.first_word_id join verse v on v.id = w.verse_id
@@ -191,9 +193,17 @@ def candidates(db: sqlite3.Connection, p: Passage, shown: list[str]) -> list[int
         (p.book_id, *chapters, p.edition),
     )}
     text = " " + " ".join(re.sub(r"[^\w'’-]", "", w[1]) for words in p.words.values() for w in words) + " "
+    lower = text.lower()
+    named = set(tagged)
     for i, name in db.execute("select id, name from entity union all select entity_id, name from entity_name"):
-        if name[:1].isupper() and f" {name} " in text:
-            found.add(i)
+        if name[:1].isupper() and f" {name} " in text or " " in name and f" {name.lower()} " in lower:
+            named.add(i)
+    found |= named
+    named = sorted(tagged)
+    found |= {o for s, o in db.execute(
+        f"select subject_id, object_id from relationship where relationship_kind_id in (1, 2, 3) and subject_id in ({','.join('?' * len(named))})", named)}
+    found |= {s for s, o in db.execute(
+        f"select subject_id, object_id from relationship where relationship_kind_id in (1, 2, 3) and object_id in ({','.join('?' * len(named))})", named)}
     found |= {i for i, in db.execute(f"select id from entity where name in ({','.join('?' * len(GODHEAD))})", GODHEAD)}
     return sorted(found)
 
@@ -313,54 +323,51 @@ def date(text: str) -> tuple:
     return tuple(parts + [None] * (3 - len(parts)))
 
 
-def overlap(a: tuple[int, int], b: tuple[int, int], p: Passage) -> float:
-    order = {w: i for i, w in enumerate(sorted(p.ids))}
-    a0, a1 = order.get(a[0], -1), order.get(a[1], 10**9)
-    b0, b1 = order.get(b[0], -1), order.get(b[1], 10**9)
-    inter = min(a1, b1) - max(a0, b0) + 1
-    union = max(a1, b1) - min(a0, b0) + 1
-    return max(0, inter) / union
-
-
-def score(db: sqlite3.Connection, p: Passage, got: Answer, key: Answer) -> dict:
-    mapping = match_new(got, key)
-    m = lambda e: mapping.get(e, e)
-    results = {}
-    results["mentions"] = tally({(a, b, m(e), k) for a, b, e, k in got.mentions}, key.mentions)
+def items(db: sqlite3.Connection, p: Passage, answer: Answer, m=lambda e: e) -> dict[tuple, str]:
+    """Each scorable tag in an answer, keyed so equal tags from different answers compare equal, with its answer line."""
+    names = {k: {i: n for i, n in db.execute(f"select id, name from {t}")} for k, t in
+             (("kind", "relationship_kind"), ("mode", "speech_mode"), ("system", "counting_system"))}
     two_way = {i for i, in db.execute("select id from relationship_kind where two_way = 1")}
-
-    def rel_key(s, k, o):
+    found = {}
+    for a, b, e, k in answer.mentions:
+        found[("M" if k == 1 else "A", a, b, m(e))] = f"{'M' if k == 1 else 'A'} {span_text(p, a, b)} {m(e)}"
+    for (s, k, o), spans in answer.relationships.items():
         s, o = m(s), m(o)
-        return (k, *sorted((s, o))) if k in two_way else (s, k, o)
+        key = ("R", k, *sorted((s, o))) if k in two_way else ("R", k, s, o)
+        found[key] = f"R {s} | {names['kind'][k]} | {o} | " + "; ".join(span_text(p, a, b) for a, b in sorted(spans))
+    for speaker, mode, listeners, a, b, through in answer.speeches:
+        heard = frozenset(m(x) for x in listeners)
+        found[("S", m(speaker), mode, a, b, heard, through and m(through))] = (
+            f"S {m(speaker)} | {names['mode'][mode]} | {', '.join(sorted(heard))} | {span_text(p, a, b)}" + (f" | through {m(through)}" if through else ""))
+    for traveler, start, end, days, a, b in answer.journeys:
+        found[("J", m(traveler), start and m(start), m(end), a, b)] = (
+            f"J {m(traveler)} | {m(start) if start else '-'} | {m(end)} | {days if days else '-'} | {span_text(p, a, b)}")
+    for where, system, start, end, evidence in answer.dates:
+        target = m(where) if isinstance(where, str) else where
+        found[("D", target, system, start, end)] = (
+            f"D {target if isinstance(target, str) else span_text(p, *target)} | {names['system'][system]} | {ymd(*start)} | {ymd(*end)} | "
+            + (span_text(p, *evidence) if evidence else "-"))
+    return found
 
-    results["relationships"] = tally({rel_key(*r) for r in got.relationships}, {rel_key(*r) for r in key.relationships})
-    results["speeches"] = fuzzy(
-        [(m(s), mode, (a, b)) for s, mode, _, a, b, _ in got.speeches], [(s, mode, (a, b)) for s, mode, _, a, b, _ in key.speeches], p
-    )
-    results["journeys"] = fuzzy(
-        [((m(t), m(f) if f else None, m(e)), 0, (a, b)) for t, f, e, _, a, b in got.journeys], [((t, f, e), 0, (a, b)) for t, f, e, _, a, b in key.journeys], p
-    )
-    results["dates"] = tally({(m(w) if isinstance(w, str) else w, s, a, b) for w, s, a, b, _ in got.dates}, {(w, s, a, b) for w, s, a, b, _ in key.dates})
+
+CATEGORIES = {"M": "mentions", "A": "mentions", "R": "relationships", "S": "speeches", "J": "journeys", "D": "dates"}
+
+
+def score(db: sqlite3.Connection, p: Passage, got: Answer, key: Answer, contested: Answer | None = None) -> dict:
+    mapping = match_new(got, key)
+    got_items = set(items(db, p, got, lambda e: mapping.get(e, e)))
+    key_items = set(items(db, p, key))
+    skipped = set(items(db, p, contested)) if contested else set()
+    results = {}
+    for category in dict.fromkeys(CATEGORIES.values()):
+        g = {i for i in got_items - skipped if CATEGORIES[i[0]] == category}
+        k = {i for i in key_items - skipped if CATEGORIES[i[0]] == category}
+        results[category] = finish({"right": len(g & k), "missed": len(k - g), "extra": len(g - k)})
     total = {k: sum(r[k] for r in results.values()) for k in ("right", "missed", "extra")}
     results["all"] = finish(total)
+    results["skipped"] = len(skipped)
     results["unreadable"] = len(got.errors)
-    results["new_entities"] = {"got": len([e for e in got.entities if e.startswith("+")]), "key": len([e for e in key.entities if e.startswith("+")])}
     return results
-
-
-def tally(got: set, key: set) -> dict:
-    return finish({"right": len(got & key), "missed": len(key - got), "extra": len(got - key)})
-
-
-def fuzzy(got: list, key: list, p: Passage) -> dict:
-    unmatched = list(key)
-    right = 0
-    for who, mode, span in got:
-        best = max((k for k in unmatched if k[0] == who and k[1] == mode), key=lambda k: overlap(span, k[2], p), default=None)
-        if best and overlap(span, best[2], p) >= 0.8:
-            unmatched.remove(best)
-            right += 1
-    return finish({"right": right, "missed": len(unmatched), "extra": len(got) - right})
 
 
 def finish(counts: dict) -> dict:
@@ -388,14 +395,94 @@ def match_new(got: Answer, key: Answer) -> dict:
     return mapping
 
 
-def differences(db: sqlite3.Connection, p: Passage, got: Answer, key: Answer) -> list[str]:
+def differences(db: sqlite3.Connection, p: Passage, got: Answer, key: Answer, contested: Answer | None = None) -> list[str]:
     mapping = match_new(got, key)
-    m = lambda e: mapping.get(e, e)
-    label = lambda e: e if e.startswith("+") else f"{e} {db.execute('select name from entity where id = ?', (int(e[1:]),)).fetchone()[0]}"
-    got_mentions = {(a, b, m(e), k) for a, b, e, k in got.mentions}
-    lines = [f"missed {'M' if k == 1 else 'A'} {span_text(p, a, b)} {label(e)}" for a, b, e, k in sorted(key.mentions - got_mentions)]
-    lines += [f"extra  {'M' if k == 1 else 'A'} {span_text(p, a, b)} {label(e)}" for a, b, e, k in sorted(got_mentions - key.mentions)]
-    return lines + got.errors
+    g = items(db, p, got, lambda e: mapping.get(e, e))
+    k = items(db, p, key)
+    skipped = set(items(db, p, contested)) if contested else set()
+    return ([f"missed {line}" for i, line in k.items() if i not in g and i not in skipped]
+            + [f"extra  {line}" for i, line in g.items() if i not in k and i not in skipped] + got.errors)
+
+
+def entity_definition(ref: str, entity: tuple, named: dict) -> str:
+    types = {v: k for k, v in named["type"].items()}
+    return f"E {ref} | {types[entity[0]]} | {entity[1]} | {entity[2]}"
+
+
+def disputes(db: sqlite3.Connection, p: Passage, key: Answer, runs: list[Answer]) -> tuple[list[dict], list[str]]:
+    """Tags where the key and the runs disagree, with each run's unmatched new entities renamed +r1., +r2., and so on."""
+    named = lists(db)
+    key_items = items(db, p, key)
+    mapped, definitions = [], []
+    for n, run in enumerate(runs, 1):
+        mapping = match_new(run, key)
+        for ref, entity in run.entities.items():
+            if ref.startswith("+") and ref not in mapping:
+                mapping[ref] = f"+r{n}.{ref[1:]}"
+                definitions.append(entity_definition(mapping[ref], entity, named))
+        mapped.append(items(db, p, run, lambda e, mapping=mapping: mapping.get(e, e)))
+    every = {**key_items}
+    for run_items in mapped:
+        for i, line in run_items.items():
+            every.setdefault(i, line)
+    def order(i):
+        ref = re.search(r"(\d+):(\d+) ", every[i])
+        return (int(ref.group(1)), int(ref.group(2))) if ref else (0, 0)
+
+    found = []
+    for i in sorted(every, key=lambda i: (order(i), every[i][0] != "M", every[i])):
+        sources = (["key"] if i in key_items else []) + [f"r{n}" for n, r in enumerate(mapped, 1) if i in r]
+        if len(sources) <= len(runs):
+            found.append({"n": len(found) + 1, "line": every[i], "sources": sources})
+    return found, definitions
+
+
+def panel_prompt(db: sqlite3.Connection, p: Passage, key: Answer, found: list[dict], definitions: list[str]) -> str:
+    named = lists(db)
+    shown = [entity_definition(ref, e, named) for ref, e in key.entities.items() if ref.startswith("+")] + definitions
+    ids = sorted({int(i) for f in found for i in re.findall(r'(?<!")#(\d+)', f["line"])})
+    verses = [f"{c}:{v} " + "".join(f"{b}{t}{a}" for _, t, b, a in p.words[(c, v)]).strip() for _, c, v in p.verses]
+    names = {i: n for i, n in db.execute(f"select id, name from entity where id in ({','.join(map(str, ids)) or 0})")}
+    tags = "\n".join(f"{f['n']}. " + re.sub(r'(?<!")#(\d+)', lambda m: f"#{m.group(1)} ({names[int(m.group(1))]})", f["line"]) for f in found)
+    return "\n\n".join([
+        "You are judging tags for one passage of scripture. Several taggers disagreed on the numbered tags below. "
+        "Using the rules and the passage, decide for each tag whether it belongs in the passage's complete and correct tags. "
+        "Judge each tag on its own: two tags that cover the same words can both be right, or both wrong. "
+        "Everything you need is in this message. Reply with one line per tag and nothing else: its number, then yes, no, or unsure. Example: 12 yes",
+        "# Rules\n\n" + RULES.read_text(),
+        FORMAT.read_text(),
+        "# Existing entities\n\n" + "\n".join(entity_lines(db, ids)),
+        "# New entities the taggers proposed\n\n" + ("\n".join(shown) or "(none)"),
+        f"# Passage: {p.label} ({p.edition})\n\n" + "\n".join(verses),
+        "# Tags to judge\n\n" + tags,
+    ]) + "\n"
+
+
+def settle(db: sqlite3.Connection, p: Passage, key_text: str, panel: dict, verdicts: list[str]) -> tuple[str, str, dict]:
+    votes = defaultdict(list)
+    for text in verdicts:
+        for line in text.splitlines():
+            match = re.match(r"\s*(\d+)[.):]?\s+(yes|no|unsure)\b", line.strip(), re.I)
+            if match:
+                votes[int(match.group(1))].append(match.group(2).lower())
+    key = parse(db, p, key_text)
+    disputed = {f["line"] for f in panel["items"]}
+    kept = [line for i, line in items(db, p, key).items() if line not in disputed]
+    accepted, contested, counts = [], [], defaultdict(int)
+    for f in panel["items"]:
+        v = votes.get(f["n"], [])
+        yes = v.count("yes")
+        clear = len(v) == len(verdicts) and len(set(v)) == 1 and v[0] != "unsure"
+        if yes * 2 > len(verdicts):
+            accepted.append(f["line"])
+        if not clear:
+            contested.append(f["line"])
+        counts[("accepted" if yes * 2 > len(verdicts) else "rejected") + (" clear" if clear else " contested")] += 1
+    used = " ".join(accepted + contested)
+    definitions = [d for d in panel["definitions"] if d.split(" | ")[0][2:] in used]
+    structure = [line for line in key_text.splitlines() if line[:1] in "ENX"]
+    new_key = "\n".join(structure + definitions + kept + accepted) + "\n"
+    return new_key, "\n".join(definitions + contested) + "\n", dict(counts)
 
 
 def apply(db: sqlite3.Connection, p: Passage, answer: Answer):
@@ -493,6 +580,16 @@ def key_path(label: str) -> Path:
     return KEYS / (re.sub(r"[^\w]+", "-", label).strip("-").lower() + ".txt")
 
 
+def contested_path(label: str) -> Path:
+    return key_path(label).with_suffix(".contested.txt")
+
+
+def load_key(db: sqlite3.Connection, p: Passage) -> tuple[Answer, Answer | None]:
+    key = parse(db, p, key_path(p.label).read_text())
+    path = contested_path(p.label)
+    return key, parse(db, p, path.read_text()) if path.exists() else None
+
+
 def record(db, p: Passage, label: str, answer_text: str, usage: dict, seconds: float | None):
     RUNS.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime("%Y%m%d-%H%M%S")
@@ -501,9 +598,9 @@ def record(db, p: Passage, label: str, answer_text: str, usage: dict, seconds: f
     got = parse(db, p, answer_text)
     row = {"run": name, "passage": p.label, "label": label, "usage": usage, "seconds": seconds and round(seconds, 1)}
     if key_path(p.label).exists():
-        key = parse(db, p, key_path(p.label).read_text())
-        row["score"] = score(db, p, got, key)
-        (RUNS / f"{name}.diff").write_text("\n".join(differences(db, p, got, key)) + "\n")
+        key, contested = load_key(db, p)
+        row["score"] = score(db, p, got, key, contested)
+        (RUNS / f"{name}.diff").write_text("\n".join(differences(db, p, got, key, contested)) + "\n")
     else:
         row["unreadable"] = len(got.errors)
     with (RUNS / "results.jsonl").open("a") as f:
@@ -532,6 +629,18 @@ def main():
     c.add_argument("label")
     c.add_argument("answer", type=Path)
     c.add_argument("transcript", type=Path)
+    c.add_argument("--output-tokens", type=int, help="output tokens measured outside the transcript, which undercounts them")
+    c = commands.add_parser("disputes", help="write a blind judging prompt for every tag where the key and the given answers disagree")
+    c.add_argument("passage")
+    c.add_argument("answers", type=Path, nargs="+")
+    c = commands.add_parser("judge", help="run a Codex or Cursor model on the passage's judging prompt and save its verdicts")
+    c.add_argument("passage")
+    c.add_argument("runner", choices=["codex", "cursor"])
+    c.add_argument("model")
+    c.add_argument("--effort")
+    c = commands.add_parser("settle", help="rewrite the passage's key from the judges' verdicts, and list the contested tags scoring skips")
+    c.add_argument("passage")
+    c.add_argument("verdicts", type=Path, nargs="+")
     c = commands.add_parser("apply", help="write an answer into the database")
     c.add_argument("passage")
     c.add_argument("answer", type=Path)
@@ -546,15 +655,38 @@ def main():
         print("\n".join(errors) or "ok")
         sys.exit(1 if errors else 0)
     elif args.command == "score":
-        key = parse(db, p, key_path(p.label).read_text())
+        key, contested = load_key(db, p)
         got = parse(db, p, args.answer.read_text())
-        print(json.dumps(score(db, p, got, key), indent=1))
-        print("\n".join(differences(db, p, got, key)))
+        print(json.dumps(score(db, p, got, key, contested), indent=1))
+        print("\n".join(differences(db, p, got, key, contested)))
+    elif args.command == "disputes":
+        key, _ = load_key(db, p)
+        found, definitions = disputes(db, p, key, [parse(db, p, a.read_text()) for a in args.answers])
+        stem = PANEL / key_path(p.label).stem
+        PANEL.mkdir(parents=True, exist_ok=True)
+        stem.with_suffix(".json").write_text(json.dumps({"answers": [str(a) for a in args.answers], "items": found, "definitions": definitions}, indent=1))
+        stem.with_suffix(".prompt.txt").write_text(panel_prompt(db, p, key, found, definitions))
+        print(f"{len(found)} disputed tags: {stem}.prompt.txt")
+    elif args.command == "judge":
+        stem = PANEL / key_path(p.label).stem
+        verdict, usage, seconds = run(args.runner, args.model, args.effort, stem.with_suffix(".prompt.txt").read_text())
+        out = stem.with_suffix(f".{args.runner}-{args.model}.verdicts.txt")
+        out.write_text(verdict)
+        print(f"{out} ({round(seconds)}s, {usage})")
+    elif args.command == "settle":
+        stem = PANEL / key_path(p.label).stem
+        panel = json.loads(stem.with_suffix(".json").read_text())
+        new_key, contested, counts = settle(db, p, key_path(p.label).read_text(), panel, [v.read_text() for v in args.verdicts])
+        key_path(p.label).write_text(new_key)
+        contested_path(p.label).write_text(contested)
+        print(json.dumps(counts, indent=1))
     elif args.command == "run":
         answer, usage, seconds = run(args.runner, args.model, args.effort, prompt(db, p))
         record(db, p, f"{args.runner}:{args.model}:{args.effort or 'default'}", answer, usage, seconds)
     elif args.command == "record":
         usage = claude_usage(args.transcript)
+        if args.output_tokens is not None:
+            usage["output_tokens"] = args.output_tokens
         record(db, p, args.label, args.answer.read_text(), usage, None)
     elif args.command == "apply":
         apply(db, p, parse(db, p, args.answer.read_text()))

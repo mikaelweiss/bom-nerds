@@ -4,62 +4,76 @@ N #5793 | Son | title
 N #5793 | King | title
 N #8553 | Lord | title
 N #8552 | Heathen | title
-M 2:1 "heathen" #8552
-M 2:1 "people" #8418
-M 2:2 "kings of the earth" +kings-of-the-earth
-M 2:2 "themselves" +kings-of-the-earth
-M 2:2 "rulers" +kings-of-the-earth
-M 2:2 "LORD" #8553
-M 2:2 "his anointed" #5793
-M 2:2 "his" #8553
-M 2:3 "us" +kings-of-the-earth
-M 2:3 "their" #8553
+E +r2.zion | mountain | Zion | The holy hill where God establishes his anointed king in Psalm 2.
+E +r2.heaven | place | Heaven | The heavenly dwelling from which God rules and judges the nations.
+E +r2.earth | place | Earth | The world whose nations are promised to God's Son.
+E +r2.faithful | group | Those who trust the Son | The people pronounced blessed in Psalm 2 for trusting God's Son.
+E +r2.kingship | topic | Christ's kingship | The divine appointment and authority of Jesus Christ as king.
+E +r2.rebellion | topic | Rebellion against God | Opposition to God and his appointed authority.
+E +r2.trust | topic | Trust in Christ | Reliance on Jesus Christ for refuge and blessing.
+E +r3.psalmist | person | psalmist | The unnamed speaker of Psalm 2.
 M 2:3 "their" #5793
-M 2:3 "their"#2 #8553
-M 2:3 "their"#2 #5793
+M 2:7 "my" #8553
+M 2:2 "his" #8553
+M 2:5 "his" #8553
+M 2:9 "Thou" #5793
+M 2:2 "themselves" +kings-of-the-earth
 M 2:3 "us"#2 +kings-of-the-earth
 M 2:4 "He that sitteth in the heavens" #8553
-M 2:4 "Lord" #8553
-M 2:4 "them" +kings-of-the-earth
+M 2:3 "their"#2 #8553
 M 2:5 "he" #8553
-M 2:5 "them" +kings-of-the-earth
-M 2:5 "his" #8553
-M 2:5 "them"#2 +kings-of-the-earth
-M 2:5 "his"#2 #8553
-M 2:6 "I" #8553
-M 2:6 "my king" #5793
-M 2:6 "my" #8553
-M 2:6 "my holy hill of Zion" #7896
-M 2:6 "my"#2 #8553
-M 2:7 "I" #5793
-M 2:7 "LORD" #8553
-M 2:7 "me" #5793
-M 2:7 "Thou" #5793
-M 2:7 "my Son" #5793
-M 2:7 "my" #8553
-M 2:7 "I"#2 #8553
 M 2:7 "thee" #5793
-M 2:8 "me" #8553
-M 2:8 "I" #8553
-M 2:8 "thee" #5793
-M 2:8 "heathen" #8552
-M 2:8 "thine" #5793
+M 2:7 "me" #5793
 M 2:8 "thy" #5793
-M 2:9 "Thou" #5793
-M 2:9 "them" #8552
-M 2:9 "thou"#2 #5793
-M 2:9 "them"#2 #8552
-M 2:10 "ye kings" +kings-of-the-earth
-M 2:10 "ye judges of the earth" +kings-of-the-earth
-M 2:11 "LORD" #8553
+M 2:6 "my king" #5793
+M 2:6 "my"#2 #8553
+M 2:3 "us" +kings-of-the-earth
+M 2:3 "their" #8553
+M 2:5 "his"#2 #8553
+M 2:2 "rulers" +kings-of-the-earth
+M 2:7 "LORD" #8553
+M 2:7 "I"#2 #8553
 M 2:12 "Son" #5793
+M 2:8 "me" #8553
+M 2:5 "them" +kings-of-the-earth
+M 2:4 "Lord" #8553
+M 2:2 "LORD" #8553
+M 2:6 "my" #8553
+M 2:8 "thine" #5793
+M 2:8 "I" #8553
 M 2:12 "he" #5793
-M 2:12 "ye" +kings-of-the-earth
-M 2:12 "his" #5793
 M 2:12 "him" #5793
+M 2:12 "ye" +kings-of-the-earth
+M 2:7 "I" #5793
+M 2:6 "I" #8553
+M 2:11 "LORD" #8553
+M 2:3 "their"#2 #5793
+M 2:8 "thee" #5793
+M 2:12 "his" #5793
+M 2:4 "them" +kings-of-the-earth
+M 2:7 "Thou" #5793
+M 2:2 "kings of the earth" +kings-of-the-earth
+S #5793 | Spoken |  | 2:7 "I will declare" .. 2:9 "a potter’s vessel"
+M 2:1 "heathen" #8552
+A 2:1 "Why do the" .. 2:12 "trust in him" +r2.kingship
+S +r3.psalmist | Song |  | 2:1 "Why do the" .. 2:12 "trust in him"
+M 2:2 "earth" +r2.earth
+M 2:2 "his anointed" #5793
+S +kings-of-the-earth | Spoken | +kings-of-the-earth | 2:3 "Let us break their bands asunder and cast away their cords from us"
+M 2:4 "heavens" +r2.heaven
+M 2:5 "them"#2 +kings-of-the-earth
+M 2:6 "my holy hill of Zion" #7896
+S #8553 | Spoken | +kings-of-the-earth | 2:6 "Yet have I set my king upon my holy hill of Zion"
+M 2:7 "my Son" #5793
 R #5793 | child of | #8553 | 2:7 "Thou art my Son this day have I begotten thee"
-S #4837 | song | +kings-of-the-earth | 2:1 "Why" .. 2:12 "him"
-S +kings-of-the-earth | spoken | | 2:3 "Let us break their bands asunder and cast away their cords from us"
-S #8553 | spoken | +kings-of-the-earth | 2:6 "Yet have I set my king upon my holy hill of Zion"
-S #5793 | spoken | | 2:7 "I will declare the decree" .. 2:9 "vessel"
-S #8553 | spoken | #5793 | 2:7 "Thou art my Son" .. 2:9 "vessel"
+S #8553 | Spoken | #5793 | 2:7 "Thou art my" .. 2:9 "a potter’s vessel"
+M 2:8 "earth" +r2.earth
+M 2:8 "heathen" #8552
+M 2:9 "them" #8552
+M 2:9 "them"#2 #8552
+M 2:9 "thou"#2 #5793
+M 2:10 "earth" +r2.earth
+M 2:10 "ye judges of the earth" +kings-of-the-earth
+M 2:10 "ye kings" +kings-of-the-earth
+M 2:12 "all they that put their trust in him" +r2.faithful
+A 2:12 "Blessed are all they that put their trust in him" +r2.trust

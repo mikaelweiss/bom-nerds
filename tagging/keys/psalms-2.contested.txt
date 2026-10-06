@@ -1,0 +1,21 @@
+E +r2.zion | mountain | Zion | The holy hill where God establishes his anointed king in Psalm 2.
+E +r2.heaven | place | Heaven | The heavenly dwelling from which God rules and judges the nations.
+E +r2.earth | place | Earth | The world whose nations are promised to God's Son.
+E +r2.faithful | group | Those who trust the Son | The people pronounced blessed in Psalm 2 for trusting God's Son.
+E +r2.kingship | topic | Christ's kingship | The divine appointment and authority of Jesus Christ as king.
+E +r2.rebellion | topic | Rebellion against God | Opposition to God and his appointed authority.
+E +r2.trust | topic | Trust in Christ | Reliance on Jesus Christ for refuge and blessing.
+E +r3.psalmist | person | psalmist | The unnamed speaker of Psalm 2.
+M 2:1 "people" #8418
+A 2:1 "Why do the" .. 2:3 "Let us" +r2.rebellion
+M 2:2 "earth" +r2.earth
+S +kings-of-the-earth | Spoken |  | 2:3 "Let us break their bands asunder and cast away their cords from us"
+S +kings-of-the-earth | Spoken | +kings-of-the-earth | 2:3 "Let us break their bands asunder and cast away their cords from us"
+M 2:6 "my holy hill of Zion" #7896
+M 2:6 "my holy hill of Zion" +r2.zion
+R #5793 | located in | #7896 | 2:6 "upon my holy hill of Zion"
+M 2:8 "earth" +r2.earth
+M 2:10 "earth" +r2.earth
+S +r3.psalmist | Spoken | +kings-of-the-earth | 2:10 "Be wise now" .. 2:12 "trust in him"
+M 2:12 "all they that put their trust in him" +r2.faithful
+A 2:12 "Blessed are all they that put their trust in him" +r2.trust

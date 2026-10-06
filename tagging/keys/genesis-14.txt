@@ -15,196 +15,329 @@ N #6142 | Plain of Mamre | name
 N +valley-of-shaveh | King's Dale | name
 N #8553 | Most High God | title
 N #8553 | Possessor of heaven and earth | title
-A 14:1 "And it came" .. 14:12 "departed" +battle-of-siddim
-A 14:13 "And there came" .. 14:16 "people" +rescue-of-lot
-A 14:20 "And he gave him tithes of all" +tithing
-M 14:1 "Amraphel" #4413
-M 14:1 "king of Shinar" #4413
-M 14:1 "Shinar" #8183
+E +r2.invaders | group | Chedorlaomer’s invading force | The force led by Chedorlaomer and his allied kings that captures Lot and is pursued by Abram.
+E +r2.survivors | group | Survivors of the battle of Siddim | The remaining defenders who flee to the mountain after the kings of Sodom and Gomorrah fall.
+E +r2.servants | group | Abram’s trained servants | The three hundred and eighteen servants born in Abram’s household whom he arms to rescue Lot.
+E +r2.escapee | person | Escapee who informs Abram | The unnamed survivor who tells Abram about Lot’s capture.
+E +r2.captives | group | People rescued by Abram | The people Abram recovers after pursuing the force that captures Lot.
+E +r2.women | group | Women rescued by Abram | The women Abram brings back with Lot and the other rescued people.
+E +r2.sodom_people | group | People of Sodom | The inhabitants of Sodom whose possessions and provisions are taken by Chedorlaomer’s force.
+E +r2.gomorrah_people | group | People of Gomorrah | The inhabitants of Gomorrah whose possessions and provisions are taken by Chedorlaomer’s force.
+E +r2.amalek_country | land | Country of the Amalekites | The territory of the Amalekites attacked by Chedorlaomer’s coalition after it reaches Kadesh.
+E +r2.refuge_mountain | mountain | Mountain of refuge from Siddim | The mountain to which the remaining defenders flee after the battle in the vale of Siddim.
+E +r2.heaven | place | Heaven | The heavenly realm over which God has dominion.
+E +r2.earth | place | Earth | The world over which God has dominion.
+E +r2.war | event | War of the kings in Genesis 14 | Chedorlaomer’s campaign against the rebellious kings culminates in Abram’s rescue of Lot.
+E +r3.escaped | person | one that had escaped | Survivor of the vale of Siddim who told Abram that Lot was taken.
+E +r3.servants | group | trained servants of Abram | Three hundred eighteen men born in Abram’s house who went with him to rescue Lot.
+E +r3.amalekcountry | land | country of the Amalekites | Territory of the Amalekites smitten by Chedorlaomer.
+E +r3.priestmhg | office | priest of the most high God | Priestly office Melchizedek held as priest of God Most High.
 M 14:1 "Arioch" #4476
-M 14:1 "king of Ellasar" #4476
-M 14:1 "Ellasar" #7686
-M 14:1 "Chedorlaomer" #4787
-M 14:1 "king of Elam" #4787
-M 14:1 "Elam" #4914
-M 14:1 "Tidal" #7097
-M 14:1 "king of nations" #7097
-M 14:1 "nations" #5185
-M 14:2 "these" #4413
-M 14:2 "these" #4476
-M 14:2 "these" #4787
-M 14:2 "these" #7097
-M 14:2 "war" +battle-of-siddim
-M 14:2 "Bera" #4700
-M 14:2 "king of Sodom" #4700
-M 14:2 "Sodom" #8203
-M 14:2 "Birsha" #4748
-M 14:2 "king of Gomorrah" #4748
-M 14:2 "Gomorrah" #7777
-M 14:2 "Shinab" #6971
-M 14:2 "king of Admah" #6971
-M 14:2 "Admah" #7422
-M 14:2 "Shemeber" #6906
-M 14:2 "king of Zeboiim" #6906
-M 14:2 "Zeboiim" #8283
-M 14:2 "king of Bela" +king-of-bela
-M 14:2 "Bela" #8304
-M 14:2 "which" #8304
 M 14:2 "Zoar" #8304
-M 14:3 "All these" #4700
-M 14:3 "All these" #4748
-M 14:3 "All these" #6971
-M 14:3 "All these" #6906
-M 14:3 "All these" +king-of-bela
-M 14:3 "vale of Siddim" #8192
-M 14:3 "which" #8192
-M 14:3 "salt sea" #8143
-M 14:4 "they" #4700
-M 14:4 "they" #4748
-M 14:4 "they" #6971
 M 14:4 "they" #6906
-M 14:4 "they" +king-of-bela
-M 14:4 "Chedorlaomer" #4787
-M 14:4 "they"#2 #4700
+M 14:2 "Admah" #7422
+M 14:17 "Chedorlaomer" #4787
+M 14:24 "Eshcol" #5082
+M 14:8 "them" #4476
+M 14:13 "Abram" #4227
+M 14:12 "Lot" #6041
+M 14:12 "Abram’s" #4227
+M 14:14 "his"#2 #4227
+M 14:2 "Gomorrah" #7777
+M 14:3 "vale of Siddim" #8192
+M 14:7 "Amalekites" #8369
+M 14:24 "them" #6141
+M 14:1 "Amraphel" #4413
+M 14:23 "thou" #4700
+M 14:13 "brother of Eshcol" #6141
+M 14:1 "king of nations" #7097
+M 14:8 "they" #4748
+M 14:11 "Gomorrah" #7777
+M 14:9 "king of nations" #7097
+M 14:13 "he" #4227
+M 14:1 "king of Shinar" #4413
+M 14:14 "Abram" #4227
+M 14:21 "king of Sodom" #4700
+M 14:16 "his"#2 #6041
+M 14:6 "El-paran" #7688
+M 14:2 "Sodom" #8203
+M 14:17 "valley of Shaveh" +valley-of-shaveh
+M 14:9 "five" #4748
+M 14:9 "four kings" #7097
+M 14:13 "these" #5082
+M 14:9 "four kings" #4413
+M 14:9 "Arioch" #4476
+M 14:8 "king of Admah" #6971
+M 14:8 "them" #4413
+M 14:9 "four kings" #4476
+M 14:9 "four kings" #4787
+M 14:8 "Admah" #7422
+M 14:12 "Sodom" #8203
+M 14:16 "he" #4227
+M 14:10 "kings of Sodom and Gomorrah" #4700
+M 14:2 "Birsha" #4748
+M 14:14 "Dan" #4827
+M 14:21 "thyself" #4227
+M 14:24 "Aner" #4435
+M 14:9 "five" +king-of-bela
+M 14:19 "possessor of heaven and earth" #8553
+M 14:9 "five" #4700
+M 14:24 "them" #4435
 M 14:4 "they"#2 #4748
-M 14:4 "they"#2 #6971
-M 14:4 "they"#2 #6906
+M 14:9 "Chedorlaomer" #4787
+M 14:19 "him" #4227
+M 14:6 "Horites" #8413
 M 14:4 "they"#2 +king-of-bela
 M 14:5 "Chedorlaomer" #4787
+M 14:7 "Kadesh" #7912
+M 14:3 "All these" #6906
+M 14:9 "king of Elam" #4787
+M 14:9 "five" #6971
+M 14:2 "Shemeber" #6906
+M 14:22 "Sodom" #8203
+M 14:13 "Eshcol" #5082
+M 14:21 "Abram" #4227
+M 14:9 "king of Ellasar" #4476
+M 14:7 "En-mishpat" #7912
+M 14:10 "vale of Siddim" #8192
+M 14:14 "his" #4227
+M 14:2 "these" #4787
+M 14:8 "vale of Siddim" #8192
+M 14:4 "they"#2 #6971
+M 14:5 "Shaveh Kiriathaim" #8174
+M 14:8 "Sodom" #8203
+M 14:9 "Amraphel" #4413
+M 14:4 "Chedorlaomer" #4787
+M 14:17 "Sodom" #8203
+M 14:15 "he" #4227
+M 14:11 "Sodom" #8203
+M 14:2 "these" #4476
+M 14:8 "they" #4700
+M 14:9 "Shinar" #8183
+M 14:24 "Mamre" #6141
+M 14:1 "Chedorlaomer" #4787
+M 14:19 "most high God" #8553
+M 14:22 "Abram" #4227
+M 14:2 "king of Zeboiim" #6906
+M 14:15 "he"#2 #4227
+M 14:6 "their" #8413
+M 14:18 "priest of the most high God" #6211
+M 14:9 "Elam" #4914
+M 14:13 "plain of Mamre" #6142
+M 14:13 "Aner" #4435
+M 14:15 "Damascus" #7650
+M 14:2 "Shinab" #6971
+M 14:7 "Amorites" #4406
+M 14:4 "they" #4748
+M 14:8 "they" #6971
+M 14:23 "I"#3 #4700
+M 14:24 "their" #6141
+M 14:1 "Elam" #4914
+M 14:14 "his"#3 #4227
+M 14:17 "him" #4227
+M 14:18 "king of Salem" #6211
+M 14:4 "they" +king-of-bela
+M 14:2 "Zeboiim" #8283
+M 14:22 "mine" #4227
+M 14:5 "Rephaims" #6678
+M 14:13 "these" #6141
+M 14:8 "Bela" #8304
+M 14:8 "they" #6906
+M 14:8 "king of Gomorrah" #4748
+M 14:10 "Gomorrah" #7777
+M 14:22 "king of Sodom" #4700
+M 14:16 "his" #4227
+M 14:1 "king of Elam" #4787
+M 14:2 "these" #4413
+M 14:8 "Gomorrah" #7777
+M 14:8 "Zoar" #8304
+M 14:8 "king of Zeboiim" #6906
+M 14:15 "himself" #4227
+M 14:1 "Shinar" #8183
+M 14:18 "Salem" #7896
+M 14:16 "Lot" #6041
+M 14:2 "king of Gomorrah" #4748
+M 14:2 "king of Admah" #6971
+M 14:24 "their" #5082
+M 14:9 "five" #6906
+M 14:3 "All these" #6971
+M 14:2 "these" #7097
+M 14:15 "his" #4227
+M 14:22 "LORD" #5793
+M 14:13 "Abram"#2 #4227
+M 14:4 "they"#2 #6906
+M 14:18 "most high God" #8553
+M 14:1 "king of Ellasar" #4476
+M 14:18 "Melchizedek" #6211
+M 14:19 "Abram" #4227
+M 14:23 "thine" #4700
+M 14:20 "thine" #4227
+M 14:2 "Bera" #4700
+M 14:24 "their" #4435
+M 14:22 "I" #4227
+M 14:23 "I"#2 #4227
+M 14:13 "Mamre" #6141
+M 14:20 "thy" #4227
+M 14:9 "Ellasar" #7686
+M 14:12 "Abram’s brother’s son" #6041
+M 14:9 "king of Shinar" #4413
+M 14:19 "he" #6211
+M 14:2 "king of Bela" +king-of-bela
+M 14:5 "Emims" #5051
+M 14:5 "Ashteroth Karnaim" #7483
+M 14:3 "All these" #4748
+M 14:5 "him" #4787
+M 14:13 "these" #4435
+M 14:23 "Abram" #4227
+M 14:8 "king of Sodom" #4700
+M 14:10 "Sodom" #8203
+M 14:3 "All these" +king-of-bela
+M 14:15 "Hobah" #7844
+M 14:17 "king of Sodom" #4700
+M 14:24 "me" #4227
+M 14:17 "his" #4227
+M 14:17 "king’s dale" +valley-of-shaveh
+M 14:2 "Bela" #8304
+M 14:4 "they"#2 #4700
+M 14:14 "he" #4227
+M 14:18 "he" #6211
+M 14:21 "me" #4700
+M 14:4 "they" #4700
+M 14:7 "Hazezon-tamar" #7700
+M 14:10 "kings of Sodom and Gomorrah" #4748
+M 14:21 "Sodom" #8203
+M 14:8 "they" +king-of-bela
+M 14:3 "All these" #4700
+M 14:17 "him"#2 #4787
+M 14:12 "his" #6041
+M 14:2 "king of Sodom" #4700
+M 14:4 "they" #6971
+M 14:1 "Tidal" #7097
+M 14:5 "Zuzims" #7363
+M 14:23 "I" #4227
+M 14:9 "Tidal" #7097
+M 14:24 "them" #5082
+M 14:8 "king of Bela" +king-of-bela
+M 14:5 "Ham" #5221
+M 14:1 "Ellasar" #7686
+M 14:13 "Amorite" #6141
+M 14:8 "Zeboiim" #8283
+M 14:13 "Hebrew" #4227
+M 14:13 "brother of Aner" #6141
+M 14:20 "he" #4227
+M 14:20 "most high God" #8553
+M 14:8 "them" #7097
+M 14:8 "them" #4787
+M 14:20 "him" #6211
+R #4413 | leader of | #8183 | 14:1 "Amraphel king of Shinar"; 14:9 "Amraphel king of Shinar"
+R #4476 | leader of | #7686 | 14:1 "Arioch king of Ellasar"; 14:9 "Arioch king of Ellasar"
+R #4787 | leader of | #4914 | 14:1 "Chedorlaomer king of Elam"; 14:9 "Chedorlaomer the king of Elam"
+R #4700 | leader of | #8203 | 14:2 "Bera king of Sodom"
+R #4748 | leader of | #7777 | 14:2 "Birsha king of Gomorrah"
+R #6971 | leader of | #7422 | 14:2 "Shinab king of Admah"
+R #6906 | leader of | #8283 | 14:2 "Shemeber king of Zeboiim"
+R +king-of-bela | leader of | #8304 | 14:2 "king of Bela which is Zoar"; 14:8 "king of Bela the same is Zoar"
+R #6211 | leader of | #7896 | 14:18 "Melchizedek king of Salem"
+R #4227 | member of | #5342 | 14:13 "Abram the Hebrew"
+R #6141 | member of | #4406 | 14:13 "Mamre the Amorite"
+R #5082 | sibling of | #6141 | 14:13 "Mamre the Amorite brother of Eshcol"
+R #4435 | sibling of | #6141 | 14:13 "Mamre the Amorite brother of Eshcol and brother of Aner"
+S #4700 | Spoken | #4227 | 14:21 "Give me the persons and take the goods to thyself"
+M 14:1 "nations" #5185
+A 14:1 "And it came" .. 14:12 "goods and departed" +battle-of-siddim
+R #7097 | leader of | #5185 | 14:1 "Tidal king of nations"; 14:9 "Tidal king of nations"
+M 14:2 "war" +battle-of-siddim
+M 14:2 "which" #8304
+M 14:3 "salt sea" #8143
+M 14:3 "which" #8192
+M 14:5 "Kiriathaim" #7935
 M 14:5 "kings that were with him" #4413
 M 14:5 "kings that were with him" #4476
 M 14:5 "kings that were with him" #7097
-M 14:5 "him" #4787
-M 14:5 "Rephaims" #6678
-M 14:5 "Ashteroth Karnaim" #7483
-M 14:5 "Zuzims" #7363
-M 14:5 "Ham" #5221
-M 14:5 "Emims" #5051
-M 14:5 "Shaveh Kiriathaim" #8174
-M 14:5 "Kiriathaim" #7935
-M 14:6 "Horites" #8413
-M 14:6 "their" #8413
+J #4413 | - | #7688 | - | 14:5 "kings that were" .. 14:6 "Seir unto El-paran"
+J #4476 | - | #7688 | - | 14:5 "kings that were" .. 14:6 "Seir unto El-paran"
+J #4787 | - | #7688 | - | 14:5 "came Chedorlaomer and" .. 14:6 "Seir unto El-paran"
+J #7097 | - | #7688 | - | 14:5 "kings that were" .. 14:6 "Seir unto El-paran"
+R #5051 | located in | #8174 | 14:5 "Emims in Shaveh Kiriathaim"
+R #6678 | located in | #7483 | 14:5 "Rephaims in Ashteroth Karnaim"
+R #7363 | located in | #5221 | 14:5 "Zuzims in Ham"
 M 14:6 "mount Seir" #8154
-M 14:6 "El-paran" #7688
 M 14:6 "which" #7688
 M 14:6 "wilderness" #8073
+R #7688 | near | #8073 | 14:6 "El-paran which is by the wilderness"
+R #8413 | located in | #8154 | 14:6 "Horites in their mount Seir"
+M 14:7 "country of the Amalekites" +r2.amalek_country
+M 14:7 "country of the Amalekites" +r3.amalekcountry
+M 14:7 "that" #4406
 M 14:7 "they" #4413
 M 14:7 "they" #4476
 M 14:7 "they" #4787
 M 14:7 "they" #7097
-M 14:7 "En-mishpat" #7912
 M 14:7 "which" #7912
-M 14:7 "Kadesh" #7912
-M 14:7 "Amalekites" #8369
-M 14:7 "Amorites" #4406
-M 14:7 "that" #4406
-M 14:7 "Hazezon-tamar" #7700
-M 14:8 "king of Sodom" #4700
-M 14:8 "Sodom" #8203
-M 14:8 "king of Gomorrah" #4748
-M 14:8 "Gomorrah" #7777
-M 14:8 "king of Admah" #6971
-M 14:8 "Admah" #7422
-M 14:8 "king of Zeboiim" #6906
-M 14:8 "Zeboiim" #8283
-M 14:8 "king of Bela" +king-of-bela
-M 14:8 "Bela" #8304
-M 14:8 "same" #8304
-M 14:8 "Zoar" #8304
-M 14:8 "they" #4700
-M 14:8 "they" #4748
-M 14:8 "they" #6971
-M 14:8 "they" #6906
-M 14:8 "they" +king-of-bela
+J #4413 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
+J #4476 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
+J #4787 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
+J #7097 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
+R #4406 | located in | #7700 | 14:7 "Amorites that dwelt in Hazezon-tamar"
+R #8369 | located in | +r3.amalekcountry | 14:7 "country of the Amalekites"
 M 14:8 "battle" +battle-of-siddim
-M 14:8 "them" #4413
-M 14:8 "them" #4476
-M 14:8 "them" #4787
-M 14:8 "them" #7097
-M 14:8 "vale of Siddim" #8192
-M 14:9 "Chedorlaomer" #4787
-M 14:9 "king of Elam" #4787
-M 14:9 "Elam" #4914
-M 14:9 "Tidal" #7097
-M 14:9 "king of nations" #7097
+M 14:8 "same" #8304
+J #4700 | - | #8192 | - | 14:8 "there went out the king of Sodom and the king of Gomorrah and the king of Admah and the king of Zeboiim and the king of Bela the same is Zoar and they joined battle with them in the vale of Siddim"
+J #4748 | - | #8192 | - | 14:8 "there went out the king of Sodom and the king of Gomorrah and the king of Admah and the king of Zeboiim and the king of Bela the same is Zoar and they joined battle with them in the vale of Siddim"
+J #6906 | - | #8192 | - | 14:8 "there went out the king of Sodom and the king of Gomorrah and the king of Admah and the king of Zeboiim and the king of Bela the same is Zoar and they joined battle with them in the vale of Siddim"
+J #6971 | - | #8192 | - | 14:8 "there went out the king of Sodom and the king of Gomorrah and the king of Admah and the king of Zeboiim and the king of Bela the same is Zoar and they joined battle with them in the vale of Siddim"
+J +king-of-bela | - | #8192 | - | 14:8 "there went out the king of Sodom and the king of Gomorrah and the king of Admah and the king of Zeboiim and the king of Bela the same is Zoar and they joined battle with them in the vale of Siddim"
+R #4413 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R #4476 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R #4700 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R #4748 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R #4787 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R #6906 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R #6971 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R #7097 | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
+R +battle-of-siddim | took place at | #8192 | 14:8 "they joined battle with them in the vale of Siddim"
+R +king-of-bela | took part in | +battle-of-siddim | 14:8 "And there went" .. 14:9 "kings with five"
 M 14:9 "nations" #5185
-M 14:9 "Amraphel" #4413
-M 14:9 "king of Shinar" #4413
-M 14:9 "Shinar" #8183
-M 14:9 "Arioch" #4476
-M 14:9 "king of Ellasar" #4476
-M 14:9 "Ellasar" #7686
-M 14:9 "four kings" #4413
-M 14:9 "four kings" #4476
-M 14:9 "four kings" #4787
-M 14:9 "four kings" #7097
-M 14:9 "five" #4700
-M 14:9 "five" #4748
-M 14:9 "five" #6971
-M 14:9 "five" #6906
-M 14:9 "five" +king-of-bela
-M 14:10 "vale of Siddim" #8192
-M 14:10 "kings of Sodom and Gomorrah" #4700
-M 14:10 "kings of Sodom and Gomorrah" #4748
-M 14:10 "Sodom" #8203
-M 14:10 "Gomorrah" #7777
 M 14:10 "there" #8192
-M 14:11 "they" #4413
-M 14:11 "they" #4476
-M 14:11 "they" #4787
-M 14:11 "they" #7097
-M 14:11 "Sodom" #8203
-M 14:11 "Gomorrah" #7777
-M 14:11 "their" #8203
+M 14:10 "they that remained" +r2.survivors
 M 14:11 "their" #7777
+M 14:11 "their" #8203
 M 14:11 "their"#2 #4413
 M 14:11 "their"#2 #4476
 M 14:11 "their"#2 #4787
 M 14:11 "their"#2 #7097
+M 14:11 "they" #4413
+M 14:11 "they" #4476
+M 14:11 "they" #4787
+M 14:11 "they" #7097
+M 14:12 "Abram’s brother’s" #5274
 M 14:12 "they" #4413
 M 14:12 "they" #4476
 M 14:12 "they" #4787
 M 14:12 "they" #7097
-M 14:12 "Lot" #6041
-M 14:12 "Abram’s brother’s son" #6041
-M 14:12 "Abram’s" #4227
-M 14:12 "Abram’s brother’s" #5274
 M 14:12 "who" #6041
-M 14:12 "Sodom" #8203
-M 14:12 "his" #6041
-M 14:13 "Abram" #4227
-M 14:13 "Hebrew" #4227
-M 14:13 "he" #4227
-M 14:13 "plain of Mamre" #6142
-M 14:13 "Mamre" #6141
-M 14:13 "Amorite" #6141
-M 14:13 "brother of Eshcol" #6141
-M 14:13 "Eshcol" #5082
-M 14:13 "brother of Aner" #6141
-M 14:13 "Aner" #4435
-M 14:13 "these" #6141
-M 14:13 "these" #5082
-M 14:13 "these" #4435
-M 14:13 "Abram"#2 #4227
-M 14:14 "Abram" #4227
-M 14:14 "his" #4227
+R #5274 | sibling of | #4227 | 14:12 "Abram’s brother’s"
+R #6041 | child of | #5274 | 14:12 "Lot Abram’s brother’s son"
+R #6041 | located in | #8203 | 14:12 "Lot Abram’s brother’s son who dwelt in Sodom"
+M 14:13 "Amorite" #4406
+M 14:13 "Hebrew" #5342
+M 14:13 "one that had escaped" +r2.escapee
+M 14:13 "one that had escaped" +r3.escaped
+A 14:13 "And there came" .. 14:16 "and the people" +rescue-of-lot
+R #4227 | located in | #6142 | 14:13 "Abram the Hebrew for he dwelt in the plain of Mamre"
 M 14:14 "his brother" #6041
-M 14:14 "he" #4227
-M 14:14 "his"#2 #4227
-M 14:14 "his"#3 #4227
+M 14:14 "his trained servants" +r2.servants
 M 14:14 "them" #4413
 M 14:14 "them" #4476
 M 14:14 "them" #4787
 M 14:14 "them" #7097
-M 14:14 "Dan" #4827
-M 14:15 "he" #4227
-M 14:15 "himself" #4227
+J #4227 | #4827 | #7844 | - | 14:14 "pursued them unto" .. 14:15 "hand of Damascus"
+J #4227 | - | #4827 | - | 14:14 "pursued them unto Dan"
+M 14:15 "his servants" +r2.servants
 M 14:15 "them" #4413
 M 14:15 "them" #4476
 M 14:15 "them" #4787
 M 14:15 "them" #7097
-M 14:15 "he"#2 #4227
-M 14:15 "his" #4227
 M 14:15 "them"#2 #4413
 M 14:15 "them"#2 #4476
 M 14:15 "them"#2 #4787
@@ -213,120 +346,39 @@ M 14:15 "them"#3 #4413
 M 14:15 "them"#3 #4476
 M 14:15 "them"#3 #4787
 M 14:15 "them"#3 #7097
-M 14:15 "Hobah" #7844
 M 14:15 "which" #7844
-M 14:15 "Damascus" #7650
-M 14:16 "he" #4227
-M 14:16 "his" #4227
+R #4227 | took part in | +rescue-of-lot | 14:15 "he divided himself against them he and his servants by night and smote them"
+R #7844 | north of | #7650 | 14:15 "Hobah which is on the left hand of Damascus"
 M 14:16 "his brother" #6041
-M 14:16 "Lot" #6041
-M 14:16 "his"#2 #6041
-M 14:17 "king of Sodom" #4700
-M 14:17 "Sodom" #8203
-M 14:17 "him" #4227
-M 14:17 "his" #4227
-M 14:17 "slaughter of Chedorlaomer and of the kings that were with him" +rescue-of-lot
-M 14:17 "Chedorlaomer" #4787
+M 14:16 "people" +r2.captives
+M 14:16 "women" +r2.women
 M 14:17 "kings that were with him" #4413
 M 14:17 "kings that were with him" #4476
 M 14:17 "kings that were with him" #7097
-M 14:17 "him"#2 #4787
-M 14:17 "valley of Shaveh" +valley-of-shaveh
+M 14:17 "slaughter of Chedorlaomer and of the kings that were with him" +rescue-of-lot
 M 14:17 "which" +valley-of-shaveh
-M 14:17 "king’s dale" +valley-of-shaveh
-M 14:18 "Melchizedek" #6211
-M 14:18 "king of Salem" #6211
-M 14:18 "Salem" #7896
-M 14:18 "he" #6211
-M 14:18 "priest of the most high God" #6211
-M 14:18 "most high God" #8553
-M 14:19 "he" #6211
-M 14:19 "him" #4227
-M 14:19 "Abram" #4227
-M 14:19 "most high God" #8553
-M 14:19 "possessor of heaven and earth" #8553
-M 14:20 "most high God" #8553
-M 14:20 "which" #8553
+J #4227 | - | +valley-of-shaveh | - | 14:17 "his return from the slaughter of Chedorlaomer and of the kings that were with him at the valley of Shaveh which is the king’s dale"
+J #4700 | - | +valley-of-shaveh | - | 14:17 "the king of Sodom went out to meet him after his return from the slaughter of Chedorlaomer and of the kings that were with him at the valley of Shaveh"
+R #4413 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
+R #4476 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
+R #4787 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
+R #7097 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
+R #6211 | holds office | +r3.priestmhg | 14:18 "he was the priest of the most high God"
+S #6211 | Spoken | #4227 | 14:19 "Blessed be Abram" .. 14:20 "into thy hand"
 M 14:20 "thine enemies" #4413
 M 14:20 "thine enemies" #4476
 M 14:20 "thine enemies" #4787
 M 14:20 "thine enemies" #7097
-M 14:20 "thine" #4227
-M 14:20 "thy" #4227
-M 14:20 "he" #4227
-M 14:20 "him" #6211
-M 14:21 "king of Sodom" #4700
-M 14:21 "Sodom" #8203
-M 14:21 "Abram" #4227
-M 14:21 "me" #4700
-M 14:21 "thyself" #4227
-M 14:22 "Abram" #4227
-M 14:22 "king of Sodom" #4700
-M 14:22 "Sodom" #8203
-M 14:22 "I" #4227
-M 14:22 "mine" #4227
-M 14:22 "LORD" #5793
+M 14:20 "which" #8553
+A 14:20 "And he gave him tithes of all" +tithing
+A 14:20 "he gave him tithes of all" +tithing
+M 14:21 "persons" +r2.captives
 M 14:22 "most high God" #8553
 M 14:22 "possessor of heaven and earth" #8553
-M 14:23 "I" #4227
-M 14:23 "I"#2 #4227
-M 14:23 "thine" #4700
-M 14:23 "thou" #4700
-M 14:23 "I"#3 #4700
-M 14:23 "Abram" #4227
+S #4227 | Spoken | #4700 | 14:22 "I have lift" .. 14:24 "take their portion"
+S #4700 | Spoken |  | 14:23 "I have made Abram rich"
 M 14:24 "men which went with me" #4435
 M 14:24 "men which went with me" #5082
 M 14:24 "men which went with me" #6141
-M 14:24 "me" #4227
-M 14:24 "Aner" #4435
-M 14:24 "Eshcol" #5082
-M 14:24 "Mamre" #6141
-M 14:24 "them" #4435
-M 14:24 "them" #5082
-M 14:24 "them" #6141
-M 14:24 "their" #4435
-M 14:24 "their" #5082
-M 14:24 "their" #6141
-R #4413 | leader of | #8183 | 14:1 "Amraphel king of Shinar"; 14:9 "Amraphel king of Shinar"
-R #4476 | leader of | #7686 | 14:1 "Arioch king of Ellasar"; 14:9 "Arioch king of Ellasar"
-R #4787 | leader of | #4914 | 14:1 "Chedorlaomer king of Elam"; 14:9 "Chedorlaomer the king of Elam"
-R #7097 | leader of | #5185 | 14:1 "Tidal king of nations"; 14:9 "Tidal king of nations"
-R #4700 | leader of | #8203 | 14:2 "Bera king of Sodom"
-R #4748 | leader of | #7777 | 14:2 "Birsha king of Gomorrah"
-R #6971 | leader of | #7422 | 14:2 "Shinab king of Admah"
-R #6906 | leader of | #8283 | 14:2 "Shemeber king of Zeboiim"
-R +king-of-bela | leader of | #8304 | 14:2 "king of Bela which is Zoar"; 14:8 "king of Bela the same is Zoar"
-R #6211 | leader of | #7896 | 14:18 "Melchizedek king of Salem"
-R #8192 | located in | #8143 | 14:3 "vale of Siddim which is the salt sea"
-R #7688 | near | #8073 | 14:6 "El-paran which is by the wilderness"
-R #7844 | north of | #7650 | 14:15 "Hobah which is on the left hand of Damascus"
-R #4227 | member of | #5342 | 14:13 "Abram the Hebrew"
-R #6141 | member of | #4406 | 14:13 "Mamre the Amorite"
-R #5082 | sibling of | #6141 | 14:13 "Mamre the Amorite brother of Eshcol"
-R #4435 | sibling of | #6141 | 14:13 "Mamre the Amorite brother of Eshcol and brother of Aner"
-R +battle-of-siddim | took place at | #8192 | 14:8 "they joined battle with them in the vale of Siddim"
-R #4413 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #4476 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #4787 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #7097 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #4700 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #4748 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #6971 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #6906 | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R +king-of-bela | took part in | +battle-of-siddim | 14:8 "And there went out" .. 14:9 "four kings with five"
-R #4227 | took part in | +rescue-of-lot | 14:15 "he divided himself against them he and his servants by night and smote them"
-R #4787 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
-R #4413 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
-R #4476 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
-R #7097 | took part in | +rescue-of-lot | 14:17 "slaughter of Chedorlaomer and of the kings that were with him"
-S #6211 | spoken | #4227 | 14:19 "Blessed be Abram" .. 14:20 "into thy hand"
-S #4700 | spoken | #4227 | 14:21 "Give me the persons and take the goods to thyself"
-S #4227 | spoken | #4700 | 14:22 "I have lift up" .. 14:24 "take their portion"
-J #4413 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
-J #4476 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
-J #4787 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
-J #7097 | - | #7912 | - | 14:7 "they returned and came to En-mishpat which is Kadesh"
-J #4227 | - | #4827 | - | 14:14 "pursued them unto Dan"
-J #4227 | - | #7844 | - | 14:15 "pursued them unto Hobah"
-J #4700 | - | +valley-of-shaveh | - | 14:17 "king of Sodom went out" .. 14:17 "king’s dale"
-J #4227 | - | +valley-of-shaveh | - | 14:17 "his return" .. 14:17 "king’s dale"
+M 14:24 "young men" +r2.servants
+M 14:24 "young men" +r3.servants

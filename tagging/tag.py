@@ -225,7 +225,7 @@ def entity_lines(db: sqlite3.Connection, ids: list[int]) -> list[str]:
     return lines
 
 
-def prompt(db: sqlite3.Connection, p: Passage, prefill: dict | None = None) -> str:
+def prompt(db: sqlite3.Connection, p: Passage, prefill: dict | None = None, review: bool = False) -> str:
     shown = current(db, p)
     named = lists(db)
     checked = []
@@ -248,6 +248,9 @@ def prompt(db: sqlite3.Connection, p: Passage, prefill: dict | None = None) -> s
         "# Current tags\n\n" + ("\n".join(shown) or "(none)"),
         *checked,
     ]
+    if review:
+        parts.append("# Review\n\nThe current tags are a careful earlier answer for this passage. Check every one against the rules and the passage, "
+                     "fix what is wrong, and add what is missing.")
     return "\n\n".join(parts) + "\n"
 
 
@@ -690,6 +693,7 @@ def main():
     c = commands.add_parser("prompt", help="print the prompt for a passage")
     c.add_argument("passage")
     c.add_argument("--prefill", action="store_true", help="include the passage's Jev prefill")
+    c.add_argument("--review", action="store_true", help="ask the model to check the current tags")
     c = commands.add_parser("review-prompt", help="print a prompt asking a model to check and correct an answer")
     c.add_argument("passage")
     c.add_argument("answer", type=Path)
@@ -735,7 +739,7 @@ def main():
         return results(db)
     p = passage(db, args.passage)
     if args.command == "prompt":
-        print(prompt(db, p, json.loads(prefill_path(p.label).read_text()) if args.prefill else None), end="")
+        print(prompt(db, p, json.loads(prefill_path(p.label).read_text()) if args.prefill else None, args.review), end="")
     elif args.command == "review-prompt":
         print(review_prompt(db, p, args.answer.read_text(), args.flags.read_text() if args.flags else None), end="")
     elif args.command == "check":

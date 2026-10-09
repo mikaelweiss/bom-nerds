@@ -17,7 +17,7 @@ Rules for adding and fixing data in `scripture.db`. Read the schema with `sqlite
 - Create an entity for anything a reader would look up across scripture: a specific person, group, place, event, object, record, office, or topic. Common nouns used generically are not entities.
 - Use the narrowest type that fits.
 - The description is one sentence that tells the entity apart from others with the same name.
-- Every form the text uses to name an entity, including other spellings, is an other name in `entity_name`. `is_title` is 1 for a designation such as "the Lord", and 0 for a proper name.
+- Every form the text uses to name an entity, including other spellings, is an other name in `entity_name`. `is_title` is 1 for a designation such as "the Lord" or "king of Judah", and 0 for a proper name. A description such as "his servant" or "the young man" is a mention, not an other name.
 
 ## Mentions
 

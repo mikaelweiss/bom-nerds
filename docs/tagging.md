@@ -61,3 +61,11 @@ Tag every word or phrase that refers to an entity: names, titles, pronouns, and 
 - "The Lord", "Lord God", and "God" refer to Jesus Christ or God the Father. Decide each one from its passage.
 - "The Lord" and Jehovah refer to Jesus Christ unless the passage points to the Father. "God" alone refers to the Father unless the passage points to Christ.
 - Where one passage names both, tag each name to its own entity.
+
+## Hebrew and Greek
+
+- Tag the King James Version only. `tagging/originals.py` carries its mentions onto the Westminster Leningrad Codex and the SBL Greek New Testament through `word_match`.
+- A carried mention covers the original words matched to its English words. A mention of a name stays in one verse. Prefixes, suffixes, and articles with no English match stay outside it.
+- A mention with no matched words is not carried. Most are pronouns, which Hebrew writes as suffixes and both languages write as verb endings.
+- After retagging a chapter, run `python3 tagging/originals.py "Book C"` to rebuild its Hebrew or Greek mentions.
+- Speeches, journeys, dates, and relationship evidence stay on the King James words. `word_match` leads from them to the original words.

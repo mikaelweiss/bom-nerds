@@ -352,7 +352,8 @@ def relabel_fulfills(db, fixes, report):
         if not db.execute("select 1 " + link, (fulfills, *ends)).fetchone():
             report[f"fulfills_review: no Fulfills link to relabel to {line['decision']}"] += 1
         elif db.execute("select 1 " + link, (kind, *ends)).fetchone():
-            report[f"fulfills_review: {line['decision']} already there, relabel skipped"] += 1
+            db.execute("delete " + link, (fulfills, *ends))
+            report[f"fulfills_review: {line['decision']} already there, Fulfills deleted"] += 1
         else:
             db.execute("update passage_link set link_kind_id = ? where id = (select id " + link + ")", (kind, fulfills, *ends))
             report[f"fulfills_review: relabeled to {line['decision']}"] += 1

@@ -1,6 +1,9 @@
 """Give places without coordinates the OpenBible.info location when its identification is confident.
 
-    python fill_place_coordinates.py scripture.db SOURCE_DIR
+    python fill_place_coordinates.py scripture.db SOURCE_DIR [--threshold SCORE] [--review FILE]
+
+--threshold sets the lowest OpenBible score accepted (default 500). With --review, identifications below the
+threshold are written to FILE as JSON lines for manual review, and the database is left untouched.
 
 SOURCE_DIR holds OpenBible's ancient.jsonl and STEPBible's TIPNR.txt. A place matches an OpenBible entry
 through its TIPNR id, or else by name and a shared verse. TIPNR's own coordinates are not used: many are
@@ -8,11 +11,11 @@ placeholders shared by every uncertain site in a region. An OpenBible point shar
 stands for an enclosing site, such as Jerusalem for its gates, so it is skipped too.
 """
 
+import argparse
 import json
 import os
 import re
 import sqlite3
-import sys
 from collections import Counter, defaultdict
 
 CONFIDENT = 500
@@ -33,7 +36,7 @@ def openbible(source):
                 best = (score, latitude, longitude)
         names = {place["friendly_id"].lower(), *(n.lower() for n in place.get("translation_name_counts") or {})}
         verses = {v["sort"] for v in place.get("verses", [])}
-        entries.append((tipnr_keys, names, verses, best))
+        entries.append((tipnr_keys, names, verses, best, place["friendly_id"]))
     return entries
 
 
@@ -50,7 +53,7 @@ def tipnr_keys(source):
     return keys
 
 
-def main(path, source):
+def main(path, source, threshold, review):
     db = sqlite3.connect(path)
     entries = openbible(source)
     by_tipnr = {key: entry for entry in entries for key in entry[0]}
@@ -78,6 +81,7 @@ def main(path, source):
         verses[entity].add(f"{position:02d}{chapter:03d}{verse or 0:03d}")
 
     filled = {"tipnr": 0, "name and verse": 0}
+    borderline = []
     for entity, name, tipnr in places:
         match, how = by_tipnr.get(keys.get(tipnr)), "tipnr"
         if match is None:
@@ -85,14 +89,35 @@ def main(path, source):
                 id(e): e for n in {name.lower()} | names[entity] for e in by_name.get(n, ()) if e[2] & verses[entity]
             }
             match, how = (next(iter(candidates.values())), "name and verse") if len(candidates) == 1 else (None, None)
-        if match is None or match[3] is None or match[3][0] < CONFIDENT or shared[point(match[3])] > 1:
+        if match is None or match[3] is None:
+            continue
+        if match[3][0] < threshold:
+            if review:
+                borderline.append({
+                    "entity_id": entity, "name": name, "tipnr": tipnr, "openbible": match[4], "how": how,
+                    "score": match[3][0], "latitude": match[3][1], "longitude": match[3][2],
+                    "shared": shared[point(match[3])] > 1,
+                })
+            continue
+        if review or shared[point(match[3])] > 1:
             continue
         _, latitude, longitude = match[3]
         db.execute("update entity set latitude = ?, longitude = ? where id = ?", (latitude, longitude, entity))
         filled[how] += 1
     db.commit()
     print(filled)
+    if review:
+        with open(review, "w", encoding="utf-8") as out:
+            for row in borderline:
+                out.write(json.dumps(row, ensure_ascii=False) + "\n")
+        print(f"{len(borderline)} borderline candidates written to {review}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    parser = argparse.ArgumentParser()
+    parser.add_argument("database")
+    parser.add_argument("source")
+    parser.add_argument("--threshold", type=int, default=CONFIDENT)
+    parser.add_argument("--review")
+    args = parser.parse_args()
+    main(args.database, args.source, args.threshold, args.review)

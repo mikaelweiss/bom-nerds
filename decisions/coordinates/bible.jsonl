@@ -1,0 +1,919 @@
+{"entity_id": 4182, "name": "Abel", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 4251, "name": "Addar", "skip": "openbible 414 point is shared with other places"}
+{"entity_id": 4357, "name": "Allon", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 4425, "name": "Ananiah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 4432, "name": "Anathoth", "latitude": 31.80752, "longitude": 35.25758, "source": "openbible 420"}
+{"entity_id": 4450, "name": "Arad", "latitude": 31.2833, "longitude": 35.1267, "source": "knowledge"}
+{"entity_id": 4539, "name": "Avvim", "skip": "openbible 299 point is shared with other places"}
+{"entity_id": 4710, "name": "Bered", "latitude": 31.097, "longitude": 34.652, "source": "openbible 459"}
+{"entity_id": 4726, "name": "Bezer", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 4738, "name": "Bilhah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 4767, "name": "Buz", "skip": "openbible 363 site disputed or identification too weak"}
+{"entity_id": 4819, "name": "Cush", "skip": "region or land with unclear extent"}
+{"entity_id": 4840, "name": "Debir", "skip": "openbible 258 too uncertain"}
+{"entity_id": 4845, "name": "Dedan", "skip": "region or land with unclear extent"}
+{"entity_id": 4875, "name": "Dumah", "skip": "region or land with unclear extent"}
+{"entity_id": 4890, "name": "Eden", "skip": "no earthly location"}
+{"entity_id": 4893, "name": "Eder", "skip": "openbible 266 point is shared with other places"}
+{"entity_id": 4914, "name": "Elam", "latitude": 32.1909, "longitude": 48.2579, "source": "knowledge"}
+{"entity_id": 5045, "name": "Elon", "skip": "openbible 328 point is shared with other places"}
+{"entity_id": 5070, "name": "Ephraim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 5148, "name": "Gedor", "skip": "openbible 390 point is shared with other places"}
+{"entity_id": 5149, "name": "Gedor", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 5176, "name": "Gilead", "skip": "region or land with unclear extent"}
+{"entity_id": 5225, "name": "Hammath", "latitude": 32.7675, "longitude": 35.5372, "source": "knowledge"}
+{"entity_id": 5330, "name": "Havilah", "skip": "openbible 328 point is shared with other places"}
+{"entity_id": 5331, "name": "Havilah", "skip": "region or land with unclear extent"}
+{"entity_id": 5367, "name": "Hepher", "latitude": 32.44285, "longitude": 35.21767, "source": "openbible 455"}
+{"entity_id": 5564, "name": "Jabez", "skip": "openbible 369 point is shared with other places"}
+{"entity_id": 5801, "name": "Jetur", "skip": "region or land with unclear extent"}
+{"entity_id": 5819, "name": "Jezreel", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 6013, "name": "Laban", "skip": "openbible 383 point is shared with other places"}
+{"entity_id": 6058, "name": "Maacah", "skip": "region or land with unclear extent"}
+{"entity_id": 6094, "name": "Madmannah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 6097, "name": "Magog", "skip": "openbible 387 point is shared with other places"}
+{"entity_id": 6234, "name": "Mesha", "skip": "openbible 246 too uncertain"}
+{"entity_id": 6332, "name": "Moab", "latitude": 31.4, "longitude": 35.8, "source": "knowledge"}
+{"entity_id": 6344, "name": "Naamah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 6490, "name": "Ophir", "skip": "openbible 283 point is shared with other places"}
+{"entity_id": 6492, "name": "Ophrah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 6493, "name": "Ophrah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 6628, "name": "Raamah", "skip": "openbible 382 point is shared with other places"}
+{"entity_id": 6660, "name": "Rehob", "skip": "openbible 240 too uncertain"}
+{"entity_id": 6661, "name": "Rehob", "latitude": 32.901389, "longitude": 35.169444, "source": "openbible 428"}
+{"entity_id": 6670, "name": "Rekem", "skip": "openbible 215 point is shared with other places"}
+{"entity_id": 6692, "name": "Rimmon", "skip": "openbible 290 point is shared with other places"}
+{"entity_id": 6693, "name": "Rimmon", "skip": "openbible 404 point is shared with other places"}
+{"entity_id": 6731, "name": "Seba", "skip": "region or land with unclear extent"}
+{"entity_id": 6736, "name": "Seir", "latitude": 30.5, "longitude": 35.45, "source": "knowledge"}
+{"entity_id": 6783, "name": "Shamir", "skip": "openbible 263 point is shared with other places"}
+{"entity_id": 6784, "name": "Shamir", "skip": "openbible 287 too uncertain"}
+{"entity_id": 6824, "name": "Sheba", "skip": "region or land with unclear extent"}
+{"entity_id": 6849, "name": "Shelah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 6874, "name": "Shema", "skip": "openbible 400 point is shared with other places"}
+{"entity_id": 6994, "name": "Shual", "skip": "openbible 474 point is shared with other places"}
+{"entity_id": 7054, "name": "Tahath", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7066, "name": "Tappuah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7067, "name": "Tappuah", "skip": "openbible 138 too uncertain"}
+{"entity_id": 7072, "name": "Tarshish", "skip": "region or land with unclear extent"}
+{"entity_id": 7080, "name": "Telem", "skip": "openbible 123 point is shared with other places"}
+{"entity_id": 7085, "name": "Teman", "skip": "openbible 231 point is shared with other places"}
+{"entity_id": 7088, "name": "Terah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7157, "name": "Uz", "skip": "openbible 384 point is shared with other places"}
+{"entity_id": 7163, "name": "Uzza", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7338, "name": "Zimri", "skip": "openbible 316 point is shared with other places"}
+{"entity_id": 7340, "name": "Ziph", "latitude": 30.99677, "longitude": 34.98188, "source": "openbible 467"}
+{"entity_id": 7357, "name": "Zuph", "skip": "region or land with unclear extent"}
+{"entity_id": 7409, "name": "Abronah", "skip": "openbible 268 point is shared with other places"}
+{"entity_id": 7410, "name": "Accad", "skip": "openbible 241 too uncertain"}
+{"entity_id": 7414, "name": "Achshaph", "skip": "openbible 332 point is shared with other places"}
+{"entity_id": 7415, "name": "Achzib", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7418, "name": "Adamah", "skip": "openbible 377 point is shared with other places"}
+{"entity_id": 7421, "name": "Adithaim", "skip": "openbible 346 point is shared with other places"}
+{"entity_id": 7422, "name": "Admah", "skip": "openbible 491 point is shared with other places"}
+{"entity_id": 7428, "name": "Aenon", "skip": "openbible 276 too uncertain"}
+{"entity_id": 7429, "name": "Ahava", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7430, "name": "Ahlab", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7431, "name": "Ai", "latitude": 31.9172, "longitude": 35.2658, "source": "knowledge"}
+{"entity_id": 7432, "name": "Ai", "skip": "openbible 63 too uncertain"}
+{"entity_id": 7433, "name": "Aijalon", "latitude": 31.85, "longitude": 34.99, "source": "knowledge"}
+{"entity_id": 7434, "name": "Ain", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7435, "name": "Ain", "skip": "openbible 342 site disputed or identification too weak"}
+{"entity_id": 7436, "name": "Akeldama", "latitude": 31.76841, "longitude": 35.23288, "source": "openbible 456"}
+{"entity_id": 7441, "name": "Alush", "skip": "openbible 302 site disputed or identification too weak"}
+{"entity_id": 7442, "name": "Amad", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7443, "name": "Amam", "skip": "openbible 377 site disputed or identification too weak"}
+{"entity_id": 7447, "name": "Ammon", "latitude": 31.9539, "longitude": 35.9106, "source": "knowledge"}
+{"entity_id": 7451, "name": "Angle", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7456, "name": "Aphek", "latitude": 32.783679, "longitude": 35.63729, "source": "openbible 435"}
+{"entity_id": 7457, "name": "Aphek", "latitude": 32.1063, "longitude": 34.9266, "source": "knowledge"}
+{"entity_id": 7458, "name": "Aphek", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7460, "name": "Ar", "latitude": 31.359913, "longitude": 35.782764, "source": "openbible 359"}
+{"entity_id": 7462, "name": "Arabah", "skip": "region or land with unclear extent"}
+{"entity_id": 7463, "name": "Arabia", "skip": "region or land with unclear extent"}
+{"entity_id": 7464, "name": "Aram-maacah", "skip": "region or land with unclear extent"}
+{"entity_id": 7466, "name": "Aram-zobah", "skip": "region or land with unclear extent"}
+{"entity_id": 7472, "name": "Aroer", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7474, "name": "Arubboth", "latitude": 32.40731, "longitude": 35.133551, "source": "openbible 445"}
+{"entity_id": 7475, "name": "Arumah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7477, "name": "Ashan", "skip": "openbible 442 point is shared with other places"}
+{"entity_id": 7480, "name": "Ashnah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7486, "name": "Assyria", "latitude": 36.1, "longitude": 43.2, "source": "knowledge"}
+{"entity_id": 7488, "name": "Ataroth", "skip": "openbible 426 point is shared with other places"}
+{"entity_id": 7490, "name": "Ataroth-addar", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7491, "name": "Athach", "skip": "openbible 408 point is shared with other places"}
+{"entity_id": 7492, "name": "Atharim", "skip": "openbible 391 site disputed or identification too weak"}
+{"entity_id": 7494, "name": "Atroth-beth-joab", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7495, "name": "Atroth-shophan", "skip": "openbible 363 site disputed or identification too weak"}
+{"entity_id": 7498, "name": "Avith", "skip": "openbible 277 too uncertain"}
+{"entity_id": 7499, "name": "Azal", "skip": "openbible 220 too uncertain"}
+{"entity_id": 7502, "name": "Aznoth-tabor", "latitude": 32.727222, "longitude": 35.384444, "source": "openbible 399"}
+{"entity_id": 7503, "name": "Baalah", "skip": "openbible 222 point is shared with other places"}
+{"entity_id": 7505, "name": "Baalath", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7507, "name": "Baalath-beer", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7510, "name": "Baal-perazim", "skip": "openbible 240 too uncertain"}
+{"entity_id": 7511, "name": "Baal-shalishah", "latitude": 32.11031, "longitude": 35.01182, "source": "openbible 349"}
+{"entity_id": 7512, "name": "Baal-tamar", "skip": "openbible 215 too uncertain"}
+{"entity_id": 7513, "name": "Baal-zephon", "skip": "openbible 339 point is shared with other places"}
+{"entity_id": 7514, "name": "Babylon", "latitude": 32.5355, "longitude": 44.4275, "source": "knowledge"}
+{"entity_id": 7515, "name": "Bahurim", "latitude": 31.7912, "longitude": 35.25694, "source": "openbible 475"}
+{"entity_id": 7516, "name": "Bajith", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7517, "name": "Balah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7518, "name": "Bamoth", "skip": "openbible 430 point is shared with other places"}
+{"entity_id": 7519, "name": "Bamoth-baal", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7520, "name": "Bashan", "latitude": 32.85, "longitude": 35.95, "source": "knowledge"}
+{"entity_id": 7521, "name": "Bath-rabbim", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7522, "name": "Beautiful Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7523, "name": "Beer", "skip": "openbible 427 point is shared with other places"}
+{"entity_id": 7524, "name": "Beer-elim", "skip": "openbible 289 point is shared with other places"}
+{"entity_id": 7525, "name": "Beer-lahai-roi", "skip": "openbible 258 point is shared with other places"}
+{"entity_id": 7526, "name": "Beeroth", "skip": "openbible 252 too uncertain"}
+{"entity_id": 7527, "name": "Beersheba", "latitude": 31.2447, "longitude": 34.8408, "source": "knowledge"}
+{"entity_id": 7529, "name": "Bene-jaakan", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7530, "name": "Benjamin Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7532, "name": "Beracah Valley", "skip": "openbible 245 too uncertain"}
+{"entity_id": 7534, "name": "Berothah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7536, "name": "Betah", "latitude": 34.363889, "longitude": 36.415556, "source": "openbible 454"}
+{"entity_id": 7537, "name": "Beten", "skip": "openbible 226 too uncertain"}
+{"entity_id": 7538, "name": "Beth-anath", "skip": "openbible 372 site disputed or identification too weak"}
+{"entity_id": 7541, "name": "Beth-arabah", "latitude": 31.845782, "longitude": 35.501718, "source": "openbible 404"}
+{"entity_id": 7543, "name": "Beth-ashbea", "skip": "openbible 349 site disputed or identification too weak"}
+{"entity_id": 7544, "name": "Beth-Ashtoreth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7545, "name": "Beth-aven", "skip": "openbible 222 point is shared with other places"}
+{"entity_id": 7547, "name": "Beth-barah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7549, "name": "Beth-car", "skip": "openbible 213 point is shared with other places"}
+{"entity_id": 7550, "name": "Beth-dagon", "skip": "openbible 261 too uncertain"}
+{"entity_id": 7551, "name": "Beth-dagon", "latitude": 32.722583, "longitude": 35.090628, "source": "openbible 422"}
+{"entity_id": 7554, "name": "Bethel", "latitude": 31.9317, "longitude": 35.2417, "source": "knowledge"}
+{"entity_id": 7555, "name": "Bethel", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7557, "name": "Bether Mountain", "skip": "openbible -88 point is shared with other places"}
+{"entity_id": 7559, "name": "Beth-ezel", "skip": "openbible 379 site disputed or identification too weak"}
+{"entity_id": 7560, "name": "Beth-gader", "skip": "openbible 374 point is shared with other places"}
+{"entity_id": 7569, "name": "Beth-lebaoth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7570, "name": "Bethlehem", "latitude": 31.7054, "longitude": 35.2024, "source": "knowledge"}
+{"entity_id": 7574, "name": "Beth-nimrah", "latitude": 31.9, "longitude": 35.62, "source": "knowledge"}
+{"entity_id": 7575, "name": "Beth-pazzez", "skip": "openbible 481 point is shared with other places"}
+{"entity_id": 7576, "name": "Beth-pelet", "skip": "openbible 444 point is shared with other places"}
+{"entity_id": 7577, "name": "Beth-peor", "skip": "openbible 245 point is shared with other places"}
+{"entity_id": 7579, "name": "Beth-rehob", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7580, "name": "Bethsaida", "latitude": 32.9097, "longitude": 35.6307, "source": "knowledge"}
+{"entity_id": 7582, "name": "Beth-shemesh", "latitude": 31.7516, "longitude": 34.9801, "source": "knowledge"}
+{"entity_id": 7583, "name": "Beth-shemesh", "latitude": 32.687762, "longitude": 35.525239, "source": "openbible 422"}
+{"entity_id": 7585, "name": "Beth-shittah", "skip": "openbible 194 too uncertain"}
+{"entity_id": 7591, "name": "Bezek", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7592, "name": "Bithron", "skip": "region or land with unclear extent"}
+{"entity_id": 7594, "name": "Biziothiah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7595, "name": "Bor-ashan", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7597, "name": "Bozkath", "latitude": 31.536874, "longitude": 34.913176, "source": "openbible 479"}
+{"entity_id": 7600, "name": "Brook of Egypt", "latitude": 31.13, "longitude": 33.8, "source": "knowledge"}
+{"entity_id": 7603, "name": "Cabbon", "skip": "openbible 405 point is shared with other places"}
+{"entity_id": 7604, "name": "Cabul", "skip": "region or land with unclear extent"}
+{"entity_id": 7605, "name": "Cabul", "skip": "openbible 470 point is shared with other places"}
+{"entity_id": 7609, "name": "Caleb Ephrathah", "skip": "openbible 68 point is shared with other places"}
+{"entity_id": 7610, "name": "Calneh", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7612, "name": "Caphtor", "latitude": 35.24, "longitude": 24.81, "source": "knowledge"}
+{"entity_id": 7616, "name": "Carmel Mount", "latitude": 32.7217, "longitude": 35.0286, "source": "knowledge"}
+{"entity_id": 7622, "name": "Chephar-ammoni", "skip": "openbible 252 too uncertain"}
+{"entity_id": 7624, "name": "Cherith", "skip": "openbible 335 site disputed or identification too weak"}
+{"entity_id": 7627, "name": "Chesil", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7628, "name": "Chesulloth", "latitude": 32.683, "longitude": 35.323, "source": "knowledge"}
+{"entity_id": 7629, "name": "Chilmad", "skip": "openbible 316 point is shared with other places"}
+{"entity_id": 7630, "name": "Chinnereth", "latitude": 32.8, "longitude": 35.59, "source": "knowledge"}
+{"entity_id": 7633, "name": "Chitlish", "skip": "openbible 347 site disputed or identification too weak"}
+{"entity_id": 7636, "name": "City of Salt", "latitude": 31.740833, "longitude": 35.458611, "source": "openbible 340"}
+{"entity_id": 7641, "name": "Corner Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7645, "name": "Cyprus", "latitude": 35.13, "longitude": 33.43, "source": "knowledge"}
+{"entity_id": 7651, "name": "Dannah", "skip": "openbible 143 too uncertain"}
+{"entity_id": 7654, "name": "Diblathaim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7655, "name": "Dibon", "skip": "openbible 277 too uncertain"}
+{"entity_id": 7656, "name": "Dibon", "latitude": 31.5033, "longitude": 35.7782, "source": "knowledge"}
+{"entity_id": 7657, "name": "Dilean", "skip": "openbible 309 point is shared with other places"}
+{"entity_id": 7658, "name": "Dimnah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7659, "name": "Dimonah", "skip": "openbible 291 point is shared with other places"}
+{"entity_id": 7660, "name": "Dinhabah", "skip": "openbible -77 too uncertain"}
+{"entity_id": 7662, "name": "Dizahab", "skip": "openbible 339 point is shared with other places"}
+{"entity_id": 7663, "name": "Dophkah", "latitude": 29.036733, "longitude": 33.459407, "source": "openbible 441"}
+{"entity_id": 7667, "name": "Dung Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7668, "name": "Dura", "latitude": 32.32, "longitude": 44.501667, "source": "openbible 433"}
+{"entity_id": 7670, "name": "East Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7671, "name": "Ebal Mount", "latitude": 32.2347, "longitude": 35.2744, "source": "knowledge"}
+{"entity_id": 7672, "name": "Ebenezer", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7673, "name": "Ebez", "skip": "openbible 142 too uncertain"}
+{"entity_id": 7675, "name": "Edom", "latitude": 30.7342, "longitude": 35.6006, "source": "knowledge"}
+{"entity_id": 7677, "name": "Eglaim", "skip": "openbible 325 site disputed or identification too weak"}
+{"entity_id": 7682, "name": "Elath", "latitude": 29.5267, "longitude": 35.0078, "source": "knowledge"}
+{"entity_id": 7685, "name": "Elkosh", "skip": "openbible 233 too uncertain"}
+{"entity_id": 7686, "name": "Ellasar", "skip": "openbible 215 point is shared with other places"}
+{"entity_id": 7687, "name": "Elonbeth-hanan", "latitude": 31.746288, "longitude": 34.997106, "source": "openbible 491"}
+{"entity_id": 7688, "name": "El-paran", "skip": "region or land with unclear extent"}
+{"entity_id": 7689, "name": "Eltekeh", "latitude": 31.8925, "longitude": 34.767778, "source": "openbible 414"}
+{"entity_id": 7690, "name": "Eltekon", "latitude": 31.690314, "longitude": 35.101485, "source": "openbible 409"}
+{"entity_id": 7691, "name": "Eltolad", "skip": "openbible 222 point is shared with other places"}
+{"entity_id": 7692, "name": "Emek-keziz", "skip": "openbible 470 point is shared with other places"}
+{"entity_id": 7693, "name": "Emmaus", "skip": "openbible 338 point is shared with other places"}
+{"entity_id": 7695, "name": "Enam", "skip": "openbible 377 site disputed or identification too weak"}
+{"entity_id": 7697, "name": "Eneglaim", "skip": "openbible 120 too uncertain"}
+{"entity_id": 7698, "name": "En-gannim", "skip": "openbible 288 too uncertain"}
+{"entity_id": 7699, "name": "En-gannim", "latitude": 32.4597, "longitude": 35.2956, "source": "knowledge"}
+{"entity_id": 7700, "name": "Engedi", "latitude": 31.4608, "longitude": 35.3903, "source": "knowledge"}
+{"entity_id": 7702, "name": "En-hakkore", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7703, "name": "En-hazor", "latitude": 33.12889, "longitude": 35.44, "source": "openbible 394"}
+{"entity_id": 7708, "name": "Ephraim Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7710, "name": "Ephron Mount", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7713, "name": "Esek", "latitude": 31.424497, "longitude": 34.6062, "source": "openbible 476"}
+{"entity_id": 7714, "name": "Eshan", "skip": "openbible 215 point is shared with other places"}
+{"entity_id": 7715, "name": "Eshcol Valley", "skip": "region or land with unclear extent"}
+{"entity_id": 7716, "name": "Eshtaol", "latitude": 31.797726, "longitude": 34.985967, "source": "openbible 337"}
+{"entity_id": 7718, "name": "Etam", "skip": "openbible 332 point is shared with other places"}
+{"entity_id": 7721, "name": "Etham", "skip": "openbible 173 point is shared with other places"}
+{"entity_id": 7722, "name": "Ether", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7723, "name": "Eth-kazin", "skip": "openbible 288 too uncertain"}
+{"entity_id": 7724, "name": "Euphrates", "latitude": 35.95, "longitude": 39.0, "source": "knowledge"}
+{"entity_id": 7725, "name": "Ezel Stone", "skip": "openbible -18 point is shared with other places"}
+{"entity_id": 7727, "name": "Ezion-geber", "latitude": 29.462839, "longitude": 34.86005, "source": "openbible 360"}
+{"entity_id": 7729, "name": "Fish Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7733, "name": "Fountain Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7734, "name": "Gaash", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7737, "name": "Galilee", "latitude": 32.85, "longitude": 35.4, "source": "knowledge"}
+{"entity_id": 7738, "name": "Gallim", "skip": "openbible 387 site disputed or identification too weak"}
+{"entity_id": 7739, "name": "Gamad", "skip": "openbible 480 point is shared with other places"}
+{"entity_id": 7740, "name": "Gath", "latitude": 31.7009, "longitude": 34.845, "source": "knowledge"}
+{"entity_id": 7742, "name": "Gath-rimmon", "latitude": 32.0917, "longitude": 34.8075, "source": "openbible 338"}
+{"entity_id": 7743, "name": "Gaza", "latitude": 31.5017, "longitude": 34.4668, "source": "knowledge"}
+{"entity_id": 7744, "name": "Geba", "latitude": 31.875, "longitude": 35.268, "source": "knowledge"}
+{"entity_id": 7745, "name": "Gebal", "latitude": 34.1206, "longitude": 35.6481, "source": "knowledge"}
+{"entity_id": 7746, "name": "Gebim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7747, "name": "Gederah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7748, "name": "Gederoth", "skip": "openbible 178 point is shared with other places"}
+{"entity_id": 7749, "name": "Gederothaim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7750, "name": "Ge-harashim", "skip": "openbible 491 point is shared with other places"}
+{"entity_id": 7753, "name": "Gerasa", "skip": "region or land with unclear extent"}
+{"entity_id": 7758, "name": "Gezer", "latitude": 31.8586, "longitude": 34.9211, "source": "knowledge"}
+{"entity_id": 7759, "name": "Giah", "skip": "region or land with unclear extent"}
+{"entity_id": 7761, "name": "Gibeah", "skip": "openbible 448 point is shared with other places"}
+{"entity_id": 7762, "name": "Gibeah", "latitude": 31.8129, "longitude": 35.2287, "source": "knowledge"}
+{"entity_id": 7763, "name": "Gibeath-elohim", "skip": "openbible 364 point is shared with other places"}
+{"entity_id": 7764, "name": "Gibeon", "latitude": 31.8503, "longitude": 35.1836, "source": "knowledge"}
+{"entity_id": 7765, "name": "Gidom", "skip": "openbible 335 point is shared with other places"}
+{"entity_id": 7766, "name": "Gihon", "skip": "openbible 193 point is shared with other places"}
+{"entity_id": 7768, "name": "Gilboa Mount", "latitude": 32.475, "longitude": 35.4125, "source": "knowledge"}
+{"entity_id": 7769, "name": "Gilgal", "latitude": 32.030556, "longitude": 35.225, "source": "openbible 318"}
+{"entity_id": 7770, "name": "Gilgal", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7771, "name": "Giloh", "skip": "openbible 427 point is shared with other places"}
+{"entity_id": 7773, "name": "Gittaim", "latitude": 31.90302, "longitude": 34.88994, "source": "openbible 486"}
+{"entity_id": 7774, "name": "Goah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7776, "name": "Golgotha", "latitude": 31.778444, "longitude": 35.22975, "source": "openbible 426"}
+{"entity_id": 7777, "name": "Gomorrah", "skip": "openbible 364 point is shared with other places"}
+{"entity_id": 7779, "name": "Goshen", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7780, "name": "Gozan", "latitude": 36.8264, "longitude": 40.0394, "source": "knowledge"}
+{"entity_id": 7782, "name": "Greece", "latitude": 39.0, "longitude": 22.0, "source": "knowledge"}
+{"entity_id": 7787, "name": "Hachilah", "skip": "openbible 463 point is shared with other places"}
+{"entity_id": 7788, "name": "Hadad-rimmon", "skip": "openbible 242 too uncertain"}
+{"entity_id": 7792, "name": "Haeleph", "skip": "openbible 357 point is shared with other places"}
+{"entity_id": 7793, "name": "Halah", "skip": "region or land with unclear extent"}
+{"entity_id": 7800, "name": "Hamath", "latitude": 35.1318, "longitude": 36.7578, "source": "knowledge"}
+{"entity_id": 7801, "name": "Hamonah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7802, "name": "Hamon-gog Valley", "skip": "openbible 229 point is shared with other places"}
+{"entity_id": 7803, "name": "Hanes", "skip": "openbible 483 point is shared with other places"}
+{"entity_id": 7805, "name": "Hara", "skip": "openbible 182 point is shared with other places"}
+{"entity_id": 7806, "name": "Haradah", "skip": "openbible 176 point is shared with other places"}
+{"entity_id": 7807, "name": "Harmon", "skip": "openbible 259 point is shared with other places"}
+{"entity_id": 7809, "name": "Harosheth-hagoyim", "skip": "openbible 104 point is shared with other places"}
+{"entity_id": 7810, "name": "Hashmonah", "skip": "openbible 307 point is shared with other places"}
+{"entity_id": 7812, "name": "Havvoth-jair", "skip": "region or land with unclear extent"}
+{"entity_id": 7813, "name": "Hazar-addar", "skip": "openbible 453 point is shared with other places"}
+{"entity_id": 7815, "name": "Hazar-gaddah", "skip": "openbible 429 point is shared with other places"}
+{"entity_id": 7816, "name": "Hazar-shual", "skip": "openbible 427 point is shared with other places"}
+{"entity_id": 7817, "name": "Hazar-susah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7818, "name": "Hazar-susim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7819, "name": "Hazer-hatticon", "skip": "openbible 482 point is shared with other places"}
+{"entity_id": 7820, "name": "Hazerim", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7821, "name": "Hazeroth", "latitude": 28.896944, "longitude": 34.421667, "source": "openbible 481"}
+{"entity_id": 7822, "name": "Hazor", "skip": "region or land with unclear extent"}
+{"entity_id": 7824, "name": "Hazor", "skip": "openbible 311 site disputed or identification too weak"}
+{"entity_id": 7827, "name": "Hazor-hadattah", "skip": "openbible 381 site disputed or identification too weak"}
+{"entity_id": 7829, "name": "Helam", "skip": "openbible 335 point is shared with other places"}
+{"entity_id": 7830, "name": "Helbah", "skip": "openbible 413 point is shared with other places"}
+{"entity_id": 7834, "name": "Helkath", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7836, "name": "Hena", "skip": "openbible 318 site disputed or identification too weak"}
+{"entity_id": 7838, "name": "Hereth", "skip": "openbible 356 site disputed or identification too weak"}
+{"entity_id": 7839, "name": "Hermon Mount", "latitude": 33.4161, "longitude": 35.8572, "source": "knowledge"}
+{"entity_id": 7840, "name": "Heshbon", "latitude": 31.800811, "longitude": 35.809062, "source": "openbible 433"}
+{"entity_id": 7841, "name": "Heshmon", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7842, "name": "Hethlon", "latitude": 34.60306, "longitude": 36.13361, "source": "openbible 465"}
+{"entity_id": 7844, "name": "Hobah", "skip": "openbible 158 too uncertain"}
+{"entity_id": 7845, "name": "Holon", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7846, "name": "Holon", "skip": "openbible 153 too uncertain"}
+{"entity_id": 7847, "name": "Holy Place", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7848, "name": "Hor Mount", "latitude": 30.3167, "longitude": 35.4, "source": "knowledge"}
+{"entity_id": 7849, "name": "Hor Mount", "skip": "openbible 288 point is shared with other places"}
+{"entity_id": 7850, "name": "Horem", "skip": "openbible 210 point is shared with other places"}
+{"entity_id": 7851, "name": "Horesh", "skip": "openbible 327 site disputed or identification too weak"}
+{"entity_id": 7852, "name": "Hor-haggidgad", "skip": "openbible 317 site disputed or identification too weak"}
+{"entity_id": 7853, "name": "Horonaim", "skip": "openbible 273 too uncertain"}
+{"entity_id": 7854, "name": "Horse Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7855, "name": "House of the Forest", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7856, "name": "Hukkok", "latitude": 32.864276, "longitude": 35.263449, "source": "openbible 283"}
+{"entity_id": 7857, "name": "Humtah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7858, "name": "Ibleam", "latitude": 32.452, "longitude": 35.283, "source": "knowledge"}
+{"entity_id": 7866, "name": "Iphtah", "skip": "openbible 185 too uncertain"}
+{"entity_id": 7868, "name": "Ir-nahash", "skip": "openbible 292 too uncertain"}
+{"entity_id": 7869, "name": "Irpeel", "skip": "openbible 198 point is shared with other places"}
+{"entity_id": 7871, "name": "Ithlah", "skip": "openbible 423 point is shared with other places"}
+{"entity_id": 7872, "name": "Ithnan", "skip": "openbible 179 too uncertain"}
+{"entity_id": 7873, "name": "Ivvah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7874, "name": "Iye-abarim", "latitude": 30.955999, "longitude": 35.77948, "source": "openbible 403"}
+{"entity_id": 7880, "name": "Jahaz", "skip": "openbible 444 point is shared with other places"}
+{"entity_id": 7882, "name": "Janim", "latitude": 31.51591, "longitude": 35.16416, "source": "openbible 488"}
+{"entity_id": 7883, "name": "Janoah", "skip": "openbible 321 site disputed or identification too weak"}
+{"entity_id": 7886, "name": "Jarmuth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7888, "name": "Jazer", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7889, "name": "Jazer Sea", "skip": "openbible 386 site disputed or identification too weak"}
+{"entity_id": 7891, "name": "Jekabzeel", "skip": "openbible 162 too uncertain"}
+{"entity_id": 7894, "name": "Jericho Valley", "skip": "region or land with unclear extent"}
+{"entity_id": 7898, "name": "Jeshimon", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7901, "name": "Jokdeam", "skip": "openbible 419 point is shared with other places"}
+{"entity_id": 7902, "name": "Jokneam", "latitude": 32.6578, "longitude": 35.1136, "source": "knowledge"}
+{"entity_id": 7903, "name": "Joktheel", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7905, "name": "Jordan", "latitude": 32.0, "longitude": 35.55, "source": "knowledge"}
+{"entity_id": 7907, "name": "Jotbathah", "skip": "openbible 352 site disputed or identification too weak"}
+{"entity_id": 7910, "name": "Kabzeel", "skip": "openbible 162 too uncertain"}
+{"entity_id": 7912, "name": "Kadesh", "latitude": 30.6833, "longitude": 34.4167, "source": "knowledge"}
+{"entity_id": 7914, "name": "Kamon", "skip": "openbible 167 point is shared with other places"}
+{"entity_id": 7916, "name": "Kanah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7918, "name": "Karkor", "skip": "openbible 298 too uncertain"}
+{"entity_id": 7919, "name": "Kartan", "skip": "openbible 397 point is shared with other places"}
+{"entity_id": 7920, "name": "Kedemoth", "skip": "openbible 251 too uncertain"}
+{"entity_id": 7921, "name": "Kedesh", "latitude": 33.1103, "longitude": 35.5217, "source": "knowledge"}
+{"entity_id": 7922, "name": "Kehelathah", "skip": "openbible 482 point is shared with other places"}
+{"entity_id": 7924, "name": "Kenath", "latitude": 32.69, "longitude": 36.63, "source": "knowledge"}
+{"entity_id": 7925, "name": "Kerioth-hezron", "skip": "openbible 316 point is shared with other places"}
+{"entity_id": 7926, "name": "Kibroth-hattaavah", "skip": "openbible 405 point is shared with other places"}
+{"entity_id": 7927, "name": "Kibzaim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7929, "name": "Kinah", "skip": "openbible 259 point is shared with other places"}
+{"entity_id": 7932, "name": "Kir", "latitude": 31.1803, "longitude": 35.7048, "source": "knowledge"}
+{"entity_id": 7933, "name": "Kir", "skip": "openbible 465 site disputed or identification too weak"}
+{"entity_id": 7935, "name": "Kiriathaim", "skip": "openbible 306 point is shared with other places"}
+{"entity_id": 7936, "name": "Kiriath-huzoth", "skip": "openbible 215 point is shared with other places"}
+{"entity_id": 7938, "name": "Kishion", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7940, "name": "Kitron", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7944, "name": "Lahmam", "latitude": 31.57183, "longitude": 34.896, "source": "openbible 387"}
+{"entity_id": 7945, "name": "Laishah", "skip": "openbible 239 too uncertain"}
+{"entity_id": 7946, "name": "Lakkum", "latitude": 32.69827, "longitude": 35.55186, "source": "openbible 449"}
+{"entity_id": 7949, "name": "Lasha", "skip": "openbible 335 point is shared with other places"}
+{"entity_id": 7950, "name": "Lasharon", "skip": "openbible 467 point is shared with other places"}
+{"entity_id": 7954, "name": "Lebaoth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7955, "name": "Lebonah", "latitude": 32.059064, "longitude": 35.249795, "source": "openbible 497"}
+{"entity_id": 7956, "name": "Lehi", "skip": "openbible 470 point is shared with other places"}
+{"entity_id": 7957, "name": "Libnah", "latitude": 31.629897, "longitude": 34.873472, "source": "openbible 381"}
+{"entity_id": 7958, "name": "Libnah", "skip": "openbible 129 point is shared with other places"}
+{"entity_id": 7961, "name": "Lo-debar", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7963, "name": "Luz", "skip": "openbible 372 site disputed or identification too weak"}
+{"entity_id": 7967, "name": "Maarath", "skip": "openbible 402 point is shared with other places"}
+{"entity_id": 7968, "name": "Maareh-geba", "skip": "region or land with unclear extent"}
+{"entity_id": 7971, "name": "Madmen", "skip": "openbible 341 site disputed or identification too weak"}
+{"entity_id": 7972, "name": "Madmenah", "skip": "openbible 216 too uncertain"}
+{"entity_id": 7973, "name": "Madon", "skip": "openbible 370 point is shared with other places"}
+{"entity_id": 7974, "name": "Magadan", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7975, "name": "Magbish", "skip": "openbible 249 too uncertain"}
+{"entity_id": 7977, "name": "Mahaneh-dan", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7978, "name": "Makaz", "skip": "openbible 162 too uncertain"}
+{"entity_id": 7979, "name": "Makheloth", "skip": "openbible 145 point is shared with other places"}
+{"entity_id": 7980, "name": "Makkedah", "latitude": 31.534716, "longitude": 34.966564, "source": "openbible 440"}
+{"entity_id": 7982, "name": "Marah", "latitude": 29.34604, "longitude": 32.94284, "source": "openbible 384"}
+{"entity_id": 7983, "name": "Mareal", "latitude": 32.65426, "longitude": 35.16869, "source": "openbible 482"}
+{"entity_id": 7984, "name": "Maroth", "skip": "openbible 45 point is shared with other places"}
+{"entity_id": 7986, "name": "Massah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7988, "name": "Mearah", "skip": "openbible 375 point is shared with other places"}
+{"entity_id": 7989, "name": "Meconah", "skip": "openbible 287 point is shared with other places"}
+{"entity_id": 7995, "name": "Mephaath", "latitude": 31.499722, "longitude": 35.919722, "source": "openbible 465"}
+{"entity_id": 7996, "name": "Meribah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 7997, "name": "Meribah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 7998, "name": "Merom", "skip": "openbible 77 too uncertain"}
+{"entity_id": 8000, "name": "Meroz", "skip": "openbible 14 too uncertain"}
+{"entity_id": 8004, "name": "Michmethath", "skip": "openbible 299 too uncertain"}
+{"entity_id": 8005, "name": "Middin", "latitude": 31.74153, "longitude": 35.40589, "source": "openbible 418"}
+{"entity_id": 8006, "name": "Migdal-el", "skip": "openbible 243 point is shared with other places"}
+{"entity_id": 8007, "name": "Migdal-gad", "skip": "openbible 323 site disputed or identification too weak"}
+{"entity_id": 8008, "name": "Migdol", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8009, "name": "Migron", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8011, "name": "Millo", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8014, "name": "Misgab", "skip": "openbible 139 point is shared with other places"}
+{"entity_id": 8015, "name": "Mishal", "latitude": 32.872761, "longitude": 35.15133, "source": "openbible 466"}
+{"entity_id": 8016, "name": "Misrephoth-maim", "skip": "openbible 260 too uncertain"}
+{"entity_id": 8017, "name": "Mithkah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8020, "name": "Mizpah", "latitude": 31.8956, "longitude": 35.2161, "source": "knowledge"}
+{"entity_id": 8021, "name": "Mizpeh", "skip": "openbible 155 point is shared with other places"}
+{"entity_id": 8022, "name": "Mizpeh Valley", "skip": "region or land with unclear extent"}
+{"entity_id": 8024, "name": "Moladah", "latitude": 31.2573, "longitude": 34.92141, "source": "openbible 416"}
+{"entity_id": 8027, "name": "Moresheth", "latitude": 31.633361, "longitude": 34.916611, "source": "openbible 467"}
+{"entity_id": 8029, "name": "Mortar", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8030, "name": "Moserah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8031, "name": "Moseroth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8033, "name": "Mozah", "latitude": 31.79289, "longitude": 35.16419, "source": "openbible 417"}
+{"entity_id": 8034, "name": "Muster Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8038, "name": "Nahalol", "skip": "openbible 226 too uncertain"}
+{"entity_id": 8040, "name": "Naioth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8043, "name": "Neah", "skip": "openbible 241 too uncertain"}
+{"entity_id": 8046, "name": "Nebo", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8049, "name": "Nebo Mount", "latitude": 31.766667, "longitude": 35.75, "source": "openbible 413"}
+{"entity_id": 8054, "name": "New Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8056, "name": "Nibshan", "skip": "openbible 280 too uncertain"}
+{"entity_id": 8061, "name": "Nob", "skip": "openbible 197 too uncertain"}
+{"entity_id": 8062, "name": "Nod", "skip": "region or land with unclear extent"}
+{"entity_id": 8063, "name": "Oboth", "skip": "openbible 361 site disputed or identification too weak"}
+{"entity_id": 8068, "name": "Pacatiana", "skip": "region or land with unclear extent"}
+{"entity_id": 8069, "name": "Paddan", "skip": "region or land with unclear extent"}
+{"entity_id": 8072, "name": "Parah", "latitude": 31.8348, "longitude": 35.31048, "source": "openbible 449"}
+{"entity_id": 8074, "name": "Paran Mount", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8075, "name": "Parbar", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8076, "name": "Parvaim", "skip": "openbible 329 site disputed or identification too weak"}
+{"entity_id": 8080, "name": "Pau", "skip": "openbible 367 site disputed or identification too weak"}
+{"entity_id": 8083, "name": "People's Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8084, "name": "Peor", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8086, "name": "Perez-uzza", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8090, "name": "Pethor", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8094, "name": "Philistia", "latitude": 31.6, "longitude": 34.7, "source": "knowledge"}
+{"entity_id": 8095, "name": "Phoenicia", "latitude": 33.4, "longitude": 35.3, "source": "knowledge"}
+{"entity_id": 8099, "name": "Pi-hahiroth", "skip": "openbible 220 point is shared with other places"}
+{"entity_id": 8101, "name": "Pisgah", "latitude": 31.767778, "longitude": 35.725556, "source": "openbible 453"}
+{"entity_id": 8102, "name": "Pishon", "skip": "openbible 145 too uncertain"}
+{"entity_id": 8104, "name": "Pithom", "latitude": 30.5475, "longitude": 31.963611, "source": "openbible 419"}
+{"entity_id": 8109, "name": "Raamses", "latitude": 30.8, "longitude": 31.83, "source": "knowledge"}
+{"entity_id": 8110, "name": "Rabbith", "skip": "openbible 476 point is shared with other places"}
+{"entity_id": 8111, "name": "Rakkath", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8112, "name": "Rakkon", "skip": "openbible 352 site disputed or identification too weak"}
+{"entity_id": 8113, "name": "Ramah", "latitude": 31.8579, "longitude": 35.2342, "source": "knowledge"}
+{"entity_id": 8114, "name": "Ramah", "skip": "openbible 365 site disputed or identification too weak"}
+{"entity_id": 8115, "name": "Ramah", "latitude": 32.926152, "longitude": 35.401126, "source": "openbible 392"}
+{"entity_id": 8116, "name": "Ramath-lehi", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8117, "name": "Rameses", "latitude": 30.8, "longitude": 31.83, "source": "knowledge"}
+{"entity_id": 8118, "name": "Ramoth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8119, "name": "Recah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8120, "name": "Red Sea", "latitude": 27.0, "longitude": 34.5, "source": "knowledge"}
+{"entity_id": 8122, "name": "Rehoboth", "skip": "openbible 421 site disputed or identification too weak"}
+{"entity_id": 8123, "name": "Remeth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8125, "name": "Rephidim", "skip": "openbible 379 point is shared with other places"}
+{"entity_id": 8126, "name": "Resen", "skip": "openbible 176 too uncertain"}
+{"entity_id": 8129, "name": "Rhodes", "skip": "openbible 471 point is shared with other places"}
+{"entity_id": 8131, "name": "Riblah", "skip": "openbible 38 too uncertain"}
+{"entity_id": 8132, "name": "Rimmon-perez", "skip": "openbible 144 too uncertain"}
+{"entity_id": 8133, "name": "Rissah", "latitude": 28.026, "longitude": 35.248, "source": "openbible 469"}
+{"entity_id": 8134, "name": "Rithmah", "skip": "openbible 235 too uncertain"}
+{"entity_id": 8136, "name": "Rogelim", "skip": "openbible 313 site disputed or identification too weak"}
+{"entity_id": 8141, "name": "Salim", "skip": "openbible 215 too uncertain"}
+{"entity_id": 8144, "name": "Salt Valley", "latitude": 31.050508, "longitude": 35.406271, "source": "openbible 451"}
+{"entity_id": 8150, "name": "Sebam", "latitude": 31.782365, "longitude": 35.761314, "source": "openbible 479"}
+{"entity_id": 8151, "name": "Secacah", "latitude": 31.71684, "longitude": 35.391592, "source": "openbible 398"}
+{"entity_id": 8154, "name": "Seir Mount", "latitude": 30.4, "longitude": 35.45, "source": "knowledge"}
+{"entity_id": 8155, "name": "Seir Mount", "latitude": 31.7966, "longitude": 35.0653, "source": "openbible 422"}
+{"entity_id": 8156, "name": "Seirah", "latitude": 31.9878, "longitude": 35.3332, "source": "openbible 465"}
+{"entity_id": 8157, "name": "Sela", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8159, "name": "Senaah", "skip": "openbible 243 too uncertain"}
+{"entity_id": 8161, "name": "Sephar", "skip": "openbible 335 site disputed or identification too weak"}
+{"entity_id": 8162, "name": "Sepharad", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8163, "name": "Sepharvaim", "skip": "openbible 388 point is shared with other places"}
+{"entity_id": 8165, "name": "Shaalim", "skip": "openbible 417 point is shared with other places"}
+{"entity_id": 8166, "name": "Shaaraim", "latitude": 31.7355, "longitude": 35.02757, "source": "openbible 407"}
+{"entity_id": 8167, "name": "Shahazumah", "skip": "openbible 265 too uncertain"}
+{"entity_id": 8169, "name": "Shallecheth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8170, "name": "Shaphir", "skip": "openbible 242 too uncertain"}
+{"entity_id": 8172, "name": "Sharon", "skip": "openbible 466 point is shared with other places"}
+{"entity_id": 8173, "name": "Sharuhen", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8174, "name": "Shaveh", "skip": "region or land with unclear extent"}
+{"entity_id": 8175, "name": "Shebarim", "skip": "openbible 192 too uncertain"}
+{"entity_id": 8176, "name": "Sheep Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8177, "name": "Shen", "skip": "openbible 465 point is shared with other places"}
+{"entity_id": 8180, "name": "Shepher Mount", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8181, "name": "Shihor-libnath", "skip": "openbible 237 point is shared with other places"}
+{"entity_id": 8184, "name": "Shion", "skip": "openbible 278 too uncertain"}
+{"entity_id": 8185, "name": "Shittim", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8190, "name": "Sibmah", "latitude": 31.782365, "longitude": 35.761314, "source": "openbible 479"}
+{"entity_id": 8193, "name": "Silla", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8194, "name": "Sin", "skip": "openbible 311 site disputed or identification too weak"}
+{"entity_id": 8195, "name": "Sinai", "latitude": 28.5392, "longitude": 33.9751, "source": "knowledge"}
+{"entity_id": 8197, "name": "Siphmoth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8199, "name": "Sitnah", "skip": "openbible 305 point is shared with other places"}
+{"entity_id": 8201, "name": "Socoh", "latitude": 31.688, "longitude": 34.966, "source": "knowledge"}
+{"entity_id": 8203, "name": "Sodom", "skip": "openbible 386 point is shared with other places"}
+{"entity_id": 8204, "name": "Solomon's Portico", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8208, "name": "Succoth", "skip": "openbible 206 too uncertain"}
+{"entity_id": 8210, "name": "Suph", "skip": "openbible 353 point is shared with other places"}
+{"entity_id": 8211, "name": "Suphah", "skip": "openbible 238 point is shared with other places"}
+{"entity_id": 8212, "name": "Sur", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8221, "name": "Tabbath", "skip": "openbible 298 too uncertain"}
+{"entity_id": 8222, "name": "Taberah", "skip": "openbible 257 point is shared with other places"}
+{"entity_id": 8223, "name": "Tabor", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8225, "name": "Tadmor", "latitude": 34.5503, "longitude": 38.2666, "source": "knowledge"}
+{"entity_id": 8230, "name": "Tel-abib", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8231, "name": "Telaim", "skip": "openbible 123 point is shared with other places"}
+{"entity_id": 8232, "name": "Telassar", "skip": "openbible 347 point is shared with other places"}
+{"entity_id": 8233, "name": "Tel-harsha", "skip": "openbible 451 point is shared with other places"}
+{"entity_id": 8234, "name": "Tel-melah", "skip": "openbible 381 point is shared with other places"}
+{"entity_id": 8240, "name": "Tibhath", "latitude": 34.363889, "longitude": 36.415556, "source": "openbible 454"}
+{"entity_id": 8242, "name": "Timnah", "latitude": 31.7773, "longitude": 34.9238, "source": "knowledge"}
+{"entity_id": 8243, "name": "Timnah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8246, "name": "Tiphsah", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8249, "name": "Tochen", "skip": "openbible 174 point is shared with other places"}
+{"entity_id": 8250, "name": "Tolad", "skip": "openbible 222 point is shared with other places"}
+{"entity_id": 8251, "name": "Tophel", "skip": "openbible 189 too uncertain"}
+{"entity_id": 8252, "name": "Topheth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8263, "name": "Ummah", "skip": "openbible 417 point is shared with other places"}
+{"entity_id": 8264, "name": "Uphaz", "skip": "openbible 316 point is shared with other places"}
+{"entity_id": 8265, "name": "Uzzen-sheerah", "skip": "openbible 385 point is shared with other places"}
+{"entity_id": 8266, "name": "Valley Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8270, "name": "Water Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8271, "name": "Way of Holiness", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 8275, "name": "Zaanan", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8276, "name": "Zaanannim", "skip": "openbible 408 point is shared with other places"}
+{"entity_id": 8277, "name": "Zalmonah", "skip": "openbible 329 site disputed or identification too weak"}
+{"entity_id": 8279, "name": "Zanoah", "skip": "openbible 301 point is shared with other places"}
+{"entity_id": 8282, "name": "Zarethan", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8283, "name": "Zeboiim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8285, "name": "Zeboim Valley", "skip": "openbible 295 too uncertain"}
+{"entity_id": 8287, "name": "Zela", "skip": "openbible 413 point is shared with other places"}
+{"entity_id": 8288, "name": "Zelzah", "skip": "openbible 103 point is shared with other places"}
+{"entity_id": 8289, "name": "Zemaraim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8290, "name": "Zenan", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8291, "name": "Zephath", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 8292, "name": "Zephathah Valley", "latitude": 31.610556, "longitude": 34.953056, "source": "openbible 488"}
+{"entity_id": 8293, "name": "Zer", "skip": "openbible 137 point is shared with other places"}
+{"entity_id": 8295, "name": "Zeredah", "latitude": 32.04638, "longitude": 35.09719, "source": "openbible 441"}
+{"entity_id": 8296, "name": "Zereth-shahar", "skip": "openbible 404 point is shared with other places"}
+{"entity_id": 8297, "name": "Ziddim", "skip": "openbible 264 too uncertain"}
+{"entity_id": 8300, "name": "Zior", "skip": "openbible 471 point is shared with other places"}
+{"entity_id": 8301, "name": "Ziphron", "skip": "openbible 378 site disputed or identification too weak"}
+{"entity_id": 8304, "name": "Zoar", "latitude": 31.036904, "longitude": 35.487657, "source": "openbible 347"}
+{"entity_id": 8305, "name": "Zobah", "skip": "region or land with unclear extent"}
+{"entity_id": 8306, "name": "Zophim", "latitude": 31.77107, "longitude": 35.73394, "source": "openbible 473"}
+{"entity_id": 8376, "name": "Land of Asher", "latitude": 33.0, "longitude": 35.15, "source": "knowledge"}
+{"entity_id": 8381, "name": "Land of Benjamin", "latitude": 31.88, "longitude": 35.25, "source": "knowledge"}
+{"entity_id": 8394, "name": "Land of Ephraim", "latitude": 32.1, "longitude": 35.25, "source": "knowledge"}
+{"entity_id": 8400, "name": "Land of Gad", "latitude": 32.3, "longitude": 35.75, "source": "knowledge"}
+{"entity_id": 8419, "name": "Land of Israel", "latitude": 32.0, "longitude": 35.25, "source": "knowledge"}
+{"entity_id": 8420, "name": "Kingdom of Israel", "skip": "region or land with unclear extent"}
+{"entity_id": 8422, "name": "Land of Issachar", "latitude": 32.55, "longitude": 35.35, "source": "knowledge"}
+{"entity_id": 8440, "name": "Land of Judah", "latitude": 31.6, "longitude": 35.1, "source": "knowledge"}
+{"entity_id": 8452, "name": "Land of Manasseh", "skip": "region or land with unclear extent"}
+{"entity_id": 8458, "name": "Land of Naphtali", "latitude": 33.0, "longitude": 35.5, "source": "knowledge"}
+{"entity_id": 8464, "name": "Land of Reuben", "latitude": 31.6, "longitude": 35.8, "source": "knowledge"}
+{"entity_id": 8478, "name": "Land of Simeon", "latitude": 31.25, "longitude": 34.8, "source": "knowledge"}
+{"entity_id": 8484, "name": "Land of Zebulun", "latitude": 32.75, "longitude": 35.25, "source": "knowledge"}
+{"entity_id": 8548, "name": "Sardis", "latitude": 38.4881, "longitude": 28.0397, "source": "knowledge"}
+{"entity_id": 8549, "name": "Nahaliel", "skip": "openbible 339 site disputed or identification too weak"}
+{"entity_id": 8550, "name": "Valley of Hinnom", "latitude": 31.768, "longitude": 35.228, "source": "knowledge"}
+{"entity_id": 8551, "name": "Valley of Baca", "skip": "openbible 283 point is shared with other places"}
+{"entity_id": 8566, "name": "Tower of Babel", "latitude": 32.5355, "longitude": 44.4275, "source": "knowledge"}
+{"entity_id": 8568, "name": "Heaven", "skip": "no earthly location"}
+{"entity_id": 9252, "name": "Babylon the great", "skip": "no earthly location"}
+{"entity_id": 9295, "name": "Hell", "skip": "no earthly location"}
+{"entity_id": 9522, "name": "Land of the north", "skip": "region or land with unclear extent"}
+{"entity_id": 9525, "name": "Lake of fire and brimstone", "skip": "no earthly location"}
+{"entity_id": 9564, "name": "New Jerusalem", "skip": "no earthly location"}
+{"entity_id": 9748, "name": "Paradise", "skip": "no earthly location"}
+{"entity_id": 9749, "name": "Outer darkness", "skip": "no earthly location"}
+{"entity_id": 9967, "name": "House of the Lord", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 10123, "name": "Land of Salem", "skip": "region or land with unclear extent"}
+{"entity_id": 10160, "name": "Upper pool", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 10161, "name": "Fuller's field", "skip": "openbible 499 point is shared with other places"}
+{"entity_id": 10192, "name": "Outer darkness", "skip": "no earthly location"}
+{"entity_id": 10382, "name": "Rock of Oreb", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 10570, "name": "Enoch", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 10637, "name": "Mount of Transfiguration", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 10811, "name": "Earth", "skip": "no earthly location"}
+{"entity_id": 10989, "name": "Mountain east of Bethel", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11037, "name": "Sun", "skip": "no earthly location"}
+{"entity_id": 11057, "name": "Expanse", "skip": "no earthly location"}
+{"entity_id": 11058, "name": "Great Waters", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11059, "name": "River of Eden", "skip": "no earthly location"}
+{"entity_id": 11081, "name": "Temple of Herod", "latitude": 31.778, "longitude": 35.2354, "source": "knowledge"}
+{"entity_id": 11173, "name": "Tabernacle", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11185, "name": "Threshing floor of Ornan", "latitude": 31.778, "longitude": 35.2354, "source": "knowledge"}
+{"entity_id": 11191, "name": "High place at Gibeon", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11203, "name": "Plain of the pillar", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11209, "name": "Beer", "skip": "openbible 387 site disputed or identification too weak"}
+{"entity_id": 11211, "name": "House of Baal-berith", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11214, "name": "Tower of Shechem", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11228, "name": "Vineyard (parable of the wicked husbandmen)", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11243, "name": "Temple of Solomon", "latitude": 31.778, "longitude": 35.2354, "source": "knowledge"}
+{"entity_id": 11246, "name": "Lud", "skip": "region or land with unclear extent"}
+{"entity_id": 11253, "name": "Mount Ephraim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11265, "name": "Temple treasury", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11295, "name": "Aloth", "skip": "openbible 82 point is shared with other places"}
+{"entity_id": 11305, "name": "Plain of the vineyards", "skip": "openbible 236 too uncertain"}
+{"entity_id": 11317, "name": "Upper room", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11353, "name": "Aijalon", "skip": "openbible 151 too uncertain"}
+{"entity_id": 11354, "name": "Mount of the Amalekites", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11364, "name": "Wilderness of Etham", "skip": "openbible 173 point is shared with other places"}
+{"entity_id": 11365, "name": "Wilderness of Sinai", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11366, "name": "Abarim", "latitude": 31.77, "longitude": 35.73, "source": "knowledge"}
+{"entity_id": 11370, "name": "Chub", "skip": "region or land with unclear extent"}
+{"entity_id": 11372, "name": "Asuppim", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11381, "name": "Inner court of Solomon's Temple", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11394, "name": "Tomb of Jesus", "latitude": 31.7784, "longitude": 35.2298, "source": "knowledge"}
+{"entity_id": 11421, "name": "Great deep", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11424, "name": "Porch of pillars", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11425, "name": "Porch of judgment", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11427, "name": "House of Pharaoh's daughter", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11428, "name": "Great court", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11429, "name": "Porch of Solomon's Temple", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11449, "name": "Wilderness of Judaea", "latitude": 31.65, "longitude": 35.35, "source": "knowledge"}
+{"entity_id": 11480, "name": "Court of the Tabernacle", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11501, "name": "Mount of the Beatitudes", "latitude": 32.8806, "longitude": 35.5555, "source": "knowledge"}
+{"entity_id": 11521, "name": "Rehoboth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11549, "name": "Hill before Hebron", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11553, "name": "Prison house at Gaza", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11556, "name": "Temple of Dagon at Gaza", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11560, "name": "Burying place of Manoah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11593, "name": "Kingdom of Sihon", "skip": "region or land with unclear extent"}
+{"entity_id": 11607, "name": "House of Micah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11608, "name": "Micah's house of gods", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11635, "name": "City of the Gergesenes", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11638, "name": "Kingdom of Og", "skip": "region or land with unclear extent"}
+{"entity_id": 11641, "name": "Rabbah", "latitude": 31.9539, "longitude": 35.9106, "source": "knowledge"}
+{"entity_id": 11644, "name": "Jacob's well", "latitude": 32.2131, "longitude": 35.2808, "source": "knowledge"}
+{"entity_id": 11645, "name": "Joseph's parcel of ground", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11652, "name": "Greater house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11658, "name": "Land of Laish", "skip": "region or land with unclear extent"}
+{"entity_id": 11662, "name": "Valley of dry bones", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11667, "name": "Sanctuary among gathered Israel", "skip": "no earthly location"}
+{"entity_id": 11669, "name": "Potter's house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11677, "name": "Mount of Corruption", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11685, "name": "Court of the priests", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11710, "name": "Harsith Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11715, "name": "Sheep market", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11735, "name": "Goiim", "skip": "openbible 269 point is shared with other places"}
+{"entity_id": 11739, "name": "Valley of Shaveh", "skip": "region or land with unclear extent"}
+{"entity_id": 11766, "name": "Synagogue at Capernaum", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11785, "name": "Temple in Ezekiel's vision", "skip": "no earthly location"}
+{"entity_id": 11786, "name": "Outer court of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11787, "name": "Inner court of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11788, "name": "East gate of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11796, "name": "House of Solomon", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11816, "name": "Temple of the house in Ezekiel's vision", "skip": "no earthly location"}
+{"entity_id": 11817, "name": "Most holy place of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11818, "name": "Separate place of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11819, "name": "Western building of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11820, "name": "Porch of the house in Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11832, "name": "House of David", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11836, "name": "Palace of the king of Judah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11849, "name": "North chambers of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11850, "name": "South chambers of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11874, "name": "Third heaven", "skip": "no earthly location"}
+{"entity_id": 11898, "name": "Desert place where Jesus fed the five thousand", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11905, "name": "North gate of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11933, "name": "Mountain by the sea of Galilee", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 11937, "name": "Holy oblation", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11948, "name": "King's house in Tirzah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11949, "name": "Hill of Samaria", "latitude": 32.2767, "longitude": 35.1921, "source": "knowledge"}
+{"entity_id": 11950, "name": "House of Baal in Samaria", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 11956, "name": "Bethabara", "latitude": 31.8372, "longitude": 35.5497, "source": "knowledge"}
+{"entity_id": 11989, "name": "East gate of the inner court of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 11990, "name": "South gate of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 12001, "name": "Wilderness of Beer-sheba", "skip": "openbible 406 point is shared with other places"}
+{"entity_id": 12038, "name": "River from Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 12042, "name": "Jerusalem which is above", "skip": "no earthly location"}
+{"entity_id": 12044, "name": "Ramathaim-zophim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12045, "name": "Tomb of Lazarus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12059, "name": "Moriah", "latitude": 31.777778, "longitude": 35.235556, "source": "openbible 325"}
+{"entity_id": 12060, "name": "Jehovah-jireh", "skip": "openbible 444 point is shared with other places"}
+{"entity_id": 12121, "name": "Cave of Machpelah", "latitude": 31.5245, "longitude": 35.1103, "source": "knowledge"}
+{"entity_id": 12122, "name": "Field of Machpelah", "latitude": 31.5245, "longitude": 35.1103, "source": "knowledge"}
+{"entity_id": 12144, "name": "Cave at Horeb", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12146, "name": "Wilderness of Damascus", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12153, "name": "Temple of Bel", "latitude": 32.5355, "longitude": 44.4275, "source": "knowledge"}
+{"entity_id": 12155, "name": "Palace of Nebuchadnezzar", "latitude": 32.5355, "longitude": 44.4275, "source": "knowledge"}
+{"entity_id": 12188, "name": "Tower of David", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12199, "name": "City of Nahor", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12200, "name": "Well of the city of Nahor", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12211, "name": "Second kingdom of Nebuchadnezzar's dream", "skip": "no earthly location"}
+{"entity_id": 12212, "name": "Third kingdom of Nebuchadnezzar's dream", "skip": "no earthly location"}
+{"entity_id": 12213, "name": "Fourth kingdom of Nebuchadnezzar's dream", "skip": "no earthly location"}
+{"entity_id": 12263, "name": "House of Dagon at Ashdod", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12294, "name": "Naboth's vineyard", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12295, "name": "Ahab's palace in Jezreel", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12327, "name": "North country", "skip": "region or land with unclear extent"}
+{"entity_id": 12343, "name": "Baal-hamon", "skip": "openbible 134 point is shared with other places"}
+{"entity_id": 12344, "name": "Solomon's vineyard", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12345, "name": "Valley of Gerar", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12346, "name": "Wells of Abraham", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12351, "name": "Shebah", "skip": "openbible 406 point is shared with other places"}
+{"entity_id": 12361, "name": "Pool of Samaria", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12362, "name": "Ahab's ivory house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12376, "name": "Praetorium at Rome", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12383, "name": "Wilderness of Tekoa", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12386, "name": "Court of the prison", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12430, "name": "Palace of the high priest", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12449, "name": "Sepulchres of the kings", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12484, "name": "City in the land of Zuph", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12485, "name": "High place at the city in Zuph", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12491, "name": "Spring of Jericho", "latitude": 31.8734, "longitude": 35.4427, "source": "knowledge"}
+{"entity_id": 12507, "name": "Garden of the sepulchre", "latitude": 31.7784, "longitude": 35.2298, "source": "knowledge"}
+{"entity_id": 12508, "name": "Sepulchre of Jesus", "latitude": 31.7784, "longitude": 35.2298, "source": "knowledge"}
+{"entity_id": 12546, "name": "Wilderness of Edom", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12547, "name": "Valley of ditches", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12559, "name": "High place at the hill of God", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12590, "name": "Land of the people of the east", "skip": "region or land with unclear extent"}
+{"entity_id": 12596, "name": "Gate of the foundation", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12597, "name": "High gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12598, "name": "House of Baal in Jerusalem", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12652, "name": "Praetorium", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12661, "name": "Arimathaea", "skip": "openbible 228 too uncertain"}
+{"entity_id": 12697, "name": "House of Jonathan the scribe", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12698, "name": "Bakers' street", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12706, "name": "House of Rimmon", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12723, "name": "Passage of Michmash", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12736, "name": "Mount Gilead", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12766, "name": "Dungeon of Malchiah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12775, "name": "Way of the Sea", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12830, "name": "Field of the burial of the kings", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12864, "name": "Gate of Samaria", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12865, "name": "Syrian camp outside Samaria", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12873, "name": "Middle gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12875, "name": "King's garden", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12876, "name": "Gate between the two walls", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12877, "name": "Land of Hamath", "skip": "region or land with unclear extent"}
+{"entity_id": 12885, "name": "Shalem", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 12886, "name": "Jacob's field at Shalem", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12920, "name": "Zair", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12961, "name": "Pool of Gibeon", "latitude": 31.8503, "longitude": 35.1836, "source": "knowledge"}
+{"entity_id": 12962, "name": "Habitation of Chimham", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 12980, "name": "Field of Naboth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13044, "name": "Wilderness of Kadesh", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13048, "name": "Pharaoh's house in Tahpanhes", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13071, "name": "Shearing house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13133, "name": "House of Nisroch", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13136, "name": "Rivers of Ethiopia", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13139, "name": "Land of the nation scattered and peeled", "skip": "region or land with unclear extent"}
+{"entity_id": 13150, "name": "Gate of the guard", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13165, "name": "Land east of Jordan", "skip": "region or land with unclear extent"}
+{"entity_id": 13234, "name": "Mountain near Jericho", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13245, "name": "House of Potiphar", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13248, "name": "Prison of the king's prisoners", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13266, "name": "Synagogues of Damascus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13268, "name": "House of Judas in Damascus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13288, "name": "Sepulchre of Elisha", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13313, "name": "Lower pool", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13314, "name": "Old pool", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13315, "name": "Cave of Adullam", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13318, "name": "Mizpeh of Moab", "skip": "openbible 219 point is shared with other places"}
+{"entity_id": 13320, "name": "The hold", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13335, "name": "House of Simon the tanner", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13336, "name": "House of Cornelius", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13358, "name": "Kerioth", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13385, "name": "Plains of Jericho", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13392, "name": "Wilderness of Ziph", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13393, "name": "Wilderness of Maon", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13426, "name": "King's house in Samaria", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13427, "name": "Higher gate of the house of the Lord", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13434, "name": "City of confusion", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13448, "name": "Prison where Herod held Peter", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13450, "name": "House of Mary the mother of John Mark", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13455, "name": "Wilderness of En-gedi", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13458, "name": "Rocks of the wild goats", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13459, "name": "Cave at En-gedi", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13463, "name": "Hold near En-gedi", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13491, "name": "House of Joseph", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13501, "name": "Covert for the sabbath", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13502, "name": "King's entry to the temple", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13521, "name": "Temple of Zerubbabel", "latitude": 31.778, "longitude": 35.2354, "source": "knowledge"}
+{"entity_id": 13557, "name": "Synagogue at Antioch in Pisidia", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13605, "name": "Synagogue at Iconium", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13610, "name": "Region round about Lystra and Derbe", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13626, "name": "House of the Lord in Joel 3", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13656, "name": "Mizar", "skip": "openbible 317 point is shared with other places"}
+{"entity_id": 13666, "name": "Jeshimon", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13671, "name": "Nophah", "skip": "openbible 433 point is shared with other places"}
+{"entity_id": 13738, "name": "Cave of Makkedah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13757, "name": "Fountain in Jezreel", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13769, "name": "House of Lydia", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13775, "name": "Prison at Philippi", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13778, "name": "House of the Philippian jailor", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13786, "name": "King's treasure house at Babylon", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13791, "name": "Hezekiah's pool", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13792, "name": "Hezekiah's conduit", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13818, "name": "Baal-gad", "skip": "openbible 235 point is shared with other places"}
+{"entity_id": 13819, "name": "Mountain of Israel", "skip": "region or land with unclear extent"}
+{"entity_id": 13820, "name": "Mountains of Judah", "skip": "region or land with unclear extent"}
+{"entity_id": 13823, "name": "Caleb", "skip": "region or land with unclear extent"}
+{"entity_id": 13824, "name": "Rachal", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 13839, "name": "Synagogue at Thessalonica", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13842, "name": "House of Jason", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13845, "name": "Synagogue at Berea", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13849, "name": "Synagogue at Athens", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13852, "name": "Market at Athens", "latitude": 37.9748, "longitude": 23.7219, "source": "knowledge"}
+{"entity_id": 13872, "name": "House of Zacharias", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13884, "name": "Geder", "skip": "openbible 422 point is shared with other places"}
+{"entity_id": 13885, "name": "Gilgal", "skip": "openbible 498 point is shared with other places"}
+{"entity_id": 13905, "name": "River of the wilderness", "skip": "openbible 131 too uncertain"}
+{"entity_id": 13907, "name": "Synagogue at Corinth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13910, "name": "House of Justus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13912, "name": "Judgment seat at Corinth", "latitude": 37.906, "longitude": 22.88, "source": "knowledge"}
+{"entity_id": 13914, "name": "Synagogue at Ephesus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13924, "name": "Mishneh", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13968, "name": "Inn at Bethlehem", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13981, "name": "School of Tyrannus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 13983, "name": "Temple of Diana", "latitude": 37.9497, "longitude": 27.3639, "source": "knowledge"}
+{"entity_id": 13984, "name": "Theatre at Ephesus", "latitude": 37.9396, "longitude": 27.3417, "source": "knowledge"}
+{"entity_id": 13997, "name": "High place at Bethel", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14014, "name": "Heavenly tabernacle", "skip": "no earthly location"}
+{"entity_id": 14015, "name": "Heavens", "skip": "no earthly location"}
+{"entity_id": 14023, "name": "Wilderness of Gibeon", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14030, "name": "River of Ahava", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14076, "name": "Hezron", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14077, "name": "Stone of Bohan", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14079, "name": "Rabbah", "skip": "openbible 303 site disputed or identification too weak"}
+{"entity_id": 14146, "name": "Fortress of Antonia", "latitude": 31.7803, "longitude": 35.2362, "source": "knowledge"}
+{"entity_id": 14155, "name": "Mountain of the temptation", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14160, "name": "Synagogue at Nazareth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14164, "name": "Hill of Nazareth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14169, "name": "House of Simon Peter", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14185, "name": "House of Ish-bosheth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14186, "name": "Pool in Hebron", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14187, "name": "Sepulchre of Abner", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14190, "name": "Land of Tappuah", "skip": "region or land with unclear extent"}
+{"entity_id": 14192, "name": "Heavenly Jerusalem", "skip": "no earthly location"}
+{"entity_id": 14232, "name": "The hold of 2 Samuel 5", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14244, "name": "Wall of Jerusalem", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14248, "name": "Cave where David hid from Saul", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14250, "name": "Beth-le-aphrah", "skip": "openbible 269 point is shared with other places"}
+{"entity_id": 14262, "name": "Herod's judgment hall", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14283, "name": "Gibeah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14284, "name": "House of Abinadab", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14285, "name": "House of Obed-edom", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14300, "name": "Edrei", "skip": "openbible 224 too uncertain"}
+{"entity_id": 14307, "name": "King's forest", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14311, "name": "Dragon Well", "skip": "openbible 439 point is shared with other places"}
+{"entity_id": 14325, "name": "Mount Naphtali", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14355, "name": "Judgment seat at Caesarea", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14356, "name": "Place of hearing at Caesarea", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14360, "name": "Old Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14361, "name": "Tower of the Furnaces", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14365, "name": "House of the Mighty", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14366, "name": "House of Eliashib", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14377, "name": "Outer court of Solomon's Temple", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14378, "name": "East gate of the Lord's house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14459, "name": "Village of the Samaritans that refused Jesus", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14495, "name": "Paul's hired house at Rome", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14497, "name": "David's house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14520, "name": "Inn in the parable of the good Samaritan", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14521, "name": "Village of Martha and Mary", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14522, "name": "House of Martha", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14536, "name": "Kirjathaim", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14560, "name": "Wilderness of the Red Sea", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14617, "name": "Amnon's house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14673, "name": "Synagogue where Jesus healed the bowed woman", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14695, "name": "Absalom's house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14707, "name": "Temple of Dagon", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14713, "name": "Palace of Ahasuerus", "latitude": 32.1909, "longitude": 48.2579, "source": "knowledge"}
+{"entity_id": 14714, "name": "Outward court of Ahasuerus' palace", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14715, "name": "King's gate at Shushan", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14717, "name": "House of Haman", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14768, "name": "Palace garden of Ahasuerus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14778, "name": "Bottomless pit", "skip": "no earthly location"}
+{"entity_id": 14802, "name": "Stone of Zoheleth", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14833, "name": "Mount Gilead", "skip": "openbible 179 point is shared with other places"}
+{"entity_id": 14835, "name": "Winepress of Zeeb", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14836, "name": "Persian Empire", "skip": "region or land with unclear extent"}
+{"entity_id": 14884, "name": "Tower of Penuel", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14908, "name": "Place that was far off", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14911, "name": "Wilderness toward the Jordan in David's flight", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14912, "name": "Plain of the wilderness", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 14916, "name": "Two mountains of brass", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 14917, "name": "South country", "skip": "region or land with unclear extent"}
+{"entity_id": 14965, "name": "Tent of the ark", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15030, "name": "Temple of God in heaven", "skip": "no earthly location"}
+{"entity_id": 15065, "name": "House of Job's eldest son", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15079, "name": "Wood of Ephraim", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15095, "name": "Temple measured by John", "skip": "no earthly location"}
+{"entity_id": 15127, "name": "Woman's place in the wilderness", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 15193, "name": "Great stone in Gibeon", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15215, "name": "Temple in heaven", "skip": "no earthly location"}
+{"entity_id": 15328, "name": "Waters where the great whore sits", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 15351, "name": "Well of Beth-lehem", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15372, "name": "Prison Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15413, "name": "Palm tree of Deborah", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15453, "name": "Valley of the mountains", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15454, "name": "Living waters from Jerusalem", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 15458, "name": "First Gate", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15459, "name": "King's Winepresses", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15460, "name": "House of the Lord in Zechariah 14", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15461, "name": "Shushan the palace", "latitude": 32.1909, "longitude": 48.2579, "source": "knowledge"}
+{"entity_id": 15482, "name": "House of the women", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15483, "name": "Second house of the women", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15493, "name": "River of water of life", "skip": "no earthly location"}
+{"entity_id": 15496, "name": "Wilderness of the wanderings", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 15510, "name": "Treasuries of Ahasuerus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15511, "name": "Inner court of the palace of Ahasuerus", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15538, "name": "Valley of Megiddo", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15605, "name": "Rachel's grave", "latitude": 31.7197, "longitude": 35.2028, "source": "knowledge"}
+{"entity_id": 15613, "name": "Mount of the Amorites", "skip": "no OpenBible match and location unknown or disputed"}
+{"entity_id": 15623, "name": "Inner south gate of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 15625, "name": "Inner north gate of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 15634, "name": "Priests' boiling place of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 15635, "name": "Kitchen courts of Ezekiel's temple", "skip": "no earthly location"}
+{"entity_id": 15641, "name": "Nathan's house", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15705, "name": "Hapharaim", "latitude": 32.60385, "longitude": 35.44661, "source": "openbible 423"}
+{"entity_id": 15714, "name": "Quarries by Gilgal", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15722, "name": "Tower of Thebez", "skip": "structure or feature inside a larger site, no precise position"}
+{"entity_id": 15727, "name": "Upper room of the apostles", "skip": "structure or feature inside a larger site, no precise position"}

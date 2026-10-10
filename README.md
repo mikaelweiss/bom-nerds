@@ -12,6 +12,7 @@ The text and original-language data are complete. The rest is being tagged chapt
 - **Relationships:** family trees, who led whom, what lies north of what, each backed by the verse that says it.
 - **Speeches:** who is speaking, to whom, and through which prophet.
 - **Journeys:** who traveled where, and how long it took.
+- **Settings:** where each passage takes place, even when the verse does not name the place.
 - **Dates:** BC/AD and the Book of Mormon's own calendars.
 - **Links:** cross-references, quotes, parallels, and fulfilled prophecies.
 - **Structure:** sentences, clauses, chiasms, and parallelisms.

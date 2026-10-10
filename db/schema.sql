@@ -380,6 +380,32 @@ create index journey_traveler on journey (traveler_id);
 create index journey_from on journey (from_id);
 create index journey_to on journey (to_id);
 
+create table setting (
+    id integer primary key,
+    place_id integer not null references entity,
+    first_word_id integer not null references word,
+    last_word_id integer not null references word,
+    unique (place_id, first_word_id, last_word_id)
+) strict;
+
+create index setting_first_word on setting (first_word_id, last_word_id);
+
+create trigger setting_place_insert before insert on setting
+when not exists (
+    select 1 from entity x join entity_type t on t.id = x.entity_type_id left join entity_type p on p.id = t.parent_id
+    where x.id = new.place_id and 'Place' in (t.name, p.name))
+begin
+    select raise(abort, 'a setting must be a place');
+end;
+
+create trigger setting_place_update before update of place_id on setting
+when not exists (
+    select 1 from entity x join entity_type t on t.id = x.entity_type_id left join entity_type p on p.id = t.parent_id
+    where x.id = new.place_id and 'Place' in (t.name, p.name))
+begin
+    select raise(abort, 'a setting must be a place');
+end;
+
 create table counting_system (
     id integer primary key,
     name text not null unique,
@@ -671,6 +697,24 @@ begin
 end;
 
 create trigger journey_passage_update before update of first_word_id, last_word_id on journey
+when not (select a.sequence <= b.sequence and ca.edition_id = cb.edition_id
+         from word a join verse va on va.id = a.verse_id join chapter ca on ca.id = va.chapter_id,
+              word b join verse vb on vb.id = b.verse_id join chapter cb on cb.id = vb.chapter_id
+         where a.id = new.first_word_id and b.id = new.last_word_id)
+begin
+    select raise(abort, 'a passage must run forward within one edition');
+end;
+
+create trigger setting_passage_insert before insert on setting
+when not (select a.sequence <= b.sequence and ca.edition_id = cb.edition_id
+         from word a join verse va on va.id = a.verse_id join chapter ca on ca.id = va.chapter_id,
+              word b join verse vb on vb.id = b.verse_id join chapter cb on cb.id = vb.chapter_id
+         where a.id = new.first_word_id and b.id = new.last_word_id)
+begin
+    select raise(abort, 'a passage must run forward within one edition');
+end;
+
+create trigger setting_passage_update before update of first_word_id, last_word_id on setting
 when not (select a.sequence <= b.sequence and ca.edition_id = cb.edition_id
          from word a join verse va on va.id = a.verse_id join chapter ca on ca.id = va.chapter_id,
               word b join verse vb on vb.id = b.verse_id join chapter cb on cb.id = vb.chapter_id

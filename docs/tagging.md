@@ -66,6 +66,7 @@ Tag every word or phrase that refers to an entity: names, titles, pronouns, and 
 
 - Tag the King James Version only. `tagging/originals.py` carries its mentions onto the Westminster Leningrad Codex and the SBL Greek New Testament through `word_match`.
 - A carried mention covers the original words matched to its English words. A mention of a name stays in one verse. Prefixes, suffixes, and articles with no English match stay outside it.
-- A mention with no matched words is not carried. Most are pronouns, which Hebrew writes as suffixes and both languages write as verb endings.
+- A pronoun `word_match` leaves unmatched carries onto the word that expresses it: a Hebrew suffix, a pronoun, or the verb or Greek participle that gives its subject. The word agrees with the English in person, number, and any gender the English marks, and fits its role. It is the one on the word the pronoun attaches to, as in "his son", "unto him", or "he said". Otherwise it is the only agreeing word between the words matched to the pronoun's English neighbours, and no other pronoun could take it. A pronoun with no such word, or one the translators supplied, is not carried.
+- Any other mention with no matched words is not carried.
 - After retagging a chapter, run `python3 tagging/originals.py "Book C"` to rebuild its Hebrew or Greek mentions.
 - Speeches, journeys, dates, and relationship evidence stay on the King James words. `word_match` leads from them to the original words.

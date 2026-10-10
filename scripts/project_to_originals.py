@@ -1,4 +1,12 @@
-"""Copy KJV speeches, journeys, relationship evidence, and dates onto the Hebrew and Greek through word_match."""
+"""Copy KJV speeches, journeys, relationship evidence, and dates onto the Hebrew and Greek through word_match.
+
+    python scripts/project_to_originals.py scripture.db
+    python scripts/project_to_originals.py scripture.db --sync [--dry-run]
+
+--sync brings existing copies in line with their KJV sources and adds missing copies, so it is safe to repeat.
+A copy is the row at the projected word range: the speech there, or the journey or date there that pairs best
+with its source. --dry-run prints the changes without writing them.
+"""
 
 import sqlite3
 import sys
@@ -80,6 +88,7 @@ def kjv_rows(db, query):
 def main(path):
     db = sqlite3.connect(path)
     db.execute("pragma foreign_keys = on")
+    db.execute("pragma busy_timeout = 60000")
     projector = Projector(db)
     report = Counter()
 
@@ -162,5 +171,175 @@ def main(path):
         print(f"{key}: {n}")
 
 
+def by_edition(projector, rows, first):
+    kjv, originals = [], defaultdict(list)
+    for row in rows:
+        edition = projector.edition.get(row[first])
+        if edition == KJV:
+            kjv.append(row)
+        elif edition in ORIGINALS:
+            originals[row[first], row[first + 1]].append(row)
+    return kjv, originals
+
+
+def pair(sources, copies, score):
+    """Pair each source with at most one copy, best score first."""
+    options = sorted(
+        ((s, i, j) for i, a in enumerate(sources) for j, b in enumerate(copies) if (s := score(a, b)) is not None),
+        key=lambda o: (-o[0], o[1], o[2]),
+    )
+    pairs, used_sources, used_copies = [], set(), set()
+    for _, i, j in options:
+        if i not in used_sources and j not in used_copies:
+            used_sources.add(i)
+            used_copies.add(j)
+            pairs.append((sources[i], copies[j]))
+    unpaired = [s for i, s in enumerate(sources) if i not in used_sources]
+    return pairs, unpaired, len(copies) - len(used_copies)
+
+
+def sync_speeches(db, projector, report):
+    speeches = db.execute("select id, through_id, speech_mode_id, first_word_id, last_word_id from speech").fetchall()
+    members = {table: defaultdict(set) for table in ("speech_speaker", "speech_listener")}
+    for table, of in members.items():
+        for speech, entity in db.execute(f"select speech_id, entity_id from {table}"):
+            of[speech].add(entity)
+    kjv, originals = by_edition(projector, speeches, 3)
+    sources = defaultdict(list)
+    for row in kjv:
+        span = projector.project(row[3], row[4])
+        if span is None:
+            report["speech unmatched"] += 1
+        else:
+            sources[span].append(row)
+
+    removals, updates, inserts, additions = [], [], [], []
+    for span, rows in sources.items():
+        if len({row[1:3] for row in rows}) > 1:
+            report["speech sources disagree on messenger or mode"] += 1
+        through_mode = rows[0][1:3]
+        copy = originals.get(span, [None])[0]
+        if copy is None:
+            inserts.append(
+                ("insert into speech (through_id, speech_mode_id, first_word_id, last_word_id) values (?, ?, ?, ?)",
+                 (*through_mode, *span))
+            )
+            report["speech added"] += 1
+        elif copy[1:3] != through_mode:
+            updates.append(("update speech set through_id = ?, speech_mode_id = ? where id = ?", (*through_mode, copy[0])))
+            report["speech messenger or mode updated"] += 1
+        for table, of in members.items():
+            want = set().union(*(of[row[0]] for row in rows))
+            have = of[copy[0]] if copy else set()
+            removals += [(f"delete from {table} where speech_id = ? and entity_id = ?", (copy[0], e)) for e in have - want]
+            additions += [
+                (f"insert into {table} select id, ? from speech where first_word_id = ? and last_word_id = ?", (e, *span))
+                for e in want - have
+            ]
+            report[f"{table} removed"] += len(have - want)
+            report[f"{table} added"] += len(want - have)
+            if copy and want - have and not have:
+                report[f"{table} given to copies that had none"] += 1
+    report["speech copies without a source"] += sum(1 for span in originals if span not in sources)
+    return removals + updates + inserts + additions
+
+
+JOURNEY = "traveler_id, from_id, to_id, days"
+DATE = (
+    "counting_system_id, from_year, from_month, from_day, to_year, to_month, to_day, "
+    "evidence_first_word_id, evidence_last_word_id"
+)
+
+
+def journey_score(source, copy):
+    same = [a == b for a, b in zip(source, copy)]
+    return sum(same) if same[0] + same[1] + same[2] >= 2 else None
+
+
+def date_score(source, copy):
+    return sum(a == b for a, b in zip(source, copy)) if (source[1], source[4]) == (copy[1], copy[4]) else None
+
+
+def sync_rows(db, projector, report, table, fields, score, evidence=False):
+    """Pair KJV rows with copies at the same projected range, update paired copies, and insert unpaired sources."""
+    width = len(fields.split(", "))
+    rows = db.execute(f"select id, {fields}, first_word_id, last_word_id from {table} where first_word_id is not null")
+    kjv, originals = by_edition(projector, rows.fetchall(), width + 1)
+    sources = defaultdict(list)
+    for row in kjv:
+        values, (first, last) = row[1 : width + 1], row[width + 1 :]
+        span = projector.project(first, last)
+        if evidence and values[-2] is not None:
+            projected = projector.project(*values[-2:])
+            values = None if projected is None else (*values[:-2], *projected)
+        if span is None or values is None:
+            report[f"{table} unmatched"] += 1
+        elif values in sources[span]:
+            report[f"{table} sources repeated"] += 1
+        else:
+            sources[span].append(values)
+
+    ops = []
+    setter = f"update {table} set ({fields}) = ({', '.join('?' * width)}) where id = ?"
+    inserter = f"insert into {table} ({fields}, first_word_id, last_word_id) values ({', '.join('?' * (width + 2))})"
+    for span, wanted in sources.items():
+        copies = [(c[1 : width + 1], c[0]) for c in originals.get(span, ())]
+        pairs, unpaired, spare = pair(wanted, copies, lambda source, copy: score(source, copy[0]))
+        report[f"{table} copies without a source"] += spare
+        for values, (current, copy) in pairs:
+            if values != current:
+                ops.append((setter, (*values, copy)))
+                report[f"{table} updated"] += 1
+                for field, a, b in zip(fields.split(", "), values, current):
+                    report[f"{table} {field} changed"] += a != b
+        ops += [(inserter, (*values, *span)) for values in unpaired]
+        report[f"{table} added"] += len(unpaired)
+    report[f"{table} copies without a source"] += sum(len(c) for span, c in originals.items() if span not in sources)
+    return ops
+
+
+def sync_evidence(db, projector, report):
+    rows = db.execute("select relationship_id, first_word_id, last_word_id from relationship_evidence").fetchall()
+    kjv, originals = by_edition(projector, rows, 1)
+    have = {row for copies in originals.values() for row in copies}
+    wanted = set()
+    for relationship, first, last in kjv:
+        span = projector.project(first, last)
+        if span is None:
+            report["relationship evidence unmatched"] += 1
+        else:
+            wanted.add((relationship, *span))
+    report["relationship evidence added"] += len(wanted - have)
+    report["relationship evidence copies without a source"] += len(have - wanted)
+    return [("insert or ignore into relationship_evidence values (?, ?, ?)", row) for row in sorted(wanted - have)]
+
+
+def sync(path, dry_run):
+    db = sqlite3.connect(path)
+    db.execute("pragma foreign_keys = on")
+    db.execute("pragma busy_timeout = 60000")
+    projector = Projector(db)
+    report = Counter()
+    steps = (
+        lambda: sync_speeches(db, projector, report),
+        lambda: sync_rows(db, projector, report, "journey", JOURNEY, journey_score),
+        lambda: sync_evidence(db, projector, report),
+        lambda: sync_rows(db, projector, report, "date", DATE, date_score, evidence=True),
+    )
+    for step in steps:
+        ops = step()
+        if not dry_run:
+            with db:
+                for sql, params in ops:
+                    db.execute(sql, params)
+    print("dry run, nothing written" if dry_run else "synced")
+    for key, n in sorted(report.items()):
+        if n:
+            print(f"{key}: {n}")
+
+
 if __name__ == "__main__":
-    main(sys.argv[1])
+    if "--sync" in sys.argv[2:]:
+        sync(sys.argv[1], "--dry-run" in sys.argv[2:])
+    else:
+        main(sys.argv[1])

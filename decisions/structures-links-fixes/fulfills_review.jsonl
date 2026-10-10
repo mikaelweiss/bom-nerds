@@ -1,0 +1,377 @@
+{"from_first_word_id": 610896, "from_last_word_id": 610942, "to_first_word_id": 449767, "to_last_word_id": 449790, "from_ref": "Matthew 1:22-23", "to_ref": "Isaiah 7:14", "decision": "Fulfills"}
+{"from_first_word_id": 611075, "from_last_word_id": 611122, "to_first_word_id": 595327, "to_last_word_id": 595366, "from_ref": "Matthew 2:5-6", "to_ref": "Micah 5:2", "decision": "Fulfills"}
+{"from_first_word_id": 611332, "from_last_word_id": 611379, "to_first_word_id": 584097, "to_last_word_id": 584112, "from_ref": "Matthew 2:14-15", "to_ref": "Hosea 11:1", "decision": "Fulfills"}
+{"from_first_word_id": 611380, "from_last_word_id": 611471, "to_first_word_id": 506186, "to_last_word_id": 506215, "from_ref": "Matthew 2:16-18", "to_ref": "Jeremiah 31:15", "decision": "Fulfills"}
+{"from_first_word_id": 611602, "from_last_word_id": 611658, "to_first_word_id": 467520, "to_last_word_id": 467545, "from_ref": "Matthew 3:1-3", "to_ref": "Isaiah 40:3", "decision": "Fulfills"}
+{"from_first_word_id": 634212, "from_last_word_id": 634269, "to_first_word_id": 467520, "to_last_word_id": 467545, "from_ref": "Mark 1:2-4", "to_ref": "Isaiah 40:3", "decision": "Fulfills"}
+{"from_first_word_id": 634212, "from_last_word_id": 634269, "to_first_word_id": 609756, "to_last_word_id": 609800, "from_ref": "Mark 1:2-4", "to_ref": "Malachi 3:1", "decision": "Fulfills"}
+{"from_first_word_id": 652091, "from_last_word_id": 652202, "to_first_word_id": 467520, "to_last_word_id": 467596, "from_ref": "Luke 3:2-6", "to_ref": "Isaiah 40:3-5", "decision": "Fulfills"}
+{"from_first_word_id": 675709, "from_last_word_id": 675732, "to_first_word_id": 467520, "to_last_word_id": 467545, "from_ref": "John 1:23", "to_ref": "Isaiah 40:3", "decision": "Fulfills"}
+{"from_first_word_id": 617770, "from_last_word_id": 617793, "to_first_word_id": 609756, "to_last_word_id": 609800, "from_ref": "Matthew 11:10", "to_ref": "Malachi 3:1", "decision": "Fulfills"}
+{"from_first_word_id": 656907, "from_last_word_id": 656929, "to_first_word_id": 609756, "to_last_word_id": 609800, "from_ref": "Luke 7:27", "to_ref": "Malachi 3:1", "decision": "Fulfills"}
+{"from_first_word_id": 617853, "from_last_word_id": 617876, "to_first_word_id": 610453, "to_last_word_id": 610472, "from_ref": "Matthew 11:13-14", "to_ref": "Malachi 4:5", "decision": "Fulfills"}
+{"from_first_word_id": 623185, "from_last_word_id": 623246, "to_first_word_id": 610453, "to_last_word_id": 610472, "from_ref": "Matthew 17:11-13", "to_ref": "Malachi 4:5", "decision": "Fulfills"}
+{"from_first_word_id": 649694, "from_last_word_id": 649749, "to_first_word_id": 610453, "to_last_word_id": 610503, "from_ref": "Luke 1:16-17", "to_ref": "Malachi 4:5-6", "decision": "Alludes to"}
+{"from_first_word_id": 612250, "from_last_word_id": 612330, "to_first_word_id": 450676, "to_last_word_id": 450751, "from_ref": "Matthew 4:13-16", "to_ref": "Isaiah 9:1-2", "decision": "Fulfills"}
+{"from_first_word_id": 615379, "from_last_word_id": 615429, "to_first_word_id": 476063, "to_last_word_id": 476083, "from_ref": "Matthew 8:16-17", "to_ref": "Isaiah 53:4", "decision": "Fulfills"}
+{"from_first_word_id": 618569, "from_last_word_id": 618687, "to_first_word_id": 469079, "to_last_word_id": 469168, "from_ref": "Matthew 12:15-21", "to_ref": "Isaiah 42:1-4", "decision": "Fulfills"}
+{"from_first_word_id": 619638, "from_last_word_id": 619737, "to_first_word_id": 449277, "to_last_word_id": 449334, "from_ref": "Matthew 13:13-15", "to_ref": "Isaiah 6:9-10", "decision": "Quotes"}
+{"from_first_word_id": 620215, "from_last_word_id": 620267, "to_first_word_id": 401535, "to_last_word_id": 401549, "from_ref": "Matthew 13:34-35", "to_ref": "Psalms 78:2", "decision": "Quotes"}
+{"from_first_word_id": 626035, "from_last_word_id": 626076, "to_first_word_id": 605956, "to_last_word_id": 605993, "from_ref": "Matthew 21:4-5", "to_ref": "Zechariah 9:9", "decision": "Fulfills"}
+{"from_first_word_id": 686633, "from_last_word_id": 686694, "to_first_word_id": 605956, "to_last_word_id": 605993, "from_ref": "John 12:14-16", "to_ref": "Zechariah 9:9", "decision": "Fulfills"}
+{"from_first_word_id": 631978, "from_last_word_id": 631999, "to_first_word_id": 607847, "to_last_word_id": 607884, "from_ref": "Matthew 26:56", "to_ref": "Zechariah 13:7", "decision": "Fulfills"}
+{"from_first_word_id": 647518, "from_last_word_id": 647524, "to_first_word_id": 607847, "to_last_word_id": 607884, "from_ref": "Mark 14:50", "to_ref": "Zechariah 13:7", "decision": "Fulfills"}
+{"from_first_word_id": 632581, "from_last_word_id": 632628, "to_first_word_id": 606977, "to_last_word_id": 607044, "from_ref": "Matthew 27:9-10", "to_ref": "Zechariah 11:12-13", "decision": "Fulfills"}
+{"from_first_word_id": 631034, "from_last_word_id": 631072, "to_first_word_id": 606977, "to_last_word_id": 607003, "from_ref": "Matthew 26:14-15", "to_ref": "Zechariah 11:12", "decision": "Fulfills"}
+{"from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 384516, "to_last_word_id": 384527, "from_ref": "Matthew 27:35", "to_ref": "Psalms 22:18", "decision": "Fulfills"}
+{"from_first_word_id": 692459, "from_last_word_id": 692540, "to_first_word_id": 384516, "to_last_word_id": 384527, "from_ref": "John 19:23-24", "to_ref": "Psalms 22:18", "decision": "Fulfills"}
+{"from_first_word_id": 648421, "from_last_word_id": 648439, "to_first_word_id": 384516, "to_last_word_id": 384527, "from_ref": "Mark 15:24", "to_ref": "Psalms 22:18", "decision": "Fulfills"}
+{"from_first_word_id": 673808, "from_last_word_id": 673828, "to_first_word_id": 384516, "to_last_word_id": 384527, "from_ref": "Luke 23:34", "to_ref": "Psalms 22:18", "decision": "Fulfills"}
+{"from_first_word_id": 633204, "from_last_word_id": 633303, "to_first_word_id": 384312, "to_last_word_id": 384349, "from_ref": "Matthew 27:39-43", "to_ref": "Psalms 22:7-8", "decision": "Fulfills"}
+{"from_first_word_id": 633334, "from_last_word_id": 633362, "to_first_word_id": 384211, "to_last_word_id": 384234, "from_ref": "Matthew 27:46", "to_ref": "Psalms 22:1", "decision": "Quotes"}
+{"from_first_word_id": 648593, "from_last_word_id": 648621, "to_first_word_id": 384211, "to_last_word_id": 384234, "from_ref": "Mark 15:34", "to_ref": "Psalms 22:1", "decision": "Quotes"}
+{"from_first_word_id": 692607, "from_last_word_id": 692652, "to_first_word_id": 398704, "to_last_word_id": 398721, "from_ref": "John 19:28-29", "to_ref": "Psalms 69:21", "decision": "Fulfills"}
+{"from_first_word_id": 633108, "from_last_word_id": 633126, "to_first_word_id": 398704, "to_last_word_id": 398721, "from_ref": "Matthew 27:34", "to_ref": "Psalms 69:21", "decision": "Fulfills"}
+{"from_first_word_id": 633379, "from_last_word_id": 633404, "to_first_word_id": 398704, "to_last_word_id": 398721, "from_ref": "Matthew 27:48", "to_ref": "Psalms 69:21", "decision": "Fulfills"}
+{"from_first_word_id": 692719, "from_last_word_id": 692817, "to_first_word_id": 47600, "to_last_word_id": 47627, "from_ref": "John 19:32-36", "to_ref": "Exodus 12:46", "decision": "Fulfills"}
+{"from_first_word_id": 692719, "from_last_word_id": 692817, "to_first_word_id": 388026, "to_last_word_id": 388036, "from_ref": "John 19:32-36", "to_ref": "Psalms 34:20", "decision": "Fulfills"}
+{"from_first_word_id": 692818, "from_last_word_id": 692830, "to_first_word_id": 607484, "to_last_word_id": 607544, "from_ref": "John 19:37", "to_ref": "Zechariah 12:10", "decision": "Fulfills"}
+{"from_first_word_id": 648464, "from_last_word_id": 648496, "to_first_word_id": 476313, "to_last_word_id": 476360, "from_ref": "Mark 15:27-28", "to_ref": "Isaiah 53:12", "decision": "Fulfills"}
+{"from_first_word_id": 672448, "from_last_word_id": 672478, "to_first_word_id": 476313, "to_last_word_id": 476360, "from_ref": "Luke 22:37", "to_ref": "Isaiah 53:12", "decision": "Quotes"}
+{"from_first_word_id": 673763, "from_last_word_id": 673807, "to_first_word_id": 476313, "to_last_word_id": 476360, "from_ref": "Luke 23:32-33", "to_ref": "Isaiah 53:12", "decision": "Fulfills"}
+{"from_first_word_id": 633560, "from_last_word_id": 633642, "to_first_word_id": 476212, "to_last_word_id": 476239, "from_ref": "Matthew 27:57-60", "to_ref": "Isaiah 53:9", "decision": "Fulfills"}
+{"from_first_word_id": 687123, "from_last_word_id": 687168, "to_first_word_id": 475974, "to_last_word_id": 475988, "from_ref": "John 12:37-38", "to_ref": "Isaiah 53:1", "decision": "Fulfills"}
+{"from_first_word_id": 687169, "from_last_word_id": 687221, "to_first_word_id": 449298, "to_last_word_id": 449334, "from_ref": "John 12:39-41", "to_ref": "Isaiah 6:10", "decision": "Quotes"}
+{"from_first_word_id": 687777, "from_last_word_id": 687808, "to_first_word_id": 390798, "to_last_word_id": 390819, "from_ref": "John 13:18", "to_ref": "Psalms 41:9", "decision": "Quotes"}
+{"from_first_word_id": 689519, "from_last_word_id": 689541, "to_first_word_id": 398352, "to_last_word_id": 398386, "from_ref": "John 15:25", "to_ref": "Psalms 69:4", "decision": "Quotes"}
+{"from_first_word_id": 690648, "from_last_word_id": 690686, "to_first_word_id": 390798, "to_last_word_id": 390819, "from_ref": "John 17:12", "to_ref": "Psalms 41:9", "decision": "Fulfills"}
+{"from_first_word_id": 676660, "from_last_word_id": 676676, "to_first_word_id": 398461, "to_last_word_id": 398482, "from_ref": "John 2:17", "to_ref": "Psalms 69:9", "decision": "Quotes"}
+{"from_first_word_id": 694821, "from_last_word_id": 694945, "to_first_word_id": 398775, "to_last_word_id": 398786, "from_ref": "Acts 1:16-20", "to_ref": "Psalms 69:25", "decision": "Fulfills"}
+{"from_first_word_id": 694821, "from_last_word_id": 694945, "to_first_word_id": 412522, "to_last_word_id": 412532, "from_ref": "Acts 1:16-20", "to_ref": "Psalms 109:8", "decision": "Fulfills"}
+{"from_first_word_id": 695366, "from_last_word_id": 695504, "to_first_word_id": 586701, "to_last_word_id": 586840, "from_ref": "Acts 2:16-21", "to_ref": "Joel 2:28-32", "decision": "Fulfills"}
+{"from_first_word_id": 695588, "from_last_word_id": 695759, "to_first_word_id": 382155, "to_last_word_id": 382233, "from_ref": "Acts 2:25-31", "to_ref": "Psalms 16:8-11", "decision": "Fulfills"}
+{"from_first_word_id": 705609, "from_last_word_id": 705692, "to_first_word_id": 382191, "to_last_word_id": 382209, "from_ref": "Acts 13:34-37", "to_ref": "Psalms 16:10", "decision": "Fulfills"}
+{"from_first_word_id": 695803, "from_last_word_id": 695857, "to_first_word_id": 412954, "to_last_word_id": 412972, "from_ref": "Acts 2:34-36", "to_ref": "Psalms 110:1", "decision": "Fulfills"}
+{"from_first_word_id": 696592, "from_last_word_id": 696731, "to_first_word_id": 143390, "to_last_word_id": 143537, "from_ref": "Acts 3:22-26", "to_ref": "Deuteronomy 18:15-19", "decision": "Fulfills"}
+{"from_first_word_id": 699835, "from_last_word_id": 699866, "to_first_word_id": 143390, "to_last_word_id": 143416, "from_ref": "Acts 7:37", "to_ref": "Deuteronomy 18:15", "decision": "Quotes"}
+{"from_first_word_id": 696914, "from_last_word_id": 696975, "to_first_word_id": 414619, "to_last_word_id": 414632, "from_ref": "Acts 4:10-11", "to_ref": "Psalms 118:22", "decision": "Fulfills"}
+{"from_first_word_id": 626964, "from_last_word_id": 627001, "to_first_word_id": 414619, "to_last_word_id": 414643, "from_ref": "Matthew 21:42", "to_ref": "Psalms 118:22-23", "decision": "Quotes"}
+{"from_first_word_id": 772223, "from_last_word_id": 772251, "to_first_word_id": 414619, "to_last_word_id": 414632, "from_ref": "1 Peter 2:7", "to_ref": "Psalms 118:22", "decision": "Quotes"}
+{"from_first_word_id": 697291, "from_last_word_id": 697374, "to_first_word_id": 379154, "to_last_word_id": 379186, "from_ref": "Acts 4:25-28", "to_ref": "Psalms 2:1-2", "decision": "Fulfills"}
+{"from_first_word_id": 701068, "from_last_word_id": 701161, "to_first_word_id": 476140, "to_last_word_id": 476211, "from_ref": "Acts 8:32-35", "to_ref": "Isaiah 53:7-8", "decision": "Quotes"}
+{"from_first_word_id": 705556, "from_last_word_id": 705608, "to_first_word_id": 379243, "to_last_word_id": 379263, "from_ref": "Acts 13:32-33", "to_ref": "Psalms 2:7", "decision": "Fulfills"}
+{"from_first_word_id": 705922, "from_last_word_id": 705952, "to_first_word_id": 473723, "to_last_word_id": 473773, "from_ref": "Acts 13:47", "to_ref": "Isaiah 49:6", "decision": "Quotes"}
+{"from_first_word_id": 707008, "from_last_word_id": 707101, "to_first_word_id": 591453, "to_last_word_id": 591515, "from_ref": "Acts 15:14-17", "to_ref": "Amos 9:11-12", "decision": "Fulfills"}
+{"from_first_word_id": 718486, "from_last_word_id": 718606, "to_first_word_id": 449277, "to_last_word_id": 449334, "from_ref": "Acts 28:25-28", "to_ref": "Isaiah 6:9-10", "decision": "Quotes"}
+{"from_first_word_id": 653412, "from_last_word_id": 653542, "to_first_word_id": 479959, "to_last_word_id": 480027, "from_ref": "Luke 4:17-21", "to_ref": "Isaiah 61:1-2", "decision": "Fulfills"}
+{"from_first_word_id": 675118, "from_last_word_id": 675215, "to_first_word_id": 476084, "to_last_word_id": 476111, "from_ref": "Luke 24:44-47", "to_ref": "Isaiah 53:5", "decision": "Fulfills"}
+{"from_first_word_id": 668669, "from_last_word_id": 668738, "to_first_word_id": 474609, "to_last_word_id": 474634, "from_ref": "Luke 18:31-33", "to_ref": "Isaiah 50:6", "decision": "Alludes to"}
+{"from_first_word_id": 632234, "from_last_word_id": 632253, "to_first_word_id": 474609, "to_last_word_id": 474634, "from_ref": "Matthew 26:67", "to_ref": "Isaiah 50:6", "decision": "Fulfills"}
+{"from_first_word_id": 632937, "from_last_word_id": 632954, "to_first_word_id": 474609, "to_last_word_id": 474634, "from_ref": "Matthew 27:26", "to_ref": "Isaiah 50:6", "decision": "Fulfills"}
+{"from_first_word_id": 632108, "from_last_word_id": 632161, "to_first_word_id": 476140, "to_last_word_id": 476176, "from_ref": "Matthew 26:62-63", "to_ref": "Isaiah 53:7", "decision": "Fulfills"}
+{"from_first_word_id": 632655, "from_last_word_id": 632697, "to_first_word_id": 476140, "to_last_word_id": 476176, "from_ref": "Matthew 27:12-14", "to_ref": "Isaiah 53:7", "decision": "Fulfills"}
+{"from_first_word_id": 772576, "from_last_word_id": 772638, "to_first_word_id": 476084, "to_last_word_id": 476239, "from_ref": "1 Peter 2:22-24", "to_ref": "Isaiah 53:5-9", "decision": "Alludes to"}
+{"from_first_word_id": 650048, "from_last_word_id": 650113, "to_first_word_id": 227126, "to_last_word_id": 227252, "from_ref": "Luke 1:31-33", "to_ref": "2 Samuel 7:12-16", "decision": "Alludes to"}
+{"from_first_word_id": 650048, "from_last_word_id": 650113, "to_first_word_id": 450832, "to_last_word_id": 450919, "from_ref": "Luke 1:31-33", "to_ref": "Isaiah 9:6-7", "decision": "Alludes to"}
+{"from_first_word_id": 705310, "from_last_word_id": 705369, "to_first_word_id": 227126, "to_last_word_id": 227159, "from_ref": "Acts 13:22-23", "to_ref": "2 Samuel 7:12", "decision": "Fulfills"}
+{"from_first_word_id": 718702, "from_last_word_id": 718720, "to_first_word_id": 227126, "to_last_word_id": 227159, "from_ref": "Romans 1:3", "to_ref": "2 Samuel 7:12", "decision": "Fulfills"}
+{"from_first_word_id": 745066, "from_last_word_id": 745095, "to_first_word_id": 6831, "to_last_word_id": 6855, "from_ref": "Galatians 3:16", "to_ref": "Genesis 12:3", "decision": "Alludes to"}
+{"from_first_word_id": 744867, "from_last_word_id": 744892, "to_first_word_id": 6831, "to_last_word_id": 6855, "from_ref": "Galatians 3:8", "to_ref": "Genesis 12:3", "decision": "Quotes"}
+{"from_first_word_id": 696674, "from_last_word_id": 696731, "to_first_word_id": 13695, "to_last_word_id": 13713, "from_ref": "Acts 3:25-26", "to_ref": "Genesis 22:18", "decision": "Quotes"}
+{"from_first_word_id": 765407, "from_last_word_id": 765606, "to_first_word_id": 506657, "to_last_word_id": 506825, "from_ref": "Hebrews 8:8-13", "to_ref": "Jeremiah 31:31-34", "decision": "Quotes"}
+{"from_first_word_id": 766565, "from_last_word_id": 766623, "to_first_word_id": 506727, "to_last_word_id": 506825, "from_ref": "Hebrews 10:15-17", "to_ref": "Jeremiah 31:33-34", "decision": "Quotes"}
+{"from_first_word_id": 763954, "from_last_word_id": 763999, "to_first_word_id": 413022, "to_last_word_id": 413040, "from_ref": "Hebrews 5:5-6", "to_ref": "Psalms 110:4", "decision": "Quotes"}
+{"from_first_word_id": 764970, "from_last_word_id": 764983, "to_first_word_id": 413022, "to_last_word_id": 413040, "from_ref": "Hebrews 7:17", "to_ref": "Psalms 110:4", "decision": "Quotes"}
+{"from_first_word_id": 726980, "from_last_word_id": 727085, "to_first_word_id": 452460, "to_last_word_id": 452491, "from_ref": "Romans 15:8-12", "to_ref": "Isaiah 11:10", "decision": "Quotes"}
+{"from_first_word_id": 724585, "from_last_word_id": 724617, "to_first_word_id": 475728, "to_last_word_id": 475760, "from_ref": "Romans 10:15", "to_ref": "Isaiah 52:7", "decision": "Quotes"}
+{"from_first_word_id": 724704, "from_last_word_id": 724750, "to_first_word_id": 481547, "to_last_word_id": 481607, "from_ref": "Romans 10:20-21", "to_ref": "Isaiah 65:1-2", "decision": "Quotes"}
+{"from_first_word_id": 724071, "from_last_word_id": 724126, "to_first_word_id": 581188, "to_last_word_id": 581232, "from_ref": "Romans 9:25-26", "to_ref": "Hosea 2:23", "decision": "Quotes"}
+{"from_first_word_id": 772312, "from_last_word_id": 772336, "to_first_word_id": 581188, "to_last_word_id": 581232, "from_ref": "1 Peter 2:10", "to_ref": "Hosea 2:23", "decision": "Alludes to"}
+{"from_first_word_id": 725373, "from_last_word_id": 725412, "to_first_word_id": 479215, "to_last_word_id": 479293, "from_ref": "Romans 11:26-27", "to_ref": "Isaiah 59:20-21", "decision": "Quotes"}
+{"from_first_word_id": 621622, "from_last_word_id": 621666, "to_first_word_id": 461236, "to_last_word_id": 461276, "from_ref": "Matthew 15:7-9", "to_ref": "Isaiah 29:13", "decision": "Quotes"}
+{"from_first_word_id": 639836, "from_last_word_id": 639880, "to_first_word_id": 461236, "to_last_word_id": 461276, "from_ref": "Mark 7:6-7", "to_ref": "Isaiah 29:13", "decision": "Quotes"}
+{"from_first_word_id": 641614, "from_last_word_id": 641673, "to_first_word_id": 610453, "to_last_word_id": 610472, "from_ref": "Mark 9:12-13", "to_ref": "Malachi 4:5", "decision": "Fulfills"}
+{"from_first_word_id": 651003, "from_last_word_id": 651095, "to_first_word_id": 595327, "to_last_word_id": 595366, "from_ref": "Luke 2:4-7", "to_ref": "Micah 5:2", "decision": "Fulfills"}
+{"from_first_word_id": 611575, "from_last_word_id": 611601, "to_first_word_id": 452203, "to_last_word_id": 452224, "from_ref": "Matthew 2:23", "to_ref": "Isaiah 11:1", "decision": "Fulfills"}
+{"from_first_word_id": 651584, "from_last_word_id": 651613, "to_first_word_id": 473723, "to_last_word_id": 473773, "from_ref": "Luke 2:30-32", "to_ref": "Isaiah 49:6", "decision": "Alludes to"}
+{"from_first_word_id": 651584, "from_last_word_id": 651613, "to_first_word_id": 469212, "to_last_word_id": 469243, "from_ref": "Luke 2:30-32", "to_ref": "Isaiah 42:6", "decision": "Alludes to"}
+{"from_first_word_id": 650731, "from_last_word_id": 650819, "to_first_word_id": 13628, "to_last_word_id": 13713, "from_ref": "Luke 1:68-73", "to_ref": "Genesis 22:16-18", "decision": "Alludes to"}
+{"from_first_word_id": 650484, "from_last_word_id": 650508, "to_first_word_id": 9379, "to_last_word_id": 9412, "from_ref": "Luke 1:54-55", "to_ref": "Genesis 17:7", "decision": "Alludes to"}
+{"from_first_word_id": 674758, "from_last_word_id": 674810, "to_first_word_id": 476030, "to_last_word_id": 476360, "from_ref": "Luke 24:25-27", "to_ref": "Isaiah 53:3-12", "decision": "Fulfills"}
+{"from_first_word_id": 736015, "from_last_word_id": 736055, "to_first_word_id": 476084, "to_last_word_id": 476360, "from_ref": "1 Corinthians 15:3-4", "to_ref": "Isaiah 53:5-12", "decision": "Fulfills"}
+{"from_first_word_id": 680666, "from_last_word_id": 680694, "to_first_word_id": 476716, "to_last_word_id": 476734, "from_ref": "John 6:45", "to_ref": "Isaiah 54:13", "decision": "Quotes"}
+{"from_first_word_id": 626129, "from_last_word_id": 626160, "to_first_word_id": 414676, "to_last_word_id": 414697, "from_ref": "Matthew 21:9", "to_ref": "Psalms 118:26", "decision": "Quotes"}
+{"from_first_word_id": 686605, "from_last_word_id": 686632, "to_first_word_id": 414676, "to_last_word_id": 414697, "from_ref": "John 12:13", "to_ref": "Psalms 118:26", "decision": "Quotes"}
+{"from_first_word_id": 626266, "from_last_word_id": 626329, "to_first_word_id": 380485, "to_last_word_id": 380509, "from_ref": "Matthew 21:15-16", "to_ref": "Psalms 8:2", "decision": "Quotes"}
+{"from_first_word_id": 632455, "from_last_word_id": 632580, "to_first_word_id": 607004, "to_last_word_id": 607044, "from_ref": "Matthew 27:3-8", "to_ref": "Zechariah 11:13", "decision": "Fulfills"}
+{"from_first_word_id": 676147, "from_last_word_id": 676175, "to_first_word_id": 143390, "to_last_word_id": 143416, "from_ref": "John 1:45", "to_ref": "Deuteronomy 18:15", "decision": "Alludes to"}
+{"from_first_word_id": 703326, "from_last_word_id": 703345, "to_first_word_id": 476285, "to_last_word_id": 476312, "from_ref": "Acts 10:43", "to_ref": "Isaiah 53:11", "decision": "Alludes to"}
+{"from_first_word_id": 716558, "from_last_word_id": 716617, "to_first_word_id": 473723, "to_last_word_id": 473773, "from_ref": "Acts 26:22-23", "to_ref": "Isaiah 49:6", "decision": "Alludes to"}
+{"from_first_word_id": 705448, "from_last_word_id": 705524, "to_first_word_id": 476177, "to_last_word_id": 476239, "from_ref": "Acts 13:27-29", "to_ref": "Isaiah 53:8-9", "decision": "Fulfills"}
+{"from_first_word_id": 695700, "from_last_word_id": 695735, "to_first_word_id": 418660, "to_last_word_id": 418685, "from_ref": "Acts 2:30", "to_ref": "Psalms 132:11", "decision": "Fulfills"}
+{"from_first_word_id": 631232, "from_last_word_id": 631268, "to_first_word_id": 476177, "to_last_word_id": 476211, "from_ref": "Matthew 26:24", "to_ref": "Isaiah 53:8", "decision": "Alludes to"}
+{"from_first_word_id": 631924, "from_last_word_id": 631936, "to_first_word_id": 476140, "to_last_word_id": 476176, "from_ref": "Matthew 26:54", "to_ref": "Isaiah 53:7", "decision": "Alludes to"}
+{"from_first_word_id": 647498, "from_last_word_id": 647517, "to_first_word_id": 476140, "to_last_word_id": 476176, "from_ref": "Mark 14:49", "to_ref": "Isaiah 53:7", "decision": "Alludes to"}
+{"from_first_word_id": 633186, "from_last_word_id": 633203, "to_first_word_id": 476313, "to_last_word_id": 476360, "from_ref": "Matthew 27:38", "to_ref": "Isaiah 53:12", "decision": "Fulfills"}
+{"from_first_word_id": 692494, "from_last_word_id": 692540, "to_first_word_id": 384516, "to_last_word_id": 384527, "from_ref": "John 19:24", "to_ref": "Psalms 22:18", "decision": "Fulfills"}
+{"from_first_word_id": 618599, "from_last_word_id": 618642, "to_first_word_id": 469079, "to_last_word_id": 469106, "from_ref": "Matthew 12:17-18", "to_ref": "Isaiah 42:1", "decision": "Fulfills"}
+{"from_first_word_id": 727299, "from_last_word_id": 727321, "to_first_word_id": 475939, "to_last_word_id": 475973, "from_ref": "Romans 15:21", "to_ref": "Isaiah 52:15", "decision": "Quotes"}
+{"from_first_word_id": 724266, "from_last_word_id": 724289, "to_first_word_id": 460474, "to_last_word_id": 460506, "from_ref": "Romans 9:33", "to_ref": "Isaiah 28:16", "decision": "Quotes"}
+{"from_first_word_id": 772194, "from_last_word_id": 772222, "to_first_word_id": 460474, "to_last_word_id": 460506, "from_ref": "1 Peter 2:6", "to_ref": "Isaiah 28:16", "decision": "Quotes"}
+{"from_first_word_id": 748277, "from_last_word_id": 748294, "to_first_word_id": 397924, "to_last_word_id": 397952, "from_ref": "Ephesians 4:8", "to_ref": "Psalms 68:18", "decision": "Quotes"}
+{"from_first_word_id": 766377, "from_last_word_id": 766502, "to_first_word_id": 390372, "to_last_word_id": 390425, "from_ref": "Hebrews 10:5-10", "to_ref": "Psalms 40:6-8", "decision": "Quotes"}
+{"from_first_word_id": 619659, "from_last_word_id": 619687, "to_first_word_id": 449277, "to_last_word_id": 449297, "from_ref": "Matthew 13:14", "to_ref": "Isaiah 6:9", "decision": "Quotes"}
+{"from_first_word_id": 288511, "from_last_word_id": 288610, "to_first_word_id": 256582, "to_last_word_id": 256641, "from_ref": "2 Kings 23:15-16", "to_ref": "1 Kings 13:2", "decision": "Fulfills"}
+{"from_first_word_id": 288611, "from_last_word_id": 288683, "to_first_word_id": 257548, "to_last_word_id": 257625, "from_ref": "2 Kings 23:17-18", "to_ref": "1 Kings 13:31-32", "decision": "Fulfills"}
+{"from_first_word_id": 257319, "from_last_word_id": 257354, "to_first_word_id": 257207, "to_last_word_id": 257286, "from_ref": "1 Kings 13:24", "to_ref": "1 Kings 13:21-22", "decision": "Fulfills"}
+{"from_first_word_id": 260620, "from_last_word_id": 260664, "to_first_word_id": 160784, "to_last_word_id": 160828, "from_ref": "1 Kings 16:34", "to_ref": "Joshua 6:26", "decision": "Fulfills"}
+{"from_first_word_id": 337212, "from_last_word_id": 337298, "to_first_word_id": 501114, "to_last_word_id": 501175, "from_ref": "2 Chronicles 36:21-22", "to_ref": "Jeremiah 25:11-12", "decision": "Fulfills"}
+{"from_first_word_id": 337212, "from_last_word_id": 337246, "to_first_word_id": 504290, "to_last_word_id": 504321, "from_ref": "2 Chronicles 36:21", "to_ref": "Jeremiah 29:10", "decision": "Fulfills"}
+{"from_first_word_id": 337357, "from_last_word_id": 337407, "to_first_word_id": 504290, "to_last_word_id": 504321, "from_ref": "Ezra 1:1", "to_ref": "Jeremiah 29:10", "decision": "Fulfills"}
+{"from_first_word_id": 337357, "from_last_word_id": 337443, "to_first_word_id": 471321, "to_last_word_id": 471351, "from_ref": "Ezra 1:1-2", "to_ref": "Isaiah 44:28", "decision": "Fulfills"}
+{"from_first_word_id": 337357, "from_last_word_id": 337443, "to_first_word_id": 471352, "to_last_word_id": 471394, "from_ref": "Ezra 1:1-2", "to_ref": "Isaiah 45:1", "decision": "Fulfills"}
+{"from_first_word_id": 245200, "from_last_word_id": 245229, "to_first_word_id": 198855, "to_last_word_id": 199023, "from_ref": "1 Kings 2:27", "to_ref": "1 Samuel 2:31-35", "decision": "Fulfills"}
+{"from_first_word_id": 199978, "from_last_word_id": 199995, "to_first_word_id": 198955, "to_last_word_id": 198982, "from_ref": "1 Samuel 4:11", "to_ref": "1 Samuel 2:34", "decision": "Fulfills"}
+{"from_first_word_id": 200141, "from_last_word_id": 200230, "to_first_word_id": 199345, "to_last_word_id": 199453, "from_ref": "1 Samuel 4:17-18", "to_ref": "1 Samuel 3:11-14", "decision": "Fulfills"}
+{"from_first_word_id": 259462, "from_last_word_id": 259506, "to_first_word_id": 258009, "to_last_word_id": 258095, "from_ref": "1 Kings 15:29", "to_ref": "1 Kings 14:10-11", "decision": "Fulfills"}
+{"from_first_word_id": 259982, "from_last_word_id": 260006, "to_first_word_id": 259630, "to_last_word_id": 259744, "from_ref": "1 Kings 16:12", "to_ref": "1 Kings 16:1-4", "decision": "Fulfills"}
+{"from_first_word_id": 266956, "from_last_word_id": 266987, "to_first_word_id": 265535, "to_last_word_id": 265580, "from_ref": "1 Kings 22:38", "to_ref": "1 Kings 21:19", "decision": "Fulfills"}
+{"from_first_word_id": 276035, "from_last_word_id": 276102, "to_first_word_id": 265688, "to_last_word_id": 265705, "from_ref": "2 Kings 9:36-37", "to_ref": "1 Kings 21:23", "decision": "Fulfills"}
+{"from_first_word_id": 275697, "from_last_word_id": 275786, "to_first_word_id": 265535, "to_last_word_id": 265580, "from_ref": "2 Kings 9:25-26", "to_ref": "1 Kings 21:19", "decision": "Fulfills"}
+{"from_first_word_id": 276434, "from_last_word_id": 276501, "to_first_word_id": 265614, "to_last_word_id": 265687, "from_ref": "2 Kings 10:10-11", "to_ref": "1 Kings 21:21-22", "decision": "Fulfills"}
+{"from_first_word_id": 276681, "from_last_word_id": 276712, "to_first_word_id": 265614, "to_last_word_id": 265648, "from_ref": "2 Kings 10:17", "to_ref": "1 Kings 21:21", "decision": "Fulfills"}
+{"from_first_word_id": 267998, "from_last_word_id": 268035, "to_first_word_id": 267493, "to_last_word_id": 267519, "from_ref": "2 Kings 1:17", "to_ref": "2 Kings 1:4", "decision": "Fulfills"}
+{"from_first_word_id": 273757, "from_last_word_id": 273794, "to_first_word_id": 273121, "to_last_word_id": 273163, "from_ref": "2 Kings 7:16", "to_ref": "2 Kings 7:1", "decision": "Fulfills"}
+{"from_first_word_id": 273795, "from_last_word_id": 273944, "to_first_word_id": 273164, "to_last_word_id": 273208, "from_ref": "2 Kings 7:17-20", "to_ref": "2 Kings 7:2", "decision": "Fulfills"}
+{"from_first_word_id": 268799, "from_last_word_id": 268815, "to_first_word_id": 268760, "to_last_word_id": 268798, "from_ref": "2 Kings 2:22", "to_ref": "2 Kings 2:21", "decision": "Fulfills"}
+{"from_first_word_id": 269477, "from_last_word_id": 269507, "to_first_word_id": 269375, "to_last_word_id": 269422, "from_ref": "2 Kings 3:20", "to_ref": "2 Kings 3:16-17", "decision": "Fulfills"}
+{"from_first_word_id": 270258, "from_last_word_id": 270280, "to_first_word_id": 270225, "to_last_word_id": 270257, "from_ref": "2 Kings 4:17", "to_ref": "2 Kings 4:16", "decision": "Fulfills"}
+{"from_first_word_id": 274453, "from_last_word_id": 274487, "to_first_word_id": 274297, "to_last_word_id": 274422, "from_ref": "2 Kings 8:15", "to_ref": "2 Kings 8:10-13", "decision": "Fulfills"}
+{"from_first_word_id": 280675, "from_last_word_id": 280706, "to_first_word_id": 277108, "to_last_word_id": 277156, "from_ref": "2 Kings 15:12", "to_ref": "2 Kings 10:30", "decision": "Fulfills"}
+{"from_first_word_id": 285648, "from_last_word_id": 285747, "to_first_word_id": 284755, "to_last_word_id": 284827, "from_ref": "2 Kings 19:35-37", "to_ref": "2 Kings 19:6-7", "decision": "Fulfills"}
+{"from_first_word_id": 285648, "from_last_word_id": 285690, "to_first_word_id": 285573, "to_last_word_id": 285647, "from_ref": "2 Kings 19:35", "to_ref": "2 Kings 19:32-34", "decision": "Fulfills"}
+{"from_first_word_id": 466525, "from_last_word_id": 466618, "to_first_word_id": 465642, "to_last_word_id": 465712, "from_ref": "Isaiah 37:36-38", "to_ref": "Isaiah 37:6-7", "decision": "Fulfills"}
+{"from_first_word_id": 286001, "from_last_word_id": 286086, "to_first_word_id": 285970, "to_last_word_id": 286034, "from_ref": "2 Kings 20:9-11", "to_ref": "2 Kings 20:8-9", "decision": "Fulfills"}
+{"from_first_word_id": 289672, "from_last_word_id": 289719, "to_first_word_id": 286255, "to_last_word_id": 286290, "from_ref": "2 Kings 24:13", "to_ref": "2 Kings 20:17", "decision": "Fulfills"}
+{"from_first_word_id": 290110, "from_last_word_id": 290138, "to_first_word_id": 536308, "to_last_word_id": 536347, "from_ref": "2 Kings 25:7", "to_ref": "Ezekiel 12:13", "decision": "Fulfills"}
+{"from_first_word_id": 290110, "from_last_word_id": 290138, "to_first_word_id": 509392, "to_last_word_id": 509437, "from_ref": "2 Kings 25:7", "to_ref": "Jeremiah 34:3", "decision": "Fulfills"}
+{"from_first_word_id": 290177, "from_last_word_id": 290226, "to_first_word_id": 488345, "to_last_word_id": 488379, "from_ref": "2 Kings 25:9-10", "to_ref": "Jeremiah 7:14", "decision": "Fulfills"}
+{"from_first_word_id": 289367, "from_last_word_id": 289416, "to_first_word_id": 286747, "to_last_word_id": 286841, "from_ref": "2 Kings 24:2", "to_ref": "2 Kings 21:12-14", "decision": "Fulfills"}
+{"from_first_word_id": 289072, "from_last_word_id": 289117, "to_first_word_id": 287825, "to_last_word_id": 287866, "from_ref": "2 Kings 23:30", "to_ref": "2 Kings 22:20", "decision": "Fulfills"}
+{"from_first_word_id": 255935, "from_last_word_id": 255969, "to_first_word_id": 255048, "to_last_word_id": 255142, "from_ref": "1 Kings 12:15", "to_ref": "1 Kings 11:29-31", "decision": "Fulfills"}
+{"from_first_word_id": 318002, "from_last_word_id": 318038, "to_first_word_id": 255048, "to_last_word_id": 255142, "from_ref": "2 Chronicles 10:15", "to_ref": "1 Kings 11:29-31", "decision": "Fulfills"}
+{"from_first_word_id": 258252, "from_last_word_id": 258303, "to_first_word_id": 258096, "to_last_word_id": 258156, "from_ref": "1 Kings 14:17-18", "to_ref": "1 Kings 14:12-13", "decision": "Fulfills"}
+{"from_first_word_id": 251002, "from_last_word_id": 251048, "to_first_word_id": 227126, "to_last_word_id": 227178, "from_ref": "1 Kings 8:20", "to_ref": "2 Samuel 7:12-13", "decision": "Fulfills"}
+{"from_first_word_id": 245082, "from_last_word_id": 245119, "to_first_word_id": 227126, "to_last_word_id": 227159, "from_ref": "1 Kings 2:24", "to_ref": "2 Samuel 7:12", "decision": "Fulfills"}
+{"from_first_word_id": 230453, "from_last_word_id": 230516, "to_first_word_id": 230352, "to_last_word_id": 230380, "from_ref": "2 Samuel 12:18", "to_ref": "2 Samuel 12:14", "decision": "Fulfills"}
+{"from_first_word_id": 234933, "from_last_word_id": 235001, "to_first_word_id": 230261, "to_last_word_id": 230323, "from_ref": "2 Samuel 16:21-22", "to_ref": "2 Samuel 12:11-12", "decision": "Fulfills"}
+{"from_first_word_id": 222019, "from_last_word_id": 222036, "to_first_word_id": 220267, "to_last_word_id": 220307, "from_ref": "1 Samuel 31:6", "to_ref": "1 Samuel 28:19", "decision": "Fulfills"}
+{"from_first_word_id": 225514, "from_last_word_id": 225545, "to_first_word_id": 209349, "to_last_word_id": 209418, "from_ref": "2 Samuel 5:3", "to_ref": "1 Samuel 16:12-13", "decision": "Fulfills"}
+{"from_first_word_id": 203907, "from_last_word_id": 203935, "to_first_word_id": 203624, "to_last_word_id": 203861, "from_ref": "1 Samuel 10:9", "to_ref": "1 Samuel 10:2-7", "decision": "Fulfills"}
+{"from_first_word_id": 172607, "from_last_word_id": 172690, "to_first_word_id": 8785, "to_last_word_id": 8816, "from_ref": "Joshua 21:43-45", "to_ref": "Genesis 15:18", "decision": "Fulfills"}
+{"from_first_word_id": 172607, "from_last_word_id": 172630, "to_first_word_id": 6956, "to_last_word_id": 6984, "from_ref": "Joshua 21:43", "to_ref": "Genesis 12:7", "decision": "Fulfills"}
+{"from_first_word_id": 247062, "from_last_word_id": 247115, "to_first_word_id": 13654, "to_last_word_id": 13694, "from_ref": "1 Kings 4:20-21", "to_ref": "Genesis 22:17", "decision": "Fulfills"}
+{"from_first_word_id": 47456, "from_last_word_id": 47510, "to_first_word_id": 8664, "to_last_word_id": 8718, "from_ref": "Exodus 12:40-41", "to_ref": "Genesis 15:13-14", "decision": "Fulfills"}
+{"from_first_word_id": 47323, "from_last_word_id": 47378, "to_first_word_id": 8699, "to_last_word_id": 8718, "from_ref": "Exodus 12:35-36", "to_ref": "Genesis 15:14", "decision": "Fulfills"}
+{"from_first_word_id": 47323, "from_last_word_id": 47378, "to_first_word_id": 40111, "to_last_word_id": 40181, "from_ref": "Exodus 12:35-36", "to_ref": "Exodus 3:21-22", "decision": "Fulfills"}
+{"from_first_word_id": 48310, "from_last_word_id": 48344, "to_first_word_id": 38222, "to_last_word_id": 38246, "from_ref": "Exodus 13:19", "to_ref": "Genesis 50:25", "decision": "Fulfills"}
+{"from_first_word_id": 175551, "from_last_word_id": 175602, "to_first_word_id": 38222, "to_last_word_id": 38246, "from_ref": "Joshua 24:32", "to_ref": "Genesis 50:25", "decision": "Fulfills"}
+{"from_first_word_id": 12410, "from_last_word_id": 12451, "to_first_word_id": 10172, "to_last_word_id": 10301, "from_ref": "Genesis 21:1-2", "to_ref": "Genesis 18:10-14", "decision": "Fulfills"}
+{"from_first_word_id": 12410, "from_last_word_id": 12451, "to_first_word_id": 9713, "to_last_word_id": 9807, "from_ref": "Genesis 21:1-2", "to_ref": "Genesis 17:19-21", "decision": "Fulfills"}
+{"from_first_word_id": 18702, "from_last_word_id": 18745, "to_first_word_id": 16614, "to_last_word_id": 16654, "from_ref": "Genesis 27:37", "to_ref": "Genesis 25:23", "decision": "Fulfills"}
+{"from_first_word_id": 30646, "from_last_word_id": 30840, "to_first_word_id": 30187, "to_last_word_id": 30229, "from_ref": "Genesis 41:47-54", "to_ref": "Genesis 41:29-30", "decision": "Fulfills"}
+{"from_first_word_id": 29482, "from_last_word_id": 29511, "to_first_word_id": 29228, "to_last_word_id": 29442, "from_ref": "Genesis 40:21-22", "to_ref": "Genesis 40:12-19", "decision": "Fulfills"}
+{"from_first_word_id": 31030, "from_last_word_id": 31066, "to_first_word_id": 26663, "to_last_word_id": 26762, "from_ref": "Genesis 42:6", "to_ref": "Genesis 37:7-9", "decision": "Fulfills"}
+{"from_first_word_id": 120318, "from_last_word_id": 120381, "to_first_word_id": 109167, "to_last_word_id": 109249, "from_ref": "Numbers 26:64-65", "to_ref": "Numbers 14:28-30", "decision": "Fulfills"}
+{"from_first_word_id": 167492, "from_last_word_id": 167538, "to_first_word_id": 109070, "to_last_word_id": 109101, "from_ref": "Joshua 14:10", "to_ref": "Numbers 14:24", "decision": "Fulfills"}
+{"from_first_word_id": 156526, "from_last_word_id": 156591, "to_first_word_id": 114467, "to_last_word_id": 114505, "from_ref": "Deuteronomy 34:4-5", "to_ref": "Numbers 20:12", "decision": "Fulfills"}
+{"from_first_word_id": 111521, "from_last_word_id": 111596, "to_first_word_id": 111422, "to_last_word_id": 111520, "from_ref": "Numbers 16:31-33", "to_ref": "Numbers 16:28-30", "decision": "Fulfills"}
+{"from_first_word_id": 181743, "from_last_word_id": 181780, "to_first_word_id": 181285, "to_last_word_id": 181313, "from_ref": "Judges 7:22", "to_ref": "Judges 7:9", "decision": "Fulfills"}
+{"from_first_word_id": 178760, "from_last_word_id": 178849, "to_first_word_id": 178355, "to_last_word_id": 178396, "from_ref": "Judges 4:21-22", "to_ref": "Judges 4:9", "decision": "Fulfills"}
+{"from_first_word_id": 184502, "from_last_word_id": 184546, "to_first_word_id": 183441, "to_last_word_id": 183479, "from_ref": "Judges 9:56-57", "to_ref": "Judges 9:20", "decision": "Fulfills"}
+{"from_first_word_id": 261078, "from_last_word_id": 261103, "to_first_word_id": 261023, "to_last_word_id": 261055, "from_ref": "1 Kings 17:16", "to_ref": "1 Kings 17:14", "decision": "Fulfills"}
+{"from_first_word_id": 262687, "from_last_word_id": 262717, "to_first_word_id": 261345, "to_last_word_id": 261379, "from_ref": "1 Kings 18:45", "to_ref": "1 Kings 18:1", "decision": "Fulfills"}
+{"from_first_word_id": 264388, "from_last_word_id": 264463, "to_first_word_id": 264328, "to_last_word_id": 264387, "from_ref": "1 Kings 20:29-30", "to_ref": "1 Kings 20:28", "decision": "Fulfills"}
+{"from_first_word_id": 264074, "from_last_word_id": 264122, "to_first_word_id": 263859, "to_last_word_id": 263900, "from_ref": "1 Kings 20:20-21", "to_ref": "1 Kings 20:13", "decision": "Fulfills"}
+{"from_first_word_id": 266831, "from_last_word_id": 266955, "to_first_word_id": 266346, "to_last_word_id": 266381, "from_ref": "1 Kings 22:34-37", "to_ref": "1 Kings 22:17", "decision": "Fulfills"}
+{"from_first_word_id": 322647, "from_last_word_id": 322725, "to_first_word_id": 322147, "to_last_word_id": 322183, "from_ref": "2 Chronicles 18:33-34", "to_ref": "2 Chronicles 18:16", "decision": "Fulfills"}
+{"from_first_word_id": 324748, "from_last_word_id": 324807, "to_first_word_id": 324636, "to_last_word_id": 324680, "from_ref": "2 Chronicles 21:18-19", "to_ref": "2 Chronicles 21:14-15", "decision": "Fulfills"}
+{"from_first_word_id": 323746, "from_last_word_id": 323844, "to_first_word_id": 323479, "to_last_word_id": 323596, "from_ref": "2 Chronicles 20:22-24", "to_ref": "2 Chronicles 20:15-17", "decision": "Fulfills"}
+{"from_first_word_id": 326799, "from_last_word_id": 326948, "to_first_word_id": 326691, "to_last_word_id": 326739, "from_ref": "2 Chronicles 24:23-25", "to_ref": "2 Chronicles 24:20", "decision": "Fulfills"}
+{"from_first_word_id": 337247, "from_last_word_id": 337355, "to_first_word_id": 471321, "to_last_word_id": 471351, "from_ref": "2 Chronicles 36:22-23", "to_ref": "Isaiah 44:28", "decision": "Fulfills"}
+{"from_first_word_id": 341090, "from_last_word_id": 341167, "to_first_word_id": 601318, "to_last_word_id": 601344, "from_ref": "Ezra 6:14-15", "to_ref": "Haggai 1:8", "decision": "Fulfills"}
+{"from_first_word_id": 341090, "from_last_word_id": 341167, "to_first_word_id": 603717, "to_last_word_id": 603747, "from_ref": "Ezra 6:14-15", "to_ref": "Zechariah 4:9", "decision": "Fulfills"}
+{"from_first_word_id": 504004, "from_last_word_id": 504015, "to_first_word_id": 503974, "to_last_word_id": 504003, "from_ref": "Jeremiah 28:17", "to_ref": "Jeremiah 28:16", "decision": "Fulfills"}
+{"from_first_word_id": 525002, "from_last_word_id": 525034, "to_first_word_id": 509392, "to_last_word_id": 509437, "from_ref": "Jeremiah 52:11", "to_ref": "Jeremiah 34:3", "decision": "Fulfills"}
+{"from_first_word_id": 513676, "from_last_word_id": 513717, "to_first_word_id": 536308, "to_last_word_id": 536347, "from_ref": "Jeremiah 39:6-7", "to_ref": "Ezekiel 12:13", "decision": "Fulfills"}
+{"from_first_word_id": 572751, "from_last_word_id": 572795, "to_first_word_id": 572459, "to_last_word_id": 572546, "from_ref": "Daniel 4:33", "to_ref": "Daniel 4:24-25", "decision": "Fulfills"}
+{"from_first_word_id": 573938, "from_last_word_id": 573962, "to_first_word_id": 573865, "to_last_word_id": 573903, "from_ref": "Daniel 5:30-31", "to_ref": "Daniel 5:26-28", "decision": "Fulfills"}
+{"from_first_word_id": 593251, "from_last_word_id": 593283, "to_first_word_id": 593079, "to_last_word_id": 593102, "from_ref": "Jonah 3:10", "to_ref": "Jonah 3:4", "decision": "Fulfills"}
+{"from_first_word_id": 632368, "from_last_word_id": 632413, "to_first_word_id": 631467, "to_last_word_id": 631487, "from_ref": "Matthew 26:74-75", "to_ref": "Matthew 26:34", "decision": "Fulfills"}
+{"from_first_word_id": 647968, "from_last_word_id": 648003, "to_first_word_id": 647082, "to_last_word_id": 647108, "from_ref": "Mark 14:72", "to_ref": "Mark 14:30", "decision": "Fulfills"}
+{"from_first_word_id": 672922, "from_last_word_id": 672971, "to_first_word_id": 672367, "to_last_word_id": 672390, "from_ref": "Luke 22:60-61", "to_ref": "Luke 22:34", "decision": "Fulfills"}
+{"from_first_word_id": 691601, "from_last_word_id": 691609, "to_first_word_id": 688214, "to_last_word_id": 688242, "from_ref": "John 18:27", "to_ref": "John 13:38", "decision": "Fulfills"}
+{"from_first_word_id": 631761, "from_last_word_id": 631846, "to_first_word_id": 631174, "to_last_word_id": 631287, "from_ref": "Matthew 26:47-50", "to_ref": "Matthew 26:21-25", "decision": "Fulfills"}
+{"from_first_word_id": 691040, "from_last_word_id": 691121, "to_first_word_id": 687854, "to_last_word_id": 687971, "from_ref": "John 18:2-5", "to_ref": "John 13:21-26", "decision": "Fulfills"}
+{"from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 622748, "to_last_word_id": 622787, "from_ref": "Matthew 28:5-7", "to_ref": "Matthew 16:21", "decision": "Fulfills"}
+{"from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 623428, "to_last_word_id": 623468, "from_ref": "Matthew 28:5-7", "to_ref": "Matthew 17:22-23", "decision": "Fulfills"}
+{"from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 625537, "to_last_word_id": 625589, "from_ref": "Matthew 28:5-7", "to_ref": "Matthew 20:18-19", "decision": "Fulfills"}
+{"from_first_word_id": 633879, "from_last_word_id": 633897, "to_first_word_id": 619123, "to_last_word_id": 619153, "from_ref": "Matthew 28:6", "to_ref": "Matthew 12:40", "decision": "Fulfills"}
+{"from_first_word_id": 649027, "from_last_word_id": 649056, "to_first_word_id": 641144, "to_last_word_id": 641180, "from_ref": "Mark 16:6", "to_ref": "Mark 8:31", "decision": "Fulfills"}
+{"from_first_word_id": 649027, "from_last_word_id": 649056, "to_first_word_id": 642045, "to_last_word_id": 642081, "from_ref": "Mark 16:6", "to_ref": "Mark 9:31", "decision": "Fulfills"}
+{"from_first_word_id": 649027, "from_last_word_id": 649056, "to_first_word_id": 643236, "to_last_word_id": 643298, "from_ref": "Mark 16:6", "to_ref": "Mark 10:33-34", "decision": "Fulfills"}
+{"from_first_word_id": 674354, "from_last_word_id": 674400, "to_first_word_id": 659391, "to_last_word_id": 659419, "from_ref": "Luke 24:6-8", "to_ref": "Luke 9:22", "decision": "Fulfills"}
+{"from_first_word_id": 674354, "from_last_word_id": 674400, "to_first_word_id": 668669, "to_last_word_id": 668738, "from_ref": "Luke 24:6-8", "to_ref": "Luke 18:31-33", "decision": "Fulfills"}
+{"from_first_word_id": 676746, "from_last_word_id": 676775, "to_first_word_id": 676697, "to_last_word_id": 676745, "from_ref": "John 2:22", "to_ref": "John 2:19-21", "decision": "Fulfills"}
+{"from_first_word_id": 633898, "from_last_word_id": 633929, "to_first_word_id": 631433, "to_last_word_id": 631445, "from_ref": "Matthew 28:7", "to_ref": "Matthew 26:32", "decision": "Fulfills"}
+{"from_first_word_id": 649057, "from_last_word_id": 649082, "to_first_word_id": 647055, "to_last_word_id": 647067, "from_ref": "Mark 16:7", "to_ref": "Mark 14:28", "decision": "Fulfills"}
+{"from_first_word_id": 634098, "from_last_word_id": 634124, "to_first_word_id": 631433, "to_last_word_id": 631445, "from_ref": "Matthew 28:16-17", "to_ref": "Matthew 26:32", "decision": "Fulfills"}
+{"from_first_word_id": 712772, "from_last_word_id": 712799, "to_first_word_id": 712149, "to_last_word_id": 712213, "from_ref": "Acts 21:33", "to_ref": "Acts 21:10-11", "decision": "Fulfills"}
+{"from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 694522, "to_last_word_id": 694540, "from_ref": "Acts 2:1-4", "to_ref": "Acts 1:5", "decision": "Fulfills"}
+{"from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 694590, "to_last_word_id": 694628, "from_ref": "Acts 2:1-4", "to_ref": "Acts 1:8", "decision": "Fulfills"}
+{"from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 675223, "to_last_word_id": 675250, "from_ref": "Acts 2:1-4", "to_ref": "Luke 24:49", "decision": "Fulfills"}
+{"from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 688568, "to_last_word_id": 688620, "from_ref": "Acts 2:1-4", "to_ref": "John 14:16-17", "decision": "Fulfills"}
+{"from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 611811, "to_last_word_id": 611847, "from_ref": "Acts 2:1-4", "to_ref": "Matthew 3:11", "decision": "Fulfills"}
+{"from_first_word_id": 703733, "from_last_word_id": 703776, "to_first_word_id": 694522, "to_last_word_id": 694540, "from_ref": "Acts 11:15-16", "to_ref": "Acts 1:5", "decision": "Fulfills"}
+{"from_first_word_id": 717737, "from_last_word_id": 717845, "to_first_word_id": 717302, "to_last_word_id": 717396, "from_ref": "Acts 27:41-44", "to_ref": "Acts 27:22-26", "decision": "Fulfills"}
+{"from_first_word_id": 718215, "from_last_word_id": 718245, "to_first_word_id": 714039, "to_last_word_id": 714071, "from_ref": "Acts 28:16", "to_ref": "Acts 23:11", "decision": "Fulfills"}
+{"from_first_word_id": 718215, "from_last_word_id": 718245, "to_first_word_id": 717346, "to_last_word_id": 717367, "from_ref": "Acts 28:16", "to_ref": "Acts 27:24", "decision": "Fulfills"}
+{"from_first_word_id": 691682, "from_last_word_id": 691731, "to_first_word_id": 687000, "to_last_word_id": 687024, "from_ref": "John 18:31-32", "to_ref": "John 12:32-33", "decision": "Fulfills"}
+{"from_first_word_id": 691156, "from_last_word_id": 691194, "to_first_word_id": 690648, "to_last_word_id": 690686, "from_ref": "John 18:8-9", "to_ref": "John 17:12", "decision": "Fulfills"}
+{"from_first_word_id": 691156, "from_last_word_id": 691194, "to_first_word_id": 680516, "to_last_word_id": 680547, "from_ref": "John 18:8-9", "to_ref": "John 6:39", "decision": "Fulfills"}
+{"from_first_word_id": 691959, "from_last_word_id": 691966, "to_first_word_id": 643273, "to_last_word_id": 643298, "from_ref": "John 19:1", "to_ref": "Mark 10:34", "decision": "Fulfills"}
+{"from_first_word_id": 632937, "from_last_word_id": 632954, "to_first_word_id": 625566, "to_last_word_id": 625589, "from_ref": "Matthew 27:26", "to_ref": "Matthew 20:19", "decision": "Fulfills"}
+{"from_first_word_id": 650523, "from_last_word_id": 650538, "to_first_word_id": 649617, "to_last_word_id": 649646, "from_ref": "Luke 1:57", "to_ref": "Luke 1:13", "decision": "Fulfills"}
+{"from_first_word_id": 650649, "from_last_word_id": 650664, "to_first_word_id": 649805, "to_last_word_id": 649837, "from_ref": "Luke 1:64", "to_ref": "Luke 1:20", "decision": "Fulfills"}
+{"from_first_word_id": 651049, "from_last_word_id": 651095, "to_first_word_id": 650048, "to_last_word_id": 650066, "from_ref": "Luke 2:6-7", "to_ref": "Luke 1:31", "decision": "Fulfills"}
+{"from_first_word_id": 610965, "from_last_word_id": 610982, "to_first_word_id": 610873, "to_last_word_id": 610895, "from_ref": "Matthew 1:25", "to_ref": "Matthew 1:21", "decision": "Fulfills"}
+{"from_first_word_id": 651369, "from_last_word_id": 651399, "to_first_word_id": 650048, "to_last_word_id": 650066, "from_ref": "Luke 2:21", "to_ref": "Luke 1:31", "decision": "Fulfills"}
+{"from_first_word_id": 650618, "from_last_word_id": 650664, "to_first_word_id": 649617, "to_last_word_id": 649646, "from_ref": "Luke 1:62-64", "to_ref": "Luke 1:13", "decision": "Fulfills"}
+{"from_first_word_id": 671949, "from_last_word_id": 671965, "to_first_word_id": 671875, "to_last_word_id": 671948, "from_ref": "Luke 22:13", "to_ref": "Luke 22:10-12", "decision": "Fulfills"}
+{"from_first_word_id": 646779, "from_last_word_id": 646802, "to_first_word_id": 646701, "to_last_word_id": 646778, "from_ref": "Mark 14:16", "to_ref": "Mark 14:13-15", "decision": "Fulfills"}
+{"from_first_word_id": 643832, "from_last_word_id": 643887, "to_first_word_id": 643768, "to_last_word_id": 643831, "from_ref": "Mark 11:4-6", "to_ref": "Mark 11:2-3", "decision": "Fulfills"}
+{"from_first_word_id": 669609, "from_last_word_id": 669625, "to_first_word_id": 669553, "to_last_word_id": 669608, "from_ref": "Luke 19:32", "to_ref": "Luke 19:30-31", "decision": "Fulfills"}
+{"from_first_word_id": 686013, "from_last_word_id": 686059, "to_first_word_id": 685597, "to_last_word_id": 685605, "from_ref": "John 11:43-44", "to_ref": "John 11:23", "decision": "Fulfills"}
+{"from_first_word_id": 678598, "from_last_word_id": 678669, "to_first_word_id": 678571, "to_last_word_id": 678597, "from_ref": "John 4:51-53", "to_ref": "John 4:50", "decision": "Fulfills"}
+{"from_first_word_id": 701673, "from_last_word_id": 701743, "to_first_word_id": 701563, "to_last_word_id": 701586, "from_ref": "Acts 9:17-18", "to_ref": "Acts 9:12", "decision": "Fulfills"}
+{"from_first_word_id": 694629, "from_last_word_id": 694651, "to_first_word_id": 693320, "to_last_word_id": 693359, "from_ref": "Acts 1:9", "to_ref": "John 20:17", "decision": "Fulfills"}
+{"from_first_word_id": 631978, "from_last_word_id": 631999, "to_first_word_id": 631399, "to_last_word_id": 631432, "from_ref": "Matthew 26:56", "to_ref": "Matthew 26:31", "decision": "Fulfills"}
+{"from_first_word_id": 647518, "from_last_word_id": 647524, "to_first_word_id": 647025, "to_last_word_id": 647054, "from_ref": "Mark 14:50", "to_ref": "Mark 14:27", "decision": "Fulfills"}
+{"from_first_word_id": 697822, "from_last_word_id": 697853, "to_first_word_id": 697783, "to_last_word_id": 697821, "from_ref": "Acts 5:10", "to_ref": "Acts 5:9", "decision": "Fulfills"}
+{"from_first_word_id": 651530, "from_last_word_id": 651590, "to_first_word_id": 651507, "to_last_word_id": 651529, "from_ref": "Luke 2:27-30", "to_ref": "Luke 2:26", "decision": "Fulfills"}
+{"from_first_word_id": 694230, "from_last_word_id": 694252, "to_first_word_id": 694188, "to_last_word_id": 694229, "from_ref": "John 21:19", "to_ref": "John 21:18", "decision": "Fulfills"}
+{"from_first_word_id": 209382, "from_last_word_id": 209418, "to_first_word_id": 208808, "to_last_word_id": 208838, "from_ref": "1 Samuel 16:13", "to_ref": "1 Samuel 15:28", "decision": "Fulfills"}
+{"from_first_word_id": 4241, "from_last_word_id": 4418, "to_first_word_id": 3677, "to_last_word_id": 3713, "from_ref": "Genesis 7:17-23", "to_ref": "Genesis 6:17", "decision": "Fulfills"}
+{"from_first_word_id": 997909, "from_last_word_id": 998208, "to_first_word_id": 994201, "to_last_word_id": 994407, "from_ref": "3 Nephi 1:15-21", "to_ref": "Helaman 14:2-6", "decision": "Fulfills"}
+{"from_first_word_id": 997909, "from_last_word_id": 998174, "to_first_word_id": 997782, "to_last_word_id": 997840, "from_ref": "3 Nephi 1:15-19", "to_ref": "3 Nephi 1:13", "decision": "Fulfills"}
+{"from_first_word_id": 1005729, "from_last_word_id": 1006329, "to_first_word_id": 994895, "to_last_word_id": 995220, "from_ref": "3 Nephi 8:5-23", "to_ref": "Helaman 14:20-27", "decision": "Fulfills"}
+{"from_first_word_id": 1005667, "from_last_word_id": 1005709, "to_first_word_id": 994895, "to_last_word_id": 994976, "from_ref": "3 Nephi 8:3", "to_ref": "Helaman 14:20", "decision": "Fulfills"}
+{"from_first_word_id": 1020968, "from_last_word_id": 1021079, "to_first_word_id": 995135, "to_last_word_id": 995155, "from_ref": "3 Nephi 23:9-11", "to_ref": "Helaman 14:25", "decision": "Fulfills"}
+{"from_first_word_id": 1034178, "from_last_word_id": 1034411, "to_first_word_id": 992717, "to_last_word_id": 992797, "from_ref": "Mormon 8:2-7", "to_ref": "Helaman 13:9-10", "decision": "Fulfills"}
+{"from_first_word_id": 1034178, "from_last_word_id": 1034411, "to_first_word_id": 950356, "to_last_word_id": 950420, "from_ref": "Mormon 8:2-7", "to_ref": "Alma 45:10-11", "decision": "Fulfills"}
+{"from_first_word_id": 1029092, "from_last_word_id": 1029176, "to_first_word_id": 993076, "to_last_word_id": 993268, "from_ref": "Mormon 2:10-11", "to_ref": "Helaman 13:18-20", "decision": "Fulfills"}
+{"from_first_word_id": 1028605, "from_last_word_id": 1028652, "to_first_word_id": 993076, "to_last_word_id": 993268, "from_ref": "Mormon 1:18", "to_ref": "Helaman 13:18-20", "decision": "Fulfills"}
+{"from_first_word_id": 997335, "from_last_word_id": 997379, "to_first_word_id": 799895, "to_last_word_id": 799930, "from_ref": "3 Nephi 1:1", "to_ref": "1 Nephi 10:4", "decision": "Fulfills"}
+{"from_first_word_id": 997335, "from_last_word_id": 997379, "to_first_word_id": 813352, "to_last_word_id": 813373, "from_ref": "3 Nephi 1:1", "to_ref": "1 Nephi 19:8", "decision": "Fulfills"}
+{"from_first_word_id": 997335, "from_last_word_id": 997379, "to_first_word_id": 838411, "to_last_word_id": 838460, "from_ref": "3 Nephi 1:1", "to_ref": "2 Nephi 25:19", "decision": "Fulfills"}
+{"from_first_word_id": 1006274, "from_last_word_id": 1006329, "to_first_word_id": 813428, "to_last_word_id": 813555, "from_ref": "3 Nephi 8:23", "to_ref": "1 Nephi 19:10", "decision": "Fulfills"}
+{"from_first_word_id": 1005729, "from_last_word_id": 1006168, "to_first_word_id": 813556, "to_last_word_id": 813678, "from_ref": "3 Nephi 8:5-19", "to_ref": "1 Nephi 19:11-12", "decision": "Fulfills"}
+{"from_first_word_id": 1005729, "from_last_word_id": 1006168, "to_first_word_id": 802118, "to_last_word_id": 802263, "from_ref": "3 Nephi 8:5-19", "to_ref": "1 Nephi 12:4-5", "decision": "Fulfills"}
+{"from_first_word_id": 1008517, "from_last_word_id": 1008632, "to_first_word_id": 802264, "to_last_word_id": 802287, "from_ref": "3 Nephi 11:8-10", "to_ref": "1 Nephi 12:6", "decision": "Fulfills"}
+{"from_first_word_id": 1008517, "from_last_word_id": 1008632, "to_first_word_id": 839411, "to_last_word_id": 839450, "from_ref": "3 Nephi 11:8-10", "to_ref": "2 Nephi 26:9", "decision": "Fulfills"}
+{"from_first_word_id": 1008517, "from_last_word_id": 1008632, "to_first_word_id": 913111, "to_last_word_id": 913151, "from_ref": "3 Nephi 11:8-10", "to_ref": "Alma 16:20", "decision": "Fulfills"}
+{"from_first_word_id": 1006520, "from_last_word_id": 1007018, "to_first_word_id": 839196, "to_last_word_id": 839323, "from_ref": "3 Nephi 9:3-12", "to_ref": "2 Nephi 26:4-6", "decision": "Fulfills"}
+{"from_first_word_id": 997909, "from_last_word_id": 998208, "to_first_word_id": 839120, "to_last_word_id": 839195, "from_ref": "3 Nephi 1:15-21", "to_ref": "2 Nephi 26:3", "decision": "Fulfills"}
+{"from_first_word_id": 1009683, "from_last_word_id": 1009824, "to_first_word_id": 802288, "to_last_word_id": 802412, "from_ref": "3 Nephi 12:1", "to_ref": "1 Nephi 12:7-10", "decision": "Fulfills"}
+{"from_first_word_id": 1026039, "from_last_word_id": 1026183, "to_first_word_id": 802413, "to_last_word_id": 802479, "from_ref": "4 Nephi 1:1-3", "to_ref": "1 Nephi 12:11-12", "decision": "Fulfills"}
+{"from_first_word_id": 1033079, "from_last_word_id": 1033481, "to_first_word_id": 802511, "to_last_word_id": 802744, "from_ref": "Mormon 6:7-15", "to_ref": "1 Nephi 12:15-19", "decision": "Fulfills"}
+{"from_first_word_id": 1033079, "from_last_word_id": 1033481, "to_first_word_id": 839451, "to_last_word_id": 839526, "from_ref": "Mormon 6:7-15", "to_ref": "2 Nephi 26:10", "decision": "Fulfills"}
+{"from_first_word_id": 1033079, "from_last_word_id": 1033481, "to_first_word_id": 950356, "to_last_word_id": 950420, "from_ref": "Mormon 6:7-15", "to_ref": "Alma 45:10-11", "decision": "Fulfills"}
+{"from_first_word_id": 879629, "from_last_word_id": 879656, "to_first_word_id": 872759, "to_last_word_id": 872790, "from_ref": "Mosiah 19:20", "to_ref": "Mosiah 12:3", "decision": "Fulfills"}
+{"from_first_word_id": 879629, "from_last_word_id": 879656, "to_first_word_id": 877525, "to_last_word_id": 877557, "from_ref": "Mosiah 19:20", "to_ref": "Mosiah 17:18", "decision": "Fulfills"}
+{"from_first_word_id": 925104, "from_last_word_id": 925266, "to_first_word_id": 877426, "to_last_word_id": 877557, "from_ref": "Alma 25:9-12", "to_ref": "Mosiah 17:15-18", "decision": "Fulfills"}
+{"from_first_word_id": 880691, "from_last_word_id": 880722, "to_first_word_id": 872683, "to_last_word_id": 872758, "from_ref": "Mosiah 20:21", "to_ref": "Mosiah 12:2", "decision": "Fulfills"}
+{"from_first_word_id": 880994, "from_last_word_id": 881055, "to_first_word_id": 872683, "to_last_word_id": 872848, "from_ref": "Mosiah 21:3-4", "to_ref": "Mosiah 12:2-5", "decision": "Fulfills"}
+{"from_first_word_id": 912642, "from_last_word_id": 912784, "to_first_word_id": 903011, "to_last_word_id": 903147, "from_ref": "Alma 16:9-11", "to_ref": "Alma 9:18-19", "decision": "Fulfills"}
+{"from_first_word_id": 912642, "from_last_word_id": 912784, "to_first_word_id": 904860, "to_last_word_id": 904988, "from_ref": "Alma 16:9-11", "to_ref": "Alma 10:22-23", "decision": "Fulfills"}
+{"from_first_word_id": 912543, "from_last_word_id": 912641, "to_first_word_id": 912468, "to_last_word_id": 912542, "from_ref": "Alma 16:7-8", "to_ref": "Alma 16:6", "decision": "Fulfills"}
+{"from_first_word_id": 931868, "from_last_word_id": 931890, "to_first_word_id": 931823, "to_last_word_id": 931867, "from_ref": "Alma 30:50", "to_ref": "Alma 30:49", "decision": "Fulfills"}
+{"from_first_word_id": 914768, "from_last_word_id": 914838, "to_first_word_id": 888972, "to_last_word_id": 889007, "from_ref": "Alma 17:35", "to_ref": "Mosiah 28:7", "decision": "Fulfills"}
+{"from_first_word_id": 987802, "from_last_word_id": 987867, "to_first_word_id": 987618, "to_last_word_id": 987662, "from_ref": "Helaman 9:3-4", "to_ref": "Helaman 8:27", "decision": "Fulfills"}
+{"from_first_word_id": 988914, "from_last_word_id": 989029, "to_first_word_id": 988744, "to_last_word_id": 988913, "from_ref": "Helaman 9:35-37", "to_ref": "Helaman 9:27-34", "decision": "Fulfills"}
+{"from_first_word_id": 858811, "from_last_word_id": 858844, "to_first_word_id": 1051207, "to_last_word_id": 1051304, "from_ref": "Omni 1:21", "to_ref": "Ether 13:20-21", "decision": "Fulfills"}
+{"from_first_word_id": 1053832, "from_last_word_id": 1053958, "to_first_word_id": 1051207, "to_last_word_id": 1051304, "from_ref": "Ether 15:29-32", "to_ref": "Ether 13:20-21", "decision": "Fulfills"}
+{"from_first_word_id": 795625, "from_last_word_id": 795678, "to_first_word_id": 794928, "to_last_word_id": 795004, "from_ref": "1 Nephi 4:17-18", "to_ref": "1 Nephi 3:29", "decision": "Fulfills"}
+{"from_first_word_id": 823566, "from_last_word_id": 823763, "to_first_word_id": 793894, "to_last_word_id": 793969, "from_ref": "2 Nephi 5:20-24", "to_ref": "1 Nephi 2:21-23", "decision": "Fulfills"}
+{"from_first_word_id": 812721, "from_last_word_id": 812763, "to_first_word_id": 793854, "to_last_word_id": 793893, "from_ref": "1 Nephi 18:23", "to_ref": "1 Nephi 2:20", "decision": "Fulfills"}
+{"from_first_word_id": 884650, "from_last_word_id": 884739, "to_first_word_id": 884536, "to_last_word_id": 884649, "from_ref": "Mosiah 24:15-16", "to_ref": "Mosiah 24:13-14", "decision": "Fulfills"}
+{"from_first_word_id": 884822, "from_last_word_id": 884907, "to_first_word_id": 884700, "to_last_word_id": 884763, "from_ref": "Mosiah 24:20-21", "to_ref": "Mosiah 24:16-17", "decision": "Fulfills"}
+{"from_first_word_id": 987328, "from_last_word_id": 987382, "to_first_word_id": 792643, "to_last_word_id": 792690, "from_ref": "Helaman 8:21", "to_ref": "1 Nephi 1:13", "decision": "Fulfills"}
+{"from_first_word_id": 824374, "from_last_word_id": 824407, "to_first_word_id": 792643, "to_last_word_id": 792690, "from_ref": "2 Nephi 6:8", "to_ref": "1 Nephi 1:13", "decision": "Fulfills"}
+{"from_first_word_id": 1013168, "from_last_word_id": 1013278, "to_first_word_id": 1013026, "to_last_word_id": 1013069, "from_ref": "3 Nephi 16:1-3", "to_ref": "3 Nephi 15:21", "decision": "Alludes to"}
+{"from_first_word_id": 649943, "from_last_word_id": 650066, "to_first_word_id": 801108, "to_last_word_id": 801305, "from_ref": "Luke 1:26-31", "to_ref": "1 Nephi 11:13-20", "decision": "Fulfills"}
+{"from_first_word_id": 651067, "from_last_word_id": 651095, "to_first_word_id": 801292, "to_last_word_id": 801305, "from_ref": "Luke 2:7", "to_ref": "1 Nephi 11:20", "decision": "Fulfills"}
+{"from_first_word_id": 649943, "from_last_word_id": 650066, "to_first_word_id": 900154, "to_last_word_id": 900203, "from_ref": "Luke 1:26-31", "to_ref": "Alma 7:10", "decision": "Fulfills"}
+{"from_first_word_id": 649943, "from_last_word_id": 650066, "to_first_word_id": 863519, "to_last_word_id": 863550, "from_ref": "Luke 1:26-31", "to_ref": "Mosiah 3:8", "decision": "Fulfills"}
+{"from_first_word_id": 675765, "from_last_word_id": 675955, "to_first_word_id": 799984, "to_last_word_id": 800120, "from_ref": "John 1:26-34", "to_ref": "1 Nephi 10:7-10", "decision": "Fulfills"}
+{"from_first_word_id": 675803, "from_last_word_id": 675814, "to_first_word_id": 800060, "to_last_word_id": 800088, "from_ref": "John 1:28", "to_ref": "1 Nephi 10:9", "decision": "Fulfills"}
+{"from_first_word_id": 611878, "from_last_word_id": 611988, "to_first_word_id": 801502, "to_last_word_id": 801571, "from_ref": "Matthew 3:13-17", "to_ref": "1 Nephi 11:27", "decision": "Fulfills"}
+{"from_first_word_id": 611878, "from_last_word_id": 611988, "to_first_word_id": 844873, "to_last_word_id": 845038, "from_ref": "Matthew 3:13-17", "to_ref": "2 Nephi 31:4-8", "decision": "Fulfills"}
+{"from_first_word_id": 612447, "from_last_word_id": 612522, "to_first_word_id": 801572, "to_last_word_id": 801759, "from_ref": "Matthew 4:23-24", "to_ref": "1 Nephi 11:28-31", "decision": "Fulfills"}
+{"from_first_word_id": 612447, "from_last_word_id": 612522, "to_first_word_id": 863367, "to_last_word_id": 863471, "from_ref": "Matthew 4:23-24", "to_ref": "Mosiah 3:5-6", "decision": "Fulfills"}
+{"from_first_word_id": 616657, "from_last_word_id": 616747, "to_first_word_id": 801608, "to_last_word_id": 801637, "from_ref": "Matthew 10:1-4", "to_ref": "1 Nephi 11:29", "decision": "Fulfills"}
+{"from_first_word_id": 672580, "from_last_word_id": 672604, "to_first_word_id": 863472, "to_last_word_id": 863518, "from_ref": "Luke 22:44", "to_ref": "Mosiah 3:7", "decision": "Fulfills"}
+{"from_first_word_id": 632937, "from_last_word_id": 633067, "to_first_word_id": 813374, "to_last_word_id": 813427, "from_ref": "Matthew 27:26-31", "to_ref": "1 Nephi 19:9", "decision": "Fulfills"}
+{"from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 801760, "to_last_word_id": 801827, "from_ref": "Matthew 27:35", "to_ref": "1 Nephi 11:32-33", "decision": "Fulfills"}
+{"from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 863551, "to_last_word_id": 863598, "from_ref": "Matthew 27:35", "to_ref": "Mosiah 3:9", "decision": "Fulfills"}
+{"from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 828599, "to_last_word_id": 828667, "from_ref": "Matthew 27:35", "to_ref": "2 Nephi 10:3", "decision": "Fulfills"}
+{"from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 813428, "to_last_word_id": 813555, "from_ref": "Matthew 27:35", "to_ref": "1 Nephi 19:10", "decision": "Fulfills"}
+{"from_first_word_id": 633560, "from_last_word_id": 633642, "to_first_word_id": 813428, "to_last_word_id": 813555, "from_ref": "Matthew 27:57-60", "to_ref": "1 Nephi 19:10", "decision": "Fulfills"}
+{"from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 863599, "to_last_word_id": 863634, "from_ref": "Matthew 28:5-7", "to_ref": "Mosiah 3:10", "decision": "Fulfills"}
+{"from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 838023, "to_last_word_id": 838091, "from_ref": "Matthew 28:5-7", "to_ref": "2 Nephi 25:13", "decision": "Fulfills"}
+{"from_first_word_id": 290139, "from_last_word_id": 290264, "to_first_word_id": 792643, "to_last_word_id": 792690, "from_ref": "2 Kings 25:8-11", "to_ref": "1 Nephi 1:13", "decision": "Fulfills"}
+{"from_first_word_id": 290139, "from_last_word_id": 290264, "to_first_word_id": 799836, "to_last_word_id": 799894, "from_ref": "2 Kings 25:8-11", "to_ref": "1 Nephi 10:3", "decision": "Fulfills"}
+{"from_first_word_id": 290139, "from_last_word_id": 290264, "to_first_word_id": 817492, "to_last_word_id": 817519, "from_ref": "2 Kings 25:8-11", "to_ref": "2 Nephi 1:4", "decision": "Fulfills"}
+{"from_first_word_id": 337357, "from_last_word_id": 337486, "to_first_word_id": 799836, "to_last_word_id": 799894, "from_ref": "Ezra 1:1-3", "to_ref": "1 Nephi 10:3", "decision": "Fulfills"}
+{"from_first_word_id": 337357, "from_last_word_id": 337486, "to_first_word_id": 824408, "to_last_word_id": 824468, "from_ref": "Ezra 1:1-3", "to_ref": "2 Nephi 6:9", "decision": "Fulfills"}
+{"from_first_word_id": 337357, "from_last_word_id": 337486, "to_first_word_id": 837921, "to_last_word_id": 837962, "from_ref": "Ezra 1:1-3", "to_ref": "2 Nephi 25:11", "decision": "Fulfills"}
+{"from_first_word_id": 1013026, "from_last_word_id": 1013167, "to_first_word_id": 684695, "to_last_word_id": 684725, "from_ref": "3 Nephi 15:21-24", "to_ref": "John 10:16", "decision": "Fulfills"}
+{"from_first_word_id": 1013168, "from_last_word_id": 1013278, "to_first_word_id": 684695, "to_last_word_id": 684725, "from_ref": "3 Nephi 16:1-3", "to_ref": "John 10:16", "decision": "Alludes to"}
+{"from_first_word_id": 1018237, "from_last_word_id": 1018298, "to_first_word_id": 143390, "to_last_word_id": 143416, "from_ref": "3 Nephi 20:23", "to_ref": "Deuteronomy 18:15", "decision": "Fulfills"}
+{"from_first_word_id": 1146246, "from_last_word_id": 1146332, "to_first_word_id": 610453, "to_last_word_id": 610503, "from_ref": "D&C 110:13-15", "to_ref": "Malachi 4:5-6", "decision": "Fulfills"}
+{"from_first_word_id": 1146246, "from_last_word_id": 1146364, "to_first_word_id": 1061263, "to_last_word_id": 1061331, "from_ref": "D&C 110:13-16", "to_ref": "D&C 2:1-3", "decision": "Fulfills"}
+{"from_first_word_id": 1197946, "from_last_word_id": 1198283, "to_first_word_id": 461171, "to_last_word_id": 461235, "from_ref": "JS-H 1:63-65", "to_ref": "Isaiah 29:11-12", "decision": "Fulfills"}
+{"from_first_word_id": 1197946, "from_last_word_id": 1198283, "to_first_word_id": 841232, "to_last_word_id": 841418, "from_ref": "JS-H 1:63-65", "to_ref": "2 Nephi 27:15-20", "decision": "Fulfills"}
+{"from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 841064, "to_last_word_id": 841137, "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "2 Nephi 27:12", "decision": "Fulfills"}
+{"from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 1041904, "to_last_word_id": 1042012, "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "Ether 5:2-4", "decision": "Fulfills"}
+{"from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 1062402, "to_last_word_id": 1062542, "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "D&C 5:11-15", "decision": "Fulfills"}
+{"from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 1068973, "to_last_word_id": 1069104, "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "D&C 17:1-3", "decision": "Fulfills"}
+{"from_first_word_id": 791871, "from_last_word_id": 792037, "to_first_word_id": 841138, "to_last_word_id": 841231, "from_ref": "Testimony of Eight Witnesses 1:1", "to_ref": "2 Nephi 27:13-14", "decision": "Fulfills"}
+{"from_first_word_id": 696502, "from_last_word_id": 696524, "to_first_word_id": 476084, "to_last_word_id": 476176, "from_ref": "Acts 3:18", "to_ref": "Isaiah 53:5-7", "decision": "Fulfills"}
+{"from_first_word_id": 770193, "from_last_word_id": 770218, "to_first_word_id": 8513, "to_last_word_id": 8526, "from_ref": "James 2:23", "to_ref": "Genesis 15:6", "decision": "Quotes"}
+{"from_first_word_id": 762798, "from_last_word_id": 762873, "to_first_word_id": 380547, "to_last_word_id": 380585, "from_ref": "Hebrews 2:8-9", "to_ref": "Psalms 8:5-6", "decision": "Quotes"}
+{"from_first_word_id": 231717, "from_last_word_id": 231785, "to_first_word_id": 230233, "to_last_word_id": 230260, "from_ref": "2 Samuel 13:28-29", "to_ref": "2 Samuel 12:10", "decision": "Fulfills"}
+{"from_first_word_id": 236430, "from_last_word_id": 236482, "to_first_word_id": 230233, "to_last_word_id": 230260, "from_ref": "2 Samuel 18:14-15", "to_ref": "2 Samuel 12:10", "decision": "Fulfills"}
+{"from_first_word_id": 255970, "from_last_word_id": 256130, "to_first_word_id": 254520, "to_last_word_id": 254618, "from_ref": "1 Kings 12:16-20", "to_ref": "1 Kings 11:11-13", "decision": "Fulfills"}
+{"from_first_word_id": 256737, "from_last_word_id": 256766, "to_first_word_id": 256642, "to_last_word_id": 256676, "from_ref": "1 Kings 13:5", "to_ref": "1 Kings 13:3", "decision": "Fulfills"}
+{"from_first_word_id": 290177, "from_last_word_id": 290203, "to_first_word_id": 287666, "to_last_word_id": 287736, "from_ref": "2 Kings 25:9", "to_ref": "2 Kings 22:16-17", "decision": "Fulfills"}
+{"from_first_word_id": 513718, "from_last_word_id": 513739, "to_first_word_id": 509348, "to_last_word_id": 509391, "from_ref": "Jeremiah 39:8", "to_ref": "Jeremiah 34:2", "decision": "Fulfills"}
+{"from_first_word_id": 513633, "from_last_word_id": 513717, "to_first_word_id": 507087, "to_last_word_id": 507168, "from_ref": "Jeremiah 39:5-7", "to_ref": "Jeremiah 32:3-4", "decision": "Fulfills"}
+{"from_first_word_id": 513633, "from_last_word_id": 513717, "to_first_word_id": 512322, "to_last_word_id": 512368, "from_ref": "Jeremiah 39:5-7", "to_ref": "Jeremiah 37:17", "decision": "Fulfills"}
+{"from_first_word_id": 281732, "from_last_word_id": 281763, "to_first_word_id": 450180, "to_last_word_id": 450211, "from_ref": "2 Kings 16:9", "to_ref": "Isaiah 8:4", "decision": "Fulfills"}
+{"from_first_word_id": 282269, "from_last_word_id": 282306, "to_first_word_id": 590468, "to_last_word_id": 590490, "from_ref": "2 Kings 17:6", "to_ref": "Amos 7:11", "decision": "Fulfills"}
+{"from_first_word_id": 282807, "from_last_word_id": 282840, "to_first_word_id": 590610, "to_last_word_id": 590661, "from_ref": "2 Kings 17:23", "to_ref": "Amos 7:17", "decision": "Fulfills"}
+{"from_first_word_id": 279461, "from_last_word_id": 279506, "to_first_word_id": 279210, "to_last_word_id": 279321, "from_ref": "2 Kings 13:25", "to_ref": "2 Kings 13:17-19", "decision": "Fulfills"}
+{"from_first_word_id": 273990, "from_last_word_id": 274056, "to_first_word_id": 273945, "to_last_word_id": 273989, "from_ref": "2 Kings 8:2-3", "to_ref": "2 Kings 8:1", "decision": "Fulfills"}
+{"from_first_word_id": 203591, "from_last_word_id": 203623, "to_first_word_id": 203140, "to_last_word_id": 203195, "from_ref": "1 Samuel 10:1", "to_ref": "1 Samuel 9:16", "decision": "Fulfills"}
+{"from_first_word_id": 314267, "from_last_word_id": 314315, "to_first_word_id": 305774, "to_last_word_id": 305851, "from_ref": "2 Chronicles 6:10", "to_ref": "1 Chronicles 22:9-10", "decision": "Fulfills"}
+{"from_first_word_id": 547512, "from_last_word_id": 547536, "to_first_word_id": 547445, "to_last_word_id": 547474, "from_ref": "Ezekiel 24:18", "to_ref": "Ezekiel 24:16", "decision": "Fulfills"}
+{"from_first_word_id": 554612, "from_last_word_id": 554692, "to_first_word_id": 547743, "to_last_word_id": 547801, "from_ref": "Ezekiel 33:21-22", "to_ref": "Ezekiel 24:26-27", "decision": "Fulfills"}
+{"from_first_word_id": 243924, "from_last_word_id": 243953, "to_first_word_id": 243652, "to_last_word_id": 243690, "from_ref": "1 Kings 1:39", "to_ref": "1 Kings 1:30", "decision": "Fulfills"}
+{"from_first_word_id": 268427, "from_last_word_id": 268503, "to_first_word_id": 268393, "to_last_word_id": 268426, "from_ref": "2 Kings 2:11-12", "to_ref": "2 Kings 2:10", "decision": "Fulfills"}
+{"from_first_word_id": 271599, "from_last_word_id": 271635, "to_first_word_id": 271454, "to_last_word_id": 271481, "from_ref": "2 Kings 5:14", "to_ref": "2 Kings 5:10", "decision": "Fulfills"}
+{"from_first_word_id": 271107, "from_last_word_id": 271126, "to_first_word_id": 271072, "to_last_word_id": 271106, "from_ref": "2 Kings 4:44", "to_ref": "2 Kings 4:43", "decision": "Fulfills"}
+{"from_first_word_id": 266876, "from_last_word_id": 266911, "to_first_word_id": 264898, "to_last_word_id": 264937, "from_ref": "1 Kings 22:35", "to_ref": "1 Kings 20:42", "decision": "Fulfills"}
+{"from_first_word_id": 327782, "from_last_word_id": 327843, "to_first_word_id": 327548, "to_last_word_id": 327603, "from_ref": "2 Chronicles 25:22-23", "to_ref": "2 Chronicles 25:16", "decision": "Fulfills"}
+{"from_first_word_id": 651280, "from_last_word_id": 651296, "to_first_word_id": 651183, "to_last_word_id": 651203, "from_ref": "Luke 2:16", "to_ref": "Luke 2:12", "decision": "Fulfills"}
+{"from_first_word_id": 704132, "from_last_word_id": 704142, "to_first_word_id": 625689, "to_last_word_id": 625742, "from_ref": "Acts 12:2", "to_ref": "Matthew 20:23", "decision": "Fulfills"}

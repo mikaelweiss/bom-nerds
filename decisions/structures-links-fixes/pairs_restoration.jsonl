@@ -1,0 +1,576 @@
+{"kind": "Parallelism", "first_word_id": 810677, "last_word_id": 810753, "ref": "1 Nephi 17:36-39", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1199401, "last_word_id": 1199422, "ref": "Articles of Faith 1:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1060856, "last_word_id": 1060911, "ref": "Doctrine and Covenants 1:25-28", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1119447, "last_word_id": 1119522, "ref": "Doctrine and Covenants 88:7-10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1009895, "last_word_id": 1010014, "ref": "3 Nephi 12:3-10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A", "A'''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A'", "A'''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A''", "A'''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A'''", "A'''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A''''", "A'''''''"], ["A'''''", "A''''''"], ["A'''''", "A'''''''"], ["A''''''", "A'''''''"]]}
+{"kind": "Parallelism", "first_word_id": 827542, "last_word_id": 827717, "ref": "2 Nephi 9:30-38", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A", "A'''''''"], ["A", "A''''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A'", "A'''''''"], ["A'", "A''''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A''", "A'''''''"], ["A''", "A''''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A'''", "A'''''''"], ["A'''", "A''''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A''''", "A'''''''"], ["A''''", "A''''''''"], ["A'''''", "A''''''"], ["A'''''", "A'''''''"], ["A'''''", "A''''''''"], ["A''''''", "A'''''''"], ["A''''''", "A''''''''"], ["A'''''''", "A''''''''"]]}
+{"kind": "Parallelism", "first_word_id": 864800, "last_word_id": 864847, "ref": "Mosiah 4:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 897010, "last_word_id": 897033, "ref": "Alma 5:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 935048, "last_word_id": 935069, "ref": "Alma 32:28", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 854528, "last_word_id": 854560, "ref": "Jacob 6:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 937285, "last_word_id": 937385, "ref": "Alma 34:18-25", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A'''''", "A''''''"]]}
+{"kind": "Parallelism", "first_word_id": 1110337, "last_word_id": 1110774, "ref": "Doctrine and Covenants 76:51-70", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A", "A'''''''"], ["A", "A''''''''"], ["A", "A'''''''''"], ["A", "A''''''''''"], ["A", "A'''''''''''"], ["A", "A''''''''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A'", "A'''''''"], ["A'", "A''''''''"], ["A'", "A'''''''''"], ["A'", "A''''''''''"], ["A'", "A'''''''''''"], ["A'", "A''''''''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A''", "A'''''''"], ["A''", "A''''''''"], ["A''", "A'''''''''"], ["A''", "A''''''''''"], ["A''", "A'''''''''''"], ["A''", "A''''''''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A'''", "A'''''''"], ["A'''", "A''''''''"], ["A'''", "A'''''''''"], ["A'''", "A''''''''''"], ["A'''", "A'''''''''''"], ["A'''", "A''''''''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A''''", "A'''''''"], ["A''''", "A''''''''"], ["A''''", "A'''''''''"], ["A''''", "A''''''''''"], ["A''''", "A'''''''''''"], ["A''''", "A''''''''''''"], ["A'''''", "A''''''"], ["A'''''", "A'''''''"], ["A'''''", "A''''''''"], ["A'''''", "A'''''''''"], ["A'''''", "A''''''''''"], ["A'''''", "A'''''''''''"], ["A'''''", "A''''''''''''"], ["A''''''", "A'''''''"], ["A''''''", "A''''''''"], ["A''''''", "A'''''''''"], ["A''''''", "A''''''''''"], ["A''''''", "A'''''''''''"], ["A''''''", "A''''''''''''"], ["A'''''''", "A''''''''"], ["A'''''''", "A'''''''''"], ["A'''''''", "A''''''''''"], ["A'''''''", "A'''''''''''"], ["A'''''''", "A''''''''''''"], ["A''''''''", "A'''''''''"], ["A''''''''", "A''''''''''"], ["A''''''''", "A'''''''''''"], ["A''''''''", "A''''''''''''"], ["A'''''''''", "A''''''''''"], ["A'''''''''", "A'''''''''''"], ["A'''''''''", "A''''''''''''"], ["A''''''''''", "A'''''''''''"], ["A''''''''''", "A''''''''''''"], ["A'''''''''''", "A''''''''''''"]]}
+{"kind": "Parallelism", "first_word_id": 1110826, "last_word_id": 1110974, "ref": "Doctrine and Covenants 76:72-79", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1111039, "last_word_id": 1111098, "ref": "Doctrine and Covenants 76:82-85", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1111390, "last_word_id": 1111568, "ref": "Doctrine and Covenants 76:99-106", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1115811, "last_word_id": 1115849, "ref": "Doctrine and Covenants 84:35-38", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1057804, "last_word_id": 1057884, "ref": "Moroni 8:25-26", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"], ["A''", "A'''"], ["A'''", "A''''"], ["A''''", "A'''''"], ["A'''''", "A''''''"]]}
+{"kind": "Parallelism", "first_word_id": 842938, "last_word_id": 843059, "ref": "2 Nephi 28:25-29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 935875, "last_word_id": 936063, "ref": "Alma 33:4-10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1049285, "last_word_id": 1049401, "ref": "Ether 12:13-17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1010787, "last_word_id": 1010835, "ref": "3 Nephi 12:39-41", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1012330, "last_word_id": 1012436, "ref": "3 Nephi 14:24-27", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 897088, "last_word_id": 897216, "ref": "Alma 5:16-18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 792705, "last_word_id": 792750, "ref": "1 Nephi 1:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 825405, "last_word_id": 825438, "ref": "2 Nephi 8:4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 825439, "last_word_id": 825467, "ref": "2 Nephi 8:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 825468, "last_word_id": 825520, "ref": "2 Nephi 8:6", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 825552, "last_word_id": 825582, "ref": "2 Nephi 8:8", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 825642, "last_word_id": 825678, "ref": "2 Nephi 8:11", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 825679, "last_word_id": 825715, "ref": "2 Nephi 8:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 825716, "last_word_id": 825762, "ref": "2 Nephi 8:13", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 825763, "last_word_id": 825786, "ref": "2 Nephi 8:14", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 825935, "last_word_id": 825971, "ref": "2 Nephi 8:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 825984, "last_word_id": 826025, "ref": "2 Nephi 8:22", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 826102, "last_word_id": 826124, "ref": "2 Nephi 8:25", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 824915, "last_word_id": 824980, "ref": "2 Nephi 7:1", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 824981, "last_word_id": 825050, "ref": "2 Nephi 7:2", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 825063, "last_word_id": 825108, "ref": "2 Nephi 7:4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 825125, "last_word_id": 825150, "ref": "2 Nephi 7:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 825151, "last_word_id": 825181, "ref": "2 Nephi 7:7", "decision": "keep", "pairs": [["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 825182, "last_word_id": 825219, "ref": "2 Nephi 7:8", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 814188, "last_word_id": 814245, "ref": "1 Nephi 20:1", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 814246, "last_word_id": 814278, "ref": "1 Nephi 20:2", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 814279, "last_word_id": 814305, "ref": "1 Nephi 20:3", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 814328, "last_word_id": 814372, "ref": "1 Nephi 20:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 814373, "last_word_id": 814405, "ref": "1 Nephi 20:6", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 814437, "last_word_id": 814471, "ref": "1 Nephi 20:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A'", "B"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 814472, "last_word_id": 814496, "ref": "1 Nephi 20:9", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 814512, "last_word_id": 814543, "ref": "1 Nephi 20:11", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 814567, "last_word_id": 814593, "ref": "1 Nephi 20:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 814594, "last_word_id": 814642, "ref": "1 Nephi 20:14", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 814672, "last_word_id": 814705, "ref": "1 Nephi 20:16", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 814833, "last_word_id": 814864, "ref": "1 Nephi 20:21", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 814885, "last_word_id": 814964, "ref": "1 Nephi 21:1", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 814965, "last_word_id": 814997, "ref": "1 Nephi 21:2", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 815014, "last_word_id": 815044, "ref": "1 Nephi 21:4", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 815094, "last_word_id": 815141, "ref": "1 Nephi 21:6", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 815238, "last_word_id": 815269, "ref": "1 Nephi 21:9", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 815320, "last_word_id": 815348, "ref": "1 Nephi 21:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 815349, "last_word_id": 815397, "ref": "1 Nephi 21:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 815492, "last_word_id": 815537, "ref": "1 Nephi 21:18", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 815654, "last_word_id": 815689, "ref": "1 Nephi 21:22", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 815690, "last_word_id": 815741, "ref": "1 Nephi 21:23", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 815756, "last_word_id": 815795, "ref": "1 Nephi 21:25", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 829870, "last_word_id": 829929, "ref": "2 Nephi 12:3", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 830035, "last_word_id": 830066, "ref": "2 Nephi 12:7", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 830067, "last_word_id": 830088, "ref": "2 Nephi 12:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 830136, "last_word_id": 830169, "ref": "2 Nephi 12:11", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 830170, "last_word_id": 830200, "ref": "2 Nephi 12:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 830236, "last_word_id": 830259, "ref": "2 Nephi 12:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 830290, "last_word_id": 830317, "ref": "2 Nephi 12:17", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 830548, "last_word_id": 830578, "ref": "2 Nephi 13:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 830973, "last_word_id": 831013, "ref": "2 Nephi 13:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 831218, "last_word_id": 831246, "ref": "2 Nephi 14:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 831273, "last_word_id": 831319, "ref": "2 Nephi 15:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831374, "last_word_id": 831411, "ref": "2 Nephi 15:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831412, "last_word_id": 831445, "ref": "2 Nephi 15:6", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831446, "last_word_id": 831480, "ref": "2 Nephi 15:7", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831549, "last_word_id": 831572, "ref": "2 Nephi 15:11", "decision": "keep", "pairs": [["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 831573, "last_word_id": 831604, "ref": "2 Nephi 15:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831605, "last_word_id": 831629, "ref": "2 Nephi 15:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 831658, "last_word_id": 831681, "ref": "2 Nephi 15:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 831740, "last_word_id": 831772, "ref": "2 Nephi 15:19", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831846, "last_word_id": 831893, "ref": "2 Nephi 15:24", "decision": "keep", "pairs": [["A", "A'"], ["A'", "B"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 831894, "last_word_id": 831949, "ref": "2 Nephi 15:25", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831950, "last_word_id": 831988, "ref": "2 Nephi 15:26", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 831989, "last_word_id": 832010, "ref": "2 Nephi 15:27", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 832011, "last_word_id": 832040, "ref": "2 Nephi 15:28", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 832041, "last_word_id": 832065, "ref": "2 Nephi 15:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 832066, "last_word_id": 832100, "ref": "2 Nephi 15:30", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 832343, "last_word_id": 832380, "ref": "2 Nephi 16:10", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 833355, "last_word_id": 833392, "ref": "2 Nephi 18:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 833482, "last_word_id": 833517, "ref": "2 Nephi 18:14", "decision": "keep", "pairs": [["A", "A'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 833790, "last_word_id": 833817, "ref": "2 Nephi 19:3", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 833838, "last_word_id": 833862, "ref": "2 Nephi 19:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 834024, "last_word_id": 834054, "ref": "2 Nephi 19:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834125, "last_word_id": 834176, "ref": "2 Nephi 19:17", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 834177, "last_word_id": 834209, "ref": "2 Nephi 19:18", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834210, "last_word_id": 834238, "ref": "2 Nephi 19:19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 834239, "last_word_id": 834274, "ref": "2 Nephi 19:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 834275, "last_word_id": 834301, "ref": "2 Nephi 19:21", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834317, "last_word_id": 834348, "ref": "2 Nephi 20:2", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834349, "last_word_id": 834381, "ref": "2 Nephi 20:3", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834382, "last_word_id": 834413, "ref": "2 Nephi 20:4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834430, "last_word_id": 834470, "ref": "2 Nephi 20:6", "decision": "keep", "pairs": [["A", "A'"], ["A'", "B"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834506, "last_word_id": 834520, "ref": "2 Nephi 20:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 834608, "last_word_id": 834651, "ref": "2 Nephi 20:13", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 834652, "last_word_id": 834692, "ref": "2 Nephi 20:14", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834693, "last_word_id": 834740, "ref": "2 Nephi 20:15", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 834770, "last_word_id": 834800, "ref": "2 Nephi 20:17", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 835103, "last_word_id": 835124, "ref": "2 Nephi 20:29", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 835180, "last_word_id": 835208, "ref": "2 Nephi 20:33", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 835316, "last_word_id": 835357, "ref": "2 Nephi 21:4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 835374, "last_word_id": 835400, "ref": "2 Nephi 21:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 835408, "last_word_id": 835431, "ref": "2 Nephi 21:7", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 835485, "last_word_id": 835516, "ref": "2 Nephi 21:10", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 835575, "last_word_id": 835605, "ref": "2 Nephi 21:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 835606, "last_word_id": 835632, "ref": "2 Nephi 21:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 835633, "last_word_id": 835670, "ref": "2 Nephi 21:14", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 835671, "last_word_id": 835710, "ref": "2 Nephi 21:15", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 835776, "last_word_id": 835803, "ref": "2 Nephi 22:2", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 835844, "last_word_id": 835860, "ref": "2 Nephi 22:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 836036, "last_word_id": 836061, "ref": "2 Nephi 23:8", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 836091, "last_word_id": 836123, "ref": "2 Nephi 23:10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 836124, "last_word_id": 836156, "ref": "2 Nephi 23:11", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 836207, "last_word_id": 836241, "ref": "2 Nephi 23:14", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 836308, "last_word_id": 836335, "ref": "2 Nephi 23:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 836357, "last_word_id": 836386, "ref": "2 Nephi 23:20", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 836387, "last_word_id": 836414, "ref": "2 Nephi 23:21", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 836415, "last_word_id": 836467, "ref": "2 Nephi 23:22", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 836716, "last_word_id": 836756, "ref": "2 Nephi 24:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 836778, "last_word_id": 836804, "ref": "2 Nephi 24:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 836897, "last_word_id": 836926, "ref": "2 Nephi 24:16", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 836968, "last_word_id": 837007, "ref": "2 Nephi 24:19", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 837046, "last_word_id": 837063, "ref": "2 Nephi 24:21", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 837148, "last_word_id": 837180, "ref": "2 Nephi 24:25", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 837272, "last_word_id": 837301, "ref": "2 Nephi 24:30", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 840600, "last_word_id": 840637, "ref": "2 Nephi 27:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 840638, "last_word_id": 840704, "ref": "2 Nephi 27:3", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 841588, "last_word_id": 841625, "ref": "2 Nephi 27:25", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 841626, "last_word_id": 841663, "ref": "2 Nephi 27:26", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 841664, "last_word_id": 841759, "ref": "2 Nephi 27:27", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 841830, "last_word_id": 841856, "ref": "2 Nephi 27:30", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 841857, "last_word_id": 841887, "ref": "2 Nephi 27:31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 841888, "last_word_id": 841919, "ref": "2 Nephi 27:32", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 841946, "last_word_id": 841980, "ref": "2 Nephi 27:34", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 874976, "last_word_id": 875015, "ref": "Mosiah 14:2", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875016, "last_word_id": 875048, "ref": "Mosiah 14:3", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875070, "last_word_id": 875097, "ref": "Mosiah 14:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 875098, "last_word_id": 875125, "ref": "Mosiah 14:6", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 875126, "last_word_id": 875162, "ref": "Mosiah 14:7", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875163, "last_word_id": 875197, "ref": "Mosiah 14:8", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875198, "last_word_id": 875225, "ref": "Mosiah 14:9", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875226, "last_word_id": 875270, "ref": "Mosiah 14:10", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875271, "last_word_id": 875297, "ref": "Mosiah 14:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 875298, "last_word_id": 875345, "ref": "Mosiah 14:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1020239, "last_word_id": 1020260, "ref": "3 Nephi 22:1", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1020279, "last_word_id": 1020303, "ref": "3 Nephi 22:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1020332, "last_word_id": 1020380, "ref": "3 Nephi 22:4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1020518, "last_word_id": 1020552, "ref": "3 Nephi 22:10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1020616, "last_word_id": 1020642, "ref": "3 Nephi 22:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1020665, "last_word_id": 1020694, "ref": "3 Nephi 22:16", "decision": "keep", "pairs": [["A", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1020695, "last_word_id": 1020735, "ref": "3 Nephi 22:17", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 822264, "last_word_id": 822291, "ref": "2 Nephi 4:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 822339, "last_word_id": 822367, "ref": "2 Nephi 4:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 822368, "last_word_id": 822407, "ref": "2 Nephi 4:25", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 822408, "last_word_id": 822461, "ref": "2 Nephi 4:26", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 822462, "last_word_id": 822505, "ref": "2 Nephi 4:27", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 822506, "last_word_id": 822528, "ref": "2 Nephi 4:28", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["A", "B"], ["A'", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 822579, "last_word_id": 822609, "ref": "2 Nephi 4:31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 822664, "last_word_id": 822728, "ref": "2 Nephi 4:33", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 822729, "last_word_id": 822784, "ref": "2 Nephi 4:34", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 822785, "last_word_id": 822845, "ref": "2 Nephi 4:35", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 929035, "last_word_id": 929073, "ref": "Alma 29:1", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 929366, "last_word_id": 929411, "ref": "Alma 29:9", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 929412, "last_word_id": 929468, "ref": "Alma 29:10", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1060193, "last_word_id": 1060236, "ref": "Doctrine and Covenants 1:1", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1060237, "last_word_id": 1060275, "ref": "Doctrine and Covenants 1:2", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1060276, "last_word_id": 1060300, "ref": "Doctrine and Covenants 1:3", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1060524, "last_word_id": 1060548, "ref": "Doctrine and Covenants 1:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1061187, "last_word_id": 1061236, "ref": "Doctrine and Covenants 1:38", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1061237, "last_word_id": 1061262, "ref": "Doctrine and Covenants 1:39", "decision": "keep", "pairs": [["A", "A'"], ["A'", "B"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1109144, "last_word_id": 1109187, "ref": "Doctrine and Covenants 76:7", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1109211, "last_word_id": 1109242, "ref": "Doctrine and Covenants 76:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1119523, "last_word_id": 1119547, "ref": "Doctrine and Covenants 88:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1119563, "last_word_id": 1119610, "ref": "Doctrine and Covenants 88:13", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1149686, "last_word_id": 1149721, "ref": "Doctrine and Covenants 121:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1149789, "last_word_id": 1149824, "ref": "Doctrine and Covenants 121:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1150942, "last_word_id": 1150975, "ref": "Doctrine and Covenants 121:45", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1150976, "last_word_id": 1151013, "ref": "Doctrine and Covenants 121:46", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1181649, "last_word_id": 1181718, "ref": "Moses 7:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1182392, "last_word_id": 1182424, "ref": "Moses 7:32", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1182712, "last_word_id": 1182744, "ref": "Moses 7:41", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1182997, "last_word_id": 1183053, "ref": "Moses 7:48", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"], ["B", "C"]]}
+{"kind": "Parallelism", "first_word_id": 1183547, "last_word_id": 1183599, "ref": "Moses 7:61", "decision": "keep", "pairs": [["A", "A'"], ["A'", "B"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1183600, "last_word_id": 1183638, "ref": "Moses 7:62", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1183725, "last_word_id": 1183751, "ref": "Moses 7:63", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1173447, "last_word_id": 1173474, "ref": "Moses 1:33", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1173489, "last_word_id": 1173539, "ref": "Moses 1:35", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1165826, "last_word_id": 1165857, "ref": "Doctrine and Covenants 133:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1165858, "last_word_id": 1165881, "ref": "Doctrine and Covenants 133:21", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1165882, "last_word_id": 1165914, "ref": "Doctrine and Covenants 133:22", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1166549, "last_word_id": 1166583, "ref": "Doctrine and Covenants 133:49", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1166608, "last_word_id": 1166638, "ref": "Doctrine and Covenants 133:51", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1166691, "last_word_id": 1166727, "ref": "Doctrine and Covenants 133:53", "decision": "keep", "pairs": [["A", "A'"], ["A'", "B"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1166884, "last_word_id": 1166929, "ref": "Doctrine and Covenants 133:58", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1167212, "last_word_id": 1167251, "ref": "Doctrine and Covenants 133:71", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 819524, "last_word_id": 819602, "ref": "2 Nephi 2:13", "decision": "keep", "pairs": [["A", "A'"], ["A'", "B"], ["B", "B'"], ["B'", "C"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 820186, "last_word_id": 820236, "ref": "2 Nephi 2:27", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 991664, "last_word_id": 991704, "ref": "Helaman 12:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["A", "B"]]}
+{"kind": "Parallelism", "first_word_id": 991705, "last_word_id": 991753, "ref": "Helaman 12:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1021282, "last_word_id": 1021318, "ref": "3 Nephi 24:3", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1021493, "last_word_id": 1021544, "ref": "3 Nephi 24:10", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1021545, "last_word_id": 1021581, "ref": "3 Nephi 24:11", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1021651, "last_word_id": 1021673, "ref": "3 Nephi 24:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1021674, "last_word_id": 1021711, "ref": "3 Nephi 24:16", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 873399, "last_word_id": 873424, "ref": "Mosiah 12:21", "decision": "keep", "pairs": [["A", "B"], ["A'", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1019807, "last_word_id": 1019835, "ref": "3 Nephi 21:17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1018769, "last_word_id": 1018791, "ref": "3 Nephi 20:37", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1018886, "last_word_id": 1018918, "ref": "3 Nephi 20:41", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1018919, "last_word_id": 1018946, "ref": "3 Nephi 20:42", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1018987, "last_word_id": 1019021, "ref": "3 Nephi 20:45", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875909, "last_word_id": 875948, "ref": "Mosiah 15:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 824286, "last_word_id": 824321, "ref": "2 Nephi 6:6", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 824322, "last_word_id": 824373, "ref": "2 Nephi 6:7", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 816959, "last_word_id": 817017, "ref": "1 Nephi 22:23", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 817111, "last_word_id": 817153, "ref": "1 Nephi 22:25", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 876722, "last_word_id": 876757, "ref": "Mosiah 16:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A'", "B"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 818030, "last_word_id": 818067, "ref": "2 Nephi 1:13", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 818129, "last_word_id": 818155, "ref": "2 Nephi 1:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 818446, "last_word_id": 818474, "ref": "2 Nephi 1:23", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 941555, "last_word_id": 941605, "ref": "Alma 37:36", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1011980, "last_word_id": 1012000, "ref": "3 Nephi 14:7", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1012001, "last_word_id": 1012020, "ref": "3 Nephi 14:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1160645, "last_word_id": 1160696, "ref": "Doctrine and Covenants 128:22", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1160722, "last_word_id": 1160810, "ref": "Doctrine and Covenants 128:23", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"], ["D", "D'"]]}
+{"kind": "Parallelism", "first_word_id": 1180911, "last_word_id": 1180964, "ref": "Moses 6:63", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1064298, "last_word_id": 1064330, "ref": "Doctrine and Covenants 6:37", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 1087871, "last_word_id": 1087896, "ref": "Doctrine and Covenants 45:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1088893, "last_word_id": 1088919, "ref": "Doctrine and Covenants 45:42", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1089365, "last_word_id": 1089392, "ref": "Doctrine and Covenants 45:58", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1089393, "last_word_id": 1089416, "ref": "Doctrine and Covenants 45:59", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1116013, "last_word_id": 1116038, "ref": "Doctrine and Covenants 84:45", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1117096, "last_word_id": 1117140, "ref": "Doctrine and Covenants 84:88", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1097319, "last_word_id": 1097345, "ref": "Doctrine and Covenants 58:27", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1097371, "last_word_id": 1097396, "ref": "Doctrine and Covenants 58:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 900241, "last_word_id": 900279, "ref": "Alma 7:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 826595, "last_word_id": 826637, "ref": "2 Nephi 9:10", "decision": "keep", "pairs": [["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 896845, "last_word_id": 896885, "ref": "Alma 5:10", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1035947, "last_word_id": 1036007, "ref": "Mormon 9:3", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1036046, "last_word_id": 1036080, "ref": "Mormon 9:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1151014, "last_word_id": 1151036, "ref": "Doctrine and Covenants 122:1", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1151134, "last_word_id": 1151166, "ref": "Doctrine and Covenants 122:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1151291, "last_word_id": 1151383, "ref": "Doctrine and Covenants 122:7", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A", "A'''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A'", "A'''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A''", "A'''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A'''", "A'''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A''''", "A'''''''"], ["A'''''", "A''''''"], ["A'''''", "A'''''''"], ["A''''''", "A'''''''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1120200, "last_word_id": 1120234, "ref": "Doctrine and Covenants 88:37", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1120265, "last_word_id": 1120299, "ref": "Doctrine and Covenants 88:40", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A'''''", "A''''''"]]}
+{"kind": "Parallelism", "first_word_id": 1120318, "last_word_id": 1120369, "ref": "Doctrine and Covenants 88:41", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1120466, "last_word_id": 1120505, "ref": "Doctrine and Covenants 88:45", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1188361, "last_word_id": 1188386, "ref": "Abraham 3:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1188409, "last_word_id": 1188460, "ref": "Abraham 3:26", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1191957, "last_word_id": 1191992, "ref": "Joseph Smith\u2014Matthew 1:33", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 993821, "last_word_id": 993875, "ref": "Helaman 13:32", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1007163, "last_word_id": 1007209, "ref": "3 Nephi 9:17", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1035797, "last_word_id": 1035831, "ref": "Mormon 8:40", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1035837, "last_word_id": 1035868, "ref": "Mormon 8:41", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 1086978, "last_word_id": 1087008, "ref": "Doctrine and Covenants 43:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1087175, "last_word_id": 1087287, "ref": "Doctrine and Covenants 43:25", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A", "A'''''''"], ["A", "A''''''''"], ["A", "A'''''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A'", "A'''''''"], ["A'", "A''''''''"], ["A'", "A'''''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A''", "A'''''''"], ["A''", "A''''''''"], ["A''", "A'''''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A'''", "A'''''''"], ["A'''", "A''''''''"], ["A'''", "A'''''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A''''", "A'''''''"], ["A''''", "A''''''''"], ["A''''", "A'''''''''"], ["A'''''", "A''''''"], ["A'''''", "A'''''''"], ["A'''''", "A''''''''"], ["A'''''", "A'''''''''"], ["A''''''", "A'''''''"], ["A''''''", "A''''''''"], ["A''''''", "A'''''''''"], ["A'''''''", "A''''''''"], ["A'''''''", "A'''''''''"], ["A''''''''", "A'''''''''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 843088, "last_word_id": 843137, "ref": "2 Nephi 28:30", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 843138, "last_word_id": 843172, "ref": "2 Nephi 28:31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 946287, "last_word_id": 946332, "ref": "Alma 42:23", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 946333, "last_word_id": 946357, "ref": "Alma 42:24", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 944576, "last_word_id": 944624, "ref": "Alma 40:23", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 865336, "last_word_id": 865364, "ref": "Mosiah 4:19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 865365, "last_word_id": 865436, "ref": "Mosiah 4:20", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 836468, "last_word_id": 836504, "ref": "2 Nephi 24:1", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 836573, "last_word_id": 836606, "ref": "2 Nephi 24:3", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 839756, "last_word_id": 839823, "ref": "2 Nephi 26:16", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 856102, "last_word_id": 856143, "ref": "Enos 1:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 876837, "last_word_id": 876900, "ref": "Mosiah 16:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 907419, "last_word_id": 907444, "ref": "Alma 12:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 907489, "last_word_id": 907510, "ref": "Alma 12:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1049225, "last_word_id": 1049257, "ref": "Ether 12:11", "decision": "keep", "pairs": [["A", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1120952, "last_word_id": 1120983, "ref": "Doctrine and Covenants 88:63", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1121069, "last_word_id": 1121104, "ref": "Doctrine and Covenants 88:67", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1143577, "last_word_id": 1143617, "ref": "Doctrine and Covenants 109:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1144001, "last_word_id": 1144022, "ref": "Doctrine and Covenants 109:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1145713, "last_word_id": 1145740, "ref": "Doctrine and Covenants 109:76", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1177176, "last_word_id": 1177212, "ref": "Moses 5:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1180800, "last_word_id": 1180820, "ref": "Moses 6:60", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1176394, "last_word_id": 1176423, "ref": "Moses 4:22", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 897034, "last_word_id": 897087, "ref": "Alma 5:15", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 898717, "last_word_id": 898782, "ref": "Alma 5:53", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 862087, "last_word_id": 862111, "ref": "Mosiah 2:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 866122, "last_word_id": 866189, "ref": "Mosiah 5:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 848086, "last_word_id": 848136, "ref": "Jacob 2:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 848943, "last_word_id": 848980, "ref": "Jacob 3:1", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 935641, "last_word_id": 935669, "ref": "Alma 32:42", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1055401, "last_word_id": 1055445, "ref": "Moroni 7:12", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["C", "C'"]]}
+{"kind": "Parallelism", "first_word_id": 1056821, "last_word_id": 1056851, "ref": "Moroni 7:46", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1077340, "last_word_id": 1077372, "ref": "Doctrine and Covenants 29:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1077499, "last_word_id": 1077526, "ref": "Doctrine and Covenants 29:19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1077638, "last_word_id": 1077665, "ref": "Doctrine and Covenants 29:23", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1077722, "last_word_id": 1077762, "ref": "Doctrine and Covenants 29:26", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1131553, "last_word_id": 1131580, "ref": "Doctrine and Covenants 101:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1131593, "last_word_id": 1131619, "ref": "Doctrine and Covenants 101:25", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 1131620, "last_word_id": 1131644, "ref": "Doctrine and Covenants 101:26", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1131789, "last_word_id": 1131813, "ref": "Doctrine and Covenants 101:34", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1088481, "last_word_id": 1088522, "ref": "Doctrine and Covenants 45:26", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1089066, "last_word_id": 1089098, "ref": "Doctrine and Covenants 45:48", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1089099, "last_word_id": 1089132, "ref": "Doctrine and Covenants 45:49", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1089619, "last_word_id": 1089652, "ref": "Doctrine and Covenants 45:67", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 1117462, "last_word_id": 1117494, "ref": "Doctrine and Covenants 84:101", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1121731, "last_word_id": 1121777, "ref": "Doctrine and Covenants 88:87", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1121870, "last_word_id": 1121890, "ref": "Doctrine and Covenants 88:91", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 802154, "last_word_id": 802218, "ref": "1 Nephi 12:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "B"], ["A", "B'"], ["A", "B''"], ["A'", "A''"], ["A'", "B"], ["A'", "B'"], ["A'", "B''"], ["A''", "B"], ["A''", "B'"], ["A''", "B''"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 810462, "last_word_id": 810490, "ref": "1 Nephi 17:31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 813483, "last_word_id": 813515, "ref": "1 Nephi 19:10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 819108, "last_word_id": 819149, "ref": "2 Nephi 2:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 820870, "last_word_id": 820914, "ref": "2 Nephi 3:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 827309, "last_word_id": 827357, "ref": "2 Nephi 9:25", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 832137, "last_word_id": 832155, "ref": "2 Nephi 16:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 843843, "last_word_id": 843908, "ref": "2 Nephi 29:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 846414, "last_word_id": 846426, "ref": "2 Nephi 33:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 869294, "last_word_id": 869333, "ref": "Mosiah 8:17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 888649, "last_word_id": 888671, "ref": "Mosiah 27:37", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 899918, "last_word_id": 899959, "ref": "Alma 7:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 919950, "last_word_id": 919978, "ref": "Alma 21:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 920028, "last_word_id": 920056, "ref": "Alma 21:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 924214, "last_word_id": 924257, "ref": "Alma 24:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 926708, "last_word_id": 926748, "ref": "Alma 26:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 928677, "last_word_id": 928695, "ref": "Alma 28:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 928985, "last_word_id": 929034, "ref": "Alma 28:14", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 930083, "last_word_id": 930116, "ref": "Alma 30:10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 931751, "last_word_id": 931773, "ref": "Alma 30:47", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 932958, "last_word_id": 932990, "ref": "Alma 31:15", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 946102, "last_word_id": 946131, "ref": "Alma 42:17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 972174, "last_word_id": 972209, "ref": "Alma 60:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 981616, "last_word_id": 981656, "ref": "Helaman 5:6", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 981829, "last_word_id": 981862, "ref": "Helaman 5:10", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 993618, "last_word_id": 993639, "ref": "Helaman 13:27", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 993668, "last_word_id": 993696, "ref": "Helaman 13:28", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 993733, "last_word_id": 993768, "ref": "Helaman 13:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 995360, "last_word_id": 995420, "ref": "Helaman 14:31", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1007556, "last_word_id": 1007620, "ref": "3 Nephi 10:5", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1009354, "last_word_id": 1009378, "ref": "3 Nephi 11:32", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1010382, "last_word_id": 1010423, "ref": "3 Nephi 12:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1012289, "last_word_id": 1012311, "ref": "3 Nephi 14:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1018076, "last_word_id": 1018116, "ref": "3 Nephi 20:19", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1020194, "last_word_id": 1020228, "ref": "3 Nephi 21:29", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1022987, "last_word_id": 1023056, "ref": "3 Nephi 27:8", "decision": "keep", "pairs": [["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1034027, "last_word_id": 1034058, "ref": "Mormon 7:9", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1035086, "last_word_id": 1035120, "ref": "Mormon 8:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1036304, "last_word_id": 1036341, "ref": "Mormon 9:12", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1036459, "last_word_id": 1036492, "ref": "Mormon 9:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1036580, "last_word_id": 1036617, "ref": "Mormon 9:17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1036912, "last_word_id": 1036951, "ref": "Mormon 9:26", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1037082, "last_word_id": 1037108, "ref": "Mormon 9:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1049633, "last_word_id": 1049674, "ref": "Ether 12:23", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 1055357, "last_word_id": 1055400, "ref": "Moroni 7:11", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1059580, "last_word_id": 1059606, "ref": "Moroni 10:20", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1101032, "last_word_id": 1101050, "ref": "Doctrine and Covenants 63:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1117423, "last_word_id": 1117461, "ref": "Doctrine and Covenants 84:100", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1120816, "last_word_id": 1120839, "ref": "Doctrine and Covenants 88:59", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1121839, "last_word_id": 1121869, "ref": "Doctrine and Covenants 88:90", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1122926, "last_word_id": 1122966, "ref": "Doctrine and Covenants 88:120", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1128686, "last_word_id": 1128717, "ref": "Doctrine and Covenants 97:19", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1160342, "last_word_id": 1160380, "ref": "Doctrine and Covenants 128:19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 1164175, "last_word_id": 1164234, "ref": "Doctrine and Covenants 132:46", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1182497, "last_word_id": 1182516, "ref": "Moses 7:35", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1187575, "last_word_id": 1187615, "ref": "Abraham 3:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 826830, "last_word_id": 826871, "ref": "2 Nephi 9:14", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 827722, "last_word_id": 827756, "ref": "2 Nephi 9:39", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 828084, "last_word_id": 828110, "ref": "2 Nephi 9:45", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 828304, "last_word_id": 828333, "ref": "2 Nephi 9:50", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 838787, "last_word_id": 838802, "ref": "2 Nephi 25:26", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 839234, "last_word_id": 839274, "ref": "2 Nephi 26:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 839727, "last_word_id": 839755, "ref": "2 Nephi 26:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 840133, "last_word_id": 840206, "ref": "2 Nephi 26:25-27", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 840777, "last_word_id": 840800, "ref": "2 Nephi 27:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 842372, "last_word_id": 842398, "ref": "2 Nephi 28:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 843474, "last_word_id": 843489, "ref": "2 Nephi 29:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 843915, "last_word_id": 843966, "ref": "2 Nephi 29:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 844421, "last_word_id": 844464, "ref": "2 Nephi 30:9", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 844525, "last_word_id": 844552, "ref": "2 Nephi 30:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 844560, "last_word_id": 844583, "ref": "2 Nephi 30:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 844659, "last_word_id": 844699, "ref": "2 Nephi 30:17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 845231, "last_word_id": 845269, "ref": "2 Nephi 31:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 845503, "last_word_id": 845538, "ref": "2 Nephi 31:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 845878, "last_word_id": 845899, "ref": "2 Nephi 32:4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 846341, "last_word_id": 846377, "ref": "2 Nephi 33:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 846435, "last_word_id": 846479, "ref": "2 Nephi 33:7-9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 848175, "last_word_id": 848233, "ref": "Jacob 2:15-16", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 848300, "last_word_id": 848322, "ref": "Jacob 2:19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 849300, "last_word_id": 849330, "ref": "Jacob 3:9", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 849398, "last_word_id": 849422, "ref": "Jacob 3:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 849925, "last_word_id": 849968, "ref": "Jacob 4:8", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 850267, "last_word_id": 850286, "ref": "Jacob 4:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 861576, "last_word_id": 861601, "ref": "Mosiah 2:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 863975, "last_word_id": 863997, "ref": "Mosiah 3:19", "decision": "keep", "pairs": [["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 865187, "last_word_id": 865234, "ref": "Mosiah 4:16", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 866533, "last_word_id": 866557, "ref": "Mosiah 5:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 866638, "last_word_id": 866663, "ref": "Mosiah 5:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 872645, "last_word_id": 872680, "ref": "Mosiah 12:1", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 873176, "last_word_id": 873198, "ref": "Mosiah 12:14", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 875848, "last_word_id": 875891, "ref": "Mosiah 15:15-17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 896673, "last_word_id": 896713, "ref": "Alma 5:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 897592, "last_word_id": 897716, "ref": "Alma 5:28-30", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 897777, "last_word_id": 897840, "ref": "Alma 5:33-35", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 899747, "last_word_id": 899797, "ref": "Alma 7:3", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 900642, "last_word_id": 900677, "ref": "Alma 7:19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 900694, "last_word_id": 900734, "ref": "Alma 7:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 907010, "last_word_id": 907043, "ref": "Alma 12:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 908979, "last_word_id": 909001, "ref": "Alma 13:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 909873, "last_word_id": 909895, "ref": "Alma 13:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 909919, "last_word_id": 909948, "ref": "Alma 13:30", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 935485, "last_word_id": 935520, "ref": "Alma 32:39", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 936445, "last_word_id": 936473, "ref": "Alma 33:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 936952, "last_word_id": 936983, "ref": "Alma 34:10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 937835, "last_word_id": 937858, "ref": "Alma 34:35", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 938041, "last_word_id": 938070, "ref": "Alma 34:39", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 940308, "last_word_id": 940342, "ref": "Alma 37:7", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 940545, "last_word_id": 940566, "ref": "Alma 37:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 941468, "last_word_id": 941508, "ref": "Alma 37:33", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 943489, "last_word_id": 943567, "ref": "Alma 39:17-19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 944924, "last_word_id": 944951, "ref": "Alma 41:4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 945289, "last_word_id": 945323, "ref": "Alma 41:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"], ["B", "B''"], ["B", "B'''"], ["B'", "B''"], ["B'", "B'''"], ["B''", "B'''"]]}
+{"kind": "Parallelism", "first_word_id": 945356, "last_word_id": 945391, "ref": "Alma 41:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 946150, "last_word_id": 946217, "ref": "Alma 42:19-21", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 946218, "last_word_id": 946231, "ref": "Alma 42:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 991848, "last_word_id": 991907, "ref": "Helaman 12:9-12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 992683, "last_word_id": 992716, "ref": "Helaman 13:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 992978, "last_word_id": 993043, "ref": "Helaman 13:14-16", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 993331, "last_word_id": 993382, "ref": "Helaman 13:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 995319, "last_word_id": 995344, "ref": "Helaman 14:30", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1007746, "last_word_id": 1007773, "ref": "3 Nephi 10:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1007884, "last_word_id": 1007940, "ref": "3 Nephi 10:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1008853, "last_word_id": 1008870, "ref": "3 Nephi 11:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1010876, "last_word_id": 1010901, "ref": "3 Nephi 12:44", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1011619, "last_word_id": 1011630, "ref": "3 Nephi 13:26", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1011738, "last_word_id": 1011752, "ref": "3 Nephi 13:31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1013674, "last_word_id": 1013729, "ref": "3 Nephi 16:10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1014638, "last_word_id": 1014683, "ref": "3 Nephi 17:16-17", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1018327, "last_word_id": 1018354, "ref": "3 Nephi 20:25", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1023787, "last_word_id": 1023814, "ref": "3 Nephi 27:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1033755, "last_word_id": 1033830, "ref": "Mormon 7:2-5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1034745, "last_word_id": 1034785, "ref": "Mormon 8:16", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1034898, "last_word_id": 1034921, "ref": "Mormon 8:20", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1035202, "last_word_id": 1035466, "ref": "Mormon 8:26-32", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1036712, "last_word_id": 1036733, "ref": "Mormon 9:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1036843, "last_word_id": 1036884, "ref": "Mormon 9:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1037162, "last_word_id": 1037182, "ref": "Mormon 9:31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1056391, "last_word_id": 1056419, "ref": "Moroni 7:35-36", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1056799, "last_word_id": 1056820, "ref": "Moroni 7:45", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B", "B'''"], ["B'", "B''"], ["B'", "B'''"], ["B''", "B'''"]]}
+{"kind": "Parallelism", "first_word_id": 1057584, "last_word_id": 1057601, "ref": "Moroni 8:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1058190, "last_word_id": 1058212, "ref": "Moroni 9:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1058463, "last_word_id": 1058520, "ref": "Moroni 9:11-14", "decision": "keep", "pairs": [["A", "A'"]]}
+{"kind": "Parallelism", "first_word_id": 1058648, "last_word_id": 1058669, "ref": "Moroni 9:18", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1059607, "last_word_id": 1059645, "ref": "Moroni 10:21", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1060762, "last_word_id": 1060795, "ref": "Doctrine and Covenants 1:20-22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1061351, "last_word_id": 1061392, "ref": "Doctrine and Covenants 3:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1061692, "last_word_id": 1061725, "ref": "Doctrine and Covenants 3:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1064081, "last_word_id": 1064165, "ref": "Doctrine and Covenants 6:29-31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1067633, "last_word_id": 1067642, "ref": "Doctrine and Covenants 11:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1067772, "last_word_id": 1067781, "ref": "Doctrine and Covenants 11:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1070754, "last_word_id": 1070771, "ref": "Doctrine and Covenants 19:15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1071094, "last_word_id": 1071120, "ref": "Doctrine and Covenants 19:28", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1071361, "last_word_id": 1071396, "ref": "Doctrine and Covenants 19:39-41", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1076255, "last_word_id": 1076314, "ref": "Doctrine and Covenants 27:16-18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1079618, "last_word_id": 1079673, "ref": "Doctrine and Covenants 33:8-10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1080073, "last_word_id": 1080091, "ref": "Doctrine and Covenants 34:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1080434, "last_word_id": 1080467, "ref": "Doctrine and Covenants 35:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1080923, "last_word_id": 1080946, "ref": "Doctrine and Covenants 35:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1081409, "last_word_id": 1081454, "ref": "Doctrine and Covenants 38:2-4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1083003, "last_word_id": 1083030, "ref": "Doctrine and Covenants 39:13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1086924, "last_word_id": 1086965, "ref": "Doctrine and Covenants 43:18", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1087779, "last_word_id": 1087792, "ref": "Doctrine and Covenants 45:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1087994, "last_word_id": 1088030, "ref": "Doctrine and Covenants 45:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1089213, "last_word_id": 1089231, "ref": "Doctrine and Covenants 45:52", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1089599, "last_word_id": 1089618, "ref": "Doctrine and Covenants 45:66", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1092284, "last_word_id": 1092365, "ref": "Doctrine and Covenants 50:17-20", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1114447, "last_word_id": 1114465, "ref": "Doctrine and Covenants 82:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1125660, "last_word_id": 1125682, "ref": "Doctrine and Covenants 93:10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1126023, "last_word_id": 1126036, "ref": "Doctrine and Covenants 93:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1128945, "last_word_id": 1128959, "ref": "Doctrine and Covenants 98:1", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1129554, "last_word_id": 1129653, "ref": "Doctrine and Covenants 98:23-26", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1130090, "last_word_id": 1130140, "ref": "Doctrine and Covenants 98:41-43", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1131284, "last_word_id": 1131332, "ref": "Doctrine and Covenants 101:12-15", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1131645, "last_word_id": 1131683, "ref": "Doctrine and Covenants 101:27-29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1132506, "last_word_id": 1132520, "ref": "Doctrine and Covenants 101:57", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1133330, "last_word_id": 1133369, "ref": "Doctrine and Covenants 101:86-88", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1143549, "last_word_id": 1143576, "ref": "Doctrine and Covenants 109:8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A'''''", "A''''''"]]}
+{"kind": "Parallelism", "first_word_id": 1143867, "last_word_id": 1143920, "ref": "Doctrine and Covenants 109:17-19", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1145283, "last_word_id": 1145328, "ref": "Doctrine and Covenants 109:62-64", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1145627, "last_word_id": 1145641, "ref": "Doctrine and Covenants 109:73", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1145657, "last_word_id": 1145677, "ref": "Doctrine and Covenants 109:74", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1147020, "last_word_id": 1147042, "ref": "Doctrine and Covenants 112:13", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1147066, "last_word_id": 1147075, "ref": "Doctrine and Covenants 112:14", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1147373, "last_word_id": 1147391, "ref": "Doctrine and Covenants 112:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1150194, "last_word_id": 1150217, "ref": "Doctrine and Covenants 121:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1150775, "last_word_id": 1150788, "ref": "Doctrine and Covenants 121:38", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1150849, "last_word_id": 1150860, "ref": "Doctrine and Covenants 121:41", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1151686, "last_word_id": 1151909, "ref": "Doctrine and Covenants 123:7-11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1155718, "last_word_id": 1155755, "ref": "Doctrine and Covenants 124:93", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1160852, "last_word_id": 1160878, "ref": "Doctrine and Covenants 128:24", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1170022, "last_word_id": 1170036, "ref": "Doctrine and Covenants 136:37", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1170164, "last_word_id": 1170179, "ref": "Doctrine and Covenants 136:42", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1085214, "last_word_id": 1085238, "ref": "Doctrine and Covenants 42:49-51", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1085464, "last_word_id": 1085487, "ref": "Doctrine and Covenants 42:61", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1086131, "last_word_id": 1086215, "ref": "Doctrine and Covenants 42:84-87", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1086286, "last_word_id": 1086354, "ref": "Doctrine and Covenants 42:90-92", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1095850, "last_word_id": 1095983, "ref": "Doctrine and Covenants 56:16-18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1100973, "last_word_id": 1101015, "ref": "Doctrine and Covenants 63:3-4", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1124901, "last_word_id": 1124907, "ref": "Doctrine and Covenants 90:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1125211, "last_word_id": 1125235, "ref": "Doctrine and Covenants 90:36", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1139657, "last_word_id": 1139675, "ref": "Doctrine and Covenants 105:31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1139852, "last_word_id": 1139898, "ref": "Doctrine and Covenants 105:38-40", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1148807, "last_word_id": 1148849, "ref": "Doctrine and Covenants 117:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1162400, "last_word_id": 1162442, "ref": "Doctrine and Covenants 132:9-11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1104587, "last_word_id": 1104604, "ref": "Doctrine and Covenants 67:1", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1104608, "last_word_id": 1104631, "ref": "Doctrine and Covenants 67:2", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1105108, "last_word_id": 1105138, "ref": "Doctrine and Covenants 68:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1108577, "last_word_id": 1108591, "ref": "Doctrine and Covenants 75:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1113486, "last_word_id": 1113502, "ref": "Doctrine and Covenants 78:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1113983, "last_word_id": 1113997, "ref": "Doctrine and Covenants 81:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1119635, "last_word_id": 1119670, "ref": "Doctrine and Covenants 88:15-17", "decision": "keep", "pairs": [["A", "A'"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1119979, "last_word_id": 1120041, "ref": "Doctrine and Covenants 88:29-31", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1122898, "last_word_id": 1122925, "ref": "Doctrine and Covenants 88:119", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A", "A''''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A'", "A''''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A''", "A''''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A'''", "A''''''"], ["A''''", "A'''''"], ["A''''", "A''''''"], ["A'''''", "A''''''"]]}
+{"kind": "Parallelism", "first_word_id": 1122969, "last_word_id": 1122993, "ref": "Doctrine and Covenants 88:121", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A''", "A'''"], ["A''", "A''''"], ["A'''", "A''''"]]}
+{"kind": "Parallelism", "first_word_id": 1123062, "last_word_id": 1123083, "ref": "Doctrine and Covenants 88:124", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1145932, "last_word_id": 1145972, "ref": "Doctrine and Covenants 110:3", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1145979, "last_word_id": 1146003, "ref": "Doctrine and Covenants 110:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 817526, "last_word_id": 817561, "ref": "2 Nephi 1:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 817958, "last_word_id": 817994, "ref": "2 Nephi 1:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 818618, "last_word_id": 818668, "ref": "2 Nephi 1:26", "decision": "keep", "pairs": [["A", "A'"], ["A", "B"], ["A", "B'"], ["A'", "B"], ["A'", "B'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 821955, "last_word_id": 821979, "ref": "2 Nephi 4:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 925739, "last_word_id": 925798, "ref": "Alma 26:6", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 925945, "last_word_id": 925964, "ref": "Alma 26:11", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 926142, "last_word_id": 926200, "ref": "Alma 26:16", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 926375, "last_word_id": 926415, "ref": "Alma 26:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 930588, "last_word_id": 930626, "ref": "Alma 30:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 981940, "last_word_id": 981967, "ref": "Helaman 5:12", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 982659, "last_word_id": 982686, "ref": "Helaman 5:30", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 985626, "last_word_id": 985654, "ref": "Helaman 7:7", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 986007, "last_word_id": 986035, "ref": "Helaman 7:18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 986325, "last_word_id": 986401, "ref": "Helaman 7:25-27", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 810413, "last_word_id": 810455, "ref": "1 Nephi 17:30", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"], ["B", "B''"], ["B'", "B''"]]}
+{"kind": "Parallelism", "first_word_id": 877928, "last_word_id": 877978, "ref": "Mosiah 18:8-9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 878685, "last_word_id": 878715, "ref": "Mosiah 18:27", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 886338, "last_word_id": 886408, "ref": "Mosiah 26:15-18", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 886520, "last_word_id": 886559, "ref": "Mosiah 26:23", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 888116, "last_word_id": 888135, "ref": "Mosiah 27:24", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 888263, "last_word_id": 888309, "ref": "Mosiah 27:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 888351, "last_word_id": 888396, "ref": "Mosiah 27:31", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 902575, "last_word_id": 902640, "ref": "Alma 9:9-10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 903537, "last_word_id": 903561, "ref": "Alma 9:26", "decision": "keep", "pairs": [["A", "A'"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 904801, "last_word_id": 904859, "ref": "Alma 10:20-21", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 906556, "last_word_id": 906573, "ref": "Alma 11:44", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 890286, "last_word_id": 890325, "ref": "Mosiah 29:22", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1041328, "last_word_id": 1041361, "ref": "Ether 4:9", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 954848, "last_word_id": 954938, "ref": "Alma 48:11-13", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A", "A''''"], ["A", "A'''''"], ["A'", "A''"], ["A'", "A'''"], ["A'", "A''''"], ["A'", "A'''''"], ["A''", "A'''"], ["A''", "A''''"], ["A''", "A'''''"], ["A'''", "A''''"], ["A'''", "A'''''"], ["A''''", "A'''''"]]}
+{"kind": "Parallelism", "first_word_id": 1090497, "last_word_id": 1090521, "ref": "Doctrine and Covenants 46:21-23", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1104010, "last_word_id": 1104028, "ref": "Doctrine and Covenants 65:3", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1104029, "last_word_id": 1104045, "ref": "Doctrine and Covenants 65:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1130344, "last_word_id": 1130356, "ref": "Doctrine and Covenants 99:1", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1130373, "last_word_id": 1130427, "ref": "Doctrine and Covenants 99:2-4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1143282, "last_word_id": 1143298, "ref": "Doctrine and Covenants 108:7", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 868405, "last_word_id": 868438, "ref": "Mosiah 7:29", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 869408, "last_word_id": 869455, "ref": "Mosiah 8:20", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"], ["B", "B'"]]}
+{"kind": "Parallelism", "first_word_id": 1161084, "last_word_id": 1161192, "ref": "Doctrine and Covenants 129:5-8", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1074372, "last_word_id": 1074479, "ref": "Doctrine and Covenants 23:3-5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 1087628, "last_word_id": 1087667, "ref": "Doctrine and Covenants 44:5", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 1091732, "last_word_id": 1091767, "ref": "Doctrine and Covenants 49:23", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 923583, "last_word_id": 923734, "ref": "Alma 24:7-10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 857268, "last_word_id": 857290, "ref": "Jarom 1:3", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A", "A'''"], ["A'", "A''"], ["A'", "A'''"], ["A''", "A'''"]]}
+{"kind": "Parallelism", "first_word_id": 989317, "last_word_id": 989339, "ref": "Helaman 10:4", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}
+{"kind": "Parallelism", "first_word_id": 989484, "last_word_id": 989538, "ref": "Helaman 10:8-10", "decision": "keep", "pairs": [["A", "A'"], ["A", "A''"], ["A'", "A''"]]}

@@ -1,0 +1,724 @@
+{"kind": "Parallelism", "first_word_id": 1506218, "last_word_id": 1506238, "ref": "Psalms 1:1", "pairs": [["a", "c"], ["a", "d"], ["b", "c"], ["b", "d"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1506254, "last_word_id": 1506278, "ref": "Psalms 1:3", "pairs": [["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1506378, "last_word_id": 1506392, "ref": "Psalms 2:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1506432, "last_word_id": 1506449, "ref": "Psalms 2:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1506508, "last_word_id": 1506517, "ref": "Psalms 3:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1506528, "last_word_id": 1506544, "ref": "Psalms 3:8", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1506563, "last_word_id": 1506582, "ref": "Psalms 4:2", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1506583, "last_word_id": 1506596, "ref": "Psalms 4:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1506660, "last_word_id": 1506674, "ref": "Psalms 4:9", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1506781, "last_word_id": 1506797, "ref": "Psalms 5:10", "pairs": [["a", "b"], ["c", "d"], ["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1506798, "last_word_id": 1506814, "ref": "Psalms 5:11", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1506815, "last_word_id": 1506834, "ref": "Psalms 5:12", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1506835, "last_word_id": 1506845, "ref": "Psalms 5:13", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1506871, "last_word_id": 1506883, "ref": "Psalms 6:3", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507035, "last_word_id": 1507055, "ref": "Psalms 7:6", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507056, "last_word_id": 1507073, "ref": "Psalms 7:7", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507087, "last_word_id": 1507101, "ref": "Psalms 7:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1507225, "last_word_id": 1507239, "ref": "Psalms 8:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507376, "last_word_id": 1507388, "ref": "Psalms 9:7", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507469, "last_word_id": 1507481, "ref": "Psalms 9:15", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507494, "last_word_id": 1507505, "ref": "Psalms 9:17", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1507537, "last_word_id": 1507547, "ref": "Psalms 9:21", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507592, "last_word_id": 1507609, "ref": "Psalms 10:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507638, "last_word_id": 1507651, "ref": "Psalms 10:8", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507652, "last_word_id": 1507672, "ref": "Psalms 10:9", "pairs": [["a", "c"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507716, "last_word_id": 1507735, "ref": "Psalms 10:14", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1507766, "last_word_id": 1507779, "ref": "Psalms 10:18", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507797, "last_word_id": 1507815, "ref": "Psalms 11:2", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507824, "last_word_id": 1507842, "ref": "Psalms 11:4", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1507843, "last_word_id": 1507853, "ref": "Psalms 11:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1507854, "last_word_id": 1507866, "ref": "Psalms 11:6", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507897, "last_word_id": 1507909, "ref": "Psalms 12:3", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507918, "last_word_id": 1507931, "ref": "Psalms 12:5", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507932, "last_word_id": 1507947, "ref": "Psalms 12:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1507948, "last_word_id": 1507960, "ref": "Psalms 12:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508003, "last_word_id": 1508021, "ref": "Psalms 13:3", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508048, "last_word_id": 1508066, "ref": "Psalms 13:6", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1508085, "last_word_id": 1508099, "ref": "Psalms 14:2", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508100, "last_word_id": 1508110, "ref": "Psalms 14:3", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508111, "last_word_id": 1508124, "ref": "Psalms 14:4", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508140, "last_word_id": 1508155, "ref": "Psalms 14:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1508200, "last_word_id": 1508215, "ref": "Psalms 15:4", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1508216, "last_word_id": 1508233, "ref": "Psalms 15:5", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1508269, "last_word_id": 1508288, "ref": "Psalms 16:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508365, "last_word_id": 1508378, "ref": "Psalms 16:11", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508382, "last_word_id": 1508397, "ref": "Psalms 17:1", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1508409, "last_word_id": 1508422, "ref": "Psalms 17:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1508545, "last_word_id": 1508573, "ref": "Psalms 17:14", "pairs": [["a", "b"], ["c", "d"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1508625, "last_word_id": 1508648, "ref": "Psalms 18:3", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508674, "last_word_id": 1508701, "ref": "Psalms 18:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508702, "last_word_id": 1508717, "ref": "Psalms 18:8", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1508766, "last_word_id": 1508776, "ref": "Psalms 18:13", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1508777, "last_word_id": 1508791, "ref": "Psalms 18:14", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1508805, "last_word_id": 1508821, "ref": "Psalms 18:16", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1508979, "last_word_id": 1508994, "ref": "Psalms 18:31", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1509043, "last_word_id": 1509059, "ref": "Psalms 18:36", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509139, "last_word_id": 1509153, "ref": "Psalms 18:44", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509196, "last_word_id": 1509211, "ref": "Psalms 18:49", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509225, "last_word_id": 1509242, "ref": "Psalms 18:51", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509281, "last_word_id": 1509300, "ref": "Psalms 19:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1509353, "last_word_id": 1509363, "ref": "Psalms 19:10", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1509397, "last_word_id": 1509413, "ref": "Psalms 19:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509414, "last_word_id": 1509432, "ref": "Psalms 19:15", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1509496, "last_word_id": 1509513, "ref": "Psalms 20:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509655, "last_word_id": 1509673, "ref": "Psalms 21:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509865, "last_word_id": 1509884, "ref": "Psalms 22:15", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1509885, "last_word_id": 1509902, "ref": "Psalms 22:16", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1509903, "last_word_id": 1509918, "ref": "Psalms 22:17", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1509984, "last_word_id": 1509999, "ref": "Psalms 22:24", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510000, "last_word_id": 1510021, "ref": "Psalms 22:25", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510022, "last_word_id": 1510035, "ref": "Psalms 22:26", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510036, "last_word_id": 1510048, "ref": "Psalms 22:27", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1510075, "last_word_id": 1510092, "ref": "Psalms 22:30", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510142, "last_word_id": 1510162, "ref": "Psalms 23:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510180, "last_word_id": 1510197, "ref": "Psalms 23:6", "pairs": [["a", "c"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510236, "last_word_id": 1510253, "ref": "Psalms 24:4", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510274, "last_word_id": 1510286, "ref": "Psalms 24:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1510287, "last_word_id": 1510298, "ref": "Psalms 24:8", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510299, "last_word_id": 1510311, "ref": "Psalms 24:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1510312, "last_word_id": 1510324, "ref": "Psalms 24:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510365, "last_word_id": 1510383, "ref": "Psalms 25:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510395, "last_word_id": 1510413, "ref": "Psalms 25:7", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510727, "last_word_id": 1510747, "ref": "Psalms 27:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1510748, "last_word_id": 1510765, "ref": "Psalms 27:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1510766, "last_word_id": 1510793, "ref": "Psalms 27:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510794, "last_word_id": 1510812, "ref": "Psalms 27:5", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510813, "last_word_id": 1510834, "ref": "Psalms 27:6", "pairs": [["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1510859, "last_word_id": 1510883, "ref": "Psalms 27:9", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510896, "last_word_id": 1510909, "ref": "Psalms 27:11", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1510936, "last_word_id": 1510947, "ref": "Psalms 27:14", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510950, "last_word_id": 1510968, "ref": "Psalms 28:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1510987, "last_word_id": 1511005, "ref": "Psalms 28:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511006, "last_word_id": 1511028, "ref": "Psalms 28:4", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511029, "last_word_id": 1511045, "ref": "Psalms 28:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1511053, "last_word_id": 1511075, "ref": "Psalms 28:7", "pairs": [["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1511131, "last_word_id": 1511143, "ref": "Psalms 29:3", "pairs": [["a", "c"], ["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1511189, "last_word_id": 1511203, "ref": "Psalms 29:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1511333, "last_word_id": 1511350, "ref": "Psalms 30:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511361, "last_word_id": 1511374, "ref": "Psalms 30:12", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511408, "last_word_id": 1511427, "ref": "Psalms 31:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511478, "last_word_id": 1511493, "ref": "Psalms 31:8", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511524, "last_word_id": 1511544, "ref": "Psalms 31:11", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1511545, "last_word_id": 1511568, "ref": "Psalms 31:12", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1511578, "last_word_id": 1511595, "ref": "Psalms 31:14", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1511656, "last_word_id": 1511673, "ref": "Psalms 31:20", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1511690, "last_word_id": 1511700, "ref": "Psalms 31:22", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1511701, "last_word_id": 1511721, "ref": "Psalms 31:23", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511722, "last_word_id": 1511736, "ref": "Psalms 31:24", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511755, "last_word_id": 1511768, "ref": "Psalms 32:2", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511780, "last_word_id": 1511795, "ref": "Psalms 32:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511796, "last_word_id": 1511818, "ref": "Psalms 32:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1511819, "last_word_id": 1511837, "ref": "Psalms 32:6", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1511838, "last_word_id": 1511850, "ref": "Psalms 32:7", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1511865, "last_word_id": 1511884, "ref": "Psalms 32:9", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1511885, "last_word_id": 1511897, "ref": "Psalms 32:10", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512438, "last_word_id": 1512450, "ref": "Psalms 35:4", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512485, "last_word_id": 1512501, "ref": "Psalms 35:8", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512512, "last_word_id": 1512532, "ref": "Psalms 35:10", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1512551, "last_word_id": 1512571, "ref": "Psalms 35:13", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1512584, "last_word_id": 1512601, "ref": "Psalms 35:15", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512611, "last_word_id": 1512626, "ref": "Psalms 35:17", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512649, "last_word_id": 1512660, "ref": "Psalms 35:20", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512661, "last_word_id": 1512672, "ref": "Psalms 35:21", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1512724, "last_word_id": 1512738, "ref": "Psalms 35:26", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512739, "last_word_id": 1512754, "ref": "Psalms 35:27", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1512814, "last_word_id": 1512826, "ref": "Psalms 36:5", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1512851, "last_word_id": 1512864, "ref": "Psalms 36:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1512990, "last_word_id": 1513006, "ref": "Psalms 37:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513073, "last_word_id": 1513088, "ref": "Psalms 37:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513136, "last_word_id": 1513149, "ref": "Psalms 37:20", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513187, "last_word_id": 1513200, "ref": "Psalms 37:25", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513222, "last_word_id": 1513238, "ref": "Psalms 37:28", "pairs": [["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1513291, "last_word_id": 1513307, "ref": "Psalms 37:34", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1513355, "last_word_id": 1513372, "ref": "Psalms 37:40", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1513517, "last_word_id": 1513533, "ref": "Psalms 38:13", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513651, "last_word_id": 1513670, "ref": "Psalms 39:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1513695, "last_word_id": 1513709, "ref": "Psalms 39:5", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513710, "last_word_id": 1513728, "ref": "Psalms 39:6", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513787, "last_word_id": 1513804, "ref": "Psalms 39:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1513805, "last_word_id": 1513829, "ref": "Psalms 39:13", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1513877, "last_word_id": 1513895, "ref": "Psalms 40:4", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1513912, "last_word_id": 1513934, "ref": "Psalms 40:6", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1513935, "last_word_id": 1513948, "ref": "Psalms 40:7", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513973, "last_word_id": 1513985, "ref": "Psalms 40:10", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1513986, "last_word_id": 1514009, "ref": "Psalms 40:11", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514026, "last_word_id": 1514052, "ref": "Psalms 40:13", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1514064, "last_word_id": 1514080, "ref": "Psalms 40:15", "pairs": [["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1514092, "last_word_id": 1514106, "ref": "Psalms 40:17", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514107, "last_word_id": 1514126, "ref": "Psalms 40:18", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1514200, "last_word_id": 1514217, "ref": "Psalms 41:7", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514334, "last_word_id": 1514347, "ref": "Psalms 42:3", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514367, "last_word_id": 1514391, "ref": "Psalms 42:5", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514392, "last_word_id": 1514409, "ref": "Psalms 42:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514410, "last_word_id": 1514428, "ref": "Psalms 42:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514446, "last_word_id": 1514463, "ref": "Psalms 42:9", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514500, "last_word_id": 1514521, "ref": "Psalms 42:12", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514522, "last_word_id": 1514540, "ref": "Psalms 43:1", "pairs": [["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514576, "last_word_id": 1514593, "ref": "Psalms 43:4", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514594, "last_word_id": 1514615, "ref": "Psalms 43:5", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1514654, "last_word_id": 1514680, "ref": "Psalms 44:4", "pairs": [["a", "c"], ["c", "d"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1514956, "last_word_id": 1514971, "ref": "Psalms 45:2", "pairs": [["a", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1514972, "last_word_id": 1514987, "ref": "Psalms 45:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1515016, "last_word_id": 1515027, "ref": "Psalms 45:6", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515039, "last_word_id": 1515055, "ref": "Psalms 45:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1515132, "last_word_id": 1515145, "ref": "Psalms 45:15", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515281, "last_word_id": 1515296, "ref": "Psalms 46:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515404, "last_word_id": 1515416, "ref": "Psalms 47:10", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1515434, "last_word_id": 1515446, "ref": "Psalms 48:3", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515481, "last_word_id": 1515499, "ref": "Psalms 48:9", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515553, "last_word_id": 1515565, "ref": "Psalms 48:15", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515662, "last_word_id": 1515676, "ref": "Psalms 49:11", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1515677, "last_word_id": 1515694, "ref": "Psalms 49:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1515720, "last_word_id": 1515746, "ref": "Psalms 49:15", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515840, "last_word_id": 1515855, "ref": "Psalms 50:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1515890, "last_word_id": 1515904, "ref": "Psalms 50:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1515990, "last_word_id": 1516009, "ref": "Psalms 50:16", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1516053, "last_word_id": 1516068, "ref": "Psalms 50:21", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1516079, "last_word_id": 1516090, "ref": "Psalms 50:23", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1516146, "last_word_id": 1516167, "ref": "Psalms 51:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1516304, "last_word_id": 1516314, "ref": "Psalms 51:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1516397, "last_word_id": 1516416, "ref": "Psalms 52:7", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1516426, "last_word_id": 1516443, "ref": "Psalms 52:9", "pairs": [["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1516496, "last_word_id": 1516510, "ref": "Psalms 53:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1516511, "last_word_id": 1516521, "ref": "Psalms 53:4", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1516522, "last_word_id": 1516534, "ref": "Psalms 53:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1516535, "last_word_id": 1516551, "ref": "Psalms 53:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1516552, "last_word_id": 1516567, "ref": "Psalms 53:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1516612, "last_word_id": 1516628, "ref": "Psalms 54:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1516818, "last_word_id": 1516834, "ref": "Psalms 55:13", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1516856, "last_word_id": 1516870, "ref": "Psalms 55:16", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1516906, "last_word_id": 1516923, "ref": "Psalms 55:20", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1516966, "last_word_id": 1516986, "ref": "Psalms 55:24", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517035, "last_word_id": 1517049, "ref": "Psalms 56:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1517085, "last_word_id": 1517100, "ref": "Psalms 56:9", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517101, "last_word_id": 1517114, "ref": "Psalms 56:10", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1517142, "last_word_id": 1517162, "ref": "Psalms 56:14", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1517180, "last_word_id": 1517199, "ref": "Psalms 57:2", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517210, "last_word_id": 1517226, "ref": "Psalms 57:4", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517227, "last_word_id": 1517245, "ref": "Psalms 57:5", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517258, "last_word_id": 1517275, "ref": "Psalms 57:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1517506, "last_word_id": 1517523, "ref": "Psalms 59:4", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1517537, "last_word_id": 1517556, "ref": "Psalms 59:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517611, "last_word_id": 1517629, "ref": "Psalms 59:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1517630, "last_word_id": 1517647, "ref": "Psalms 59:13", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517648, "last_word_id": 1517666, "ref": "Psalms 59:14", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1517689, "last_word_id": 1517712, "ref": "Psalms 59:17", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1517809, "last_word_id": 1517820, "ref": "Psalms 60:8", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517821, "last_word_id": 1517835, "ref": "Psalms 60:9", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517836, "last_word_id": 1517848, "ref": "Psalms 60:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1517908, "last_word_id": 1517925, "ref": "Psalms 61:3", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1518024, "last_word_id": 1518037, "ref": "Psalms 62:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1518038, "last_word_id": 1518056, "ref": "Psalms 62:5", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1518093, "last_word_id": 1518110, "ref": "Psalms 62:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1518111, "last_word_id": 1518125, "ref": "Psalms 62:10", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1518126, "last_word_id": 1518140, "ref": "Psalms 62:11", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1518174, "last_word_id": 1518196, "ref": "Psalms 63:2", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1518298, "last_word_id": 1518314, "ref": "Psalms 63:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1518367, "last_word_id": 1518380, "ref": "Psalms 64:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1518392, "last_word_id": 1518400, "ref": "Psalms 64:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1518474, "last_word_id": 1518488, "ref": "Psalms 65:5", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1518533, "last_word_id": 1518552, "ref": "Psalms 65:10", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1518653, "last_word_id": 1518666, "ref": "Psalms 66:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1518667, "last_word_id": 1518684, "ref": "Psalms 66:7", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1518728, "last_word_id": 1518746, "ref": "Psalms 66:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1518876, "last_word_id": 1518891, "ref": "Psalms 67:5", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1518939, "last_word_id": 1518953, "ref": "Psalms 68:3", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1518965, "last_word_id": 1518986, "ref": "Psalms 68:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1518997, "last_word_id": 1519010, "ref": "Psalms 68:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519025, "last_word_id": 1519039, "ref": "Psalms 68:9", "pairs": [["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1519083, "last_word_id": 1519099, "ref": "Psalms 68:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519117, "last_word_id": 1519134, "ref": "Psalms 68:17", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519148, "last_word_id": 1519165, "ref": "Psalms 68:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519166, "last_word_id": 1519178, "ref": "Psalms 68:20", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519179, "last_word_id": 1519194, "ref": "Psalms 68:21", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519195, "last_word_id": 1519206, "ref": "Psalms 68:22", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519217, "last_word_id": 1519229, "ref": "Psalms 68:24", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1519258, "last_word_id": 1519270, "ref": "Psalms 68:28", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519271, "last_word_id": 1519282, "ref": "Psalms 68:29", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519293, "last_word_id": 1519308, "ref": "Psalms 68:31", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519343, "last_word_id": 1519356, "ref": "Psalms 68:35", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519357, "last_word_id": 1519373, "ref": "Psalms 68:36", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519404, "last_word_id": 1519417, "ref": "Psalms 69:4", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519418, "last_word_id": 1519436, "ref": "Psalms 69:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519450, "last_word_id": 1519467, "ref": "Psalms 69:7", "pairs": [["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1519535, "last_word_id": 1519554, "ref": "Psalms 69:14", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519644, "last_word_id": 1519663, "ref": "Psalms 69:21", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519813, "last_word_id": 1519826, "ref": "Psalms 69:36", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1519857, "last_word_id": 1519869, "ref": "Psalms 70:3", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519879, "last_word_id": 1519894, "ref": "Psalms 70:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519895, "last_word_id": 1519913, "ref": "Psalms 70:6", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519938, "last_word_id": 1519957, "ref": "Psalms 71:3", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1519982, "last_word_id": 1519998, "ref": "Psalms 71:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1520068, "last_word_id": 1520079, "ref": "Psalms 71:13", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1520128, "last_word_id": 1520148, "ref": "Psalms 71:18", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1520149, "last_word_id": 1520161, "ref": "Psalms 71:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1520162, "last_word_id": 1520179, "ref": "Psalms 71:20", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1520187, "last_word_id": 1520204, "ref": "Psalms 71:22", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1520386, "last_word_id": 1520404, "ref": "Psalms 72:15", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1520405, "last_word_id": 1520427, "ref": "Psalms 72:16", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1520428, "last_word_id": 1520446, "ref": "Psalms 72:17", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1520457, "last_word_id": 1520474, "ref": "Psalms 72:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1520761, "last_word_id": 1520779, "ref": "Psalms 73:28", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1520796, "last_word_id": 1520810, "ref": "Psalms 74:2", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1520883, "last_word_id": 1520896, "ref": "Psalms 74:9", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521067, "last_word_id": 1521078, "ref": "Psalms 75:2", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521140, "last_word_id": 1521161, "ref": "Psalms 75:9", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1521290, "last_word_id": 1521304, "ref": "Psalms 76:12", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521334, "last_word_id": 1521351, "ref": "Psalms 77:3", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521376, "last_word_id": 1521389, "ref": "Psalms 77:7", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521485, "last_word_id": 1521495, "ref": "Psalms 77:17", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521496, "last_word_id": 1521505, "ref": "Psalms 77:18", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521506, "last_word_id": 1521519, "ref": "Psalms 77:19", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521583, "last_word_id": 1521601, "ref": "Psalms 78:4", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1521602, "last_word_id": 1521622, "ref": "Psalms 78:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1521623, "last_word_id": 1521634, "ref": "Psalms 78:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1521635, "last_word_id": 1521649, "ref": "Psalms 78:7", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521650, "last_word_id": 1521671, "ref": "Psalms 78:8", "pairs": [["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1521782, "last_word_id": 1521795, "ref": "Psalms 78:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1521796, "last_word_id": 1521815, "ref": "Psalms 78:20", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1521816, "last_word_id": 1521832, "ref": "Psalms 78:21", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1521933, "last_word_id": 1521947, "ref": "Psalms 78:31", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522020, "last_word_id": 1522039, "ref": "Psalms 78:38", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522154, "last_word_id": 1522167, "ref": "Psalms 78:49", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522168, "last_word_id": 1522185, "ref": "Psalms 78:50", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522240, "last_word_id": 1522258, "ref": "Psalms 78:55", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522423, "last_word_id": 1522438, "ref": "Psalms 78:71", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522456, "last_word_id": 1522471, "ref": "Psalms 79:1", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522472, "last_word_id": 1522488, "ref": "Psalms 79:2", "pairs": [["a", "c"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522522, "last_word_id": 1522540, "ref": "Psalms 79:6", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522550, "last_word_id": 1522563, "ref": "Psalms 79:8", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1522585, "last_word_id": 1522605, "ref": "Psalms 79:10", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1522606, "last_word_id": 1522618, "ref": "Psalms 79:11", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522635, "last_word_id": 1522654, "ref": "Psalms 79:13", "pairs": [["b", "d"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522664, "last_word_id": 1522677, "ref": "Psalms 80:2", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522678, "last_word_id": 1522697, "ref": "Psalms 80:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522809, "last_word_id": 1522821, "ref": "Psalms 80:15", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522926, "last_word_id": 1522940, "ref": "Psalms 81:6", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1522951, "last_word_id": 1522968, "ref": "Psalms 81:8", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1522993, "last_word_id": 1523008, "ref": "Psalms 81:11", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1523117, "last_word_id": 1523128, "ref": "Psalms 82:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1523376, "last_word_id": 1523393, "ref": "Psalms 84:3", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1523394, "last_word_id": 1523416, "ref": "Psalms 84:4", "pairs": [["a", "b"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1523479, "last_word_id": 1523497, "ref": "Psalms 84:11", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1523498, "last_word_id": 1523516, "ref": "Psalms 84:12", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1523603, "last_word_id": 1523623, "ref": "Psalms 85:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1523690, "last_word_id": 1523706, "ref": "Psalms 86:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1523778, "last_word_id": 1523794, "ref": "Psalms 86:9", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1523851, "last_word_id": 1523868, "ref": "Psalms 86:14", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1523884, "last_word_id": 1523903, "ref": "Psalms 86:16", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1523904, "last_word_id": 1523923, "ref": "Psalms 86:17", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1523950, "last_word_id": 1523965, "ref": "Psalms 87:4", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1524060, "last_word_id": 1524078, "ref": "Psalms 88:6", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1524099, "last_word_id": 1524112, "ref": "Psalms 88:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1524113, "last_word_id": 1524128, "ref": "Psalms 88:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1524323, "last_word_id": 1524335, "ref": "Psalms 89:9", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1524460, "last_word_id": 1524476, "ref": "Psalms 89:20", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1524858, "last_word_id": 1524873, "ref": "Psalms 90:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1524883, "last_word_id": 1524898, "ref": "Psalms 90:4", "pairs": [["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1524957, "last_word_id": 1524981, "ref": "Psalms 90:10", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1525049, "last_word_id": 1525071, "ref": "Psalms 90:17", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1525325, "last_word_id": 1525339, "ref": "Psalms 92:8", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1525346, "last_word_id": 1525359, "ref": "Psalms 92:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1525370, "last_word_id": 1525385, "ref": "Psalms 92:12", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1525428, "last_word_id": 1525440, "ref": "Psalms 93:1", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1525449, "last_word_id": 1525459, "ref": "Psalms 93:3", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1525785, "last_word_id": 1525804, "ref": "Psalms 95:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1525828, "last_word_id": 1525844, "ref": "Psalms 95:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1525962, "last_word_id": 1525976, "ref": "Psalms 96:10", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526002, "last_word_id": 1526021, "ref": "Psalms 96:13", "pairs": [["a", "b"], ["c", "d"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1526060, "last_word_id": 1526075, "ref": "Psalms 97:5", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526088, "last_word_id": 1526101, "ref": "Psalms 97:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1526102, "last_word_id": 1526113, "ref": "Psalms 97:8", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1526127, "last_word_id": 1526139, "ref": "Psalms 97:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526161, "last_word_id": 1526177, "ref": "Psalms 98:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526189, "last_word_id": 1526205, "ref": "Psalms 98:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1526255, "last_word_id": 1526271, "ref": "Psalms 98:9", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526300, "last_word_id": 1526314, "ref": "Psalms 99:4", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526327, "last_word_id": 1526345, "ref": "Psalms 99:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1526360, "last_word_id": 1526375, "ref": "Psalms 99:8", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526376, "last_word_id": 1526390, "ref": "Psalms 99:9", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526411, "last_word_id": 1526428, "ref": "Psalms 100:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526469, "last_word_id": 1526485, "ref": "Psalms 101:2", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526486, "last_word_id": 1526500, "ref": "Psalms 101:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1526509, "last_word_id": 1526526, "ref": "Psalms 101:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1526527, "last_word_id": 1526542, "ref": "Psalms 101:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1526543, "last_word_id": 1526558, "ref": "Psalms 101:7", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1526597, "last_word_id": 1526618, "ref": "Psalms 102:3", "pairs": [["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1526875, "last_word_id": 1526893, "ref": "Psalms 102:27", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1527140, "last_word_id": 1527154, "ref": "Psalms 103:20", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1527180, "last_word_id": 1527193, "ref": "Psalms 104:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1527204, "last_word_id": 1527220, "ref": "Psalms 104:3", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1527324, "last_word_id": 1527340, "ref": "Psalms 104:14", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1527341, "last_word_id": 1527355, "ref": "Psalms 104:15", "pairs": [["a", "c"], ["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1527437, "last_word_id": 1527451, "ref": "Psalms 104:24", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1527452, "last_word_id": 1527467, "ref": "Psalms 104:25", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1527503, "last_word_id": 1527518, "ref": "Psalms 104:29", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1527573, "last_word_id": 1527589, "ref": "Psalms 104:35", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1528097, "last_word_id": 1528113, "ref": "Psalms 106:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1528120, "last_word_id": 1528140, "ref": "Psalms 106:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1528294, "last_word_id": 1528315, "ref": "Psalms 106:23", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1528468, "last_word_id": 1528489, "ref": "Psalms 106:38", "pairs": [["a", "b"], ["a", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1528534, "last_word_id": 1528548, "ref": "Psalms 106:43", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1528585, "last_word_id": 1528606, "ref": "Psalms 106:47", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1528607, "last_word_id": 1528625, "ref": "Psalms 106:48", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1528645, "last_word_id": 1528659, "ref": "Psalms 107:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529143, "last_word_id": 1529154, "ref": "Psalms 108:8", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529155, "last_word_id": 1529168, "ref": "Psalms 108:9", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529169, "last_word_id": 1529180, "ref": "Psalms 108:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529234, "last_word_id": 1529247, "ref": "Psalms 109:2", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529384, "last_word_id": 1529400, "ref": "Psalms 109:16", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529416, "last_word_id": 1529436, "ref": "Psalms 109:18", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529463, "last_word_id": 1529479, "ref": "Psalms 109:21", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529623, "last_word_id": 1529640, "ref": "Psalms 110:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529641, "last_word_id": 1529653, "ref": "Psalms 110:4", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1529784, "last_word_id": 1529798, "ref": "Psalms 111:10", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1529888, "last_word_id": 1529902, "ref": "Psalms 112:9", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1529903, "last_word_id": 1529914, "ref": "Psalms 112:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1530078, "last_word_id": 1530096, "ref": "Psalms 115:1", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1530149, "last_word_id": 1530164, "ref": "Psalms 115:7", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1530207, "last_word_id": 1530218, "ref": "Psalms 115:12", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1530349, "last_word_id": 1530364, "ref": "Psalms 116:8", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1530427, "last_word_id": 1530442, "ref": "Psalms 116:16", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1530757, "last_word_id": 1530770, "ref": "Psalms 118:27", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1532725, "last_word_id": 1532738, "ref": "Psalms 122:4", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1532799, "last_word_id": 1532824, "ref": "Psalms 123:2", "pairs": [["a", "b"], ["b", "c"], ["a", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1532834, "last_word_id": 1532847, "ref": "Psalms 123:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1532951, "last_word_id": 1532966, "ref": "Psalms 125:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1532967, "last_word_id": 1532986, "ref": "Psalms 125:3", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1532999, "last_word_id": 1533013, "ref": "Psalms 125:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533026, "last_word_id": 1533045, "ref": "Psalms 126:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1533072, "last_word_id": 1533086, "ref": "Psalms 126:6", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533092, "last_word_id": 1533110, "ref": "Psalms 127:1", "pairs": [["a", "c"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533111, "last_word_id": 1533127, "ref": "Psalms 127:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1533145, "last_word_id": 1533163, "ref": "Psalms 127:5", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1533187, "last_word_id": 1533204, "ref": "Psalms 128:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1533212, "last_word_id": 1533225, "ref": "Psalms 128:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1533320, "last_word_id": 1533334, "ref": "Psalms 130:2", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533374, "last_word_id": 1533387, "ref": "Psalms 130:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533422, "last_word_id": 1533440, "ref": "Psalms 131:2", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533548, "last_word_id": 1533565, "ref": "Psalms 132:11", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1533566, "last_word_id": 1533587, "ref": "Psalms 132:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1533662, "last_word_id": 1533681, "ref": "Psalms 133:2", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533682, "last_word_id": 1533700, "ref": "Psalms 133:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533788, "last_word_id": 1533805, "ref": "Psalms 135:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533806, "last_word_id": 1533821, "ref": "Psalms 135:7", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1533853, "last_word_id": 1533868, "ref": "Psalms 135:11", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1534261, "last_word_id": 1534272, "ref": "Psalms 137:1", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1534281, "last_word_id": 1534298, "ref": "Psalms 137:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1534314, "last_word_id": 1534332, "ref": "Psalms 137:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1534333, "last_word_id": 1534349, "ref": "Psalms 137:7", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1534350, "last_word_id": 1534365, "ref": "Psalms 137:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1534389, "last_word_id": 1534413, "ref": "Psalms 138:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1534457, "last_word_id": 1534475, "ref": "Psalms 138:7", "pairs": [["a", "d"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1534476, "last_word_id": 1534489, "ref": "Psalms 138:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1534606, "last_word_id": 1534623, "ref": "Psalms 139:12", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1534635, "last_word_id": 1534648, "ref": "Psalms 139:14", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1534649, "last_word_id": 1534663, "ref": "Psalms 139:15", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1534664, "last_word_id": 1534683, "ref": "Psalms 139:16", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1534801, "last_word_id": 1534811, "ref": "Psalms 140:4", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1534812, "last_word_id": 1534828, "ref": "Psalms 140:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1534829, "last_word_id": 1534845, "ref": "Psalms 140:6", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1534890, "last_word_id": 1534902, "ref": "Psalms 140:11", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1534903, "last_word_id": 1534916, "ref": "Psalms 140:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1534980, "last_word_id": 1535001, "ref": "Psalms 141:4", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535002, "last_word_id": 1535022, "ref": "Psalms 141:5", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1535116, "last_word_id": 1535134, "ref": "Psalms 142:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535135, "last_word_id": 1535152, "ref": "Psalms 142:5", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535153, "last_word_id": 1535166, "ref": "Psalms 142:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535167, "last_word_id": 1535183, "ref": "Psalms 142:7", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535184, "last_word_id": 1535202, "ref": "Psalms 142:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1535239, "last_word_id": 1535256, "ref": "Psalms 143:3", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535296, "last_word_id": 1535313, "ref": "Psalms 143:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1535314, "last_word_id": 1535335, "ref": "Psalms 143:8", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535345, "last_word_id": 1535362, "ref": "Psalms 143:10", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535377, "last_word_id": 1535393, "ref": "Psalms 143:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1535396, "last_word_id": 1535411, "ref": "Psalms 144:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535412, "last_word_id": 1535435, "ref": "Psalms 144:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1535480, "last_word_id": 1535496, "ref": "Psalms 144:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535534, "last_word_id": 1535552, "ref": "Psalms 144:11", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535553, "last_word_id": 1535568, "ref": "Psalms 144:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1535584, "last_word_id": 1535597, "ref": "Psalms 144:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535844, "last_word_id": 1535859, "ref": "Psalms 145:21", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1535937, "last_word_id": 1535949, "ref": "Psalms 146:7", "pairs": [["a", "b"], ["a", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1535950, "last_word_id": 1535958, "ref": "Psalms 146:8", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1535959, "last_word_id": 1535970, "ref": "Psalms 146:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1536050, "last_word_id": 1536064, "ref": "Psalms 147:8", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1536318, "last_word_id": 1536334, "ref": "Psalms 148:13", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1536335, "last_word_id": 1536353, "ref": "Psalms 148:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1536439, "last_word_id": 1536452, "ref": "Psalms 149:9", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1494494, "last_word_id": 1494511, "ref": "Job 3:4", "pairs": [["a", "b"], ["a", "c"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1494525, "last_word_id": 1494541, "ref": "Job 3:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1494562, "last_word_id": 1494576, "ref": "Job 3:9", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1494908, "last_word_id": 1494922, "ref": "Job 4:16", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1495028, "last_word_id": 1495043, "ref": "Job 5:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1495322, "last_word_id": 1495336, "ref": "Job 6:4", "pairs": [["a", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1495392, "last_word_id": 1495407, "ref": "Job 6:10", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1495733, "last_word_id": 1495748, "ref": "Job 7:11", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1495837, "last_word_id": 1495858, "ref": "Job 7:20", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1495859, "last_word_id": 1495881, "ref": "Job 7:21", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1495930, "last_word_id": 1495944, "ref": "Job 8:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1496483, "last_word_id": 1496498, "ref": "Job 10:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1496511, "last_word_id": 1496526, "ref": "Job 10:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1496656, "last_word_id": 1496672, "ref": "Job 10:15", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1496685, "last_word_id": 1496700, "ref": "Job 10:17", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1496966, "last_word_id": 1496979, "ref": "Job 11:20", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1496994, "last_word_id": 1497010, "ref": "Job 12:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1497011, "last_word_id": 1497024, "ref": "Job 12:4", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1497036, "last_word_id": 1497051, "ref": "Job 12:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1497639, "last_word_id": 1497654, "ref": "Job 14:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1497698, "last_word_id": 1497714, "ref": "Job 14:12", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1497715, "last_word_id": 1497733, "ref": "Job 14:13", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1497734, "last_word_id": 1497747, "ref": "Job 14:14", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1498134, "last_word_id": 1498146, "ref": "Job 15:28", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1498253, "last_word_id": 1498276, "ref": "Job 16:4", "pairs": [["a", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1498323, "last_word_id": 1498341, "ref": "Job 16:9", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1498342, "last_word_id": 1498357, "ref": "Job 16:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1498369, "last_word_id": 1498388, "ref": "Job 16:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1498389, "last_word_id": 1498405, "ref": "Job 16:13", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1498706, "last_word_id": 1498722, "ref": "Job 18:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1499024, "last_word_id": 1499039, "ref": "Job 19:12", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1499215, "last_word_id": 1499232, "ref": "Job 19:27", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1499245, "last_word_id": 1499259, "ref": "Job 19:29", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1499542, "last_word_id": 1499557, "ref": "Job 20:26", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1499759, "last_word_id": 1499774, "ref": "Job 21:17", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1499935, "last_word_id": 1499951, "ref": "Job 21:33", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1500493, "last_word_id": 1500512, "ref": "Job 24:5", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1500581, "last_word_id": 1500595, "ref": "Job 24:13", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1500613, "last_word_id": 1500627, "ref": "Job 24:15", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1500673, "last_word_id": 1500687, "ref": "Job 24:20", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1500722, "last_word_id": 1500738, "ref": "Job 24:24", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1500935, "last_word_id": 1500952, "ref": "Job 26:14", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1500995, "last_word_id": 1501010, "ref": "Job 27:5", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1501230, "last_word_id": 1501244, "ref": "Job 28:3", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1501505, "last_word_id": 1501520, "ref": "Job 28:28", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1501786, "last_word_id": 1501802, "ref": "Job 29:25", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1501803, "last_word_id": 1501822, "ref": "Job 30:1", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1501835, "last_word_id": 1501847, "ref": "Job 30:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1501929, "last_word_id": 1501942, "ref": "Job 30:12", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1501943, "last_word_id": 1501953, "ref": "Job 30:13", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1501961, "last_word_id": 1501976, "ref": "Job 30:15", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1502221, "last_word_id": 1502240, "ref": "Job 31:7", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1502552, "last_word_id": 1502565, "ref": "Job 31:34", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1502566, "last_word_id": 1502584, "ref": "Job 31:35", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1502629, "last_word_id": 1502639, "ref": "Job 31:40", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1502803, "last_word_id": 1502817, "ref": "Job 32:12", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503007, "last_word_id": 1503017, "ref": "Job 33:9", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503071, "last_word_id": 1503083, "ref": "Job 33:15", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503162, "last_word_id": 1503176, "ref": "Job 33:23", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1503199, "last_word_id": 1503216, "ref": "Job 33:26", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503484, "last_word_id": 1503501, "ref": "Job 34:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1503502, "last_word_id": 1503516, "ref": "Job 34:20", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503600, "last_word_id": 1503619, "ref": "Job 34:29", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503645, "last_word_id": 1503662, "ref": "Job 34:33", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1503695, "last_word_id": 1503710, "ref": "Job 34:37", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503940, "last_word_id": 1503958, "ref": "Job 36:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1503995, "last_word_id": 1504010, "ref": "Job 36:11", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1504057, "last_word_id": 1504074, "ref": "Job 36:16", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1504304, "last_word_id": 1504318, "ref": "Job 37:6", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1504468, "last_word_id": 1504483, "ref": "Job 37:21", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1504937, "last_word_id": 1504953, "ref": "Job 38:41", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1505211, "last_word_id": 1505224, "ref": "Job 39:25", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1505875, "last_word_id": 1505892, "ref": "Job 42:3", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1536611, "last_word_id": 1536623, "ref": "Proverbs 1:11", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1536734, "last_word_id": 1536748, "ref": "Proverbs 1:22", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1536749, "last_word_id": 1536763, "ref": "Proverbs 1:23", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1536795, "last_word_id": 1536813, "ref": "Proverbs 1:27", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1537122, "last_word_id": 1537138, "ref": "Proverbs 3:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1537996, "last_word_id": 1538012, "ref": "Proverbs 5:19", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1538083, "last_word_id": 1538101, "ref": "Proverbs 6:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1538285, "last_word_id": 1538301, "ref": "Proverbs 6:22", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1538337, "last_word_id": 1538349, "ref": "Proverbs 6:26", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1538685, "last_word_id": 1538699, "ref": "Proverbs 7:22", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1538700, "last_word_id": 1538717, "ref": "Proverbs 7:23", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1538875, "last_word_id": 1538888, "ref": "Proverbs 8:13", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1539034, "last_word_id": 1539052, "ref": "Proverbs 8:29", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1539053, "last_word_id": 1539069, "ref": "Proverbs 8:30", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1539099, "last_word_id": 1539115, "ref": "Proverbs 8:34", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1539549, "last_word_id": 1539567, "ref": "Proverbs 10:26", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1542046, "last_word_id": 1542062, "ref": "Proverbs 19:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1543227, "last_word_id": 1543241, "ref": "Proverbs 22:29", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1543282, "last_word_id": 1543301, "ref": "Proverbs 23:5", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1543314, "last_word_id": 1543333, "ref": "Proverbs 23:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1543567, "last_word_id": 1543586, "ref": "Proverbs 23:29", "pairs": [["a", "b"], ["a", "d"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1543599, "last_word_id": 1543613, "ref": "Proverbs 23:31", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1543645, "last_word_id": 1543658, "ref": "Proverbs 23:35", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1543767, "last_word_id": 1543791, "ref": "Proverbs 24:12", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1543804, "last_word_id": 1543820, "ref": "Proverbs 24:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1543923, "last_word_id": 1543933, "ref": "Proverbs 24:24", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1543950, "last_word_id": 1543968, "ref": "Proverbs 24:27", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1544011, "last_word_id": 1544025, "ref": "Proverbs 24:31", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1544121, "last_word_id": 1544137, "ref": "Proverbs 25:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1544138, "last_word_id": 1544154, "ref": "Proverbs 25:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1544195, "last_word_id": 1544210, "ref": "Proverbs 25:13", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1544279, "last_word_id": 1544294, "ref": "Proverbs 25:20", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1544401, "last_word_id": 1544416, "ref": "Proverbs 26:2", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1544789, "last_word_id": 1544812, "ref": "Proverbs 27:10", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1544843, "last_word_id": 1544856, "ref": "Proverbs 27:14", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1544936, "last_word_id": 1544957, "ref": "Proverbs 27:22", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1544997, "last_word_id": 1545012, "ref": "Proverbs 27:27", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1545110, "last_word_id": 1545123, "ref": "Proverbs 28:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1545624, "last_word_id": 1545655, "ref": "Proverbs 30:4", "pairs": [["a", "b"], ["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1545690, "last_word_id": 1545708, "ref": "Proverbs 30:8", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1545709, "last_word_id": 1545726, "ref": "Proverbs 30:9", "pairs": [["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1545768, "last_word_id": 1545784, "ref": "Proverbs 30:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1545785, "last_word_id": 1545798, "ref": "Proverbs 30:15", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1545799, "last_word_id": 1545811, "ref": "Proverbs 30:16", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1545812, "last_word_id": 1545829, "ref": "Proverbs 30:17", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1545840, "last_word_id": 1545859, "ref": "Proverbs 30:19", "pairs": [["a", "b"], ["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1545860, "last_word_id": 1545873, "ref": "Proverbs 30:20", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1545991, "last_word_id": 1546005, "ref": "Proverbs 30:33", "pairs": [["b", "c"], ["c", "d"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1546041, "last_word_id": 1546056, "ref": "Proverbs 31:4", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1546157, "last_word_id": 1546172, "ref": "Proverbs 31:15", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1546408, "last_word_id": 1546426, "ref": "Ecclesiastes 1:6", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1546427, "last_word_id": 1546450, "ref": "Ecclesiastes 1:7", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1546451, "last_word_id": 1546470, "ref": "Ecclesiastes 1:8", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1546471, "last_word_id": 1546490, "ref": "Ecclesiastes 1:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1546491, "last_word_id": 1546508, "ref": "Ecclesiastes 1:10", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1546509, "last_word_id": 1546531, "ref": "Ecclesiastes 1:11", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1547333, "last_word_id": 1547349, "ref": "Ecclesiastes 3:5", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1548227, "last_word_id": 1548242, "ref": "Ecclesiastes 5:9", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1548261, "last_word_id": 1548283, "ref": "Ecclesiastes 5:11", "pairs": [["a", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1548737, "last_word_id": 1548761, "ref": "Ecclesiastes 7:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1548793, "last_word_id": 1548808, "ref": "Ecclesiastes 7:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1548844, "last_word_id": 1548863, "ref": "Ecclesiastes 7:10", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1548891, "last_word_id": 1548904, "ref": "Ecclesiastes 7:13", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1548905, "last_word_id": 1548934, "ref": "Ecclesiastes 7:14", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1550087, "last_word_id": 1550099, "ref": "Ecclesiastes 10:1", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1550130, "last_word_id": 1550145, "ref": "Ecclesiastes 10:4", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1550207, "last_word_id": 1550222, "ref": "Ecclesiastes 10:10", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1550257, "last_word_id": 1550278, "ref": "Ecclesiastes 10:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1550306, "last_word_id": 1550327, "ref": "Ecclesiastes 10:17", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1550340, "last_word_id": 1550354, "ref": "Ecclesiastes 10:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1550355, "last_word_id": 1550382, "ref": "Ecclesiastes 10:20", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1550397, "last_word_id": 1550413, "ref": "Ecclesiastes 11:2", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1550414, "last_word_id": 1550441, "ref": "Ecclesiastes 11:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1550608, "last_word_id": 1550634, "ref": "Ecclesiastes 12:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1550635, "last_word_id": 1550656, "ref": "Ecclesiastes 12:2", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1550657, "last_word_id": 1550682, "ref": "Ecclesiastes 12:3", "pairs": [["a", "b"], ["c", "d"], ["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1550683, "last_word_id": 1550705, "ref": "Ecclesiastes 12:4", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1550706, "last_word_id": 1550741, "ref": "Ecclesiastes 12:5", "pairs": [["a", "b"], ["b", "c"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1550742, "last_word_id": 1550766, "ref": "Ecclesiastes 12:6", "pairs": [["a", "b"], ["c", "d"], ["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1550911, "last_word_id": 1550924, "ref": "Song of Solomon 1:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1550925, "last_word_id": 1550948, "ref": "Song of Solomon 1:4", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1550961, "last_word_id": 1550990, "ref": "Song of Solomon 1:6", "pairs": [["b", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1550991, "last_word_id": 1551015, "ref": "Song of Solomon 1:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551016, "last_word_id": 1551041, "ref": "Song of Solomon 1:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1551153, "last_word_id": 1551177, "ref": "Song of Solomon 2:3", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1551190, "last_word_id": 1551203, "ref": "Song of Solomon 2:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1551215, "last_word_id": 1551237, "ref": "Song of Solomon 2:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1551252, "last_word_id": 1551275, "ref": "Song of Solomon 2:9", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1551305, "last_word_id": 1551322, "ref": "Song of Solomon 2:12", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551323, "last_word_id": 1551344, "ref": "Song of Solomon 2:13", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1551345, "last_word_id": 1551372, "ref": "Song of Solomon 2:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551373, "last_word_id": 1551384, "ref": "Song of Solomon 2:15", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1551398, "last_word_id": 1551422, "ref": "Song of Solomon 2:17", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551423, "last_word_id": 1551440, "ref": "Song of Solomon 3:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551441, "last_word_id": 1551466, "ref": "Song of Solomon 3:2", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1551482, "last_word_id": 1551514, "ref": "Song of Solomon 3:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551515, "last_word_id": 1551537, "ref": "Song of Solomon 3:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1551538, "last_word_id": 1551554, "ref": "Song of Solomon 3:6", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1551555, "last_word_id": 1551568, "ref": "Song of Solomon 3:7", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1551569, "last_word_id": 1551585, "ref": "Song of Solomon 3:8", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1551597, "last_word_id": 1551613, "ref": "Song of Solomon 3:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551614, "last_word_id": 1551641, "ref": "Song of Solomon 3:11", "pairs": [["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1551642, "last_word_id": 1551668, "ref": "Song of Solomon 4:1", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551710, "last_word_id": 1551727, "ref": "Song of Solomon 4:4", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551728, "last_word_id": 1551740, "ref": "Song of Solomon 4:5", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1551741, "last_word_id": 1551761, "ref": "Song of Solomon 4:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551772, "last_word_id": 1551796, "ref": "Song of Solomon 4:8", "pairs": [["a", "b"], ["c", "d"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1551797, "last_word_id": 1551814, "ref": "Song of Solomon 4:9", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551815, "last_word_id": 1551834, "ref": "Song of Solomon 4:10", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551835, "last_word_id": 1551852, "ref": "Song of Solomon 4:11", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1551862, "last_word_id": 1551871, "ref": "Song of Solomon 4:13", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551872, "last_word_id": 1551888, "ref": "Song of Solomon 4:14", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1551898, "last_word_id": 1551919, "ref": "Song of Solomon 4:16", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1551920, "last_word_id": 1551950, "ref": "Song of Solomon 5:1", "pairs": [["b", "c"], ["c", "d"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1551951, "last_word_id": 1551980, "ref": "Song of Solomon 5:2", "pairs": [["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1552009, "last_word_id": 1552029, "ref": "Song of Solomon 5:5", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1552030, "last_word_id": 1552057, "ref": "Song of Solomon 5:6", "pairs": [["a", "b"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1552058, "last_word_id": 1552080, "ref": "Song of Solomon 5:7", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552081, "last_word_id": 1552098, "ref": "Song of Solomon 5:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1552165, "last_word_id": 1552178, "ref": "Song of Solomon 5:14", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552179, "last_word_id": 1552195, "ref": "Song of Solomon 5:15", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552212, "last_word_id": 1552229, "ref": "Song of Solomon 6:1", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552263, "last_word_id": 1552275, "ref": "Song of Solomon 6:4", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552338, "last_word_id": 1552365, "ref": "Song of Solomon 6:9", "pairs": [["a", "b"], ["b", "c"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1552366, "last_word_id": 1552383, "ref": "Song of Solomon 6:10", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552384, "last_word_id": 1552402, "ref": "Song of Solomon 6:11", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552413, "last_word_id": 1552431, "ref": "Song of Solomon 7:1", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1552432, "last_word_id": 1552448, "ref": "Song of Solomon 7:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1552449, "last_word_id": 1552465, "ref": "Song of Solomon 7:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1552474, "last_word_id": 1552497, "ref": "Song of Solomon 7:5", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552498, "last_word_id": 1552516, "ref": "Song of Solomon 7:6", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1552537, "last_word_id": 1552560, "ref": "Song of Solomon 7:9", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552561, "last_word_id": 1552576, "ref": "Song of Solomon 7:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552597, "last_word_id": 1552618, "ref": "Song of Solomon 7:13", "pairs": [["b", "c"], ["c", "d"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1552619, "last_word_id": 1552636, "ref": "Song of Solomon 7:14", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1552637, "last_word_id": 1552659, "ref": "Song of Solomon 8:1", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1552706, "last_word_id": 1552731, "ref": "Song of Solomon 8:5", "pairs": [["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1552732, "last_word_id": 1552761, "ref": "Song of Solomon 8:6", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1552762, "last_word_id": 1552790, "ref": "Song of Solomon 8:7", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552791, "last_word_id": 1552811, "ref": "Song of Solomon 8:8", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1552812, "last_word_id": 1552828, "ref": "Song of Solomon 8:9", "pairs": [["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1552845, "last_word_id": 1552865, "ref": "Song of Solomon 8:11", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1552866, "last_word_id": 1552885, "ref": "Song of Solomon 8:12", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1552898, "last_word_id": 1552914, "ref": "Song of Solomon 8:14", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1611628, "last_word_id": 1611648, "ref": "Lamentations 1:1", "pairs": [["d", "e"], ["c", "f"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1611649, "last_word_id": 1611678, "ref": "Lamentations 1:2", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1611679, "last_word_id": 1611702, "ref": "Lamentations 1:3", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1611703, "last_word_id": 1611724, "ref": "Lamentations 1:4", "pairs": [["a", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1611725, "last_word_id": 1611747, "ref": "Lamentations 1:5", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1611748, "last_word_id": 1611771, "ref": "Lamentations 1:6", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1611772, "last_word_id": 1611806, "ref": "Lamentations 1:7", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1611807, "last_word_id": 1611829, "ref": "Lamentations 1:8", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1611830, "last_word_id": 1611853, "ref": "Lamentations 1:9", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1611854, "last_word_id": 1611876, "ref": "Lamentations 1:10", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1611877, "last_word_id": 1611898, "ref": "Lamentations 1:11", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1611899, "last_word_id": 1611925, "ref": "Lamentations 1:12", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1611926, "last_word_id": 1611950, "ref": "Lamentations 1:13", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1611951, "last_word_id": 1611974, "ref": "Lamentations 1:14", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1611975, "last_word_id": 1611999, "ref": "Lamentations 1:15", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612000, "last_word_id": 1612024, "ref": "Lamentations 1:16", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612025, "last_word_id": 1612047, "ref": "Lamentations 1:17", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1612048, "last_word_id": 1612072, "ref": "Lamentations 1:18", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1612073, "last_word_id": 1612099, "ref": "Lamentations 1:19", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612100, "last_word_id": 1612127, "ref": "Lamentations 1:20", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612128, "last_word_id": 1612152, "ref": "Lamentations 1:21", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612153, "last_word_id": 1612180, "ref": "Lamentations 1:22", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612181, "last_word_id": 1612206, "ref": "Lamentations 2:1", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612207, "last_word_id": 1612232, "ref": "Lamentations 2:2", "pairs": [["a", "c"], ["b", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1612233, "last_word_id": 1612255, "ref": "Lamentations 2:3", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612256, "last_word_id": 1612280, "ref": "Lamentations 2:4", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1612281, "last_word_id": 1612302, "ref": "Lamentations 2:5", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612303, "last_word_id": 1612328, "ref": "Lamentations 2:6", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612329, "last_word_id": 1612351, "ref": "Lamentations 2:7", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612352, "last_word_id": 1612373, "ref": "Lamentations 2:8", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612374, "last_word_id": 1612402, "ref": "Lamentations 2:9", "pairs": [["a", "b"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1612403, "last_word_id": 1612425, "ref": "Lamentations 2:10", "pairs": [["a", "b"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612426, "last_word_id": 1612453, "ref": "Lamentations 2:11", "pairs": [["a", "b"], ["b", "c"], ["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612454, "last_word_id": 1612478, "ref": "Lamentations 2:12", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612479, "last_word_id": 1612509, "ref": "Lamentations 2:13", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612510, "last_word_id": 1612535, "ref": "Lamentations 2:14", "pairs": [["a", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1612536, "last_word_id": 1612563, "ref": "Lamentations 2:15", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1612564, "last_word_id": 1612586, "ref": "Lamentations 2:16", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1612587, "last_word_id": 1612611, "ref": "Lamentations 2:17", "pairs": [["a", "b"], ["d", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1612612, "last_word_id": 1612638, "ref": "Lamentations 2:18", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1612639, "last_word_id": 1612673, "ref": "Lamentations 2:19", "pairs": [["a", "c"], ["c", "e"]]}
+{"kind": "Parallelism", "first_word_id": 1612674, "last_word_id": 1612698, "ref": "Lamentations 2:20", "pairs": [["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1612699, "last_word_id": 1612723, "ref": "Lamentations 2:21", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1612724, "last_word_id": 1612749, "ref": "Lamentations 2:22", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1613343, "last_word_id": 1613357, "ref": "Lamentations 4:1", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1613358, "last_word_id": 1613374, "ref": "Lamentations 4:2", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1613375, "last_word_id": 1613392, "ref": "Lamentations 4:3", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1613393, "last_word_id": 1613408, "ref": "Lamentations 4:4", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1613457, "last_word_id": 1613477, "ref": "Lamentations 4:8", "pairs": [["a", "c"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1613508, "last_word_id": 1613525, "ref": "Lamentations 4:11", "pairs": [["a", "b"], ["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1613526, "last_word_id": 1613540, "ref": "Lamentations 4:12", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1613555, "last_word_id": 1613570, "ref": "Lamentations 4:14", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1613571, "last_word_id": 1613591, "ref": "Lamentations 4:15", "pairs": [["a", "b"]]}
+{"kind": "Parallelism", "first_word_id": 1613592, "last_word_id": 1613608, "ref": "Lamentations 4:16", "pairs": [["a", "b"], ["c", "d"]]}
+{"kind": "Parallelism", "first_word_id": 1613626, "last_word_id": 1613643, "ref": "Lamentations 4:18", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1613644, "last_word_id": 1613661, "ref": "Lamentations 4:19", "pairs": [["b", "c"]]}
+{"kind": "Parallelism", "first_word_id": 1613662, "last_word_id": 1613679, "ref": "Lamentations 4:20", "pairs": []}
+{"kind": "Parallelism", "first_word_id": 1613680, "last_word_id": 1613696, "ref": "Lamentations 4:21", "pairs": [["a", "b"]]}

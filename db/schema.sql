@@ -510,11 +510,44 @@ create table structure_part (
     structure_id integer not null references structure on delete cascade,
     parent_id integer references structure_part on delete cascade,
     position integer not null,
-    pairs_with_id integer references structure_part,
     first_word_id integer not null references word,
     last_word_id integer not null references word,
     unique (structure_id, position)
 ) strict;
+
+create table structure_part_pair (
+    part_id integer not null references structure_part on delete cascade,
+    other_part_id integer not null references structure_part on delete cascade,
+    primary key (part_id, other_part_id),
+    check (part_id < other_part_id)
+) strict;
+
+create index structure_part_pair_other on structure_part_pair (other_part_id);
+
+create trigger structure_part_pair_structure_insert before insert on structure_part_pair
+when (select structure_id from structure_part where id = new.part_id)
+  is not (select structure_id from structure_part where id = new.other_part_id)
+begin
+    select raise(abort, 'paired parts must belong to one structure');
+end;
+
+create trigger structure_part_pair_structure_update before update on structure_part_pair
+when (select structure_id from structure_part where id = new.part_id)
+  is not (select structure_id from structure_part where id = new.other_part_id)
+begin
+    select raise(abort, 'paired parts must belong to one structure');
+end;
+
+create trigger structure_part_structure_update before update of structure_id on structure_part
+when exists (
+    select 1 from structure_part_pair p join structure_part o on o.id = p.other_part_id
+    where p.part_id = new.id and o.structure_id <> new.structure_id
+    union all
+    select 1 from structure_part_pair p join structure_part o on o.id = p.part_id
+    where p.other_part_id = new.id and o.structure_id <> new.structure_id)
+begin
+    select raise(abort, 'paired parts must belong to one structure');
+end;
 
 create table verse_range (
     id integer primary key,

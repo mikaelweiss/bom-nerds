@@ -1,0 +1,1011 @@
+{"kind": "Fulfills", "from_ref": "Matthew 1:22-23", "to_ref": "Isaiah 7:14", "from_first_word_id": 610896, "from_last_word_id": 610942, "to_first_word_id": 449767, "to_last_word_id": 449790}
+{"kind": "Fulfills", "from_ref": "Matthew 2:5-6", "to_ref": "Micah 5:2", "from_first_word_id": 611075, "from_last_word_id": 611122, "to_first_word_id": 595327, "to_last_word_id": 595366}
+{"kind": "Fulfills", "from_ref": "Matthew 2:14-15", "to_ref": "Hosea 11:1", "from_first_word_id": 611332, "from_last_word_id": 611379, "to_first_word_id": 584097, "to_last_word_id": 584112}
+{"kind": "Fulfills", "from_ref": "Matthew 2:16-18", "to_ref": "Jeremiah 31:15", "from_first_word_id": 611380, "from_last_word_id": 611471, "to_first_word_id": 506186, "to_last_word_id": 506215}
+{"kind": "Fulfills", "from_ref": "Matthew 3:1-3", "to_ref": "Isaiah 40:3", "from_first_word_id": 611602, "from_last_word_id": 611658, "to_first_word_id": 467520, "to_last_word_id": 467545}
+{"kind": "Fulfills", "from_ref": "Mark 1:2-4", "to_ref": "Isaiah 40:3", "from_first_word_id": 634212, "from_last_word_id": 634269, "to_first_word_id": 467520, "to_last_word_id": 467545}
+{"kind": "Fulfills", "from_ref": "Mark 1:2-4", "to_ref": "Malachi 3:1", "from_first_word_id": 634212, "from_last_word_id": 634269, "to_first_word_id": 609756, "to_last_word_id": 609800}
+{"kind": "Fulfills", "from_ref": "Luke 3:2-6", "to_ref": "Isaiah 40:3-5", "from_first_word_id": 652091, "from_last_word_id": 652202, "to_first_word_id": 467520, "to_last_word_id": 467596}
+{"kind": "Fulfills", "from_ref": "John 1:23", "to_ref": "Isaiah 40:3", "from_first_word_id": 675709, "from_last_word_id": 675732, "to_first_word_id": 467520, "to_last_word_id": 467545}
+{"kind": "Fulfills", "from_ref": "Matthew 11:10", "to_ref": "Malachi 3:1", "from_first_word_id": 617770, "from_last_word_id": 617793, "to_first_word_id": 609756, "to_last_word_id": 609800}
+{"kind": "Fulfills", "from_ref": "Luke 7:27", "to_ref": "Malachi 3:1", "from_first_word_id": 656907, "from_last_word_id": 656929, "to_first_word_id": 609756, "to_last_word_id": 609800}
+{"kind": "Fulfills", "from_ref": "Matthew 11:13-14", "to_ref": "Malachi 4:5", "from_first_word_id": 617853, "from_last_word_id": 617876, "to_first_word_id": 610453, "to_last_word_id": 610472}
+{"kind": "Fulfills", "from_ref": "Matthew 17:11-13", "to_ref": "Malachi 4:5", "from_first_word_id": 623185, "from_last_word_id": 623246, "to_first_word_id": 610453, "to_last_word_id": 610472}
+{"kind": "Fulfills", "from_ref": "Luke 1:16-17", "to_ref": "Malachi 4:5-6", "from_first_word_id": 649694, "from_last_word_id": 649749, "to_first_word_id": 610453, "to_last_word_id": 610503}
+{"kind": "Fulfills", "from_ref": "Matthew 4:13-16", "to_ref": "Isaiah 9:1-2", "from_first_word_id": 612250, "from_last_word_id": 612330, "to_first_word_id": 450676, "to_last_word_id": 450751}
+{"kind": "Fulfills", "from_ref": "Matthew 8:16-17", "to_ref": "Isaiah 53:4", "from_first_word_id": 615379, "from_last_word_id": 615429, "to_first_word_id": 476063, "to_last_word_id": 476083}
+{"kind": "Fulfills", "from_ref": "Matthew 12:15-21", "to_ref": "Isaiah 42:1-4", "from_first_word_id": 618569, "from_last_word_id": 618687, "to_first_word_id": 469079, "to_last_word_id": 469168}
+{"kind": "Fulfills", "from_ref": "Matthew 13:13-15", "to_ref": "Isaiah 6:9-10", "from_first_word_id": 619638, "from_last_word_id": 619737, "to_first_word_id": 449277, "to_last_word_id": 449334}
+{"kind": "Fulfills", "from_ref": "Matthew 13:34-35", "to_ref": "Psalms 78:2", "from_first_word_id": 620215, "from_last_word_id": 620267, "to_first_word_id": 401535, "to_last_word_id": 401549}
+{"kind": "Fulfills", "from_ref": "Matthew 21:4-5", "to_ref": "Zechariah 9:9", "from_first_word_id": 626035, "from_last_word_id": 626076, "to_first_word_id": 605956, "to_last_word_id": 605993}
+{"kind": "Fulfills", "from_ref": "John 12:14-16", "to_ref": "Zechariah 9:9", "from_first_word_id": 686633, "from_last_word_id": 686694, "to_first_word_id": 605956, "to_last_word_id": 605993}
+{"kind": "Fulfills", "from_ref": "Matthew 26:56", "to_ref": "Zechariah 13:7", "from_first_word_id": 631978, "from_last_word_id": 631999, "to_first_word_id": 607847, "to_last_word_id": 607884}
+{"kind": "Fulfills", "from_ref": "Mark 14:50", "to_ref": "Zechariah 13:7", "from_first_word_id": 647518, "from_last_word_id": 647524, "to_first_word_id": 607847, "to_last_word_id": 607884}
+{"kind": "Fulfills", "from_ref": "Matthew 27:9-10", "to_ref": "Zechariah 11:12-13", "from_first_word_id": 632581, "from_last_word_id": 632628, "to_first_word_id": 606977, "to_last_word_id": 607044}
+{"kind": "Fulfills", "from_ref": "Matthew 26:14-15", "to_ref": "Zechariah 11:12", "from_first_word_id": 631034, "from_last_word_id": 631072, "to_first_word_id": 606977, "to_last_word_id": 607003}
+{"kind": "Fulfills", "from_ref": "Matthew 27:35", "to_ref": "Psalms 22:18", "from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 384516, "to_last_word_id": 384527}
+{"kind": "Fulfills", "from_ref": "John 19:23-24", "to_ref": "Psalms 22:18", "from_first_word_id": 692459, "from_last_word_id": 692540, "to_first_word_id": 384516, "to_last_word_id": 384527}
+{"kind": "Fulfills", "from_ref": "Mark 15:24", "to_ref": "Psalms 22:18", "from_first_word_id": 648421, "from_last_word_id": 648439, "to_first_word_id": 384516, "to_last_word_id": 384527}
+{"kind": "Fulfills", "from_ref": "Luke 23:34", "to_ref": "Psalms 22:18", "from_first_word_id": 673808, "from_last_word_id": 673828, "to_first_word_id": 384516, "to_last_word_id": 384527}
+{"kind": "Fulfills", "from_ref": "Matthew 27:39-43", "to_ref": "Psalms 22:7-8", "from_first_word_id": 633204, "from_last_word_id": 633303, "to_first_word_id": 384312, "to_last_word_id": 384349}
+{"kind": "Fulfills", "from_ref": "Matthew 27:46", "to_ref": "Psalms 22:1", "from_first_word_id": 633334, "from_last_word_id": 633362, "to_first_word_id": 384211, "to_last_word_id": 384234}
+{"kind": "Fulfills", "from_ref": "Mark 15:34", "to_ref": "Psalms 22:1", "from_first_word_id": 648593, "from_last_word_id": 648621, "to_first_word_id": 384211, "to_last_word_id": 384234}
+{"kind": "Fulfills", "from_ref": "John 19:28-29", "to_ref": "Psalms 69:21", "from_first_word_id": 692607, "from_last_word_id": 692652, "to_first_word_id": 398704, "to_last_word_id": 398721}
+{"kind": "Fulfills", "from_ref": "Matthew 27:34", "to_ref": "Psalms 69:21", "from_first_word_id": 633108, "from_last_word_id": 633126, "to_first_word_id": 398704, "to_last_word_id": 398721}
+{"kind": "Fulfills", "from_ref": "Matthew 27:48", "to_ref": "Psalms 69:21", "from_first_word_id": 633379, "from_last_word_id": 633404, "to_first_word_id": 398704, "to_last_word_id": 398721}
+{"kind": "Fulfills", "from_ref": "John 19:32-36", "to_ref": "Exodus 12:46", "from_first_word_id": 692719, "from_last_word_id": 692817, "to_first_word_id": 47600, "to_last_word_id": 47627}
+{"kind": "Fulfills", "from_ref": "John 19:32-36", "to_ref": "Psalms 34:20", "from_first_word_id": 692719, "from_last_word_id": 692817, "to_first_word_id": 388026, "to_last_word_id": 388036}
+{"kind": "Fulfills", "from_ref": "John 19:37", "to_ref": "Zechariah 12:10", "from_first_word_id": 692818, "from_last_word_id": 692830, "to_first_word_id": 607484, "to_last_word_id": 607544}
+{"kind": "Fulfills", "from_ref": "Mark 15:27-28", "to_ref": "Isaiah 53:12", "from_first_word_id": 648464, "from_last_word_id": 648496, "to_first_word_id": 476313, "to_last_word_id": 476360}
+{"kind": "Fulfills", "from_ref": "Luke 22:37", "to_ref": "Isaiah 53:12", "from_first_word_id": 672448, "from_last_word_id": 672478, "to_first_word_id": 476313, "to_last_word_id": 476360}
+{"kind": "Fulfills", "from_ref": "Luke 23:32-33", "to_ref": "Isaiah 53:12", "from_first_word_id": 673763, "from_last_word_id": 673807, "to_first_word_id": 476313, "to_last_word_id": 476360}
+{"kind": "Fulfills", "from_ref": "Matthew 27:57-60", "to_ref": "Isaiah 53:9", "from_first_word_id": 633560, "from_last_word_id": 633642, "to_first_word_id": 476212, "to_last_word_id": 476239}
+{"kind": "Fulfills", "from_ref": "John 12:37-38", "to_ref": "Isaiah 53:1", "from_first_word_id": 687123, "from_last_word_id": 687168, "to_first_word_id": 475974, "to_last_word_id": 475988}
+{"kind": "Fulfills", "from_ref": "John 12:39-41", "to_ref": "Isaiah 6:10", "from_first_word_id": 687169, "from_last_word_id": 687221, "to_first_word_id": 449298, "to_last_word_id": 449334}
+{"kind": "Fulfills", "from_ref": "John 13:18", "to_ref": "Psalms 41:9", "from_first_word_id": 687777, "from_last_word_id": 687808, "to_first_word_id": 390798, "to_last_word_id": 390819}
+{"kind": "Fulfills", "from_ref": "John 15:25", "to_ref": "Psalms 69:4", "from_first_word_id": 689519, "from_last_word_id": 689541, "to_first_word_id": 398352, "to_last_word_id": 398386}
+{"kind": "Fulfills", "from_ref": "John 17:12", "to_ref": "Psalms 41:9", "from_first_word_id": 690648, "from_last_word_id": 690686, "to_first_word_id": 390798, "to_last_word_id": 390819}
+{"kind": "Fulfills", "from_ref": "John 2:17", "to_ref": "Psalms 69:9", "from_first_word_id": 676660, "from_last_word_id": 676676, "to_first_word_id": 398461, "to_last_word_id": 398482}
+{"kind": "Fulfills", "from_ref": "Acts 1:16-20", "to_ref": "Psalms 69:25", "from_first_word_id": 694821, "from_last_word_id": 694945, "to_first_word_id": 398775, "to_last_word_id": 398786}
+{"kind": "Fulfills", "from_ref": "Acts 1:16-20", "to_ref": "Psalms 109:8", "from_first_word_id": 694821, "from_last_word_id": 694945, "to_first_word_id": 412522, "to_last_word_id": 412532}
+{"kind": "Fulfills", "from_ref": "Acts 2:16-21", "to_ref": "Joel 2:28-32", "from_first_word_id": 695366, "from_last_word_id": 695504, "to_first_word_id": 586701, "to_last_word_id": 586840}
+{"kind": "Fulfills", "from_ref": "Acts 2:25-31", "to_ref": "Psalms 16:8-11", "from_first_word_id": 695588, "from_last_word_id": 695759, "to_first_word_id": 382155, "to_last_word_id": 382233}
+{"kind": "Fulfills", "from_ref": "Acts 13:34-37", "to_ref": "Psalms 16:10", "from_first_word_id": 705609, "from_last_word_id": 705692, "to_first_word_id": 382191, "to_last_word_id": 382209}
+{"kind": "Fulfills", "from_ref": "Acts 2:34-36", "to_ref": "Psalms 110:1", "from_first_word_id": 695803, "from_last_word_id": 695857, "to_first_word_id": 412954, "to_last_word_id": 412972}
+{"kind": "Fulfills", "from_ref": "Acts 3:22-26", "to_ref": "Deuteronomy 18:15-19", "from_first_word_id": 696592, "from_last_word_id": 696731, "to_first_word_id": 143390, "to_last_word_id": 143537}
+{"kind": "Fulfills", "from_ref": "Acts 7:37", "to_ref": "Deuteronomy 18:15", "from_first_word_id": 699835, "from_last_word_id": 699866, "to_first_word_id": 143390, "to_last_word_id": 143416}
+{"kind": "Fulfills", "from_ref": "Acts 4:10-11", "to_ref": "Psalms 118:22", "from_first_word_id": 696914, "from_last_word_id": 696975, "to_first_word_id": 414619, "to_last_word_id": 414632}
+{"kind": "Fulfills", "from_ref": "Matthew 21:42", "to_ref": "Psalms 118:22-23", "from_first_word_id": 626964, "from_last_word_id": 627001, "to_first_word_id": 414619, "to_last_word_id": 414643}
+{"kind": "Fulfills", "from_ref": "1 Peter 2:7", "to_ref": "Psalms 118:22", "from_first_word_id": 772223, "from_last_word_id": 772251, "to_first_word_id": 414619, "to_last_word_id": 414632}
+{"kind": "Fulfills", "from_ref": "Acts 4:25-28", "to_ref": "Psalms 2:1-2", "from_first_word_id": 697291, "from_last_word_id": 697374, "to_first_word_id": 379154, "to_last_word_id": 379186}
+{"kind": "Fulfills", "from_ref": "Acts 8:32-35", "to_ref": "Isaiah 53:7-8", "from_first_word_id": 701068, "from_last_word_id": 701161, "to_first_word_id": 476140, "to_last_word_id": 476211}
+{"kind": "Fulfills", "from_ref": "Acts 13:32-33", "to_ref": "Psalms 2:7", "from_first_word_id": 705556, "from_last_word_id": 705608, "to_first_word_id": 379243, "to_last_word_id": 379263}
+{"kind": "Fulfills", "from_ref": "Acts 13:47", "to_ref": "Isaiah 49:6", "from_first_word_id": 705922, "from_last_word_id": 705952, "to_first_word_id": 473723, "to_last_word_id": 473773}
+{"kind": "Fulfills", "from_ref": "Acts 15:14-17", "to_ref": "Amos 9:11-12", "from_first_word_id": 707008, "from_last_word_id": 707101, "to_first_word_id": 591453, "to_last_word_id": 591515}
+{"kind": "Fulfills", "from_ref": "Acts 28:25-28", "to_ref": "Isaiah 6:9-10", "from_first_word_id": 718486, "from_last_word_id": 718606, "to_first_word_id": 449277, "to_last_word_id": 449334}
+{"kind": "Fulfills", "from_ref": "Luke 4:17-21", "to_ref": "Isaiah 61:1-2", "from_first_word_id": 653412, "from_last_word_id": 653542, "to_first_word_id": 479959, "to_last_word_id": 480027}
+{"kind": "Fulfills", "from_ref": "Luke 24:44-47", "to_ref": "Isaiah 53:5", "from_first_word_id": 675118, "from_last_word_id": 675215, "to_first_word_id": 476084, "to_last_word_id": 476111}
+{"kind": "Fulfills", "from_ref": "Luke 18:31-33", "to_ref": "Isaiah 50:6", "from_first_word_id": 668669, "from_last_word_id": 668738, "to_first_word_id": 474609, "to_last_word_id": 474634}
+{"kind": "Fulfills", "from_ref": "Matthew 26:67", "to_ref": "Isaiah 50:6", "from_first_word_id": 632234, "from_last_word_id": 632253, "to_first_word_id": 474609, "to_last_word_id": 474634}
+{"kind": "Fulfills", "from_ref": "Matthew 27:26", "to_ref": "Isaiah 50:6", "from_first_word_id": 632937, "from_last_word_id": 632954, "to_first_word_id": 474609, "to_last_word_id": 474634}
+{"kind": "Fulfills", "from_ref": "Matthew 26:62-63", "to_ref": "Isaiah 53:7", "from_first_word_id": 632108, "from_last_word_id": 632161, "to_first_word_id": 476140, "to_last_word_id": 476176}
+{"kind": "Fulfills", "from_ref": "Matthew 27:12-14", "to_ref": "Isaiah 53:7", "from_first_word_id": 632655, "from_last_word_id": 632697, "to_first_word_id": 476140, "to_last_word_id": 476176}
+{"kind": "Fulfills", "from_ref": "1 Peter 2:22-24", "to_ref": "Isaiah 53:5-9", "from_first_word_id": 772576, "from_last_word_id": 772638, "to_first_word_id": 476084, "to_last_word_id": 476239}
+{"kind": "Fulfills", "from_ref": "Luke 1:31-33", "to_ref": "2 Samuel 7:12-16", "from_first_word_id": 650048, "from_last_word_id": 650113, "to_first_word_id": 227126, "to_last_word_id": 227252}
+{"kind": "Fulfills", "from_ref": "Luke 1:31-33", "to_ref": "Isaiah 9:6-7", "from_first_word_id": 650048, "from_last_word_id": 650113, "to_first_word_id": 450832, "to_last_word_id": 450919}
+{"kind": "Fulfills", "from_ref": "Acts 13:22-23", "to_ref": "2 Samuel 7:12", "from_first_word_id": 705310, "from_last_word_id": 705369, "to_first_word_id": 227126, "to_last_word_id": 227159}
+{"kind": "Fulfills", "from_ref": "Romans 1:3", "to_ref": "2 Samuel 7:12", "from_first_word_id": 718702, "from_last_word_id": 718720, "to_first_word_id": 227126, "to_last_word_id": 227159}
+{"kind": "Fulfills", "from_ref": "Galatians 3:16", "to_ref": "Genesis 12:3", "from_first_word_id": 745066, "from_last_word_id": 745095, "to_first_word_id": 6831, "to_last_word_id": 6855}
+{"kind": "Fulfills", "from_ref": "Galatians 3:8", "to_ref": "Genesis 12:3", "from_first_word_id": 744867, "from_last_word_id": 744892, "to_first_word_id": 6831, "to_last_word_id": 6855}
+{"kind": "Fulfills", "from_ref": "Acts 3:25-26", "to_ref": "Genesis 22:18", "from_first_word_id": 696674, "from_last_word_id": 696731, "to_first_word_id": 13695, "to_last_word_id": 13713}
+{"kind": "Fulfills", "from_ref": "Hebrews 8:8-13", "to_ref": "Jeremiah 31:31-34", "from_first_word_id": 765407, "from_last_word_id": 765606, "to_first_word_id": 506657, "to_last_word_id": 506825}
+{"kind": "Fulfills", "from_ref": "Hebrews 10:15-17", "to_ref": "Jeremiah 31:33-34", "from_first_word_id": 766565, "from_last_word_id": 766623, "to_first_word_id": 506727, "to_last_word_id": 506825}
+{"kind": "Fulfills", "from_ref": "Hebrews 5:5-6", "to_ref": "Psalms 110:4", "from_first_word_id": 763954, "from_last_word_id": 763999, "to_first_word_id": 413022, "to_last_word_id": 413040}
+{"kind": "Fulfills", "from_ref": "Hebrews 7:17", "to_ref": "Psalms 110:4", "from_first_word_id": 764970, "from_last_word_id": 764983, "to_first_word_id": 413022, "to_last_word_id": 413040}
+{"kind": "Fulfills", "from_ref": "Romans 15:8-12", "to_ref": "Isaiah 11:10", "from_first_word_id": 726980, "from_last_word_id": 727085, "to_first_word_id": 452460, "to_last_word_id": 452491}
+{"kind": "Fulfills", "from_ref": "Romans 10:15", "to_ref": "Isaiah 52:7", "from_first_word_id": 724585, "from_last_word_id": 724617, "to_first_word_id": 475728, "to_last_word_id": 475760}
+{"kind": "Fulfills", "from_ref": "Romans 10:20-21", "to_ref": "Isaiah 65:1-2", "from_first_word_id": 724704, "from_last_word_id": 724750, "to_first_word_id": 481547, "to_last_word_id": 481607}
+{"kind": "Fulfills", "from_ref": "Romans 9:25-26", "to_ref": "Hosea 2:23", "from_first_word_id": 724071, "from_last_word_id": 724126, "to_first_word_id": 581188, "to_last_word_id": 581232}
+{"kind": "Fulfills", "from_ref": "1 Peter 2:10", "to_ref": "Hosea 2:23", "from_first_word_id": 772312, "from_last_word_id": 772336, "to_first_word_id": 581188, "to_last_word_id": 581232}
+{"kind": "Fulfills", "from_ref": "Romans 11:26-27", "to_ref": "Isaiah 59:20-21", "from_first_word_id": 725373, "from_last_word_id": 725412, "to_first_word_id": 479215, "to_last_word_id": 479293}
+{"kind": "Fulfills", "from_ref": "Matthew 15:7-9", "to_ref": "Isaiah 29:13", "from_first_word_id": 621622, "from_last_word_id": 621666, "to_first_word_id": 461236, "to_last_word_id": 461276}
+{"kind": "Fulfills", "from_ref": "Mark 7:6-7", "to_ref": "Isaiah 29:13", "from_first_word_id": 639836, "from_last_word_id": 639880, "to_first_word_id": 461236, "to_last_word_id": 461276}
+{"kind": "Fulfills", "from_ref": "Mark 9:12-13", "to_ref": "Malachi 4:5", "from_first_word_id": 641614, "from_last_word_id": 641673, "to_first_word_id": 610453, "to_last_word_id": 610472}
+{"kind": "Fulfills", "from_ref": "Luke 2:4-7", "to_ref": "Micah 5:2", "from_first_word_id": 651003, "from_last_word_id": 651095, "to_first_word_id": 595327, "to_last_word_id": 595366}
+{"kind": "Fulfills", "from_ref": "Matthew 2:23", "to_ref": "Isaiah 11:1", "from_first_word_id": 611575, "from_last_word_id": 611601, "to_first_word_id": 452203, "to_last_word_id": 452224}
+{"kind": "Fulfills", "from_ref": "Luke 2:30-32", "to_ref": "Isaiah 49:6", "from_first_word_id": 651584, "from_last_word_id": 651613, "to_first_word_id": 473723, "to_last_word_id": 473773}
+{"kind": "Fulfills", "from_ref": "Luke 2:30-32", "to_ref": "Isaiah 42:6", "from_first_word_id": 651584, "from_last_word_id": 651613, "to_first_word_id": 469212, "to_last_word_id": 469243}
+{"kind": "Fulfills", "from_ref": "Luke 1:68-73", "to_ref": "Genesis 22:16-18", "from_first_word_id": 650731, "from_last_word_id": 650819, "to_first_word_id": 13628, "to_last_word_id": 13713}
+{"kind": "Fulfills", "from_ref": "Luke 1:54-55", "to_ref": "Genesis 17:7", "from_first_word_id": 650484, "from_last_word_id": 650508, "to_first_word_id": 9379, "to_last_word_id": 9412}
+{"kind": "Fulfills", "from_ref": "Luke 24:25-27", "to_ref": "Isaiah 53:3-12", "from_first_word_id": 674758, "from_last_word_id": 674810, "to_first_word_id": 476030, "to_last_word_id": 476360}
+{"kind": "Fulfills", "from_ref": "1 Corinthians 15:3-4", "to_ref": "Isaiah 53:5-12", "from_first_word_id": 736015, "from_last_word_id": 736055, "to_first_word_id": 476084, "to_last_word_id": 476360}
+{"kind": "Alludes to", "from_ref": "Revelation 21:4", "to_ref": "Isaiah 25:8", "from_first_word_id": 790057, "from_last_word_id": 790091, "to_first_word_id": 458916, "to_last_word_id": 458955}
+{"kind": "Fulfills", "from_ref": "John 6:45", "to_ref": "Isaiah 54:13", "from_first_word_id": 680666, "from_last_word_id": 680694, "to_first_word_id": 476716, "to_last_word_id": 476734}
+{"kind": "Alludes to", "from_ref": "John 3:14-15", "to_ref": "Numbers 21:8-9", "from_first_word_id": 677123, "from_last_word_id": 677154, "to_first_word_id": 115179, "to_last_word_id": 115249}
+{"kind": "Fulfills", "from_ref": "Matthew 21:9", "to_ref": "Psalms 118:26", "from_first_word_id": 626129, "from_last_word_id": 626160, "to_first_word_id": 414676, "to_last_word_id": 414697}
+{"kind": "Fulfills", "from_ref": "John 12:13", "to_ref": "Psalms 118:26", "from_first_word_id": 686605, "from_last_word_id": 686632, "to_first_word_id": 414676, "to_last_word_id": 414697}
+{"kind": "Fulfills", "from_ref": "Matthew 21:15-16", "to_ref": "Psalms 8:2", "from_first_word_id": 626266, "from_last_word_id": 626329, "to_first_word_id": 380485, "to_last_word_id": 380509}
+{"kind": "Fulfills", "from_ref": "Matthew 27:3-8", "to_ref": "Zechariah 11:13", "from_first_word_id": 632455, "from_last_word_id": 632580, "to_first_word_id": 607004, "to_last_word_id": 607044}
+{"kind": "Fulfills", "from_ref": "John 1:45", "to_ref": "Deuteronomy 18:15", "from_first_word_id": 676147, "from_last_word_id": 676175, "to_first_word_id": 143390, "to_last_word_id": 143416}
+{"kind": "Fulfills", "from_ref": "Acts 10:43", "to_ref": "Isaiah 53:11", "from_first_word_id": 703326, "from_last_word_id": 703345, "to_first_word_id": 476285, "to_last_word_id": 476312}
+{"kind": "Fulfills", "from_ref": "Acts 26:22-23", "to_ref": "Isaiah 49:6", "from_first_word_id": 716558, "from_last_word_id": 716617, "to_first_word_id": 473723, "to_last_word_id": 473773}
+{"kind": "Fulfills", "from_ref": "Acts 13:27-29", "to_ref": "Isaiah 53:8-9", "from_first_word_id": 705448, "from_last_word_id": 705524, "to_first_word_id": 476177, "to_last_word_id": 476239}
+{"kind": "Fulfills", "from_ref": "Acts 2:30", "to_ref": "Psalms 132:11", "from_first_word_id": 695700, "from_last_word_id": 695735, "to_first_word_id": 418660, "to_last_word_id": 418685}
+{"kind": "Fulfills", "from_ref": "Matthew 26:24", "to_ref": "Isaiah 53:8", "from_first_word_id": 631232, "from_last_word_id": 631268, "to_first_word_id": 476177, "to_last_word_id": 476211}
+{"kind": "Fulfills", "from_ref": "Matthew 26:54", "to_ref": "Isaiah 53:7", "from_first_word_id": 631924, "from_last_word_id": 631936, "to_first_word_id": 476140, "to_last_word_id": 476176}
+{"kind": "Fulfills", "from_ref": "Mark 14:49", "to_ref": "Isaiah 53:7", "from_first_word_id": 647498, "from_last_word_id": 647517, "to_first_word_id": 476140, "to_last_word_id": 476176}
+{"kind": "Fulfills", "from_ref": "Matthew 27:38", "to_ref": "Isaiah 53:12", "from_first_word_id": 633186, "from_last_word_id": 633203, "to_first_word_id": 476313, "to_last_word_id": 476360}
+{"kind": "Fulfills", "from_ref": "John 19:24", "to_ref": "Psalms 22:18", "from_first_word_id": 692494, "from_last_word_id": 692540, "to_first_word_id": 384516, "to_last_word_id": 384527}
+{"kind": "Fulfills", "from_ref": "Matthew 12:17-18", "to_ref": "Isaiah 42:1", "from_first_word_id": 618599, "from_last_word_id": 618642, "to_first_word_id": 469079, "to_last_word_id": 469106}
+{"kind": "Alludes to", "from_ref": "Matthew 3:16-17", "to_ref": "Isaiah 42:1", "from_first_word_id": 611935, "from_last_word_id": 611988, "to_first_word_id": 469079, "to_last_word_id": 469106}
+{"kind": "Alludes to", "from_ref": "Revelation 1:7", "to_ref": "Zechariah 12:10", "from_first_word_id": 779477, "from_last_word_id": 779507, "to_first_word_id": 607484, "to_last_word_id": 607544}
+{"kind": "Fulfills", "from_ref": "Romans 15:21", "to_ref": "Isaiah 52:15", "from_first_word_id": 727299, "from_last_word_id": 727321, "to_first_word_id": 475939, "to_last_word_id": 475973}
+{"kind": "Fulfills", "from_ref": "Romans 9:33", "to_ref": "Isaiah 28:16", "from_first_word_id": 724266, "from_last_word_id": 724289, "to_first_word_id": 460474, "to_last_word_id": 460506}
+{"kind": "Fulfills", "from_ref": "1 Peter 2:6", "to_ref": "Isaiah 28:16", "from_first_word_id": 772194, "from_last_word_id": 772222, "to_first_word_id": 460474, "to_last_word_id": 460506}
+{"kind": "Fulfills", "from_ref": "Ephesians 4:8", "to_ref": "Psalms 68:18", "from_first_word_id": 748277, "from_last_word_id": 748294, "to_first_word_id": 397924, "to_last_word_id": 397952}
+{"kind": "Fulfills", "from_ref": "Hebrews 10:5-10", "to_ref": "Psalms 40:6-8", "from_first_word_id": 766377, "from_last_word_id": 766502, "to_first_word_id": 390372, "to_last_word_id": 390425}
+{"kind": "Fulfills", "from_ref": "Matthew 13:14", "to_ref": "Isaiah 6:9", "from_first_word_id": 619659, "from_last_word_id": 619687, "to_first_word_id": 449277, "to_last_word_id": 449297}
+{"kind": "Fulfills", "from_ref": "2 Kings 23:15-16", "to_ref": "1 Kings 13:2", "from_first_word_id": 288511, "from_last_word_id": 288610, "to_first_word_id": 256582, "to_last_word_id": 256641}
+{"kind": "Fulfills", "from_ref": "2 Kings 23:17-18", "to_ref": "1 Kings 13:31-32", "from_first_word_id": 288611, "from_last_word_id": 288683, "to_first_word_id": 257548, "to_last_word_id": 257625}
+{"kind": "Fulfills", "from_ref": "1 Kings 13:24", "to_ref": "1 Kings 13:21-22", "from_first_word_id": 257319, "from_last_word_id": 257354, "to_first_word_id": 257207, "to_last_word_id": 257286}
+{"kind": "Fulfills", "from_ref": "1 Kings 16:34", "to_ref": "Joshua 6:26", "from_first_word_id": 260620, "from_last_word_id": 260664, "to_first_word_id": 160784, "to_last_word_id": 160828}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 36:21-22", "to_ref": "Jeremiah 25:11-12", "from_first_word_id": 337212, "from_last_word_id": 337298, "to_first_word_id": 501114, "to_last_word_id": 501175}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 36:21", "to_ref": "Jeremiah 29:10", "from_first_word_id": 337212, "from_last_word_id": 337246, "to_first_word_id": 504290, "to_last_word_id": 504321}
+{"kind": "Fulfills", "from_ref": "Ezra 1:1", "to_ref": "Jeremiah 29:10", "from_first_word_id": 337357, "from_last_word_id": 337407, "to_first_word_id": 504290, "to_last_word_id": 504321}
+{"kind": "Fulfills", "from_ref": "Ezra 1:1-2", "to_ref": "Isaiah 44:28", "from_first_word_id": 337357, "from_last_word_id": 337443, "to_first_word_id": 471321, "to_last_word_id": 471351}
+{"kind": "Fulfills", "from_ref": "Ezra 1:1-2", "to_ref": "Isaiah 45:1", "from_first_word_id": 337357, "from_last_word_id": 337443, "to_first_word_id": 471352, "to_last_word_id": 471394}
+{"kind": "Fulfills", "from_ref": "1 Kings 2:27", "to_ref": "1 Samuel 2:31-35", "from_first_word_id": 245200, "from_last_word_id": 245229, "to_first_word_id": 198855, "to_last_word_id": 199023}
+{"kind": "Fulfills", "from_ref": "1 Samuel 4:11", "to_ref": "1 Samuel 2:34", "from_first_word_id": 199978, "from_last_word_id": 199995, "to_first_word_id": 198955, "to_last_word_id": 198982}
+{"kind": "Fulfills", "from_ref": "1 Samuel 4:17-18", "to_ref": "1 Samuel 3:11-14", "from_first_word_id": 200141, "from_last_word_id": 200230, "to_first_word_id": 199345, "to_last_word_id": 199453}
+{"kind": "Fulfills", "from_ref": "1 Kings 15:29", "to_ref": "1 Kings 14:10-11", "from_first_word_id": 259462, "from_last_word_id": 259506, "to_first_word_id": 258009, "to_last_word_id": 258095}
+{"kind": "Fulfills", "from_ref": "1 Kings 16:12", "to_ref": "1 Kings 16:1-4", "from_first_word_id": 259982, "from_last_word_id": 260006, "to_first_word_id": 259630, "to_last_word_id": 259744}
+{"kind": "Fulfills", "from_ref": "1 Kings 22:38", "to_ref": "1 Kings 21:19", "from_first_word_id": 266956, "from_last_word_id": 266987, "to_first_word_id": 265535, "to_last_word_id": 265580}
+{"kind": "Fulfills", "from_ref": "2 Kings 9:36-37", "to_ref": "1 Kings 21:23", "from_first_word_id": 276035, "from_last_word_id": 276102, "to_first_word_id": 265688, "to_last_word_id": 265705}
+{"kind": "Fulfills", "from_ref": "2 Kings 9:25-26", "to_ref": "1 Kings 21:19", "from_first_word_id": 275697, "from_last_word_id": 275786, "to_first_word_id": 265535, "to_last_word_id": 265580}
+{"kind": "Fulfills", "from_ref": "2 Kings 10:10-11", "to_ref": "1 Kings 21:21-22", "from_first_word_id": 276434, "from_last_word_id": 276501, "to_first_word_id": 265614, "to_last_word_id": 265687}
+{"kind": "Fulfills", "from_ref": "2 Kings 10:17", "to_ref": "1 Kings 21:21", "from_first_word_id": 276681, "from_last_word_id": 276712, "to_first_word_id": 265614, "to_last_word_id": 265648}
+{"kind": "Fulfills", "from_ref": "2 Kings 1:17", "to_ref": "2 Kings 1:4", "from_first_word_id": 267998, "from_last_word_id": 268035, "to_first_word_id": 267493, "to_last_word_id": 267519}
+{"kind": "Fulfills", "from_ref": "2 Kings 7:16", "to_ref": "2 Kings 7:1", "from_first_word_id": 273757, "from_last_word_id": 273794, "to_first_word_id": 273121, "to_last_word_id": 273163}
+{"kind": "Fulfills", "from_ref": "2 Kings 7:17-20", "to_ref": "2 Kings 7:2", "from_first_word_id": 273795, "from_last_word_id": 273944, "to_first_word_id": 273164, "to_last_word_id": 273208}
+{"kind": "Fulfills", "from_ref": "2 Kings 2:22", "to_ref": "2 Kings 2:21", "from_first_word_id": 268799, "from_last_word_id": 268815, "to_first_word_id": 268760, "to_last_word_id": 268798}
+{"kind": "Fulfills", "from_ref": "2 Kings 3:20", "to_ref": "2 Kings 3:16-17", "from_first_word_id": 269477, "from_last_word_id": 269507, "to_first_word_id": 269375, "to_last_word_id": 269422}
+{"kind": "Fulfills", "from_ref": "2 Kings 4:17", "to_ref": "2 Kings 4:16", "from_first_word_id": 270258, "from_last_word_id": 270280, "to_first_word_id": 270225, "to_last_word_id": 270257}
+{"kind": "Fulfills", "from_ref": "2 Kings 8:15", "to_ref": "2 Kings 8:10-13", "from_first_word_id": 274453, "from_last_word_id": 274487, "to_first_word_id": 274297, "to_last_word_id": 274422}
+{"kind": "Fulfills", "from_ref": "2 Kings 15:12", "to_ref": "2 Kings 10:30", "from_first_word_id": 280675, "from_last_word_id": 280706, "to_first_word_id": 277108, "to_last_word_id": 277156}
+{"kind": "Fulfills", "from_ref": "2 Kings 19:35-37", "to_ref": "2 Kings 19:6-7", "from_first_word_id": 285648, "from_last_word_id": 285747, "to_first_word_id": 284755, "to_last_word_id": 284827}
+{"kind": "Fulfills", "from_ref": "2 Kings 19:35", "to_ref": "2 Kings 19:32-34", "from_first_word_id": 285648, "from_last_word_id": 285690, "to_first_word_id": 285573, "to_last_word_id": 285647}
+{"kind": "Fulfills", "from_ref": "Isaiah 37:36-38", "to_ref": "Isaiah 37:6-7", "from_first_word_id": 466525, "from_last_word_id": 466618, "to_first_word_id": 465642, "to_last_word_id": 465712}
+{"kind": "Fulfills", "from_ref": "2 Kings 20:9-11", "to_ref": "2 Kings 20:8-9", "from_first_word_id": 286001, "from_last_word_id": 286086, "to_first_word_id": 285970, "to_last_word_id": 286034}
+{"kind": "Fulfills", "from_ref": "2 Kings 24:13", "to_ref": "2 Kings 20:17", "from_first_word_id": 289672, "from_last_word_id": 289719, "to_first_word_id": 286255, "to_last_word_id": 286290}
+{"kind": "Fulfills", "from_ref": "2 Kings 25:7", "to_ref": "Ezekiel 12:13", "from_first_word_id": 290110, "from_last_word_id": 290138, "to_first_word_id": 536308, "to_last_word_id": 536347}
+{"kind": "Fulfills", "from_ref": "2 Kings 25:7", "to_ref": "Jeremiah 34:3", "from_first_word_id": 290110, "from_last_word_id": 290138, "to_first_word_id": 509392, "to_last_word_id": 509437}
+{"kind": "Fulfills", "from_ref": "2 Kings 25:9-10", "to_ref": "Jeremiah 7:14", "from_first_word_id": 290177, "from_last_word_id": 290226, "to_first_word_id": 488345, "to_last_word_id": 488379}
+{"kind": "Fulfills", "from_ref": "2 Kings 24:2", "to_ref": "2 Kings 21:12-14", "from_first_word_id": 289367, "from_last_word_id": 289416, "to_first_word_id": 286747, "to_last_word_id": 286841}
+{"kind": "Fulfills", "from_ref": "2 Kings 23:30", "to_ref": "2 Kings 22:20", "from_first_word_id": 289072, "from_last_word_id": 289117, "to_first_word_id": 287825, "to_last_word_id": 287866}
+{"kind": "Fulfills", "from_ref": "1 Kings 12:15", "to_ref": "1 Kings 11:29-31", "from_first_word_id": 255935, "from_last_word_id": 255969, "to_first_word_id": 255048, "to_last_word_id": 255142}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 10:15", "to_ref": "1 Kings 11:29-31", "from_first_word_id": 318002, "from_last_word_id": 318038, "to_first_word_id": 255048, "to_last_word_id": 255142}
+{"kind": "Fulfills", "from_ref": "1 Kings 14:17-18", "to_ref": "1 Kings 14:12-13", "from_first_word_id": 258252, "from_last_word_id": 258303, "to_first_word_id": 258096, "to_last_word_id": 258156}
+{"kind": "Fulfills", "from_ref": "1 Kings 8:20", "to_ref": "2 Samuel 7:12-13", "from_first_word_id": 251002, "from_last_word_id": 251048, "to_first_word_id": 227126, "to_last_word_id": 227178}
+{"kind": "Fulfills", "from_ref": "1 Kings 2:24", "to_ref": "2 Samuel 7:12", "from_first_word_id": 245082, "from_last_word_id": 245119, "to_first_word_id": 227126, "to_last_word_id": 227159}
+{"kind": "Fulfills", "from_ref": "2 Samuel 12:18", "to_ref": "2 Samuel 12:14", "from_first_word_id": 230453, "from_last_word_id": 230516, "to_first_word_id": 230352, "to_last_word_id": 230380}
+{"kind": "Fulfills", "from_ref": "2 Samuel 16:21-22", "to_ref": "2 Samuel 12:11-12", "from_first_word_id": 234933, "from_last_word_id": 235001, "to_first_word_id": 230261, "to_last_word_id": 230323}
+{"kind": "Fulfills", "from_ref": "1 Samuel 31:6", "to_ref": "1 Samuel 28:19", "from_first_word_id": 222019, "from_last_word_id": 222036, "to_first_word_id": 220267, "to_last_word_id": 220307}
+{"kind": "Fulfills", "from_ref": "2 Samuel 5:3", "to_ref": "1 Samuel 16:12-13", "from_first_word_id": 225514, "from_last_word_id": 225545, "to_first_word_id": 209349, "to_last_word_id": 209418}
+{"kind": "Fulfills", "from_ref": "1 Samuel 10:9", "to_ref": "1 Samuel 10:2-7", "from_first_word_id": 203907, "from_last_word_id": 203935, "to_first_word_id": 203624, "to_last_word_id": 203861}
+{"kind": "Fulfills", "from_ref": "Joshua 21:43-45", "to_ref": "Genesis 15:18", "from_first_word_id": 172607, "from_last_word_id": 172690, "to_first_word_id": 8785, "to_last_word_id": 8816}
+{"kind": "Fulfills", "from_ref": "Joshua 21:43", "to_ref": "Genesis 12:7", "from_first_word_id": 172607, "from_last_word_id": 172630, "to_first_word_id": 6956, "to_last_word_id": 6984}
+{"kind": "Fulfills", "from_ref": "1 Kings 4:20-21", "to_ref": "Genesis 22:17", "from_first_word_id": 247062, "from_last_word_id": 247115, "to_first_word_id": 13654, "to_last_word_id": 13694}
+{"kind": "Fulfills", "from_ref": "Exodus 12:40-41", "to_ref": "Genesis 15:13-14", "from_first_word_id": 47456, "from_last_word_id": 47510, "to_first_word_id": 8664, "to_last_word_id": 8718}
+{"kind": "Fulfills", "from_ref": "Exodus 12:35-36", "to_ref": "Genesis 15:14", "from_first_word_id": 47323, "from_last_word_id": 47378, "to_first_word_id": 8699, "to_last_word_id": 8718}
+{"kind": "Fulfills", "from_ref": "Exodus 12:35-36", "to_ref": "Exodus 3:21-22", "from_first_word_id": 47323, "from_last_word_id": 47378, "to_first_word_id": 40111, "to_last_word_id": 40181}
+{"kind": "Fulfills", "from_ref": "Exodus 13:19", "to_ref": "Genesis 50:25", "from_first_word_id": 48310, "from_last_word_id": 48344, "to_first_word_id": 38222, "to_last_word_id": 38246}
+{"kind": "Fulfills", "from_ref": "Joshua 24:32", "to_ref": "Genesis 50:25", "from_first_word_id": 175551, "from_last_word_id": 175602, "to_first_word_id": 38222, "to_last_word_id": 38246}
+{"kind": "Fulfills", "from_ref": "Genesis 21:1-2", "to_ref": "Genesis 18:10-14", "from_first_word_id": 12410, "from_last_word_id": 12451, "to_first_word_id": 10172, "to_last_word_id": 10301}
+{"kind": "Fulfills", "from_ref": "Genesis 21:1-2", "to_ref": "Genesis 17:19-21", "from_first_word_id": 12410, "from_last_word_id": 12451, "to_first_word_id": 9713, "to_last_word_id": 9807}
+{"kind": "Fulfills", "from_ref": "Genesis 27:37", "to_ref": "Genesis 25:23", "from_first_word_id": 18702, "from_last_word_id": 18745, "to_first_word_id": 16614, "to_last_word_id": 16654}
+{"kind": "Fulfills", "from_ref": "Genesis 41:47-54", "to_ref": "Genesis 41:29-30", "from_first_word_id": 30646, "from_last_word_id": 30840, "to_first_word_id": 30187, "to_last_word_id": 30229}
+{"kind": "Fulfills", "from_ref": "Genesis 40:21-22", "to_ref": "Genesis 40:12-19", "from_first_word_id": 29482, "from_last_word_id": 29511, "to_first_word_id": 29228, "to_last_word_id": 29442}
+{"kind": "Fulfills", "from_ref": "Genesis 42:6", "to_ref": "Genesis 37:7-9", "from_first_word_id": 31030, "from_last_word_id": 31066, "to_first_word_id": 26663, "to_last_word_id": 26762}
+{"kind": "Fulfills", "from_ref": "Numbers 26:64-65", "to_ref": "Numbers 14:28-30", "from_first_word_id": 120318, "from_last_word_id": 120381, "to_first_word_id": 109167, "to_last_word_id": 109249}
+{"kind": "Fulfills", "from_ref": "Joshua 14:10", "to_ref": "Numbers 14:24", "from_first_word_id": 167492, "from_last_word_id": 167538, "to_first_word_id": 109070, "to_last_word_id": 109101}
+{"kind": "Fulfills", "from_ref": "Deuteronomy 34:4-5", "to_ref": "Numbers 20:12", "from_first_word_id": 156526, "from_last_word_id": 156591, "to_first_word_id": 114467, "to_last_word_id": 114505}
+{"kind": "Fulfills", "from_ref": "Numbers 16:31-33", "to_ref": "Numbers 16:28-30", "from_first_word_id": 111521, "from_last_word_id": 111596, "to_first_word_id": 111422, "to_last_word_id": 111520}
+{"kind": "Fulfills", "from_ref": "Judges 7:22", "to_ref": "Judges 7:9", "from_first_word_id": 181743, "from_last_word_id": 181780, "to_first_word_id": 181285, "to_last_word_id": 181313}
+{"kind": "Fulfills", "from_ref": "Judges 4:21-22", "to_ref": "Judges 4:9", "from_first_word_id": 178760, "from_last_word_id": 178849, "to_first_word_id": 178355, "to_last_word_id": 178396}
+{"kind": "Fulfills", "from_ref": "Judges 9:56-57", "to_ref": "Judges 9:20", "from_first_word_id": 184502, "from_last_word_id": 184546, "to_first_word_id": 183441, "to_last_word_id": 183479}
+{"kind": "Fulfills", "from_ref": "1 Kings 17:16", "to_ref": "1 Kings 17:14", "from_first_word_id": 261078, "from_last_word_id": 261103, "to_first_word_id": 261023, "to_last_word_id": 261055}
+{"kind": "Fulfills", "from_ref": "1 Kings 18:45", "to_ref": "1 Kings 18:1", "from_first_word_id": 262687, "from_last_word_id": 262717, "to_first_word_id": 261345, "to_last_word_id": 261379}
+{"kind": "Fulfills", "from_ref": "1 Kings 20:29-30", "to_ref": "1 Kings 20:28", "from_first_word_id": 264388, "from_last_word_id": 264463, "to_first_word_id": 264328, "to_last_word_id": 264387}
+{"kind": "Fulfills", "from_ref": "1 Kings 20:20-21", "to_ref": "1 Kings 20:13", "from_first_word_id": 264074, "from_last_word_id": 264122, "to_first_word_id": 263859, "to_last_word_id": 263900}
+{"kind": "Fulfills", "from_ref": "1 Kings 22:34-37", "to_ref": "1 Kings 22:17", "from_first_word_id": 266831, "from_last_word_id": 266955, "to_first_word_id": 266346, "to_last_word_id": 266381}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 18:33-34", "to_ref": "2 Chronicles 18:16", "from_first_word_id": 322647, "from_last_word_id": 322725, "to_first_word_id": 322147, "to_last_word_id": 322183}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 21:18-19", "to_ref": "2 Chronicles 21:14-15", "from_first_word_id": 324748, "from_last_word_id": 324807, "to_first_word_id": 324636, "to_last_word_id": 324680}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 20:22-24", "to_ref": "2 Chronicles 20:15-17", "from_first_word_id": 323746, "from_last_word_id": 323844, "to_first_word_id": 323479, "to_last_word_id": 323596}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 24:23-25", "to_ref": "2 Chronicles 24:20", "from_first_word_id": 326799, "from_last_word_id": 326948, "to_first_word_id": 326691, "to_last_word_id": 326739}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 36:22-23", "to_ref": "Isaiah 44:28", "from_first_word_id": 337247, "from_last_word_id": 337355, "to_first_word_id": 471321, "to_last_word_id": 471351}
+{"kind": "Fulfills", "from_ref": "Ezra 6:14-15", "to_ref": "Haggai 1:8", "from_first_word_id": 341090, "from_last_word_id": 341167, "to_first_word_id": 601318, "to_last_word_id": 601344}
+{"kind": "Fulfills", "from_ref": "Ezra 6:14-15", "to_ref": "Zechariah 4:9", "from_first_word_id": 341090, "from_last_word_id": 341167, "to_first_word_id": 603717, "to_last_word_id": 603747}
+{"kind": "Fulfills", "from_ref": "Jeremiah 28:17", "to_ref": "Jeremiah 28:16", "from_first_word_id": 504004, "from_last_word_id": 504015, "to_first_word_id": 503974, "to_last_word_id": 504003}
+{"kind": "Fulfills", "from_ref": "Jeremiah 52:11", "to_ref": "Jeremiah 34:3", "from_first_word_id": 525002, "from_last_word_id": 525034, "to_first_word_id": 509392, "to_last_word_id": 509437}
+{"kind": "Fulfills", "from_ref": "Jeremiah 39:6-7", "to_ref": "Ezekiel 12:13", "from_first_word_id": 513676, "from_last_word_id": 513717, "to_first_word_id": 536308, "to_last_word_id": 536347}
+{"kind": "Fulfills", "from_ref": "Daniel 4:33", "to_ref": "Daniel 4:24-25", "from_first_word_id": 572751, "from_last_word_id": 572795, "to_first_word_id": 572459, "to_last_word_id": 572546}
+{"kind": "Fulfills", "from_ref": "Daniel 5:30-31", "to_ref": "Daniel 5:26-28", "from_first_word_id": 573938, "from_last_word_id": 573962, "to_first_word_id": 573865, "to_last_word_id": 573903}
+{"kind": "Fulfills", "from_ref": "Jonah 3:10", "to_ref": "Jonah 3:4", "from_first_word_id": 593251, "from_last_word_id": 593283, "to_first_word_id": 593079, "to_last_word_id": 593102}
+{"kind": "Fulfills", "from_ref": "Matthew 26:74-75", "to_ref": "Matthew 26:34", "from_first_word_id": 632368, "from_last_word_id": 632413, "to_first_word_id": 631467, "to_last_word_id": 631487}
+{"kind": "Fulfills", "from_ref": "Mark 14:72", "to_ref": "Mark 14:30", "from_first_word_id": 647968, "from_last_word_id": 648003, "to_first_word_id": 647082, "to_last_word_id": 647108}
+{"kind": "Fulfills", "from_ref": "Luke 22:60-61", "to_ref": "Luke 22:34", "from_first_word_id": 672922, "from_last_word_id": 672971, "to_first_word_id": 672367, "to_last_word_id": 672390}
+{"kind": "Fulfills", "from_ref": "John 18:27", "to_ref": "John 13:38", "from_first_word_id": 691601, "from_last_word_id": 691609, "to_first_word_id": 688214, "to_last_word_id": 688242}
+{"kind": "Fulfills", "from_ref": "Matthew 26:47-50", "to_ref": "Matthew 26:21-25", "from_first_word_id": 631761, "from_last_word_id": 631846, "to_first_word_id": 631174, "to_last_word_id": 631287}
+{"kind": "Fulfills", "from_ref": "John 18:2-5", "to_ref": "John 13:21-26", "from_first_word_id": 691040, "from_last_word_id": 691121, "to_first_word_id": 687854, "to_last_word_id": 687971}
+{"kind": "Fulfills", "from_ref": "Matthew 28:5-7", "to_ref": "Matthew 16:21", "from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 622748, "to_last_word_id": 622787}
+{"kind": "Fulfills", "from_ref": "Matthew 28:5-7", "to_ref": "Matthew 17:22-23", "from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 623428, "to_last_word_id": 623468}
+{"kind": "Fulfills", "from_ref": "Matthew 28:5-7", "to_ref": "Matthew 20:18-19", "from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 625537, "to_last_word_id": 625589}
+{"kind": "Fulfills", "from_ref": "Matthew 28:6", "to_ref": "Matthew 12:40", "from_first_word_id": 633879, "from_last_word_id": 633897, "to_first_word_id": 619123, "to_last_word_id": 619153}
+{"kind": "Fulfills", "from_ref": "Mark 16:6", "to_ref": "Mark 8:31", "from_first_word_id": 649027, "from_last_word_id": 649056, "to_first_word_id": 641144, "to_last_word_id": 641180}
+{"kind": "Fulfills", "from_ref": "Mark 16:6", "to_ref": "Mark 9:31", "from_first_word_id": 649027, "from_last_word_id": 649056, "to_first_word_id": 642045, "to_last_word_id": 642081}
+{"kind": "Fulfills", "from_ref": "Mark 16:6", "to_ref": "Mark 10:33-34", "from_first_word_id": 649027, "from_last_word_id": 649056, "to_first_word_id": 643236, "to_last_word_id": 643298}
+{"kind": "Fulfills", "from_ref": "Luke 24:6-8", "to_ref": "Luke 9:22", "from_first_word_id": 674354, "from_last_word_id": 674400, "to_first_word_id": 659391, "to_last_word_id": 659419}
+{"kind": "Fulfills", "from_ref": "Luke 24:6-8", "to_ref": "Luke 18:31-33", "from_first_word_id": 674354, "from_last_word_id": 674400, "to_first_word_id": 668669, "to_last_word_id": 668738}
+{"kind": "Fulfills", "from_ref": "John 2:22", "to_ref": "John 2:19-21", "from_first_word_id": 676746, "from_last_word_id": 676775, "to_first_word_id": 676697, "to_last_word_id": 676745}
+{"kind": "Fulfills", "from_ref": "Matthew 28:7", "to_ref": "Matthew 26:32", "from_first_word_id": 633898, "from_last_word_id": 633929, "to_first_word_id": 631433, "to_last_word_id": 631445}
+{"kind": "Fulfills", "from_ref": "Mark 16:7", "to_ref": "Mark 14:28", "from_first_word_id": 649057, "from_last_word_id": 649082, "to_first_word_id": 647055, "to_last_word_id": 647067}
+{"kind": "Fulfills", "from_ref": "Matthew 28:16-17", "to_ref": "Matthew 26:32", "from_first_word_id": 634098, "from_last_word_id": 634124, "to_first_word_id": 631433, "to_last_word_id": 631445}
+{"kind": "Fulfills", "from_ref": "Acts 21:33", "to_ref": "Acts 21:10-11", "from_first_word_id": 712772, "from_last_word_id": 712799, "to_first_word_id": 712149, "to_last_word_id": 712213}
+{"kind": "Fulfills", "from_ref": "Acts 2:1-4", "to_ref": "Acts 1:5", "from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 694522, "to_last_word_id": 694540}
+{"kind": "Fulfills", "from_ref": "Acts 2:1-4", "to_ref": "Acts 1:8", "from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 694590, "to_last_word_id": 694628}
+{"kind": "Fulfills", "from_ref": "Acts 2:1-4", "to_ref": "Luke 24:49", "from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 675223, "to_last_word_id": 675250}
+{"kind": "Fulfills", "from_ref": "Acts 2:1-4", "to_ref": "John 14:16-17", "from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 688568, "to_last_word_id": 688620}
+{"kind": "Fulfills", "from_ref": "Acts 2:1-4", "to_ref": "Matthew 3:11", "from_first_word_id": 695077, "from_last_word_id": 695158, "to_first_word_id": 611811, "to_last_word_id": 611847}
+{"kind": "Fulfills", "from_ref": "Acts 11:15-16", "to_ref": "Acts 1:5", "from_first_word_id": 703733, "from_last_word_id": 703776, "to_first_word_id": 694522, "to_last_word_id": 694540}
+{"kind": "Fulfills", "from_ref": "Acts 27:41-44", "to_ref": "Acts 27:22-26", "from_first_word_id": 717737, "from_last_word_id": 717845, "to_first_word_id": 717302, "to_last_word_id": 717396}
+{"kind": "Fulfills", "from_ref": "Acts 28:16", "to_ref": "Acts 23:11", "from_first_word_id": 718215, "from_last_word_id": 718245, "to_first_word_id": 714039, "to_last_word_id": 714071}
+{"kind": "Fulfills", "from_ref": "Acts 28:16", "to_ref": "Acts 27:24", "from_first_word_id": 718215, "from_last_word_id": 718245, "to_first_word_id": 717346, "to_last_word_id": 717367}
+{"kind": "Fulfills", "from_ref": "John 18:31-32", "to_ref": "John 12:32-33", "from_first_word_id": 691682, "from_last_word_id": 691731, "to_first_word_id": 687000, "to_last_word_id": 687024}
+{"kind": "Fulfills", "from_ref": "John 18:8-9", "to_ref": "John 17:12", "from_first_word_id": 691156, "from_last_word_id": 691194, "to_first_word_id": 690648, "to_last_word_id": 690686}
+{"kind": "Fulfills", "from_ref": "John 18:8-9", "to_ref": "John 6:39", "from_first_word_id": 691156, "from_last_word_id": 691194, "to_first_word_id": 680516, "to_last_word_id": 680547}
+{"kind": "Fulfills", "from_ref": "John 19:1", "to_ref": "Mark 10:34", "from_first_word_id": 691959, "from_last_word_id": 691966, "to_first_word_id": 643273, "to_last_word_id": 643298}
+{"kind": "Fulfills", "from_ref": "Matthew 27:26", "to_ref": "Matthew 20:19", "from_first_word_id": 632937, "from_last_word_id": 632954, "to_first_word_id": 625566, "to_last_word_id": 625589}
+{"kind": "Fulfills", "from_ref": "Luke 1:57", "to_ref": "Luke 1:13", "from_first_word_id": 650523, "from_last_word_id": 650538, "to_first_word_id": 649617, "to_last_word_id": 649646}
+{"kind": "Fulfills", "from_ref": "Luke 1:64", "to_ref": "Luke 1:20", "from_first_word_id": 650649, "from_last_word_id": 650664, "to_first_word_id": 649805, "to_last_word_id": 649837}
+{"kind": "Fulfills", "from_ref": "Luke 2:6-7", "to_ref": "Luke 1:31", "from_first_word_id": 651049, "from_last_word_id": 651095, "to_first_word_id": 650048, "to_last_word_id": 650066}
+{"kind": "Fulfills", "from_ref": "Matthew 1:25", "to_ref": "Matthew 1:21", "from_first_word_id": 610965, "from_last_word_id": 610982, "to_first_word_id": 610873, "to_last_word_id": 610895}
+{"kind": "Fulfills", "from_ref": "Luke 2:21", "to_ref": "Luke 1:31", "from_first_word_id": 651369, "from_last_word_id": 651399, "to_first_word_id": 650048, "to_last_word_id": 650066}
+{"kind": "Fulfills", "from_ref": "Luke 1:62-64", "to_ref": "Luke 1:13", "from_first_word_id": 650618, "from_last_word_id": 650664, "to_first_word_id": 649617, "to_last_word_id": 649646}
+{"kind": "Fulfills", "from_ref": "Luke 22:13", "to_ref": "Luke 22:10-12", "from_first_word_id": 671949, "from_last_word_id": 671965, "to_first_word_id": 671875, "to_last_word_id": 671948}
+{"kind": "Fulfills", "from_ref": "Mark 14:16", "to_ref": "Mark 14:13-15", "from_first_word_id": 646779, "from_last_word_id": 646802, "to_first_word_id": 646701, "to_last_word_id": 646778}
+{"kind": "Fulfills", "from_ref": "Mark 11:4-6", "to_ref": "Mark 11:2-3", "from_first_word_id": 643832, "from_last_word_id": 643887, "to_first_word_id": 643768, "to_last_word_id": 643831}
+{"kind": "Fulfills", "from_ref": "Luke 19:32", "to_ref": "Luke 19:30-31", "from_first_word_id": 669609, "from_last_word_id": 669625, "to_first_word_id": 669553, "to_last_word_id": 669608}
+{"kind": "Fulfills", "from_ref": "John 11:43-44", "to_ref": "John 11:23", "from_first_word_id": 686013, "from_last_word_id": 686059, "to_first_word_id": 685597, "to_last_word_id": 685605}
+{"kind": "Fulfills", "from_ref": "John 4:51-53", "to_ref": "John 4:50", "from_first_word_id": 678598, "from_last_word_id": 678669, "to_first_word_id": 678571, "to_last_word_id": 678597}
+{"kind": "Fulfills", "from_ref": "Acts 9:17-18", "to_ref": "Acts 9:12", "from_first_word_id": 701673, "from_last_word_id": 701743, "to_first_word_id": 701563, "to_last_word_id": 701586}
+{"kind": "Fulfills", "from_ref": "Acts 1:9", "to_ref": "John 20:17", "from_first_word_id": 694629, "from_last_word_id": 694651, "to_first_word_id": 693320, "to_last_word_id": 693359}
+{"kind": "Fulfills", "from_ref": "Matthew 26:56", "to_ref": "Matthew 26:31", "from_first_word_id": 631978, "from_last_word_id": 631999, "to_first_word_id": 631399, "to_last_word_id": 631432}
+{"kind": "Fulfills", "from_ref": "Mark 14:50", "to_ref": "Mark 14:27", "from_first_word_id": 647518, "from_last_word_id": 647524, "to_first_word_id": 647025, "to_last_word_id": 647054}
+{"kind": "Fulfills", "from_ref": "Acts 5:10", "to_ref": "Acts 5:9", "from_first_word_id": 697822, "from_last_word_id": 697853, "to_first_word_id": 697783, "to_last_word_id": 697821}
+{"kind": "Fulfills", "from_ref": "Luke 2:27-30", "to_ref": "Luke 2:26", "from_first_word_id": 651530, "from_last_word_id": 651590, "to_first_word_id": 651507, "to_last_word_id": 651529}
+{"kind": "Fulfills", "from_ref": "John 21:19", "to_ref": "John 21:18", "from_first_word_id": 694230, "from_last_word_id": 694252, "to_first_word_id": 694188, "to_last_word_id": 694229}
+{"kind": "Fulfills", "from_ref": "1 Samuel 16:13", "to_ref": "1 Samuel 15:28", "from_first_word_id": 209382, "from_last_word_id": 209418, "to_first_word_id": 208808, "to_last_word_id": 208838}
+{"kind": "Fulfills", "from_ref": "Genesis 7:17-23", "to_ref": "Genesis 6:17", "from_first_word_id": 4241, "from_last_word_id": 4418, "to_first_word_id": 3677, "to_last_word_id": 3713}
+{"kind": "Fulfills", "from_ref": "3 Nephi 1:15-21", "to_ref": "Helaman 14:2-6", "from_first_word_id": 997909, "from_last_word_id": 998208, "to_first_word_id": 994201, "to_last_word_id": 994407}
+{"kind": "Fulfills", "from_ref": "3 Nephi 1:15-19", "to_ref": "3 Nephi 1:13", "from_first_word_id": 997909, "from_last_word_id": 998174, "to_first_word_id": 997782, "to_last_word_id": 997840}
+{"kind": "Fulfills", "from_ref": "3 Nephi 8:5-23", "to_ref": "Helaman 14:20-27", "from_first_word_id": 1005729, "from_last_word_id": 1006329, "to_first_word_id": 994895, "to_last_word_id": 995220}
+{"kind": "Fulfills", "from_ref": "3 Nephi 8:3", "to_ref": "Helaman 14:20", "from_first_word_id": 1005667, "from_last_word_id": 1005709, "to_first_word_id": 994895, "to_last_word_id": 994976}
+{"kind": "Fulfills", "from_ref": "3 Nephi 23:9-11", "to_ref": "Helaman 14:25", "from_first_word_id": 1020968, "from_last_word_id": 1021079, "to_first_word_id": 995135, "to_last_word_id": 995155}
+{"kind": "Fulfills", "from_ref": "Mormon 8:2-7", "to_ref": "Helaman 13:9-10", "from_first_word_id": 1034178, "from_last_word_id": 1034411, "to_first_word_id": 992717, "to_last_word_id": 992797}
+{"kind": "Fulfills", "from_ref": "Mormon 8:2-7", "to_ref": "Alma 45:10-11", "from_first_word_id": 1034178, "from_last_word_id": 1034411, "to_first_word_id": 950356, "to_last_word_id": 950420}
+{"kind": "Fulfills", "from_ref": "Mormon 2:10-11", "to_ref": "Helaman 13:18-20", "from_first_word_id": 1029092, "from_last_word_id": 1029176, "to_first_word_id": 993076, "to_last_word_id": 993268}
+{"kind": "Fulfills", "from_ref": "Mormon 1:18", "to_ref": "Helaman 13:18-20", "from_first_word_id": 1028605, "from_last_word_id": 1028652, "to_first_word_id": 993076, "to_last_word_id": 993268}
+{"kind": "Fulfills", "from_ref": "3 Nephi 1:1", "to_ref": "1 Nephi 10:4", "from_first_word_id": 997335, "from_last_word_id": 997379, "to_first_word_id": 799895, "to_last_word_id": 799930}
+{"kind": "Fulfills", "from_ref": "3 Nephi 1:1", "to_ref": "1 Nephi 19:8", "from_first_word_id": 997335, "from_last_word_id": 997379, "to_first_word_id": 813352, "to_last_word_id": 813373}
+{"kind": "Fulfills", "from_ref": "3 Nephi 1:1", "to_ref": "2 Nephi 25:19", "from_first_word_id": 997335, "from_last_word_id": 997379, "to_first_word_id": 838411, "to_last_word_id": 838460}
+{"kind": "Fulfills", "from_ref": "3 Nephi 8:23", "to_ref": "1 Nephi 19:10", "from_first_word_id": 1006274, "from_last_word_id": 1006329, "to_first_word_id": 813428, "to_last_word_id": 813555}
+{"kind": "Fulfills", "from_ref": "3 Nephi 8:5-19", "to_ref": "1 Nephi 19:11-12", "from_first_word_id": 1005729, "from_last_word_id": 1006168, "to_first_word_id": 813556, "to_last_word_id": 813678}
+{"kind": "Fulfills", "from_ref": "3 Nephi 8:5-19", "to_ref": "1 Nephi 12:4-5", "from_first_word_id": 1005729, "from_last_word_id": 1006168, "to_first_word_id": 802118, "to_last_word_id": 802263}
+{"kind": "Fulfills", "from_ref": "3 Nephi 11:8-10", "to_ref": "1 Nephi 12:6", "from_first_word_id": 1008517, "from_last_word_id": 1008632, "to_first_word_id": 802264, "to_last_word_id": 802287}
+{"kind": "Fulfills", "from_ref": "3 Nephi 11:8-10", "to_ref": "2 Nephi 26:9", "from_first_word_id": 1008517, "from_last_word_id": 1008632, "to_first_word_id": 839411, "to_last_word_id": 839450}
+{"kind": "Fulfills", "from_ref": "3 Nephi 11:8-10", "to_ref": "Alma 16:20", "from_first_word_id": 1008517, "from_last_word_id": 1008632, "to_first_word_id": 913111, "to_last_word_id": 913151}
+{"kind": "Fulfills", "from_ref": "3 Nephi 9:3-12", "to_ref": "2 Nephi 26:4-6", "from_first_word_id": 1006520, "from_last_word_id": 1007018, "to_first_word_id": 839196, "to_last_word_id": 839323}
+{"kind": "Fulfills", "from_ref": "3 Nephi 1:15-21", "to_ref": "2 Nephi 26:3", "from_first_word_id": 997909, "from_last_word_id": 998208, "to_first_word_id": 839120, "to_last_word_id": 839195}
+{"kind": "Fulfills", "from_ref": "3 Nephi 12:1", "to_ref": "1 Nephi 12:7-10", "from_first_word_id": 1009683, "from_last_word_id": 1009824, "to_first_word_id": 802288, "to_last_word_id": 802412}
+{"kind": "Fulfills", "from_ref": "4 Nephi 1:1-3", "to_ref": "1 Nephi 12:11-12", "from_first_word_id": 1026039, "from_last_word_id": 1026183, "to_first_word_id": 802413, "to_last_word_id": 802479}
+{"kind": "Fulfills", "from_ref": "Mormon 6:7-15", "to_ref": "1 Nephi 12:15-19", "from_first_word_id": 1033079, "from_last_word_id": 1033481, "to_first_word_id": 802511, "to_last_word_id": 802744}
+{"kind": "Fulfills", "from_ref": "Mormon 6:7-15", "to_ref": "2 Nephi 26:10", "from_first_word_id": 1033079, "from_last_word_id": 1033481, "to_first_word_id": 839451, "to_last_word_id": 839526}
+{"kind": "Fulfills", "from_ref": "Mormon 6:7-15", "to_ref": "Alma 45:10-11", "from_first_word_id": 1033079, "from_last_word_id": 1033481, "to_first_word_id": 950356, "to_last_word_id": 950420}
+{"kind": "Fulfills", "from_ref": "Mosiah 19:20", "to_ref": "Mosiah 12:3", "from_first_word_id": 879629, "from_last_word_id": 879656, "to_first_word_id": 872759, "to_last_word_id": 872790}
+{"kind": "Fulfills", "from_ref": "Mosiah 19:20", "to_ref": "Mosiah 17:18", "from_first_word_id": 879629, "from_last_word_id": 879656, "to_first_word_id": 877525, "to_last_word_id": 877557}
+{"kind": "Fulfills", "from_ref": "Alma 25:9-12", "to_ref": "Mosiah 17:15-18", "from_first_word_id": 925104, "from_last_word_id": 925266, "to_first_word_id": 877426, "to_last_word_id": 877557}
+{"kind": "Fulfills", "from_ref": "Mosiah 20:21", "to_ref": "Mosiah 12:2", "from_first_word_id": 880691, "from_last_word_id": 880722, "to_first_word_id": 872683, "to_last_word_id": 872758}
+{"kind": "Fulfills", "from_ref": "Mosiah 21:3-4", "to_ref": "Mosiah 12:2-5", "from_first_word_id": 880994, "from_last_word_id": 881055, "to_first_word_id": 872683, "to_last_word_id": 872848}
+{"kind": "Fulfills", "from_ref": "Alma 16:9-11", "to_ref": "Alma 9:18-19", "from_first_word_id": 912642, "from_last_word_id": 912784, "to_first_word_id": 903011, "to_last_word_id": 903147}
+{"kind": "Fulfills", "from_ref": "Alma 16:9-11", "to_ref": "Alma 10:22-23", "from_first_word_id": 912642, "from_last_word_id": 912784, "to_first_word_id": 904860, "to_last_word_id": 904988}
+{"kind": "Fulfills", "from_ref": "Alma 16:7-8", "to_ref": "Alma 16:6", "from_first_word_id": 912543, "from_last_word_id": 912641, "to_first_word_id": 912468, "to_last_word_id": 912542}
+{"kind": "Fulfills", "from_ref": "Alma 30:50", "to_ref": "Alma 30:49", "from_first_word_id": 931868, "from_last_word_id": 931890, "to_first_word_id": 931823, "to_last_word_id": 931867}
+{"kind": "Fulfills", "from_ref": "Alma 17:35", "to_ref": "Mosiah 28:7", "from_first_word_id": 914768, "from_last_word_id": 914838, "to_first_word_id": 888972, "to_last_word_id": 889007}
+{"kind": "Fulfills", "from_ref": "Helaman 9:3-4", "to_ref": "Helaman 8:27", "from_first_word_id": 987802, "from_last_word_id": 987867, "to_first_word_id": 987618, "to_last_word_id": 987662}
+{"kind": "Fulfills", "from_ref": "Helaman 9:35-37", "to_ref": "Helaman 9:27-34", "from_first_word_id": 988914, "from_last_word_id": 989029, "to_first_word_id": 988744, "to_last_word_id": 988913}
+{"kind": "Fulfills", "from_ref": "Omni 1:21", "to_ref": "Ether 13:20-21", "from_first_word_id": 858811, "from_last_word_id": 858844, "to_first_word_id": 1051207, "to_last_word_id": 1051304}
+{"kind": "Fulfills", "from_ref": "Ether 15:29-32", "to_ref": "Ether 13:20-21", "from_first_word_id": 1053832, "from_last_word_id": 1053958, "to_first_word_id": 1051207, "to_last_word_id": 1051304}
+{"kind": "Fulfills", "from_ref": "1 Nephi 4:17-18", "to_ref": "1 Nephi 3:29", "from_first_word_id": 795625, "from_last_word_id": 795678, "to_first_word_id": 794928, "to_last_word_id": 795004}
+{"kind": "Fulfills", "from_ref": "2 Nephi 5:20-24", "to_ref": "1 Nephi 2:21-23", "from_first_word_id": 823566, "from_last_word_id": 823763, "to_first_word_id": 793894, "to_last_word_id": 793969}
+{"kind": "Fulfills", "from_ref": "1 Nephi 18:23", "to_ref": "1 Nephi 2:20", "from_first_word_id": 812721, "from_last_word_id": 812763, "to_first_word_id": 793854, "to_last_word_id": 793893}
+{"kind": "Fulfills", "from_ref": "Mosiah 24:15-16", "to_ref": "Mosiah 24:13-14", "from_first_word_id": 884650, "from_last_word_id": 884739, "to_first_word_id": 884536, "to_last_word_id": 884649}
+{"kind": "Fulfills", "from_ref": "Mosiah 24:20-21", "to_ref": "Mosiah 24:16-17", "from_first_word_id": 884822, "from_last_word_id": 884907, "to_first_word_id": 884700, "to_last_word_id": 884763}
+{"kind": "Fulfills", "from_ref": "Helaman 8:21", "to_ref": "1 Nephi 1:13", "from_first_word_id": 987328, "from_last_word_id": 987382, "to_first_word_id": 792643, "to_last_word_id": 792690}
+{"kind": "Fulfills", "from_ref": "2 Nephi 6:8", "to_ref": "1 Nephi 1:13", "from_first_word_id": 824374, "from_last_word_id": 824407, "to_first_word_id": 792643, "to_last_word_id": 792690}
+{"kind": "Fulfills", "from_ref": "3 Nephi 16:1-3", "to_ref": "3 Nephi 15:21", "from_first_word_id": 1013168, "from_last_word_id": 1013278, "to_first_word_id": 1013026, "to_last_word_id": 1013069}
+{"kind": "Fulfills", "from_ref": "Luke 1:26-31", "to_ref": "1 Nephi 11:13-20", "from_first_word_id": 649943, "from_last_word_id": 650066, "to_first_word_id": 801108, "to_last_word_id": 801305}
+{"kind": "Fulfills", "from_ref": "Luke 2:7", "to_ref": "1 Nephi 11:20", "from_first_word_id": 651067, "from_last_word_id": 651095, "to_first_word_id": 801292, "to_last_word_id": 801305}
+{"kind": "Fulfills", "from_ref": "Luke 1:26-31", "to_ref": "Alma 7:10", "from_first_word_id": 649943, "from_last_word_id": 650066, "to_first_word_id": 900154, "to_last_word_id": 900203}
+{"kind": "Fulfills", "from_ref": "Luke 1:26-31", "to_ref": "Mosiah 3:8", "from_first_word_id": 649943, "from_last_word_id": 650066, "to_first_word_id": 863519, "to_last_word_id": 863550}
+{"kind": "Fulfills", "from_ref": "John 1:26-34", "to_ref": "1 Nephi 10:7-10", "from_first_word_id": 675765, "from_last_word_id": 675955, "to_first_word_id": 799984, "to_last_word_id": 800120}
+{"kind": "Fulfills", "from_ref": "John 1:28", "to_ref": "1 Nephi 10:9", "from_first_word_id": 675803, "from_last_word_id": 675814, "to_first_word_id": 800060, "to_last_word_id": 800088}
+{"kind": "Fulfills", "from_ref": "Matthew 3:13-17", "to_ref": "1 Nephi 11:27", "from_first_word_id": 611878, "from_last_word_id": 611988, "to_first_word_id": 801502, "to_last_word_id": 801571}
+{"kind": "Fulfills", "from_ref": "Matthew 3:13-17", "to_ref": "2 Nephi 31:4-8", "from_first_word_id": 611878, "from_last_word_id": 611988, "to_first_word_id": 844873, "to_last_word_id": 845038}
+{"kind": "Fulfills", "from_ref": "Matthew 4:23-24", "to_ref": "1 Nephi 11:28-31", "from_first_word_id": 612447, "from_last_word_id": 612522, "to_first_word_id": 801572, "to_last_word_id": 801759}
+{"kind": "Fulfills", "from_ref": "Matthew 4:23-24", "to_ref": "Mosiah 3:5-6", "from_first_word_id": 612447, "from_last_word_id": 612522, "to_first_word_id": 863367, "to_last_word_id": 863471}
+{"kind": "Fulfills", "from_ref": "Matthew 10:1-4", "to_ref": "1 Nephi 11:29", "from_first_word_id": 616657, "from_last_word_id": 616747, "to_first_word_id": 801608, "to_last_word_id": 801637}
+{"kind": "Fulfills", "from_ref": "Luke 22:44", "to_ref": "Mosiah 3:7", "from_first_word_id": 672580, "from_last_word_id": 672604, "to_first_word_id": 863472, "to_last_word_id": 863518}
+{"kind": "Fulfills", "from_ref": "Matthew 27:26-31", "to_ref": "1 Nephi 19:9", "from_first_word_id": 632937, "from_last_word_id": 633067, "to_first_word_id": 813374, "to_last_word_id": 813427}
+{"kind": "Fulfills", "from_ref": "Matthew 27:35", "to_ref": "1 Nephi 11:32-33", "from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 801760, "to_last_word_id": 801827}
+{"kind": "Fulfills", "from_ref": "Matthew 27:35", "to_ref": "Mosiah 3:9", "from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 863551, "to_last_word_id": 863598}
+{"kind": "Fulfills", "from_ref": "Matthew 27:35", "to_ref": "2 Nephi 10:3", "from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 828599, "to_last_word_id": 828667}
+{"kind": "Fulfills", "from_ref": "Matthew 27:35", "to_ref": "1 Nephi 19:10", "from_first_word_id": 633127, "from_last_word_id": 633161, "to_first_word_id": 813428, "to_last_word_id": 813555}
+{"kind": "Fulfills", "from_ref": "Matthew 27:57-60", "to_ref": "1 Nephi 19:10", "from_first_word_id": 633560, "from_last_word_id": 633642, "to_first_word_id": 813428, "to_last_word_id": 813555}
+{"kind": "Fulfills", "from_ref": "Matthew 28:5-7", "to_ref": "Mosiah 3:10", "from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 863599, "to_last_word_id": 863634}
+{"kind": "Fulfills", "from_ref": "Matthew 28:5-7", "to_ref": "2 Nephi 25:13", "from_first_word_id": 633857, "from_last_word_id": 633929, "to_first_word_id": 838023, "to_last_word_id": 838091}
+{"kind": "Fulfills", "from_ref": "2 Kings 25:8-11", "to_ref": "1 Nephi 1:13", "from_first_word_id": 290139, "from_last_word_id": 290264, "to_first_word_id": 792643, "to_last_word_id": 792690}
+{"kind": "Fulfills", "from_ref": "2 Kings 25:8-11", "to_ref": "1 Nephi 10:3", "from_first_word_id": 290139, "from_last_word_id": 290264, "to_first_word_id": 799836, "to_last_word_id": 799894}
+{"kind": "Fulfills", "from_ref": "2 Kings 25:8-11", "to_ref": "2 Nephi 1:4", "from_first_word_id": 290139, "from_last_word_id": 290264, "to_first_word_id": 817492, "to_last_word_id": 817519}
+{"kind": "Fulfills", "from_ref": "Ezra 1:1-3", "to_ref": "1 Nephi 10:3", "from_first_word_id": 337357, "from_last_word_id": 337486, "to_first_word_id": 799836, "to_last_word_id": 799894}
+{"kind": "Fulfills", "from_ref": "Ezra 1:1-3", "to_ref": "2 Nephi 6:9", "from_first_word_id": 337357, "from_last_word_id": 337486, "to_first_word_id": 824408, "to_last_word_id": 824468}
+{"kind": "Fulfills", "from_ref": "Ezra 1:1-3", "to_ref": "2 Nephi 25:11", "from_first_word_id": 337357, "from_last_word_id": 337486, "to_first_word_id": 837921, "to_last_word_id": 837962}
+{"kind": "Fulfills", "from_ref": "3 Nephi 15:21-24", "to_ref": "John 10:16", "from_first_word_id": 1013026, "from_last_word_id": 1013167, "to_first_word_id": 684695, "to_last_word_id": 684725}
+{"kind": "Fulfills", "from_ref": "3 Nephi 16:1-3", "to_ref": "John 10:16", "from_first_word_id": 1013168, "from_last_word_id": 1013278, "to_first_word_id": 684695, "to_last_word_id": 684725}
+{"kind": "Fulfills", "from_ref": "3 Nephi 20:23", "to_ref": "Deuteronomy 18:15", "from_first_word_id": 1018237, "from_last_word_id": 1018298, "to_first_word_id": 143390, "to_last_word_id": 143416}
+{"kind": "Fulfills", "from_ref": "D&C 110:13-15", "to_ref": "Malachi 4:5-6", "from_first_word_id": 1146246, "from_last_word_id": 1146332, "to_first_word_id": 610453, "to_last_word_id": 610503}
+{"kind": "Fulfills", "from_ref": "D&C 110:13-16", "to_ref": "D&C 2:1-3", "from_first_word_id": 1146246, "from_last_word_id": 1146364, "to_first_word_id": 1061263, "to_last_word_id": 1061331}
+{"kind": "Fulfills", "from_ref": "JS-H 1:63-65", "to_ref": "Isaiah 29:11-12", "from_first_word_id": 1197946, "from_last_word_id": 1198283, "to_first_word_id": 461171, "to_last_word_id": 461235}
+{"kind": "Fulfills", "from_ref": "JS-H 1:63-65", "to_ref": "2 Nephi 27:15-20", "from_first_word_id": 1197946, "from_last_word_id": 1198283, "to_first_word_id": 841232, "to_last_word_id": 841418}
+{"kind": "Fulfills", "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "2 Nephi 27:12", "from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 841064, "to_last_word_id": 841137}
+{"kind": "Fulfills", "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "Ether 5:2-4", "from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 1041904, "to_last_word_id": 1042012}
+{"kind": "Fulfills", "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "D&C 5:11-15", "from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 1062402, "to_last_word_id": 1062542}
+{"kind": "Fulfills", "from_ref": "Testimony of Three Witnesses 1:1", "to_ref": "D&C 17:1-3", "from_first_word_id": 791563, "from_last_word_id": 791866, "to_first_word_id": 1068973, "to_last_word_id": 1069104}
+{"kind": "Fulfills", "from_ref": "Testimony of Eight Witnesses 1:1", "to_ref": "2 Nephi 27:13-14", "from_first_word_id": 791871, "from_last_word_id": 792037, "to_first_word_id": 841138, "to_last_word_id": 841231}
+{"kind": "Alludes to", "from_ref": "John 1:1-3", "to_ref": "Genesis 1:1-3", "from_first_word_id": 675317, "from_last_word_id": 675358, "to_first_word_id": 8, "to_last_word_id": 57}
+{"kind": "Alludes to", "from_ref": "John 1:4-5", "to_ref": "Genesis 1:3-4", "from_first_word_id": 675359, "from_last_word_id": 675382, "to_first_word_id": 47, "to_last_word_id": 74}
+{"kind": "Alludes to", "from_ref": "John 1:14", "to_ref": "Exodus 40:34-35", "from_first_word_id": 675517, "from_last_word_id": 675546, "to_first_word_id": 70844, "to_last_word_id": 70888}
+{"kind": "Alludes to", "from_ref": "John 1:29", "to_ref": "Isaiah 53:7", "from_first_word_id": 675815, "from_last_word_id": 675838, "to_first_word_id": 476140, "to_last_word_id": 476176}
+{"kind": "Alludes to", "from_ref": "John 1:29", "to_ref": "Exodus 12:3-6", "from_first_word_id": 675815, "from_last_word_id": 675838, "to_first_word_id": 46288, "to_last_word_id": 46418}
+{"kind": "Alludes to", "from_ref": "John 1:51", "to_ref": "Genesis 28:12", "from_first_word_id": 676291, "from_last_word_id": 676320, "to_first_word_id": 19302, "to_last_word_id": 19332}
+{"kind": "Alludes to", "from_ref": "John 6:49-51", "to_ref": "Exodus 16:15", "from_first_word_id": 680734, "from_last_word_id": 680804, "to_first_word_id": 50534, "to_last_word_id": 50573}
+{"kind": "Alludes to", "from_ref": "John 8:58", "to_ref": "Exodus 3:14", "from_first_word_id": 683460, "from_last_word_id": 683474, "to_first_word_id": 39828, "to_last_word_id": 39856}
+{"kind": "Alludes to", "from_ref": "John 10:11-16", "to_ref": "Ezekiel 34:11-16", "from_first_word_id": 684598, "from_last_word_id": 684725, "to_first_word_id": 555355, "to_last_word_id": 555563}
+{"kind": "Alludes to", "from_ref": "John 10:11", "to_ref": "Psalms 23:1", "from_first_word_id": 684598, "from_last_word_id": 684611, "to_first_word_id": 384795, "to_last_word_id": 384803}
+{"kind": "Alludes to", "from_ref": "John 15:1-6", "to_ref": "Isaiah 5:1-7", "from_first_word_id": 688974, "from_last_word_id": 689115, "to_first_word_id": 448196, "to_last_word_id": 448426}
+{"kind": "Alludes to", "from_ref": "John 7:37-38", "to_ref": "Isaiah 55:1", "from_first_word_id": 681919, "from_last_word_id": 681964, "to_first_word_id": 476854, "to_last_word_id": 476885}
+{"kind": "Alludes to", "from_ref": "John 4:10-14", "to_ref": "Jeremiah 2:13", "from_first_word_id": 677749, "from_last_word_id": 677883, "to_first_word_id": 483977, "to_last_word_id": 484004}
+{"kind": "Alludes to", "from_ref": "John 8:12", "to_ref": "Isaiah 9:2", "from_first_word_id": 682434, "from_last_word_id": 682463, "to_first_word_id": 450724, "to_last_word_id": 450751}
+{"kind": "Alludes to", "from_ref": "John 20:22", "to_ref": "Genesis 2:7", "from_first_word_id": 693471, "from_last_word_id": 693489, "to_first_word_id": 961, "to_last_word_id": 987}
+{"kind": "Alludes to", "from_ref": "1 Corinthians 5:7", "to_ref": "Exodus 12:21", "from_first_word_id": 730258, "from_last_word_id": 730283, "to_first_word_id": 46884, "to_last_word_id": 46911}
+{"kind": "Alludes to", "from_ref": "1 Corinthians 10:1-4", "to_ref": "Exodus 14:21-22", "from_first_word_id": 732836, "from_last_word_id": 732904, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "1 Corinthians 10:3-4", "to_ref": "Exodus 17:6", "from_first_word_id": 732874, "from_last_word_id": 732904, "to_first_word_id": 51291, "to_last_word_id": 51333}
+{"kind": "Alludes to", "from_ref": "1 Corinthians 15:21-22", "to_ref": "Genesis 3:17-19", "from_first_word_id": 736363, "from_last_word_id": 736392, "to_first_word_id": 1897, "to_last_word_id": 2001}
+{"kind": "Alludes to", "from_ref": "Romans 5:12", "to_ref": "Genesis 3:6", "from_first_word_id": 721305, "from_last_word_id": 721330, "to_first_word_id": 1565, "to_last_word_id": 1615}
+{"kind": "Alludes to", "from_ref": "Romans 5:14", "to_ref": "Genesis 2:17", "from_first_word_id": 721350, "from_last_word_id": 721379, "to_first_word_id": 1194, "to_last_word_id": 1222}
+{"kind": "Alludes to", "from_ref": "Romans 8:20-22", "to_ref": "Genesis 3:17", "from_first_word_id": 723103, "from_last_word_id": 723161, "to_first_word_id": 1897, "to_last_word_id": 1949}
+{"kind": "Alludes to", "from_ref": "Romans 9:21", "to_ref": "Jeremiah 18:6", "from_first_word_id": 723985, "from_last_word_id": 724006, "to_first_word_id": 496187, "to_last_word_id": 496220}
+{"kind": "Alludes to", "from_ref": "Romans 9:20-21", "to_ref": "Isaiah 45:9", "from_first_word_id": 723958, "from_last_word_id": 724006, "to_first_word_id": 471592, "to_last_word_id": 471628}
+{"kind": "Alludes to", "from_ref": "2 Corinthians 3:7", "to_ref": "Exodus 34:29-30", "from_first_word_id": 738737, "from_last_word_id": 738776, "to_first_word_id": 65625, "to_last_word_id": 65694}
+{"kind": "Alludes to", "from_ref": "2 Corinthians 3:13", "to_ref": "Exodus 34:33-35", "from_first_word_id": 738855, "from_last_word_id": 738882, "to_first_word_id": 65743, "to_last_word_id": 65828}
+{"kind": "Alludes to", "from_ref": "2 Corinthians 4:6", "to_ref": "Genesis 1:3", "from_first_word_id": 739108, "from_last_word_id": 739141, "to_first_word_id": 47, "to_last_word_id": 57}
+{"kind": "Alludes to", "from_ref": "2 Corinthians 11:3", "to_ref": "Genesis 3:13", "from_first_word_id": 742100, "from_last_word_id": 742127, "to_first_word_id": 1764, "to_last_word_id": 1790}
+{"kind": "Alludes to", "from_ref": "1 Timothy 2:13-14", "to_ref": "Genesis 3:6", "from_first_word_id": 757583, "from_last_word_id": 757603, "to_first_word_id": 1565, "to_last_word_id": 1615}
+{"kind": "Alludes to", "from_ref": "Ephesians 6:14-17", "to_ref": "Isaiah 59:17", "from_first_word_id": 749608, "from_last_word_id": 749674, "to_first_word_id": 479116, "to_last_word_id": 479149}
+{"kind": "Alludes to", "from_ref": "Ephesians 6:14-17", "to_ref": "Isaiah 11:5", "from_first_word_id": 749608, "from_last_word_id": 749674, "to_first_word_id": 452332, "to_last_word_id": 452347}
+{"kind": "Alludes to", "from_ref": "1 Thessalonians 5:8", "to_ref": "Isaiah 59:17", "from_first_word_id": 755599, "from_last_word_id": 755624, "to_first_word_id": 479116, "to_last_word_id": 479149}
+{"kind": "Alludes to", "from_ref": "Philippians 2:10-11", "to_ref": "Isaiah 45:23", "from_first_word_id": 750643, "from_last_word_id": 750683, "to_first_word_id": 472054, "to_last_word_id": 472083}
+{"kind": "Alludes to", "from_ref": "Galatians 4:22-26", "to_ref": "Genesis 21:9-10", "from_first_word_id": 745781, "from_last_word_id": 745879, "to_first_word_id": 12566, "to_last_word_id": 12609}
+{"kind": "Alludes to", "from_ref": "Jude 1:7", "to_ref": "Genesis 19:24", "from_first_word_id": 778852, "from_last_word_id": 778886, "to_first_word_id": 11512, "to_last_word_id": 11529}
+{"kind": "Alludes to", "from_ref": "Jude 1:11", "to_ref": "Genesis 4:8", "from_first_word_id": 778957, "from_last_word_id": 778985, "to_first_word_id": 2295, "to_last_word_id": 2323}
+{"kind": "Alludes to", "from_ref": "Jude 1:11", "to_ref": "Numbers 22:7", "from_first_word_id": 778957, "from_last_word_id": 778985, "to_first_word_id": 116095, "to_last_word_id": 116126}
+{"kind": "Alludes to", "from_ref": "Jude 1:11", "to_ref": "Numbers 16:31-33", "from_first_word_id": 778957, "from_last_word_id": 778985, "to_first_word_id": 111521, "to_last_word_id": 111596}
+{"kind": "Alludes to", "from_ref": "Jude 1:14", "to_ref": "Genesis 5:21-24", "from_first_word_id": 779047, "from_last_word_id": 779067, "to_first_word_id": 3079, "to_last_word_id": 3131}
+{"kind": "Alludes to", "from_ref": "2 Peter 2:5", "to_ref": "Genesis 7:23", "from_first_word_id": 774593, "from_last_word_id": 774618, "to_first_word_id": 4370, "to_last_word_id": 4418}
+{"kind": "Alludes to", "from_ref": "2 Peter 2:6-8", "to_ref": "Genesis 19:24-29", "from_first_word_id": 774619, "from_last_word_id": 774679, "to_first_word_id": 11512, "to_last_word_id": 11653}
+{"kind": "Alludes to", "from_ref": "2 Peter 2:15-16", "to_ref": "Numbers 22:28", "from_first_word_id": 774839, "from_last_word_id": 774882, "to_first_word_id": 116669, "to_last_word_id": 116696}
+{"kind": "Alludes to", "from_ref": "2 Peter 3:5-6", "to_ref": "Genesis 1:6-9", "from_first_word_id": 775158, "from_last_word_id": 775198, "to_first_word_id": 97, "to_last_word_id": 186}
+{"kind": "Alludes to", "from_ref": "2 Peter 3:8", "to_ref": "Psalms 90:4", "from_first_word_id": 775229, "from_last_word_id": 775255, "to_first_word_id": 406215, "to_last_word_id": 406236}
+{"kind": "Alludes to", "from_ref": "1 Peter 3:20", "to_ref": "Genesis 7:7", "from_first_word_id": 773118, "from_last_word_id": 773149, "to_first_word_id": 3991, "to_last_word_id": 4016}
+{"kind": "Alludes to", "from_ref": "1 Peter 1:19", "to_ref": "Exodus 12:5", "from_first_word_id": 771948, "from_last_word_id": 771963, "to_first_word_id": 46366, "to_last_word_id": 46389}
+{"kind": "Alludes to", "from_ref": "1 Peter 2:9", "to_ref": "Exodus 19:6", "from_first_word_id": 772277, "from_last_word_id": 772311, "to_first_word_id": 52492, "to_last_word_id": 52518}
+{"kind": "Alludes to", "from_ref": "1 Peter 2:25", "to_ref": "Isaiah 53:6", "from_first_word_id": 772639, "from_last_word_id": 772657, "to_first_word_id": 476112, "to_last_word_id": 476139}
+{"kind": "Alludes to", "from_ref": "1 John 3:12", "to_ref": "Genesis 4:8", "from_first_word_id": 776792, "from_last_word_id": 776819, "to_first_word_id": 2295, "to_last_word_id": 2323}
+{"kind": "Alludes to", "from_ref": "James 2:21", "to_ref": "Genesis 22:9-10", "from_first_word_id": 770160, "from_last_word_id": 770177, "to_first_word_id": 13434, "to_last_word_id": 13485}
+{"kind": "Alludes to", "from_ref": "James 2:25", "to_ref": "Joshua 2:1-15", "from_first_word_id": 770235, "from_last_word_id": 770257, "to_first_word_id": 157349, "to_last_word_id": 157828}
+{"kind": "Alludes to", "from_ref": "James 5:17-18", "to_ref": "1 Kings 17:1", "from_first_word_id": 771412, "from_last_word_id": 771463, "to_first_word_id": 260665, "to_last_word_id": 260703}
+{"kind": "Alludes to", "from_ref": "James 5:17-18", "to_ref": "1 Kings 18:45", "from_first_word_id": 771412, "from_last_word_id": 771463, "to_first_word_id": 262687, "to_last_word_id": 262717}
+{"kind": "Alludes to", "from_ref": "James 5:11", "to_ref": "Job 1:21", "from_first_word_id": 771246, "from_last_word_id": 771278, "to_first_word_id": 361521, "to_last_word_id": 361552}
+{"kind": "Alludes to", "from_ref": "Luke 4:25-26", "to_ref": "1 Kings 17:9", "from_first_word_id": 653613, "from_last_word_id": 653670, "to_first_word_id": 260834, "to_last_word_id": 260856}
+{"kind": "Alludes to", "from_ref": "Luke 4:27", "to_ref": "2 Kings 5:14", "from_first_word_id": 653671, "from_last_word_id": 653693, "to_first_word_id": 271599, "to_last_word_id": 271635}
+{"kind": "Alludes to", "from_ref": "Luke 17:26-27", "to_ref": "Genesis 7:7", "from_first_word_id": 667802, "from_last_word_id": 667853, "to_first_word_id": 3991, "to_last_word_id": 4016}
+{"kind": "Alludes to", "from_ref": "Luke 17:28-29", "to_ref": "Genesis 19:24", "from_first_word_id": 667854, "from_last_word_id": 667897, "to_first_word_id": 11512, "to_last_word_id": 11529}
+{"kind": "Alludes to", "from_ref": "Luke 17:32", "to_ref": "Genesis 19:26", "from_first_word_id": 667951, "from_last_word_id": 667953, "to_first_word_id": 11553, "to_last_word_id": 11567}
+{"kind": "Alludes to", "from_ref": "Matthew 24:37-39", "to_ref": "Genesis 7:7", "from_first_word_id": 629495, "from_last_word_id": 629564, "to_first_word_id": 3991, "to_last_word_id": 4016}
+{"kind": "Alludes to", "from_ref": "Matthew 12:41", "to_ref": "Jonah 3:5", "from_first_word_id": 619154, "from_last_word_id": 619184, "to_first_word_id": 593103, "to_last_word_id": 593128}
+{"kind": "Alludes to", "from_ref": "Matthew 12:42", "to_ref": "1 Kings 10:1", "from_first_word_id": 619185, "from_last_word_id": 619226, "to_first_word_id": 253424, "to_last_word_id": 253449}
+{"kind": "Alludes to", "from_ref": "Matthew 12:3-4", "to_ref": "1 Samuel 21:6", "from_first_word_id": 618298, "from_last_word_id": 618353, "to_first_word_id": 214427, "to_last_word_id": 214461}
+{"kind": "Alludes to", "from_ref": "Matthew 23:35", "to_ref": "Genesis 4:8", "from_first_word_id": 628625, "from_last_word_id": 628660, "to_first_word_id": 2295, "to_last_word_id": 2323}
+{"kind": "Alludes to", "from_ref": "Matthew 23:35", "to_ref": "2 Chronicles 24:20-21", "from_first_word_id": 628625, "from_last_word_id": 628660, "to_first_word_id": 326691, "to_last_word_id": 326764}
+{"kind": "Alludes to", "from_ref": "Matthew 24:29", "to_ref": "Isaiah 13:10", "from_first_word_id": 629294, "from_last_word_id": 629329, "to_first_word_id": 453074, "to_last_word_id": 453106}
+{"kind": "Alludes to", "from_ref": "Mark 13:24-25", "to_ref": "Isaiah 13:10", "from_first_word_id": 646129, "from_last_word_id": 646165, "to_first_word_id": 453074, "to_last_word_id": 453106}
+{"kind": "Alludes to", "from_ref": "Matthew 24:30", "to_ref": "Daniel 7:13", "from_first_word_id": 629330, "from_last_word_id": 629371, "to_first_word_id": 575294, "to_last_word_id": 575327}
+{"kind": "Alludes to", "from_ref": "Mark 13:26", "to_ref": "Daniel 7:13", "from_first_word_id": 646166, "from_last_word_id": 646183, "to_first_word_id": 575294, "to_last_word_id": 575327}
+{"kind": "Alludes to", "from_ref": "Mark 14:62", "to_ref": "Daniel 7:13", "from_first_word_id": 647740, "from_last_word_id": 647766, "to_first_word_id": 575294, "to_last_word_id": 575327}
+{"kind": "Alludes to", "from_ref": "Matthew 21:33", "to_ref": "Isaiah 5:1-2", "from_first_word_id": 626770, "from_last_word_id": 626808, "to_first_word_id": 448196, "to_last_word_id": 448267}
+{"kind": "Alludes to", "from_ref": "Mark 12:1", "to_ref": "Isaiah 5:1-2", "from_first_word_id": 644523, "from_last_word_id": 644566, "to_first_word_id": 448196, "to_last_word_id": 448267}
+{"kind": "Alludes to", "from_ref": "Matthew 25:31-33", "to_ref": "Ezekiel 34:17", "from_first_word_id": 630411, "from_last_word_id": 630478, "to_first_word_id": 555564, "to_last_word_id": 555589}
+{"kind": "Alludes to", "from_ref": "Matthew 5:8", "to_ref": "Psalms 24:3-4", "from_first_word_id": 612632, "from_last_word_id": 612642, "to_first_word_id": 384947, "to_last_word_id": 384984}
+{"kind": "Alludes to", "from_ref": "Matthew 5:3-4", "to_ref": "Isaiah 61:1-3", "from_first_word_id": 612575, "from_last_word_id": 612597, "to_first_word_id": 479959, "to_last_word_id": 480075}
+{"kind": "Alludes to", "from_ref": "Matthew 11:5", "to_ref": "Isaiah 35:5-6", "from_first_word_id": 617656, "from_last_word_id": 617686, "to_first_word_id": 464623, "to_last_word_id": 464669}
+{"kind": "Alludes to", "from_ref": "Luke 7:22", "to_ref": "Isaiah 35:5-6", "from_first_word_id": 656770, "from_last_word_id": 656814, "to_first_word_id": 464623, "to_last_word_id": 464669}
+{"kind": "Alludes to", "from_ref": "Matthew 11:28-29", "to_ref": "Jeremiah 6:16", "from_first_word_id": 618192, "from_last_word_id": 618233, "to_first_word_id": 487644, "to_last_word_id": 487684}
+{"kind": "Alludes to", "from_ref": "Matthew 11:23", "to_ref": "Isaiah 14:13-15", "from_first_word_id": 618050, "from_last_word_id": 618086, "to_first_word_id": 453762, "to_last_word_id": 453829}
+{"kind": "Alludes to", "from_ref": "Matthew 13:32", "to_ref": "Daniel 4:12", "from_first_word_id": 620148, "from_last_word_id": 620184, "to_first_word_id": 571963, "to_last_word_id": 572006}
+{"kind": "Alludes to", "from_ref": "Mark 4:32", "to_ref": "Ezekiel 17:23", "from_first_word_id": 637203, "from_last_word_id": 637235, "to_first_word_id": 540952, "to_last_word_id": 540997}
+{"kind": "Alludes to", "from_ref": "Matthew 3:4", "to_ref": "2 Kings 1:8", "from_first_word_id": 611659, "from_last_word_id": 611683, "to_first_word_id": 267635, "to_last_word_id": 267661}
+{"kind": "Alludes to", "from_ref": "Mark 1:6", "to_ref": "2 Kings 1:8", "from_first_word_id": 634299, "from_last_word_id": 634323, "to_first_word_id": 267635, "to_last_word_id": 267661}
+{"kind": "Alludes to", "from_ref": "Matthew 17:2-3", "to_ref": "Exodus 34:29", "from_first_word_id": 622994, "from_last_word_id": 623026, "to_first_word_id": 65625, "to_last_word_id": 65668}
+{"kind": "Alludes to", "from_ref": "Matthew 17:5", "to_ref": "Deuteronomy 18:15", "from_first_word_id": 623063, "from_last_word_id": 623096, "to_first_word_id": 143390, "to_last_word_id": 143416}
+{"kind": "Alludes to", "from_ref": "Luke 9:35", "to_ref": "Deuteronomy 18:15", "from_first_word_id": 659717, "from_last_word_id": 659733, "to_first_word_id": 143390, "to_last_word_id": 143416}
+{"kind": "Alludes to", "from_ref": "Matthew 26:28", "to_ref": "Exodus 24:8", "from_first_word_id": 631335, "from_last_word_id": 631353, "to_first_word_id": 56322, "to_last_word_id": 56351}
+{"kind": "Alludes to", "from_ref": "Mark 14:24", "to_ref": "Exodus 24:8", "from_first_word_id": 646963, "from_last_word_id": 646980, "to_first_word_id": 56322, "to_last_word_id": 56351}
+{"kind": "Alludes to", "from_ref": "Luke 22:20", "to_ref": "Jeremiah 31:31", "from_first_word_id": 672090, "from_last_word_id": 672110, "to_first_word_id": 506657, "to_last_word_id": 506681}
+{"kind": "Alludes to", "from_ref": "1 Corinthians 11:25", "to_ref": "Jeremiah 31:31", "from_first_word_id": 734017, "from_last_word_id": 734052, "to_first_word_id": 506657, "to_last_word_id": 506681}
+{"kind": "Alludes to", "from_ref": "Matthew 9:36", "to_ref": "Numbers 27:17", "from_first_word_id": 616599, "from_last_word_id": 616623, "to_first_word_id": 120789, "to_last_word_id": 120827}
+{"kind": "Alludes to", "from_ref": "Mark 6:34", "to_ref": "Numbers 27:17", "from_first_word_id": 639194, "from_last_word_id": 639226, "to_first_word_id": 120789, "to_last_word_id": 120827}
+{"kind": "Alludes to", "from_ref": "Luke 1:46-55", "to_ref": "1 Samuel 2:1-10", "from_first_word_id": 650368, "from_last_word_id": 650508, "to_first_word_id": 197973, "to_last_word_id": 198241}
+{"kind": "Alludes to", "from_ref": "Luke 1:78-79", "to_ref": "Isaiah 9:2", "from_first_word_id": 650893, "from_last_word_id": 650932, "to_first_word_id": 450724, "to_last_word_id": 450751}
+{"kind": "Alludes to", "from_ref": "Luke 1:78", "to_ref": "Malachi 4:2", "from_first_word_id": 650893, "from_last_word_id": 650908, "to_first_word_id": 610368, "to_last_word_id": 610398}
+{"kind": "Alludes to", "from_ref": "Luke 2:14", "to_ref": "Isaiah 9:6", "from_first_word_id": 651221, "from_last_word_id": 651234, "to_first_word_id": 450832, "to_last_word_id": 450870}
+{"kind": "Alludes to", "from_ref": "Luke 24:27", "to_ref": "Deuteronomy 18:15", "from_first_word_id": 674791, "from_last_word_id": 674810, "to_first_word_id": 143390, "to_last_word_id": 143416}
+{"kind": "Alludes to", "from_ref": "Acts 2:2-3", "to_ref": "Exodus 19:18", "from_first_word_id": 695095, "from_last_word_id": 695136, "to_first_word_id": 52843, "to_last_word_id": 52875}
+{"kind": "Alludes to", "from_ref": "Acts 17:24", "to_ref": "1 Kings 8:27", "from_first_word_id": 709124, "from_last_word_id": 709148, "to_first_word_id": 251252, "to_last_word_id": 251278}
+{"kind": "Alludes to", "from_ref": "Hebrews 1:3", "to_ref": "Psalms 110:1", "from_first_word_id": 762335, "from_last_word_id": 762377, "to_first_word_id": 412954, "to_last_word_id": 412972}
+{"kind": "Alludes to", "from_ref": "Hebrews 3:2-6", "to_ref": "Numbers 12:7", "from_first_word_id": 763119, "from_last_word_id": 763229, "to_first_word_id": 107476, "to_last_word_id": 107488}
+{"kind": "Alludes to", "from_ref": "Hebrews 3:16-19", "to_ref": "Numbers 14:29-35", "from_first_word_id": 763391, "from_last_word_id": 763461, "to_first_word_id": 109191, "to_last_word_id": 109378}
+{"kind": "Alludes to", "from_ref": "Hebrews 4:8", "to_ref": "Joshua 21:44", "from_first_word_id": 763646, "from_last_word_id": 763662, "to_first_word_id": 172631, "to_last_word_id": 172668}
+{"kind": "Alludes to", "from_ref": "Hebrews 6:19-20", "to_ref": "Leviticus 16:2", "from_first_word_id": 764571, "from_last_word_id": 764612, "to_first_word_id": 84448, "to_last_word_id": 84496}
+{"kind": "Alludes to", "from_ref": "Hebrews 7:1-3", "to_ref": "Genesis 14:18-20", "from_first_word_id": 764613, "from_last_word_id": 764693, "to_first_word_id": 8209, "to_last_word_id": 8269}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:1-5", "to_ref": "Exodus 25:10-22", "from_first_word_id": 765607, "from_last_word_id": 765711, "to_first_word_id": 56756, "to_last_word_id": 57113}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:2", "to_ref": "Exodus 26:33-35", "from_first_word_id": 765622, "from_last_word_id": 765644, "to_first_word_id": 58329, "to_last_word_id": 58420}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:4", "to_ref": "Numbers 17:8-10", "from_first_word_id": 765659, "from_last_word_id": 765693, "to_first_word_id": 112221, "to_last_word_id": 112321}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:4", "to_ref": "Exodus 16:33", "from_first_word_id": 765659, "from_last_word_id": 765693, "to_first_word_id": 51040, "to_last_word_id": 51068}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:7", "to_ref": "Leviticus 16:14-15", "from_first_word_id": 765732, "from_last_word_id": 765758, "to_first_word_id": 84826, "to_last_word_id": 84910}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:13", "to_ref": "Numbers 19:9", "from_first_word_id": 765896, "from_last_word_id": 765920, "to_first_word_id": 113684, "to_last_word_id": 113732}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:19", "to_ref": "Exodus 24:6-8", "from_first_word_id": 766038, "from_last_word_id": 766077, "to_first_word_id": 56269, "to_last_word_id": 56351}
+{"kind": "Alludes to", "from_ref": "Hebrews 9:22", "to_ref": "Leviticus 17:11", "from_first_word_id": 766107, "from_last_word_id": 766125, "to_first_word_id": 85910, "to_last_word_id": 85948}
+{"kind": "Alludes to", "from_ref": "Hebrews 10:1-4", "to_ref": "Leviticus 16:34", "from_first_word_id": 766286, "from_last_word_id": 766376, "to_first_word_id": 85549, "to_last_word_id": 85581}
+{"kind": "Alludes to", "from_ref": "Hebrews 10:11", "to_ref": "Exodus 29:38", "from_first_word_id": 766503, "from_last_word_id": 766520, "to_first_word_id": 61374, "to_last_word_id": 61394}
+{"kind": "Alludes to", "from_ref": "Hebrews 10:28", "to_ref": "Deuteronomy 17:6", "from_first_word_id": 766807, "from_last_word_id": 766819, "to_first_word_id": 142475, "to_last_word_id": 142508}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:3", "to_ref": "Genesis 1:1", "from_first_word_id": 767094, "from_last_word_id": 767121, "to_first_word_id": 8, "to_last_word_id": 17}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:4", "to_ref": "Genesis 4:4", "from_first_word_id": 767122, "from_last_word_id": 767155, "to_first_word_id": 2199, "to_last_word_id": 2225}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:5", "to_ref": "Genesis 5:24", "from_first_word_id": 767156, "from_last_word_id": 767187, "to_first_word_id": 3119, "to_last_word_id": 3131}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:7", "to_ref": "Genesis 6:13-22", "from_first_word_id": 767220, "from_last_word_id": 767261, "to_first_word_id": 3548, "to_last_word_id": 3846}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:8", "to_ref": "Genesis 12:1-4", "from_first_word_id": 767262, "from_last_word_id": 767292, "to_first_word_id": 6776, "to_last_word_id": 6884}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:9", "to_ref": "Genesis 26:3", "from_first_word_id": 767293, "from_last_word_id": 767321, "to_first_word_id": 16927, "to_last_word_id": 16966}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:11", "to_ref": "Genesis 21:1-2", "from_first_word_id": 767337, "from_last_word_id": 767365, "to_first_word_id": 12410, "to_last_word_id": 12451}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:12", "to_ref": "Genesis 22:17", "from_first_word_id": 767366, "from_last_word_id": 767398, "to_first_word_id": 13654, "to_last_word_id": 13694}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:17-19", "to_ref": "Genesis 22:1-13", "from_first_word_id": 767499, "from_last_word_id": 767556, "to_first_word_id": 13184, "to_last_word_id": 13586}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:20", "to_ref": "Genesis 27:27-40", "from_first_word_id": 767557, "from_last_word_id": 767567, "to_first_word_id": 18387, "to_last_word_id": 18835}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:21", "to_ref": "Genesis 48:15-20", "from_first_word_id": 767568, "from_last_word_id": 767590, "to_first_word_id": 36567, "to_last_word_id": 36764}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:21", "to_ref": "Genesis 47:31", "from_first_word_id": 767568, "from_last_word_id": 767590, "to_first_word_id": 36159, "to_last_word_id": 36177}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:22", "to_ref": "Genesis 50:24-25", "from_first_word_id": 767591, "from_last_word_id": 767612, "to_first_word_id": 38188, "to_last_word_id": 38246}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:23", "to_ref": "Exodus 2:2", "from_first_word_id": 767613, "from_last_word_id": 767643, "to_first_word_id": 38752, "to_last_word_id": 38775}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:24-26", "to_ref": "Exodus 2:11", "from_first_word_id": 767644, "from_last_word_id": 767703, "to_first_word_id": 39006, "to_last_word_id": 39041}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:27", "to_ref": "Exodus 2:15", "from_first_word_id": 767704, "from_last_word_id": 767724, "to_first_word_id": 39132, "to_last_word_id": 39164}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:28", "to_ref": "Exodus 12:21-23", "from_first_word_id": 767725, "from_last_word_id": 767744, "to_first_word_id": 46884, "to_last_word_id": 47010}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:29", "to_ref": "Exodus 14:21-29", "from_first_word_id": 767745, "from_last_word_id": 767764, "to_first_word_id": 49009, "to_last_word_id": 49300}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:30", "to_ref": "Joshua 6:20", "from_first_word_id": 767765, "from_last_word_id": 767779, "to_first_word_id": 160546, "to_last_word_id": 160603}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:31", "to_ref": "Joshua 6:23", "from_first_word_id": 767780, "from_last_word_id": 767799, "to_first_word_id": 160668, "to_last_word_id": 160709}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:32", "to_ref": "Judges 6:11", "from_first_word_id": 767800, "from_last_word_id": 767833, "to_first_word_id": 179931, "to_last_word_id": 179968}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:33", "to_ref": "Daniel 6:22", "from_first_word_id": 767834, "from_last_word_id": 767847, "to_first_word_id": 574622, "to_last_word_id": 574659}
+{"kind": "Alludes to", "from_ref": "Hebrews 11:34", "to_ref": "Daniel 3:25-27", "from_first_word_id": 767848, "from_last_word_id": 767876, "to_first_word_id": 571441, "to_last_word_id": 571565}
+{"kind": "Alludes to", "from_ref": "Hebrews 12:16-17", "to_ref": "Genesis 25:33-34", "from_first_word_id": 768345, "from_last_word_id": 768393, "to_first_word_id": 16827, "to_last_word_id": 16873}
+{"kind": "Alludes to", "from_ref": "Hebrews 12:16-17", "to_ref": "Genesis 27:34-38", "from_first_word_id": 768345, "from_last_word_id": 768393, "to_first_word_id": 18615, "to_last_word_id": 18774}
+{"kind": "Alludes to", "from_ref": "Hebrews 12:18-21", "to_ref": "Exodus 19:12-19", "from_first_word_id": 768394, "from_last_word_id": 768488, "to_first_word_id": 52662, "to_last_word_id": 52898}
+{"kind": "Alludes to", "from_ref": "Hebrews 12:24", "to_ref": "Genesis 4:10", "from_first_word_id": 768544, "from_last_word_id": 768566, "to_first_word_id": 2346, "to_last_word_id": 2364}
+{"kind": "Alludes to", "from_ref": "Hebrews 13:2", "to_ref": "Genesis 18:1-8", "from_first_word_id": 768692, "from_last_word_id": 768704, "to_first_word_id": 9937, "to_last_word_id": 10154}
+{"kind": "Alludes to", "from_ref": "Hebrews 13:11", "to_ref": "Leviticus 16:27", "from_first_word_id": 768879, "from_last_word_id": 768902, "to_first_word_id": 85303, "to_last_word_id": 85350}
+{"kind": "Alludes to", "from_ref": "Hebrews 13:20", "to_ref": "Isaiah 63:11", "from_first_word_id": 769064, "from_last_word_id": 769090, "to_first_word_id": 481000, "to_last_word_id": 481038}
+{"kind": "Alludes to", "from_ref": "Revelation 1:13-15", "to_ref": "Daniel 7:9", "from_first_word_id": 779662, "from_last_word_id": 779738, "to_first_word_id": 575161, "to_last_word_id": 575204}
+{"kind": "Alludes to", "from_ref": "Revelation 1:13-15", "to_ref": "Daniel 10:5-6", "from_first_word_id": 779662, "from_last_word_id": 779738, "to_first_word_id": 577714, "to_last_word_id": 577784}
+{"kind": "Alludes to", "from_ref": "Revelation 1:16", "to_ref": "Isaiah 49:2", "from_first_word_id": 779739, "from_last_word_id": 779768, "to_first_word_id": 473598, "to_last_word_id": 473630}
+{"kind": "Alludes to", "from_ref": "Revelation 1:17", "to_ref": "Isaiah 44:6", "from_first_word_id": 779769, "from_last_word_id": 779800, "to_first_word_id": 470589, "to_last_word_id": 470619}
+{"kind": "Alludes to", "from_ref": "Revelation 1:8", "to_ref": "Isaiah 41:4", "from_first_word_id": 779508, "from_last_word_id": 779532, "to_first_word_id": 468362, "to_last_word_id": 468385}
+{"kind": "Alludes to", "from_ref": "Revelation 22:13", "to_ref": "Isaiah 44:6", "from_first_word_id": 791054, "from_last_word_id": 791068, "to_first_word_id": 470589, "to_last_word_id": 470619}
+{"kind": "Alludes to", "from_ref": "Revelation 2:7", "to_ref": "Genesis 2:9", "from_first_word_id": 780034, "from_last_word_id": 780072, "to_first_word_id": 1008, "to_last_word_id": 1050}
+{"kind": "Alludes to", "from_ref": "Revelation 22:2", "to_ref": "Genesis 2:9", "from_first_word_id": 790739, "from_last_word_id": 790784, "to_first_word_id": 1008, "to_last_word_id": 1050}
+{"kind": "Alludes to", "from_ref": "Revelation 22:1-2", "to_ref": "Ezekiel 47:1-12", "from_first_word_id": 790714, "from_last_word_id": 790784, "to_first_word_id": 566768, "to_last_word_id": 567224}
+{"kind": "Alludes to", "from_ref": "Revelation 2:14", "to_ref": "Numbers 31:16", "from_first_word_id": 780266, "from_last_word_id": 780306, "to_first_word_id": 123569, "to_last_word_id": 123602}
+{"kind": "Alludes to", "from_ref": "Revelation 2:17", "to_ref": "Exodus 16:33", "from_first_word_id": 780343, "from_last_word_id": 780394, "to_first_word_id": 51040, "to_last_word_id": 51068}
+{"kind": "Alludes to", "from_ref": "Revelation 2:20", "to_ref": "1 Kings 16:31", "from_first_word_id": 780454, "from_last_word_id": 780489, "to_first_word_id": 260525, "to_last_word_id": 260572}
+{"kind": "Alludes to", "from_ref": "Revelation 2:27", "to_ref": "Psalms 2:9", "from_first_word_id": 780634, "from_last_word_id": 780662, "to_first_word_id": 379287, "to_last_word_id": 379305}
+{"kind": "Alludes to", "from_ref": "Revelation 12:5", "to_ref": "Psalms 2:9", "from_first_word_id": 785191, "from_last_word_id": 785220, "to_first_word_id": 379287, "to_last_word_id": 379305}
+{"kind": "Alludes to", "from_ref": "Revelation 19:15", "to_ref": "Psalms 2:9", "from_first_word_id": 789234, "from_last_word_id": 789273, "to_first_word_id": 379287, "to_last_word_id": 379305}
+{"kind": "Alludes to", "from_ref": "Revelation 3:7", "to_ref": "Isaiah 22:22", "from_first_word_id": 780867, "from_last_word_id": 780907, "to_first_word_id": 457512, "to_last_word_id": 457541}
+{"kind": "Alludes to", "from_ref": "Revelation 4:1-3", "to_ref": "Ezekiel 1:26-28", "from_first_word_id": 781344, "from_last_word_id": 781438, "to_first_word_id": 529915, "to_last_word_id": 530061}
+{"kind": "Alludes to", "from_ref": "Revelation 4:6-8", "to_ref": "Ezekiel 1:5-10", "from_first_word_id": 781502, "from_last_word_id": 781610, "to_first_word_id": 529329, "to_last_word_id": 529484}
+{"kind": "Alludes to", "from_ref": "Revelation 4:8", "to_ref": "Isaiah 6:2-3", "from_first_word_id": 781570, "from_last_word_id": 781610, "to_first_word_id": 449085, "to_last_word_id": 449136}
+{"kind": "Alludes to", "from_ref": "Revelation 5:1", "to_ref": "Ezekiel 2:9-10", "from_first_word_id": 781692, "from_last_word_id": 781717, "to_first_word_id": 530292, "to_last_word_id": 530334}
+{"kind": "Alludes to", "from_ref": "Revelation 5:5", "to_ref": "Genesis 49:9-10", "from_first_word_id": 781785, "from_last_word_id": 781819, "to_first_word_id": 37004, "to_last_word_id": 37062}
+{"kind": "Alludes to", "from_ref": "Revelation 5:5", "to_ref": "Isaiah 11:10", "from_first_word_id": 781785, "from_last_word_id": 781819, "to_first_word_id": 452460, "to_last_word_id": 452491}
+{"kind": "Alludes to", "from_ref": "Revelation 22:16", "to_ref": "Isaiah 11:1", "from_first_word_id": 791115, "from_last_word_id": 791144, "to_first_word_id": 452203, "to_last_word_id": 452224}
+{"kind": "Alludes to", "from_ref": "Revelation 5:6", "to_ref": "Zechariah 4:10", "from_first_word_id": 781820, "from_last_word_id": 781869, "to_first_word_id": 603748, "to_last_word_id": 603789}
+{"kind": "Alludes to", "from_ref": "Revelation 5:6", "to_ref": "Isaiah 53:7", "from_first_word_id": 781820, "from_last_word_id": 781869, "to_first_word_id": 476140, "to_last_word_id": 476176}
+{"kind": "Alludes to", "from_ref": "Revelation 5:10", "to_ref": "Exodus 19:6", "from_first_word_id": 781970, "from_last_word_id": 781986, "to_first_word_id": 52492, "to_last_word_id": 52518}
+{"kind": "Alludes to", "from_ref": "Revelation 1:6", "to_ref": "Exodus 19:6", "from_first_word_id": 779454, "from_last_word_id": 779476, "to_first_word_id": 52492, "to_last_word_id": 52518}
+{"kind": "Alludes to", "from_ref": "Revelation 5:11", "to_ref": "Daniel 7:10", "from_first_word_id": 781987, "from_last_word_id": 782022, "to_first_word_id": 575205, "to_last_word_id": 575237}
+{"kind": "Alludes to", "from_ref": "Revelation 6:2-8", "to_ref": "Zechariah 6:2-3", "from_first_word_id": 782157, "from_last_word_id": 782394, "to_first_word_id": 604245, "to_last_word_id": 604274}
+{"kind": "Alludes to", "from_ref": "Revelation 6:12-13", "to_ref": "Joel 2:31", "from_first_word_id": 782499, "from_last_word_id": 782556, "to_first_word_id": 586775, "to_last_word_id": 586797}
+{"kind": "Alludes to", "from_ref": "Revelation 6:13-14", "to_ref": "Isaiah 34:4", "from_first_word_id": 782531, "from_last_word_id": 782579, "to_first_word_id": 464083, "to_last_word_id": 464125}
+{"kind": "Alludes to", "from_ref": "Revelation 6:16", "to_ref": "Hosea 10:8", "from_first_word_id": 782621, "from_last_word_id": 782650, "to_first_word_id": 583851, "to_last_word_id": 583890}
+{"kind": "Alludes to", "from_ref": "Revelation 7:3", "to_ref": "Ezekiel 9:4", "from_first_word_id": 782746, "from_last_word_id": 782768, "to_first_word_id": 534308, "to_last_word_id": 534351}
+{"kind": "Alludes to", "from_ref": "Revelation 7:16-17", "to_ref": "Isaiah 49:10", "from_first_word_id": 783106, "from_last_word_id": 783157, "to_first_word_id": 473908, "to_last_word_id": 473941}
+{"kind": "Alludes to", "from_ref": "Revelation 7:17", "to_ref": "Isaiah 25:8", "from_first_word_id": 783125, "from_last_word_id": 783157, "to_first_word_id": 458916, "to_last_word_id": 458955}
+{"kind": "Alludes to", "from_ref": "Revelation 8:7", "to_ref": "Exodus 9:23-25", "from_first_word_id": 783303, "from_last_word_id": 783338, "to_first_word_id": 44676, "to_last_word_id": 44774}
+{"kind": "Alludes to", "from_ref": "Revelation 8:8-9", "to_ref": "Exodus 7:20-21", "from_first_word_id": 783339, "from_last_word_id": 783392, "to_first_word_id": 42947, "to_last_word_id": 43031}
+{"kind": "Alludes to", "from_ref": "Revelation 16:3-4", "to_ref": "Exodus 7:20-21", "from_first_word_id": 787086, "from_last_word_id": 787133, "to_first_word_id": 42947, "to_last_word_id": 43031}
+{"kind": "Alludes to", "from_ref": "Revelation 8:12", "to_ref": "Exodus 10:21-23", "from_first_word_id": 783458, "from_last_word_id": 783509, "to_first_word_id": 45706, "to_last_word_id": 45780}
+{"kind": "Alludes to", "from_ref": "Revelation 16:10", "to_ref": "Exodus 10:21-22", "from_first_word_id": 787251, "from_last_word_id": 787278, "to_first_word_id": 45706, "to_last_word_id": 45755}
+{"kind": "Alludes to", "from_ref": "Revelation 9:2-3", "to_ref": "Exodus 10:12-15", "from_first_word_id": 783582, "from_last_word_id": 783644, "to_first_word_id": 45419, "to_last_word_id": 45596}
+{"kind": "Alludes to", "from_ref": "Revelation 9:7-9", "to_ref": "Joel 2:4-5", "from_first_word_id": 783740, "from_last_word_id": 783818, "to_first_word_id": 586000, "to_last_word_id": 586049}
+{"kind": "Alludes to", "from_ref": "Revelation 9:20", "to_ref": "Daniel 5:23", "from_first_word_id": 784080, "from_last_word_id": 784128, "to_first_word_id": 573760, "to_last_word_id": 573837}
+{"kind": "Alludes to", "from_ref": "Revelation 10:5-6", "to_ref": "Daniel 12:7", "from_first_word_id": 784268, "from_last_word_id": 784331, "to_first_word_id": 579991, "to_last_word_id": 580058}
+{"kind": "Alludes to", "from_ref": "Revelation 10:9-10", "to_ref": "Ezekiel 3:1-3", "from_first_word_id": 784403, "from_last_word_id": 784481, "to_first_word_id": 530335, "to_last_word_id": 530409}
+{"kind": "Alludes to", "from_ref": "Revelation 11:1", "to_ref": "Ezekiel 40:3", "from_first_word_id": 784500, "from_last_word_id": 784530, "to_first_word_id": 560249, "to_last_word_id": 560285}
+{"kind": "Alludes to", "from_ref": "Revelation 11:2-3", "to_ref": "Daniel 7:25", "from_first_word_id": 784531, "from_last_word_id": 784587, "to_first_word_id": 575656, "to_last_word_id": 575700}
+{"kind": "Alludes to", "from_ref": "Revelation 11:4", "to_ref": "Zechariah 4:2-3", "from_first_word_id": 784588, "from_last_word_id": 784604, "to_first_word_id": 603536, "to_last_word_id": 603603}
+{"kind": "Alludes to", "from_ref": "Revelation 11:5", "to_ref": "2 Kings 1:10", "from_first_word_id": 784605, "from_last_word_id": 784635, "to_first_word_id": 267706, "to_last_word_id": 267748}
+{"kind": "Alludes to", "from_ref": "Revelation 11:6", "to_ref": "1 Kings 17:1", "from_first_word_id": 784636, "from_last_word_id": 784674, "to_first_word_id": 260665, "to_last_word_id": 260703}
+{"kind": "Alludes to", "from_ref": "Revelation 11:7", "to_ref": "Daniel 7:21", "from_first_word_id": 784675, "from_last_word_id": 784703, "to_first_word_id": 575544, "to_last_word_id": 575558}
+{"kind": "Alludes to", "from_ref": "Revelation 11:15", "to_ref": "Daniel 7:14", "from_first_word_id": 784906, "from_last_word_id": 784942, "to_first_word_id": 575328, "to_last_word_id": 575367}
+{"kind": "Alludes to", "from_ref": "Revelation 11:15", "to_ref": "Daniel 2:44", "from_first_word_id": 784906, "from_last_word_id": 784942, "to_first_word_id": 570455, "to_last_word_id": 570502}
+{"kind": "Alludes to", "from_ref": "Revelation 12:3", "to_ref": "Daniel 7:7", "from_first_word_id": 785123, "from_last_word_id": 785147, "to_first_word_id": 575058, "to_last_word_id": 575114}
+{"kind": "Alludes to", "from_ref": "Revelation 12:4", "to_ref": "Daniel 8:10", "from_first_word_id": 785148, "from_last_word_id": 785190, "to_first_word_id": 576128, "to_last_word_id": 576156}
+{"kind": "Alludes to", "from_ref": "Revelation 12:7", "to_ref": "Daniel 10:13", "from_first_word_id": 785249, "from_last_word_id": 785269, "to_first_word_id": 577980, "to_last_word_id": 578014}
+{"kind": "Alludes to", "from_ref": "Revelation 12:9", "to_ref": "Genesis 3:1", "from_first_word_id": 785282, "from_last_word_id": 785316, "to_first_word_id": 1437, "to_last_word_id": 1474}
+{"kind": "Alludes to", "from_ref": "Revelation 20:2", "to_ref": "Genesis 3:1", "from_first_word_id": 789511, "from_last_word_id": 789532, "to_first_word_id": 1437, "to_last_word_id": 1474}
+{"kind": "Alludes to", "from_ref": "Revelation 12:14", "to_ref": "Daniel 7:25", "from_first_word_id": 785452, "from_last_word_id": 785492, "to_first_word_id": 575656, "to_last_word_id": 575700}
+{"kind": "Alludes to", "from_ref": "Revelation 12:14", "to_ref": "Daniel 12:7", "from_first_word_id": 785452, "from_last_word_id": 785492, "to_first_word_id": 579991, "to_last_word_id": 580058}
+{"kind": "Alludes to", "from_ref": "Revelation 13:1-2", "to_ref": "Daniel 7:3-7", "from_first_word_id": 785577, "from_last_word_id": 785658, "to_first_word_id": 574925, "to_last_word_id": 575114}
+{"kind": "Alludes to", "from_ref": "Revelation 13:5-7", "to_ref": "Daniel 7:8", "from_first_word_id": 785717, "from_last_word_id": 785791, "to_first_word_id": 575115, "to_last_word_id": 575160}
+{"kind": "Alludes to", "from_ref": "Revelation 13:5-7", "to_ref": "Daniel 7:21", "from_first_word_id": 785717, "from_last_word_id": 785791, "to_first_word_id": 575544, "to_last_word_id": 575558}
+{"kind": "Alludes to", "from_ref": "Revelation 13:15", "to_ref": "Daniel 3:5-6", "from_first_word_id": 785993, "from_last_word_id": 786031, "to_first_word_id": 570828, "to_last_word_id": 570884}
+{"kind": "Alludes to", "from_ref": "Revelation 14:8", "to_ref": "Isaiah 21:9", "from_first_word_id": 786343, "from_last_word_id": 786371, "to_first_word_id": 456749, "to_last_word_id": 456785}
+{"kind": "Alludes to", "from_ref": "Revelation 18:2", "to_ref": "Isaiah 21:9", "from_first_word_id": 788130, "from_last_word_id": 788168, "to_first_word_id": 456749, "to_last_word_id": 456785}
+{"kind": "Alludes to", "from_ref": "Revelation 14:10", "to_ref": "Isaiah 51:17", "from_first_word_id": 786403, "from_last_word_id": 786449, "to_first_word_id": 475339, "to_last_word_id": 475372}
+{"kind": "Alludes to", "from_ref": "Revelation 14:11", "to_ref": "Isaiah 34:10", "from_first_word_id": 786450, "from_last_word_id": 786484, "to_first_word_id": 464269, "to_last_word_id": 464301}
+{"kind": "Alludes to", "from_ref": "Revelation 14:14", "to_ref": "Daniel 7:13", "from_first_word_id": 786545, "from_last_word_id": 786578, "to_first_word_id": 575294, "to_last_word_id": 575327}
+{"kind": "Alludes to", "from_ref": "Revelation 14:15-16", "to_ref": "Joel 3:13", "from_first_word_id": 786579, "from_last_word_id": 786640, "to_first_word_id": 587163, "to_last_word_id": 587189}
+{"kind": "Alludes to", "from_ref": "Revelation 14:19-20", "to_ref": "Isaiah 63:2-3", "from_first_word_id": 786707, "from_last_word_id": 786765, "to_first_word_id": 480735, "to_last_word_id": 480796}
+{"kind": "Alludes to", "from_ref": "Revelation 19:13-15", "to_ref": "Isaiah 63:2-3", "from_first_word_id": 789196, "from_last_word_id": 789273, "to_first_word_id": 480735, "to_last_word_id": 480796}
+{"kind": "Alludes to", "from_ref": "Revelation 15:3", "to_ref": "Exodus 15:1-11", "from_first_word_id": 786842, "from_last_word_id": 786878, "to_first_word_id": 49352, "to_last_word_id": 49615}
+{"kind": "Alludes to", "from_ref": "Revelation 15:8", "to_ref": "Exodus 40:34-35", "from_first_word_id": 786982, "from_last_word_id": 787017, "to_first_word_id": 70844, "to_last_word_id": 70888}
+{"kind": "Alludes to", "from_ref": "Revelation 16:12", "to_ref": "Isaiah 11:15", "from_first_word_id": 787298, "from_last_word_id": 787329, "to_first_word_id": 452646, "to_last_word_id": 452684}
+{"kind": "Alludes to", "from_ref": "Revelation 16:16", "to_ref": "Zechariah 12:11", "from_first_word_id": 787423, "from_last_word_id": 787436, "to_first_word_id": 607545, "to_last_word_id": 607565}
+{"kind": "Alludes to", "from_ref": "Revelation 16:21", "to_ref": "Exodus 9:24", "from_first_word_id": 787548, "from_last_word_id": 787584, "to_first_word_id": 44709, "to_last_word_id": 44738}
+{"kind": "Alludes to", "from_ref": "Revelation 17:1", "to_ref": "Jeremiah 51:13", "from_first_word_id": 787585, "from_last_word_id": 787622, "to_first_word_id": 523204, "to_last_word_id": 523223}
+{"kind": "Alludes to", "from_ref": "Revelation 17:4", "to_ref": "Jeremiah 51:7", "from_first_word_id": 787682, "from_last_word_id": 787715, "to_first_word_id": 523019, "to_last_word_id": 523046}
+{"kind": "Alludes to", "from_ref": "Revelation 17:12", "to_ref": "Daniel 7:24", "from_first_word_id": 787930, "from_last_word_id": 787956, "to_first_word_id": 575622, "to_last_word_id": 575655}
+{"kind": "Alludes to", "from_ref": "Revelation 18:4", "to_ref": "Jeremiah 51:45", "from_first_word_id": 788209, "from_last_word_id": 788238, "to_first_word_id": 524106, "to_last_word_id": 524129}
+{"kind": "Alludes to", "from_ref": "Revelation 18:4", "to_ref": "Isaiah 48:20", "from_first_word_id": 788209, "from_last_word_id": 788238, "to_first_word_id": 473486, "to_last_word_id": 473522}
+{"kind": "Alludes to", "from_ref": "Revelation 18:7-8", "to_ref": "Isaiah 47:7-9", "from_first_word_id": 788279, "from_last_word_id": 788343, "to_first_word_id": 472620, "to_last_word_id": 472730}
+{"kind": "Alludes to", "from_ref": "Revelation 18:9-19", "to_ref": "Ezekiel 27:28-36", "from_first_word_id": 788344, "from_last_word_id": 788674, "to_first_word_id": 549710, "to_last_word_id": 549942}
+{"kind": "Alludes to", "from_ref": "Revelation 18:21", "to_ref": "Jeremiah 51:63-64", "from_first_word_id": 788693, "from_last_word_id": 788730, "to_first_word_id": 524634, "to_last_word_id": 524696}
+{"kind": "Alludes to", "from_ref": "Revelation 18:22-23", "to_ref": "Jeremiah 25:10", "from_first_word_id": 788731, "from_last_word_id": 788832, "to_first_word_id": 501077, "to_last_word_id": 501113}
+{"kind": "Alludes to", "from_ref": "Revelation 19:11", "to_ref": "Isaiah 11:4", "from_first_word_id": 789138, "from_last_word_id": 789167, "to_first_word_id": 452290, "to_last_word_id": 452331}
+{"kind": "Alludes to", "from_ref": "Revelation 19:15", "to_ref": "Isaiah 11:4", "from_first_word_id": 789234, "from_last_word_id": 789273, "to_first_word_id": 452290, "to_last_word_id": 452331}
+{"kind": "Alludes to", "from_ref": "Revelation 19:17-18", "to_ref": "Ezekiel 39:17-20", "from_first_word_id": 789294, "from_last_word_id": 789378, "to_first_word_id": 559760, "to_last_word_id": 559899}
+{"kind": "Alludes to", "from_ref": "Revelation 20:4", "to_ref": "Daniel 7:9", "from_first_word_id": 789575, "from_last_word_id": 789642, "to_first_word_id": 575161, "to_last_word_id": 575204}
+{"kind": "Alludes to", "from_ref": "Revelation 20:8", "to_ref": "Ezekiel 38:2", "from_first_word_id": 789716, "from_last_word_id": 789752, "to_first_word_id": 558474, "to_last_word_id": 558496}
+{"kind": "Alludes to", "from_ref": "Revelation 20:9", "to_ref": "Ezekiel 38:22", "from_first_word_id": 789753, "from_last_word_id": 789786, "to_first_word_id": 559173, "to_last_word_id": 559211}
+{"kind": "Alludes to", "from_ref": "Revelation 20:11-12", "to_ref": "Daniel 7:9-10", "from_first_word_id": 789821, "from_last_word_id": 789897, "to_first_word_id": 575161, "to_last_word_id": 575237}
+{"kind": "Alludes to", "from_ref": "Revelation 20:12", "to_ref": "Daniel 12:1-2", "from_first_word_id": 789852, "from_last_word_id": 789897, "to_first_word_id": 579788, "to_last_word_id": 579872}
+{"kind": "Alludes to", "from_ref": "Revelation 21:1", "to_ref": "Isaiah 65:17", "from_first_word_id": 789965, "from_last_word_id": 789991, "to_first_word_id": 482042, "to_last_word_id": 482062}
+{"kind": "Alludes to", "from_ref": "Revelation 21:1", "to_ref": "Isaiah 66:22", "from_first_word_id": 789965, "from_last_word_id": 789991, "to_first_word_id": 483014, "to_last_word_id": 483041}
+{"kind": "Alludes to", "from_ref": "Revelation 21:2", "to_ref": "Isaiah 61:10", "from_first_word_id": 789992, "from_last_word_id": 790015, "to_first_word_id": 480250, "to_last_word_id": 480299}
+{"kind": "Alludes to", "from_ref": "Revelation 21:3", "to_ref": "Ezekiel 37:27", "from_first_word_id": 790016, "from_last_word_id": 790056, "to_first_word_id": 558421, "to_last_word_id": 558439}
+{"kind": "Alludes to", "from_ref": "Revelation 21:3", "to_ref": "Leviticus 26:11-12", "from_first_word_id": 790016, "from_last_word_id": 790056, "to_first_word_id": 93547, "to_last_word_id": 93578}
+{"kind": "Alludes to", "from_ref": "Revelation 21:6", "to_ref": "Isaiah 55:1", "from_first_word_id": 790119, "from_last_word_id": 790153, "to_first_word_id": 476854, "to_last_word_id": 476885}
+{"kind": "Alludes to", "from_ref": "Revelation 22:17", "to_ref": "Isaiah 55:1", "from_first_word_id": 791145, "from_last_word_id": 791177, "to_first_word_id": 476854, "to_last_word_id": 476885}
+{"kind": "Alludes to", "from_ref": "Revelation 21:10-12", "to_ref": "Ezekiel 40:2", "from_first_word_id": 790247, "from_last_word_id": 790332, "to_first_word_id": 560216, "to_last_word_id": 560248}
+{"kind": "Alludes to", "from_ref": "Revelation 21:12-13", "to_ref": "Ezekiel 48:31-34", "from_first_word_id": 790299, "from_last_word_id": 790353, "to_first_word_id": 568463, "to_last_word_id": 568570}
+{"kind": "Alludes to", "from_ref": "Revelation 21:15", "to_ref": "Ezekiel 40:3", "from_first_word_id": 790375, "from_last_word_id": 790396, "to_first_word_id": 560249, "to_last_word_id": 560285}
+{"kind": "Alludes to", "from_ref": "Revelation 21:18-21", "to_ref": "Isaiah 54:11-12", "from_first_word_id": 790459, "from_last_word_id": 790568, "to_first_word_id": 476672, "to_last_word_id": 476715}
+{"kind": "Alludes to", "from_ref": "Revelation 21:19-20", "to_ref": "Exodus 28:17-20", "from_first_word_id": 790480, "from_last_word_id": 790540, "to_first_word_id": 59479, "to_last_word_id": 59555}
+{"kind": "Alludes to", "from_ref": "Revelation 21:23", "to_ref": "Isaiah 60:19-20", "from_first_word_id": 790588, "from_last_word_id": 790619, "to_first_word_id": 479842, "to_last_word_id": 479906}
+{"kind": "Alludes to", "from_ref": "Revelation 22:5", "to_ref": "Isaiah 60:19", "from_first_word_id": 790825, "from_last_word_id": 790856, "to_first_word_id": 479842, "to_last_word_id": 479876}
+{"kind": "Alludes to", "from_ref": "Revelation 21:24-26", "to_ref": "Isaiah 60:3-11", "from_first_word_id": 790620, "from_last_word_id": 790681, "to_first_word_id": 479339, "to_last_word_id": 479621}
+{"kind": "Alludes to", "from_ref": "Revelation 21:27", "to_ref": "Isaiah 52:1", "from_first_word_id": 790682, "from_last_word_id": 790713, "to_first_word_id": 475569, "to_last_word_id": 475600}
+{"kind": "Alludes to", "from_ref": "Revelation 22:3", "to_ref": "Zechariah 14:11", "from_first_word_id": 790785, "from_last_word_id": 790810, "to_first_word_id": 608330, "to_last_word_id": 608349}
+{"kind": "Alludes to", "from_ref": "Revelation 22:4", "to_ref": "Exodus 33:20", "from_first_word_id": 790811, "from_last_word_id": 790824, "to_first_word_id": 64735, "to_last_word_id": 64752}
+{"kind": "Alludes to", "from_ref": "Revelation 22:10", "to_ref": "Daniel 12:4", "from_first_word_id": 790973, "from_last_word_id": 790993, "to_first_word_id": 579900, "to_last_word_id": 579929}
+{"kind": "Alludes to", "from_ref": "Revelation 22:12", "to_ref": "Isaiah 40:10", "from_first_word_id": 791033, "from_last_word_id": 791053, "to_first_word_id": 467700, "to_last_word_id": 467726}
+{"kind": "Alludes to", "from_ref": "Revelation 3:12", "to_ref": "Ezekiel 48:35", "from_first_word_id": 781035, "from_last_word_id": 781097, "to_first_word_id": 568571, "to_last_word_id": 568592}
+{"kind": "Alludes to", "from_ref": "Revelation 3:5", "to_ref": "Exodus 32:32-33", "from_first_word_id": 780814, "from_last_word_id": 780851, "to_first_word_id": 64021, "to_last_word_id": 64063}
+{"kind": "Alludes to", "from_ref": "Revelation 3:9", "to_ref": "Isaiah 60:14", "from_first_word_id": 780944, "from_last_word_id": 780984, "to_first_word_id": 479676, "to_last_word_id": 479722}
+{"kind": "Alludes to", "from_ref": "Revelation 2:23", "to_ref": "Jeremiah 17:10", "from_first_word_id": 780528, "from_last_word_id": 780564, "to_first_word_id": 495528, "to_last_word_id": 495554}
+{"kind": "Alludes to", "from_ref": "Revelation 1:5", "to_ref": "Psalms 89:27", "from_first_word_id": 779414, "from_last_word_id": 779453, "to_first_word_id": 405755, "to_last_word_id": 405768}
+{"kind": "Alludes to", "from_ref": "Revelation 1:7", "to_ref": "Daniel 7:13", "from_first_word_id": 779477, "from_last_word_id": 779507, "to_first_word_id": 575294, "to_last_word_id": 575327}
+{"kind": "Alludes to", "from_ref": "Revelation 19:16", "to_ref": "Daniel 2:47", "from_first_word_id": 789274, "from_last_word_id": 789293, "to_first_word_id": 570584, "to_last_word_id": 570619}
+{"kind": "Alludes to", "from_ref": "Revelation 17:14", "to_ref": "Deuteronomy 10:17", "from_first_word_id": 787971, "from_last_word_id": 788005, "to_first_word_id": 137426, "to_last_word_id": 137453}
+{"kind": "Alludes to", "from_ref": "Revelation 8:3-4", "to_ref": "Psalms 141:2", "from_first_word_id": 783195, "from_last_word_id": 783258, "to_first_word_id": 420634, "to_last_word_id": 420654}
+{"kind": "Alludes to", "from_ref": "Revelation 8:5", "to_ref": "Ezekiel 10:2", "from_first_word_id": 783259, "from_last_word_id": 783289, "to_first_word_id": 534619, "to_last_word_id": 534663}
+{"kind": "Alludes to", "from_ref": "Revelation 6:10", "to_ref": "Zechariah 1:12", "from_first_word_id": 782427, "from_last_word_id": 782456, "to_first_word_id": 602622, "to_last_word_id": 602660}
+{"kind": "Alludes to", "from_ref": "Revelation 9:11", "to_ref": "Job 26:6", "from_first_word_id": 783842, "from_last_word_id": 783873, "to_first_word_id": 371333, "to_last_word_id": 371342}
+{"kind": "Alludes to", "from_ref": "Revelation 12:1", "to_ref": "Genesis 37:9", "from_first_word_id": 785080, "from_last_word_id": 785108, "to_first_word_id": 26728, "to_last_word_id": 26762}
+{"kind": "Alludes to", "from_ref": "2 Nephi 2:15", "to_ref": "Genesis 2:9", "from_first_word_id": 819676, "from_last_word_id": 819742, "to_first_word_id": 1008, "to_last_word_id": 1050}
+{"kind": "Alludes to", "from_ref": "2 Nephi 2:17-18", "to_ref": "Genesis 3:1-5", "from_first_word_id": 819777, "from_last_word_id": 819882, "to_first_word_id": 1437, "to_last_word_id": 1564}
+{"kind": "Alludes to", "from_ref": "2 Nephi 2:19", "to_ref": "Genesis 3:6", "from_first_word_id": 819883, "from_last_word_id": 819906, "to_first_word_id": 1565, "to_last_word_id": 1615}
+{"kind": "Alludes to", "from_ref": "2 Nephi 2:19", "to_ref": "Genesis 3:23", "from_first_word_id": 819883, "from_last_word_id": 819906, "to_first_word_id": 2076, "to_last_word_id": 2096}
+{"kind": "Alludes to", "from_ref": "2 Nephi 2:22", "to_ref": "Genesis 2:17", "from_first_word_id": 819998, "from_last_word_id": 820051, "to_first_word_id": 1194, "to_last_word_id": 1222}
+{"kind": "Alludes to", "from_ref": "2 Nephi 2:25", "to_ref": "Genesis 3:7", "from_first_word_id": 820101, "from_last_word_id": 820114, "to_first_word_id": 1616, "to_last_word_id": 1640}
+{"kind": "Alludes to", "from_ref": "Alma 12:22-23", "to_ref": "Genesis 3:6", "from_first_word_id": 907831, "from_last_word_id": 907937, "to_first_word_id": 1565, "to_last_word_id": 1615}
+{"kind": "Alludes to", "from_ref": "Alma 42:2-3", "to_ref": "Genesis 3:22-24", "from_first_word_id": 945475, "from_last_word_id": 945595, "to_first_word_id": 2035, "to_last_word_id": 2131}
+{"kind": "Alludes to", "from_ref": "Alma 42:5", "to_ref": "Genesis 3:22", "from_first_word_id": 945621, "from_last_word_id": 945674, "to_first_word_id": 2035, "to_last_word_id": 2075}
+{"kind": "Alludes to", "from_ref": "Mosiah 16:3", "to_ref": "Genesis 3:1-4", "from_first_word_id": 876500, "from_last_word_id": 876550, "to_first_word_id": 1437, "to_last_word_id": 1537}
+{"kind": "Alludes to", "from_ref": "1 Nephi 1:8", "to_ref": "1 Kings 22:19", "from_first_word_id": 792494, "from_last_word_id": 792539, "to_first_word_id": 266405, "to_last_word_id": 266440}
+{"kind": "Alludes to", "from_ref": "1 Nephi 1:8", "to_ref": "Isaiah 6:1", "from_first_word_id": 792494, "from_last_word_id": 792539, "to_first_word_id": 449059, "to_last_word_id": 449084}
+{"kind": "Alludes to", "from_ref": "1 Nephi 1:11", "to_ref": "Ezekiel 2:9-10", "from_first_word_id": 792590, "from_last_word_id": 792624, "to_first_word_id": 530292, "to_last_word_id": 530334}
+{"kind": "Alludes to", "from_ref": "1 Nephi 4:2", "to_ref": "Exodus 14:21-22", "from_first_word_id": 795120, "from_last_word_id": 795176, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "1 Nephi 17:26-27", "to_ref": "Exodus 14:21-28", "from_first_word_id": 810291, "from_last_word_id": 810348, "to_first_word_id": 49009, "to_last_word_id": 49269}
+{"kind": "Alludes to", "from_ref": "1 Nephi 17:28", "to_ref": "Exodus 16:15", "from_first_word_id": 810349, "from_last_word_id": 810361, "to_first_word_id": 50534, "to_last_word_id": 50573}
+{"kind": "Alludes to", "from_ref": "1 Nephi 17:29", "to_ref": "Exodus 17:6", "from_first_word_id": 810362, "from_last_word_id": 810398, "to_first_word_id": 51291, "to_last_word_id": 51333}
+{"kind": "Alludes to", "from_ref": "1 Nephi 17:30", "to_ref": "Exodus 13:21", "from_first_word_id": 810399, "from_last_word_id": 810455, "to_first_word_id": 48362, "to_last_word_id": 48398}
+{"kind": "Alludes to", "from_ref": "1 Nephi 17:41", "to_ref": "Numbers 21:6-9", "from_first_word_id": 810802, "from_last_word_id": 810880, "to_first_word_id": 115120, "to_last_word_id": 115249}
+{"kind": "Alludes to", "from_ref": "2 Nephi 25:20", "to_ref": "Numbers 21:8-9", "from_first_word_id": 838461, "from_last_word_id": 838583, "to_first_word_id": 115179, "to_last_word_id": 115249}
+{"kind": "Alludes to", "from_ref": "2 Nephi 25:20", "to_ref": "Exodus 17:6", "from_first_word_id": 838461, "from_last_word_id": 838583, "to_first_word_id": 51291, "to_last_word_id": 51333}
+{"kind": "Alludes to", "from_ref": "Alma 33:19-20", "to_ref": "Numbers 21:8-9", "from_first_word_id": 936289, "from_last_word_id": 936371, "to_first_word_id": 115179, "to_last_word_id": 115249}
+{"kind": "Alludes to", "from_ref": "Helaman 8:14-15", "to_ref": "Numbers 21:8-9", "from_first_word_id": 987059, "from_last_word_id": 987130, "to_first_word_id": 115179, "to_last_word_id": 115249}
+{"kind": "Alludes to", "from_ref": "Helaman 8:14-15", "to_ref": "John 3:14-15", "from_first_word_id": 987059, "from_last_word_id": 987130, "to_first_word_id": 677123, "to_last_word_id": 677154}
+{"kind": "Alludes to", "from_ref": "Helaman 8:11", "to_ref": "Exodus 14:21-22", "from_first_word_id": 986894, "from_last_word_id": 986961, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Mosiah 7:19", "to_ref": "Exodus 14:21-22", "from_first_word_id": 867840, "from_last_word_id": 867916, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Mosiah 7:19", "to_ref": "Exodus 16:15", "from_first_word_id": 867840, "from_last_word_id": 867916, "to_first_word_id": 50534, "to_last_word_id": 50573}
+{"kind": "Alludes to", "from_ref": "Alma 36:28", "to_ref": "Exodus 14:21-22", "from_first_word_id": 939884, "from_last_word_id": 939955, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "1 Nephi 5:14", "to_ref": "Genesis 37:28", "from_first_word_id": 796805, "from_last_word_id": 796875, "to_first_word_id": 27237, "to_last_word_id": 27270}
+{"kind": "Alludes to", "from_ref": "Alma 10:3", "to_ref": "Genesis 37:28", "from_first_word_id": 903921, "from_last_word_id": 903964, "to_first_word_id": 27237, "to_last_word_id": 27270}
+{"kind": "Alludes to", "from_ref": "2 Nephi 3:4", "to_ref": "Genesis 37:28", "from_first_word_id": 820488, "from_last_word_id": 820522, "to_first_word_id": 27237, "to_last_word_id": 27270}
+{"kind": "Alludes to", "from_ref": "2 Nephi 3:5", "to_ref": "Genesis 50:24-25", "from_first_word_id": 820523, "from_last_word_id": 820619, "to_first_word_id": 38188, "to_last_word_id": 38246}
+{"kind": "Alludes to", "from_ref": "Alma 46:23-24", "to_ref": "Genesis 37:3", "from_first_word_id": 951983, "from_last_word_id": 952147, "to_first_word_id": 26578, "to_last_word_id": 26604}
+{"kind": "Alludes to", "from_ref": "Alma 46:23-24", "to_ref": "Genesis 37:31-33", "from_first_word_id": 951983, "from_last_word_id": 952147, "to_first_word_id": 27308, "to_last_word_id": 27381}
+{"kind": "Alludes to", "from_ref": "Jacob 2:25", "to_ref": "Genesis 49:22", "from_first_word_id": 848526, "from_last_word_id": 848566, "to_first_word_id": 37247, "to_last_word_id": 37264}
+{"kind": "Alludes to", "from_ref": "2 Nephi 1:13-14", "to_ref": "Isaiah 52:1-2", "from_first_word_id": 818030, "from_last_word_id": 818128, "to_first_word_id": 475569, "to_last_word_id": 475624}
+{"kind": "Alludes to", "from_ref": "1 Nephi 8:10-11", "to_ref": "Genesis 2:9", "from_first_word_id": 798528, "from_last_word_id": 798596, "to_first_word_id": 1008, "to_last_word_id": 1050}
+{"kind": "Alludes to", "from_ref": "1 Nephi 11:25", "to_ref": "Jeremiah 2:13", "from_first_word_id": 801424, "from_last_word_id": 801487, "to_first_word_id": 483977, "to_last_word_id": 484004}
+{"kind": "Alludes to", "from_ref": "1 Nephi 11:25", "to_ref": "Genesis 2:9", "from_first_word_id": 801424, "from_last_word_id": 801487, "to_first_word_id": 1008, "to_last_word_id": 1050}
+{"kind": "Alludes to", "from_ref": "Alma 32:40-41", "to_ref": "Genesis 2:9", "from_first_word_id": 935528, "from_last_word_id": 935606, "to_first_word_id": 1008, "to_last_word_id": 1050}
+{"kind": "Alludes to", "from_ref": "Alma 5:57", "to_ref": "Isaiah 52:11", "from_first_word_id": 898898, "from_last_word_id": 898981, "to_first_word_id": 475840, "to_last_word_id": 475870}
+{"kind": "Alludes to", "from_ref": "Alma 5:38", "to_ref": "John 10:14-16", "from_first_word_id": 897929, "from_last_word_id": 897987, "to_first_word_id": 684661, "to_last_word_id": 684725}
+{"kind": "Alludes to", "from_ref": "Alma 40:13", "to_ref": "Matthew 8:12", "from_first_word_id": 944064, "from_last_word_id": 944154, "to_first_word_id": 615293, "to_last_word_id": 615313}
+{"kind": "Alludes to", "from_ref": "Alma 7:11", "to_ref": "Isaiah 53:4", "from_first_word_id": 900204, "from_last_word_id": 900240, "to_first_word_id": 476063, "to_last_word_id": 476083}
+{"kind": "Alludes to", "from_ref": "Alma 13:14-18", "to_ref": "Genesis 14:18-20", "from_first_word_id": 909208, "from_last_word_id": 909424, "to_first_word_id": 8209, "to_last_word_id": 8269}
+{"kind": "Alludes to", "from_ref": "Jacob 4:5", "to_ref": "Genesis 22:1-10", "from_first_word_id": 849751, "from_last_word_id": 849833, "to_first_word_id": 13184, "to_last_word_id": 13485}
+{"kind": "Alludes to", "from_ref": "Enos 1:2", "to_ref": "Genesis 32:24-26", "from_first_word_id": 856036, "from_last_word_id": 856056, "to_first_word_id": 23489, "to_last_word_id": 23561}
+{"kind": "Alludes to", "from_ref": "Helaman 5:12", "to_ref": "Matthew 7:24-25", "from_first_word_id": 981911, "from_last_word_id": 982009, "to_first_word_id": 614909, "to_last_word_id": 614961}
+{"kind": "Alludes to", "from_ref": "Helaman 5:23", "to_ref": "Daniel 3:25-27", "from_first_word_id": 982370, "from_last_word_id": 982424, "to_first_word_id": 571441, "to_last_word_id": 571565}
+{"kind": "Alludes to", "from_ref": "Helaman 5:44-45", "to_ref": "Acts 2:3-4", "from_first_word_id": 983189, "from_last_word_id": 983279, "to_first_word_id": 695119, "to_last_word_id": 695158}
+{"kind": "Alludes to", "from_ref": "Helaman 8:17", "to_ref": "John 8:56", "from_first_word_id": 987157, "from_last_word_id": 987172, "to_first_word_id": 683427, "to_last_word_id": 683441}
+{"kind": "Alludes to", "from_ref": "Jacob 5:3", "to_ref": "Jeremiah 11:16", "from_first_word_id": 850519, "from_last_word_id": 850557, "to_first_word_id": 491634, "to_last_word_id": 491667}
+{"kind": "Alludes to", "from_ref": "Jacob 5:3-9", "to_ref": "Romans 11:17-24", "from_first_word_id": 850519, "from_last_word_id": 850841, "to_first_word_id": 725137, "to_last_word_id": 725333}
+{"kind": "Alludes to", "from_ref": "Ether 1:33", "to_ref": "Genesis 11:7-9", "from_first_word_id": 1037820, "from_last_word_id": 1037879, "to_first_word_id": 6327, "to_last_word_id": 6404}
+{"kind": "Alludes to", "from_ref": "Omni 1:22", "to_ref": "Genesis 11:9", "from_first_word_id": 858845, "from_last_word_id": 858898, "to_first_word_id": 6369, "to_last_word_id": 6404}
+{"kind": "Alludes to", "from_ref": "Mosiah 28:17", "to_ref": "Genesis 11:8", "from_first_word_id": 889267, "from_last_word_id": 889335, "to_first_word_id": 6346, "to_last_word_id": 6368}
+{"kind": "Alludes to", "from_ref": "Ether 2:4", "to_ref": "Exodus 13:21", "from_first_word_id": 1038469, "from_last_word_id": 1038509, "to_first_word_id": 48362, "to_last_word_id": 48398}
+{"kind": "Alludes to", "from_ref": "Ether 2:5", "to_ref": "Exodus 13:21", "from_first_word_id": 1038510, "from_last_word_id": 1038567, "to_first_word_id": 48362, "to_last_word_id": 48398}
+{"kind": "Alludes to", "from_ref": "Ether 3:6", "to_ref": "Exodus 31:18", "from_first_word_id": 1040037, "from_last_word_id": 1040120, "to_first_word_id": 62991, "to_last_word_id": 63021}
+{"kind": "Alludes to", "from_ref": "Ether 6:7", "to_ref": "Genesis 7:17-18", "from_first_word_id": 1042339, "from_last_word_id": 1042406, "to_first_word_id": 4241, "to_last_word_id": 4287}
+{"kind": "Alludes to", "from_ref": "Ether 13:2", "to_ref": "Genesis 7:17-24", "from_first_word_id": 1050418, "from_last_word_id": 1050485, "to_first_word_id": 4241, "to_last_word_id": 4430}
+{"kind": "Alludes to", "from_ref": "Ether 13:3-10", "to_ref": "Revelation 21:2", "from_first_word_id": 1050486, "from_last_word_id": 1050831, "to_first_word_id": 789992, "to_last_word_id": 790015}
+{"kind": "Alludes to", "from_ref": "Ether 13:9", "to_ref": "Revelation 21:1", "from_first_word_id": 1050752, "from_last_word_id": 1050782, "to_first_word_id": 789965, "to_last_word_id": 789991}
+{"kind": "Alludes to", "from_ref": "Ether 12:6", "to_ref": "Hebrews 11:1", "from_first_word_id": 1049045, "from_last_word_id": 1049090, "to_first_word_id": 767070, "to_last_word_id": 767084}
+{"kind": "Alludes to", "from_ref": "Alma 32:21", "to_ref": "Hebrews 11:1", "from_first_word_id": 934663, "from_last_word_id": 934695, "to_first_word_id": 767070, "to_last_word_id": 767084}
+{"kind": "Alludes to", "from_ref": "Ether 12:7-22", "to_ref": "Hebrews 11:4-33", "from_first_word_id": 1049091, "from_last_word_id": 1049613, "to_first_word_id": 767122, "to_last_word_id": 767847}
+{"kind": "Alludes to", "from_ref": "Ether 12:27", "to_ref": "2 Corinthians 12:9", "from_first_word_id": 1049810, "from_last_word_id": 1049867, "to_first_word_id": 742984, "to_last_word_id": 743021}
+{"kind": "Alludes to", "from_ref": "Mormon 9:9", "to_ref": "Hebrews 13:8", "from_first_word_id": 1036195, "from_last_word_id": 1036219, "to_first_word_id": 768818, "to_last_word_id": 768828}
+{"kind": "Alludes to", "from_ref": "Moroni 10:8-17", "to_ref": "1 Corinthians 12:4-11", "from_first_word_id": 1059316, "from_last_word_id": 1059505, "to_first_word_id": 734283, "to_last_word_id": 734416}
+{"kind": "Alludes to", "from_ref": "Moroni 7:16", "to_ref": "John 1:9", "from_first_word_id": 1055556, "from_last_word_id": 1055619, "to_first_word_id": 675427, "to_last_word_id": 675440}
+{"kind": "Alludes to", "from_ref": "Moroni 10:32", "to_ref": "Matthew 5:48", "from_first_word_id": 1060010, "from_last_word_id": 1060081, "to_first_word_id": 613613, "to_last_word_id": 613626}
+{"kind": "Alludes to", "from_ref": "Mosiah 2:17", "to_ref": "Matthew 25:40", "from_first_word_id": 861948, "from_last_word_id": 861983, "to_first_word_id": 630607, "to_last_word_id": 630641}
+{"kind": "Alludes to", "from_ref": "1 Nephi 14:10-12", "to_ref": "Revelation 17:1-2", "from_first_word_id": 805206, "from_last_word_id": 805385, "to_first_word_id": 787585, "to_last_word_id": 787648}
+{"kind": "Alludes to", "from_ref": "1 Nephi 14:24-27", "to_ref": "Revelation 1:1", "from_first_word_id": 805791, "from_last_word_id": 805922, "to_first_word_id": 779292, "to_last_word_id": 779326}
+{"kind": "Alludes to", "from_ref": "1 Nephi 22:15", "to_ref": "Malachi 4:1", "from_first_word_id": 816586, "from_last_word_id": 816636, "to_first_word_id": 610321, "to_last_word_id": 610367}
+{"kind": "Alludes to", "from_ref": "1 Nephi 22:24", "to_ref": "Malachi 4:2", "from_first_word_id": 817077, "from_last_word_id": 817110, "to_first_word_id": 610368, "to_last_word_id": 610398}
+{"kind": "Alludes to", "from_ref": "1 Nephi 22:26", "to_ref": "Revelation 20:2", "from_first_word_id": 817154, "from_last_word_id": 817199, "to_first_word_id": 789511, "to_last_word_id": 789532}
+{"kind": "Alludes to", "from_ref": "2 Nephi 26:4", "to_ref": "Malachi 4:1", "from_first_word_id": 839196, "from_last_word_id": 839224, "to_first_word_id": 610321, "to_last_word_id": 610367}
+{"kind": "Alludes to", "from_ref": "2 Nephi 30:10", "to_ref": "Malachi 4:1", "from_first_word_id": 844465, "from_last_word_id": 844507, "to_first_word_id": 610321, "to_last_word_id": 610367}
+{"kind": "Alludes to", "from_ref": "2 Nephi 9:51", "to_ref": "Isaiah 55:2", "from_first_word_id": 828334, "from_last_word_id": 828391, "to_first_word_id": 476886, "to_last_word_id": 476923}
+{"kind": "Alludes to", "from_ref": "2 Nephi 9:16", "to_ref": "Revelation 21:8", "from_first_word_id": 826927, "from_last_word_id": 827011, "to_first_word_id": 790173, "to_last_word_id": 790209}
+{"kind": "Alludes to", "from_ref": "3 Nephi 9:15", "to_ref": "John 1:1-2", "from_first_word_id": 1007094, "from_last_word_id": 1007143, "to_first_word_id": 675317, "to_last_word_id": 675341}
+{"kind": "Alludes to", "from_ref": "3 Nephi 9:16", "to_ref": "John 1:11", "from_first_word_id": 1007144, "from_last_word_id": 1007162, "to_first_word_id": 675459, "to_last_word_id": 675469}
+{"kind": "Alludes to", "from_ref": "3 Nephi 9:17", "to_ref": "John 1:12", "from_first_word_id": 1007163, "from_last_word_id": 1007209, "to_first_word_id": 675470, "to_last_word_id": 675494}
+{"kind": "Alludes to", "from_ref": "3 Nephi 9:18", "to_ref": "Revelation 1:8", "from_first_word_id": 1007210, "from_last_word_id": 1007229, "to_first_word_id": 779508, "to_last_word_id": 779532}
+{"kind": "Alludes to", "from_ref": "3 Nephi 11:11", "to_ref": "John 18:11", "from_first_word_id": 1008633, "from_last_word_id": 1008690, "to_first_word_id": 691220, "to_last_word_id": 691244}
+{"kind": "Alludes to", "from_ref": "3 Nephi 11:11", "to_ref": "Matthew 26:39", "from_first_word_id": 1008633, "from_last_word_id": 1008690, "to_first_word_id": 631574, "to_last_word_id": 631609}
+{"kind": "Alludes to", "from_ref": "3 Nephi 11:14", "to_ref": "John 20:27", "from_first_word_id": 1008744, "from_last_word_id": 1008804, "to_first_word_id": 693605, "to_last_word_id": 693634}
+{"kind": "Alludes to", "from_ref": "3 Nephi 15:9", "to_ref": "John 8:12", "from_first_word_id": 1012707, "from_last_word_id": 1012739, "to_first_word_id": 682434, "to_last_word_id": 682463}
+{"kind": "Alludes to", "from_ref": "3 Nephi 18:24", "to_ref": "Matthew 5:16", "from_first_word_id": 1015722, "from_last_word_id": 1015765, "to_first_word_id": 612802, "to_last_word_id": 612823}
+{"kind": "Alludes to", "from_ref": "3 Nephi 11:7", "to_ref": "Matthew 3:17", "from_first_word_id": 1008497, "from_last_word_id": 1008516, "to_first_word_id": 611971, "to_last_word_id": 611988}
+{"kind": "Alludes to", "from_ref": "Alma 5:16", "to_ref": "Matthew 25:34", "from_first_word_id": 897088, "from_last_word_id": 897131, "to_first_word_id": 630479, "to_last_word_id": 630507}
+{"kind": "Alludes to", "from_ref": "Mosiah 26:23-27", "to_ref": "Matthew 25:41", "from_first_word_id": 886520, "from_last_word_id": 886662, "to_first_word_id": 630642, "to_last_word_id": 630667}
+{"kind": "Alludes to", "from_ref": "Alma 32:28-43", "to_ref": "Matthew 13:3-8", "from_first_word_id": 934956, "from_last_word_id": 935717, "to_first_word_id": 619452, "to_last_word_id": 619558}
+{"kind": "Alludes to", "from_ref": "Moroni 7:47", "to_ref": "1 Corinthians 13:8", "from_first_word_id": 1056852, "from_last_word_id": 1056880, "to_first_word_id": 734955, "to_last_word_id": 734980}
+{"kind": "Alludes to", "from_ref": "Ether 4:12", "to_ref": "James 1:17", "from_first_word_id": 1041446, "from_last_word_id": 1041524, "to_first_word_id": 769503, "to_last_word_id": 769529}
+{"kind": "Alludes to", "from_ref": "D&C 1:38", "to_ref": "Matthew 24:35", "from_first_word_id": 1061187, "from_last_word_id": 1061236, "to_first_word_id": 629463, "to_last_word_id": 629475}
+{"kind": "Alludes to", "from_ref": "D&C 4:2", "to_ref": "Mark 12:30", "from_first_word_id": 1061956, "from_last_word_id": 1061989, "to_first_word_id": 645209, "to_last_word_id": 645240}
+{"kind": "Alludes to", "from_ref": "D&C 4:4", "to_ref": "John 4:35", "from_first_word_id": 1062004, "from_last_word_id": 1062039, "to_first_word_id": 678246, "to_last_word_id": 678278}
+{"kind": "Alludes to", "from_ref": "D&C 6:3", "to_ref": "John 4:35", "from_first_word_id": 1063274, "from_last_word_id": 1063316, "to_first_word_id": 678246, "to_last_word_id": 678278}
+{"kind": "Alludes to", "from_ref": "D&C 11:3", "to_ref": "John 4:35", "from_first_word_id": 1067354, "from_last_word_id": 1067396, "to_first_word_id": 678246, "to_last_word_id": 678278}
+{"kind": "Alludes to", "from_ref": "D&C 12:3", "to_ref": "John 4:35", "from_first_word_id": 1068143, "from_last_word_id": 1068185, "to_first_word_id": 678246, "to_last_word_id": 678278}
+{"kind": "Alludes to", "from_ref": "D&C 14:3", "to_ref": "John 4:35", "from_first_word_id": 1068441, "from_last_word_id": 1068483, "to_first_word_id": 678246, "to_last_word_id": 678278}
+{"kind": "Alludes to", "from_ref": "D&C 33:3", "to_ref": "John 4:35", "from_first_word_id": 1079481, "from_last_word_id": 1079507, "to_first_word_id": 678246, "to_last_word_id": 678278}
+{"kind": "Alludes to", "from_ref": "D&C 4:7", "to_ref": "Matthew 7:7", "from_first_word_id": 1062072, "from_last_word_id": 1062085, "to_first_word_id": 614558, "to_last_word_id": 614577}
+{"kind": "Alludes to", "from_ref": "D&C 6:5", "to_ref": "Matthew 7:7", "from_first_word_id": 1063332, "from_last_word_id": 1063351, "to_first_word_id": 614558, "to_last_word_id": 614577}
+{"kind": "Alludes to", "from_ref": "D&C 11:5", "to_ref": "Matthew 7:7", "from_first_word_id": 1067412, "from_last_word_id": 1067431, "to_first_word_id": 614558, "to_last_word_id": 614577}
+{"kind": "Alludes to", "from_ref": "D&C 88:63", "to_ref": "Matthew 7:7", "from_first_word_id": 1120952, "from_last_word_id": 1120983, "to_first_word_id": 614558, "to_last_word_id": 614577}
+{"kind": "Alludes to", "from_ref": "D&C 6:34", "to_ref": "Luke 12:32", "from_first_word_id": 1064240, "from_last_word_id": 1064264, "to_first_word_id": 663404, "to_last_word_id": 663419}
+{"kind": "Alludes to", "from_ref": "D&C 35:27", "to_ref": "Luke 12:32", "from_first_word_id": 1080987, "from_last_word_id": 1081004, "to_first_word_id": 663404, "to_last_word_id": 663419}
+{"kind": "Alludes to", "from_ref": "D&C 6:37", "to_ref": "John 20:27", "from_first_word_id": 1064298, "from_last_word_id": 1064330, "to_first_word_id": 693605, "to_last_word_id": 693634}
+{"kind": "Alludes to", "from_ref": "D&C 10:5", "to_ref": "Luke 21:36", "from_first_word_id": 1065481, "from_last_word_id": 1065511, "to_first_word_id": 671666, "to_last_word_id": 671695}
+{"kind": "Alludes to", "from_ref": "D&C 18:13", "to_ref": "Luke 15:7", "from_first_word_id": 1069620, "from_last_word_id": 1069630, "to_first_word_id": 665880, "to_last_word_id": 665907}
+{"kind": "Alludes to", "from_ref": "D&C 19:18", "to_ref": "Luke 22:44", "from_first_word_id": 1070803, "from_last_word_id": 1070842, "to_first_word_id": 672580, "to_last_word_id": 672604}
+{"kind": "Alludes to", "from_ref": "D&C 19:18", "to_ref": "Matthew 26:39", "from_first_word_id": 1070803, "from_last_word_id": 1070842, "to_first_word_id": 631574, "to_last_word_id": 631609}
+{"kind": "Alludes to", "from_ref": "D&C 25:12", "to_ref": "Ephesians 5:19", "from_first_word_id": 1075518, "from_last_word_id": 1075549, "to_first_word_id": 749075, "to_last_word_id": 749094}
+{"kind": "Alludes to", "from_ref": "D&C 27:15-18", "to_ref": "Ephesians 6:13-17", "from_first_word_id": 1076214, "from_last_word_id": 1076368, "to_first_word_id": 749582, "to_last_word_id": 749674}
+{"kind": "Alludes to", "from_ref": "D&C 29:7", "to_ref": "John 10:27", "from_first_word_id": 1077012, "from_last_word_id": 1077035, "to_first_word_id": 684920, "to_last_word_id": 684932}
+{"kind": "Alludes to", "from_ref": "D&C 29:12", "to_ref": "Matthew 19:28", "from_first_word_id": 1077191, "from_last_word_id": 1077282, "to_first_word_id": 625088, "to_last_word_id": 625132}
+{"kind": "Alludes to", "from_ref": "D&C 29:14", "to_ref": "Matthew 24:29", "from_first_word_id": 1077340, "from_last_word_id": 1077386, "to_first_word_id": 629294, "to_last_word_id": 629329}
+{"kind": "Alludes to", "from_ref": "D&C 29:23", "to_ref": "Revelation 21:1", "from_first_word_id": 1077638, "from_last_word_id": 1077665, "to_first_word_id": 789965, "to_last_word_id": 789991}
+{"kind": "Alludes to", "from_ref": "D&C 29:26", "to_ref": "1 Thessalonians 4:16", "from_first_word_id": 1077722, "from_last_word_id": 1077762, "to_first_word_id": 755396, "to_last_word_id": 755426}
+{"kind": "Alludes to", "from_ref": "D&C 29:27", "to_ref": "Matthew 25:32-33", "from_first_word_id": 1077763, "from_last_word_id": 1077791, "to_first_word_id": 630438, "to_last_word_id": 630478}
+{"kind": "Alludes to", "from_ref": "D&C 29:28", "to_ref": "Matthew 25:41", "from_first_word_id": 1077792, "from_last_word_id": 1077812, "to_first_word_id": 630642, "to_last_word_id": 630667}
+{"kind": "Alludes to", "from_ref": "D&C 33:17", "to_ref": "Matthew 25:1-13", "from_first_word_id": 1079853, "from_last_word_id": 1079878, "to_first_word_id": 629794, "to_last_word_id": 630000}
+{"kind": "Alludes to", "from_ref": "D&C 45:56-57", "to_ref": "Matthew 25:1-13", "from_first_word_id": 1089297, "from_last_word_id": 1089364, "to_first_word_id": 629794, "to_last_word_id": 630000}
+{"kind": "Alludes to", "from_ref": "D&C 63:54", "to_ref": "Matthew 25:1-13", "from_first_word_id": 1102361, "from_last_word_id": 1102406, "to_first_word_id": 629794, "to_last_word_id": 630000}
+{"kind": "Alludes to", "from_ref": "D&C 35:2", "to_ref": "John 17:21", "from_first_word_id": 1080194, "from_last_word_id": 1080250, "to_first_word_id": 690833, "to_last_word_id": 690866}
+{"kind": "Alludes to", "from_ref": "D&C 38:27", "to_ref": "John 17:21", "from_first_word_id": 1082133, "from_last_word_id": 1082165, "to_first_word_id": 690833, "to_last_word_id": 690866}
+{"kind": "Alludes to", "from_ref": "D&C 42:22", "to_ref": "Ephesians 5:25", "from_first_word_id": 1084392, "from_last_word_id": 1084408, "to_first_word_id": 749181, "to_last_word_id": 749196}
+{"kind": "Alludes to", "from_ref": "D&C 42:23", "to_ref": "Matthew 5:28", "from_first_word_id": 1084409, "from_last_word_id": 1084439, "to_first_word_id": 613141, "to_last_word_id": 613164}
+{"kind": "Alludes to", "from_ref": "D&C 45:3-5", "to_ref": "1 John 2:1", "from_first_word_id": 1087793, "from_last_word_id": 1087870, "to_first_word_id": 775800, "to_last_word_id": 775828}
+{"kind": "Alludes to", "from_ref": "D&C 45:48", "to_ref": "Zechariah 14:4", "from_first_word_id": 1089066, "from_last_word_id": 1089098, "to_first_word_id": 608054, "to_last_word_id": 608116}
+{"kind": "Alludes to", "from_ref": "D&C 45:51-52", "to_ref": "Zechariah 13:6", "from_first_word_id": 1089161, "from_last_word_id": 1089231, "to_first_word_id": 607818, "to_last_word_id": 607846}
+{"kind": "Alludes to", "from_ref": "D&C 45:16-44", "to_ref": "Matthew 24:3-31", "from_first_word_id": 1088177, "from_last_word_id": 1088972, "to_first_word_id": 628803, "to_last_word_id": 629403}
+{"kind": "Alludes to", "from_ref": "D&C 46:13-26", "to_ref": "1 Corinthians 12:4-11", "from_first_word_id": 1090302, "from_last_word_id": 1090556, "to_first_word_id": 734283, "to_last_word_id": 734416}
+{"kind": "Alludes to", "from_ref": "D&C 50:24", "to_ref": "Proverbs 4:18", "from_first_word_id": 1092429, "from_last_word_id": 1092458, "to_first_word_id": 424425, "to_last_word_id": 424444}
+{"kind": "Alludes to", "from_ref": "D&C 58:42", "to_ref": "Jeremiah 31:34", "from_first_word_id": 1097666, "from_last_word_id": 1097685, "to_first_word_id": 506774, "to_last_word_id": 506825}
+{"kind": "Alludes to", "from_ref": "D&C 59:5", "to_ref": "Deuteronomy 6:5", "from_first_word_id": 1098521, "from_last_word_id": 1098558, "to_first_word_id": 134067, "to_last_word_id": 134088}
+{"kind": "Alludes to", "from_ref": "D&C 59:6", "to_ref": "Leviticus 19:18", "from_first_word_id": 1098559, "from_last_word_id": 1098580, "to_first_word_id": 87193, "to_last_word_id": 87218}
+{"kind": "Alludes to", "from_ref": "D&C 64:10", "to_ref": "Matthew 6:14-15", "from_first_word_id": 1102955, "from_last_word_id": 1102973, "to_first_word_id": 613925, "to_last_word_id": 613953}
+{"kind": "Alludes to", "from_ref": "D&C 64:34", "to_ref": "Isaiah 1:19", "from_first_word_id": 1103671, "from_last_word_id": 1103698, "to_first_word_id": 446559, "to_last_word_id": 446572}
+{"kind": "Alludes to", "from_ref": "D&C 76:15-17", "to_ref": "John 5:28-29", "from_first_word_id": 1109411, "from_last_word_id": 1109491, "to_first_word_id": 679300, "to_last_word_id": 679346}
+{"kind": "Alludes to", "from_ref": "D&C 76:24", "to_ref": "Hebrews 1:2", "from_first_word_id": 1109633, "from_last_word_id": 1109658, "to_first_word_id": 762309, "to_last_word_id": 762334}
+{"kind": "Alludes to", "from_ref": "D&C 76:25-26", "to_ref": "Isaiah 14:12", "from_first_word_id": 1109659, "from_last_word_id": 1109729, "to_first_word_id": 453737, "to_last_word_id": 453761}
+{"kind": "Alludes to", "from_ref": "D&C 76:28-29", "to_ref": "Revelation 12:7-9", "from_first_word_id": 1109746, "from_last_word_id": 1109803, "to_first_word_id": 785249, "to_last_word_id": 785316}
+{"kind": "Alludes to", "from_ref": "D&C 76:44", "to_ref": "Mark 9:44", "from_first_word_id": 1110158, "from_last_word_id": 1110203, "to_first_word_id": 642382, "to_last_word_id": 642392}
+{"kind": "Alludes to", "from_ref": "D&C 76:44", "to_ref": "Isaiah 66:24", "from_first_word_id": 1110158, "from_last_word_id": 1110203, "to_first_word_id": 483072, "to_last_word_id": 483110}
+{"kind": "Alludes to", "from_ref": "D&C 76:54", "to_ref": "Hebrews 12:23", "from_first_word_id": 1110442, "from_last_word_id": 1110451, "to_first_word_id": 768514, "to_last_word_id": 768543}
+{"kind": "Alludes to", "from_ref": "D&C 76:66", "to_ref": "Hebrews 12:22", "from_first_word_id": 1110643, "from_last_word_id": 1110666, "to_first_word_id": 768489, "to_last_word_id": 768513}
+{"kind": "Alludes to", "from_ref": "D&C 76:69", "to_ref": "Hebrews 12:23-24", "from_first_word_id": 1110709, "from_last_word_id": 1110738, "to_first_word_id": 768514, "to_last_word_id": 768566}
+{"kind": "Alludes to", "from_ref": "D&C 76:70-81", "to_ref": "1 Corinthians 15:40-41", "from_first_word_id": 1110739, "from_last_word_id": 1111038, "to_first_word_id": 736739, "to_last_word_id": 736790}
+{"kind": "Alludes to", "from_ref": "D&C 76:96-98", "to_ref": "1 Corinthians 15:40-42", "from_first_word_id": 1111317, "from_last_word_id": 1111389, "to_first_word_id": 736739, "to_last_word_id": 736808}
+{"kind": "Alludes to", "from_ref": "D&C 76:99-100", "to_ref": "1 Corinthians 1:12", "from_first_word_id": 1111390, "from_last_word_id": 1111444, "to_first_word_id": 728367, "to_last_word_id": 728392}
+{"kind": "Alludes to", "from_ref": "D&C 76:107", "to_ref": "Isaiah 63:3", "from_first_word_id": 1111569, "from_last_word_id": 1111604, "to_first_word_id": 480752, "to_last_word_id": 480796}
+{"kind": "Alludes to", "from_ref": "D&C 76:107", "to_ref": "Revelation 19:15", "from_first_word_id": 1111569, "from_last_word_id": 1111604, "to_first_word_id": 789234, "to_last_word_id": 789273}
+{"kind": "Alludes to", "from_ref": "D&C 76:109", "to_ref": "Genesis 22:17", "from_first_word_id": 1111629, "from_last_word_id": 1111663, "to_first_word_id": 13654, "to_last_word_id": 13694}
+{"kind": "Alludes to", "from_ref": "D&C 76:110", "to_ref": "Philippians 2:10-11", "from_first_word_id": 1111664, "from_last_word_id": 1111692, "to_first_word_id": 750643, "to_last_word_id": 750683}
+{"kind": "Alludes to", "from_ref": "D&C 84:46", "to_ref": "John 1:9", "from_first_word_id": 1116039, "from_last_word_id": 1116068, "to_first_word_id": 675427, "to_last_word_id": 675440}
+{"kind": "Alludes to", "from_ref": "D&C 84:98", "to_ref": "Jeremiah 31:34", "from_first_word_id": 1117345, "from_last_word_id": 1117390, "to_first_word_id": 506774, "to_last_word_id": 506825}
+{"kind": "Alludes to", "from_ref": "D&C 84:14", "to_ref": "Genesis 14:18-20", "from_first_word_id": 1115196, "from_last_word_id": 1115214, "to_first_word_id": 8209, "to_last_word_id": 8269}
+{"kind": "Alludes to", "from_ref": "D&C 107:2-4", "to_ref": "Genesis 14:18", "from_first_word_id": 1140205, "from_last_word_id": 1140275, "to_first_word_id": 8209, "to_last_word_id": 8228}
+{"kind": "Alludes to", "from_ref": "D&C 84:23-24", "to_ref": "Exodus 20:18-19", "from_first_word_id": 1115391, "from_last_word_id": 1115463, "to_first_word_id": 53380, "to_last_word_id": 53434}
+{"kind": "Alludes to", "from_ref": "D&C 84:24", "to_ref": "Hebrews 3:11", "from_first_word_id": 1115419, "from_last_word_id": 1115463, "to_first_word_id": 763296, "to_last_word_id": 763308}
+{"kind": "Alludes to", "from_ref": "D&C 88:6", "to_ref": "Ephesians 4:9-10", "from_first_word_id": 1119405, "from_last_word_id": 1119437, "to_first_word_id": 748295, "to_last_word_id": 748334}
+{"kind": "Alludes to", "from_ref": "D&C 88:7-13", "to_ref": "John 1:4-9", "from_first_word_id": 1119438, "from_last_word_id": 1119610, "to_first_word_id": 675359, "to_last_word_id": 675440}
+{"kind": "Alludes to", "from_ref": "D&C 88:67", "to_ref": "Matthew 6:22", "from_first_word_id": 1121069, "from_last_word_id": 1121104, "to_first_word_id": 614084, "to_last_word_id": 614105}
+{"kind": "Alludes to", "from_ref": "D&C 88:95", "to_ref": "Revelation 8:1", "from_first_word_id": 1122055, "from_last_word_id": 1122097, "to_first_word_id": 783158, "to_last_word_id": 783177}
+{"kind": "Alludes to", "from_ref": "D&C 88:92-110", "to_ref": "Revelation 8:6-13", "from_first_word_id": 1121891, "from_last_word_id": 1122697, "to_first_word_id": 783290, "to_last_word_id": 783554}
+{"kind": "Alludes to", "from_ref": "D&C 88:104", "to_ref": "Isaiah 45:23", "from_first_word_id": 1122378, "from_last_word_id": 1122450, "to_first_word_id": 472054, "to_last_word_id": 472083}
+{"kind": "Alludes to", "from_ref": "D&C 88:110", "to_ref": "Revelation 20:2", "from_first_word_id": 1122631, "from_last_word_id": 1122697, "to_first_word_id": 789511, "to_last_word_id": 789532}
+{"kind": "Alludes to", "from_ref": "D&C 93:2", "to_ref": "John 1:9", "from_first_word_id": 1125481, "from_last_word_id": 1125496, "to_first_word_id": 675427, "to_last_word_id": 675440}
+{"kind": "Alludes to", "from_ref": "D&C 93:7-17", "to_ref": "John 1:1-14", "from_first_word_id": 1125587, "from_last_word_id": 1125864, "to_first_word_id": 675317, "to_last_word_id": 675546}
+{"kind": "Alludes to", "from_ref": "D&C 93:21", "to_ref": "Colossians 1:15", "from_first_word_id": 1125958, "from_last_word_id": 1125976, "to_first_word_id": 752343, "to_last_word_id": 752355}
+{"kind": "Alludes to", "from_ref": "D&C 101:24", "to_ref": "2 Peter 3:10", "from_first_word_id": 1131553, "from_last_word_id": 1131592, "to_first_word_id": 775287, "to_last_word_id": 775333}
+{"kind": "Alludes to", "from_ref": "D&C 101:65", "to_ref": "Matthew 13:30", "from_first_word_id": 1132705, "from_last_word_id": 1132760, "to_first_word_id": 620079, "to_last_word_id": 620118}
+{"kind": "Alludes to", "from_ref": "D&C 86:1-7", "to_ref": "Matthew 13:24-30", "from_first_word_id": 1118624, "from_last_word_id": 1118852, "to_first_word_id": 619952, "to_last_word_id": 620118}
+{"kind": "Alludes to", "from_ref": "D&C 101:81-84", "to_ref": "Luke 18:1-8", "from_first_word_id": 1133214, "from_last_word_id": 1133321, "to_first_word_id": 668054, "to_last_word_id": 668200}
+{"kind": "Alludes to", "from_ref": "D&C 121:10", "to_ref": "Job 19:13-19", "from_first_word_id": 1149920, "from_last_word_id": 1149941, "to_first_word_id": 368600, "to_last_word_id": 368708}
+{"kind": "Alludes to", "from_ref": "D&C 128:19", "to_ref": "Isaiah 52:7", "from_first_word_id": 1160330, "from_last_word_id": 1160420, "to_first_word_id": 475728, "to_last_word_id": 475760}
+{"kind": "Alludes to", "from_ref": "D&C 128:22", "to_ref": "Isaiah 61:1", "from_first_word_id": 1160645, "from_last_word_id": 1160721, "to_first_word_id": 479959, "to_last_word_id": 480006}
+{"kind": "Alludes to", "from_ref": "D&C 128:23", "to_ref": "Job 38:7", "from_first_word_id": 1160722, "from_last_word_id": 1160841, "to_first_word_id": 376660, "to_last_word_id": 376674}
+{"kind": "Alludes to", "from_ref": "D&C 128:24", "to_ref": "Malachi 3:3", "from_first_word_id": 1160842, "from_last_word_id": 1160963, "to_first_word_id": 609828, "to_last_word_id": 609864}
+{"kind": "Alludes to", "from_ref": "D&C 130:1", "to_ref": "1 John 3:2", "from_first_word_id": 1161208, "from_last_word_id": 1161229, "to_first_word_id": 776567, "to_last_word_id": 776605}
+{"kind": "Alludes to", "from_ref": "D&C 132:34", "to_ref": "Genesis 16:3", "from_first_word_id": 1163659, "from_last_word_id": 1163695, "to_first_word_id": 8905, "to_last_word_id": 8936}
+{"kind": "Alludes to", "from_ref": "D&C 132:36", "to_ref": "Genesis 22:2", "from_first_word_id": 1163713, "from_last_word_id": 1163741, "to_first_word_id": 13209, "to_last_word_id": 13249}
+{"kind": "Alludes to", "from_ref": "D&C 133:46-48", "to_ref": "Isaiah 63:1-3", "from_first_word_id": 1166478, "from_last_word_id": 1166548, "to_first_word_id": 480701, "to_last_word_id": 480796}
+{"kind": "Alludes to", "from_ref": "D&C 133:22", "to_ref": "Revelation 1:15", "from_first_word_id": 1165882, "from_last_word_id": 1165914, "to_first_word_id": 779716, "to_last_word_id": 779738}
+{"kind": "Alludes to", "from_ref": "D&C 133:27", "to_ref": "Isaiah 35:8", "from_first_word_id": 1166035, "from_last_word_id": 1166048, "to_first_word_id": 464700, "to_last_word_id": 464739}
+{"kind": "Alludes to", "from_ref": "D&C 133:27", "to_ref": "Isaiah 11:16", "from_first_word_id": 1166035, "from_last_word_id": 1166048, "to_first_word_id": 452685, "to_last_word_id": 452721}
+{"kind": "Alludes to", "from_ref": "D&C 133:56", "to_ref": "Matthew 27:52", "from_first_word_id": 1166796, "from_last_word_id": 1166848, "to_first_word_id": 633460, "to_last_word_id": 633473}
+{"kind": "Alludes to", "from_ref": "D&C 110:2-3", "to_ref": "Revelation 1:14-15", "from_first_word_id": 1145904, "from_last_word_id": 1145978, "to_first_word_id": 779694, "to_last_word_id": 779738}
+{"kind": "Alludes to", "from_ref": "D&C 110:3", "to_ref": "Daniel 10:6", "from_first_word_id": 1145932, "from_last_word_id": 1145978, "to_first_word_id": 577739, "to_last_word_id": 577784}
+{"kind": "Alludes to", "from_ref": "D&C 20:77", "to_ref": "Luke 22:19", "from_first_word_id": 1073405, "from_last_word_id": 1073495, "to_first_word_id": 672060, "to_last_word_id": 672089}
+{"kind": "Alludes to", "from_ref": "D&C 27:2", "to_ref": "1 Corinthians 11:26", "from_first_word_id": 1075740, "from_last_word_id": 1075803, "to_first_word_id": 734053, "to_last_word_id": 734073}
+{"kind": "Alludes to", "from_ref": "D&C 122:8", "to_ref": "Hebrews 2:17-18", "from_first_word_id": 1151384, "from_last_word_id": 1151397, "to_first_word_id": 763044, "to_last_word_id": 763099}
+{"kind": "Alludes to", "from_ref": "Moses 1:2", "to_ref": "Exodus 33:11", "from_first_word_id": 1172337, "from_last_word_id": 1172362, "to_first_word_id": 64447, "to_last_word_id": 64486}
+{"kind": "Alludes to", "from_ref": "Moses 1:25", "to_ref": "Exodus 14:21", "from_first_word_id": 1173164, "from_last_word_id": 1173217, "to_first_word_id": 49009, "to_last_word_id": 49045}
+{"kind": "Alludes to", "from_ref": "Moses 1:11", "to_ref": "Exodus 33:20", "from_first_word_id": 1172671, "from_last_word_id": 1172721, "to_first_word_id": 64735, "to_last_word_id": 64752}
+{"kind": "Alludes to", "from_ref": "Abraham 3:22-23", "to_ref": "Jeremiah 1:5", "from_first_word_id": 1188252, "from_last_word_id": 1188340, "to_first_word_id": 483216, "to_last_word_id": 483246}
+{"kind": "Alludes to", "from_ref": "Abraham 3:27", "to_ref": "Isaiah 6:8", "from_first_word_id": 1188461, "from_last_word_id": 1188501, "to_first_word_id": 449250, "to_last_word_id": 449276}
+{"kind": "Alludes to", "from_ref": "JS-H 1:17", "to_ref": "Matthew 17:5", "from_first_word_id": 1193927, "from_last_word_id": 1193988, "to_first_word_id": 623063, "to_last_word_id": 623096}
+{"kind": "Alludes to", "from_ref": "JS-H 1:22-25", "to_ref": "Acts 26:9-24", "from_first_word_id": 1194410, "from_last_word_id": 1194917, "to_first_word_id": 716214, "to_last_word_id": 716641}
+{"kind": "Alludes to", "from_ref": "Articles of Faith 1:13", "to_ref": "Philippians 4:8", "from_first_word_id": 1199374, "from_last_word_id": 1199439, "to_first_word_id": 751690, "to_last_word_id": 751732}
+{"kind": "Alludes to", "from_ref": "Articles of Faith 1:7", "to_ref": "1 Corinthians 12:8-10", "from_first_word_id": 1199197, "from_last_word_id": 1199213, "to_first_word_id": 734334, "to_last_word_id": 734398}
+{"kind": "Alludes to", "from_ref": "Articles of Faith 1:6", "to_ref": "Ephesians 4:11", "from_first_word_id": 1199176, "from_last_word_id": 1199196, "to_first_word_id": 748335, "to_last_word_id": 748350}
+{"kind": "Alludes to", "from_ref": "Articles of Faith 1:5", "to_ref": "Hebrews 5:4", "from_first_word_id": 1199141, "from_last_word_id": 1199175, "to_first_word_id": 763936, "to_last_word_id": 763953}
+{"kind": "Alludes to", "from_ref": "Articles of Faith 1:10", "to_ref": "Isaiah 11:11-12", "from_first_word_id": 1199276, "from_last_word_id": 1199323, "to_first_word_id": 452492, "to_last_word_id": 452580}
+{"kind": "Alludes to", "from_ref": "Articles of Faith 1:10", "to_ref": "Revelation 20:4", "from_first_word_id": 1199276, "from_last_word_id": 1199323, "to_first_word_id": 789575, "to_last_word_id": 789642}
+{"kind": "Alludes to", "from_ref": "Articles of Faith 1:4", "to_ref": "Acts 2:38", "from_first_word_id": 1199099, "from_last_word_id": 1199140, "to_first_word_id": 695887, "to_last_word_id": 695920}
+{"kind": "Alludes to", "from_ref": "Moses 7:62", "to_ref": "Psalms 85:11", "from_first_word_id": 1183600, "from_last_word_id": 1183708, "to_first_word_id": 404477, "to_last_word_id": 404490}
+{"kind": "Alludes to", "from_ref": "Moses 6:59", "to_ref": "John 3:5", "from_first_word_id": 1180701, "from_last_word_id": 1180799, "to_first_word_id": 676934, "to_last_word_id": 676960}
+{"kind": "Alludes to", "from_ref": "D&C 50:44", "to_ref": "Genesis 49:24", "from_first_word_id": 1093001, "from_last_word_id": 1093026, "to_first_word_id": 37278, "to_last_word_id": 37310}
+{"kind": "Alludes to", "from_ref": "Isaiah 51:9-10", "to_ref": "Exodus 14:21-22", "from_first_word_id": 475073, "from_last_word_id": 475136, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Isaiah 43:16-17", "to_ref": "Exodus 14:21-28", "from_first_word_id": 470173, "from_last_word_id": 470219, "to_first_word_id": 49009, "to_last_word_id": 49269}
+{"kind": "Alludes to", "from_ref": "Isaiah 11:15-16", "to_ref": "Exodus 14:29", "from_first_word_id": 452646, "from_last_word_id": 452721, "to_first_word_id": 49270, "to_last_word_id": 49300}
+{"kind": "Alludes to", "from_ref": "Isaiah 63:11-13", "to_ref": "Exodus 14:21-22", "from_first_word_id": 481000, "from_last_word_id": 481079, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Isaiah 48:21", "to_ref": "Exodus 17:6", "from_first_word_id": 473523, "from_last_word_id": 473555, "to_first_word_id": 51291, "to_last_word_id": 51333}
+{"kind": "Alludes to", "from_ref": "Isaiah 54:9", "to_ref": "Genesis 9:11", "from_first_word_id": 476595, "from_last_word_id": 476636, "to_first_word_id": 5259, "to_last_word_id": 5293}
+{"kind": "Alludes to", "from_ref": "Isaiah 51:2", "to_ref": "Genesis 12:1-2", "from_first_word_id": 474830, "from_last_word_id": 474851, "to_first_word_id": 6776, "to_last_word_id": 6830}
+{"kind": "Alludes to", "from_ref": "Isaiah 51:3", "to_ref": "Genesis 2:8", "from_first_word_id": 474852, "from_last_word_id": 474894, "to_first_word_id": 988, "to_last_word_id": 1007}
+{"kind": "Alludes to", "from_ref": "Ezekiel 28:13", "to_ref": "Genesis 2:8", "from_first_word_id": 550239, "from_last_word_id": 550295, "to_first_word_id": 988, "to_last_word_id": 1007}
+{"kind": "Alludes to", "from_ref": "Ezekiel 31:8-9", "to_ref": "Genesis 2:8", "from_first_word_id": 552424, "from_last_word_id": 552493, "to_first_word_id": 988, "to_last_word_id": 1007}
+{"kind": "Alludes to", "from_ref": "Ezekiel 36:35", "to_ref": "Genesis 2:8", "from_first_word_id": 557463, "from_last_word_id": 557492, "to_first_word_id": 988, "to_last_word_id": 1007}
+{"kind": "Alludes to", "from_ref": "Joel 2:3", "to_ref": "Genesis 2:8", "from_first_word_id": 585967, "from_last_word_id": 585999, "to_first_word_id": 988, "to_last_word_id": 1007}
+{"kind": "Alludes to", "from_ref": "Isaiah 1:9-10", "to_ref": "Genesis 19:24", "from_first_word_id": 446294, "from_last_word_id": 446342, "to_first_word_id": 11512, "to_last_word_id": 11529}
+{"kind": "Alludes to", "from_ref": "Isaiah 13:19", "to_ref": "Genesis 19:24-25", "from_first_word_id": 453320, "from_last_word_id": 453340, "to_first_word_id": 11512, "to_last_word_id": 11552}
+{"kind": "Alludes to", "from_ref": "Jeremiah 49:18", "to_ref": "Genesis 19:24-25", "from_first_word_id": 520715, "from_last_word_id": 520744, "to_first_word_id": 11512, "to_last_word_id": 11552}
+{"kind": "Alludes to", "from_ref": "Jeremiah 50:40", "to_ref": "Genesis 19:24-25", "from_first_word_id": 522588, "from_last_word_id": 522615, "to_first_word_id": 11512, "to_last_word_id": 11552}
+{"kind": "Alludes to", "from_ref": "Lamentations 4:6", "to_ref": "Genesis 19:24-25", "from_first_word_id": 528418, "from_last_word_id": 528452, "to_first_word_id": 11512, "to_last_word_id": 11552}
+{"kind": "Alludes to", "from_ref": "Amos 4:11", "to_ref": "Genesis 19:24-25", "from_first_word_id": 589035, "from_last_word_id": 589067, "to_first_word_id": 11512, "to_last_word_id": 11552}
+{"kind": "Alludes to", "from_ref": "Zephaniah 2:9", "to_ref": "Genesis 19:24-25", "from_first_word_id": 600308, "from_last_word_id": 600361, "to_first_word_id": 11512, "to_last_word_id": 11552}
+{"kind": "Alludes to", "from_ref": "Hosea 11:8", "to_ref": "Deuteronomy 29:23", "from_first_word_id": 584249, "from_last_word_id": 584286, "to_first_word_id": 152425, "to_last_word_id": 152469}
+{"kind": "Alludes to", "from_ref": "Hosea 12:3-4", "to_ref": "Genesis 25:26", "from_first_word_id": 584460, "from_last_word_id": 584505, "to_first_word_id": 16689, "to_last_word_id": 16719}
+{"kind": "Alludes to", "from_ref": "Hosea 12:3-4", "to_ref": "Genesis 32:24-28", "from_first_word_id": 584460, "from_last_word_id": 584505, "to_first_word_id": 23489, "to_last_word_id": 23602}
+{"kind": "Alludes to", "from_ref": "Hosea 12:12", "to_ref": "Genesis 29:20", "from_first_word_id": 584653, "from_last_word_id": 584673, "to_first_word_id": 20103, "to_last_word_id": 20125}
+{"kind": "Alludes to", "from_ref": "Hosea 12:13", "to_ref": "Exodus 12:51", "from_first_word_id": 584674, "from_last_word_id": 584691, "to_first_word_id": 47720, "to_last_word_id": 47745}
+{"kind": "Alludes to", "from_ref": "Hosea 9:10", "to_ref": "Numbers 25:3", "from_first_word_id": 583456, "from_last_word_id": 583497, "to_first_word_id": 118530, "to_last_word_id": 118545}
+{"kind": "Alludes to", "from_ref": "Hosea 10:9", "to_ref": "Judges 19:22", "from_first_word_id": 583891, "from_last_word_id": 583916, "to_first_word_id": 192039, "to_last_word_id": 192092}
+{"kind": "Alludes to", "from_ref": "Hosea 2:15", "to_ref": "Joshua 7:24-26", "from_first_word_id": 580955, "from_last_word_id": 581000, "to_first_word_id": 161643, "to_last_word_id": 161770}
+{"kind": "Alludes to", "from_ref": "Isaiah 65:10", "to_ref": "Joshua 7:26", "from_first_word_id": 481808, "from_last_word_id": 481836, "to_first_word_id": 161733, "to_last_word_id": 161770}
+{"kind": "Alludes to", "from_ref": "Micah 6:4-5", "to_ref": "Numbers 22:5-6", "from_first_word_id": 595813, "from_last_word_id": 595874, "to_first_word_id": 115989, "to_last_word_id": 116094}
+{"kind": "Alludes to", "from_ref": "Micah 6:4-5", "to_ref": "Joshua 3:16", "from_first_word_id": 595813, "from_last_word_id": 595874, "to_first_word_id": 158589, "to_last_word_id": 158641}
+{"kind": "Alludes to", "from_ref": "Micah 7:20", "to_ref": "Genesis 22:16-17", "from_first_word_id": 596745, "from_last_word_id": 596768, "to_first_word_id": 13628, "to_last_word_id": 13694}
+{"kind": "Alludes to", "from_ref": "Micah 5:6", "to_ref": "Genesis 10:8-10", "from_first_word_id": 595470, "from_last_word_id": 595510, "to_first_word_id": 5793, "to_last_word_id": 5846}
+{"kind": "Alludes to", "from_ref": "Isaiah 10:26", "to_ref": "Judges 7:25", "from_first_word_id": 451980, "from_last_word_id": 452021, "to_first_word_id": 181847, "to_last_word_id": 181892}
+{"kind": "Alludes to", "from_ref": "Isaiah 9:4", "to_ref": "Judges 7:22", "from_first_word_id": 450781, "from_last_word_id": 450806, "to_first_word_id": 181743, "to_last_word_id": 181780}
+{"kind": "Alludes to", "from_ref": "Psalms 83:9-11", "to_ref": "Judges 7:25", "from_first_word_id": 403915, "from_last_word_id": 403960, "to_first_word_id": 181847, "to_last_word_id": 181892}
+{"kind": "Alludes to", "from_ref": "Psalms 83:9-11", "to_ref": "Judges 4:15-16", "from_first_word_id": 403915, "from_last_word_id": 403960, "to_first_word_id": 178547, "to_last_word_id": 178616}
+{"kind": "Alludes to", "from_ref": "Isaiah 28:21", "to_ref": "2 Samuel 5:20", "from_first_word_id": 460630, "from_last_word_id": 460667, "to_first_word_id": 225921, "to_last_word_id": 225956}
+{"kind": "Alludes to", "from_ref": "Isaiah 28:21", "to_ref": "Joshua 10:10-12", "from_first_word_id": 460630, "from_last_word_id": 460667, "to_first_word_id": 164089, "to_last_word_id": 164219}
+{"kind": "Alludes to", "from_ref": "Jeremiah 4:23", "to_ref": "Genesis 1:2", "from_first_word_id": 486062, "from_last_word_id": 486081, "to_first_word_id": 18, "to_last_word_id": 46}
+{"kind": "Alludes to", "from_ref": "Isaiah 65:25", "to_ref": "Genesis 3:14", "from_first_word_id": 482262, "from_last_word_id": 482299, "to_first_word_id": 1791, "to_last_word_id": 1833}
+{"kind": "Alludes to", "from_ref": "Malachi 1:2-3", "to_ref": "Genesis 25:23", "from_first_word_id": 608735, "from_last_word_id": 608779, "to_first_word_id": 16614, "to_last_word_id": 16654}
+{"kind": "Alludes to", "from_ref": "Psalms 8:3-8", "to_ref": "Genesis 1:26-28", "from_first_word_id": 380510, "from_last_word_id": 380616, "to_first_word_id": 581, "to_last_word_id": 698}
+{"kind": "Alludes to", "from_ref": "Psalms 104:5-9", "to_ref": "Genesis 1:9", "from_first_word_id": 409591, "from_last_word_id": 409676, "to_first_word_id": 162, "to_last_word_id": 186}
+{"kind": "Alludes to", "from_ref": "Psalms 104:19", "to_ref": "Genesis 1:14-16", "from_first_word_id": 409835, "from_last_word_id": 409846, "to_first_word_id": 288, "to_last_word_id": 369}
+{"kind": "Alludes to", "from_ref": "Psalms 33:6", "to_ref": "Genesis 1:3", "from_first_word_id": 387429, "from_last_word_id": 387450, "to_first_word_id": 47, "to_last_word_id": 57}
+{"kind": "Alludes to", "from_ref": "Psalms 33:9", "to_ref": "Genesis 1:3", "from_first_word_id": 387488, "from_last_word_id": 387500, "to_first_word_id": 47, "to_last_word_id": 57}
+{"kind": "Alludes to", "from_ref": "Proverbs 3:18", "to_ref": "Genesis 2:9", "from_first_word_id": 423872, "from_last_word_id": 423892, "to_first_word_id": 1008, "to_last_word_id": 1050}
+{"kind": "Alludes to", "from_ref": "Ecclesiastes 3:20", "to_ref": "Genesis 3:19", "from_first_word_id": 439387, "from_last_word_id": 439402, "to_first_word_id": 1969, "to_last_word_id": 2001}
+{"kind": "Alludes to", "from_ref": "Ecclesiastes 12:7", "to_ref": "Genesis 2:7", "from_first_word_id": 443239, "from_last_word_id": 443259, "to_first_word_id": 961, "to_last_word_id": 987}
+{"kind": "Alludes to", "from_ref": "Job 34:15", "to_ref": "Genesis 3:19", "from_first_word_id": 375015, "from_last_word_id": 375026, "to_first_word_id": 1969, "to_last_word_id": 2001}
+{"kind": "Alludes to", "from_ref": "Psalms 90:3", "to_ref": "Genesis 3:19", "from_first_word_id": 406203, "from_last_word_id": 406214, "to_first_word_id": 1969, "to_last_word_id": 2001}
+{"kind": "Alludes to", "from_ref": "Jeremiah 31:15", "to_ref": "Genesis 35:19", "from_first_word_id": 506186, "from_last_word_id": 506215, "to_first_word_id": 25477, "to_last_word_id": 25490}
+{"kind": "Alludes to", "from_ref": "Psalms 78:13", "to_ref": "Exodus 14:21-22", "from_first_word_id": 401752, "from_last_word_id": 401771, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Psalms 78:15-16", "to_ref": "Exodus 17:6", "from_first_word_id": 401791, "from_last_word_id": 401823, "to_first_word_id": 51291, "to_last_word_id": 51333}
+{"kind": "Alludes to", "from_ref": "Psalms 78:24", "to_ref": "Exodus 16:4", "from_first_word_id": 401941, "from_last_word_id": 401958, "to_first_word_id": 50184, "to_last_word_id": 50225}
+{"kind": "Alludes to", "from_ref": "Psalms 78:27-31", "to_ref": "Numbers 11:31-33", "from_first_word_id": 401991, "from_last_word_id": 402075, "to_first_word_id": 107157, "to_last_word_id": 107290}
+{"kind": "Alludes to", "from_ref": "Psalms 78:44-51", "to_ref": "Exodus 7:20", "from_first_word_id": 402270, "from_last_word_id": 402400, "to_first_word_id": 42947, "to_last_word_id": 42996}
+{"kind": "Alludes to", "from_ref": "Psalms 78:44-51", "to_ref": "Exodus 12:29", "from_first_word_id": 402270, "from_last_word_id": 402400, "to_first_word_id": 47138, "to_last_word_id": 47183}
+{"kind": "Alludes to", "from_ref": "Psalms 105:17-22", "to_ref": "Genesis 37:28", "from_first_word_id": 410346, "from_last_word_id": 410426, "to_first_word_id": 27237, "to_last_word_id": 27270}
+{"kind": "Alludes to", "from_ref": "Psalms 105:17-22", "to_ref": "Genesis 41:40-44", "from_first_word_id": 410346, "from_last_word_id": 410426, "to_first_word_id": 30453, "to_last_word_id": 30584}
+{"kind": "Alludes to", "from_ref": "Psalms 105:23", "to_ref": "Genesis 46:6", "from_first_word_id": 410427, "from_last_word_id": 410439, "to_first_word_id": 34578, "to_last_word_id": 34605}
+{"kind": "Alludes to", "from_ref": "Psalms 105:28-36", "to_ref": "Exodus 10:22", "from_first_word_id": 410491, "from_last_word_id": 410614, "to_first_word_id": 45734, "to_last_word_id": 45755}
+{"kind": "Alludes to", "from_ref": "Psalms 105:28-36", "to_ref": "Exodus 7:20", "from_first_word_id": 410491, "from_last_word_id": 410614, "to_first_word_id": 42947, "to_last_word_id": 42996}
+{"kind": "Alludes to", "from_ref": "Psalms 105:39-41", "to_ref": "Exodus 13:21", "from_first_word_id": 410648, "from_last_word_id": 410695, "to_first_word_id": 48362, "to_last_word_id": 48398}
+{"kind": "Alludes to", "from_ref": "Psalms 105:39-41", "to_ref": "Exodus 16:13-15", "from_first_word_id": 410648, "from_last_word_id": 410695, "to_first_word_id": 50476, "to_last_word_id": 50573}
+{"kind": "Alludes to", "from_ref": "Psalms 106:9-11", "to_ref": "Exodus 14:21-28", "from_first_word_id": 410903, "from_last_word_id": 410958, "to_first_word_id": 49009, "to_last_word_id": 49269}
+{"kind": "Alludes to", "from_ref": "Psalms 106:16-18", "to_ref": "Numbers 16:31-35", "from_first_word_id": 411003, "from_last_word_id": 411043, "to_first_word_id": 111521, "to_last_word_id": 111640}
+{"kind": "Alludes to", "from_ref": "Psalms 106:19-20", "to_ref": "Exodus 32:4", "from_first_word_id": 411044, "from_last_word_id": 411068, "to_first_word_id": 63131, "to_last_word_id": 63171}
+{"kind": "Alludes to", "from_ref": "Psalms 106:23", "to_ref": "Exodus 32:11-14", "from_first_word_id": 411095, "from_last_word_id": 411123, "to_first_word_id": 63346, "to_last_word_id": 63492}
+{"kind": "Alludes to", "from_ref": "Psalms 106:28-31", "to_ref": "Numbers 25:3-8", "from_first_word_id": 411178, "from_last_word_id": 411232, "to_first_word_id": 118530, "to_last_word_id": 118713}
+{"kind": "Alludes to", "from_ref": "Psalms 106:32-33", "to_ref": "Numbers 20:10-13", "from_first_word_id": 411233, "from_last_word_id": 411264, "to_first_word_id": 114409, "to_last_word_id": 114526}
+{"kind": "Alludes to", "from_ref": "Psalms 95:8-11", "to_ref": "Exodus 17:7", "from_first_word_id": 407618, "from_last_word_id": 407689, "to_first_word_id": 51334, "to_last_word_id": 51367}
+{"kind": "Alludes to", "from_ref": "Psalms 95:8-11", "to_ref": "Numbers 14:22-23", "from_first_word_id": 407618, "from_last_word_id": 407689, "to_first_word_id": 109011, "to_last_word_id": 109069}
+{"kind": "Alludes to", "from_ref": "Psalms 81:7", "to_ref": "Exodus 17:7", "from_first_word_id": 403479, "from_last_word_id": 403504, "to_first_word_id": 51334, "to_last_word_id": 51367}
+{"kind": "Alludes to", "from_ref": "Psalms 99:6-7", "to_ref": "Exodus 33:9", "from_first_word_id": 408352, "from_last_word_id": 408394, "to_first_word_id": 64391, "to_last_word_id": 64419}
+{"kind": "Alludes to", "from_ref": "Psalms 77:19-20", "to_ref": "Exodus 14:22", "from_first_word_id": 401482, "from_last_word_id": 401514, "to_first_word_id": 49046, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Psalms 114:3-8", "to_ref": "Exodus 14:21", "from_first_word_id": 413611, "from_last_word_id": 413692, "to_first_word_id": 49009, "to_last_word_id": 49045}
+{"kind": "Alludes to", "from_ref": "Psalms 114:3-8", "to_ref": "Joshua 3:16", "from_first_word_id": 413611, "from_last_word_id": 413692, "to_first_word_id": 158589, "to_last_word_id": 158641}
+{"kind": "Alludes to", "from_ref": "Psalms 136:13-15", "to_ref": "Exodus 14:21-28", "from_first_word_id": 419420, "from_last_word_id": 419466, "to_first_word_id": 49009, "to_last_word_id": 49269}
+{"kind": "Alludes to", "from_ref": "Psalms 136:19-20", "to_ref": "Numbers 21:24", "from_first_word_id": 419504, "from_last_word_id": 419526, "to_first_word_id": 115567, "to_last_word_id": 115600}
+{"kind": "Alludes to", "from_ref": "Psalms 136:19-20", "to_ref": "Numbers 21:33-35", "from_first_word_id": 419504, "from_last_word_id": 419526, "to_first_word_id": 115791, "to_last_word_id": 115887}
+{"kind": "Alludes to", "from_ref": "Psalms 135:8-11", "to_ref": "Exodus 12:29", "from_first_word_id": 419052, "from_last_word_id": 419105, "to_first_word_id": 47138, "to_last_word_id": 47183}
+{"kind": "Alludes to", "from_ref": "Psalms 135:8-11", "to_ref": "Numbers 21:24", "from_first_word_id": 419052, "from_last_word_id": 419105, "to_first_word_id": 115567, "to_last_word_id": 115600}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:9-11", "to_ref": "Exodus 14:21-28", "from_first_word_id": 350898, "from_last_word_id": 350993, "to_first_word_id": 49009, "to_last_word_id": 49269}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:12", "to_ref": "Exodus 13:21", "from_first_word_id": 350994, "from_last_word_id": 351024, "to_first_word_id": 48362, "to_last_word_id": 48398}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:15", "to_ref": "Exodus 16:4", "from_first_word_id": 351072, "from_last_word_id": 351112, "to_first_word_id": 50184, "to_last_word_id": 50225}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:15", "to_ref": "Exodus 17:6", "from_first_word_id": 351072, "from_last_word_id": 351112, "to_first_word_id": 51291, "to_last_word_id": 51333}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:18", "to_ref": "Exodus 32:4", "from_first_word_id": 351183, "from_last_word_id": 351209, "to_first_word_id": 63131, "to_last_word_id": 63171}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:22", "to_ref": "Numbers 21:24", "from_first_word_id": 351306, "from_last_word_id": 351341, "to_first_word_id": 115567, "to_last_word_id": 115600}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:7-8", "to_ref": "Genesis 17:5", "from_first_word_id": 350821, "from_last_word_id": 350897, "to_first_word_id": 9333, "to_last_word_id": 9357}
+{"kind": "Alludes to", "from_ref": "Nehemiah 13:26", "to_ref": "1 Kings 11:1-4", "from_first_word_id": 355127, "from_last_word_id": 355169, "to_first_word_id": 254263, "to_last_word_id": 254384}
+{"kind": "Alludes to", "from_ref": "Psalms 67:1", "to_ref": "Numbers 6:24-25", "from_first_word_id": 397470, "from_last_word_id": 397486, "to_first_word_id": 101977, "to_last_word_id": 101996}
+{"kind": "Alludes to", "from_ref": "Psalms 110:4", "to_ref": "Genesis 14:18", "from_first_word_id": 413022, "from_last_word_id": 413040, "to_first_word_id": 8209, "to_last_word_id": 8228}
+{"kind": "Alludes to", "from_ref": "Habakkuk 3:8-15", "to_ref": "Exodus 15:1-10", "from_first_word_id": 599189, "from_last_word_id": 599388, "to_first_word_id": 49352, "to_last_word_id": 49593}
+{"kind": "Alludes to", "from_ref": "Ezekiel 14:14", "to_ref": "Genesis 6:9", "from_first_word_id": 537920, "from_last_word_id": 537944, "to_first_word_id": 3483, "to_last_word_id": 3503}
+{"kind": "Alludes to", "from_ref": "Ezekiel 14:14", "to_ref": "Job 1:1", "from_first_word_id": 537920, "from_last_word_id": 537944, "to_first_word_id": 360922, "to_last_word_id": 360949}
+{"kind": "Alludes to", "from_ref": "Jeremiah 7:12", "to_ref": "Joshua 18:1", "from_first_word_id": 488278, "from_last_word_id": 488310, "to_first_word_id": 169643, "to_last_word_id": 169671}
+{"kind": "Alludes to", "from_ref": "Jeremiah 7:12", "to_ref": "1 Samuel 4:10-11", "from_first_word_id": 488278, "from_last_word_id": 488310, "to_first_word_id": 199947, "to_last_word_id": 199995}
+{"kind": "Alludes to", "from_ref": "Psalms 78:60", "to_ref": "1 Samuel 4:10-11", "from_first_word_id": 402544, "from_last_word_id": 402558, "to_first_word_id": 199947, "to_last_word_id": 199995}
+{"kind": "Alludes to", "from_ref": "Jeremiah 15:1", "to_ref": "Exodus 32:11-14", "from_first_word_id": 493870, "from_last_word_id": 493902, "to_first_word_id": 63346, "to_last_word_id": 63492}
+{"kind": "Alludes to", "from_ref": "Jeremiah 15:1", "to_ref": "1 Samuel 12:23", "from_first_word_id": 493870, "from_last_word_id": 493902, "to_first_word_id": 205659, "to_last_word_id": 205688}
+{"kind": "Alludes to", "from_ref": "Daniel 9:11", "to_ref": "Deuteronomy 28:15", "from_first_word_id": 576947, "from_last_word_id": 576991, "to_first_word_id": 150140, "to_last_word_id": 150185}
+{"kind": "Alludes to", "from_ref": "Ezra 9:11-12", "to_ref": "Deuteronomy 7:3", "from_first_word_id": 343668, "from_last_word_id": 343762, "to_first_word_id": 134668, "to_last_word_id": 134692}
+{"kind": "Alludes to", "from_ref": "2 Chronicles 20:7", "to_ref": "Genesis 12:7", "from_first_word_id": 323244, "from_last_word_id": 323273, "to_first_word_id": 6956, "to_last_word_id": 6984}
+{"kind": "Alludes to", "from_ref": "Psalms 105:9-10", "to_ref": "Genesis 26:3", "from_first_word_id": 410232, "from_last_word_id": 410258, "to_first_word_id": 16927, "to_last_word_id": 16966}
+{"kind": "Alludes to", "from_ref": "Isaiah 41:8", "to_ref": "Genesis 12:1-3", "from_first_word_id": 468457, "from_last_word_id": 468473, "to_first_word_id": 6776, "to_last_word_id": 6855}
+{"kind": "Alludes to", "from_ref": "Joel 2:13", "to_ref": "Exodus 34:6-7", "from_first_word_id": 586241, "from_last_word_id": 586274, "to_first_word_id": 64974, "to_last_word_id": 65038}
+{"kind": "Alludes to", "from_ref": "Jonah 4:2", "to_ref": "Exodus 34:6-7", "from_first_word_id": 593294, "from_last_word_id": 593348, "to_first_word_id": 64974, "to_last_word_id": 65038}
+{"kind": "Alludes to", "from_ref": "Psalms 103:8", "to_ref": "Exodus 34:6", "from_first_word_id": 409270, "from_last_word_id": 409282, "to_first_word_id": 64974, "to_last_word_id": 64997}
+{"kind": "Alludes to", "from_ref": "Psalms 86:15", "to_ref": "Exodus 34:6", "from_first_word_id": 404771, "from_last_word_id": 404789, "to_first_word_id": 64974, "to_last_word_id": 64997}
+{"kind": "Alludes to", "from_ref": "Nehemiah 9:17", "to_ref": "Exodus 34:6", "from_first_word_id": 351130, "from_last_word_id": 351182, "to_first_word_id": 64974, "to_last_word_id": 64997}
+{"kind": "Alludes to", "from_ref": "Nahum 1:3", "to_ref": "Exodus 34:7", "from_first_word_id": 596811, "from_last_word_id": 596849, "to_first_word_id": 64998, "to_last_word_id": 65038}
+{"kind": "Alludes to", "from_ref": "Hosea 1:10", "to_ref": "Genesis 22:17", "from_first_word_id": 580461, "from_last_word_id": 580518, "to_first_word_id": 13654, "to_last_word_id": 13694}
+{"kind": "Alludes to", "from_ref": "Isaiah 43:2", "to_ref": "Exodus 14:22", "from_first_word_id": 469790, "from_last_word_id": 469827, "to_first_word_id": 49046, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Isaiah 4:5", "to_ref": "Exodus 13:21", "from_first_word_id": 448126, "from_last_word_id": 448165, "to_first_word_id": 48362, "to_last_word_id": 48398}
+{"kind": "Alludes to", "from_ref": "Isaiah 52:12", "to_ref": "Exodus 14:19", "from_first_word_id": 475871, "from_last_word_id": 475898, "to_first_word_id": 48934, "to_last_word_id": 48965}
+{"kind": "Alludes to", "from_ref": "Jeremiah 23:7-8", "to_ref": "Exodus 20:2", "from_first_word_id": 499409, "from_last_word_id": 499477, "to_first_word_id": 53061, "to_last_word_id": 53082}
+{"kind": "Alludes to", "from_ref": "Jeremiah 11:4", "to_ref": "Exodus 6:7", "from_first_word_id": 491204, "from_last_word_id": 491252, "to_first_word_id": 41842, "to_last_word_id": 41881}
+{"kind": "Alludes to", "from_ref": "Ezekiel 20:5-10", "to_ref": "Exodus 6:6-8", "from_first_word_id": 542426, "from_last_word_id": 542665, "to_first_word_id": 41795, "to_last_word_id": 41919}
+{"kind": "Alludes to", "from_ref": "Joel 2:28", "to_ref": "Numbers 11:29", "from_first_word_id": 586701, "from_last_word_id": 586737, "to_first_word_id": 107115, "to_last_word_id": 107143}
+{"kind": "Alludes to", "from_ref": "Zechariah 3:2", "to_ref": "Amos 4:11", "from_first_word_id": 603243, "from_last_word_id": 603273, "to_first_word_id": 589035, "to_last_word_id": 589067}
+{"kind": "Alludes to", "from_ref": "1 Kings 19:8", "to_ref": "Exodus 24:18", "from_first_word_id": 262955, "from_last_word_id": 262981, "to_first_word_id": 56590, "to_last_word_id": 56616}
+{"kind": "Alludes to", "from_ref": "1 Kings 19:11-12", "to_ref": "Exodus 33:21-22", "from_first_word_id": 263062, "from_last_word_id": 263142, "to_first_word_id": 64753, "to_last_word_id": 64803}
+{"kind": "Alludes to", "from_ref": "2 Kings 2:8", "to_ref": "Exodus 14:21", "from_first_word_id": 268319, "from_last_word_id": 268347, "to_first_word_id": 49009, "to_last_word_id": 49045}
+{"kind": "Alludes to", "from_ref": "2 Kings 2:14", "to_ref": "Joshua 3:16", "from_first_word_id": 268526, "from_last_word_id": 268566, "to_first_word_id": 158589, "to_last_word_id": 158641}
+{"kind": "Alludes to", "from_ref": "Joshua 3:13-16", "to_ref": "Exodus 14:21-22", "from_first_word_id": 158460, "from_last_word_id": 158641, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Joshua 4:23", "to_ref": "Exodus 14:21-22", "from_first_word_id": 159321, "from_last_word_id": 159361, "to_first_word_id": 49009, "to_last_word_id": 49077}
+{"kind": "Alludes to", "from_ref": "Joshua 5:15", "to_ref": "Exodus 3:5", "from_first_word_id": 159911, "from_last_word_id": 159939, "to_first_word_id": 39515, "to_last_word_id": 39538}
+{"kind": "Alludes to", "from_ref": "Judges 6:13", "to_ref": "Exodus 12:51", "from_first_word_id": 179992, "from_last_word_id": 180050, "to_first_word_id": 47720, "to_last_word_id": 47745}
+{"kind": "Alludes to", "from_ref": "1 Samuel 12:6-8", "to_ref": "Exodus 3:10", "from_first_word_id": 205124, "from_last_word_id": 205215, "to_first_word_id": 39693, "to_last_word_id": 39716}
+{"kind": "Alludes to", "from_ref": "1 Samuel 15:2", "to_ref": "Exodus 17:8-14", "from_first_word_id": 208064, "from_last_word_id": 208092, "to_first_word_id": 51368, "to_last_word_id": 51559}
+{"kind": "Alludes to", "from_ref": "1 Samuel 15:2", "to_ref": "Deuteronomy 25:17-19", "from_first_word_id": 208064, "from_last_word_id": 208092, "to_first_word_id": 148343, "to_last_word_id": 148442}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 25:17-19", "to_ref": "Exodus 17:8-14", "from_first_word_id": 148343, "from_last_word_id": 148442, "to_first_word_id": 51368, "to_last_word_id": 51559}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 24:9", "to_ref": "Numbers 12:10", "from_first_word_id": 147490, "from_last_word_id": 147510, "to_first_word_id": 107538, "to_last_word_id": 107563}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 9:9-10", "to_ref": "Exodus 24:18", "from_first_word_id": 136292, "from_last_word_id": 136384, "to_first_word_id": 56590, "to_last_word_id": 56616}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 9:12-21", "to_ref": "Exodus 32:7-20", "from_first_word_id": 136415, "from_last_word_id": 136735, "to_first_word_id": 63228, "to_last_word_id": 63689}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 1:35-38", "to_ref": "Numbers 14:22-24", "from_first_word_id": 129354, "from_last_word_id": 129454, "to_first_word_id": 109011, "to_last_word_id": 109101}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 2:14-15", "to_ref": "Numbers 14:29", "from_first_word_id": 130035, "from_last_word_id": 130099, "to_first_word_id": 109191, "to_last_word_id": 109220}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 11:6", "to_ref": "Numbers 16:31-33", "from_first_word_id": 137704, "from_last_word_id": 137750, "to_first_word_id": 111521, "to_last_word_id": 111596}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 23:4", "to_ref": "Numbers 22:5-6", "from_first_word_id": 146594, "from_last_word_id": 146631, "to_first_word_id": 115989, "to_last_word_id": 116094}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 32:8", "to_ref": "Genesis 11:8", "from_first_word_id": 154503, "from_last_word_id": 154535, "to_first_word_id": 6346, "to_last_word_id": 6368}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 29:23", "to_ref": "Genesis 19:24-25", "from_first_word_id": 152425, "from_last_word_id": 152469, "to_first_word_id": 11512, "to_last_word_id": 11552}
+{"kind": "Alludes to", "from_ref": "Deuteronomy 10:22", "to_ref": "Genesis 46:27", "from_first_word_id": 137534, "from_last_word_id": 137560, "to_first_word_id": 34981, "to_last_word_id": 35010}
+{"kind": "Alludes to", "from_ref": "Hosea 11:1", "to_ref": "Exodus 4:22-23", "from_first_word_id": 584097, "from_last_word_id": 584112, "to_first_word_id": 40836, "to_last_word_id": 40883}
+{"kind": "Fulfills", "from_ref": "Acts 3:18", "to_ref": "Isaiah 53:5-7", "from_first_word_id": 696502, "from_last_word_id": 696524, "to_first_word_id": 476084, "to_last_word_id": 476176}
+{"kind": "Fulfills", "from_ref": "James 2:23", "to_ref": "Genesis 15:6", "from_first_word_id": 770193, "from_last_word_id": 770218, "to_first_word_id": 8513, "to_last_word_id": 8526}
+{"kind": "Fulfills", "from_ref": "Hebrews 2:8-9", "to_ref": "Psalms 8:5-6", "from_first_word_id": 762798, "from_last_word_id": 762873, "to_first_word_id": 380547, "to_last_word_id": 380585}
+{"kind": "Fulfills", "from_ref": "2 Samuel 13:28-29", "to_ref": "2 Samuel 12:10", "from_first_word_id": 231717, "from_last_word_id": 231785, "to_first_word_id": 230233, "to_last_word_id": 230260}
+{"kind": "Fulfills", "from_ref": "2 Samuel 18:14-15", "to_ref": "2 Samuel 12:10", "from_first_word_id": 236430, "from_last_word_id": 236482, "to_first_word_id": 230233, "to_last_word_id": 230260}
+{"kind": "Fulfills", "from_ref": "1 Kings 12:16-20", "to_ref": "1 Kings 11:11-13", "from_first_word_id": 255970, "from_last_word_id": 256130, "to_first_word_id": 254520, "to_last_word_id": 254618}
+{"kind": "Fulfills", "from_ref": "1 Kings 13:5", "to_ref": "1 Kings 13:3", "from_first_word_id": 256737, "from_last_word_id": 256766, "to_first_word_id": 256642, "to_last_word_id": 256676}
+{"kind": "Fulfills", "from_ref": "2 Kings 25:9", "to_ref": "2 Kings 22:16-17", "from_first_word_id": 290177, "from_last_word_id": 290203, "to_first_word_id": 287666, "to_last_word_id": 287736}
+{"kind": "Fulfills", "from_ref": "Jeremiah 39:8", "to_ref": "Jeremiah 34:2", "from_first_word_id": 513718, "from_last_word_id": 513739, "to_first_word_id": 509348, "to_last_word_id": 509391}
+{"kind": "Fulfills", "from_ref": "Jeremiah 39:5-7", "to_ref": "Jeremiah 32:3-4", "from_first_word_id": 513633, "from_last_word_id": 513717, "to_first_word_id": 507087, "to_last_word_id": 507168}
+{"kind": "Fulfills", "from_ref": "Jeremiah 39:5-7", "to_ref": "Jeremiah 37:17", "from_first_word_id": 513633, "from_last_word_id": 513717, "to_first_word_id": 512322, "to_last_word_id": 512368}
+{"kind": "Fulfills", "from_ref": "2 Kings 16:9", "to_ref": "Isaiah 8:4", "from_first_word_id": 281732, "from_last_word_id": 281763, "to_first_word_id": 450180, "to_last_word_id": 450211}
+{"kind": "Fulfills", "from_ref": "2 Kings 17:6", "to_ref": "Amos 7:11", "from_first_word_id": 282269, "from_last_word_id": 282306, "to_first_word_id": 590468, "to_last_word_id": 590490}
+{"kind": "Fulfills", "from_ref": "2 Kings 17:23", "to_ref": "Amos 7:17", "from_first_word_id": 282807, "from_last_word_id": 282840, "to_first_word_id": 590610, "to_last_word_id": 590661}
+{"kind": "Fulfills", "from_ref": "2 Kings 13:25", "to_ref": "2 Kings 13:17-19", "from_first_word_id": 279461, "from_last_word_id": 279506, "to_first_word_id": 279210, "to_last_word_id": 279321}
+{"kind": "Fulfills", "from_ref": "2 Kings 8:2-3", "to_ref": "2 Kings 8:1", "from_first_word_id": 273990, "from_last_word_id": 274056, "to_first_word_id": 273945, "to_last_word_id": 273989}
+{"kind": "Fulfills", "from_ref": "1 Samuel 10:1", "to_ref": "1 Samuel 9:16", "from_first_word_id": 203591, "from_last_word_id": 203623, "to_first_word_id": 203140, "to_last_word_id": 203195}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 6:10", "to_ref": "1 Chronicles 22:9-10", "from_first_word_id": 314267, "from_last_word_id": 314315, "to_first_word_id": 305774, "to_last_word_id": 305851}
+{"kind": "Fulfills", "from_ref": "Ezekiel 24:18", "to_ref": "Ezekiel 24:16", "from_first_word_id": 547512, "from_last_word_id": 547536, "to_first_word_id": 547445, "to_last_word_id": 547474}
+{"kind": "Fulfills", "from_ref": "Ezekiel 33:21-22", "to_ref": "Ezekiel 24:26-27", "from_first_word_id": 554612, "from_last_word_id": 554692, "to_first_word_id": 547743, "to_last_word_id": 547801}
+{"kind": "Fulfills", "from_ref": "1 Kings 1:39", "to_ref": "1 Kings 1:30", "from_first_word_id": 243924, "from_last_word_id": 243953, "to_first_word_id": 243652, "to_last_word_id": 243690}
+{"kind": "Fulfills", "from_ref": "2 Kings 2:11-12", "to_ref": "2 Kings 2:10", "from_first_word_id": 268427, "from_last_word_id": 268503, "to_first_word_id": 268393, "to_last_word_id": 268426}
+{"kind": "Fulfills", "from_ref": "2 Kings 5:14", "to_ref": "2 Kings 5:10", "from_first_word_id": 271599, "from_last_word_id": 271635, "to_first_word_id": 271454, "to_last_word_id": 271481}
+{"kind": "Fulfills", "from_ref": "2 Kings 4:44", "to_ref": "2 Kings 4:43", "from_first_word_id": 271107, "from_last_word_id": 271126, "to_first_word_id": 271072, "to_last_word_id": 271106}
+{"kind": "Fulfills", "from_ref": "1 Kings 22:35", "to_ref": "1 Kings 20:42", "from_first_word_id": 266876, "from_last_word_id": 266911, "to_first_word_id": 264898, "to_last_word_id": 264937}
+{"kind": "Fulfills", "from_ref": "2 Chronicles 25:22-23", "to_ref": "2 Chronicles 25:16", "from_first_word_id": 327782, "from_last_word_id": 327843, "to_first_word_id": 327548, "to_last_word_id": 327603}
+{"kind": "Fulfills", "from_ref": "Luke 2:16", "to_ref": "Luke 2:12", "from_first_word_id": 651280, "from_last_word_id": 651296, "to_first_word_id": 651183, "to_last_word_id": 651203}
+{"kind": "Fulfills", "from_ref": "Acts 12:2", "to_ref": "Matthew 20:23", "from_first_word_id": 704132, "from_last_word_id": 704142, "to_first_word_id": 625689, "to_last_word_id": 625742}

@@ -1,0 +1,715 @@
+{"name": "Genealogy of Jesus (Matthew)", "ref": "Matthew 1:1-17", "edition": 1, "first_word_id": 610510, "last_word_id": 610770}
+{"name": "Birth of Jesus (Matthew)", "ref": "Matthew 1:18-25", "edition": 1, "first_word_id": 610771, "last_word_id": 610982}
+{"name": "Visit of the Magi", "ref": "Matthew 2:1-12", "edition": 1, "first_word_id": 610983, "last_word_id": 611281}
+{"name": "Flight into Egypt", "ref": "Matthew 2:13-23", "edition": 1, "first_word_id": 611282, "last_word_id": 611601}
+{"name": "Preaching of John the Baptist", "ref": "Matthew 3:1-12", "edition": 1, "first_word_id": 611602, "last_word_id": 611877}
+{"name": "Baptism of Jesus (Matthew)", "ref": "Matthew 3:13-17", "edition": 1, "first_word_id": 611878, "last_word_id": 611988}
+{"name": "Temptation of Jesus (Matthew)", "ref": "Matthew 4:1-11", "edition": 1, "first_word_id": 611989, "last_word_id": 612234}
+{"name": "Calling of the First Disciples (Matthew)", "ref": "Matthew 4:18-22", "edition": 1, "first_word_id": 612350, "last_word_id": 612446}
+{"name": "Sermon on the Mount", "ref": "Matthew 5:1-7:29", "edition": 1, "first_word_id": 612546, "last_word_id": 615046}
+{"name": "Beatitudes (Matthew)", "ref": "Matthew 5:3-12", "edition": 1, "first_word_id": 612575, "last_word_id": 612717}
+{"name": "Salt and Light", "ref": "Matthew 5:13-16", "edition": 1, "first_word_id": 612718, "last_word_id": 612823}
+{"name": "Fulfilling the Law", "ref": "Matthew 5:17-20", "edition": 1, "first_word_id": 612824, "last_word_id": 612945}
+{"name": "Love Your Enemies", "ref": "Matthew 5:43-48", "edition": 1, "first_word_id": 613490, "last_word_id": 613626}
+{"name": "Lord's Prayer (Matthew)", "ref": "Matthew 6:9-13", "edition": 1, "first_word_id": 613853, "last_word_id": 613924}
+{"name": "Treasures in Heaven", "ref": "Matthew 6:19-24", "edition": 1, "first_word_id": 614028, "last_word_id": 614169}
+{"name": "Do Not Worry", "ref": "Matthew 6:25-34", "edition": 1, "first_word_id": 614170, "last_word_id": 614420}
+{"name": "Judge Not", "ref": "Matthew 7:1-6", "edition": 1, "first_word_id": 614421, "last_word_id": 614557}
+{"name": "Ask, Seek, Knock", "ref": "Matthew 7:7-11", "edition": 1, "first_word_id": 614558, "last_word_id": 614660}
+{"name": "Golden Rule", "ref": "Matthew 7:12", "edition": 1, "first_word_id": 614661, "last_word_id": 614686}
+{"name": "Narrow Gate", "ref": "Matthew 7:13-14", "edition": 1, "first_word_id": 614687, "last_word_id": 614736}
+{"name": "Parable of the Wise and Foolish Builders", "ref": "Matthew 7:24-27", "edition": 1, "first_word_id": 614909, "last_word_id": 615015}
+{"name": "Healing of the Centurion's Servant", "ref": "Matthew 8:5-13", "edition": 1, "first_word_id": 615130, "last_word_id": 615342}
+{"name": "Calming the Storm (Matthew)", "ref": "Matthew 8:23-27", "edition": 1, "first_word_id": 615525, "last_word_id": 615624}
+{"name": "Gadarene Demoniacs", "ref": "Matthew 8:28-34", "edition": 1, "first_word_id": 615625, "last_word_id": 615819}
+{"name": "Healing of the Paralytic (Matthew)", "ref": "Matthew 9:1-8", "edition": 1, "first_word_id": 615820, "last_word_id": 615976}
+{"name": "Calling of Matthew", "ref": "Matthew 9:9-13", "edition": 1, "first_word_id": 615977, "last_word_id": 616104}
+{"name": "Mission of the Twelve", "ref": "Matthew 10:1-42", "edition": 1, "first_word_id": 616657, "last_word_id": 617575}
+{"name": "Sign of Jonah", "ref": "Matthew 12:38-42", "edition": 1, "first_word_id": 619072, "last_word_id": 619226}
+{"name": "Parable of the Sower (Matthew)", "ref": "Matthew 13:1-23", "edition": 1, "first_word_id": 619412, "last_word_id": 619951}
+{"name": "Parable of the Wheat and the Tares", "ref": "Matthew 13:24-30", "edition": 1, "first_word_id": 619952, "last_word_id": 620118}
+{"name": "Parable of the Mustard Seed", "ref": "Matthew 13:31-32", "edition": 1, "first_word_id": 620119, "last_word_id": 620184}
+{"name": "Parable of the Leaven", "ref": "Matthew 13:33", "edition": 1, "first_word_id": 620185, "last_word_id": 620214}
+{"name": "Explanation of the Parable of the Tares", "ref": "Matthew 13:36-43", "edition": 1, "first_word_id": 620268, "last_word_id": 620446}
+{"name": "Parable of the Hidden Treasure", "ref": "Matthew 13:44", "edition": 1, "first_word_id": 620447, "last_word_id": 620483}
+{"name": "Parable of the Pearl of Great Price", "ref": "Matthew 13:45-46", "edition": 1, "first_word_id": 620484, "last_word_id": 620517}
+{"name": "Parable of the Dragnet", "ref": "Matthew 13:47-50", "edition": 1, "first_word_id": 620518, "last_word_id": 620601}
+{"name": "Feeding of the Five Thousand (Matthew)", "ref": "Matthew 14:13-21", "edition": 1, "first_word_id": 620991, "last_word_id": 621190}
+{"name": "Jesus Walks on Water (Matthew)", "ref": "Matthew 14:22-33", "edition": 1, "first_word_id": 621191, "last_word_id": 621436}
+{"name": "Peter's Confession (Matthew)", "ref": "Matthew 16:13-20", "edition": 1, "first_word_id": 622563, "last_word_id": 622747}
+{"name": "Transfiguration (Matthew)", "ref": "Matthew 17:1-13", "edition": 1, "first_word_id": 622973, "last_word_id": 623246}
+{"name": "Parable of the Lost Sheep (Matthew)", "ref": "Matthew 18:12-14", "edition": 1, "first_word_id": 623872, "last_word_id": 623959}
+{"name": "Parable of the Unforgiving Servant", "ref": "Matthew 18:21-35", "edition": 1, "first_word_id": 624133, "last_word_id": 624461}
+{"name": "Rich Young Ruler (Matthew)", "ref": "Matthew 19:16-30", "edition": 1, "first_word_id": 624817, "last_word_id": 625180}
+{"name": "Parable of the Laborers in the Vineyard", "ref": "Matthew 20:1-16", "edition": 1, "first_word_id": 625181, "last_word_id": 625518}
+{"name": "Triumphal Entry (Matthew)", "ref": "Matthew 21:1-11", "edition": 1, "first_word_id": 625960, "last_word_id": 626189}
+{"name": "Cleansing of the Temple (Matthew)", "ref": "Matthew 21:12-17", "edition": 1, "first_word_id": 626190, "last_word_id": 626345}
+{"name": "Cursing of the Fig Tree (Matthew)", "ref": "Matthew 21:18-22", "edition": 1, "first_word_id": 626346, "last_word_id": 626482}
+{"name": "Parable of the Two Sons", "ref": "Matthew 21:28-32", "edition": 1, "first_word_id": 626634, "last_word_id": 626769}
+{"name": "Parable of the Wicked Husbandmen (Matthew)", "ref": "Matthew 21:33-46", "edition": 1, "first_word_id": 626770, "last_word_id": 627085}
+{"name": "Parable of the Wedding Feast", "ref": "Matthew 22:1-14", "edition": 1, "first_word_id": 627086, "last_word_id": 627365}
+{"name": "Render unto Caesar (Matthew)", "ref": "Matthew 22:15-22", "edition": 1, "first_word_id": 627366, "last_word_id": 627515}
+{"name": "Great Commandment (Matthew)", "ref": "Matthew 22:34-40", "edition": 1, "first_word_id": 627720, "last_word_id": 627819}
+{"name": "Woes to the Pharisees", "ref": "Matthew 23:1-39", "edition": 1, "first_word_id": 627914, "last_word_id": 628746}
+{"name": "Olivet Discourse (Matthew)", "ref": "Matthew 24:1-25:46", "edition": 1, "first_word_id": 628747, "last_word_id": 630788}
+{"name": "Parable of the Ten Virgins", "ref": "Matthew 25:1-13", "edition": 1, "first_word_id": 629794, "last_word_id": 630000}
+{"name": "Parable of the Talents", "ref": "Matthew 25:14-30", "edition": 1, "first_word_id": 630001, "last_word_id": 630410}
+{"name": "Sheep and Goats", "ref": "Matthew 25:31-46", "edition": 1, "first_word_id": 630411, "last_word_id": 630788}
+{"name": "Anointing at Bethany (Matthew)", "ref": "Matthew 26:6-13", "edition": 1, "first_word_id": 630882, "last_word_id": 631033}
+{"name": "Last Supper (Matthew)", "ref": "Matthew 26:17-30", "edition": 1, "first_word_id": 631083, "last_word_id": 631398}
+{"name": "Gethsemane (Matthew)", "ref": "Matthew 26:36-46", "edition": 1, "first_word_id": 631510, "last_word_id": 631760}
+{"name": "Arrest of Jesus (Matthew)", "ref": "Matthew 26:47-56", "edition": 1, "first_word_id": 631761, "last_word_id": 631999}
+{"name": "Peter's Denial (Matthew)", "ref": "Matthew 26:69-75", "edition": 1, "first_word_id": 632266, "last_word_id": 632413}
+{"name": "Trial before Pilate (Matthew)", "ref": "Matthew 27:11-26", "edition": 1, "first_word_id": 632629, "last_word_id": 632954}
+{"name": "Crucifixion (Matthew)", "ref": "Matthew 27:32-56", "edition": 1, "first_word_id": 633068, "last_word_id": 633559}
+{"name": "Burial of Jesus (Matthew)", "ref": "Matthew 27:57-66", "edition": 1, "first_word_id": 633560, "last_word_id": 633772}
+{"name": "Resurrection (Matthew)", "ref": "Matthew 28:1-10", "edition": 1, "first_word_id": 633773, "last_word_id": 633999}
+{"name": "Great Commission (Matthew)", "ref": "Matthew 28:16-20", "edition": 1, "first_word_id": 634098, "last_word_id": 634193}
+{"name": "Baptism of Jesus (Mark)", "ref": "Mark 1:9-11", "edition": 1, "first_word_id": 634365, "last_word_id": 634427}
+{"name": "Temptation of Jesus (Mark)", "ref": "Mark 1:12-13", "edition": 1, "first_word_id": 634428, "last_word_id": 634460}
+{"name": "Healing of the Paralytic (Mark)", "ref": "Mark 2:1-12", "edition": 1, "first_word_id": 635130, "last_word_id": 635406}
+{"name": "Parable of the Sower (Mark)", "ref": "Mark 4:1-20", "edition": 1, "first_word_id": 636517, "last_word_id": 636964}
+{"name": "Parable of the Growing Seed", "ref": "Mark 4:26-29", "edition": 1, "first_word_id": 637078, "last_word_id": 637156}
+{"name": "Calming the Storm (Mark)", "ref": "Mark 4:35-41", "edition": 1, "first_word_id": 637275, "last_word_id": 637439}
+{"name": "Gerasene Demoniac", "ref": "Mark 5:1-20", "edition": 1, "first_word_id": 637440, "last_word_id": 637886}
+{"name": "Jairus's Daughter and the Woman with the Issue of Blood", "ref": "Mark 5:21-43", "edition": 1, "first_word_id": 637887, "last_word_id": 638391}
+{"name": "Feeding of the Five Thousand (Mark)", "ref": "Mark 6:30-44", "edition": 1, "first_word_id": 639101, "last_word_id": 639435}
+{"name": "Jesus Walks on Water (Mark)", "ref": "Mark 6:45-52", "edition": 1, "first_word_id": 639436, "last_word_id": 639617}
+{"name": "Feeding of the Four Thousand", "ref": "Mark 8:1-10", "edition": 1, "first_word_id": 640521, "last_word_id": 640727}
+{"name": "Healing of the Blind Man of Bethsaida", "ref": "Mark 8:22-26", "edition": 1, "first_word_id": 640948, "last_word_id": 641061}
+{"name": "Peter's Confession (Mark)", "ref": "Mark 8:27-30", "edition": 1, "first_word_id": 641062, "last_word_id": 641143}
+{"name": "Transfiguration (Mark)", "ref": "Mark 9:2-13", "edition": 1, "first_word_id": 641399, "last_word_id": 641673}
+{"name": "Rich Young Ruler (Mark)", "ref": "Mark 10:17-31", "edition": 1, "first_word_id": 642825, "last_word_id": 643192}
+{"name": "Healing of Blind Bartimaeus", "ref": "Mark 10:46-52", "edition": 1, "first_word_id": 643567, "last_word_id": 643744}
+{"name": "Triumphal Entry (Mark)", "ref": "Mark 11:1-11", "edition": 1, "first_word_id": 643745, "last_word_id": 644003}
+{"name": "Great Commandment (Mark)", "ref": "Mark 12:28-34", "edition": 1, "first_word_id": 645159, "last_word_id": 645357}
+{"name": "Widow's Mite (Mark)", "ref": "Mark 12:41-44", "edition": 1, "first_word_id": 645481, "last_word_id": 645580}
+{"name": "Olivet Discourse (Mark)", "ref": "Mark 13:1-37", "edition": 1, "first_word_id": 645581, "last_word_id": 646408}
+{"name": "Last Supper (Mark)", "ref": "Mark 14:12-26", "edition": 1, "first_word_id": 646670, "last_word_id": 647024}
+{"name": "Gethsemane (Mark)", "ref": "Mark 14:32-42", "edition": 1, "first_word_id": 647134, "last_word_id": 647364}
+{"name": "Crucifixion (Mark)", "ref": "Mark 15:21-41", "edition": 1, "first_word_id": 648364, "last_word_id": 648780}
+{"name": "Resurrection (Mark)", "ref": "Mark 16:1-8", "edition": 1, "first_word_id": 648917, "last_word_id": 649110}
+{"name": "Great Commission (Mark)", "ref": "Mark 16:14-20", "edition": 1, "first_word_id": 649203, "last_word_id": 649365}
+{"name": "Annunciation", "ref": "Luke 1:26-38", "edition": 1, "first_word_id": 649943, "last_word_id": 650228}
+{"name": "Visitation", "ref": "Luke 1:39-45", "edition": 1, "first_word_id": 650229, "last_word_id": 650367}
+{"name": "Magnificat", "ref": "Luke 1:46-55", "edition": 1, "first_word_id": 650368, "last_word_id": 650508}
+{"name": "Birth of John the Baptist", "ref": "Luke 1:57-66", "edition": 1, "first_word_id": 650523, "last_word_id": 650717}
+{"name": "Benedictus", "ref": "Luke 1:67-79", "edition": 1, "first_word_id": 650718, "last_word_id": 650932}
+{"name": "Nativity", "ref": "Luke 2:1-20", "edition": 1, "first_word_id": 650955, "last_word_id": 651368}
+{"name": "Presentation in the Temple", "ref": "Luke 2:22-38", "edition": 1, "first_word_id": 651400, "last_word_id": 651765}
+{"name": "Boy Jesus in the Temple", "ref": "Luke 2:41-52", "edition": 1, "first_word_id": 651809, "last_word_id": 652048}
+{"name": "Baptism of Jesus (Luke)", "ref": "Luke 3:21-22", "edition": 1, "first_word_id": 652542, "last_word_id": 652596}
+{"name": "Genealogy of Jesus (Luke)", "ref": "Luke 3:23-38", "edition": 1, "first_word_id": 652597, "last_word_id": 653065}
+{"name": "Temptation of Jesus (Luke)", "ref": "Luke 4:1-13", "edition": 1, "first_word_id": 653066, "last_word_id": 653345}
+{"name": "Rejection at Nazareth", "ref": "Luke 4:16-30", "edition": 1, "first_word_id": 653381, "last_word_id": 653750}
+{"name": "Miraculous Catch of Fish", "ref": "Luke 5:1-11", "edition": 1, "first_word_id": 654087, "last_word_id": 654355}
+{"name": "Sermon on the Plain", "ref": "Luke 6:17-49", "edition": 1, "first_word_id": 655418, "last_word_id": 656264}
+{"name": "Beatitudes (Luke)", "ref": "Luke 6:20-26", "edition": 1, "first_word_id": 655499, "last_word_id": 655658}
+{"name": "Raising of the Widow's Son at Nain", "ref": "Luke 7:11-17", "edition": 1, "first_word_id": 656510, "last_word_id": 656679}
+{"name": "Woman Who Anointed Jesus' Feet", "ref": "Luke 7:36-50", "edition": 1, "first_word_id": 657109, "last_word_id": 657473}
+{"name": "Parable of the Sower (Luke)", "ref": "Luke 8:4-15", "edition": 1, "first_word_id": 657546, "last_word_id": 657843}
+{"name": "Mission of the Seventy", "ref": "Luke 10:1-24", "edition": 1, "first_word_id": 660362, "last_word_id": 660938}
+{"name": "Parable of the Good Samaritan", "ref": "Luke 10:25-37", "edition": 1, "first_word_id": 660939, "last_word_id": 661239}
+{"name": "Mary and Martha", "ref": "Luke 10:38-42", "edition": 1, "first_word_id": 661240, "last_word_id": 661353}
+{"name": "Lord's Prayer (Luke)", "ref": "Luke 11:1-4", "edition": 1, "first_word_id": 661354, "last_word_id": 661455}
+{"name": "Parable of the Friend at Midnight", "ref": "Luke 11:5-13", "edition": 1, "first_word_id": 661456, "last_word_id": 661689}
+{"name": "Parable of the Rich Fool", "ref": "Luke 12:13-21", "edition": 1, "first_word_id": 662982, "last_word_id": 663174}
+{"name": "Parable of the Watchful Servants", "ref": "Luke 12:35-48", "edition": 1, "first_word_id": 663460, "last_word_id": 663829}
+{"name": "Parable of the Barren Fig Tree", "ref": "Luke 13:6-9", "edition": 1, "first_word_id": 664187, "last_word_id": 664283}
+{"name": "Parable of the Great Banquet", "ref": "Luke 14:15-24", "edition": 1, "first_word_id": 665288, "last_word_id": 665533}
+{"name": "Cost of Discipleship", "ref": "Luke 14:25-35", "edition": 1, "first_word_id": 665534, "last_word_id": 665767}
+{"name": "Parable of the Lost Sheep (Luke)", "ref": "Luke 15:1-7", "edition": 1, "first_word_id": 665768, "last_word_id": 665907}
+{"name": "Parable of the Lost Coin", "ref": "Luke 15:8-10", "edition": 1, "first_word_id": 665908, "last_word_id": 665985}
+{"name": "Parable of the Prodigal Son", "ref": "Luke 15:11-32", "edition": 1, "first_word_id": 665986, "last_word_id": 666492}
+{"name": "Parable of the Unjust Steward", "ref": "Luke 16:1-13", "edition": 1, "first_word_id": 666493, "last_word_id": 666833}
+{"name": "Parable of the Rich Man and Lazarus", "ref": "Luke 16:19-31", "edition": 1, "first_word_id": 666946, "last_word_id": 667244}
+{"name": "Healing of the Ten Lepers", "ref": "Luke 17:11-19", "edition": 1, "first_word_id": 667502, "last_word_id": 667662}
+{"name": "Parable of the Persistent Widow", "ref": "Luke 18:1-8", "edition": 1, "first_word_id": 668054, "last_word_id": 668200}
+{"name": "Parable of the Pharisee and the Publican", "ref": "Luke 18:9-14", "edition": 1, "first_word_id": 668201, "last_word_id": 668340}
+{"name": "Zacchaeus", "ref": "Luke 19:1-10", "edition": 1, "first_word_id": 668922, "last_word_id": 669130}
+{"name": "Parable of the Pounds", "ref": "Luke 19:11-27", "edition": 1, "first_word_id": 669131, "last_word_id": 669511}
+{"name": "Triumphal Entry (Luke)", "ref": "Luke 19:28-44", "edition": 1, "first_word_id": 669512, "last_word_id": 669885}
+{"name": "Widow's Mite (Luke)", "ref": "Luke 21:1-4", "edition": 1, "first_word_id": 670923, "last_word_id": 670999}
+{"name": "Olivet Discourse (Luke)", "ref": "Luke 21:5-36", "edition": 1, "first_word_id": 671000, "last_word_id": 671695}
+{"name": "Last Supper (Luke)", "ref": "Luke 22:7-38", "edition": 1, "first_word_id": 671834, "last_word_id": 672495}
+{"name": "Gethsemane (Luke)", "ref": "Luke 22:39-46", "edition": 1, "first_word_id": 672496, "last_word_id": 672638}
+{"name": "Jesus before Herod", "ref": "Luke 23:6-12", "edition": 1, "first_word_id": 673241, "last_word_id": 673388}
+{"name": "Crucifixion (Luke)", "ref": "Luke 23:26-49", "edition": 1, "first_word_id": 673627, "last_word_id": 674118}
+{"name": "Road to Emmaus", "ref": "Luke 24:13-35", "edition": 1, "first_word_id": 674490, "last_word_id": 674981}
+{"name": "Appearance to the Disciples (Luke)", "ref": "Luke 24:36-49", "edition": 1, "first_word_id": 674982, "last_word_id": 675250}
+{"name": "Ascension (Luke)", "ref": "Luke 24:50-53", "edition": 1, "first_word_id": 675251, "last_word_id": 675310}
+{"name": "Prologue of John", "ref": "John 1:1-18", "edition": 1, "first_word_id": 675317, "last_word_id": 675626}
+{"name": "Testimony of John the Baptist", "ref": "John 1:19-34", "edition": 1, "first_word_id": 675627, "last_word_id": 675955}
+{"name": "Calling of the First Disciples (John)", "ref": "John 1:35-51", "edition": 1, "first_word_id": 675956, "last_word_id": 676320}
+{"name": "Wedding at Cana", "ref": "John 2:1-11", "edition": 1, "first_word_id": 676321, "last_word_id": 676549}
+{"name": "Cleansing of the Temple (John)", "ref": "John 2:13-22", "edition": 1, "first_word_id": 676574, "last_word_id": 676775}
+{"name": "Nicodemus", "ref": "John 3:1-21", "edition": 1, "first_word_id": 676831, "last_word_id": 677298}
+{"name": "For God So Loved the World", "ref": "John 3:16", "edition": 1, "first_word_id": 677155, "last_word_id": 677179}
+{"name": "Woman at the Well", "ref": "John 4:1-42", "edition": 1, "first_word_id": 677594, "last_word_id": 678425}
+{"name": "Healing of the Nobleman's Son", "ref": "John 4:46-54", "edition": 1, "first_word_id": 678482, "last_word_id": 678687}
+{"name": "Healing at the Pool of Bethesda", "ref": "John 5:1-18", "edition": 1, "first_word_id": 678688, "last_word_id": 679072}
+{"name": "Feeding of the Five Thousand (John)", "ref": "John 6:1-14", "edition": 1, "first_word_id": 679689, "last_word_id": 679977}
+{"name": "Jesus Walks on Water (John)", "ref": "John 6:16-21", "edition": 1, "first_word_id": 680004, "last_word_id": 680111}
+{"name": "Bread of Life Discourse", "ref": "John 6:22-59", "edition": 1, "first_word_id": 680112, "last_word_id": 680966}
+{"name": "Woman Caught in Adultery", "ref": "John 7:53-8:11", "edition": 1, "first_word_id": 682189, "last_word_id": 682433}
+{"name": "Light of the World", "ref": "John 8:12-20", "edition": 1, "first_word_id": 682434, "last_word_id": 682638}
+{"name": "Healing of the Man Born Blind", "ref": "John 9:1-41", "edition": 1, "first_word_id": 683504, "last_word_id": 684379}
+{"name": "Good Shepherd Discourse", "ref": "John 10:1-18", "edition": 1, "first_word_id": 684380, "last_word_id": 684779}
+{"name": "Raising of Lazarus", "ref": "John 11:1-44", "edition": 1, "first_word_id": 685200, "last_word_id": 686059}
+{"name": "Anointing at Bethany (John)", "ref": "John 12:1-8", "edition": 1, "first_word_id": 686357, "last_word_id": 686521}
+{"name": "Triumphal Entry (John)", "ref": "John 12:12-19", "edition": 1, "first_word_id": 686584, "last_word_id": 686754}
+{"name": "Washing of the Disciples' Feet", "ref": "John 13:1-20", "edition": 1, "first_word_id": 687417, "last_word_id": 687853}
+{"name": "Way, Truth, and Life", "ref": "John 14:1-14", "edition": 1, "first_word_id": 688243, "last_word_id": 688560}
+{"name": "Promise of the Comforter", "ref": "John 14:15-31", "edition": 1, "first_word_id": 688561, "last_word_id": 688973}
+{"name": "True Vine", "ref": "John 15:1-17", "edition": 1, "first_word_id": 688974, "last_word_id": 689348}
+{"name": "Farewell Discourse", "ref": "John 13:31-16:33", "edition": 1, "first_word_id": 688054, "last_word_id": 690375}
+{"name": "Intercessory Prayer", "ref": "John 17:1-26", "edition": 1, "first_word_id": 690376, "last_word_id": 691011}
+{"name": "Arrest of Jesus (John)", "ref": "John 18:1-14", "edition": 1, "first_word_id": 691012, "last_word_id": 691305}
+{"name": "Trial before Pilate (John)", "ref": "John 18:28-19:16", "edition": 1, "first_word_id": 691610, "last_word_id": 692328}
+{"name": "Crucifixion (John)", "ref": "John 19:17-37", "edition": 1, "first_word_id": 692329, "last_word_id": 692830}
+{"name": "Burial of Jesus (John)", "ref": "John 19:38-42", "edition": 1, "first_word_id": 692831, "last_word_id": 692968}
+{"name": "Empty Tomb (John)", "ref": "John 20:1-18", "edition": 1, "first_word_id": 692969, "last_word_id": 693381}
+{"name": "Doubting Thomas", "ref": "John 20:24-29", "edition": 1, "first_word_id": 693509, "last_word_id": 693670}
+{"name": "Miraculous Catch of Fish (John)", "ref": "John 21:1-14", "edition": 1, "first_word_id": 693718, "last_word_id": 694063}
+{"name": "Feed My Sheep", "ref": "John 21:15-19", "edition": 1, "first_word_id": 694064, "last_word_id": 694252}
+{"name": "Ascension (Acts)", "ref": "Acts 1:6-11", "edition": 1, "first_word_id": 694541, "last_word_id": 694710}
+{"name": "Day of Pentecost", "ref": "Acts 2:1-41", "edition": 1, "first_word_id": 695077, "last_word_id": 695986}
+{"name": "Early Church Fellowship", "ref": "Acts 2:42-47", "edition": 1, "first_word_id": 695987, "last_word_id": 696097}
+{"name": "Healing of the Lame Man", "ref": "Acts 3:1-10", "edition": 1, "first_word_id": 696098, "last_word_id": 696303}
+{"name": "Ananias and Sapphira", "ref": "Acts 5:1-11", "edition": 1, "first_word_id": 697599, "last_word_id": 697869}
+{"name": "Stephen's Speech and Martyrdom", "ref": "Acts 6:8-7:60", "edition": 1, "first_word_id": 698808, "last_word_id": 700410}
+{"name": "Philip and the Ethiopian Eunuch", "ref": "Acts 8:26-40", "edition": 1, "first_word_id": 700931, "last_word_id": 701293}
+{"name": "Conversion of Saul", "ref": "Acts 9:1-19", "edition": 1, "first_word_id": 701294, "last_word_id": 701764}
+{"name": "Peter and Cornelius", "ref": "Acts 10:1-48", "edition": 1, "first_word_id": 702340, "last_word_id": 703447}
+{"name": "Peter's Escape from Prison", "ref": "Acts 12:1-19", "edition": 1, "first_word_id": 704115, "last_word_id": 704641}
+{"name": "Council of Jerusalem", "ref": "Acts 15:1-35", "edition": 1, "first_word_id": 706676, "last_word_id": 707480}
+{"name": "Macedonian Call", "ref": "Acts 16:6-10", "edition": 1, "first_word_id": 707723, "last_word_id": 707829}
+{"name": "Paul and Silas in Prison at Philippi", "ref": "Acts 16:16-40", "edition": 1, "first_word_id": 707978, "last_word_id": 708543}
+{"name": "Paul at Athens", "ref": "Acts 17:16-34", "edition": 1, "first_word_id": 708917, "last_word_id": 709398}
+{"name": "Paul's Farewell to the Ephesian Elders", "ref": "Acts 20:17-38", "edition": 1, "first_word_id": 711422, "last_word_id": 711919}
+{"name": "Paul's Defense before the Crowd", "ref": "Acts 22:1-21", "edition": 1, "first_word_id": 712987, "last_word_id": 713512}
+{"name": "Paul before Agrippa", "ref": "Acts 26:1-32", "edition": 1, "first_word_id": 716032, "last_word_id": 716812}
+{"name": "Shipwreck of Paul", "ref": "Acts 27:1-44", "edition": 1, "first_word_id": 716813, "last_word_id": 717845}
+{"name": "Righteousness by Faith", "ref": "Romans 3:21-31", "edition": 1, "first_word_id": 720342, "last_word_id": 720552}
+{"name": "Faith of Abraham (Romans)", "ref": "Romans 4:1-25", "edition": 1, "first_word_id": 720553, "last_word_id": 721098}
+{"name": "Peace with God", "ref": "Romans 5:1-11", "edition": 1, "first_word_id": 721099, "last_word_id": 721304}
+{"name": "Adam and Christ", "ref": "Romans 5:12-21", "edition": 1, "first_word_id": 721305, "last_word_id": 721578}
+{"name": "Dead to Sin", "ref": "Romans 6:1-23", "edition": 1, "first_word_id": 721579, "last_word_id": 722062}
+{"name": "Struggle with Sin", "ref": "Romans 7:14-25", "edition": 1, "first_word_id": 722420, "last_word_id": 722667}
+{"name": "Life in the Spirit", "ref": "Romans 8:1-17", "edition": 1, "first_word_id": 722668, "last_word_id": 723061}
+{"name": "More Than Conquerors", "ref": "Romans 8:31-39", "edition": 1, "first_word_id": 723372, "last_word_id": 723570}
+{"name": "Israel's Rejection and Restoration", "ref": "Romans 9:1-11:36", "edition": 1, "first_word_id": 723571, "last_word_id": 725568}
+{"name": "Olive Tree Analogy (Romans)", "ref": "Romans 11:11-24", "edition": 1, "first_word_id": 724996, "last_word_id": 725333}
+{"name": "Living Sacrifice", "ref": "Romans 12:1-2", "edition": 1, "first_word_id": 725569, "last_word_id": 725627}
+{"name": "Love in Action", "ref": "Romans 12:9-21", "edition": 1, "first_word_id": 725769, "last_word_id": 725965}
+{"name": "Submission to Authorities", "ref": "Romans 13:1-7", "edition": 1, "first_word_id": 725966, "last_word_id": 726148}
+{"name": "Divisions in Corinth", "ref": "1 Corinthians 1:10-17", "edition": 1, "first_word_id": 728297, "last_word_id": 728479}
+{"name": "Wisdom of God", "ref": "1 Corinthians 1:18-2:16", "edition": 1, "first_word_id": 728480, "last_word_id": 729142}
+{"name": "Lord's Supper (Corinthians)", "ref": "1 Corinthians 11:17-34", "edition": 1, "first_word_id": 733819, "last_word_id": 734220}
+{"name": "Spiritual Gifts (Corinthians)", "ref": "1 Corinthians 12:1-11", "edition": 1, "first_word_id": 734221, "last_word_id": 734416}
+{"name": "Body of Christ", "ref": "1 Corinthians 12:12-31", "edition": 1, "first_word_id": 734417, "last_word_id": 734813}
+{"name": "Love Chapter", "ref": "1 Corinthians 13:1-13", "edition": 1, "first_word_id": 734814, "last_word_id": 735083}
+{"name": "Gift of Tongues", "ref": "1 Corinthians 14:1-40", "edition": 1, "first_word_id": 735084, "last_word_id": 735970}
+{"name": "Resurrection Chapter", "ref": "1 Corinthians 15:1-58", "edition": 1, "first_word_id": 735971, "last_word_id": 737136}
+{"name": "God of All Comfort", "ref": "2 Corinthians 1:3-7", "edition": 1, "first_word_id": 737660, "last_word_id": 737788}
+{"name": "Treasure in Earthen Vessels", "ref": "2 Corinthians 4:7-18", "edition": 1, "first_word_id": 739142, "last_word_id": 739397}
+{"name": "Ministry of Reconciliation", "ref": "2 Corinthians 5:17-21", "edition": 1, "first_word_id": 739760, "last_word_id": 739884}
+{"name": "Cheerful Giver", "ref": "2 Corinthians 9:6-15", "edition": 1, "first_word_id": 741407, "last_word_id": 741616}
+{"name": "Paul's Thorn in the Flesh", "ref": "2 Corinthians 12:1-10", "edition": 1, "first_word_id": 742772, "last_word_id": 743047}
+{"name": "Justified by Faith", "ref": "Galatians 2:15-21", "edition": 1, "first_word_id": 744539, "last_word_id": 744728}
+{"name": "Children of God through Faith", "ref": "Galatians 3:26-29", "edition": 1, "first_word_id": 745307, "last_word_id": 745376}
+{"name": "Fruit of the Spirit", "ref": "Galatians 5:16-26", "edition": 1, "first_word_id": 746247, "last_word_id": 746433}
+{"name": "Spiritual Blessings in Christ", "ref": "Ephesians 1:3-14", "edition": 1, "first_word_id": 746843, "last_word_id": 747110}
+{"name": "Saved by Grace", "ref": "Ephesians 2:1-10", "edition": 1, "first_word_id": 747310, "last_word_id": 747515}
+{"name": "Unity of the Body", "ref": "Ephesians 4:1-16", "edition": 1, "first_word_id": 748173, "last_word_id": 748497}
+{"name": "Household Duties", "ref": "Ephesians 5:21-6:9", "edition": 1, "first_word_id": 749114, "last_word_id": 749518}
+{"name": "Armor of God", "ref": "Ephesians 6:10-20", "edition": 1, "first_word_id": 749519, "last_word_id": 749739}
+{"name": "Christ Hymn (Philippians)", "ref": "Philippians 2:5-11", "edition": 1, "first_word_id": 750553, "last_word_id": 750683}
+{"name": "Press Toward the Mark", "ref": "Philippians 3:12-16", "edition": 1, "first_word_id": 751321, "last_word_id": 751442}
+{"name": "Rejoice in the Lord", "ref": "Philippians 4:4-9", "edition": 1, "first_word_id": 751627, "last_word_id": 751757}
+{"name": "Supremacy of Christ", "ref": "Colossians 1:15-20", "edition": 1, "first_word_id": 752343, "last_word_id": 752477}
+{"name": "Put On the New Man", "ref": "Colossians 3:1-17", "edition": 1, "first_word_id": 753202, "last_word_id": 753531}
+{"name": "Return of the Lord (Thessalonians)", "ref": "1 Thessalonians 4:13-5:11", "edition": 1, "first_word_id": 755315, "last_word_id": 755670}
+{"name": "Man of Sin", "ref": "2 Thessalonians 2:1-12", "edition": 1, "first_word_id": 756192, "last_word_id": 756460}
+{"name": "Qualifications of a Bishop", "ref": "1 Timothy 3:1-13", "edition": 1, "first_word_id": 757622, "last_word_id": 757863}
+{"name": "Love of Money", "ref": "1 Timothy 6:6-10", "edition": 1, "first_word_id": 758859, "last_word_id": 758946}
+{"name": "All Scripture Is Given by Inspiration", "ref": "2 Timothy 3:14-17", "edition": 1, "first_word_id": 760374, "last_word_id": 760457}
+{"name": "Fought a Good Fight", "ref": "2 Timothy 4:6-8", "edition": 1, "first_word_id": 760563, "last_word_id": 760632}
+{"name": "Christ Superior to Angels", "ref": "Hebrews 1:1-14", "edition": 1, "first_word_id": 762290, "last_word_id": 762627}
+{"name": "High Priest", "ref": "Hebrews 4:14-16", "edition": 1, "first_word_id": 763786, "last_word_id": 763865}
+{"name": "Melchizedek Priesthood (Hebrews)", "ref": "Hebrews 7:1-28", "edition": 1, "first_word_id": 764613, "last_word_id": 765219}
+{"name": "Better Covenant", "ref": "Hebrews 8:1-13", "edition": 1, "first_word_id": 765220, "last_word_id": 765606}
+{"name": "Once for All Sacrifice", "ref": "Hebrews 10:1-18", "edition": 1, "first_word_id": 766286, "last_word_id": 766636}
+{"name": "Hall of Faith", "ref": "Hebrews 11:1-40", "edition": 1, "first_word_id": 767070, "last_word_id": 767991}
+{"name": "Cloud of Witnesses", "ref": "Hebrews 12:1-2", "edition": 1, "first_word_id": 767992, "last_word_id": 768071}
+{"name": "Chastening of the Lord", "ref": "Hebrews 12:5-11", "edition": 1, "first_word_id": 768102, "last_word_id": 768268}
+{"name": "Trials and Patience", "ref": "James 1:2-4", "edition": 1, "first_word_id": 769222, "last_word_id": 769259}
+{"name": "Ask of God", "ref": "James 1:5-8", "edition": 1, "first_word_id": 769260, "last_word_id": 769335}
+{"name": "Faith and Works", "ref": "James 2:14-26", "edition": 1, "first_word_id": 770025, "last_word_id": 770273}
+{"name": "Taming the Tongue", "ref": "James 3:1-12", "edition": 1, "first_word_id": 770274, "last_word_id": 770540}
+{"name": "Wisdom from Above", "ref": "James 3:13-18", "edition": 1, "first_word_id": 770541, "last_word_id": 770651}
+{"name": "Anointing the Sick", "ref": "James 5:13-18", "edition": 1, "first_word_id": 771314, "last_word_id": 771463}
+{"name": "Living Stones", "ref": "1 Peter 2:4-10", "edition": 1, "first_word_id": 772151, "last_word_id": 772336}
+{"name": "Preaching to the Spirits in Prison", "ref": "1 Peter 3:18-22", "edition": 1, "first_word_id": 773074, "last_word_id": 773208}
+{"name": "Add to Your Faith", "ref": "2 Peter 1:5-11", "edition": 1, "first_word_id": 774103, "last_word_id": 774235}
+{"name": "Walk in the Light", "ref": "1 John 1:5-2:2", "edition": 1, "first_word_id": 775661, "last_word_id": 775850}
+{"name": "God Is Love", "ref": "1 John 4:7-21", "edition": 1, "first_word_id": 777230, "last_word_id": 777549}
+{"name": "Vision of Christ on Patmos", "ref": "Revelation 1:9-20", "edition": 1, "first_word_id": 779533, "last_word_id": 779883}
+{"name": "Letters to the Seven Churches", "ref": "Revelation 2:1-3:22", "edition": 1, "first_word_id": 779884, "last_word_id": 781343}
+{"name": "Letter to Ephesus", "ref": "Revelation 2:1-7", "edition": 1, "first_word_id": 779884, "last_word_id": 780072}
+{"name": "Letter to Smyrna", "ref": "Revelation 2:8-11", "edition": 1, "first_word_id": 780073, "last_word_id": 780200}
+{"name": "Letter to Pergamum", "ref": "Revelation 2:12-17", "edition": 1, "first_word_id": 780201, "last_word_id": 780394}
+{"name": "Letter to Thyatira", "ref": "Revelation 2:18-29", "edition": 1, "first_word_id": 780395, "last_word_id": 780685}
+{"name": "Letter to Sardis", "ref": "Revelation 3:1-6", "edition": 1, "first_word_id": 780686, "last_word_id": 780866}
+{"name": "Letter to Philadelphia", "ref": "Revelation 3:7-13", "edition": 1, "first_word_id": 780867, "last_word_id": 781112}
+{"name": "Letter to Laodicea", "ref": "Revelation 3:14-22", "edition": 1, "first_word_id": 781113, "last_word_id": 781343}
+{"name": "Throne Room Vision", "ref": "Revelation 4:1-11", "edition": 1, "first_word_id": 781344, "last_word_id": 781691}
+{"name": "Scroll and the Lamb", "ref": "Revelation 5:1-14", "edition": 1, "first_word_id": 781692, "last_word_id": 782126}
+{"name": "Seven Seals", "ref": "Revelation 6:1-8:5", "edition": 1, "first_word_id": 782127, "last_word_id": 783289}
+{"name": "Sealing of the 144,000", "ref": "Revelation 7:1-8", "edition": 1, "first_word_id": 782667, "last_word_id": 782906}
+{"name": "Seven Trumpets", "ref": "Revelation 8:6-11:19", "edition": 1, "first_word_id": 783290, "last_word_id": 785079}
+{"name": "Two Witnesses", "ref": "Revelation 11:1-14", "edition": 1, "first_word_id": 784500, "last_word_id": 784905}
+{"name": "Woman and the Dragon", "ref": "Revelation 12:1-17", "edition": 1, "first_word_id": 785080, "last_word_id": 785576}
+{"name": "War in Heaven", "ref": "Revelation 12:7-12", "edition": 1, "first_word_id": 785249, "last_word_id": 785429}
+{"name": "Beast from the Sea", "ref": "Revelation 13:1-10", "edition": 1, "first_word_id": 785577, "last_word_id": 785861}
+{"name": "Beast from the Earth", "ref": "Revelation 13:11-18", "edition": 1, "first_word_id": 785862, "last_word_id": 786114}
+{"name": "Seven Bowls of Wrath", "ref": "Revelation 15:1-16:21", "edition": 1, "first_word_id": 786766, "last_word_id": 787584}
+{"name": "Fall of Babylon", "ref": "Revelation 17:1-18:24", "edition": 1, "first_word_id": 787585, "last_word_id": 788853}
+{"name": "Marriage Supper of the Lamb", "ref": "Revelation 19:1-10", "edition": 1, "first_word_id": 788854, "last_word_id": 789137}
+{"name": "Rider on the White Horse", "ref": "Revelation 19:11-21", "edition": 1, "first_word_id": 789138, "last_word_id": 789487}
+{"name": "Millennium", "ref": "Revelation 20:1-6", "edition": 1, "first_word_id": 789488, "last_word_id": 789700}
+{"name": "Great White Throne Judgment", "ref": "Revelation 20:11-15", "edition": 1, "first_word_id": 789821, "last_word_id": 789964}
+{"name": "New Jerusalem", "ref": "Revelation 21:1-22:5", "edition": 1, "first_word_id": 789965, "last_word_id": 790856}
+{"name": "Parable of the Budding Fig Tree", "ref": "Matthew 24:32-35", "edition": 1, "first_word_id": 629404, "last_word_id": 629475}
+{"name": "Parable of the Faithful and Evil Servants", "ref": "Matthew 24:45-51", "edition": 1, "first_word_id": 629663, "last_word_id": 629793}
+{"name": "Parable of the Two Debtors", "ref": "Luke 7:41-43", "edition": 1, "first_word_id": 657260, "last_word_id": 657322}
+{"name": "Parable of the Servant's Duty", "ref": "Luke 17:7-10", "edition": 1, "first_word_id": 667392, "last_word_id": 667501}
+{"name": "Creation", "ref": "Genesis 1:1-2:3", "edition": 1, "first_word_id": 8, "last_word_id": 871}
+{"name": "Garden of Eden", "ref": "Genesis 2:4-25", "edition": 1, "first_word_id": 872, "last_word_id": 1436}
+{"name": "The Fall", "ref": "Genesis 3:1-24", "edition": 1, "first_word_id": 1437, "last_word_id": 2131}
+{"name": "Cain and Abel", "ref": "Genesis 4:1-16", "edition": 1, "first_word_id": 2132, "last_word_id": 2527}
+{"name": "Noah and the Flood", "ref": "Genesis 6:9-8:22", "edition": 1, "first_word_id": 3483, "last_word_id": 5016}
+{"name": "Noahic Covenant", "ref": "Genesis 9:1-17", "edition": 1, "first_word_id": 5017, "last_word_id": 5460}
+{"name": "Tower of Babel", "ref": "Genesis 11:1-9", "edition": 1, "first_word_id": 6170, "last_word_id": 6404}
+{"name": "Call of Abram", "ref": "Genesis 12:1-9", "edition": 1, "first_word_id": 6776, "last_word_id": 7037}
+{"name": "Melchizedek Blesses Abram", "ref": "Genesis 14:18-20", "edition": 1, "first_word_id": 8209, "last_word_id": 8269}
+{"name": "Abrahamic Covenant", "ref": "Genesis 15:1-21", "edition": 1, "first_word_id": 8375, "last_word_id": 8845}
+{"name": "Covenant of Circumcision", "ref": "Genesis 17:1-27", "edition": 1, "first_word_id": 9258, "last_word_id": 9936}
+{"name": "Destruction of Sodom and Gomorrah", "ref": "Genesis 18:16-19:29", "edition": 1, "first_word_id": 10321, "last_word_id": 11653}
+{"name": "Hagar and Ishmael Sent Away", "ref": "Genesis 21:8-21", "edition": 1, "first_word_id": 12546, "last_word_id": 12912}
+{"name": "Binding of Isaac", "ref": "Genesis 22:1-19", "edition": 1, "first_word_id": 13184, "last_word_id": 13734}
+{"name": "Marriage of Isaac and Rebekah", "ref": "Genesis 24:1-67", "edition": 1, "first_word_id": 14352, "last_word_id": 16167}
+{"name": "Esau Sells His Birthright", "ref": "Genesis 25:29-34", "edition": 1, "first_word_id": 16759, "last_word_id": 16873}
+{"name": "Jacob Receives Isaac's Blessing", "ref": "Genesis 27:1-40", "edition": 1, "first_word_id": 17763, "last_word_id": 18835}
+{"name": "Jacob's Ladder", "ref": "Genesis 28:10-22", "edition": 1, "first_word_id": 19252, "last_word_id": 19645}
+{"name": "Jacob Wrestles the Angel", "ref": "Genesis 32:22-32", "edition": 1, "first_word_id": 23448, "last_word_id": 23708}
+{"name": "Jacob and Esau Reconcile", "ref": "Genesis 33:1-17", "edition": 1, "first_word_id": 23709, "last_word_id": 24148}
+{"name": "Joseph's Dreams", "ref": "Genesis 37:1-11", "edition": 1, "first_word_id": 26516, "last_word_id": 26820}
+{"name": "Joseph Sold into Slavery", "ref": "Genesis 37:12-36", "edition": 1, "first_word_id": 26821, "last_word_id": 27457}
+{"name": "Judah and Tamar", "ref": "Genesis 38:1-30", "edition": 1, "first_word_id": 27458, "last_word_id": 28276}
+{"name": "Joseph and Potiphar's Wife", "ref": "Genesis 39:1-23", "edition": 1, "first_word_id": 28277, "last_word_id": 28942}
+{"name": "Joseph Interprets Pharaoh's Dreams", "ref": "Genesis 41:1-57", "edition": 1, "first_word_id": 29523, "last_word_id": 30926}
+{"name": "Joseph Reveals Himself to His Brothers", "ref": "Genesis 45:1-15", "edition": 1, "first_word_id": 33716, "last_word_id": 34112}
+{"name": "Jacob's Blessing of His Sons", "ref": "Genesis 49:1-28", "edition": 1, "first_word_id": 36817, "last_word_id": 37445}
+{"name": "Moses in the Bulrushes", "ref": "Exodus 2:1-10", "edition": 1, "first_word_id": 38734, "last_word_id": 39005}
+{"name": "Burning Bush", "ref": "Exodus 3:1-4:17", "edition": 1, "first_word_id": 39391, "last_word_id": 40693}
+{"name": "Plagues of Egypt", "ref": "Exodus 7:14-12:36", "edition": 1, "first_word_id": 42718, "last_word_id": 47378}
+{"name": "Institution of the Passover", "ref": "Exodus 12:1-28", "edition": 1, "first_word_id": 46253, "last_word_id": 47137}
+{"name": "Crossing the Red Sea", "ref": "Exodus 14:1-31", "edition": 1, "first_word_id": 48421, "last_word_id": 49351}
+{"name": "Song of the Sea", "ref": "Exodus 15:1-21", "edition": 1, "first_word_id": 49352, "last_word_id": 49871}
+{"name": "Manna from Heaven", "ref": "Exodus 16:1-36", "edition": 1, "first_word_id": 50065, "last_word_id": 51126}
+{"name": "Water from the Rock at Horeb", "ref": "Exodus 17:1-7", "edition": 1, "first_word_id": 51127, "last_word_id": 51367}
+{"name": "Battle with Amalek", "ref": "Exodus 17:8-16", "edition": 1, "first_word_id": 51368, "last_word_id": 51591}
+{"name": "Jethro's Counsel to Moses", "ref": "Exodus 18:1-27", "edition": 1, "first_word_id": 51592, "last_word_id": 52351}
+{"name": "Israel at Mount Sinai", "ref": "Exodus 19:1-25", "edition": 1, "first_word_id": 52352, "last_word_id": 53053}
+{"name": "Ten Commandments", "ref": "Exodus 20:1-17", "edition": 1, "first_word_id": 53054, "last_word_id": 53379}
+{"name": "Book of the Covenant", "ref": "Exodus 20:22-23:33", "edition": 1, "first_word_id": 53480, "last_word_id": 56124}
+{"name": "Covenant Ratified at Sinai", "ref": "Exodus 24:1-18", "edition": 1, "first_word_id": 56125, "last_word_id": 56616}
+{"name": "Tabernacle Instructions", "ref": "Exodus 25:1-31:11", "edition": 1, "first_word_id": 56617, "last_word_id": 62817}
+{"name": "Golden Calf", "ref": "Exodus 32:1-35", "edition": 1, "first_word_id": 63022, "last_word_id": 64114}
+{"name": "Moses Sees the Glory of the Lord", "ref": "Exodus 33:12-23", "edition": 1, "first_word_id": 64487, "last_word_id": 64824}
+{"name": "Second Tablets", "ref": "Exodus 34:1-28", "edition": 1, "first_word_id": 64825, "last_word_id": 65624}
+{"name": "Clean and Unclean Animals", "ref": "Leviticus 11:1-47", "edition": 1, "first_word_id": 78559, "last_word_id": 79673}
+{"name": "Day of Atonement", "ref": "Leviticus 16:1-34", "edition": 1, "first_word_id": 84425, "last_word_id": 85581}
+{"name": "Holiness Code", "ref": "Leviticus 17:1-26:46", "edition": 1, "first_word_id": 85582, "last_word_id": 94553}
+{"name": "Year of Jubilee", "ref": "Leviticus 25:8-55", "edition": 1, "first_word_id": 91951, "last_word_id": 93306}
+{"name": "Nazirite Vow", "ref": "Numbers 6:1-21", "edition": 1, "first_word_id": 101283, "last_word_id": 101948}
+{"name": "Aaronic Blessing", "ref": "Numbers 6:22-27", "edition": 1, "first_word_id": 101949, "last_word_id": 102024}
+{"name": "Twelve Spies", "ref": "Numbers 13:1-14:45", "edition": 1, "first_word_id": 107704, "last_word_id": 109625}
+{"name": "Korah's Rebellion", "ref": "Numbers 16:1-50", "edition": 1, "first_word_id": 110694, "last_word_id": 112034}
+{"name": "Waters of Meribah", "ref": "Numbers 20:1-13", "edition": 1, "first_word_id": 114165, "last_word_id": 114526}
+{"name": "Bronze Serpent", "ref": "Numbers 21:4-9", "edition": 1, "first_word_id": 115048, "last_word_id": 115249}
+{"name": "Balaam and His Donkey", "ref": "Numbers 22:21-35", "edition": 1, "first_word_id": 116459, "last_word_id": 116930}
+{"name": "Daughters of Zelophehad", "ref": "Numbers 27:1-11", "edition": 1, "first_word_id": 120382, "last_word_id": 120679}
+{"name": "Cities of Refuge", "ref": "Numbers 35:1-34", "edition": 1, "first_word_id": 127003, "last_word_id": 127967}
+{"name": "Ten Commandments (Deuteronomy)", "ref": "Deuteronomy 5:6-21", "edition": 1, "first_word_id": 133142, "last_word_id": 133513}
+{"name": "Shema", "ref": "Deuteronomy 6:4-9", "edition": 1, "first_word_id": 134057, "last_word_id": 134174}
+{"name": "Blessings and Curses", "ref": "Deuteronomy 28:1-68", "edition": 1, "first_word_id": 149709, "last_word_id": 151783}
+{"name": "Choose Life", "ref": "Deuteronomy 30:11-20", "edition": 1, "first_word_id": 152985, "last_word_id": 153299}
+{"name": "Song of Moses", "ref": "Deuteronomy 32:1-43", "edition": 1, "first_word_id": 154341, "last_word_id": 155405}
+{"name": "Blessing of Moses", "ref": "Deuteronomy 33:1-29", "edition": 1, "first_word_id": 155647, "last_word_id": 156451}
+{"name": "Death of Moses", "ref": "Deuteronomy 34:1-12", "edition": 1, "first_word_id": 156452, "last_word_id": 156771}
+{"name": "Rahab and the Spies", "ref": "Joshua 2:1-24", "edition": 1, "first_word_id": 157349, "last_word_id": 158116}
+{"name": "Crossing the Jordan", "ref": "Joshua 3:1-4:24", "edition": 1, "first_word_id": 158117, "last_word_id": 159389}
+{"name": "Fall of Jericho", "ref": "Joshua 6:1-27", "edition": 1, "first_word_id": 159940, "last_word_id": 160843}
+{"name": "Achan's Sin", "ref": "Joshua 7:1-26", "edition": 1, "first_word_id": 160844, "last_word_id": 161770}
+{"name": "Gibeonite Deception", "ref": "Joshua 9:1-27", "edition": 1, "first_word_id": 162992, "last_word_id": 163791}
+{"name": "Joshua's Long Day", "ref": "Joshua 10:1-15", "edition": 1, "first_word_id": 163792, "last_word_id": 164307}
+{"name": "Joshua's Farewell Address", "ref": "Joshua 23:1-16", "edition": 1, "first_word_id": 174012, "last_word_id": 174585}
+{"name": "Covenant at Shechem", "ref": "Joshua 24:1-28", "edition": 1, "first_word_id": 174586, "last_word_id": 175461}
+{"name": "Deborah and Barak", "ref": "Judges 4:1-24", "edition": 1, "first_word_id": 178130, "last_word_id": 178890}
+{"name": "Song of Deborah", "ref": "Judges 5:1-31", "edition": 1, "first_word_id": 178891, "last_word_id": 179645}
+{"name": "Gideon", "ref": "Judges 6:1-8:35", "edition": 1, "first_word_id": 179646, "last_word_id": 182879}
+{"name": "Jephthah's Vow", "ref": "Judges 11:1-40", "edition": 1, "first_word_id": 185020, "last_word_id": 186254}
+{"name": "Birth of Samson", "ref": "Judges 13:1-25", "edition": 1, "first_word_id": 186654, "last_word_id": 187418}
+{"name": "Samson and Delilah", "ref": "Judges 16:4-22", "edition": 1, "first_word_id": 188886, "last_word_id": 189538}
+{"name": "Death of Samson", "ref": "Judges 16:23-31", "edition": 1, "first_word_id": 189539, "last_word_id": 189882}
+{"name": "Ruth's Loyalty to Naomi", "ref": "Ruth 1:6-18", "edition": 1, "first_word_id": 194750, "last_word_id": 195133}
+{"name": "Ruth and Boaz", "ref": "Ruth 2:1-4:22", "edition": 1, "first_word_id": 195253, "last_word_id": 197177}
+{"name": "Hannah's Prayer", "ref": "1 Samuel 1:9-2:10", "edition": 1, "first_word_id": 197414, "last_word_id": 198241}
+{"name": "Call of Samuel", "ref": "1 Samuel 3:1-21", "edition": 1, "first_word_id": 199077, "last_word_id": 199625}
+{"name": "Capture of the Ark", "ref": "1 Samuel 4:1-22", "edition": 1, "first_word_id": 199626, "last_word_id": 200358}
+{"name": "Israel Demands a King", "ref": "1 Samuel 8:1-22", "edition": 1, "first_word_id": 202060, "last_word_id": 202600}
+{"name": "Saul Anointed King", "ref": "1 Samuel 9:1-10:16", "edition": 1, "first_word_id": 202601, "last_word_id": 204122}
+{"name": "David Anointed", "ref": "1 Samuel 16:1-13", "edition": 1, "first_word_id": 209012, "last_word_id": 209418}
+{"name": "David and Goliath", "ref": "1 Samuel 17:1-58", "edition": 1, "first_word_id": 209692, "last_word_id": 211410}
+{"name": "David and Jonathan", "ref": "1 Samuel 20:1-42", "edition": 1, "first_word_id": 212952, "last_word_id": 214240}
+{"name": "David Spares Saul at En-gedi", "ref": "1 Samuel 24:1-22", "edition": 1, "first_word_id": 216332, "last_word_id": 216992}
+{"name": "Witch of Endor", "ref": "1 Samuel 28:3-25", "edition": 1, "first_word_id": 219751, "last_word_id": 220513}
+{"name": "Death of Saul", "ref": "1 Samuel 31:1-13", "edition": 1, "first_word_id": 221891, "last_word_id": 222238}
+{"name": "Lament for Saul and Jonathan", "ref": "2 Samuel 1:17-27", "edition": 1, "first_word_id": 222706, "last_word_id": 222963}
+{"name": "Ark Brought to Jerusalem", "ref": "2 Samuel 6:1-23", "edition": 1, "first_word_id": 226076, "last_word_id": 226788}
+{"name": "Davidic Covenant", "ref": "2 Samuel 7:1-29", "edition": 1, "first_word_id": 226789, "last_word_id": 227646}
+{"name": "David and Bathsheba", "ref": "2 Samuel 11:1-12:25", "edition": 1, "first_word_id": 229110, "last_word_id": 230739}
+{"name": "Absalom's Rebellion", "ref": "2 Samuel 15:1-18:33", "edition": 1, "first_word_id": 233182, "last_word_id": 237068}
+{"name": "Solomon's Prayer for Wisdom", "ref": "1 Kings 3:3-15", "edition": 1, "first_word_id": 245943, "last_word_id": 246351}
+{"name": "Judgment of Solomon", "ref": "1 Kings 3:16-28", "edition": 1, "first_word_id": 246352, "last_word_id": 246725}
+{"name": "Building of Solomon's Temple", "ref": "1 Kings 6:1-38", "edition": 1, "first_word_id": 247959, "last_word_id": 248976}
+{"name": "Dedication of Solomon's Temple", "ref": "1 Kings 8:1-66", "edition": 1, "first_word_id": 250459, "last_word_id": 252597}
+{"name": "Queen of Sheba", "ref": "1 Kings 10:1-13", "edition": 1, "first_word_id": 253424, "last_word_id": 253824}
+{"name": "Division of the Kingdom", "ref": "1 Kings 12:1-33", "edition": 1, "first_word_id": 255516, "last_word_id": 256553}
+{"name": "Elijah and the Widow of Zarephath", "ref": "1 Kings 17:8-24", "edition": 1, "first_word_id": 260824, "last_word_id": 261344}
+{"name": "Elijah on Mount Carmel", "ref": "1 Kings 18:17-40", "edition": 1, "first_word_id": 261773, "last_word_id": 262556}
+{"name": "Elijah at Horeb", "ref": "1 Kings 19:1-18", "edition": 1, "first_word_id": 262742, "last_word_id": 263348}
+{"name": "Naboth's Vineyard", "ref": "1 Kings 21:1-29", "edition": 1, "first_word_id": 264954, "last_word_id": 265861}
+{"name": "Elijah Taken Up in a Whirlwind", "ref": "2 Kings 2:1-18", "edition": 1, "first_word_id": 268062, "last_word_id": 268708}
+{"name": "Elisha and the Shunammite Woman", "ref": "2 Kings 4:8-37", "edition": 1, "first_word_id": 269986, "last_word_id": 270871}
+{"name": "Naaman Healed of Leprosy", "ref": "2 Kings 5:1-27", "edition": 1, "first_word_id": 271127, "last_word_id": 272101}
+{"name": "Floating Axe Head", "ref": "2 Kings 6:1-7", "edition": 1, "first_word_id": 272102, "last_word_id": 272263}
+{"name": "Hezekiah and Sennacherib", "ref": "2 Kings 18:13-19:37", "edition": 1, "first_word_id": 283731, "last_word_id": 285747}
+{"name": "Josiah Finds the Book of the Law", "ref": "2 Kings 22:1-23:30", "edition": 1, "first_word_id": 287155, "last_word_id": 289117}
+{"name": "Fall of Jerusalem", "ref": "2 Kings 25:1-21", "edition": 1, "first_word_id": 289928, "last_word_id": 290581}
+{"name": "Prayer of Jabez", "ref": "1 Chronicles 4:9-10", "edition": 1, "first_word_id": 292927, "last_word_id": 292998}
+{"name": "David's Psalm of Thanksgiving", "ref": "1 Chronicles 16:8-36", "edition": 1, "first_word_id": 301872, "last_word_id": 302349}
+{"name": "Decree of Cyrus", "ref": "Ezra 1:1-11", "edition": 1, "first_word_id": 337357, "last_word_id": 337727}
+{"name": "Nehemiah's Prayer", "ref": "Nehemiah 1:1-11", "edition": 1, "first_word_id": 344801, "last_word_id": 345190}
+{"name": "Rebuilding the Wall of Jerusalem", "ref": "Nehemiah 2:11-6:19", "edition": 1, "first_word_id": 345555, "last_word_id": 348758}
+{"name": "Ezra Reads the Law", "ref": "Nehemiah 8:1-18", "edition": 1, "first_word_id": 349935, "last_word_id": 350620}
+{"name": "Esther Approaches the King", "ref": "Esther 5:1-8", "edition": 1, "first_word_id": 357876, "last_word_id": 358158}
+{"name": "Downfall of Haman", "ref": "Esther 7:1-10", "edition": 1, "first_word_id": 358846, "last_word_id": 359190}
+{"name": "Institution of Purim", "ref": "Esther 9:20-32", "edition": 1, "first_word_id": 360402, "last_word_id": 360824}
+{"name": "Job's Trials", "ref": "Job 1:1-2:13", "edition": 1, "first_word_id": 360922, "last_word_id": 361949}
+{"name": "I Know That My Redeemer Liveth", "ref": "Job 19:23-27", "edition": 1, "first_word_id": 368763, "last_word_id": 368849}
+{"name": "Hymn to Wisdom", "ref": "Job 28:1-28", "edition": 1, "first_word_id": 371845, "last_word_id": 372299}
+{"name": "God Answers Job from the Whirlwind", "ref": "Job 38:1-41:34", "edition": 1, "first_word_id": 376575, "last_word_id": 378578}
+{"name": "Job's Restoration", "ref": "Job 42:1-17", "edition": 1, "first_word_id": 378579, "last_word_id": 379019}
+{"name": "Blessed Man Psalm", "ref": "Psalms 1:1-6", "edition": 1, "first_word_id": 379024, "last_word_id": 379153}
+{"name": "Coronation Psalm", "ref": "Psalms 2:1-12", "edition": 1, "first_word_id": 379154, "last_word_id": 379359}
+{"name": "What Is Man Psalm", "ref": "Psalms 8:1-9", "edition": 1, "first_word_id": 380464, "last_word_id": 380629}
+{"name": "Heavens Declare Psalm", "ref": "Psalms 19:1-14", "edition": 1, "first_word_id": 383522, "last_word_id": 383793}
+{"name": "Psalm of the Suffering Messiah", "ref": "Psalms 22:1-31", "edition": 1, "first_word_id": 384211, "last_word_id": 384790}
+{"name": "Shepherd Psalm", "ref": "Psalms 23:1-6", "edition": 1, "first_word_id": 384795, "last_word_id": 384912}
+{"name": "Who Shall Ascend Psalm", "ref": "Psalms 24:1-10", "edition": 1, "first_word_id": 384917, "last_word_id": 385094}
+{"name": "Psalm of Repentance", "ref": "Psalms 51:1-19", "edition": 1, "first_word_id": 393493, "last_word_id": 393814}
+{"name": "God Is Our Refuge", "ref": "Psalms 46:1-11", "edition": 1, "first_word_id": 392123, "last_word_id": 392326}
+{"name": "Prayer of Moses", "ref": "Psalms 90:1-17", "edition": 1, "first_word_id": 406169, "last_word_id": 406488}
+{"name": "Psalm of Protection", "ref": "Psalms 91:1-16", "edition": 1, "first_word_id": 406489, "last_word_id": 406776}
+{"name": "Psalm of Thanksgiving", "ref": "Psalms 100:1-5", "edition": 1, "first_word_id": 408438, "last_word_id": 408523}
+{"name": "Priest-King Psalm", "ref": "Psalms 110:1-7", "edition": 1, "first_word_id": 412954, "last_word_id": 413095}
+{"name": "Songs of Ascents", "ref": "Psalms 120:1-134:3", "edition": 1, "first_word_id": 417223, "last_word_id": 418922}
+{"name": "Pilgrim's Psalm", "ref": "Psalms 121:1-8", "edition": 1, "first_word_id": 417315, "last_word_id": 417424}
+{"name": "Torah Psalm", "ref": "Psalms 119:1-176", "edition": 1, "first_word_id": 414754, "last_word_id": 417218}
+{"name": "Out of the Depths", "ref": "Psalms 130:1-8", "edition": 1, "first_word_id": 418338, "last_word_id": 418453}
+{"name": "By the Rivers of Babylon", "ref": "Psalms 137:1-9", "edition": 1, "first_word_id": 419605, "last_word_id": 419769}
+{"name": "Omniscience Psalm", "ref": "Psalms 139:1-24", "edition": 1, "first_word_id": 419954, "last_word_id": 420363}
+{"name": "Final Hallelujah", "ref": "Psalms 150:1-6", "edition": 1, "first_word_id": 422699, "last_word_id": 422783}
+{"name": "Trust in the Lord", "ref": "Proverbs 3:5-6", "edition": 1, "first_word_id": 423676, "last_word_id": 423702}
+{"name": "Wisdom Calls", "ref": "Proverbs 8:1-36", "edition": 1, "first_word_id": 425884, "last_word_id": 426445}
+{"name": "Wisdom's Banquet", "ref": "Proverbs 9:1-18", "edition": 1, "first_word_id": 426446, "last_word_id": 426733}
+{"name": "Words of Agur", "ref": "Proverbs 30:1-33", "edition": 1, "first_word_id": 436717, "last_word_id": 437356}
+{"name": "Virtuous Woman", "ref": "Proverbs 31:10-31", "edition": 1, "first_word_id": 437499, "last_word_id": 437823}
+{"name": "Vanity of Vanities", "ref": "Ecclesiastes 1:2-11", "edition": 1, "first_word_id": 437840, "last_word_id": 438050}
+{"name": "A Time for Everything", "ref": "Ecclesiastes 3:1-8", "edition": 1, "first_word_id": 438942, "last_word_id": 439099}
+{"name": "Remember Thy Creator", "ref": "Ecclesiastes 12:1-8", "edition": 1, "first_word_id": 443035, "last_word_id": 443268}
+{"name": "Conclusion of the Matter", "ref": "Ecclesiastes 12:9-14", "edition": 1, "first_word_id": 443269, "last_word_id": 443406}
+{"name": "Song of the Vineyard", "ref": "Isaiah 5:1-7", "edition": 1, "first_word_id": 448196, "last_word_id": 448426}
+{"name": "Mountain of the Lord's House", "ref": "Isaiah 2:1-5", "edition": 1, "first_word_id": 446833, "last_word_id": 447001}
+{"name": "Isaiah's Call", "ref": "Isaiah 6:1-13", "edition": 1, "first_word_id": 449059, "last_word_id": 449424}
+{"name": "Sign of Immanuel", "ref": "Isaiah 7:10-17", "edition": 1, "first_word_id": 449699, "last_word_id": 449867}
+{"name": "Unto Us a Child Is Born", "ref": "Isaiah 9:1-7", "edition": 1, "first_word_id": 450676, "last_word_id": 450919}
+{"name": "Rod of Jesse", "ref": "Isaiah 11:1-16", "edition": 1, "first_word_id": 452203, "last_word_id": 452721}
+{"name": "Song of Salvation", "ref": "Isaiah 12:1-6", "edition": 1, "first_word_id": 452722, "last_word_id": 452855}
+{"name": "Taunt Against the King of Babylon", "ref": "Isaiah 14:3-23", "edition": 1, "first_word_id": 453516, "last_word_id": 454049}
+{"name": "Sealed Book Prophecy (Isaiah)", "ref": "Isaiah 29:1-24", "edition": 1, "first_word_id": 460855, "last_word_id": 461596}
+{"name": "Hezekiah's Illness", "ref": "Isaiah 38:1-22", "edition": 1, "first_word_id": 466619, "last_word_id": 467210}
+{"name": "Comfort Ye My People", "ref": "Isaiah 40:1-11", "edition": 1, "first_word_id": 467479, "last_word_id": 467757}
+{"name": "Incomparable God", "ref": "Isaiah 40:12-31", "edition": 1, "first_word_id": 467758, "last_word_id": 468274}
+{"name": "First Servant Song", "ref": "Isaiah 42:1-9", "edition": 1, "first_word_id": 469079, "last_word_id": 469313}
+{"name": "Second Servant Song", "ref": "Isaiah 49:1-13", "edition": 1, "first_word_id": 473566, "last_word_id": 474008}
+{"name": "Third Servant Song", "ref": "Isaiah 50:4-11", "edition": 1, "first_word_id": 474552, "last_word_id": 474797}
+{"name": "Suffering Servant", "ref": "Isaiah 52:13-53:12", "edition": 1, "first_word_id": 475899, "last_word_id": 476360}
+{"name": "Fast That God Chooses", "ref": "Isaiah 58:1-14", "edition": 1, "first_word_id": 478183, "last_word_id": 478703}
+{"name": "Arise, Shine", "ref": "Isaiah 60:1-22", "edition": 1, "first_word_id": 479294, "last_word_id": 479958}
+{"name": "Anointed to Preach Good Tidings", "ref": "Isaiah 61:1-11", "edition": 1, "first_word_id": 479959, "last_word_id": 480338}
+{"name": "New Heavens and New Earth", "ref": "Isaiah 65:17-25", "edition": 1, "first_word_id": 482042, "last_word_id": 482299}
+{"name": "Call of Jeremiah", "ref": "Jeremiah 1:1-19", "edition": 1, "first_word_id": 483117, "last_word_id": 483644}
+{"name": "Temple Sermon", "ref": "Jeremiah 7:1-15", "edition": 1, "first_word_id": 488028, "last_word_id": 488402}
+{"name": "Linen Girdle", "ref": "Jeremiah 13:1-11", "edition": 1, "first_word_id": 492443, "last_word_id": 492728}
+{"name": "Potter's House", "ref": "Jeremiah 18:1-12", "edition": 1, "first_word_id": 496100, "last_word_id": 496393}
+{"name": "Broken Flask", "ref": "Jeremiah 19:1-15", "edition": 1, "first_word_id": 496759, "last_word_id": 497299}
+{"name": "Yoke of Babylon", "ref": "Jeremiah 27:1-28:17", "edition": 1, "first_word_id": 502714, "last_word_id": 504015}
+{"name": "Letter to the Exiles", "ref": "Jeremiah 29:1-14", "edition": 1, "first_word_id": 504016, "last_word_id": 504442}
+{"name": "Book of Consolation", "ref": "Jeremiah 30:1-33:26", "edition": 1, "first_word_id": 505021, "last_word_id": 509305}
+{"name": "New Covenant", "ref": "Jeremiah 31:31-34", "edition": 1, "first_word_id": 506657, "last_word_id": 506825}
+{"name": "Jeremiah's Field Purchase", "ref": "Jeremiah 32:1-44", "edition": 1, "first_word_id": 507032, "last_word_id": 508463}
+{"name": "Jeremiah in the Cistern", "ref": "Jeremiah 38:1-13", "edition": 1, "first_word_id": 512508, "last_word_id": 512953}
+{"name": "Great Is Thy Faithfulness", "ref": "Lamentations 3:19-33", "edition": 1, "first_word_id": 527667, "last_word_id": 527866}
+{"name": "Vision of the Divine Chariot", "ref": "Ezekiel 1:1-28", "edition": 1, "first_word_id": 529192, "last_word_id": 530061}
+{"name": "Ezekiel Eats the Scroll", "ref": "Ezekiel 2:8-3:3", "edition": 1, "first_word_id": 530264, "last_word_id": 530409}
+{"name": "Ezekiel the Watchman", "ref": "Ezekiel 3:16-21", "edition": 1, "first_word_id": 530742, "last_word_id": 530954}
+{"name": "Shepherds of Israel", "ref": "Ezekiel 34:1-31", "edition": 1, "first_word_id": 555054, "last_word_id": 556011}
+{"name": "New Heart and New Spirit", "ref": "Ezekiel 36:22-32", "edition": 1, "first_word_id": 557076, "last_word_id": 557409}
+{"name": "Valley of Dry Bones", "ref": "Ezekiel 37:1-14", "edition": 1, "first_word_id": 557594, "last_word_id": 558008}
+{"name": "Stick of Judah and Stick of Joseph", "ref": "Ezekiel 37:15-28", "edition": 1, "first_word_id": 558009, "last_word_id": 558463}
+{"name": "Gog and Magog", "ref": "Ezekiel 38:1-39:29", "edition": 1, "first_word_id": 558464, "last_word_id": 560167}
+{"name": "Ezekiel's Temple Vision", "ref": "Ezekiel 40:1-48:35", "edition": 1, "first_word_id": 560168, "last_word_id": 568592}
+{"name": "River from the Temple", "ref": "Ezekiel 47:1-12", "edition": 1, "first_word_id": 566768, "last_word_id": 567224}
+{"name": "Daniel in the King's Court", "ref": "Daniel 1:1-21", "edition": 1, "first_word_id": 568597, "last_word_id": 569185}
+{"name": "Nebuchadnezzar's Dream of the Statue", "ref": "Daniel 2:1-49", "edition": 1, "first_word_id": 569186, "last_word_id": 570685}
+{"name": "Fiery Furnace", "ref": "Daniel 3:1-30", "edition": 1, "first_word_id": 570686, "last_word_id": 571677}
+{"name": "Nebuchadnezzar's Madness", "ref": "Daniel 4:1-37", "edition": 1, "first_word_id": 571678, "last_word_id": 572967}
+{"name": "Writing on the Wall", "ref": "Daniel 5:1-31", "edition": 1, "first_word_id": 572968, "last_word_id": 573962}
+{"name": "Daniel in the Lions' Den", "ref": "Daniel 6:1-28", "edition": 1, "first_word_id": 573963, "last_word_id": 574867}
+{"name": "Vision of the Four Beasts", "ref": "Daniel 7:1-28", "edition": 1, "first_word_id": 574868, "last_word_id": 575793}
+{"name": "Vision of the Ram and the Goat", "ref": "Daniel 8:1-27", "edition": 1, "first_word_id": 575794, "last_word_id": 576645}
+{"name": "Seventy Weeks", "ref": "Daniel 9:20-27", "edition": 1, "first_word_id": 577294, "last_word_id": 577611}
+{"name": "Daniel's Final Vision", "ref": "Daniel 10:1-12:13", "edition": 1, "first_word_id": 577612, "last_word_id": 580198}
+{"name": "Hosea's Marriage", "ref": "Hosea 1:1-3:5", "edition": 1, "first_word_id": 580200, "last_word_id": 581388}
+{"name": "Outpouring of the Spirit", "ref": "Joel 2:28-32", "edition": 1, "first_word_id": 586701, "last_word_id": 586840}
+{"name": "Let Justice Roll Down", "ref": "Amos 5:21-24", "edition": 1, "first_word_id": 589656, "last_word_id": 589730}
+{"name": "Jonah and the Great Fish", "ref": "Jonah 1:1-2:10", "edition": 1, "first_word_id": 592296, "last_word_id": 593023}
+{"name": "Repentance of Nineveh", "ref": "Jonah 3:1-4:11", "edition": 1, "first_word_id": 593024, "last_word_id": 593615}
+{"name": "Swords into Plowshares", "ref": "Micah 4:1-5", "edition": 1, "first_word_id": 594823, "last_word_id": 595025}
+{"name": "What the Lord Requires", "ref": "Micah 6:1-8", "edition": 1, "first_word_id": 595746, "last_word_id": 595970}
+{"name": "Habakkuk's Prayer", "ref": "Habakkuk 3:1-19", "edition": 1, "first_word_id": 599041, "last_word_id": 599529}
+{"name": "Zechariah's Night Visions", "ref": "Zechariah 1:7-6:8", "edition": 1, "first_word_id": 602457, "last_word_id": 604414}
+{"name": "Coming of the Humble King", "ref": "Zechariah 9:9-17", "edition": 1, "first_word_id": 605956, "last_word_id": 606258}
+{"name": "Messenger of the Covenant", "ref": "Malachi 3:1-6", "edition": 1, "first_word_id": 609756, "last_word_id": 609964}
+{"name": "Robbing God", "ref": "Malachi 3:7-12", "edition": 1, "first_word_id": 609965, "last_word_id": 610149}
+{"name": "Day of the Lord (Malachi)", "ref": "Malachi 4:1-3", "edition": 1, "first_word_id": 610321, "last_word_id": 610429}
+{"name": "Coming of Elijah", "ref": "Malachi 4:5-6", "edition": 1, "first_word_id": 610453, "last_word_id": 610503}
+{"name": "Title Page of the Book of Mormon", "ref": "Title Page 1", "edition": 4, "first_word_id": 791307, "last_word_id": 791558}
+{"name": "Testimony of the Three Witnesses", "ref": "Testimony of Three Witnesses 1", "edition": 4, "first_word_id": 791563, "last_word_id": 791866}
+{"name": "Testimony of the Eight Witnesses", "ref": "Testimony of Eight Witnesses 1", "edition": 4, "first_word_id": 791871, "last_word_id": 792037}
+{"name": "Lehi's Vision of the Pillar of Fire", "ref": "1 Nephi 1:5-15", "edition": 4, "first_word_id": 792387, "last_word_id": 792811}
+{"name": "Lehi's Dream", "ref": "1 Nephi 8:2-38", "edition": 4, "first_word_id": 798313, "last_word_id": 799500}
+{"name": "Nephi Obtains the Brass Plates", "ref": "1 Nephi 3:1-4:38", "edition": 4, "first_word_id": 793997, "last_word_id": 796324}
+{"name": "Slaying of Laban", "ref": "1 Nephi 4:5-18", "edition": 4, "first_word_id": 795254, "last_word_id": 795678}
+{"name": "Nephi's Vision of the Tree of Life", "ref": "1 Nephi 11:1-14:30", "edition": 4, "first_word_id": 800681, "last_word_id": 806036}
+{"name": "Condescension of God", "ref": "1 Nephi 11:13-36", "edition": 4, "first_word_id": 801108, "last_word_id": 801995}
+{"name": "Vision of the Great and Abominable Church", "ref": "1 Nephi 13:1-9", "edition": 4, "first_word_id": 802856, "last_word_id": 803087}
+{"name": "Vision of America", "ref": "1 Nephi 13:10-19", "edition": 4, "first_word_id": 803088, "last_word_id": 803425}
+{"name": "Liahona", "ref": "1 Nephi 16:10-16", "edition": 4, "first_word_id": 807847, "last_word_id": 808142}
+{"name": "Nephi Breaks His Bow", "ref": "1 Nephi 16:18-32", "edition": 4, "first_word_id": 808177, "last_word_id": 808771}
+{"name": "Nephi Builds the Ship", "ref": "1 Nephi 17:7-18:4", "edition": 4, "first_word_id": 809437, "last_word_id": 811845}
+{"name": "Storm at Sea", "ref": "1 Nephi 18:9-21", "edition": 4, "first_word_id": 812017, "last_word_id": 812700}
+{"name": "Lehi's Blessing to Jacob", "ref": "2 Nephi 2:1-30", "edition": 4, "first_word_id": 818923, "last_word_id": 820378}
+{"name": "Lehi's Prophecy of Joseph", "ref": "2 Nephi 3:1-25", "edition": 4, "first_word_id": 820379, "last_word_id": 821546}
+{"name": "Nephi's Psalm", "ref": "2 Nephi 4:16-35", "edition": 4, "first_word_id": 822162, "last_word_id": 822845}
+{"name": "Jacob's Sermon at the Temple (2 Nephi)", "ref": "2 Nephi 6:1-10:25", "edition": 4, "first_word_id": 824014, "last_word_id": 829478}
+{"name": "Jacob's Sermon on the Atonement", "ref": "2 Nephi 9:1-54", "edition": 4, "first_word_id": 826125, "last_word_id": 828512}
+{"name": "Isaiah Chapters in 2 Nephi", "ref": "2 Nephi 12:1-24:32", "edition": 4, "first_word_id": 829817, "last_word_id": 837355}
+{"name": "Nephi's Prophecy of the Last Days", "ref": "2 Nephi 26:1-30:18", "edition": 4, "first_word_id": 839055, "last_word_id": 844748}
+{"name": "Sealed Book Prophecy", "ref": "2 Nephi 27:1-35", "edition": 4, "first_word_id": 840538, "last_word_id": 841997}
+{"name": "A Bible! A Bible!", "ref": "2 Nephi 29:1-14", "edition": 4, "first_word_id": 843237, "last_word_id": 844040}
+{"name": "Nephi's Doctrine of Christ", "ref": "2 Nephi 31:1-21", "edition": 4, "first_word_id": 844749, "last_word_id": 845736}
+{"name": "Feast upon the Words of Christ", "ref": "2 Nephi 32:1-9", "edition": 4, "first_word_id": 845737, "last_word_id": 846162}
+{"name": "Nephi's Farewell", "ref": "2 Nephi 33:1-15", "edition": 4, "first_word_id": 846163, "last_word_id": 846808}
+{"name": "Jacob's Sermon on Chastity", "ref": "Jacob 2:1-3:12", "edition": 4, "first_word_id": 847566, "last_word_id": 849477}
+{"name": "Allegory of the Olive Tree", "ref": "Jacob 5:1-77", "edition": 4, "first_word_id": 850477, "last_word_id": 854234}
+{"name": "Sherem", "ref": "Jacob 7:1-23", "edition": 4, "first_word_id": 854746, "last_word_id": 855715}
+{"name": "Enos's Prayer", "ref": "Enos 1:1-18", "edition": 4, "first_word_id": 855992, "last_word_id": 856672}
+{"name": "King Benjamin's Address", "ref": "Mosiah 2:1-5:15", "edition": 4, "first_word_id": 861122, "last_word_id": 866689}
+{"name": "Abinadi Before King Noah", "ref": "Mosiah 11:20-17:20", "edition": 4, "first_word_id": 872161, "last_word_id": 877612}
+{"name": "Abinadi Recites the Ten Commandments", "ref": "Mosiah 12:31-13:26", "edition": 4, "first_word_id": 873698, "last_word_id": 874599}
+{"name": "Abinadi's Sermon on Redemption", "ref": "Mosiah 15:1-16:15", "edition": 4, "first_word_id": 875346, "last_word_id": 876962}
+{"name": "Baptism at the Waters of Mormon", "ref": "Mosiah 18:1-17", "edition": 4, "first_word_id": 877613, "last_word_id": 878369}
+{"name": "Baptismal Covenant", "ref": "Mosiah 18:8-10", "edition": 4, "first_word_id": 877887, "last_word_id": 878067}
+{"name": "Alma's People in Bondage", "ref": "Mosiah 24:8-25", "edition": 4, "first_word_id": 884361, "last_word_id": 885036}
+{"name": "Alma's Conversion", "ref": "Mosiah 27:8-37", "edition": 4, "first_word_id": 887330, "last_word_id": 888671}
+{"name": "Reign of the Judges", "ref": "Mosiah 29:1-47", "edition": 4, "first_word_id": 889484, "last_word_id": 891361}
+{"name": "Alma's Discourse at Zarahemla", "ref": "Alma 5:1-62", "edition": 4, "first_word_id": 896436, "last_word_id": 899221}
+{"name": "Alma's Sermon at Gideon", "ref": "Alma 7:1-27", "edition": 4, "first_word_id": 899629, "last_word_id": 901069}
+{"name": "Alma and Amulek in Ammonihah", "ref": "Alma 8:8-15:19", "edition": 4, "first_word_id": 901355, "last_word_id": 912200}
+{"name": "Conversion of Amulek", "ref": "Alma 10:1-12", "edition": 4, "first_word_id": 903855, "last_word_id": 904454}
+{"name": "Alma and Amulek Delivered from Prison", "ref": "Alma 14:14-29", "edition": 4, "first_word_id": 910622, "last_word_id": 911490}
+{"name": "Alma's Discourse on the Priesthood", "ref": "Alma 13:1-20", "edition": 4, "first_word_id": 908620, "last_word_id": 909480}
+{"name": "Ammon Defends the King's Flocks", "ref": "Alma 17:26-39", "edition": 4, "first_word_id": 914352, "last_word_id": 915097}
+{"name": "Conversion of King Lamoni", "ref": "Alma 18:1-19:36", "edition": 4, "first_word_id": 915098, "last_word_id": 918419}
+{"name": "Aaron Teaches Lamoni's Father", "ref": "Alma 22:1-35", "edition": 4, "first_word_id": 920668, "last_word_id": 922535}
+{"name": "Anti-Nephi-Lehies Bury Their Weapons", "ref": "Alma 24:5-19", "edition": 4, "first_word_id": 923449, "last_word_id": 924307}
+{"name": "Ammon's Rejoicing", "ref": "Alma 26:1-37", "edition": 4, "first_word_id": 925543, "last_word_id": 927206}
+{"name": "Alma's Wish to Be an Angel", "ref": "Alma 29:1-17", "edition": 4, "first_word_id": 929035, "last_word_id": 929742}
+{"name": "Korihor", "ref": "Alma 30:6-60", "edition": 4, "first_word_id": 929947, "last_word_id": 932402}
+{"name": "Prayer on the Rameumptom", "ref": "Alma 31:12-23", "edition": 4, "first_word_id": 932837, "last_word_id": 933309}
+{"name": "Alma's Discourse on Faith", "ref": "Alma 32:1-43", "edition": 4, "first_word_id": 933881, "last_word_id": 935717}
+{"name": "Amulek's Discourse on the Atonement", "ref": "Alma 34:1-41", "edition": 4, "first_word_id": 936573, "last_word_id": 938147}
+{"name": "Alma's Counsel to Helaman", "ref": "Alma 36:1-37:47", "edition": 4, "first_word_id": 938855, "last_word_id": 942109}
+{"name": "Alma's Counsel to Shiblon", "ref": "Alma 38:1-15", "edition": 4, "first_word_id": 942118, "last_word_id": 942766}
+{"name": "Alma's Counsel to Corianton", "ref": "Alma 39:1-42:31", "edition": 4, "first_word_id": 942775, "last_word_id": 946649}
+{"name": "Alma on Death and the Resurrection", "ref": "Alma 40:1-26", "edition": 4, "first_word_id": 943568, "last_word_id": 944720}
+{"name": "Law of Restoration", "ref": "Alma 41:1-15", "edition": 4, "first_word_id": 944721, "last_word_id": 945421}
+{"name": "Plan of Redemption", "ref": "Alma 42:1-31", "edition": 4, "first_word_id": 945422, "last_word_id": 946649}
+{"name": "Alma's Farewell", "ref": "Alma 45:1-19", "edition": 4, "first_word_id": 950135, "last_word_id": 950832}
+{"name": "Title of Liberty", "ref": "Alma 46:12-28", "edition": 4, "first_word_id": 951437, "last_word_id": 952284}
+{"name": "Stripling Warriors", "ref": "Alma 53:10-23", "edition": 4, "first_word_id": 962528, "last_word_id": 963094}
+{"name": "Epistle of Helaman", "ref": "Alma 56:1-58:41", "edition": 4, "first_word_id": 965300, "last_word_id": 970740}
+{"name": "Moroni and Pahoran", "ref": "Alma 60:1-61:21", "edition": 4, "first_word_id": 971230, "last_word_id": 973855}
+{"name": "Counsel of Helaman to Nephi and Lehi", "ref": "Helaman 5:5-14", "edition": 4, "first_word_id": 981544, "last_word_id": 982076}
+{"name": "Nephi and Lehi in Prison", "ref": "Helaman 5:20-52", "edition": 4, "first_word_id": 982285, "last_word_id": 983484}
+{"name": "Nephi's Prayer from the Tower", "ref": "Helaman 7:6-29", "edition": 4, "first_word_id": 985552, "last_word_id": 986479}
+{"name": "Nephi Receives the Sealing Power", "ref": "Helaman 10:1-12", "edition": 4, "first_word_id": 989164, "last_word_id": 989642}
+{"name": "Samuel the Lamanite's Prophecy", "ref": "Helaman 13:1-16:25", "edition": 4, "first_word_id": 992326, "last_word_id": 997270}
+{"name": "Signs of the Birth of Christ", "ref": "3 Nephi 1:4-22", "edition": 4, "first_word_id": 997466, "last_word_id": 998271}
+{"name": "Destruction at the Crucifixion", "ref": "3 Nephi 8:5-9:22", "edition": 4, "first_word_id": 1005729, "last_word_id": 1007406}
+{"name": "Christ Appears to the Nephites", "ref": "3 Nephi 11:1-17", "edition": 4, "first_word_id": 1008249, "last_word_id": 1008933}
+{"name": "Baptism Instructions", "ref": "3 Nephi 11:18-41", "edition": 4, "first_word_id": 1008934, "last_word_id": 1009682}
+{"name": "Sermon at the Temple", "ref": "3 Nephi 12:1-14:27", "edition": 4, "first_word_id": 1009683, "last_word_id": 1012436}
+{"name": "Beatitudes (3 Nephi)", "ref": "3 Nephi 12:3-12", "edition": 4, "first_word_id": 1009895, "last_word_id": 1010066}
+{"name": "Lord's Prayer (3 Nephi)", "ref": "3 Nephi 13:9-13", "edition": 4, "first_word_id": 1011219, "last_word_id": 1011279}
+{"name": "Law of Moses Fulfilled", "ref": "3 Nephi 15:2-10", "edition": 4, "first_word_id": 1012497, "last_word_id": 1012765}
+{"name": "Other Sheep", "ref": "3 Nephi 15:11-16:20", "edition": 4, "first_word_id": 1012766, "last_word_id": 1014080}
+{"name": "Christ Heals and Blesses the Children", "ref": "3 Nephi 17:1-25", "edition": 4, "first_word_id": 1014081, "last_word_id": 1014959}
+{"name": "Sacrament Instituted among the Nephites", "ref": "3 Nephi 18:1-14", "edition": 4, "first_word_id": 1014960, "last_word_id": 1015473}
+{"name": "Christ Prays for the Disciples", "ref": "3 Nephi 19:15-36", "edition": 4, "first_word_id": 1016790, "last_word_id": 1017535}
+{"name": "Christ Defines His Gospel", "ref": "3 Nephi 27:13-22", "edition": 4, "first_word_id": 1023214, "last_word_id": 1023627}
+{"name": "Three Nephites", "ref": "3 Nephi 28:1-12", "edition": 4, "first_word_id": 1024032, "last_word_id": 1024519}
+{"name": "Nephite Zion", "ref": "4 Nephi 1:1-18", "edition": 4, "first_word_id": 1026039, "last_word_id": 1026766}
+{"name": "Cumorah", "ref": "Mormon 6:1-22", "edition": 4, "first_word_id": 1032784, "last_word_id": 1033696}
+{"name": "Mormon's Address to the Lamanites", "ref": "Mormon 7:1-10", "edition": 4, "first_word_id": 1033697, "last_word_id": 1034149}
+{"name": "Moroni's Prophecy of Our Day", "ref": "Mormon 8:26-41", "edition": 4, "first_word_id": 1035163, "last_word_id": 1035868}
+{"name": "Barges of the Jaredites", "ref": "Ether 2:16-25", "edition": 4, "first_word_id": 1039161, "last_word_id": 1039704}
+{"name": "Brother of Jared Sees the Lord", "ref": "Ether 3:1-20", "edition": 4, "first_word_id": 1039705, "last_word_id": 1040636}
+{"name": "Vision of the Brother of Jared", "ref": "Ether 3:21-4:7", "edition": 4, "first_word_id": 1040637, "last_word_id": 1041283}
+{"name": "Ether on Faith", "ref": "Ether 12:4-22", "edition": 4, "first_word_id": 1048966, "last_word_id": 1049613}
+{"name": "Moroni on Weakness and Charity", "ref": "Ether 12:23-41", "edition": 4, "first_word_id": 1049614, "last_word_id": 1050396}
+{"name": "New Jerusalem Prophecy", "ref": "Ether 13:2-12", "edition": 4, "first_word_id": 1050418, "last_word_id": 1050928}
+{"name": "Ordination of Priests and Teachers", "ref": "Moroni 3:1-4", "edition": 4, "first_word_id": 1054333, "last_word_id": 1054452}
+{"name": "Sacrament Prayers", "ref": "Moroni 4:1-5:2", "edition": 4, "first_word_id": 1054453, "last_word_id": 1054696}
+{"name": "Baptism and Church Practices", "ref": "Moroni 6:1-9", "edition": 4, "first_word_id": 1054697, "last_word_id": 1055031}
+{"name": "Mormon's Sermon on Faith, Hope, and Charity", "ref": "Moroni 7:1-48", "edition": 4, "first_word_id": 1055032, "last_word_id": 1056960}
+{"name": "Pure Love of Christ", "ref": "Moroni 7:45-48", "edition": 4, "first_word_id": 1056773, "last_word_id": 1056960}
+{"name": "Mormon's Epistle on Infant Baptism", "ref": "Moroni 8:1-30", "edition": 4, "first_word_id": 1056961, "last_word_id": 1058023}
+{"name": "Mormon's Second Epistle to Moroni", "ref": "Moroni 9:1-26", "edition": 4, "first_word_id": 1058033, "last_word_id": 1059043}
+{"name": "Moroni's Promise", "ref": "Moroni 10:3-5", "edition": 4, "first_word_id": 1059108, "last_word_id": 1059245}
+{"name": "Spiritual Gifts (Moroni)", "ref": "Moroni 10:8-26", "edition": 4, "first_word_id": 1059316, "last_word_id": 1059807}
+{"name": "Moroni's Farewell", "ref": "Moroni 10:27-34", "edition": 4, "first_word_id": 1059808, "last_word_id": 1060192}
+{"name": "Lord's Preface", "ref": "Doctrine and Covenants 1", "edition": 5, "first_word_id": 1060193, "last_word_id": 1061262}
+{"name": "Promise of Elijah", "ref": "Doctrine and Covenants 2", "edition": 5, "first_word_id": 1061263, "last_word_id": 1061331}
+{"name": "Loss of the 116 Pages", "ref": "Doctrine and Covenants 3", "edition": 5, "first_word_id": 1061332, "last_word_id": 1061940}
+{"name": "A Marvelous Work and a Wonder", "ref": "Doctrine and Covenants 4", "edition": 5, "first_word_id": 1061941, "last_word_id": 1062085}
+{"name": "Restoration of the Aaronic Priesthood (D&C)", "ref": "Doctrine and Covenants 13", "edition": 5, "first_word_id": 1068326, "last_word_id": 1068391}
+{"name": "Revelation to the Three Witnesses", "ref": "Doctrine and Covenants 17", "edition": 5, "first_word_id": 1068973, "last_word_id": 1069283}
+{"name": "Worth of Souls", "ref": "Doctrine and Covenants 18:10-16", "edition": 5, "first_word_id": 1069560, "last_word_id": 1069718}
+{"name": "Atonement Revelation", "ref": "Doctrine and Covenants 19:15-20", "edition": 5, "first_word_id": 1070724, "last_word_id": 1070912}
+{"name": "Articles and Covenants of the Church", "ref": "Doctrine and Covenants 20", "edition": 5, "first_word_id": 1071404, "last_word_id": 1073799}
+{"name": "Sacrament Prayers (D&C)", "ref": "Doctrine and Covenants 20:76-79", "edition": 5, "first_word_id": 1073374, "last_word_id": 1073587}
+{"name": "Church Organization Revelation", "ref": "Doctrine and Covenants 21", "edition": 5, "first_word_id": 1073800, "last_word_id": 1074199}
+{"name": "Revelation to Emma Smith", "ref": "Doctrine and Covenants 25", "edition": 5, "first_word_id": 1075184, "last_word_id": 1075628}
+{"name": "Sacrament and Armor of God", "ref": "Doctrine and Covenants 27", "edition": 5, "first_word_id": 1075720, "last_word_id": 1076368}
+{"name": "Armor of God (D&C)", "ref": "Doctrine and Covenants 27:15-18", "edition": 5, "first_word_id": 1076214, "last_word_id": 1076368}
+{"name": "Law of the Church", "ref": "Doctrine and Covenants 42", "edition": 5, "first_word_id": 1083774, "last_word_id": 1086397}
+{"name": "Law of Consecration", "ref": "Doctrine and Covenants 42:30-42", "edition": 5, "first_word_id": 1084544, "last_word_id": 1085039}
+{"name": "Olivet Discourse (D&C)", "ref": "Doctrine and Covenants 45", "edition": 5, "first_word_id": 1087707, "last_word_id": 1089883}
+{"name": "Gifts of the Spirit (D&C)", "ref": "Doctrine and Covenants 46:8-33", "edition": 5, "first_word_id": 1090146, "last_word_id": 1090726}
+{"name": "Sabbath Revelation", "ref": "Doctrine and Covenants 59", "edition": 5, "first_word_id": 1098385, "last_word_id": 1099032}
+{"name": "Kingdom of God Rolling Forth", "ref": "Doctrine and Covenants 65", "edition": 5, "first_word_id": 1103911, "last_word_id": 1104150}
+{"name": "Vision of the Degrees of Glory", "ref": "Doctrine and Covenants 76", "edition": 5, "first_word_id": 1109030, "last_word_id": 1111911}
+{"name": "Vision of the Savior (D&C 76)", "ref": "Doctrine and Covenants 76:11-24", "edition": 5, "first_word_id": 1109286, "last_word_id": 1109658}
+{"name": "Sons of Perdition", "ref": "Doctrine and Covenants 76:30-49", "edition": 5, "first_word_id": 1109804, "last_word_id": 1110304}
+{"name": "Celestial Glory", "ref": "Doctrine and Covenants 76:50-70", "edition": 5, "first_word_id": 1110305, "last_word_id": 1110774}
+{"name": "Terrestrial Glory", "ref": "Doctrine and Covenants 76:71-80", "edition": 5, "first_word_id": 1110775, "last_word_id": 1111003}
+{"name": "Telestial Glory", "ref": "Doctrine and Covenants 76:81-112", "edition": 5, "first_word_id": 1111004, "last_word_id": 1111741}
+{"name": "Revelation on Revelation 4 to 11", "ref": "Doctrine and Covenants 77", "edition": 5, "first_word_id": 1111912, "last_word_id": 1112934}
+{"name": "Revelation on Priesthood", "ref": "Doctrine and Covenants 84", "edition": 5, "first_word_id": 1114914, "last_word_id": 1118144}
+{"name": "Oath and Covenant of the Priesthood", "ref": "Doctrine and Covenants 84:33-44", "edition": 5, "first_word_id": 1115756, "last_word_id": 1116012}
+{"name": "Parable of the Wheat and Tares (D&C)", "ref": "Doctrine and Covenants 86:1-11", "edition": 5, "first_word_id": 1118624, "last_word_id": 1118958}
+{"name": "Prophecy on War", "ref": "Doctrine and Covenants 87", "edition": 5, "first_word_id": 1118959, "last_word_id": 1119251}
+{"name": "Olive Leaf", "ref": "Doctrine and Covenants 88", "edition": 5, "first_word_id": 1119252, "last_word_id": 1123682}
+{"name": "Light of Christ", "ref": "Doctrine and Covenants 88:6-13", "edition": 5, "first_word_id": 1119405, "last_word_id": 1119610}
+{"name": "Parable of the Twelve Sons", "ref": "Doctrine and Covenants 88:51-61", "edition": 5, "first_word_id": 1120624, "last_word_id": 1120913}
+{"name": "School of the Prophets", "ref": "Doctrine and Covenants 88:117-141", "edition": 5, "first_word_id": 1122834, "last_word_id": 1123682}
+{"name": "Word of Wisdom", "ref": "Doctrine and Covenants 89", "edition": 5, "first_word_id": 1123683, "last_word_id": 1124244}
+{"name": "Revelation on Light and Truth", "ref": "Doctrine and Covenants 93", "edition": 5, "first_word_id": 1125438, "last_word_id": 1126775}
+{"name": "Parable of the Nobleman and the Olive Trees", "ref": "Doctrine and Covenants 101:43-62", "edition": 5, "first_word_id": 1132020, "last_word_id": 1132631}
+{"name": "Organization of the Priesthood", "ref": "Doctrine and Covenants 107", "edition": 5, "first_word_id": 1140189, "last_word_id": 1143115}
+{"name": "Kirtland Temple Dedicatory Prayer", "ref": "Doctrine and Covenants 109", "edition": 5, "first_word_id": 1143315, "last_word_id": 1145888}
+{"name": "Visions of the Kirtland Temple", "ref": "Doctrine and Covenants 110", "edition": 5, "first_word_id": 1145889, "last_word_id": 1146364}
+{"name": "Questions on Isaiah", "ref": "Doctrine and Covenants 113", "edition": 5, "first_word_id": 1147693, "last_word_id": 1148026}
+{"name": "Adam-ondi-Ahman", "ref": "Doctrine and Covenants 116", "edition": 5, "first_word_id": 1148641, "last_word_id": 1148677}
+{"name": "Law of Tithing", "ref": "Doctrine and Covenants 119", "edition": 5, "first_word_id": 1149402, "last_word_id": 1149618}
+{"name": "Disposition of the Tithes", "ref": "Doctrine and Covenants 120", "edition": 5, "first_word_id": 1149619, "last_word_id": 1149670}
+{"name": "Liberty Jail Letters", "ref": "Doctrine and Covenants 121:1-123:17", "edition": 5, "first_word_id": 1149671, "last_word_id": 1152091}
+{"name": "Liberty Jail Prayer", "ref": "Doctrine and Covenants 121:1-6", "edition": 5, "first_word_id": 1149671, "last_word_id": 1149863}
+{"name": "Principles of Righteous Priesthood Leadership", "ref": "Doctrine and Covenants 121:34-46", "edition": 5, "first_word_id": 1150617, "last_word_id": 1151013}
+{"name": "If Thou Art Cast into the Pit", "ref": "Doctrine and Covenants 122:1-9", "edition": 5, "first_word_id": 1151014, "last_word_id": 1151445}
+{"name": "Letters on Baptism for the Dead", "ref": "Doctrine and Covenants 127:1-128:25", "edition": 5, "first_word_id": 1157793, "last_word_id": 1161001}
+{"name": "Keys for Discerning Messengers", "ref": "Doctrine and Covenants 129", "edition": 5, "first_word_id": 1161002, "last_word_id": 1161207}
+{"name": "Revelation on Celestial Glory", "ref": "Doctrine and Covenants 131", "edition": 5, "first_word_id": 1161859, "last_word_id": 1162012}
+{"name": "Revelation on Eternal Marriage", "ref": "Doctrine and Covenants 132", "edition": 5, "first_word_id": 1162013, "last_word_id": 1165283}
+{"name": "The Appendix", "ref": "Doctrine and Covenants 133", "edition": 5, "first_word_id": 1165284, "last_word_id": 1167295}
+{"name": "Declaration on Governments and Laws", "ref": "Doctrine and Covenants 134", "edition": 5, "first_word_id": 1167296, "last_word_id": 1168180}
+{"name": "Martyrdom of Joseph and Hyrum Smith", "ref": "Doctrine and Covenants 135", "edition": 5, "first_word_id": 1168181, "last_word_id": 1169079}
+{"name": "Word and Will of the Lord to the Camp of Israel", "ref": "Doctrine and Covenants 136", "edition": 5, "first_word_id": 1169080, "last_word_id": 1170187}
+{"name": "Vision of the Celestial Kingdom", "ref": "Doctrine and Covenants 137", "edition": 5, "first_word_id": 1170188, "last_word_id": 1170445}
+{"name": "Vision of the Redemption of the Dead", "ref": "Doctrine and Covenants 138", "edition": 5, "first_word_id": 1170446, "last_word_id": 1172308}
+{"name": "Vision of Moses", "ref": "Moses 1", "edition": 6, "first_word_id": 1172315, "last_word_id": 1173786}
+{"name": "Work and Glory of God", "ref": "Moses 1:39", "edition": 6, "first_word_id": 1173646, "last_word_id": 1173665}
+{"name": "Creation (Moses)", "ref": "Moses 2:1-3:3", "edition": 6, "first_word_id": 1173787, "last_word_id": 1174891}
+{"name": "Garden of Eden (Moses)", "ref": "Moses 3:4-25", "edition": 6, "first_word_id": 1174892, "last_word_id": 1175692}
+{"name": "Council in Heaven (Moses)", "ref": "Moses 4:1-4", "edition": 6, "first_word_id": 1175693, "last_word_id": 1175877}
+{"name": "The Fall (Moses)", "ref": "Moses 4:5-32", "edition": 6, "first_word_id": 1175878, "last_word_id": 1176765}
+{"name": "Adam and Eve Offer Sacrifice", "ref": "Moses 5:1-12", "edition": 6, "first_word_id": 1176766, "last_word_id": 1177233}
+{"name": "Cain and Abel (Moses)", "ref": "Moses 5:16-41", "edition": 6, "first_word_id": 1177347, "last_word_id": 1178157}
+{"name": "Enoch's Call", "ref": "Moses 6:26-42", "edition": 6, "first_word_id": 1179445, "last_word_id": 1180125}
+{"name": "Gospel Taught to Adam", "ref": "Moses 6:51-68", "edition": 6, "first_word_id": 1180342, "last_word_id": 1181125}
+{"name": "City of Enoch", "ref": "Moses 7:16-21", "edition": 6, "first_word_id": 1181791, "last_word_id": 1182005}
+{"name": "Enoch's Vision of the Last Days", "ref": "Moses 7:54-69", "edition": 6, "first_word_id": 1183260, "last_word_id": 1183967}
+{"name": "Noah and the Flood (Moses)", "ref": "Moses 8:13-30", "edition": 6, "first_word_id": 1184238, "last_word_id": 1184859}
+{"name": "Abraham Saved from Sacrifice", "ref": "Abraham 1:5-20", "edition": 6, "first_word_id": 1185076, "last_word_id": 1185804}
+{"name": "Abrahamic Covenant (Abraham)", "ref": "Abraham 2:6-11", "edition": 6, "first_word_id": 1186415, "last_word_id": 1186740}
+{"name": "Vision of Kolob", "ref": "Abraham 3:1-17", "edition": 6, "first_word_id": 1187279, "last_word_id": 1188056}
+{"name": "Premortal Intelligences", "ref": "Abraham 3:18-21", "edition": 6, "first_word_id": 1188057, "last_word_id": 1188251}
+{"name": "Council in Heaven (Abraham)", "ref": "Abraham 3:22-28", "edition": 6, "first_word_id": 1188252, "last_word_id": 1188520}
+{"name": "Creation (Abraham)", "ref": "Abraham 4:1-5:21", "edition": 6, "first_word_id": 1188521, "last_word_id": 1190376}
+{"name": "Olivet Discourse (Joseph Smith-Matthew)", "ref": "Joseph Smith-Matthew 1:1-55", "edition": 6, "first_word_id": 1191078, "last_word_id": 1192608}
+{"name": "Religious Excitement in Palmyra", "ref": "Joseph Smith-History 1:5-10", "edition": 6, "first_word_id": 1192907, "last_word_id": 1193428}
+{"name": "Joseph Smith and James 1:5", "ref": "Joseph Smith-History 1:11-13", "edition": 6, "first_word_id": 1193429, "last_word_id": 1193657}
+{"name": "First Vision", "ref": "Joseph Smith-History 1:14-20", "edition": 6, "first_word_id": 1193658, "last_word_id": 1194298}
+{"name": "Visit of Moroni", "ref": "Joseph Smith-History 1:29-47", "edition": 6, "first_word_id": 1195240, "last_word_id": 1196548}
+{"name": "Obtaining the Gold Plates", "ref": "Joseph Smith-History 1:59-60", "edition": 6, "first_word_id": 1197456, "last_word_id": 1197722}
+{"name": "Restoration of the Aaronic Priesthood", "ref": "Joseph Smith-History 1:68-73", "edition": 6, "first_word_id": 1198397, "last_word_id": 1198863}
+{"name": "Articles of Faith", "ref": "Articles of Faith 1", "edition": 6, "first_word_id": 1199042, "last_word_id": 1199439}
+{"name": "First Article of Faith", "ref": "Articles of Faith 1:1", "edition": 6, "first_word_id": 1199042, "last_word_id": 1199059}
+{"name": "Second Article of Faith", "ref": "Articles of Faith 1:2", "edition": 6, "first_word_id": 1199060, "last_word_id": 1199075}
+{"name": "Third Article of Faith", "ref": "Articles of Faith 1:3", "edition": 6, "first_word_id": 1199076, "last_word_id": 1199098}
+{"name": "Fourth Article of Faith", "ref": "Articles of Faith 1:4", "edition": 6, "first_word_id": 1199099, "last_word_id": 1199140}
+{"name": "Fifth Article of Faith", "ref": "Articles of Faith 1:5", "edition": 6, "first_word_id": 1199141, "last_word_id": 1199175}
+{"name": "Sixth Article of Faith", "ref": "Articles of Faith 1:6", "edition": 6, "first_word_id": 1199176, "last_word_id": 1199196}
+{"name": "Seventh Article of Faith", "ref": "Articles of Faith 1:7", "edition": 6, "first_word_id": 1199197, "last_word_id": 1199213}
+{"name": "Eighth Article of Faith", "ref": "Articles of Faith 1:8", "edition": 6, "first_word_id": 1199214, "last_word_id": 1199243}
+{"name": "Ninth Article of Faith", "ref": "Articles of Faith 1:9", "edition": 6, "first_word_id": 1199244, "last_word_id": 1199275}
+{"name": "Tenth Article of Faith", "ref": "Articles of Faith 1:10", "edition": 6, "first_word_id": 1199276, "last_word_id": 1199323}
+{"name": "Eleventh Article of Faith", "ref": "Articles of Faith 1:11", "edition": 6, "first_word_id": 1199324, "last_word_id": 1199355}
+{"name": "Twelfth Article of Faith", "ref": "Articles of Faith 1:12", "edition": 6, "first_word_id": 1199356, "last_word_id": 1199373}
+{"name": "Thirteenth Article of Faith", "ref": "Articles of Faith 1:13", "edition": 6, "first_word_id": 1199374, "last_word_id": 1199439}

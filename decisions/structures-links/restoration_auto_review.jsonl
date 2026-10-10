@@ -1,0 +1,314 @@
+{"first_word_id": 792315, "last_word_id": 792330, "decision": "keep"}
+{"first_word_id": 792676, "last_word_id": 792690, "decision": "keep"}
+{"first_word_id": 795075, "last_word_id": 795093, "decision": "drop"}
+{"first_word_id": 797231, "last_word_id": 797260, "decision": "keep"}
+{"first_word_id": 799586, "last_word_id": 799607, "decision": "drop"}
+{"first_word_id": 799868, "last_word_id": 799894, "decision": "drop"}
+{"first_word_id": 800071, "last_word_id": 800088, "decision": "drop"}
+{"first_word_id": 802154, "last_word_id": 802179, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "1 Nephi 12:4", "first_word_id": 802154, "last_word_id": 802218, "parts": [{"key": "A", "parent": null, "first_word_id": 802154, "last_word_id": 802164, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 802165, "last_word_id": 802171, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 802172, "last_word_id": 802184, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 802185, "last_word_id": 802193, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 802194, "last_word_id": 802203, "pairs_with": "B''"}, {"key": "B''", "parent": null, "first_word_id": 802204, "last_word_id": 802218, "pairs_with": null}]}}
+{"first_word_id": 802781, "last_word_id": 802798, "decision": "drop"}
+{"first_word_id": 804569, "last_word_id": 804594, "decision": "drop"}
+{"first_word_id": 806680, "last_word_id": 806709, "decision": "drop"}
+{"first_word_id": 806899, "last_word_id": 806916, "decision": "drop"}
+{"first_word_id": 807356, "last_word_id": 807383, "decision": "drop"}
+{"first_word_id": 809173, "last_word_id": 809194, "decision": "drop"}
+{"first_word_id": 809940, "last_word_id": 809957, "decision": "drop"}
+{"first_word_id": 810470, "last_word_id": 810490, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "1 Nephi 17:31", "first_word_id": 810462, "last_word_id": 810490, "parts": [{"key": "A", "parent": null, "first_word_id": 810462, "last_word_id": 810469, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 810470, "last_word_id": 810478, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 810479, "last_word_id": 810490, "pairs_with": null}]}}
+{"first_word_id": 810937, "last_word_id": 810968, "decision": "drop"}
+{"first_word_id": 810989, "last_word_id": 811009, "decision": "drop"}
+{"first_word_id": 813493, "last_word_id": 813515, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "1 Nephi 19:10", "first_word_id": 813483, "last_word_id": 813515, "parts": [{"key": "A", "parent": null, "first_word_id": 813483, "last_word_id": 813492, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 813493, "last_word_id": 813502, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 813503, "last_word_id": 813515, "pairs_with": null}]}}
+{"first_word_id": 814118, "last_word_id": 814148, "decision": "drop"}
+{"first_word_id": 816610, "last_word_id": 816636, "decision": "keep"}
+{"first_word_id": 818311, "last_word_id": 818340, "decision": "keep"}
+{"first_word_id": 818566, "last_word_id": 818593, "decision": "drop"}
+{"first_word_id": 819116, "last_word_id": 819132, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "2 Nephi 2:5", "first_word_id": 819108, "last_word_id": 819149, "parts": [{"key": "A", "parent": null, "first_word_id": 819108, "last_word_id": 819115, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 819116, "last_word_id": 819123, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 819124, "last_word_id": 819132, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 819133, "last_word_id": 819149, "pairs_with": null}]}}
+{"first_word_id": 820870, "last_word_id": 820899, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "2 Nephi 3:12", "first_word_id": 820870, "last_word_id": 820914, "parts": [{"key": "A", "parent": null, "first_word_id": 820870, "last_word_id": 820877, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 820878, "last_word_id": 820887, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 820888, "last_word_id": 820899, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 820900, "last_word_id": 820914, "pairs_with": null}]}}
+{"first_word_id": 821138, "last_word_id": 821156, "decision": "keep"}
+{"first_word_id": 821669, "last_word_id": 821698, "decision": "keep"}
+{"first_word_id": 821840, "last_word_id": 821856, "decision": "drop"}
+{"first_word_id": 823581, "last_word_id": 823609, "decision": "drop"}
+{"first_word_id": 827309, "last_word_id": 827357, "decision": "keep"}
+{"first_word_id": 828131, "last_word_id": 828148, "decision": "keep"}
+{"first_word_id": 832137, "last_word_id": 832155, "decision": "keep"}
+{"first_word_id": 832641, "last_word_id": 832658, "decision": "keep"}
+{"first_word_id": 838411, "last_word_id": 838441, "decision": "drop"}
+{"first_word_id": 842121, "last_word_id": 842135, "decision": "keep"}
+{"first_word_id": 842454, "last_word_id": 842471, "decision": "keep"}
+{"first_word_id": 842869, "last_word_id": 842883, "decision": "drop"}
+{"first_word_id": 843843, "last_word_id": 843868, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "2 Nephi 29:12", "first_word_id": 843843, "last_word_id": 843908, "parts": [{"key": "A", "parent": null, "first_word_id": 843843, "last_word_id": 843855, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 843856, "last_word_id": 843868, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 843869, "last_word_id": 843892, "pairs_with": "A'''"}, {"key": "A'''", "parent": null, "first_word_id": 843893, "last_word_id": 843908, "pairs_with": null}]}}
+{"first_word_id": 844637, "last_word_id": 844658, "decision": "keep"}
+{"first_word_id": 846414, "last_word_id": 846426, "decision": "keep"}
+{"first_word_id": 846548, "last_word_id": 846571, "decision": "keep"}
+{"first_word_id": 847533, "last_word_id": 847554, "decision": "keep"}
+{"first_word_id": 849202, "last_word_id": 849222, "decision": "keep"}
+{"first_word_id": 850209, "last_word_id": 850225, "decision": "keep"}
+{"first_word_id": 851206, "last_word_id": 851232, "decision": "drop"}
+{"first_word_id": 851662, "last_word_id": 851685, "decision": "keep"}
+{"first_word_id": 852160, "last_word_id": 852195, "decision": "drop"}
+{"first_word_id": 852479, "last_word_id": 852497, "decision": "keep"}
+{"first_word_id": 852889, "last_word_id": 852914, "decision": "drop"}
+{"first_word_id": 853148, "last_word_id": 853167, "decision": "drop"}
+{"first_word_id": 853371, "last_word_id": 853386, "decision": "keep"}
+{"first_word_id": 856842, "last_word_id": 856855, "decision": "drop"}
+{"first_word_id": 857996, "last_word_id": 858012, "decision": "keep"}
+{"first_word_id": 859033, "last_word_id": 859047, "decision": "drop"}
+{"first_word_id": 860366, "last_word_id": 860380, "decision": "drop"}
+{"first_word_id": 863339, "last_word_id": 863358, "decision": "drop"}
+{"first_word_id": 866368, "last_word_id": 866388, "decision": "keep"}
+{"first_word_id": 867713, "last_word_id": 867725, "decision": "drop"}
+{"first_word_id": 868299, "last_word_id": 868327, "decision": "drop"}
+{"first_word_id": 869307, "last_word_id": 869333, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Mosiah 8:17", "first_word_id": 869294, "last_word_id": 869333, "parts": [{"key": "A", "parent": null, "first_word_id": 869294, "last_word_id": 869299, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 869300, "last_word_id": 869306, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 869307, "last_word_id": 869318, "pairs_with": "A'''"}, {"key": "A'''", "parent": null, "first_word_id": 869319, "last_word_id": 869333, "pairs_with": null}]}}
+{"first_word_id": 870045, "last_word_id": 870067, "decision": "keep"}
+{"first_word_id": 870299, "last_word_id": 870314, "decision": "drop"}
+{"first_word_id": 871466, "last_word_id": 871481, "decision": "drop"}
+{"first_word_id": 871491, "last_word_id": 871506, "decision": "drop"}
+{"first_word_id": 873627, "last_word_id": 873645, "decision": "keep"}
+{"first_word_id": 873675, "last_word_id": 873690, "decision": "keep"}
+{"first_word_id": 874800, "last_word_id": 874818, "decision": "drop"}
+{"first_word_id": 876280, "last_word_id": 876294, "decision": "keep"}
+{"first_word_id": 877333, "last_word_id": 877349, "decision": "drop"}
+{"first_word_id": 879206, "last_word_id": 879216, "decision": "drop"}
+{"first_word_id": 884175, "last_word_id": 884201, "decision": "drop"}
+{"first_word_id": 885593, "last_word_id": 885614, "decision": "drop"}
+{"first_word_id": 887330, "last_word_id": 887358, "decision": "drop"}
+{"first_word_id": 888649, "last_word_id": 888660, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Mosiah 27:37", "first_word_id": 888649, "last_word_id": 888671, "parts": [{"key": "A", "parent": null, "first_word_id": 888649, "last_word_id": 888653, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 888654, "last_word_id": 888660, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 888661, "last_word_id": 888671, "pairs_with": null}]}}
+{"first_word_id": 889559, "last_word_id": 889581, "decision": "drop"}
+{"first_word_id": 889922, "last_word_id": 889938, "decision": "keep"}
+{"first_word_id": 890141, "last_word_id": 890158, "decision": "drop"}
+{"first_word_id": 890626, "last_word_id": 890647, "decision": "drop"}
+{"first_word_id": 892390, "last_word_id": 892411, "decision": "drop"}
+{"first_word_id": 894441, "last_word_id": 894459, "decision": "drop"}
+{"first_word_id": 894859, "last_word_id": 894874, "decision": "drop"}
+{"first_word_id": 895427, "last_word_id": 895446, "decision": "drop"}
+{"first_word_id": 899172, "last_word_id": 899201, "decision": "keep"}
+{"first_word_id": 899918, "last_word_id": 899950, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 7:6", "first_word_id": 899918, "last_word_id": 899959, "parts": [{"key": "A", "parent": null, "first_word_id": 899918, "last_word_id": 899931, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 899932, "last_word_id": 899950, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 899951, "last_word_id": 899959, "pairs_with": null}]}}
+{"first_word_id": 900551, "last_word_id": 900583, "decision": "drop"}
+{"first_word_id": 901205, "last_word_id": 901242, "decision": "drop"}
+{"first_word_id": 903148, "last_word_id": 903172, "decision": "keep"}
+{"first_word_id": 903248, "last_word_id": 903264, "decision": "drop"}
+{"first_word_id": 903314, "last_word_id": 903330, "decision": "drop"}
+{"first_word_id": 904279, "last_word_id": 904306, "decision": "drop"}
+{"first_word_id": 905192, "last_word_id": 905209, "decision": "drop"}
+{"first_word_id": 906650, "last_word_id": 906672, "decision": "drop"}
+{"first_word_id": 907684, "last_word_id": 907702, "decision": "keep"}
+{"first_word_id": 907981, "last_word_id": 908002, "decision": "keep"}
+{"first_word_id": 908522, "last_word_id": 908556, "decision": "drop"}
+{"first_word_id": 910979, "last_word_id": 910993, "decision": "drop"}
+{"first_word_id": 911602, "last_word_id": 911623, "decision": "drop"}
+{"first_word_id": 912102, "last_word_id": 912127, "decision": "drop"}
+{"first_word_id": 913083, "last_word_id": 913103, "decision": "drop"}
+{"first_word_id": 914001, "last_word_id": 914021, "decision": "drop"}
+{"first_word_id": 918136, "last_word_id": 918154, "decision": "keep"}
+{"first_word_id": 919836, "last_word_id": 919853, "decision": "drop"}
+{"first_word_id": 919950, "last_word_id": 919978, "decision": "keep"}
+{"first_word_id": 920028, "last_word_id": 920056, "decision": "keep"}
+{"first_word_id": 920525, "last_word_id": 920543, "decision": "drop"}
+{"first_word_id": 921400, "last_word_id": 921420, "decision": "drop"}
+{"first_word_id": 922752, "last_word_id": 922768, "decision": "drop"}
+{"first_word_id": 922835, "last_word_id": 922856, "decision": "drop"}
+{"first_word_id": 924230, "last_word_id": 924257, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 24:18", "first_word_id": 924214, "last_word_id": 924257, "parts": [{"key": "A", "parent": null, "first_word_id": 924214, "last_word_id": 924229, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 924230, "last_word_id": 924242, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 924243, "last_word_id": 924257, "pairs_with": null}]}}
+{"first_word_id": 924288, "last_word_id": 924307, "decision": "keep"}
+{"first_word_id": 925366, "last_word_id": 925388, "decision": "drop"}
+{"first_word_id": 925833, "last_word_id": 925847, "decision": "keep"}
+{"first_word_id": 926708, "last_word_id": 926725, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 26:29", "first_word_id": 926708, "last_word_id": 926748, "parts": [{"key": "A", "parent": null, "first_word_id": 926708, "last_word_id": 926717, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 926718, "last_word_id": 926725, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 926726, "last_word_id": 926734, "pairs_with": "A'''"}, {"key": "A'''", "parent": null, "first_word_id": 926735, "last_word_id": 926748, "pairs_with": null}]}}
+{"first_word_id": 926805, "last_word_id": 926834, "decision": "drop"}
+{"first_word_id": 928490, "last_word_id": 928514, "decision": "drop"}
+{"first_word_id": 928683, "last_word_id": 928695, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 28:6", "first_word_id": 928677, "last_word_id": 928695, "parts": [{"key": "A", "parent": null, "first_word_id": 928677, "last_word_id": 928682, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 928683, "last_word_id": 928687, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 928688, "last_word_id": 928695, "pairs_with": null}]}}
+{"first_word_id": 928985, "last_word_id": 929012, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 28:14", "first_word_id": 928985, "last_word_id": 929034, "parts": [{"key": "A", "parent": null, "first_word_id": 928985, "last_word_id": 929003, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 929004, "last_word_id": 929016, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 929017, "last_word_id": 929024, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 929025, "last_word_id": 929034, "pairs_with": null}]}}
+{"first_word_id": 930083, "last_word_id": 930116, "decision": "keep"}
+{"first_word_id": 930275, "last_word_id": 930295, "decision": "drop"}
+{"first_word_id": 930851, "last_word_id": 930868, "decision": "keep"}
+{"first_word_id": 931395, "last_word_id": 931423, "decision": "keep"}
+{"first_word_id": 931751, "last_word_id": 931773, "decision": "keep"}
+{"first_word_id": 932958, "last_word_id": 932970, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 31:15", "first_word_id": 932958, "last_word_id": 932990, "parts": [{"key": "A", "parent": null, "first_word_id": 932958, "last_word_id": 932963, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 932964, "last_word_id": 932970, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 932971, "last_word_id": 932976, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 932977, "last_word_id": 932982, "pairs_with": "B''"}, {"key": "B''", "parent": null, "first_word_id": 932983, "last_word_id": 932990, "pairs_with": null}]}}
+{"first_word_id": 933319, "last_word_id": 933340, "decision": "drop"}
+{"first_word_id": 933767, "last_word_id": 933794, "decision": "drop"}
+{"first_word_id": 934156, "last_word_id": 934171, "decision": "drop"}
+{"first_word_id": 934305, "last_word_id": 934324, "decision": "drop"}
+{"first_word_id": 935125, "last_word_id": 935139, "decision": "drop"}
+{"first_word_id": 935240, "last_word_id": 935254, "decision": "drop"}
+{"first_word_id": 936188, "last_word_id": 936206, "decision": "drop"}
+{"first_word_id": 936307, "last_word_id": 936320, "decision": "drop"}
+{"first_word_id": 937259, "last_word_id": 937277, "decision": "keep"}
+{"first_word_id": 937771, "last_word_id": 937803, "decision": "keep"}
+{"first_word_id": 938494, "last_word_id": 938525, "decision": "drop"}
+{"first_word_id": 940236, "last_word_id": 940254, "decision": "drop"}
+{"first_word_id": 941043, "last_word_id": 941063, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 37:23", "first_word_id": 941043, "last_word_id": 941076, "parts": [{"key": "A", "parent": null, "first_word_id": 941043, "last_word_id": 941052, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 941053, "last_word_id": 941076, "pairs_with": null}]}}
+{"first_word_id": 941315, "last_word_id": 941348, "decision": "drop"}
+{"first_word_id": 942376, "last_word_id": 942409, "decision": "drop"}
+{"first_word_id": 942613, "last_word_id": 942632, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 38:11", "first_word_id": 942613, "last_word_id": 942637, "parts": [{"key": "A", "parent": null, "first_word_id": 942613, "last_word_id": 942621, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 942622, "last_word_id": 942637, "pairs_with": null}]}}
+{"first_word_id": 942874, "last_word_id": 942888, "decision": "drop"}
+{"first_word_id": 943204, "last_word_id": 943230, "decision": "keep"}
+{"first_word_id": 946112, "last_word_id": 946131, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 42:17", "first_word_id": 946102, "last_word_id": 946131, "parts": [{"key": "A", "parent": null, "first_word_id": 946102, "last_word_id": 946111, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 946112, "last_word_id": 946120, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 946121, "last_word_id": 946131, "pairs_with": null}]}}
+{"first_word_id": 948435, "last_word_id": 948461, "decision": "drop"}
+{"first_word_id": 950320, "last_word_id": 950347, "decision": "drop"}
+{"first_word_id": 951110, "last_word_id": 951132, "decision": "drop"}
+{"first_word_id": 952051, "last_word_id": 952072, "decision": "drop"}
+{"first_word_id": 956977, "last_word_id": 957001, "decision": "drop"}
+{"first_word_id": 966204, "last_word_id": 966227, "decision": "drop"}
+{"first_word_id": 966715, "last_word_id": 966747, "decision": "drop"}
+{"first_word_id": 967833, "last_word_id": 967849, "decision": "drop"}
+{"first_word_id": 972109, "last_word_id": 972132, "decision": "keep"}
+{"first_word_id": 972174, "last_word_id": 972192, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 60:20", "first_word_id": 972174, "last_word_id": 972209, "parts": [{"key": "A", "parent": null, "first_word_id": 972174, "last_word_id": 972183, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 972184, "last_word_id": 972192, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 972193, "last_word_id": 972209, "pairs_with": null}]}}
+{"first_word_id": 972965, "last_word_id": 972982, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Alma 60:36", "first_word_id": 972965, "last_word_id": 972997, "parts": [{"key": "A", "parent": null, "first_word_id": 972965, "last_word_id": 972974, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 972975, "last_word_id": 972997, "pairs_with": null}]}}
+{"first_word_id": 978772, "last_word_id": 978805, "decision": "drop"}
+{"first_word_id": 981544, "last_word_id": 981563, "decision": "drop"}
+{"first_word_id": 981626, "last_word_id": 981649, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Helaman 5:6", "first_word_id": 981616, "last_word_id": 981656, "parts": [{"key": "A", "parent": null, "first_word_id": 981616, "last_word_id": 981625, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 981626, "last_word_id": 981635, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 981636, "last_word_id": 981656, "pairs_with": null}]}}
+{"first_word_id": 981829, "last_word_id": 981862, "decision": "keep"}
+{"first_word_id": 982026, "last_word_id": 982043, "decision": "drop"}
+{"first_word_id": 982212, "last_word_id": 982235, "decision": "drop"}
+{"first_word_id": 982969, "last_word_id": 982988, "decision": "drop"}
+{"first_word_id": 989013, "last_word_id": 989029, "decision": "drop"}
+{"first_word_id": 990160, "last_word_id": 990177, "decision": "drop"}
+{"first_word_id": 992293, "last_word_id": 992311, "decision": "keep"}
+{"first_word_id": 993136, "last_word_id": 993156, "decision": "keep"}
+{"first_word_id": 993277, "last_word_id": 993290, "decision": "keep"}
+{"first_word_id": 993618, "last_word_id": 993633, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Helaman 13:27", "first_word_id": 993618, "last_word_id": 993639, "parts": [{"key": "A", "parent": null, "first_word_id": 993618, "last_word_id": 993625, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 993626, "last_word_id": 993633, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 993634, "last_word_id": 993639, "pairs_with": null}]}}
+{"first_word_id": 993668, "last_word_id": 993684, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Helaman 13:28", "first_word_id": 993668, "last_word_id": 993696, "parts": [{"key": "A", "parent": null, "first_word_id": 993668, "last_word_id": 993676, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 993677, "last_word_id": 993688, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 993689, "last_word_id": 993696, "pairs_with": null}]}}
+{"first_word_id": 993744, "last_word_id": 993768, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Helaman 13:29", "first_word_id": 993733, "last_word_id": 993768, "parts": [{"key": "A", "parent": null, "first_word_id": 993733, "last_word_id": 993743, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 993744, "last_word_id": 993758, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 993759, "last_word_id": 993768, "pairs_with": null}]}}
+{"first_word_id": 994813, "last_word_id": 994838, "decision": "keep"}
+{"first_word_id": 995091, "last_word_id": 995121, "decision": "keep"}
+{"first_word_id": 995385, "last_word_id": 995406, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Helaman 14:31", "first_word_id": 995360, "last_word_id": 995420, "parts": [{"key": "A", "parent": null, "first_word_id": 995360, "last_word_id": 995371, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 995372, "last_word_id": 995384, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 995385, "last_word_id": 995406, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 995407, "last_word_id": 995420, "pairs_with": null}]}}
+{"first_word_id": 999801, "last_word_id": 999833, "decision": "drop"}
+{"first_word_id": 1000477, "last_word_id": 1000493, "decision": "drop"}
+{"first_word_id": 1000846, "last_word_id": 1000883, "decision": "drop"}
+{"first_word_id": 1007572, "last_word_id": 1007602, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "3 Nephi 10:5", "first_word_id": 1007556, "last_word_id": 1007620, "parts": [{"key": "A", "parent": null, "first_word_id": 1007556, "last_word_id": 1007571, "pairs_with": "A'"}, {"key": "B", "parent": null, "first_word_id": 1007572, "last_word_id": 1007583, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1007584, "last_word_id": 1007602, "pairs_with": null}, {"key": "A'", "parent": null, "first_word_id": 1007603, "last_word_id": 1007620, "pairs_with": null}]}}
+{"first_word_id": 1009361, "last_word_id": 1009378, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "3 Nephi 11:32", "first_word_id": 1009354, "last_word_id": 1009378, "parts": [{"key": "A", "parent": null, "first_word_id": 1009354, "last_word_id": 1009360, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1009361, "last_word_id": 1009367, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1009368, "last_word_id": 1009378, "pairs_with": null}]}}
+{"first_word_id": 1009485, "last_word_id": 1009507, "decision": "keep"}
+{"first_word_id": 1010382, "last_word_id": 1010423, "decision": "keep"}
+{"first_word_id": 1011786, "last_word_id": 1011803, "decision": "keep"}
+{"first_word_id": 1012296, "last_word_id": 1012311, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "3 Nephi 14:22", "first_word_id": 1012289, "last_word_id": 1012311, "parts": [{"key": "A", "parent": null, "first_word_id": 1012289, "last_word_id": 1012295, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1012296, "last_word_id": 1012303, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1012304, "last_word_id": 1012311, "pairs_with": null}]}}
+{"first_word_id": 1013641, "last_word_id": 1013656, "decision": "drop"}
+{"first_word_id": 1015153, "last_word_id": 1015183, "decision": "drop"}
+{"first_word_id": 1015337, "last_word_id": 1015365, "decision": "drop"}
+{"first_word_id": 1017003, "last_word_id": 1017017, "decision": "drop"}
+{"first_word_id": 1018064, "last_word_id": 1018089, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "3 Nephi 20:19", "first_word_id": 1018076, "last_word_id": 1018116, "parts": [{"key": "A", "parent": null, "first_word_id": 1018076, "last_word_id": 1018082, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1018083, "last_word_id": 1018089, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1018098, "last_word_id": 1018106, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1018107, "last_word_id": 1018116, "pairs_with": null}]}}
+{"first_word_id": 1020194, "last_word_id": 1020213, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "3 Nephi 21:29", "first_word_id": 1020194, "last_word_id": 1020228, "parts": [{"key": "A", "parent": null, "first_word_id": 1020194, "last_word_id": 1020201, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1020202, "last_word_id": 1020213, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1020214, "last_word_id": 1020222, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1020223, "last_word_id": 1020228, "pairs_with": null}]}}
+{"first_word_id": 1022116, "last_word_id": 1022135, "decision": "keep"}
+{"first_word_id": 1022959, "last_word_id": 1022986, "decision": "keep"}
+{"first_word_id": 1022987, "last_word_id": 1023056, "decision": "keep"}
+{"first_word_id": 1023251, "last_word_id": 1023275, "decision": "drop"}
+{"first_word_id": 1023975, "last_word_id": 1023986, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "3 Nephi 27:33", "first_word_id": 1023982, "last_word_id": 1024022, "parts": [{"key": "A", "parent": null, "first_word_id": 1023982, "last_word_id": 1024002, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1024003, "last_word_id": 1024022, "pairs_with": null}]}}
+{"first_word_id": 1025677, "last_word_id": 1025699, "decision": "keep"}
+{"first_word_id": 1027041, "last_word_id": 1027060, "decision": "drop"}
+{"first_word_id": 1029472, "last_word_id": 1029506, "decision": "keep"}
+{"first_word_id": 1030723, "last_word_id": 1030753, "decision": "keep"}
+{"first_word_id": 1032707, "last_word_id": 1032725, "decision": "keep"}
+{"first_word_id": 1033332, "last_word_id": 1033363, "decision": "drop"}
+{"first_word_id": 1033991, "last_word_id": 1034024, "decision": "drop"}
+{"first_word_id": 1034038, "last_word_id": 1034058, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Mormon 7:9", "first_word_id": 1034027, "last_word_id": 1034058, "parts": [{"key": "A", "parent": null, "first_word_id": 1034027, "last_word_id": 1034037, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1034038, "last_word_id": 1034047, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1034048, "last_word_id": 1034058, "pairs_with": null}]}}
+{"first_word_id": 1035086, "last_word_id": 1035104, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Mormon 8:24", "first_word_id": 1035086, "last_word_id": 1035120, "parts": [{"key": "A", "parent": null, "first_word_id": 1035086, "last_word_id": 1035093, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1035094, "last_word_id": 1035104, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1035105, "last_word_id": 1035120, "pairs_with": null}]}}
+{"first_word_id": 1036304, "last_word_id": 1036341, "decision": "keep"}
+{"first_word_id": 1036467, "last_word_id": 1036492, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Mormon 9:14", "first_word_id": 1036459, "last_word_id": 1036492, "parts": [{"key": "A", "parent": null, "first_word_id": 1036459, "last_word_id": 1036466, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1036467, "last_word_id": 1036475, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1036476, "last_word_id": 1036483, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1036484, "last_word_id": 1036492, "pairs_with": null}]}}
+{"first_word_id": 1036591, "last_word_id": 1036617, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Mormon 9:17", "first_word_id": 1036580, "last_word_id": 1036617, "parts": [{"key": "A", "parent": null, "first_word_id": 1036580, "last_word_id": 1036590, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1036591, "last_word_id": 1036606, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1036607, "last_word_id": 1036617, "pairs_with": null}]}}
+{"first_word_id": 1036618, "last_word_id": 1036643, "decision": "drop"}
+{"first_word_id": 1036817, "last_word_id": 1036834, "decision": "keep"}
+{"first_word_id": 1036937, "last_word_id": 1036951, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Mormon 9:26", "first_word_id": 1036912, "last_word_id": 1036951, "parts": [{"key": "A", "parent": null, "first_word_id": 1036912, "last_word_id": 1036920, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1036921, "last_word_id": 1036925, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1036926, "last_word_id": 1036936, "pairs_with": "A'''"}, {"key": "A'''", "parent": null, "first_word_id": 1036937, "last_word_id": 1036944, "pairs_with": "A''''"}, {"key": "A''''", "parent": null, "first_word_id": 1036945, "last_word_id": 1036951, "pairs_with": null}]}}
+{"first_word_id": 1037082, "last_word_id": 1037108, "decision": "keep"}
+{"first_word_id": 1037297, "last_word_id": 1037323, "decision": "drop"}
+{"first_word_id": 1038198, "last_word_id": 1038212, "decision": "drop"}
+{"first_word_id": 1039259, "last_word_id": 1039278, "decision": "drop"}
+{"first_word_id": 1040396, "last_word_id": 1040418, "decision": "keep"}
+{"first_word_id": 1040422, "last_word_id": 1040442, "decision": "keep"}
+{"first_word_id": 1041143, "last_word_id": 1041165, "decision": "drop"}
+{"first_word_id": 1041284, "last_word_id": 1041309, "decision": "keep"}
+{"first_word_id": 1041777, "last_word_id": 1041794, "decision": "keep"}
+{"first_word_id": 1042439, "last_word_id": 1042457, "decision": "drop"}
+{"first_word_id": 1042681, "last_word_id": 1042698, "decision": "drop"}
+{"first_word_id": 1043096, "last_word_id": 1043123, "decision": "drop"}
+{"first_word_id": 1044412, "last_word_id": 1044443, "decision": "drop"}
+{"first_word_id": 1045162, "last_word_id": 1045185, "decision": "keep"}
+{"first_word_id": 1045352, "last_word_id": 1045372, "decision": "drop"}
+{"first_word_id": 1046943, "last_word_id": 1046968, "decision": "drop"}
+{"first_word_id": 1047808, "last_word_id": 1047829, "decision": "drop"}
+{"first_word_id": 1049633, "last_word_id": 1049674, "decision": "keep"}
+{"first_word_id": 1051100, "last_word_id": 1051125, "decision": "drop"}
+{"first_word_id": 1051466, "last_word_id": 1051481, "decision": "drop"}
+{"first_word_id": 1052276, "last_word_id": 1052297, "decision": "drop"}
+{"first_word_id": 1052580, "last_word_id": 1052599, "decision": "drop"}
+{"first_word_id": 1052956, "last_word_id": 1052985, "decision": "drop"}
+{"first_word_id": 1053224, "last_word_id": 1053256, "decision": "drop"}
+{"first_word_id": 1055357, "last_word_id": 1055375, "decision": "fix", "record": {"kind": "Parallelism", "edition": 4, "ref": "Moroni 7:11", "first_word_id": 1055357, "last_word_id": 1055400, "parts": [{"key": "A", "parent": null, "first_word_id": 1055357, "last_word_id": 1055366, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1055367, "last_word_id": 1055375, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1055376, "last_word_id": 1055387, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1055388, "last_word_id": 1055400, "pairs_with": null}]}}
+{"first_word_id": 1055446, "last_word_id": 1055469, "decision": "drop"}
+{"first_word_id": 1056453, "last_word_id": 1056473, "decision": "keep"}
+{"first_word_id": 1058137, "last_word_id": 1058164, "decision": "keep"}
+{"first_word_id": 1059580, "last_word_id": 1059606, "decision": "keep"}
+{"first_word_id": 1060019, "last_word_id": 1060033, "decision": "drop"}
+{"first_word_id": 1065512, "last_word_id": 1065532, "decision": "keep"}
+{"first_word_id": 1067882, "last_word_id": 1067907, "decision": "keep"}
+{"first_word_id": 1070253, "last_word_id": 1070272, "decision": "drop"}
+{"first_word_id": 1070336, "last_word_id": 1070352, "decision": "keep"}
+{"first_word_id": 1075694, "last_word_id": 1075719, "decision": "drop"}
+{"first_word_id": 1077925, "last_word_id": 1077942, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 29:32", "first_word_id": 1077925, "last_word_id": 1077949, "parts": [{"key": "A", "parent": null, "first_word_id": 1077925, "last_word_id": 1077935, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1077936, "last_word_id": 1077949, "pairs_with": null}]}}
+{"first_word_id": 1078044, "last_word_id": 1078057, "decision": "keep"}
+{"first_word_id": 1079758, "last_word_id": 1079773, "decision": "keep"}
+{"first_word_id": 1082182, "last_word_id": 1082201, "decision": "keep"}
+{"first_word_id": 1082718, "last_word_id": 1082749, "decision": "keep"}
+{"first_word_id": 1082750, "last_word_id": 1082773, "decision": "keep"}
+{"first_word_id": 1083527, "last_word_id": 1083556, "decision": "keep"}
+{"first_word_id": 1085281, "last_word_id": 1085299, "decision": "keep"}
+{"first_word_id": 1101037, "last_word_id": 1101050, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 63:6", "first_word_id": 1101032, "last_word_id": 1101050, "parts": [{"key": "A", "parent": null, "first_word_id": 1101032, "last_word_id": 1101036, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1101037, "last_word_id": 1101043, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1101044, "last_word_id": 1101050, "pairs_with": null}]}}
+{"first_word_id": 1101618, "last_word_id": 1101633, "decision": "keep"}
+{"first_word_id": 1105291, "last_word_id": 1105308, "decision": "keep"}
+{"first_word_id": 1107908, "last_word_id": 1107925, "decision": "keep"}
+{"first_word_id": 1109375, "last_word_id": 1109394, "decision": "drop"}
+{"first_word_id": 1109469, "last_word_id": 1109491, "decision": "keep"}
+{"first_word_id": 1111994, "last_word_id": 1112019, "decision": "keep"}
+{"first_word_id": 1114574, "last_word_id": 1114588, "decision": "keep"}
+{"first_word_id": 1117446, "last_word_id": 1117461, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 84:100", "first_word_id": 1117423, "last_word_id": 1117461, "parts": [{"key": "A", "parent": null, "first_word_id": 1117423, "last_word_id": 1117428, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1117429, "last_word_id": 1117437, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1117438, "last_word_id": 1117445, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1117446, "last_word_id": 1117453, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1117454, "last_word_id": 1117461, "pairs_with": null}]}}
+{"first_word_id": 1119745, "last_word_id": 1119760, "decision": "keep"}
+{"first_word_id": 1119848, "last_word_id": 1119870, "decision": "keep"}
+{"first_word_id": 1120816, "last_word_id": 1120839, "decision": "keep"}
+{"first_word_id": 1121846, "last_word_id": 1121855, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 88:90", "first_word_id": 1121839, "last_word_id": 1121869, "parts": [{"key": "A", "parent": null, "first_word_id": 1121839, "last_word_id": 1121845, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1121846, "last_word_id": 1121850, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1121851, "last_word_id": 1121855, "pairs_with": "A'''"}, {"key": "A'''", "parent": null, "first_word_id": 1121856, "last_word_id": 1121869, "pairs_with": null}]}}
+{"first_word_id": 1122926, "last_word_id": 1122947, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 88:120", "first_word_id": 1122926, "last_word_id": 1122966, "parts": [{"key": "A", "parent": null, "first_word_id": 1122926, "last_word_id": 1122936, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1122937, "last_word_id": 1122947, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1122948, "last_word_id": 1122966, "pairs_with": null}]}}
+{"first_word_id": 1123603, "last_word_id": 1123628, "decision": "drop"}
+{"first_word_id": 1127766, "last_word_id": 1127775, "decision": "keep"}
+{"first_word_id": 1128686, "last_word_id": 1128698, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 97:19", "first_word_id": 1128686, "last_word_id": 1128717, "parts": [{"key": "A", "parent": null, "first_word_id": 1128686, "last_word_id": 1128693, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1128694, "last_word_id": 1128705, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1128706, "last_word_id": 1128709, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1128710, "last_word_id": 1128717, "pairs_with": null}]}}
+{"first_word_id": 1129330, "last_word_id": 1129351, "decision": "keep"}
+{"first_word_id": 1131412, "last_word_id": 1131439, "decision": "keep"}
+{"first_word_id": 1131853, "last_word_id": 1131868, "decision": "keep"}
+{"first_word_id": 1132005, "last_word_id": 1132019, "decision": "keep"}
+{"first_word_id": 1134827, "last_word_id": 1134846, "decision": "keep"}
+{"first_word_id": 1137195, "last_word_id": 1137219, "decision": "drop"}
+{"first_word_id": 1137485, "last_word_id": 1137522, "decision": "drop"}
+{"first_word_id": 1137532, "last_word_id": 1137546, "decision": "drop"}
+{"first_word_id": 1143083, "last_word_id": 1143112, "decision": "keep"}
+{"first_word_id": 1144338, "last_word_id": 1144354, "decision": "keep"}
+{"first_word_id": 1145007, "last_word_id": 1145025, "decision": "keep"}
+{"first_word_id": 1146022, "last_word_id": 1146037, "decision": "keep"}
+{"first_word_id": 1146861, "last_word_id": 1146881, "decision": "keep"}
+{"first_word_id": 1146947, "last_word_id": 1146964, "decision": "keep"}
+{"first_word_id": 1147239, "last_word_id": 1147268, "decision": "keep"}
+{"first_word_id": 1147508, "last_word_id": 1147529, "decision": "keep"}
+{"first_word_id": 1154577, "last_word_id": 1154612, "decision": "drop"}
+{"first_word_id": 1154685, "last_word_id": 1154721, "decision": "drop"}
+{"first_word_id": 1155431, "last_word_id": 1155448, "decision": "keep"}
+{"first_word_id": 1155537, "last_word_id": 1155557, "decision": "drop"}
+{"first_word_id": 1157344, "last_word_id": 1157367, "decision": "drop"}
+{"first_word_id": 1157425, "last_word_id": 1157453, "decision": "drop"}
+{"first_word_id": 1158279, "last_word_id": 1158292, "decision": "keep"}
+{"first_word_id": 1158314, "last_word_id": 1158333, "decision": "keep"}
+{"first_word_id": 1159517, "last_word_id": 1159540, "decision": "keep"}
+{"first_word_id": 1159810, "last_word_id": 1159832, "decision": "keep"}
+{"first_word_id": 1160194, "last_word_id": 1160209, "decision": "keep"}
+{"first_word_id": 1160342, "last_word_id": 1160360, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 128:19", "first_word_id": 1160342, "last_word_id": 1160380, "parts": [{"key": "A", "parent": null, "first_word_id": 1160342, "last_word_id": 1160345, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1160346, "last_word_id": 1160351, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1160352, "last_word_id": 1160360, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1160361, "last_word_id": 1160365, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1160366, "last_word_id": 1160375, "pairs_with": "B''"}, {"key": "B''", "parent": null, "first_word_id": 1160376, "last_word_id": 1160380, "pairs_with": null}]}}
+{"first_word_id": 1160570, "last_word_id": 1160583, "decision": "drop"}
+{"first_word_id": 1162553, "last_word_id": 1162571, "decision": "keep"}
+{"first_word_id": 1163770, "last_word_id": 1163807, "decision": "drop"}
+{"first_word_id": 1164209, "last_word_id": 1164234, "decision": "fix", "record": {"kind": "Parallelism", "edition": 5, "ref": "Doctrine and Covenants 132:46", "first_word_id": 1164175, "last_word_id": 1164234, "parts": [{"key": "A", "parent": null, "first_word_id": 1164175, "last_word_id": 1164184, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1164185, "last_word_id": 1164208, "pairs_with": null}, {"key": "B", "parent": null, "first_word_id": 1164209, "last_word_id": 1164222, "pairs_with": "B'"}, {"key": "B'", "parent": null, "first_word_id": 1164223, "last_word_id": 1164234, "pairs_with": null}]}}
+{"first_word_id": 1164955, "last_word_id": 1164980, "decision": "drop"}
+{"first_word_id": 1169645, "last_word_id": 1169657, "decision": "keep"}
+{"first_word_id": 1172607, "last_word_id": 1172624, "decision": "drop"}
+{"first_word_id": 1172679, "last_word_id": 1172694, "decision": "drop"}
+{"first_word_id": 1174950, "last_word_id": 1174990, "decision": "drop"}
+{"first_word_id": 1177547, "last_word_id": 1177565, "decision": "keep"}
+{"first_word_id": 1178237, "last_word_id": 1178249, "decision": "drop"}
+{"first_word_id": 1178505, "last_word_id": 1178522, "decision": "drop"}
+{"first_word_id": 1180846, "last_word_id": 1180860, "decision": "keep"}
+{"first_word_id": 1181144, "last_word_id": 1181164, "decision": "keep"}
+{"first_word_id": 1182497, "last_word_id": 1182508, "decision": "fix", "record": {"kind": "Parallelism", "edition": 6, "ref": "Moses 7:35", "first_word_id": 1182497, "last_word_id": 1182516, "parts": [{"key": "A", "parent": null, "first_word_id": 1182497, "last_word_id": 1182502, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1182503, "last_word_id": 1182508, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1182509, "last_word_id": 1182516, "pairs_with": null}]}}
+{"first_word_id": 1187571, "last_word_id": 1187615, "decision": "fix", "record": {"kind": "Parallelism", "edition": 6, "ref": "Abraham 3:6", "first_word_id": 1187575, "last_word_id": 1187615, "parts": [{"key": "A", "parent": null, "first_word_id": 1187575, "last_word_id": 1187585, "pairs_with": "A'"}, {"key": "A'", "parent": null, "first_word_id": 1187586, "last_word_id": 1187600, "pairs_with": "A''"}, {"key": "A''", "parent": null, "first_word_id": 1187601, "last_word_id": 1187615, "pairs_with": null}]}}
+{"first_word_id": 1188136, "last_word_id": 1188156, "decision": "drop"}
+{"first_word_id": 1188799, "last_word_id": 1188817, "decision": "keep"}
+{"first_word_id": 1190017, "last_word_id": 1190036, "decision": "drop"}
+{"first_word_id": 1198607, "last_word_id": 1198647, "decision": "drop"}

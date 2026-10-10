@@ -11,46 +11,63 @@ ORIGINALS = (2, 3)
 class Projector:
     def __init__(self, db):
         self.kjv_by_seq = {}
+        self.original_by_seq = {}
         self.verse = {}
         self.seq = {}
-        edition = {}
+        self.edition = {}
         for word, seq, verse, ed in db.execute(
             "select w.id, w.sequence, w.verse_id, c.edition_id from word w join verse v on v.id = w.verse_id "
             "join chapter c on c.id = v.chapter_id where c.edition_id in (1, 2, 3)"
         ):
             self.seq[word] = seq
-            edition[word] = ed
+            self.edition[word] = ed
             self.verse[word] = verse
             if ed == KJV:
                 self.kjv_by_seq[seq] = word
+            else:
+                self.original_by_seq[seq] = word
 
         self.matches = defaultdict(list)
+        self.back_matches = defaultdict(list)
         for a, b in db.execute("select word_id, other_word_id from word_match"):
             for english, other in ((a, b), (b, a)):
-                if edition.get(english) == KJV and edition.get(other) in ORIGINALS:
+                if self.edition.get(english) == KJV and self.edition.get(other) in ORIGINALS:
                     self.matches[english].append(other)
+                    self.back_matches[other].append(english)
 
+        self.allowed = self._allowed_verses(self.matches)
+        self.back_allowed = self._allowed_verses(self.back_matches)
+
+    def _allowed_verses(self, matches):
         per_verse = defaultdict(Counter)
-        for english, others in self.matches.items():
+        for word, others in matches.items():
             for other in others:
-                per_verse[self.verse[english]][self.verse[other]] += 1
-        self.allowed = {}
+                per_verse[self.verse[word]][self.verse[other]] += 1
+        allowed = {}
         for verse, counts in per_verse.items():
             total = sum(counts.values())
-            self.allowed[verse] = {v for v, n in counts.items() if n >= max(1, 0.2 * total)}
+            allowed[verse] = {v for v, n in counts.items() if n >= max(1, 0.2 * total)}
+        return allowed
 
-    def project(self, first, last):
-        """The original-language span matching a KJV span, or None when nothing in it is matched."""
+    def _span(self, first, last, by_seq, matches, allowed):
         found = []
         for seq in range(self.seq[first], self.seq[last] + 1):
-            english = self.kjv_by_seq.get(seq)
-            if english is None:
+            word = by_seq.get(seq)
+            if word is None:
                 continue
-            allowed = self.allowed.get(self.verse[english], ())
-            found.extend(o for o in self.matches.get(english, ()) if self.verse[o] in allowed)
+            verses = allowed.get(self.verse[word], ())
+            found.extend(o for o in matches.get(word, ()) if self.verse[o] in verses)
         if not found:
             return None
         return min(found, key=self.seq.get), max(found, key=self.seq.get)
+
+    def project(self, first, last):
+        """The original-language span matching a KJV span, or None when nothing in it is matched."""
+        return self._span(first, last, self.kjv_by_seq, self.matches, self.allowed)
+
+    def project_back(self, first, last):
+        """The KJV span matching a Hebrew or Greek span, or None when nothing in it is matched."""
+        return self._span(first, last, self.original_by_seq, self.back_matches, self.back_allowed)
 
 
 def kjv_rows(db, query):

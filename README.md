@@ -1,4 +1,4 @@
-# BOM Nerds
+# Standard Works Corpus
 
 One open database of the standard works: the Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price. Every word is connected to the people, places, and ideas it talks about.
 
@@ -27,7 +27,7 @@ The text and original-language data are complete. The rest is being tagged chapt
 
 ## Get it
 
-Download the latest [release](https://github.com/mikaelweiss/bom-nerds/releases/latest):
+Download the latest [release](https://github.com/mikaelweiss/standard-works-corpus/releases/latest):
 
 - `scripture-db.zip` is a SQLite database.
 - `scripture-json.zip` is every table as JSON.

@@ -34,5 +34,5 @@ ls -lh "$dist"
 commit=$(git -C "$root" rev-parse HEAD)
 tag="data-$(date -u +%Y-%m-%d-%H%M%S)"
 gh release create "$tag" "$dist/scripture-db.zip" "$dist/scripture-json.zip" \
-    --repo mikaelweiss/bom-nerds --target "$commit" --title "$tag" \
+    --repo mikaelweiss/standard-works-corpus --target "$commit" --title "$tag" \
     --notes "scripture.db and a JSON export of every table, as of $commit. The data is CC BY 4.0: CREDITS.md, inside each zip, lists the credit every source requires."

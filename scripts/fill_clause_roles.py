@@ -10,18 +10,19 @@ predicate phrases C, and adverbs, prepositional phrases, and adverbial clauses A
 A part is added where both parsers give the same role and words. Where one parser splits a phrase the other gives
 whole under the same role, Adverbials take the split and other roles the whole. In the KJV the roles of the matched Hebrew or Greek
 words decide a part only one parser gives. Parts never overlap the parts already there or cut through a child clause.
-A clause with an O, IO, C, or A part neither parser gives was annotated by hand and is left alone. Each clause is
-decided again until nothing changes, so a second run adds nothing and finds the same disagreements. Hebrew and Greek
-clauses and clause spans are never changed.
+A clause with an O, IO, C, or A part neither parser gives was annotated by hand and is left alone, and so is a reviewed
+clause. Each clause is decided again until nothing changes, so a second run adds nothing and finds the same
+disagreements. Hebrew and Greek clauses and clause spans are never changed.
 
 --book limits the pass to one book, for example "1 Nephi". --packets writes the clauses the parsers disagree on as
-review packets, one per chapter, with index.tsv and slices.tsv. --decisions applies reviewed lines from a .jsonl file
-or a directory of them, after the parser parts:
+review packets, one per chapter, with index.tsv and slices.tsv. Reviewed lines from decisions/clause-roles, or from the
+.jsonl file or directory of them given with --decisions, are applied after the parser parts:
 
     {"clause_id": 228040, "parts": [["O", 794526, 794537], ["A", 794538, 794540]], "note": "optional"}
 
 Roles are S, V, O, IO, C, A. Parts must lie inside the clause, not overlap each other or parts already there, and not
 cut through a child clause. A line that fails is skipped whole and printed; parts already there count as repeats.
+With --book, lines for clauses outside the book are skipped.
 --dry-run reports and writes packets without changing the database.
 """
 
@@ -82,6 +83,7 @@ NO_PART = {
 SUBORDINATORS = {"when", "where", "whither", "whence", "while", "whilst", "until", "till", "as", "if", "though", "although", "lest", "whether", "since", "after", "before"}
 PARTICLES = {"up", "down", "forth", "out", "away", "off", "aside", "in", "over"}
 PUNCTUATION = ".,;:!?'\"()[]"
+DECISIONS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "decisions", "clause-roles")
 
 
 def english_sentences(db, book=None):
@@ -540,6 +542,15 @@ def decision_lines(target):
                 yield f"{os.path.basename(path)}:{number}", line
 
 
+def decided_clause(line):
+    try:
+        record = json.loads(line)
+    except json.JSONDecodeError:
+        return None
+    clause = record.get("clause_id") if isinstance(record, dict) else None
+    return clause if isinstance(clause, int) else None
+
+
 def decided_parts(db, store, line):
     try:
         record = json.loads(line)
@@ -699,6 +710,8 @@ def main(path, parses_folder, book=None, packets=None, decisions=None, dry_run=F
     for name in PARSERS:
         parses[name] = {s: Parse(words, store.seq, store.text) for s, words in parse(parses_folder, name, sentences).items()}
     decider = Decider(store, parses)
+    lines = list(decision_lines(decisions or DECISIONS))
+    reviewed = {decided_clause(line) for _, line in lines}
     report, sources, disputes = Counter(), Counter(), []
     clauses = sorted(c for s in sentences for c in store.clauses[s])
     for start in range(0, len(clauses), BATCH):
@@ -708,6 +721,9 @@ def main(path, parses_folder, book=None, packets=None, decisions=None, dry_run=F
             report[edition, "clauses"] += 1
             if not store.parts[clause]:
                 report[edition, "clauses with no parts"] += 1
+            if clause in reviewed:
+                report[edition, "clauses reviewed"] += 1
+                continue
             while True:
                 accepted, dispute = decider.clause(clause)
                 accepted = [(p, source) for p, source in accepted if p not in store.parts[clause]]
@@ -721,19 +737,22 @@ def main(path, parses_folder, book=None, packets=None, decisions=None, dry_run=F
                 report[edition, "clauses for review"] += 1
         db.execute("rollback" if dry_run else "commit")
     rejects = []
-    if decisions:
-        db.execute("begin immediate")
-        for where, line in decision_lines(decisions):
-            report["decision lines"] += 1
-            try:
-                clause, wanted, repeats = decided_parts(db, store, line)
-            except Rejected as problem:
-                rejects.append(f"{where}: {problem}")
-                report["decision lines rejected"] += 1
-                continue
-            report["decision parts already there"] += repeats
-            write_parts(db, store, clause, wanted, report, "decided")
-        db.execute("rollback" if dry_run else "commit")
+    db.execute("begin immediate")
+    for where, line in lines:
+        clause = decided_clause(line)
+        if book and clause is not None and clause not in store.span:
+            report["decision lines outside this book"] += 1
+            continue
+        report["decision lines"] += 1
+        try:
+            clause, wanted, repeats = decided_parts(db, store, line)
+        except Rejected as problem:
+            rejects.append(f"{where}: {problem}")
+            report["decision lines rejected"] += 1
+            continue
+        report["decision parts already there"] += repeats
+        write_parts(db, store, clause, wanted, report, "decided")
+    db.execute("rollback" if dry_run else "commit")
     for problem in rejects:
         print(f"rejected {problem}")
     if packets:

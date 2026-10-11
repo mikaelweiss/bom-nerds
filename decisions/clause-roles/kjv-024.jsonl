@@ -1,0 +1,52 @@
+{"clause_id": 155135, "parts": [], "note": "span runs through v2; later speech belongs to child clauses"}
+{"clause_id": 155140, "parts": [["A", 89173, 89202]]}
+{"clause_id": 155142, "parts": [["O", 89199, 89200], ["A", 89201, 89202]]}
+{"clause_id": 155148, "parts": [["A", 89245, 89287]]}
+{"clause_id": 155156, "parts": [["C", 89320, 89320]]}
+{"clause_id": 155159, "parts": [["O", 89338, 89347], ["S", 89348, 89348], ["V", 89349, 89349], ["V", 89351, 89351], ["S", 89356, 89356], ["V", 89357, 89357], ["C", 89358, 89359]], "note": "clause span merges 'I am the LORD'"}
+{"clause_id": 155162, "parts": [["S", 89360, 89360], ["V", 89361, 89361], ["V", 89363, 89363], ["O", 89364, 89365], ["A", 89366, 89374], ["A", 89375, 89378], ["S", 89379, 89381], ["V", 89382, 89383], ["O", 89384, 89384]], "note": "clause span merges 'I the LORD do sanctify them'"}
+{"clause_id": 155168, "parts": [], "note": "'he that is born in his house' is a topic for the subject 'they'"}
+{"clause_id": 155185, "parts": [["O", 89658, 89662], ["V", 89663, 89663], ["S", 89664, 89664]]}
+{"clause_id": 155186, "parts": [["C", 89672, 89672]]}
+{"clause_id": 155187, "parts": [["A", 89676, 89697], ["S", 89698, 89698], ["V", 89699, 89700], ["C", 89701, 89701], ["A", 89702, 89704], ["S", 89705, 89705], ["C", 89708, 89709], ["A", 89710, 89710]], "note": "clause span merges two main clauses"}
+{"clause_id": 155200, "parts": [["O", 89800, 89801], ["A", 89802, 89802]]}
+{"clause_id": 287181, "parts": [["A", 89860, 89860]]}
+{"clause_id": 155209, "parts": [["S", 89930, 89930], ["S", 89935, 89935], ["V", 89936, 89937], ["O", 89938, 89940], ["A", 89941, 89943], ["S", 89944, 89944], ["V", 89945, 89945], ["C", 89946, 89947]], "note": "clause span merges several main clauses"}
+{"clause_id": 155211, "parts": [["S", 89978, 89978], ["V", 89979, 89979], ["C", 89980, 89984], ["S", 89985, 89985]], "note": "clause span merges 'I am the LORD which hallow you' with the relative 'that brought you out of Egypt'"}
+{"clause_id": 155215, "parts": [["O", 90025, 90025]]}
+{"clause_id": 155221, "parts": [["A", 90090, 90099], ["C", 90101, 90103]]}
+{"clause_id": 155222, "parts": [["A", 90105, 90112], ["V", 90113, 90113], ["C", 90114, 90121], ["S", 90124, 90124]], "note": "clause span merges 'on the fifteenth day ... is the feast' and 'ye must eat unleavened bread'"}
+{"clause_id": 155223, "parts": [["A", 90129, 90132], ["S", 90133, 90133], ["V", 90134, 90135], ["O", 90136, 90138], ["S", 90139, 90139], ["A", 90145, 90145]], "note": "clause span merges two main clauses"}
+{"clause_id": 155224, "parts": [["S", 90147, 90147], ["A", 90160, 90163], ["V", 90164, 90164], ["C", 90165, 90167], ["S", 90168, 90168], ["V", 90169, 90170], ["O", 90171, 90173], ["A", 90174, 90174]], "note": "clause span merges several main clauses"}
+{"clause_id": 155226, "parts": [], "note": "span runs through v11; later speech belongs to child clauses and the v11 'wave' clauses have no clause of their own"}
+{"clause_id": 155230, "parts": [["O", 90261, 90269], ["A", 90270, 90273], ["IO", 90274, 90276]]}
+{"clause_id": 155233, "parts": [["A", 90312, 90313], ["C", 90314, 90319]]}
+{"clause_id": 155234, "parts": [["S", 90321, 90321], ["V", 90322, 90323], ["O", 90324, 90331], ["S", 90345, 90345], ["V", 90346, 90347], ["C", 90348, 90351], ["A", 90352, 90354], ["A", 90355, 90358]], "note": "clause span merges 'it shall be a statute ...'"}
+{"clause_id": 155236, "parts": [["A", 90389, 90395], ["V", 90396, 90396], ["S", 90397, 90397], ["V", 90398, 90398], ["O", 90399, 90400]], "note": "clause span merges several main clauses"}
+{"clause_id": 155239, "parts": [["S", 90412, 90412], ["V", 90413, 90414], ["A", 90415, 90418], ["O", 90419, 90425], ["S", 90438, 90438], ["V", 90439, 90439], ["C", 90440, 90444]], "note": "clause span merges several main clauses"}
+{"clause_id": 155240, "parts": [["S", 90432, 90432], ["A", 90436, 90437]], "note": "existing O 90426-90431 is the clause 'they shall be of fine flour', not an object"}
+{"clause_id": 155241, "parts": [["S", 90446, 90446], ["V", 90447, 90448], ["A", 90449, 90451], ["O", 90452, 90466], ["S", 90467, 90467], ["C", 90470, 90473], ["A", 90477, 90484], ["C", 90485, 90496]], "note": "clause span merges two main clauses"}
+{"clause_id": 155243, "parts": [["S", 90524, 90525], ["V", 90526, 90527], ["O", 90528, 90528], ["A", 90529, 90534], ["A", 90535, 90538], ["A", 90539, 90541], ["A", 90542, 90545], ["S", 90546, 90546], ["C", 90549, 90549], ["A", 90550, 90552]], "note": "clause span merges two main clauses"}
+{"clause_id": 155249, "parts": [["O", 90658, 90682]]}
+{"clause_id": 155256, "parts": [["S", 90718, 90718], ["V", 90719, 90720], ["C", 90721, 90724], ["S", 90725, 90725], ["V", 90726, 90727], ["C", 90728, 90732]], "note": "clause span merges two main clauses"}
+{"clause_id": 155262, "parts": [["A", 90770, 90771]]}
+{"clause_id": 155264, "parts": [["A", 90801, 90812]]}
+{"clause_id": 155266, "parts": [["S", 90823, 90823], ["S", 90830, 90830], ["V", 90831, 90832], ["C", 90833, 90836], ["A", 90837, 90839], ["A", 90840, 90843]], "note": "clause span merges 'it shall be a statute ...'"}
+{"clause_id": 155271, "parts": [["C", 90900, 90903], ["A", 90904, 90906], ["A", 90907, 90909]]}
+{"clause_id": 155272, "parts": [["A", 90910, 90913], ["V", 90914, 90915], ["C", 90916, 90918], ["S", 90919, 90919], ["A", 90925, 90925]], "note": "clause span merges two main clauses"}
+{"clause_id": 155278, "parts": [["A", 91012, 91016], ["A", 91017, 91022], ["A", 91024, 91026], ["A", 91028, 91031], ["A", 91033, 91043]]}
+{"clause_id": 155281, "parts": [["A", 91073, 91076], ["V", 91077, 91078], ["C", 91079, 91080]]}
+{"clause_id": 155287, "parts": []}
+{"clause_id": 155289, "parts": [["S", 91163, 91163], ["S", 91170, 91174], ["V", 91175, 91176], ["A", 91177, 91178], ["A", 91179, 91204], ["S", 91205, 91205], ["V", 91206, 91206], ["C", 91207, 91210]], "note": "clause span merges several main clauses"}
+{"clause_id": 155290, "parts": [["C", 91173, 91174]]}
+{"clause_id": 155292, "parts": [["O", 91187, 91190], ["C", 91191, 91194], ["A", 91195, 91204]]}
+{"clause_id": 155297, "parts": [["O", 91236, 91254]]}
+{"clause_id": 155298, "parts": [["V", 91267, 91267], ["S", 91281, 91281], ["V", 91282, 91283], ["C", 91284, 91285], ["A", 91286, 91287], ["A", 91288, 91290]], "note": "clause span merges 'it shall be a statute for ever'"}
+{"clause_id": 155300, "parts": [["S", 91305, 91305], ["V", 91306, 91307], ["O", 91308, 91309], ["S", 91315, 91317], ["C", 91320, 91322]], "note": "clause span merges two main clauses"}
+{"clause_id": 155305, "parts": [["A", 91370, 91371]]}
+{"clause_id": 155309, "parts": [["A", 91417, 91429]]}
+{"clause_id": 155320, "parts": [["O", 91525, 91528], ["A", 91529, 91531]]}
+{"clause_id": 155324, "parts": [["O", 91561, 91568]]}
+{"clause_id": 155325, "parts": [["S", 91561, 91564]]}
+{"clause_id": 155326, "parts": [["S", 91570, 91577], ["S", 91578, 91578], ["V", 91579, 91579], ["A", 91580, 91580], ["V", 91581, 91582], ["A", 91583, 91584], ["S", 91586, 91588], ["V", 91589, 91589], ["A", 91590, 91590], ["V", 91591, 91591], ["O", 91592, 91592], ["S", 91595, 91604], ["A", 91605, 91612], ["V", 91613, 91615], ["A", 91616, 91617]], "note": "clause span merges three main clauses"}
+{"clause_id": 155332, "parts": [["O", 91638, 91638], ["C", 91639, 91639], ["A", 91640, 91642]]}

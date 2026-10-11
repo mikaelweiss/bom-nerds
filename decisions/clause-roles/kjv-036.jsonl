@@ -1,0 +1,63 @@
+{"clause_id": 159053, "parts": [["C", 134804, 134809]]}
+{"clause_id": 159055, "parts": [["A", 134819, 134837], ["V", 134838, 134838]]}
+{"clause_id": 159059, "parts": [["O", 134867, 134924]]}
+{"clause_id": 159064, "parts": [["S", 134938, 134938], ["V", 134939, 134939], ["IO", 134940, 134940], ["A", 134941, 134942]], "note": "'I command thee this day' added beside the existing V do"}
+{"clause_id": 159065, "parts": [["S", 134947, 134947], ["V", 134948, 134949], ["A", 134952, 134962], ["S", 134964, 134967], ["V", 134968, 134969], ["IO", 134970, 134971], ["O", 134972, 134982], ["S", 134994, 134994], ["V", 134995, 134995]], "note": "span merges 'it shall come to pass', 'the LORD shall keep' and 'he will also bless'"}
+{"clause_id": 159073, "parts": [["S", 135032, 135032], ["V", 135033, 135033], ["IO", 135034, 135036]], "note": "'he sware unto thy fathers' added beside the existing V give"}
+{"clause_id": 159074, "parts": [["S", 135040, 135040], ["S", 135047, 135047], ["V", 135048, 135048], ["V", 135050, 135050], ["C", 135051, 135054], ["A", 135055, 135056], ["A", 135058, 135060]], "note": "span holds two sentences; existing A 'not' 135049 belongs to the second so its V is split around it"}
+{"clause_id": 159083, "parts": [["C", 135129, 135132]]}
+{"clause_id": 159086, "parts": [["C", 135143, 135145]]}
+{"clause_id": 159089, "parts": [["A", 135204, 135204], ["V", 135205, 135205], ["S", 135206, 135209]]}
+{"clause_id": 159090, "parts": [["A", 135215, 135216]]}
+{"clause_id": 159095, "parts": [["V", 135244, 135244], ["V", 135246, 135247]], "note": "V split around existing A 'not'"}
+{"clause_id": 159096, "parts": [["V", 135255, 135255], ["A", 135256, 135257]]}
+{"clause_id": 159101, "parts": [["S", 135318, 135318], ["S", 135335, 135335], ["V", 135336, 135336], ["S", 135337, 135338], ["V", 135339, 135339], ["C", 135340, 135344], ["A", 135345, 135349]], "note": "span merges 'he shall deliver' with 'there shall no man be able to stand before thee'"}
+{"clause_id": 159106, "parts": [["C", 135386, 135392]]}
+{"clause_id": 159110, "parts": [["C", 135440, 135441], ["A", 135442, 135461]]}
+{"clause_id": 159111, "parts": [["O", 135431, 135431]]}
+{"clause_id": 159117, "parts": [["O", 135469, 135469]]}
+{"clause_id": 159119, "parts": [["O", 135488, 135488], ["A", 135489, 135503]]}
+{"clause_id": 159120, "parts": [["V", 135498, 135499]]}
+{"clause_id": 159122, "parts": [["C", 135511, 135512]]}
+{"clause_id": 159138, "parts": [["O", 135712, 135712]]}
+{"clause_id": 159139, "parts": [["O", 135737, 135737]]}
+{"clause_id": 159143, "parts": [["O", 135791, 135874]]}
+{"clause_id": 159146, "parts": [["IO", 135869, 135869], ["O", 135870, 135870]]}
+{"clause_id": 159147, "parts": [["S", 135876, 135876]]}
+{"clause_id": 287864, "parts": [["A", 135782, 135782]]}
+{"clause_id": 159152, "parts": [["A", 135928, 135929]]}
+{"clause_id": 159153, "parts": [["S", 135931, 135931], ["V", 135932, 135933], ["A", 135934, 135954]], "note": "span merges 'it shall be if thou ...' with 'I testify'; 'it shall be' added as a second S and V"}
+{"clause_id": 159161, "parts": [["C", 135985, 135993]]}
+{"clause_id": 159162, "parts": [["O", 135997, 136050]], "note": "'O Israel' is a vocative"}
+{"clause_id": 159172, "parts": [["A", 136084, 136084]]}
+{"clause_id": 159187, "parts": [["A", 136213, 136213], ["O", 136214, 136216]]}
+{"clause_id": 159192, "parts": [["C", 136285, 136287]]}
+{"clause_id": 159205, "parts": [["O", 136441, 136441], ["S", 136442, 136442], ["V", 136443, 136443], ["A", 136444, 136444], ["V", 136445, 136445], ["A", 136447, 136454], ["S", 136455, 136455], ["V", 136456, 136457], ["IO", 136458, 136458], ["O", 136459, 136461]], "note": "span holds three sentences (corrupted, turned aside, made a molten image); all added"}
+{"clause_id": 159206, "parts": [["O", 136431, 136431]]}
+{"clause_id": 159207, "parts": [["O", 136451, 136451], ["IO", 136454, 136454]]}
+{"clause_id": 159209, "parts": [["A", 136483, 136483], ["A", 136484, 136496]]}
+{"clause_id": 159218, "parts": [["O", 136566, 136566]]}
+{"clause_id": 159223, "parts": [["O", 136621, 136621]]}
+{"clause_id": 159225, "parts": [["A", 136648, 136648], ["C", 136652, 136654], ["A", 136655, 136657]]}
+{"clause_id": 159228, "parts": [["C", 136672, 136675], ["A", 136676, 136679]]}
+{"clause_id": 159235, "parts": [["C", 136711, 136712]]}
+{"clause_id": 159236, "parts": [["C", 136717, 136720]]}
+{"clause_id": 159237, "parts": [["O", 136724, 136726]]}
+{"clause_id": 159245, "parts": [["O", 136766, 136766]]}
+{"clause_id": 159248, "parts": [["C", 136795, 136795]]}
+{"clause_id": 159256, "parts": [], "note": "'O Lord GOD' is a vocative"}
+{"clause_id": 159258, "parts": [["V", 136871, 136871], ["O", 136872, 136877], ["V", 136878, 136878], ["A", 136879, 136879], ["A", 136880, 136885], ["A", 136887, 136889], ["A", 136891, 136893], ["S", 136895, 136901], ["V", 136902, 136902], ["O", 136903, 136934]], "note": "span holds 'Remember', 'look not unto' and 'Lest the land say'; the quoted 'he hath brought them out' cannot be added inside the quotation O"}
+{"clause_id": 159259, "parts": [["A", 136907, 136907], ["C", 136908, 136918]]}
+{"clause_id": 159261, "parts": [["O", 136915, 136915]]}
+{"clause_id": 159269, "parts": [["IO", 136985, 136985], ["O", 136986, 136989]]}
+{"clause_id": 159285, "parts": [["O", 137126, 137127], ["A", 137128, 137134]]}
+{"clause_id": 159289, "parts": [["A", 137164, 137165], ["A", 137166, 137167]]}
+{"clause_id": 159295, "parts": [["S", 137213, 137213], ["V", 137214, 137214], ["O", 137215, 137218], ["A", 137219, 137221], ["S", 137222, 137223], ["V", 137224, 137224], ["C", 137225, 137226], ["A", 137227, 137234]], "note": "span holds two sentences, Levi hath and the LORD is"}
+{"clause_id": 159308, "parts": [["O", 137355, 137355]]}
+{"clause_id": 159309, "parts": [["S", 137365, 137371], ["V", 137372, 137372], ["C", 137373, 137376], ["S", 137377, 137384]], "note": "second subject 'the earth also, with all that therein is' shares the elided predicate"}
+{"clause_id": 159310, "parts": [["A", 137385, 137385], ["S", 137386, 137387], ["O", 137389, 137393], ["A", 137394, 137396]]}
+{"clause_id": 159313, "parts": [["A", 137412, 137413]]}
+{"clause_id": 159316, "parts": [["A", 137449, 137449], ["O", 137450, 137450]]}
+{"clause_id": 159325, "parts": [["C", 137517, 137533]]}
+{"clause_id": 159326, "parts": [["IO", 137522, 137523]]}
+{"clause_id": 159329, "parts": [["O", 137553, 137553]]}

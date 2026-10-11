@@ -1,0 +1,68 @@
+{"clause_id": 153463, "parts": [["A", 71024, 71040]]}
+{"clause_id": 153478, "parts": [["O", 71190, 71194]]}
+{"clause_id": 153483, "parts": [["C", 71231, 71241], ["A", 71242, 71245]]}
+{"clause_id": 153499, "parts": []}
+{"clause_id": 153519, "parts": [["S", 71661, 71661], ["V", 71662, 71663], ["O", 71664, 71664], ["A", 71665, 71666]], "note": "span also holds 'it is a meat offering', which has no clause"}
+{"clause_id": 153532, "parts": [["S", 71762, 71769], ["V", 71770, 71771], ["C", 71772, 71775]], "note": "span also holds 'it is a thing most holy', which has no clause"}
+{"clause_id": 153541, "parts": [["S", 71886, 71886], ["A", 71882, 71885]], "note": "span holds three clauses; parts fit the final one"}
+{"clause_id": 153542, "parts": [["A", 71906, 71912]]}
+{"clause_id": 153546, "parts": [["S", 71929, 71929]]}
+{"clause_id": 153548, "parts": [["O", 71949, 71964], ["A", 71965, 71969]]}
+{"clause_id": 153555, "parts": [["S", 72052, 72052], ["IO", 72067, 72069], ["O", 72070, 72109]], "note": "span also holds 'it shall he take away', which has no clause"}
+{"clause_id": 153559, "parts": [], "note": "'it is an offering made by fire' has no clause"}
+{"clause_id": 153570, "parts": [["S", 72229, 72229], ["O", 72247, 72249]], "note": "span also holds 'it shall he take off', which has no clause"}
+{"clause_id": 153575, "parts": []}
+{"clause_id": 153582, "parts": [["S", 72382, 72382], ["A", 72385, 72385], ["O", 72386, 72393], ["IO", 72394, 72396], ["O", 72397, 72436]], "note": "span also holds 'it shall he take away', which has no clause"}
+{"clause_id": 153586, "parts": [], "note": "'all the fat is the LORD's' has no clause"}
+{"clause_id": 153588, "parts": [["C", 72474, 72476], ["A", 72477, 72479], ["A", 72480, 72483]]}
+{"clause_id": 153614, "parts": [["V", 72860, 72860], ["S", 72861, 72861]], "note": "span holds several clauses; existing V is only the last one"}
+{"clause_id": 153640, "parts": [["S", 73118, 73118], ["V", 73119, 73120], ["O", 73122, 73123], ["A", 73124, 73126]], "note": "'it is a sin offering' has no clause"}
+{"clause_id": 153655, "parts": [["O", 73362, 73372], ["A", 73373, 73379]]}
+{"clause_id": 153681, "parts": [["A", 73602, 73608]]}
+{"clause_id": 153684, "parts": [["O", 73633, 73634], ["A", 73635, 73641]]}
+{"clause_id": 153699, "parts": [["C", 73804, 73804], ["A", 73805, 73808]]}
+{"clause_id": 153702, "parts": [["C", 73823, 73833]]}
+{"clause_id": 153703, "parts": [["C", 73817, 73817], ["A", 73818, 73822]]}
+{"clause_id": 153706, "parts": [["O", 73838, 73840], ["IO", 73841, 73843], ["A", 73844, 73850], ["O", 73851, 73863], ["A", 73864, 73867]]}
+{"clause_id": 153707, "parts": [["O", 73873, 73874], ["A", 73875, 73876]]}
+{"clause_id": 153708, "parts": [["A", 73894, 73900]]}
+{"clause_id": 153709, "parts": [["A", 73884, 73884], ["C", 73885, 73889]]}
+{"clause_id": 153711, "parts": [["S", 73923, 73923]], "note": "existing IO 73927-73992 swallows several later clauses"}
+{"clause_id": 153713, "parts": []}
+{"clause_id": 153716, "parts": [["O", 74012, 74013], ["A", 74014, 74015], ["A", 74016, 74022]]}
+{"clause_id": 153719, "parts": [["A", 74033, 74033], ["C", 74034, 74042]]}
+{"clause_id": 153726, "parts": [["O", 74132, 74133], ["A", 74134, 74135]]}
+{"clause_id": 153729, "parts": [["C", 74159, 74160]]}
+{"clause_id": 153730, "parts": [["A", 74193, 74195], ["O", 74199, 74202], ["A", 74203, 74206], ["A", 74207, 74213], ["A", 74214, 74219], ["A", 74220, 74223]]}
+{"clause_id": 153735, "parts": [["A", 74260, 74261]]}
+{"clause_id": 153737, "parts": [["A", 74276, 74297], ["A", 74298, 74302]]}
+{"clause_id": 153740, "parts": [["O", 74316, 74319], ["A", 74327, 74330], ["IO", 74331, 74333]]}
+{"clause_id": 153743, "parts": []}
+{"clause_id": 153745, "parts": [], "note": "span holds the whole speech; 'saying' clause gets no part here"}
+{"clause_id": 153747, "parts": [["O", 74384, 74385]]}
+{"clause_id": 153755, "parts": [["V", 74440, 74440], ["A", 74441, 74442]]}
+{"clause_id": 153759, "parts": [["A", 74478, 74479]]}
+{"clause_id": 153764, "parts": [["O", 74507, 74509], ["A", 74510, 74510]]}
+{"clause_id": 153765, "parts": [["IO", 74515, 74520], ["A", 74521, 74527]]}
+{"clause_id": 153766, "parts": [["O", 74538, 74545], ["A", 74546, 74548], ["A", 74549, 74552], ["IO", 74553, 74555]]}
+{"clause_id": 153767, "parts": [["O", 74561, 74562], ["A", 74563, 74564]]}
+{"clause_id": 153779, "parts": [], "note": "'it shall not be put out' has no clause"}
+{"clause_id": 153783, "parts": [], "note": "'it shall never go out' has no clause"}
+{"clause_id": 153784, "parts": []}
+{"clause_id": 153788, "parts": [["O", 74828, 74831], ["A", 74832, 74834]]}
+{"clause_id": 153789, "parts": [["S", 74849, 74849], ["A", 74845, 74847]], "note": "span holds three clauses; 'they shall eat it' has none"}
+{"clause_id": 153791, "parts": [["S", 74876, 74876], ["V", 74877, 74878], ["O", 74879, 74879], ["IO", 74880, 74881], ["A", 74882, 74890]], "note": "'it is most holy' has no clause"}
+{"clause_id": 153793, "parts": [["S", 74897, 74899]]}
+{"clause_id": 153795, "parts": [["S", 74917, 74917], ["V", 74918, 74919], ["C", 74920, 74921], ["A", 74922, 74923], ["A", 74924, 74926], ["A", 74927, 74935]], "note": "'every one that toucheth them shall be holy' has no clause"}
+{"clause_id": 153800, "parts": [["C", 74953, 74974], ["C", 74975, 74999]]}
+{"clause_id": 153805, "parts": []}
+{"clause_id": 153807, "parts": [["S", 75052, 75052], ["V", 75053, 75053], ["C", 75054, 75055], ["A", 75056, 75057], ["S", 75061, 75061], ["V", 75062, 75063]], "note": "span holds two clauses"}
+{"clause_id": 153808, "parts": [["S", 75067, 75072], ["V", 75073, 75074], ["A", 75075, 75075], ["V", 75076, 75076], ["S", 75077, 75077], ["V", 75078, 75078], ["V", 75080, 75081]], "note": "span holds two clauses"}
+{"clause_id": 153810, "parts": [["O", 75097, 75126]]}
+{"clause_id": 153812, "parts": [["S", 75127, 75133], ["V", 75134, 75135], ["O", 75136, 75136], ["S", 75142, 75142], ["V", 75141, 75141]], "note": "span holds two clauses"}
+{"clause_id": 153816, "parts": [["A", 75168, 75171]]}
+{"clause_id": 153821, "parts": [["V", 75201, 75201]]}
+{"clause_id": 153823, "parts": [["A", 75224, 75224]]}
+{"clause_id": 153824, "parts": [["S", 75256, 75256], ["V", 75257, 75259], ["A", 75260, 75262]], "note": "span holds two clauses"}
+{"clause_id": 153825, "parts": [["A", 75233, 75233]]}
+{"clause_id": 153826, "parts": [["A", 75248, 75248]]}

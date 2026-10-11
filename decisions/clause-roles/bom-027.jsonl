@@ -1,0 +1,21 @@
+{"clause_id": 270337, "parts": [["C", 857206, 857210]]}
+{"clause_id": 234485, "parts": [["A", 857301, 857302]]}
+{"clause_id": 270341, "parts": []}
+{"clause_id": 234486, "parts": [["C", 857315, 857321]]}
+{"clause_id": 234488, "parts": [["C", 857326, 857327]]}
+{"clause_id": 234490, "parts": [["V", 857332, 857332], ["C", 857334, 857334]]}
+{"clause_id": 234492, "parts": [["C", 857346, 857346], ["IO", 857347, 857351], ["A", 857352, 857355]]}
+{"clause_id": 234494, "parts": [["C", 857372, 857372], ["A", 857373, 857375]]}
+{"clause_id": 234495, "parts": [["C", 857378, 857391]]}
+{"clause_id": 234496, "parts": [["O", 857380, 857387], ["C", 857388, 857391]]}
+{"clause_id": 234499, "parts": [["C", 857428, 857430], ["A", 857431, 857436]]}
+{"clause_id": 234500, "parts": [["S", 857433, 857436]]}
+{"clause_id": 234508, "parts": [["C", 857528, 857559], ["A", 857560, 857594]]}
+{"clause_id": 234511, "parts": [["V", 857597, 857598]]}
+{"clause_id": 234513, "parts": [], "note": "relative clause modifies the existing subject, which cannot be extended"}
+{"clause_id": 234517, "parts": [["O", 857661, 857684]]}
+{"clause_id": 234525, "parts": [["A", 857730, 857731]]}
+{"clause_id": 234528, "parts": [["O", 857744, 857744]]}
+{"clause_id": 234535, "parts": []}
+{"clause_id": 234537, "parts": []}
+{"clause_id": 234538, "parts": [["O", 857859, 857859], ["S", 857860, 857860], ["V", 857861, 857861]], "note": "which is object of caused and subject of the existing passive V"}

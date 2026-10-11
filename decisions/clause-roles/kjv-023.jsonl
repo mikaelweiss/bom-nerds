@@ -1,0 +1,81 @@
+{"clause_id": 154800, "parts": [], "note": "span runs through v5; later speech belongs to child clauses"}
+{"clause_id": 154811, "parts": [["A", 85791, 85792]]}
+{"clause_id": 154812, "parts": [["C", 85796, 85799], ["A", 85800, 85801], ["A", 85802, 85804]]}
+{"clause_id": 154814, "parts": [["A", 85811, 85853]]}
+{"clause_id": 154818, "parts": [["A", 85866, 85888]]}
+{"clause_id": 154819, "parts": [["C", 85870, 85888]]}
+{"clause_id": 154824, "parts": [["O", 85932, 85933], ["A", 85934, 85936]]}
+{"clause_id": 154849, "parts": [["S", 86187, 86187]]}
+{"clause_id": 154852, "parts": [["S", 86197, 86197], ["V", 86198, 86199], ["O", 86200, 86201], ["S", 86209, 86209], ["V", 86210, 86210], ["C", 86211, 86214]], "note": "clause span merges 'Ye shall do my judgments' and 'I am the LORD your God'"}
+{"clause_id": 154853, "parts": [["O", 86204, 86205], ["A", 86206, 86208]]}
+{"clause_id": 154855, "parts": [["O", 86219, 86233]]}
+{"clause_id": 154856, "parts": [], "note": "'which' is the object of 'do' in child c154857, which has no object"}
+{"clause_id": 154859, "parts": [["S", 86238, 86240], ["V", 86241, 86242], ["S", 86256, 86256], ["V", 86257, 86257], ["C", 86258, 86259]], "note": "clause span merges 'None of you shall approach' and 'I am the LORD'"}
+{"clause_id": 154860, "parts": [["C", 86247, 86249], ["A", 86250, 86251]]}
+{"clause_id": 154862, "parts": [["O", 86260, 86270], ["V", 86271, 86271], ["S", 86272, 86272], ["A", 86273, 86273], ["V", 86274, 86274], ["S", 86279, 86279], ["V", 86280, 86280], ["V", 86282, 86282]], "note": "clause span merges two main clauses"}
+{"clause_id": 154864, "parts": [["O", 86285, 86290], ["V", 86291, 86291], ["S", 86292, 86292], ["S", 86295, 86295], ["V", 86296, 86296], ["C", 86297, 86299]], "note": "clause span merges two main clauses"}
+{"clause_id": 154865, "parts": [["O", 86300, 86326]]}
+{"clause_id": 154868, "parts": [["S", 86345, 86345], ["V", 86346, 86346], ["V", 86348, 86348], ["S", 86350, 86350], ["V", 86351, 86351], ["C", 86352, 86354]], "note": "clause span merges two main clauses"}
+{"clause_id": 154869, "parts": [["C", 86368, 86369]], "note": "existing S 86355-86365 is the left-dislocated topic, not the subject"}
+{"clause_id": 154870, "parts": [["S", 86376, 86376], ["V", 86377, 86379], ["O", 86380, 86385], ["S", 86386, 86386], ["V", 86387, 86387], ["C", 86388, 86391]], "note": "clause span merges two main clauses"}
+{"clause_id": 154873, "parts": [["S", 86409, 86409], ["V", 86410, 86410], ["V", 86412, 86412], ["O", 86413, 86418], ["S", 86419, 86419], ["V", 86420, 86420], ["V", 86422, 86422]], "note": "clause span merges main clauses"}
+{"clause_id": 154875, "parts": [["S", 86430, 86430], ["V", 86431, 86433], ["O", 86434, 86440], ["S", 86446, 86446], ["V", 86447, 86447], ["V", 86449, 86449]]}
+{"clause_id": 154877, "parts": [["S", 86452, 86452], ["V", 86453, 86455], ["O", 86456, 86461], ["S", 86462, 86462], ["V", 86463, 86463], ["C", 86464, 86466]], "note": "clause span merges two main clauses"}
+{"clause_id": 154880, "parts": [["A", 86509, 86511]]}
+{"clause_id": 154881, "parts": [["A", 86515, 86525]]}
+{"clause_id": 154884, "parts": []}
+{"clause_id": 154888, "parts": [["O", 86582, 86586], ["S", 86587, 86587], ["V", 86588, 86588], ["C", 86589, 86590]], "note": "clause span merges 'shalt thou profane...' and 'I am the LORD'"}
+{"clause_id": 154889, "parts": [["S", 86591, 86591], ["V", 86592, 86592], ["V", 86594, 86594], ["S", 86600, 86600], ["V", 86601, 86601], ["C", 86602, 86602]], "note": "clause span merges two main clauses"}
+{"clause_id": 154902, "parts": [["S", 86742, 86742]]}
+{"clause_id": 154911, "parts": [["O", 86823, 86834]]}
+{"clause_id": 154921, "parts": [["A", 86922, 86931], ["S", 86932, 86932], ["V", 86933, 86933], ["C", 86934, 86934], ["S", 86935, 86935], ["V", 86936, 86936], ["V", 86938, 86939]], "note": "clause span merges three main clauses"}
+{"clause_id": 154929, "parts": [["S", 87000, 87000], ["V", 87001, 87001], ["V", 87003, 87003], ["S", 87015, 87015], ["V", 87016, 87017], ["O", 87018, 87018], ["A", 87019, 87023], ["S", 87024, 87024], ["V", 87025, 87025], ["C", 87026, 87029]], "note": "clause span merges several main clauses"}
+{"clause_id": 154933, "parts": [["S", 87064, 87064], ["V", 87065, 87065], ["V", 87067, 87067], ["V", 87080, 87080], ["V", 87082, 87082], ["A", 87085, 87086]], "note": "child c154934 span wrongly takes 'the wages of him that is hired' (subject of 'abide') as its Object, so no S given for 'abide'"}
+{"clause_id": 154938, "parts": [], "note": "span merges 'I am the LORD' child clause, which already has parts"}
+{"clause_id": 154943, "parts": [["S", 87170, 87170], ["V", 87171, 87173], ["O", 87174, 87175], ["A", 87176, 87178], ["S", 87179, 87179], ["V", 87180, 87180], ["A", 87181, 87183], ["V", 87184, 87184], ["O", 87185, 87186]], "note": "clause span merges two main clauses"}
+{"clause_id": 154945, "parts": [["O", 87199, 87200], ["A", 87201, 87206]]}
+{"clause_id": 154948, "parts": [["S", 87224, 87224], ["V", 87225, 87227], ["O", 87228, 87229], ["C", 87230, 87234], ["S", 87235, 87235], ["V", 87236, 87236], ["V", 87238, 87238]], "note": "clause span merges two main clauses"}
+{"clause_id": 154950, "parts": [["A", 87257, 87279], ["S", 87280, 87280], ["V", 87281, 87283], ["S", 87284, 87284], ["A", 87289, 87290], ["A", 87291, 87295]], "note": "clause span merges several main clauses; existing V 87285-87288 'shall not be put' includes 'not'"}
+{"clause_id": 154956, "parts": [["A", 87294, 87294], ["C", 87295, 87295]]}
+{"clause_id": 154962, "parts": [["A", 87360, 87376], ["A", 87377, 87377], ["S", 87378, 87378], ["O", 87381, 87383], ["A", 87384, 87385], ["A", 87386, 87387], ["V", 87388, 87388], ["S", 87389, 87389], ["V", 87390, 87390], ["C", 87391, 87392], ["A", 87393, 87394], ["S", 87395, 87395], ["V", 87396, 87396], ["V", 87398, 87399]], "note": "clause span merges three main clauses"}
+{"clause_id": 154964, "parts": [["A", 87417, 87417]]}
+{"clause_id": 154965, "parts": [["V", 87423, 87423], ["S", 87424, 87424], ["A", 87426, 87429], ["S", 87439, 87439], ["V", 87440, 87440], ["C", 87441, 87444]], "note": "clause span merges 'I am the LORD your God'"}
+{"clause_id": 154967, "parts": [["O", 87449, 87450]]}
+{"clause_id": 154972, "parts": [["S", 87480, 87480], ["O", 87484, 87485], ["A", 87486, 87488], ["S", 87498, 87498], ["V", 87499, 87499], ["C", 87500, 87501]], "note": "clause span merges 'I am the LORD'"}
+{"clause_id": 154975, "parts": [["O", 87509, 87509], ["C", 87510, 87513]]}
+{"clause_id": 154978, "parts": [["S", 87527, 87527], ["V", 87528, 87529], ["O", 87530, 87531], ["S", 87536, 87536], ["V", 87537, 87537], ["C", 87538, 87539]], "note": "clause span merges 'I am the LORD'"}
+{"clause_id": 154980, "parts": [["V", 87540, 87540], ["A", 87541, 87541], ["O", 87542, 87546], ["S", 87556, 87556], ["V", 87557, 87557], ["C", 87558, 87561]], "note": "clause span merges 'I am the LORD your God'"}
+{"clause_id": 154986, "parts": [], "note": "span merges 'I am the LORD' child clause, which already has parts"}
+{"clause_id": 154990, "parts": [["C", 87610, 87611], ["S", 87633, 87633], ["V", 87634, 87634], ["C", 87635, 87638]], "note": "clause span merges 'I am the LORD your God'"}
+{"clause_id": 154994, "parts": [["C", 87627, 87627]]}
+{"clause_id": 154999, "parts": [["A", 87716, 87739]]}
+{"clause_id": 155014, "parts": [["A", 87873, 87874], ["A", 87875, 87876]]}
+{"clause_id": 155018, "parts": [["S", 87926, 87934], ["V", 87935, 87936], ["A", 87937, 87937], ["V", 87938, 87938], ["A", 87939, 87940], ["S", 87949, 87950], ["V", 87951, 87952], ["C", 87953, 87954]], "note": "clause span merges several main clauses"}
+{"clause_id": 155021, "parts": [["O", 87960, 87960], ["A", 87961, 87964]]}
+{"clause_id": 155022, "parts": [["S", 87986, 87993], ["V", 87994, 87995], ["O", 87996, 87998], ["S", 88008, 88009], ["V", 88010, 88011], ["C", 88012, 88013]], "note": "clause span merges three main clauses"}
+{"clause_id": 155023, "parts": [["A", 88015, 88023], ["S", 88024, 88026], ["V", 88027, 88027], ["A", 88028, 88028], ["V", 88029, 88030], ["A", 88031, 88032], ["S", 88037, 88038], ["V", 88039, 88040], ["C", 88041, 88042]], "note": "clause span merges several main clauses"}
+{"clause_id": 155026, "parts": [["A", 88043, 88055], ["S", 88063, 88063], ["V", 88064, 88064], ["A", 88065, 88065], ["V", 88066, 88067], ["A", 88068, 88069], ["S", 88070, 88071], ["V", 88072, 88073], ["C", 88074, 88075]], "note": "clause span merges several main clauses"}
+{"clause_id": 155028, "parts": [["S", 88089, 88089], ["V", 88090, 88092], ["A", 88093, 88094], ["A", 88099, 88105]], "note": "clause span merges two main clauses; 'both he and they' left without a part"}
+{"clause_id": 155030, "parts": [["C", 88102, 88103]]}
+{"clause_id": 155034, "parts": [["A", 88128, 88138], ["S", 88139, 88139], ["V", 88140, 88141], ["O", 88142, 88146], ["S", 88147, 88147], ["V", 88148, 88148], ["A", 88149, 88149], ["V", 88150, 88151], ["A", 88152, 88153], ["S", 88154, 88155], ["V", 88156, 88157], ["C", 88158, 88159]], "note": "clause span merges several main clauses"}
+{"clause_id": 155037, "parts": [["A", 88161, 88183], ["S", 88184, 88184], ["V", 88185, 88185], ["C", 88186, 88188], ["S", 88190, 88190], ["V", 88191, 88193], ["A", 88195, 88200], ["S", 88201, 88201], ["V", 88202, 88203], ["O", 88204, 88206], ["S", 88207, 88207]], "note": "clause span merges several main clauses"}
+{"clause_id": 155047, "parts": [["A", 88271, 88281]]}
+{"clause_id": 155048, "parts": [["S", 88272, 88272], ["V", 88273, 88273], ["O", 88274, 88276]], "note": "clause span merges 'he uncovereth his near kin' and 'they shall bear their iniquity'"}
+{"clause_id": 155049, "parts": [["A", 88283, 88297], ["S", 88298, 88298], ["V", 88299, 88300], ["O", 88301, 88302], ["S", 88303, 88303], ["C", 88306, 88306]], "note": "clause span merges three main clauses"}
+{"clause_id": 155052, "parts": [["A", 88308, 88315], ["S", 88316, 88316], ["V", 88317, 88317], ["C", 88318, 88320], ["S", 88327, 88327], ["C", 88330, 88330]], "note": "clause span merges several main clauses"}
+{"clause_id": 155069, "parts": [["O", 88433, 88433], ["A", 88434, 88444]]}
+{"clause_id": 155070, "parts": [["O", 88450, 88451], ["C", 88452, 88452], ["A", 88453, 88477]]}
+{"clause_id": 155077, "parts": [["S", 88503, 88517], ["V", 88518, 88518], ["A", 88519, 88519], ["V", 88520, 88521], ["A", 88522, 88523], ["S", 88524, 88524], ["V", 88525, 88526], ["O", 88527, 88527], ["A", 88528, 88529], ["S", 88530, 88531], ["V", 88532, 88533], ["C", 88534, 88535]], "note": "clause span merges three main clauses"}
+{"clause_id": 155083, "parts": [["C", 88571, 88571], ["A", 88572, 88573]]}
+{"clause_id": 155085, "parts": [["O", 88609, 88610], ["A", 88611, 88612]], "note": "'for her' belongs to the next clause 'may he be defiled'"}
+{"clause_id": 155091, "parts": [["S", 88658, 88658], ["C", 88661, 88661], ["A", 88666, 88666], ["V", 88667, 88667], ["O", 88668, 88672], ["O", 88674, 88687], ["S", 88688, 88688], ["V", 88689, 88690], ["S", 88692, 88692], ["V", 88693, 88694], ["C", 88695, 88695]], "note": "clause span merges several main clauses"}
+{"clause_id": 155096, "parts": [["A", 88716, 88718]]}
+{"clause_id": 155097, "parts": [["C", 88722, 88722], ["A", 88723, 88725]]}
+{"clause_id": 155098, "parts": [["A", 88731, 88738], ["S", 88739, 88739], ["V", 88740, 88741], ["C", 88742, 88742], ["A", 88743, 88744], ["A", 88745, 88753]], "note": "clause span merges several main clauses"}
+{"clause_id": 155101, "parts": [["A", 88760, 88767], ["S", 88772, 88772], ["V", 88773, 88775], ["A", 88776, 88777]], "note": "clause span merges 'she shall be burnt with fire'"}
+{"clause_id": 155103, "parts": [["V", 88805, 88805], ["V", 88807, 88807], ["S", 88861, 88861], ["V", 88862, 88862], ["C", 88863, 88864]], "note": "clause span merges several main clauses; existing S 88779-88804 runs to the relative clause end and the verb was missing"}
+{"clause_id": 155109, "parts": [["A", 88826, 88832]]}
+{"clause_id": 155114, "parts": [["O", 88874, 88884]]}
+{"clause_id": 155119, "parts": [["C", 88932, 88934]]}
+{"clause_id": 155125, "parts": [["V", 89005, 89005]]}
+{"clause_id": 155127, "parts": [["O", 89011, 89012], ["C", 89013, 89013]]}

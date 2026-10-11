@@ -1,0 +1,71 @@
+{"clause_id": 159557, "parts": [["A", 140214, 140216]]}
+{"clause_id": 159562, "parts": [["C", 140259, 140294]]}
+{"clause_id": 159567, "parts": [["S", 140322, 140322], ["V", 140323, 140323], ["V", 140325, 140325], ["S", 140360, 140360], ["V", 140361, 140361], ["C", 140362, 140362], ["A", 140363, 140364]], "note": "clause merges 'these ye shall not eat ...' and 'therefore they are unclean unto you'"}
+{"clause_id": 159575, "parts": [["O", 140416, 140421], ["S", 140422, 140422], ["V", 140423, 140425]]}
+{"clause_id": 159577, "parts": [["C", 140441, 140524]]}
+{"clause_id": 159578, "parts": [["S", 140526, 140530], ["V", 140531, 140531], ["C", 140532, 140532], ["A", 140533, 140534], ["S", 140535, 140535], ["V", 140536, 140536], ["V", 140538, 140539]], "note": "clause merges 'every creeping thing ... is unclean unto you' and 'they shall not be eaten'"}
+{"clause_id": 159581, "parts": [["S", 140548, 140548], ["V", 140549, 140549], ["V", 140551, 140551], ["A", 140552, 140558], ["S", 140559, 140559], ["A", 140571, 140575]], "note": "clause merges 'Ye shall not eat ...' and 'thou shalt give it ...'"}
+{"clause_id": 159582, "parts": [["V", 140556, 140556]]}
+{"clause_id": 159585, "parts": [["A", 140584, 140594]]}
+{"clause_id": 159590, "parts": [["O", 140635, 140635], ["S", 140636, 140636], ["V", 140637, 140638]]}
+{"clause_id": 159594, "parts": [["C", 140682, 140685]]}
+{"clause_id": 159595, "parts": [["A", 140690, 140690], ["C", 140691, 140694]]}
+{"clause_id": 159597, "parts": [["C", 140700, 140703]]}
+{"clause_id": 159613, "parts": [["S", 140914, 140914], ["V", 140915, 140915], ["C", 140916, 140920], ["S", 140921, 140928], ["V", 140929, 140930], ["O", 140931, 140931], ["S", 140932, 140932], ["V", 140933, 140933], ["V", 140935, 140935], ["O", 140936, 140936], ["A", 140937, 140943], ["A", 140944, 140950]], "note": "clause merges four main clauses, parts added for each"}
+{"clause_id": 159617, "parts": [["S", 140967, 140968], ["A", 140971, 140979]]}
+{"clause_id": 159619, "parts": [["O", 140990, 140990]]}
+{"clause_id": 159624, "parts": [["O", 141023, 141023]], "note": "'thee' is IO but already O"}
+{"clause_id": 159631, "parts": [["C", 141071, 141093]]}
+{"clause_id": 159632, "parts": [["O", 141087, 141087], ["IO", 141093, 141093]]}
+{"clause_id": 159635, "parts": [["O", 141122, 141130]]}
+{"clause_id": 159640, "parts": [["C", 141178, 141178], ["A", 141179, 141180]]}
+{"clause_id": 159645, "parts": [["A", 141222, 141222]]}
+{"clause_id": 159651, "parts": [["A", 141291, 141298], ["S", 141299, 141299], ["V", 141300, 141300], ["V", 141302, 141302], ["C", 141304, 141306], ["S", 141307, 141307], ["V", 141308, 141309], ["O", 141310, 141310], ["A", 141311, 141311], ["A", 141312, 141325], ["A", 141326, 141335], ["S", 141336, 141336], ["V", 141337, 141338], ["IO", 141339, 141340]], "note": "clause merges three main clauses (let him go, furnish him, give unto him); 'him' after let is already O"}
+{"clause_id": 159652, "parts": [["C", 141296, 141298]]}
+{"clause_id": 159654, "parts": []}
+{"clause_id": 159655, "parts": [["C", 141348, 141349], ["A", 141350, 141354]]}
+{"clause_id": 159659, "parts": [["A", 141384, 141385]]}
+{"clause_id": 159660, "parts": [["C", 141396, 141398]]}
+{"clause_id": 287963, "parts": [["A", 141374, 141398]]}
+{"clause_id": 159664, "parts": [["C", 141443, 141445]]}
+{"clause_id": 159665, "parts": [["C", 141450, 141454], ["A", 141455, 141456]]}
+{"clause_id": 159671, "parts": [["O", 141529, 141529]], "note": "existing O thou and thy household is odd but cannot be changed"}
+{"clause_id": 159673, "parts": [["C", 141542, 141543], ["A", 141544, 141544]]}
+{"clause_id": 159676, "parts": [["S", 141567, 141567], ["S", 141574, 141579], ["V", 141580, 141581], ["O", 141582, 141582], ["A", 141583, 141583], ["A", 141584, 141590]], "note": "clause merges two main clauses"}
+{"clause_id": 159677, "parts": [["A", 141591, 141591], ["S", 141592, 141592], ["V", 141593, 141593], ["V", 141595, 141595], ["S", 141599, 141599]], "note": "clause merges 'thou shalt not eat the blood' and 'thou shalt pour it'"}
+{"clause_id": 159680, "parts": [["O", 141660, 141660], ["V", 141666, 141666], ["O", 141667, 141668]], "note": "clause span mixes 'shall choose' with 'to place his name'"}
+{"clause_id": 159681, "parts": [["S", 141670, 141670], ["V", 141671, 141672], ["O", 141673, 141675], ["A", 141676, 141677], ["A", 141678, 141679], ["V", 141680, 141680], ["S", 141681, 141681]], "note": "clause merges 'Thou shalt eat no leavened bread with it' and 'seven days shalt thou eat unleavened bread'"}
+{"clause_id": 159685, "parts": [["V", 141742, 141742], ["S", 141743, 141743], ["A", 141758, 141759]], "note": "existing S starts at 'any thing', 'there' added as S"}
+{"clause_id": 159687, "parts": [["O", 141774, 141774]], "note": "'thee' is IO but already IO"}
+{"clause_id": 159694, "parts": [["A", 141859, 141862], ["V", 141863, 141864], ["C", 141865, 141872], ["S", 141873, 141873], ["O", 141876, 141877], ["A", 141878, 141878]], "note": "clause merges 'on the seventh day shall be a solemn assembly' and 'thou shalt do no work therein'"}
+{"clause_id": 159702, "parts": [["O", 141992, 141992], ["V", 142000, 142000], ["O", 142001, 142002]], "note": "clause span mixes 'hath chosen' with 'to place his name'"}
+{"clause_id": 159703, "parts": [["C", 142011, 142012], ["A", 142013, 142014]]}
+{"clause_id": 159704, "parts": [["A", 142079, 142080], ["V", 142081, 142081], ["S", 142082, 142082], ["V", 142083, 142083], ["O", 142084, 142086], ["A", 142087, 142091], ["A", 142092, 142099], ["A", 142100, 142119], ["S", 142121, 142121], ["A", 142123, 142123], ["V", 142124, 142124]], "note": "clause merges 'Seven days shalt thou keep ...' and 'therefore thou shalt surely rejoice'"}
+{"clause_id": 159706, "parts": [["V", 142130, 142130], ["S", 142174, 142175], ["V", 142176, 142177], ["A", 142178, 142181], ["A", 142182, 142195]], "note": "clause merges verse 16 and 'Every man shall give' of verse 17"}
+{"clause_id": 159710, "parts": [["O", 142191, 142191]]}
+{"clause_id": 159711, "parts": [["O", 142196, 142198], ["S", 142200, 142200]], "note": "'thee' after make is a reflexive IO but already O"}
+{"clause_id": 159712, "parts": [["O", 142207, 142207], ["IO", 142213, 142213]]}
+{"clause_id": 159715, "parts": [["A", 142265, 142279]]}
+{"clause_id": 159716, "parts": [["C", 142260, 142261]]}
+{"clause_id": 159719, "parts": [["O", 142273, 142273]]}
+{"clause_id": 159720, "parts": [["IO", 142284, 142284]]}
+{"clause_id": 159721, "parts": [["O", 142299, 142299]]}
+{"clause_id": 159727, "parts": [["O", 142446, 142456], ["A", 142457, 142459], ["O", 142460, 142465]]}
+{"clause_id": 159732, "parts": [["O", 142394, 142410]]}
+{"clause_id": 159736, "parts": [["S", 142427, 142427], ["V", 142428, 142428], ["C", 142429, 142440]]}
+{"clause_id": 159744, "parts": [["A", 142539, 142541]]}
+{"clause_id": 159746, "parts": [["C", 142545, 142550], ["A", 142551, 142565], ["A", 142566, 142572]], "note": "existing S 'there' with real subject 'a matter' as C"}
+{"clause_id": 159754, "parts": [["IO", 142641, 142641]]}
+{"clause_id": 159757, "parts": [["O", 142662, 142662]], "note": "'thee' is IO but already O"}
+{"clause_id": 159759, "parts": [["O", 142672, 142672], ["IO", 142676, 142676]]}
+{"clause_id": 159763, "parts": [["O", 142738, 142739], ["A", 142740, 142741]]}
+{"clause_id": 159767, "parts": [["A", 142755, 142795], ["S", 142796, 142796], ["V", 142797, 142797], ["A", 142798, 142800], ["V", 142801, 142801], ["O", 142802, 142802], ["C", 142803, 142805], ["V", 142818, 142818], ["S", 142819, 142819]], "note": "clause merges several main clauses of verses 14 to 15"}
+{"clause_id": 159769, "parts": [["O", 142762, 142762]], "note": "'thee' is IO and already IO"}
+{"clause_id": 159775, "parts": [["O", 142806, 142806], ["O", 142813, 142817]]}
+{"clause_id": 159776, "parts": [["S", 142824, 142824], ["V", 142825, 142825], ["V", 142827, 142827]]}
+{"clause_id": 159779, "parts": [["O", 142847, 142848], ["C", 142849, 142852], ["A", 142853, 142876]]}
+{"clause_id": 159781, "parts": []}
+{"clause_id": 159783, "parts": [["A", 142888, 142888]]}
+{"clause_id": 159785, "parts": [["S", 142901, 142901], ["V", 142902, 142903], ["S", 142914, 142914], ["V", 142915, 142916], ["IO", 142917, 142917], ["O", 142918, 142922], ["A", 142923, 142925], ["A", 142926, 142935]], "note": "clause merges 'it shall be' and 'he shall write him a copy'"}
+{"clause_id": 159790, "parts": [["C", 142957, 142962]]}
+{"clause_id": 159791, "parts": [["O", 142965, 142973], ["A", 142974, 142976]]}

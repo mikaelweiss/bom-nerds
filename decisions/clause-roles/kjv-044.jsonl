@@ -1,0 +1,69 @@
+{"clause_id": 161173, "parts": [["O", 156838, 156838]]}
+{"clause_id": 161176, "parts": [["C", 156900, 156900], ["C", 156901, 156910]]}
+{"clause_id": 161183, "parts": [["S", 156960, 156960], ["C", 156961, 156964], ["A", 156965, 156981]]}
+{"clause_id": 161186, "parts": [["A", 157017, 157017], ["A", 157018, 157020], ["A", 157021, 157033]]}
+{"clause_id": 161188, "parts": [["O", 157039, 157040], ["C", 157041, 157041]]}
+{"clause_id": 161191, "parts": [["C", 157074, 157075], ["A", 157076, 157078]]}
+{"clause_id": 161192, "parts": []}
+{"clause_id": 161197, "parts": [["O", 157117, 157117], ["IO", 157123, 157123]]}
+{"clause_id": 161200, "parts": [["O", 157146, 157156]]}
+{"clause_id": 161204, "parts": [["O", 157185, 157185]]}
+{"clause_id": 161207, "parts": [["IO", 157222, 157222]]}
+{"clause_id": 161209, "parts": [["O", 157230, 157230]]}
+{"clause_id": 161210, "parts": [["O", 157249, 157260], ["A", 157261, 157263]]}
+{"clause_id": 161214, "parts": []}
+{"clause_id": 161215, "parts": [["S", 157287, 157287], ["V", 157288, 157288], ["A", 157289, 157290], ["A", 157291, 157293]]}
+{"clause_id": 161216, "parts": [["A", 157300, 157300], ["S", 157301, 157304]]}
+{"clause_id": 161218, "parts": [["A", 157313, 157334]]}
+{"clause_id": 161233, "parts": [["S", 157395, 157395], ["S", 157397, 157397]]}
+{"clause_id": 161243, "parts": [["A", 157458, 157458], ["O", 157459, 157470]]}
+{"clause_id": 161267, "parts": [["C", 157744, 157744]]}
+{"clause_id": 161270, "parts": [["O", 157772, 157775], ["A", 157776, 157782]]}
+{"clause_id": 161272, "parts": [], "note": "the that-clause is the real subject of 'it shall be'; no fitting role, left unassigned"}
+{"clause_id": 161283, "parts": [["S", 157880, 157880]], "note": "hast made is not covered by the existing V swear"}
+{"clause_id": 161285, "parts": [["A", 157900, 157900]]}
+{"clause_id": 161286, "parts": [["O", 157911, 157923], ["A", 157924, 157924]]}
+{"clause_id": 161289, "parts": [["S", 157958, 157965]], "note": "mirrors the S on the sibling whosoever clause"}
+{"clause_id": 288209, "parts": []}
+{"clause_id": 161291, "parts": [["V", 157988, 157989], ["C", 157990, 157990]]}
+{"clause_id": 161293, "parts": [["S", 157998, 157998]], "note": "hast made is not covered by the existing V swear"}
+{"clause_id": 161294, "parts": [["O", 158004, 158010]]}
+{"clause_id": 161306, "parts": [["A", 158074, 158079]]}
+{"clause_id": 161324, "parts": [["C", 158203, 158214]]}
+{"clause_id": 161328, "parts": [["A", 158248, 158249]]}
+{"clause_id": 161336, "parts": [["C", 158302, 158310], ["A", 158311, 158326]]}
+{"clause_id": 161352, "parts": [["IO", 158445, 158445], ["O", 158446, 158447]]}
+{"clause_id": 161353, "parts": [["A", 158466, 158496]]}
+{"clause_id": 161360, "parts": [["A", 158533, 158536]]}
+{"clause_id": 161377, "parts": [["A", 158693, 158693], ["V", 158694, 158694], ["A", 158695, 158696]]}
+{"clause_id": 161380, "parts": [["IO", 158705, 158705], ["O", 158706, 158707]]}
+{"clause_id": 161381, "parts": [["A", 158732, 158741], ["O", 158742, 158743]]}
+{"clause_id": 161385, "parts": [["O", 158768, 158779], ["A", 158780, 158783], ["A", 158784, 158785]]}
+{"clause_id": 161388, "parts": [["C", 158835, 158838], ["A", 158839, 158856]]}
+{"clause_id": 161389, "parts": [["S", 158841, 158842], ["V", 158843, 158843], ["O", 158844, 158845], ["A", 158846, 158849]]}
+{"clause_id": 161391, "parts": [], "note": "existing O 'ye' is really the subject and 'What' the object; spans cannot be changed here, so nothing added"}
+{"clause_id": 288224, "parts": [], "note": "the that-clause modifies 'every thing' (the subject); nothing to add"}
+{"clause_id": 161407, "parts": [["A", 159044, 159051]]}
+{"clause_id": 161408, "parts": [["S", 159045, 159047], ["V", 159048, 159048], ["A", 159049, 159049]]}
+{"clause_id": 161409, "parts": [["A", 159093, 159097]]}
+{"clause_id": 161415, "parts": [["IO", 159151, 159159], ["O", 159160, 159166]]}
+{"clause_id": 161420, "parts": [["A", 159184, 159238]]}
+{"clause_id": 161433, "parts": [], "note": "existing S 'What' is really the object and 'these stones' the subject; nothing added"}
+{"clause_id": 161434, "parts": [["C", 159311, 159311]]}
+{"clause_id": 161439, "parts": [["A", 159395, 159461]]}
+{"clause_id": 161445, "parts": [["IO", 159471, 159471], ["O", 159472, 159473]]}
+{"clause_id": 161447, "parts": [["IO", 159487, 159487], ["O", 159488, 159489]]}
+{"clause_id": 161449, "parts": [["C", 159505, 159521]]}
+{"clause_id": 161453, "parts": [["S", 159523, 159527]]}
+{"clause_id": 161457, "parts": [["O", 159551, 159569], ["O", 159570, 159570]]}
+{"clause_id": 161461, "parts": [["O", 159606, 159610]]}
+{"clause_id": 161467, "parts": [["O", 159645, 159653], ["O", 159654, 159654]]}
+{"clause_id": 161471, "parts": [["A", 159675, 159695]]}
+{"clause_id": 161473, "parts": [["O", 159702, 159714]]}
+{"clause_id": 161477, "parts": [["A", 159764, 159769], ["O", 159770, 159774]]}
+{"clause_id": 161483, "parts": [["S", 159840, 159840]]}
+{"clause_id": 161486, "parts": [["C", 159865, 159870]]}
+{"clause_id": 288239, "parts": []}
+{"clause_id": 161489, "parts": [["V", 159898, 159899]]}
+{"clause_id": 161491, "parts": [["O", 159904, 159904]]}
+{"clause_id": 161494, "parts": [["A", 159931, 159931]]}

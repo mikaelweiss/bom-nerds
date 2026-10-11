@@ -1,0 +1,75 @@
+{"clause_id": 158440, "parts": [["C", 128457, 128459], ["A", 128460, 128461], ["A", 128462, 128467], ["A", 128468, 128469]]}
+{"clause_id": 158441, "parts": [["A", 128475, 128482], ["A", 128483, 128489], ["A", 128541, 128545], ["C", 128548, 128626]], "note": "clause span mixes 'it came to pass' with 'Moses began'; Jordan 128540 left uncovered, cannot change existing A"}
+{"clause_id": 158443, "parts": [["O", 128550, 128551]]}
+{"clause_id": 158449, "parts": [["A", 128579, 128584], ["A", 128586, 128591], ["A", 128592, 128594], ["A", 128595, 128597], ["A", 128599, 128601], ["A", 128603, 128605], ["A", 128607, 128610], ["A", 128611, 128616], ["A", 128618, 128619], ["A", 128620, 128626]]}
+{"clause_id": 158450, "parts": [["A", 128633, 128634]]}
+{"clause_id": 158452, "parts": [["IO", 128645, 128651]]}
+{"clause_id": 158455, "parts": [["A", 128673, 128673], ["C", 128674, 128679]]}
+{"clause_id": 158458, "parts": [["C", 128693, 128697], ["A", 128698, 128699]]}
+{"clause_id": 158459, "parts": [["O", 128707, 128707], ["C", 128708, 128716]]}
+{"clause_id": 158466, "parts": [["C", 128755, 128757]]}
+{"clause_id": 158469, "parts": [["C", 128771, 128775]]}
+{"clause_id": 158473, "parts": [["O", 128790, 128790], ["C", 128791, 128813]]}
+{"clause_id": 158479, "parts": [["A", 128873, 128877]]}
+{"clause_id": 158482, "parts": [["C", 128883, 128886]]}
+{"clause_id": 158493, "parts": [["A", 129000, 129000]], "note": "clause span covers whole verse but only has V fear; the 'hath set' and 'go up and possess' parts cannot be added"}
+{"clause_id": 158511, "parts": [["O", 129116, 129116]]}
+{"clause_id": 158521, "parts": [["C", 129191, 129195]]}
+{"clause_id": 158525, "parts": [["A", 129239, 129240]], "note": "existing S 'he' leaves 'The LORD your God which goeth before you' without a part"}
+{"clause_id": 158530, "parts": [["A", 129309, 129319], ["A", 129320, 129323], ["A", 129324, 129332], ["A", 129334, 129338]]}
+{"clause_id": 158534, "parts": [["O", 129394, 129400], ["IO", 129402, 129404]]}
+{"clause_id": 158535, "parts": [["A", 129400, 129400]]}
+{"clause_id": 158537, "parts": [["C", 129416, 129418]]}
+{"clause_id": 158539, "parts": [["A", 129429, 129429]]}
+{"clause_id": 158540, "parts": [["A", 129444, 129444]], "note": "'Joshua the son of Nun' cannot be added because S 'he' exists"}
+{"clause_id": 158543, "parts": [["O", 129451, 129451], ["C", 129452, 129454]]}
+{"clause_id": 158544, "parts": [], "note": "preposed topic 'your little ones...' is resumed by S 'they'; parser 1 span is not an adverbial"}
+{"clause_id": 158553, "parts": [["O", 129539, 129539], ["IO", 129545, 129545]]}
+{"clause_id": 158580, "parts": [["S", 129731, 129731], ["O", 129732, 129733]]}
+{"clause_id": 158582, "parts": [["C", 129737, 129752]]}
+{"clause_id": 158593, "parts": [["A", 129868, 129878], ["A", 129879, 129884], ["A", 129885, 129886], ["A", 129888, 129889]]}
+{"clause_id": 158595, "parts": [["O", 129908, 129942]]}
+{"clause_id": 158597, "parts": [["A", 129927, 129929]]}
+{"clause_id": 158599, "parts": [["C", 129964, 129964]]}
+{"clause_id": 158607, "parts": [], "note": "'said I' is a parenthetical, no part"}
+{"clause_id": 158608, "parts": [], "note": "existing A 'over the brook' should extend to Zered 130027; cannot change span"}
+{"clause_id": 158610, "parts": [["C", 130053, 130056], ["A", 130057, 130078]]}
+{"clause_id": 158617, "parts": [["A", 130105, 130118]]}
+{"clause_id": 158621, "parts": [["A", 130131, 130136]]}
+{"clause_id": 158622, "parts": [["A", 130143, 130149]]}
+{"clause_id": 158626, "parts": [["C", 130190, 130193]]}
+{"clause_id": 158630, "parts": [["A", 130244, 130251]]}
+{"clause_id": 158637, "parts": [["C", 130319, 130327]], "note": "span also holds 'Rise ye up, take your journey, behold I have given', which cannot be added to this clause"}
+{"clause_id": 158645, "parts": [["A", 130384, 130387]]}
+{"clause_id": 158647, "parts": [["V", 130389, 130389], ["O", 130390, 130390], ["C", 130391, 130394], ["S", 130403, 130403], ["V", 130404, 130404], ["A", 130412, 130414]], "note": "clause merges 'Let me pass through thy land' with 'I will neither turn'; existing V is 'turn'"}
+{"clause_id": 158649, "parts": [["V", 130427, 130427], ["IO", 130428, 130428], ["O", 130429, 130429], ["A", 130430, 130431], ["A", 130432, 130435], ["S", 130437, 130437], ["V", 130438, 130439], ["A", 130441, 130443], ["A", 130444, 130478]], "note": "clause merges 'give me water' and 'only I will pass through' into the first sentence"}
+{"clause_id": 158656, "parts": [["O", 130472, 130472]]}
+{"clause_id": 158662, "parts": [["A", 130547, 130548]]}
+{"clause_id": 158668, "parts": [["O", 130604, 130604], ["C", 130605, 130625]]}
+{"clause_id": 158669, "parts": [["O", 130608, 130625]]}
+{"clause_id": 158672, "parts": [["C", 130653, 130658]]}
+{"clause_id": 158675, "parts": [["IO", 130665, 130666]]}
+{"clause_id": 158676, "parts": [["IO", 130702, 130702]]}
+{"clause_id": 158678, "parts": [["A", 130709, 130712]]}
+{"clause_id": 158679, "parts": [], "note": "'he and all his people' is apposition to Og, no part"}
+{"clause_id": 158680, "parts": [["O", 130738, 130774]]}
+{"clause_id": 158683, "parts": [["A", 130762, 130774]]}
+{"clause_id": 158688, "parts": [["S", 130806, 130806], ["S", 130814, 130814], ["V", 130815, 130815], ["A", 130816, 130816], ["C", 130817, 130837]], "note": "clause merges 'we took all his cities' with 'there was not a city ...'"}
+{"clause_id": 158689, "parts": [["A", 130843, 130848], ["A", 130849, 130854]]}
+{"clause_id": 158691, "parts": [["IO", 130863, 130867]]}
+{"clause_id": 158693, "parts": [["O", 130879, 130887]]}
+{"clause_id": 158694, "parts": [["A", 130901, 130911], ["O", 130912, 130919], ["A", 130920, 130924], ["A", 130925, 130927]]}
+{"clause_id": 158697, "parts": [["C", 131003, 131006], ["A", 131007, 131012]]}
+{"clause_id": 158698, "parts": [["S", 131039, 131039]], "note": "existing S is the fronted object 'this land ...'; real subject is I 131039, cannot change existing S"}
+{"clause_id": 158699, "parts": [["S", 131061, 131061], ["IO", 131062, 131067]], "note": "existing S is the fronted object 'the rest of Gilead ...'; real subject is I 131061"}
+{"clause_id": 158704, "parts": [["A", 131130, 131134], ["O", 131135, 131140], ["A", 131141, 131154], ["O", 131155, 131163], ["A", 131164, 131176], ["A", 131177, 131179]]}
+{"clause_id": 158709, "parts": [["C", 131215, 131218]]}
+{"clause_id": 158713, "parts": [["O", 131242, 131242]]}
+{"clause_id": 158717, "parts": [["O", 131288, 131288]]}
+{"clause_id": 158722, "parts": [["A", 131334, 131343]]}
+{"clause_id": 158725, "parts": [["C", 131359, 131368], ["A", 131369, 131390]]}
+{"clause_id": 158727, "parts": [], "note": "bare prepositional phrase, verb 'do' is elided in the parent"}
+{"clause_id": 158728, "parts": [["O", 131393, 131393]]}
+{"clause_id": 158731, "parts": [["C", 131416, 131418]]}
+{"clause_id": 158734, "parts": [["C", 131435, 131436], ["V", 131437, 131437], ["A", 131438, 131439], ["IO", 131440, 131441], ["A", 131442, 131444]], "note": "clause merges 'Let it suffice thee' with 'speak no more unto me'"}
+{"clause_id": 158741, "parts": [["O", 131500, 131500], ["C", 131501, 131508]]}

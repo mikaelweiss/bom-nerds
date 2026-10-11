@@ -1,0 +1,81 @@
+{"clause_id": 168917, "parts": [["O", 226822, 226838]]}
+{"clause_id": 168921, "parts": [["V", 226846, 226846], ["O", 226847, 226852], ["A", 226853, 226858]], "note": "span also holds 'do all that is in thine heart'; added as a second V"}
+{"clause_id": 168934, "parts": [["S", 226959, 226959]]}
+{"clause_id": 168936, "parts": [["S", 226969, 226969]]}
+{"clause_id": 168940, "parts": [["C", 227013, 227014]]}
+{"clause_id": 168943, "parts": [["IO", 227032, 227032], ["O", 227033, 227035]]}
+{"clause_id": 168945, "parts": [["IO", 227055, 227058]]}
+{"clause_id": 168957, "parts": [["A", 227165, 227167]]}
+{"clause_id": 168963, "parts": [["A", 227219, 227220]]}
+{"clause_id": 168966, "parts": [["S", 227234, 227238], ["V", 227239, 227241], ["A", 227242, 227243], ["A", 227244, 227245]], "note": "span also holds 'thine house and thy kingdom shall be established ...'; added as a second S and V"}
+{"clause_id": 168974, "parts": [["A", 227303, 227303], ["C", 227304, 227306], ["A", 227307, 227309]], "note": "vocative 'O Lord GOD' left without a part"}
+{"clause_id": 168977, "parts": []}
+{"clause_id": 168979, "parts": [["S", 227347, 227347]], "note": "'Lord GOD' treated as vocative"}
+{"clause_id": 168981, "parts": [["O", 227372, 227373], ["C", 227374, 227375]]}
+{"clause_id": 168986, "parts": [["IO", 227439, 227440]]}
+{"clause_id": 168987, "parts": [["A", 227454, 227455]]}
+{"clause_id": 168990, "parts": [], "note": "'the word that thou hast spoken ...' is a fronted topic resumed by the existing O 'it'; no part fits"}
+{"clause_id": 168992, "parts": [["O", 227504, 227505]], "note": "existing V 'concerning' is a preposition"}
+{"clause_id": 169000, "parts": [["A", 227582, 227582], ["S", 227586, 227586], ["V", 227587, 227587], ["C", 227588, 227589], ["S", 227591, 227592], ["V", 227593, 227593], ["C", 227594, 227594], ["A", 227605, 227605], ["V", 227606, 227606], ["O", 227607, 227607], ["C", 227608, 227616], ["A", 227617, 227624], ["A", 227625, 227632]], "note": "span holds several clauses with no parts of its own; added as repeated S and V"}
+{"clause_id": 169024, "parts": [["C", 227805, 227807]]}
+{"clause_id": 169031, "parts": [["O", 227871, 227873], ["IO", 227874, 227876]]}
+{"clause_id": 169043, "parts": [["A", 227998, 228000], ["V", 228001, 228001], ["S", 228002, 228002], ["O", 228003, 228003]], "note": "span also holds 'put he garrisons'; added as a second V and S"}
+{"clause_id": 169053, "parts": [["A", 228099, 228099], ["C", 228100, 228117]]}
+{"clause_id": 169055, "parts": [["C", 228126, 228131]]}
+{"clause_id": 169057, "parts": [["A", 228133, 228139]]}
+{"clause_id": 169061, "parts": [["A", 228162, 228162], ["C", 228163, 228178]]}
+{"clause_id": 169064, "parts": [["A", 228187, 228187], ["O", 228188, 228195]]}
+{"clause_id": 169065, "parts": [["C", 228192, 228195]]}
+{"clause_id": 169067, "parts": [["C", 228202, 228202]]}
+{"clause_id": 169076, "parts": [["O", 228282, 228315]]}
+{"clause_id": 169077, "parts": [["A", 228291, 228295]]}
+{"clause_id": 169088, "parts": [["IO", 228379, 228380]]}
+{"clause_id": 169089, "parts": [["O", 228386, 228387], ["A", 228388, 228396]]}
+{"clause_id": 169094, "parts": [["O", 228423, 228439]]}
+{"clause_id": 169097, "parts": [["A", 228440, 228442], ["S", 228444, 228445]]}
+{"clause_id": 169105, "parts": [["C", 228497, 228501]]}
+{"clause_id": 169113, "parts": [["A", 228558, 228560]]}
+{"clause_id": 169115, "parts": [["O", 228586, 228600]]}
+{"clause_id": 169125, "parts": [["C", 228668, 228669]]}
+{"clause_id": 169140, "parts": [["C", 228794, 228795], ["A", 228796, 228798]]}
+{"clause_id": 169143, "parts": [["C", 228850, 228853]]}
+{"clause_id": 169145, "parts": [["C", 228866, 228869]]}
+{"clause_id": 169148, "parts": [["IO", 228904, 228904], ["C", 228905, 228905]], "note": "'seemeth him good' read as it seems good to him"}
+{"clause_id": 169149, "parts": [["A", 228909, 228909], ["S", 228911, 228916], ["A", 228917, 228922]], "note": "second S is the coordinated subject 'the people that were with him'"}
+{"clause_id": 169172, "parts": [["O", 229092, 229092], ["A", 229093, 229094]]}
+{"clause_id": 169189, "parts": [["C", 229195, 229199]]}
+{"clause_id": 169216, "parts": [["O", 229337, 229337]]}
+{"clause_id": 169231, "parts": [["V", 229453, 229453]]}
+{"clause_id": 169235, "parts": [["O", 229509, 229509], ["C", 229510, 229510]]}
+{"clause_id": 169238, "parts": [["A", 229530, 229530], ["A", 229532, 229534]]}
+{"clause_id": 169242, "parts": [["A", 229561, 229563]]}
+{"clause_id": 169244, "parts": [["S", 229566, 229566]]}
+{"clause_id": 169248, "parts": [["A", 229592, 229596]]}
+{"clause_id": 169257, "parts": [["O", 229658, 229699]]}
+{"clause_id": 169258, "parts": [["O", 229662, 229673]]}
+{"clause_id": 169262, "parts": [["S", 229701, 229701]]}
+{"clause_id": 169267, "parts": [["S", 229739, 229739]]}
+{"clause_id": 169268, "parts": [["S", 229745, 229745], ["O", 229746, 229753]]}
+{"clause_id": 169269, "parts": [["C", 229752, 229752], ["A", 229753, 229753]]}
+{"clause_id": 169280, "parts": [["C", 229828, 229828], ["A", 229829, 229829]]}
+{"clause_id": 169283, "parts": [["S", 229870, 229870], ["O", 229871, 229871]]}
+{"clause_id": 169297, "parts": [["C", 229942, 229943], ["A", 229944, 229946], ["S", 229947, 229948], ["C", 229949, 229949]], "note": "span also holds 'the one rich' with no verb; added as S and C"}
+{"clause_id": 169304, "parts": [["IO", 230042, 230050]]}
+{"clause_id": 169307, "parts": [["IO", 230060, 230067]]}
+{"clause_id": 169318, "parts": [["C", 230121, 230122]]}
+{"clause_id": 169319, "parts": [["C", 230133, 230135]]}
+{"clause_id": 169335, "parts": [["O", 230266, 230305]], "note": "first quoted sentence 'I will raise up evil against thee' has no clause of its own and cannot get parts inside the O"}
+{"clause_id": 169344, "parts": [["A", 230353, 230369]]}
+{"clause_id": 169350, "parts": [["A", 230408, 230410]]}
+{"clause_id": 169358, "parts": [["A", 230458, 230461]]}
+{"clause_id": 169365, "parts": [["C", 230488, 230489]]}
+{"clause_id": 169368, "parts": [["IO", 230511, 230511]]}
+{"clause_id": 169370, "parts": [], "note": "parser 1 O covers the sibling clause 'therefore David said ...'; nothing more fits"}
+{"clause_id": 169378, "parts": [["A", 230548, 230548], ["V", 230564, 230564], ["A", 230565, 230570], ["A", 230573, 230573], ["S", 230574, 230574], ["V", 230575, 230575], ["A", 230576, 230579]], "note": "span also holds 'came into the house of the LORD' and 'then he came to his own house'; added as repeated V and S"}
+{"clause_id": 169387, "parts": [["C", 230599, 230600], ["S", 230602, 230606]]}
+{"clause_id": 169393, "parts": [["O", 230634, 230661]]}
+{"clause_id": 169398, "parts": [["C", 230654, 230656], ["A", 230657, 230661]]}
+{"clause_id": 169402, "parts": []}
+{"clause_id": 169426, "parts": [["S", 230832, 230834], ["V", 230835, 230835], ["C", 230836, 230843]], "note": "span also holds 'the weight whereof was a talent of gold ...'; added as a second S and V"}
+{"clause_id": 169430, "parts": [["C", 230871, 230871]]}
+{"clause_id": 169432, "parts": [["O", 230889, 230889], ["C", 230890, 230893]]}

@@ -1,0 +1,50 @@
+{"clause_id": 160703, "parts": [["O", 151831, 151869]]}
+{"clause_id": 160704, "parts": [["O", 151859, 151859]]}
+{"clause_id": 160705, "parts": [["O", 151877, 151888], ["A", 151889, 151891]]}
+{"clause_id": 160708, "parts": [["V", 151904, 151904], ["V", 151906, 151906]]}
+{"clause_id": 160710, "parts": [["C", 151916, 151916], ["A", 151917, 151919]]}
+{"clause_id": 160719, "parts": [["A", 152007, 152015]]}
+{"clause_id": 160722, "parts": [["A", 152023, 152027], ["S", 152028, 152068]], "note": "list of captains, elders, little ones and so on is appositive to 'Ye', added as a second S"}
+{"clause_id": 160723, "parts": [["V", 152071, 152072]]}
+{"clause_id": 160729, "parts": [["A", 152169, 152169], ["C", 152170, 152170], ["A", 152171, 152172]]}
+{"clause_id": 160732, "parts": [["O", 152194, 152194]]}
+{"clause_id": 160735, "parts": [["V", 152252, 152253], ["A", 152254, 152255]]}
+{"clause_id": 288100, "parts": [["A", 152268, 152301]]}
+{"clause_id": 160746, "parts": [["S", 152349, 152350], ["V", 152351, 152352], ["O", 152353, 152353], ["A", 152354, 152355], ["A", 152356, 152362], ["A", 152363, 152379], ["S", 152382, 152404], ["V", 152405, 152406], ["A", 152407, 152424], ["O", 152425, 152469], ["O", 152475, 152483]], "note": "clause merges 'the LORD shall separate him' and two 'shall say' clauses; existing parts left as is"}
+{"clause_id": 160769, "parts": [["A", 152599, 152600]]}
+{"clause_id": 160776, "parts": [["O", 152726, 152726], ["A", 152727, 152728]]}
+{"clause_id": 160785, "parts": [["IO", 152800, 152800], ["O", 152801, 152801]]}
+{"clause_id": 160789, "parts": [["V", 152840, 152841]]}
+{"clause_id": 160796, "parts": [["O", 152880, 152880]], "note": "existing O 'thee' is really the indirect object; cannot change"}
+{"clause_id": 160797, "parts": [["O", 152893, 152893], ["C", 152894, 152894], ["A", 152895, 152900], ["A", 152901, 152906], ["A", 152908, 152913], ["A", 152915, 152920]]}
+{"clause_id": 160803, "parts": [["O", 152988, 152988]], "note": "existing O 'thee' is really the indirect object; cannot change"}
+{"clause_id": 160804, "parts": [["C", 153003, 153004]]}
+{"clause_id": 160805, "parts": [["A", 153010, 153034]]}
+{"clause_id": 160807, "parts": [["A", 153018, 153019]]}
+{"clause_id": 160808, "parts": [["A", 153027, 153034]]}
+{"clause_id": 160811, "parts": [["A", 153041, 153065]]}
+{"clause_id": 160812, "parts": [["V", 153043, 153044]]}
+{"clause_id": 160813, "parts": [["A", 153051, 153052]]}
+{"clause_id": 160814, "parts": [["A", 153058, 153065]]}
+{"clause_id": 160817, "parts": [["C", 153070, 153073], ["A", 153081, 153085]]}
+{"clause_id": 160819, "parts": [["S", 153087, 153087], ["V", 153088, 153089], ["A", 153090, 153091], ["A", 153092, 153093], ["O", 153094, 153100], ["A", 153101, 153135]], "note": "'See' has the whole statement as its content; parts given for the embedded 'I have set' statement. Existing V 'See' left as is"}
+{"clause_id": 160820, "parts": [["A", 153114, 153118], ["V", 153121, 153121], ["O", 153122, 153129], ["A", 153130, 153135]]}
+{"clause_id": 160851, "parts": [["S", 153373, 153373]], "note": "'Joshua' is a left-dislocated subject repeated by 'he', added as a second S"}
+{"clause_id": 160854, "parts": [["IO", 153395, 153412]]}
+{"clause_id": 160856, "parts": [["A", 153423, 153438]]}
+{"clause_id": 160858, "parts": [["O", 153434, 153434]]}
+{"clause_id": 160860, "parts": [["S", 153461, 153461]]}
+{"clause_id": 160865, "parts": [["O", 153521, 153521], ["C", 153522, 153524]]}
+{"clause_id": 160866, "parts": [["S", 153526, 153529], ["C", 153531, 153535], ["S", 153536, 153536], ["V", 153537, 153538], ["C", 153539, 153540], ["V", 153552, 153553]], "note": "clause merges several coordinate clauses; existing parts left as is"}
+{"clause_id": 160872, "parts": [["O", 153591, 153640]]}
+{"clause_id": 160890, "parts": [["O", 153726, 153750]]}
+{"clause_id": 160910, "parts": [["A", 153890, 153890]]}
+{"clause_id": 160915, "parts": [["A", 153936, 153937], ["V", 153939, 153939], ["O", 153940, 153940], ["IO", 153941, 153944], ["V", 153945, 153945], ["O", 153946, 153946], ["A", 153947, 153949], ["A", 153950, 153963]], "note": "existing IO 'ye' is really the subject; cannot change"}
+{"clause_id": 160916, "parts": [["C", 153955, 153958]]}
+{"clause_id": 160920, "parts": [["C", 153996, 153996]]}
+{"clause_id": 160924, "parts": [["S", 154029, 154030], ["V", 154031, 154032], ["A", 154033, 154034], ["A", 154035, 154037], ["A", 154038, 154050], ["A", 154051, 154072]]}
+{"clause_id": 160928, "parts": [["O", 154056, 154056]]}
+{"clause_id": 160933, "parts": [["IO", 154091, 154095]]}
+{"clause_id": 160947, "parts": [["C", 154262, 154265]]}
+{"clause_id": 160949, "parts": [["A", 154281, 154288]]}
+{"clause_id": 160950, "parts": [["O", 154284, 154284]], "note": "existing O 'you' is really the indirect object; cannot change"}

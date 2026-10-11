@@ -1,0 +1,33 @@
+{"clause_id": 217335, "parts": [["A", 692993, 692995]]}
+{"clause_id": 217340, "parts": [["A", 693029, 693029], ["O", 693030, 693034]]}
+{"clause_id": 217363, "parts": [["A", 693193, 693203], ["A", 693204, 693210]]}
+{"clause_id": 217368, "parts": [["A", 693234, 693234], ["O", 693235, 693239]]}
+{"clause_id": 217374, "parts": [["IO", 693263, 693264]]}
+{"clause_id": 217376, "parts": [["O", 693269, 693269]]}
+{"clause_id": 217377, "parts": [], "note": "existing O parts look odd (if-clause and tell-me clause both O); cannot change"}
+{"clause_id": 217381, "parts": []}
+{"clause_id": 217383, "parts": [["O", 693314, 693319]]}
+{"clause_id": 217384, "parts": [["C", 693317, 693319]]}
+{"clause_id": 217402, "parts": [["O", 693456, 693470]]}
+{"clause_id": 217425, "parts": [["O", 693642, 693646]]}
+{"clause_id": 217426, "parts": [["O", 693652, 693670]]}
+{"clause_id": 217430, "parts": [["S", 693684, 693684], ["V", 693685, 693687], ["A", 693688, 693690]], "note": "relative clause which are not written has no clause of its own; parts added here"}
+{"clause_id": 217431, "parts": [["A", 693695, 693717]]}
+{"clause_id": 217433, "parts": [["A", 693710, 693710]]}
+{"clause_id": 217434, "parts": [["C", 693743, 693765]]}
+{"clause_id": 217436, "parts": [["A", 693773, 693774]]}
+{"clause_id": 217447, "parts": []}
+{"clause_id": 217452, "parts": [["A", 693860, 693860], ["C", 693861, 693869]]}
+{"clause_id": 217462, "parts": [["A", 693920, 693933], ["A", 693934, 693938]]}
+{"clause_id": 217463, "parts": [["O", 693935, 693938]]}
+{"clause_id": 217482, "parts": []}
+{"clause_id": 217486, "parts": [["A", 694108, 694110], ["O", 694111, 694117]]}
+{"clause_id": 217489, "parts": []}
+{"clause_id": 217497, "parts": [["S", 694163, 694163], ["O", 694164, 694164]]}
+{"clause_id": 217509, "parts": [["S", 694232, 694232], ["A", 694233, 694240]], "note": "existing S This is really the object; cannot change"}
+{"clause_id": 217514, "parts": []}
+{"clause_id": 217522, "parts": [["S", 694299, 694299], ["O", 694301, 694303]]}
+{"clause_id": 217524, "parts": [["S", 694313, 694313]]}
+{"clause_id": 217526, "parts": [["S", 694341, 694341], ["V", 694342, 694342], ["A", 694346, 694348]]}
+{"clause_id": 283039, "parts": []}
+{"clause_id": 217533, "parts": [["A", 694378, 694378], ["C", 694379, 694384], ["A", 694387, 694393], ["S", 694394, 694394], ["V", 694395, 694395], ["O", 694396, 694409]]}

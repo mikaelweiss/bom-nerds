@@ -1,0 +1,59 @@
+{"clause_id": 159331, "parts": [["O", 137665, 137670], ["C", 137671, 137673], ["A", 137674, 137678]]}
+{"clause_id": 159341, "parts": [["A", 137804, 137829]]}
+{"clause_id": 159345, "parts": [["C", 137878, 137883]], "note": "text after 'drinketh water' (a land which the LORD careth for ... eyes of the LORD) has no part"}
+{"clause_id": 159353, "parts": [["O", 137969, 137973], ["A", 137974, 137977], ["A", 137985, 137997]], "note": "apposition 'the first rain and the latter rain' left without a part"}
+{"clause_id": 159355, "parts": [["A", 138006, 138008]]}
+{"clause_id": 159361, "parts": [["C", 138055, 138056]]}
+{"clause_id": 159364, "parts": [["O", 138075, 138075]]}
+{"clause_id": 159365, "parts": [["S", 138082, 138082]]}
+{"clause_id": 159368, "parts": [["O", 138117, 138117]], "note": "'them' is the thing taught, 'your children' should be IO but is already O"}
+{"clause_id": 159375, "parts": [["O", 138200, 138206], ["A", 138207, 138226]]}
+{"clause_id": 159379, "parts": [["C", 138261, 138261], ["A", 138262, 138266], ["A", 138267, 138277], ["V", 138278, 138278], ["S", 138279, 138280], ["V", 138281, 138281]], "note": "second clause 'shall your coast be' is not a child clause"}
+{"clause_id": 159380, "parts": [["A", 138251, 138251]]}
+{"clause_id": 159386, "parts": [["O", 138330, 138334]]}
+{"clause_id": 159388, "parts": [["O", 138347, 138347]], "note": "'you' is IO but already O"}
+{"clause_id": 159393, "parts": [["A", 138397, 138414]]}
+{"clause_id": 159396, "parts": [["A", 138421, 138423], ["O", 138425, 138426], ["A", 138427, 138429]]}
+{"clause_id": 159397, "parts": [["C", 138433, 138437], ["A", 138438, 138464]]}
+{"clause_id": 159402, "parts": [["O", 138478, 138478]]}
+{"clause_id": 159409, "parts": [["S", 138518, 138518], ["A", 138521, 138546]]}
+{"clause_id": 159410, "parts": [["O", 138526, 138526]], "note": "'thee' is IO but already O"}
+{"clause_id": 159421, "parts": [["A", 138625, 138648]]}
+{"clause_id": 159426, "parts": [["S", 138728, 138728]]}
+{"clause_id": 159428, "parts": [["O", 138765, 138765], ["IO", 138771, 138771]]}
+{"clause_id": 159429, "parts": [["V", 138788, 138788], ["IO", 138789, 138789]], "note": "existing V is only 'inherit'"}
+{"clause_id": 159433, "parts": [["O", 138825, 138826], ["C", 138827, 138829]]}
+{"clause_id": 159434, "parts": [["O", 138835, 138835], ["IO", 138838, 138838]]}
+{"clause_id": 159436, "parts": [["A", 138869, 138873]]}
+{"clause_id": 159438, "parts": [["O", 138899, 138902], ["A", 138903, 138904]]}
+{"clause_id": 159439, "parts": [["O", 138906, 138906], ["A", 138907, 138908], ["A", 138909, 138952]]}
+{"clause_id": 159446, "parts": [["A", 139000, 139000], ["S", 139001, 139001], ["V", 139002, 139004], ["O", 139005, 139006], ["S", 139007, 139007]], "note": "clause merges 'ye shall not eat the blood' and 'ye shall pour it'"}
+{"clause_id": 159447, "parts": [["S", 139052, 139052]]}
+{"clause_id": 159450, "parts": [["A", 139121, 139121]]}
+{"clause_id": 159451, "parts": [["A", 139126, 139139]]}
+{"clause_id": 159460, "parts": [["C", 139194, 139197]]}
+{"clause_id": 159466, "parts": [["A", 139232, 139245], ["A", 139253, 139254]]}
+{"clause_id": 159469, "parts": [["S", 139281, 139281], ["V", 139282, 139284], ["O", 139285, 139285], ["S", 139286, 139286]], "note": "clause merges 'Thou shalt not eat it' and 'thou shalt pour it'"}
+{"clause_id": 159473, "parts": [["C", 139320, 139320], ["A", 139321, 139326]]}
+{"clause_id": 159474, "parts": [["A", 139327, 139327], ["O", 139328, 139336], ["S", 139337, 139337]]}
+{"clause_id": 159482, "parts": [["C", 139425, 139427], ["A", 139428, 139435]]}
+{"clause_id": 159483, "parts": [["A", 139468, 139499]]}
+{"clause_id": 159488, "parts": [["A", 139489, 139491]]}
+{"clause_id": 159491, "parts": [["A", 139500, 139501]]}
+{"clause_id": 159492, "parts": [["A", 139516, 139546]], "note": "the 'for' clauses are not separate clauses, so they are one adverbial"}
+{"clause_id": 159505, "parts": [["A", 139639, 139656]]}
+{"clause_id": 159515, "parts": [["A", 139706, 139728], ["A", 139729, 139745]]}
+{"clause_id": 159518, "parts": [["A", 139736, 139736], ["S", 139737, 139740], ["V", 139741, 139741], ["IO", 139742, 139742]], "note": "clause span mixes 'commanded thee' with 'to walk in', existing V is only 'walk'"}
+{"clause_id": 159519, "parts": [["A", 139753, 139757]]}
+{"clause_id": 159520, "parts": [["O", 139788, 139788]], "note": "clause span covers many main clauses (thou shalt not consent, thou shalt kill him, etc.) that are not child clauses; only the entice parts were added"}
+{"clause_id": 159522, "parts": [["S", 139814, 139814], ["A", 139816, 139818], ["C", 139819, 139826], ["A", 139827, 139841]]}
+{"clause_id": 159528, "parts": [["A", 139911, 139929]]}
+{"clause_id": 159534, "parts": [["O", 139960, 139960], ["IO", 139967, 139967], ["A", 139968, 139970]]}
+{"clause_id": 159541, "parts": [["O", 140011, 140011]]}
+{"clause_id": 159545, "parts": [["C", 140054, 140054]]}
+{"clause_id": 159547, "parts": [["A", 140095, 140099]]}
+{"clause_id": 159548, "parts": [["A", 140106, 140107], ["S", 140108, 140108], ["V", 140109, 140112], ["A", 140113, 140113]], "note": "clause merges 'it shall be an heap' and 'it shall not be built again'"}
+{"clause_id": 159549, "parts": [["O", 140118, 140122], ["A", 140126, 140192]]}
+{"clause_id": 159551, "parts": [["O", 140143, 140143], ["A", 140144, 140145]]}
+{"clause_id": 159554, "parts": [["O", 140170, 140178], ["A", 140179, 140192]]}
+{"clause_id": 159556, "parts": [["C", 140184, 140184], ["A", 140185, 140192]]}

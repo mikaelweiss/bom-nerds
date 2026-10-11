@@ -1,0 +1,79 @@
+{"clause_id": 211944, "parts": [["C", 655086, 655092]]}
+{"clause_id": 211954, "parts": [["A", 655151, 655155]], "note": "not/lawful/to eat lie inside child c211955 and cannot be added here"}
+{"clause_id": 211960, "parts": [["C", 655192, 655198]]}
+{"clause_id": 211973, "parts": [["S", 655269, 655275]]}
+{"clause_id": 211979, "parts": [["A", 655286, 655286]]}
+{"clause_id": 211982, "parts": [["C", 655308, 655308], ["A", 655309, 655311]]}
+{"clause_id": 211990, "parts": [["O", 655370, 655417]]}
+{"clause_id": 211998, "parts": [], "note": "expletive there; real subject already present"}
+{"clause_id": 212002, "parts": [["C", 655510, 655510], ["V", 655511, 655511], ["S", 655512, 655513], ["C", 655515, 655515]], "note": "'Blessed be ye poor' has no clause of its own; parts added here"}
+{"clause_id": 212003, "parts": [["C", 655521, 655521], ["V", 655522, 655522], ["S", 655523, 655531]]}
+{"clause_id": 212004, "parts": [["S", 655524, 655524], ["V", 655525, 655525], ["A", 655526, 655526], ["S", 655528, 655528]]}
+{"clause_id": 212005, "parts": [["C", 655532, 655532], ["V", 655533, 655533]]}
+{"clause_id": 212022, "parts": [], "note": "'which hear' modifies 'you'; existing IO span excludes it"}
+{"clause_id": 212029, "parts": [["S", 655748, 655748]]}
+{"clause_id": 212036, "parts": [["IO", 655778, 655784]]}
+{"clause_id": 212037, "parts": [["O", 655782, 655782]]}
+{"clause_id": 212043, "parts": [["S", 655825, 655825], ["O", 655826, 655827]]}
+{"clause_id": 212049, "parts": [["S", 655864, 655864]]}
+{"clause_id": 212055, "parts": [["A", 655909, 655909]]}
+{"clause_id": 212057, "parts": [["A", 655927, 655927]]}
+{"clause_id": 212058, "parts": [["O", 655942, 655947]]}
+{"clause_id": 212060, "parts": []}
+{"clause_id": 212065, "parts": [["A", 655988, 655988], ["O", 655989, 655996]]}
+{"clause_id": 212069, "parts": [["S", 656030, 656030]]}
+{"clause_id": 212073, "parts": [["S", 656100, 656100]]}
+{"clause_id": 212098, "parts": [["C", 656290, 656292]]}
+{"clause_id": 212111, "parts": [["A", 656397, 656397], ["A", 656398, 656398], ["V", 656399, 656399], ["S", 656400, 656400], ["O", 656401, 656401], ["C", 656402, 656406]], "note": "'Wherefore neither thought I myself worthy' has no clause of its own; parts added here"}
+{"clause_id": 212112, "parts": [["C", 656367, 656371]]}
+{"clause_id": 212113, "parts": [["O", 656384, 656384]]}
+{"clause_id": 212130, "parts": [["A", 656490, 656490], ["A", 656491, 656492]]}
+{"clause_id": 212136, "parts": [["A", 656532, 656533], ["S", 656535, 656536]]}
+{"clause_id": 212137, "parts": [["C", 656551, 656561]]}
+{"clause_id": 212146, "parts": [["A", 656606, 656606]]}
+{"clause_id": 212156, "parts": [["S", 656638, 656639], ["A", 656640, 656641]], "note": "logical subject added; expletive there is the existing S"}
+{"clause_id": 212163, "parts": [["S", 656692, 656692], ["A", 656693, 656699]]}
+{"clause_id": 212167, "parts": [["S", 656713, 656713]]}
+{"clause_id": 212174, "parts": [["S", 656741, 656741]]}
+{"clause_id": 212192, "parts": [["S", 656862, 656862]]}
+{"clause_id": 212197, "parts": [["S", 656889, 656889]]}
+{"clause_id": 212200, "parts": [["A", 656920, 656922], ["S", 656923, 656923], ["V", 656924, 656925], ["O", 656926, 656927], ["A", 656928, 656929]], "note": "relative clause 'which shall prepare thy way' has no clause of its own; parts added here"}
+{"clause_id": 212201, "parts": [["C", 656945, 656951]]}
+{"clause_id": 212203, "parts": [["C", 656963, 656965]]}
+{"clause_id": 212240, "parts": [["A", 657199, 657199]]}
+{"clause_id": 212244, "parts": [["O", 657224, 657234], ["A", 657235, 657239]]}
+{"clause_id": 212249, "parts": []}
+{"clause_id": 212251, "parts": [["S", 657255, 657255]]}
+{"clause_id": 212252, "parts": [["C", 657262, 657268], ["S", 657269, 657270], ["V", 657271, 657271], ["O", 657272, 657274], ["S", 657276, 657277], ["O", 657278, 657278]], "note": "'the one owed ... the other fifty' has no clause of its own; parts added here"}
+{"clause_id": 212253, "parts": [["O", 657289, 657290]]}
+{"clause_id": 212256, "parts": [["IO", 657292, 657292]]}
+{"clause_id": 212265, "parts": [], "note": "'thou gavest me no water' is its own clause c212266"}
+{"clause_id": 212276, "parts": [["S", 657427, 657428], ["V", 657429, 657429], ["A", 657430, 657430]]}
+{"clause_id": 212282, "parts": [["C", 657455, 657459]], "note": "existing S is 'Who'; 'this ...' is really the subject"}
+{"clause_id": 212283, "parts": [["IO", 657463, 657465]]}
+{"clause_id": 212288, "parts": [["C", 657503, 657504], ["S", 657506, 657519]], "note": "'certain women ... Mary called Magdalene' added as a second subject"}
+{"clause_id": 212289, "parts": [["A", 657520, 657522]]}
+{"clause_id": 282380, "parts": [["A", 657552, 657552]]}
+{"clause_id": 212309, "parts": [["O", 657670, 657670]]}
+{"clause_id": 212311, "parts": [["O", 657680, 657710]]}
+{"clause_id": 212314, "parts": [["A", 657711, 657711], ["C", 657715, 657715]]}
+{"clause_id": 212316, "parts": [["C", 657729, 657731], ["A", 657732, 657732], ["V", 657733, 657733], ["S", 657734, 657735]]}
+{"clause_id": 212322, "parts": [["O", 657770, 657783]]}
+{"clause_id": 212339, "parts": [["IO", 657907, 657910]]}
+{"clause_id": 212343, "parts": [["A", 657953, 657954]]}
+{"clause_id": 212358, "parts": [], "note": "expletive there"}
+{"clause_id": 212361, "parts": []}
+{"clause_id": 212365, "parts": [["C", 658089, 658090]]}
+{"clause_id": 212367, "parts": [["C", 658096, 658096]]}
+{"clause_id": 212368, "parts": [["IO", 658106, 658108], ["O", 658109, 658114]]}
+{"clause_id": 212375, "parts": [["A", 658142, 658147]]}
+{"clause_id": 212380, "parts": [["O", 658194, 658194], ["C", 658197, 658200]]}
+{"clause_id": 212381, "parts": [["C", 658211, 658213]]}
+{"clause_id": 212395, "parts": [["C", 658297, 658305]]}
+{"clause_id": 212401, "parts": [["S", 658325, 658326]]}
+{"clause_id": 212414, "parts": [["O", 658389, 658397], ["C", 658398, 658409]]}
+{"clause_id": 212415, "parts": [["A", 658391, 658393]]}
+{"clause_id": 212419, "parts": [["A", 658421, 658423], ["O", 658424, 658432]]}
+{"clause_id": 212428, "parts": [["A", 658511, 658512]]}
+{"clause_id": 212448, "parts": [["A", 658653, 658655], ["S", 658656, 658662], ["O", 658665, 658677]]}
+{"clause_id": 212456, "parts": [["S", 658689, 658689], ["V", 658690, 658691]]}

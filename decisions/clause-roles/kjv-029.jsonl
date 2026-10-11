@@ -1,0 +1,77 @@
+{"clause_id": 156779, "parts": [["A", 109765, 109768]]}
+{"clause_id": 156781, "parts": [["A", 109800, 109803]]}
+{"clause_id": 156785, "parts": [["A", 109858, 109861], ["A", 109867, 109876], ["IO", 109877, 109879]]}
+{"clause_id": 156786, "parts": [["A", 109885, 109898]]}
+{"clause_id": 156792, "parts": [["O", 109964, 109972], ["IO", 109973, 109975]]}
+{"clause_id": 156794, "parts": [["C", 109987, 110008]], "note": "'so shall the stranger be before the LORD' has no clause and gets no part"}
+{"clause_id": 156806, "parts": [["A", 110104, 110112]], "note": "'so shall ye heave it' has no clause and gets no part"}
+{"clause_id": 156809, "parts": [["A", 110184, 110195], ["C", 110196, 110237]]}
+{"clause_id": 156815, "parts": [["O", 110268, 110274], ["IO", 110275, 110277], ["O", 110279, 110281], ["A", 110282, 110284], ["A", 110285, 110287]]}
+{"clause_id": 156821, "parts": [["O", 110342, 110343], ["A", 110344, 110349], ["A", 110350, 110357], ["A", 110358, 110363]]}
+{"clause_id": 156823, "parts": [["O", 110360, 110361], ["A", 110362, 110363]]}
+{"clause_id": 156825, "parts": [["O", 110373, 110374], ["A", 110375, 110380], ["A", 110382, 110391], ["A", 110393, 110399]]}
+{"clause_id": 156829, "parts": [["S", 110447, 110448], ["V", 110449, 110449], ["A", 110450, 110450], ["V", 110451, 110452]], "note": "span also holds 'his iniquity shall be upon him', which gets no parts"}
+{"clause_id": 156839, "parts": [["O", 110510, 110515]]}
+{"clause_id": 156842, "parts": [], "note": "span also holds 'The man shall be surely put to death'; its parts would mix with the stone clause"}
+{"clause_id": 156853, "parts": [["S", 110648, 110648], ["V", 110649, 110649], ["C", 110650, 110653]]}
+{"clause_id": 156856, "parts": [["C", 110665, 110665]]}
+{"clause_id": 156857, "parts": [["S", 110669, 110669], ["V", 110670, 110670], ["C", 110671, 110687]], "note": "repeated 'I am the LORD your God' (110688-110693) gets no parts"}
+{"clause_id": 156861, "parts": [["A", 110733, 110754]]}
+{"clause_id": 156871, "parts": [["IO", 110864, 110864], ["O", 110865, 110865]], "note": "existing S 'This' and V 'do Take' look wrong: 'This do' is Verb do with Object This; 'Korah, and all his company' is a vocative"}
+{"clause_id": 156874, "parts": [["S", 110886, 110886], ["C", 110889, 110900]]}
+{"clause_id": 156876, "parts": []}
+{"clause_id": 156877, "parts": [["O", 110916, 110970]]}
+{"clause_id": 156879, "parts": [["A", 110948, 110950]]}
+{"clause_id": 156883, "parts": [["A", 110976, 110978], ["O", 110980, 110988]]}
+{"clause_id": 156886, "parts": [["A", 111014, 111018]]}
+{"clause_id": 156888, "parts": [], "note": "span also holds 'which said, We will not come up' and 'Is it a small thing that ...'; their parts would mix with 'sent'"}
+{"clause_id": 156891, "parts": [["O", 111068, 111068], ["C", 111069, 111073]]}
+{"clause_id": 156892, "parts": [["S", 111075, 111075], ["V", 111076, 111076], ["V", 111078, 111078], ["V", 111097, 111097], ["S", 111098, 111098], ["V", 111099, 111099], ["O", 111101, 111105]], "note": "span holds two sentences: 'thou hast not brought us' and 'wilt thou put out the eyes'"}
+{"clause_id": 156898, "parts": [["S", 111123, 111123]]}
+{"clause_id": 156900, "parts": [["O", 111146, 111196]]}
+{"clause_id": 156914, "parts": []}
+{"clause_id": 156927, "parts": [["O", 111362, 111362]]}
+{"clause_id": 156946, "parts": [["O", 111554, 111570]]}
+{"clause_id": 156953, "parts": [["C", 111602, 111604]]}
+{"clause_id": 156956, "parts": []}
+{"clause_id": 156961, "parts": [["O", 111657, 111672], ["A", 111673, 111676]]}
+{"clause_id": 156963, "parts": [["S", 111699, 111699]], "note": "'therefore they are hallowed' (111705-111708) gets no parts"}
+{"clause_id": 156968, "parts": [["C", 111739, 111740], ["A", 111741, 111746]]}
+{"clause_id": 156969, "parts": [["C", 111749, 111755], ["A", 111756, 111774], ["A", 111775, 111795]]}
+{"clause_id": 156974, "parts": [["A", 111809, 111813]]}
+{"clause_id": 156977, "parts": [["A", 111828, 111837]]}
+{"clause_id": 156990, "parts": [["O", 111928, 111929], ["A", 111930, 111931]]}
+{"clause_id": 156991, "parts": []}
+{"clause_id": 156998, "parts": [["O", 111975, 111976], ["A", 111977, 111979]]}
+{"clause_id": 157001, "parts": [["A", 111994, 111994], ["C", 112002, 112006], ["A", 112007, 112015]]}
+{"clause_id": 157009, "parts": [["C", 112101, 112109]]}
+{"clause_id": 157019, "parts": [["O", 112183, 112185], ["A", 112186, 112189], ["A", 112190, 112194], ["O", 112195, 112197]]}
+{"clause_id": 157033, "parts": [["A", 112318, 112321]]}
+{"clause_id": 157039, "parts": [["V", 112364, 112364], ["S", 112365, 112365], ["V", 112366, 112367], ["A", 112368, 112369]], "note": "span holds two sentences: 'Whosoever ... shall die' and 'shall we be consumed with dying'"}
+{"clause_id": 157040, "parts": [["O", 112353, 112354], ["A", 112355, 112361]]}
+{"clause_id": 157044, "parts": [["O", 112408, 112420], ["A", 112425, 112435]], "note": "existing O 'thou' (112422) is the subject of 'bring thou'; 'thy brethren' is the Object"}
+{"clause_id": 157046, "parts": []}
+{"clause_id": 157048, "parts": [["S", 112478, 112482]]}
+{"clause_id": 157052, "parts": [["O", 112521, 112531], ["A", 112532, 112543]]}
+{"clause_id": 157054, "parts": [["S", 112547, 112547]]}
+{"clause_id": 157059, "parts": [["IO", 112635, 112636], ["O", 112638, 112678]]}
+{"clause_id": 157060, "parts": [["C", 112682, 112691]]}
+{"clause_id": 157062, "parts": [["C", 112721, 112722], ["A", 112723, 112724], ["A", 112726, 112728]], "note": "its subject 'every oblation ... which they shall render unto me' lies outside this clause span"}
+{"clause_id": 157063, "parts": [["S", 112743, 112743], ["C", 112746, 112746]], "note": "span also holds 'shalt thou eat it' and 'every male shall eat it' (the latter is its own clause)"}
+{"clause_id": 157065, "parts": [["C", 112752, 112768], ["S", 112769, 112769], ["V", 112770, 112771], ["O", 112772, 112772], ["IO", 112773, 112774], ["IO", 112776, 112778], ["IO", 112780, 112784], ["A", 112785, 112787]], "note": "span holds 'this is thine' and 'I have given them unto thee ...'"}
+{"clause_id": 157066, "parts": [["A", 112788, 112789]]}
+{"clause_id": 157068, "parts": [["O", 112802, 112829], ["O", 112830, 112830], ["IO", 112834, 112834]]}
+{"clause_id": 157069, "parts": [["C", 112852, 112852], ["S", 112853, 112860], ["V", 112861, 112862], ["A", 112863, 112864]], "note": "span holds two sentences"}
+{"clause_id": 157077, "parts": [["O", 112917, 112926]]}
+{"clause_id": 157078, "parts": [["C", 112920, 112926]]}
+{"clause_id": 157084, "parts": [["A", 113052, 113053], ["C", 113056, 113059], ["A", 113060, 113061], ["A", 113062, 113064], ["A", 113065, 113072]]}
+{"clause_id": 157086, "parts": [["C", 113097, 113101], ["A", 113102, 113106]]}
+{"clause_id": 157091, "parts": [["V", 113162, 113163], ["S", 113178, 113178], ["V", 113179, 113180], ["C", 113181, 113187]], "note": "span holds 'the Levites shall do the service' and 'it shall be a statute for ever'"}
+{"clause_id": 157094, "parts": [["O", 113199, 113215], ["S", 113216, 113216], ["S", 113225, 113225], ["V", 113226, 113227], ["IO", 113228, 113229], ["O", 113230, 113239]], "note": "span holds 'I have given ... to the Levites' and 'therefore I have said unto them'"}
+{"clause_id": 157095, "parts": [["A", 113209, 113212]]}
+{"clause_id": 157099, "parts": [["O", 113247, 113295]]}
+{"clause_id": 157100, "parts": [["O", 113281, 113285], ["A", 113286, 113288], ["O", 113289, 113295]]}
+{"clause_id": 157102, "parts": [["O", 113266, 113266]]}
+{"clause_id": 157103, "parts": []}
+{"clause_id": 157104, "parts": [["C", 113310, 113321]]}
+{"clause_id": 157108, "parts": [["O", 113366, 113371], ["A", 113372, 113381]]}

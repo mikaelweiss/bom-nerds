@@ -1,0 +1,66 @@
+{"clause_id": 160363, "parts": [["A", 148447, 148470], ["C", 148471, 148523]]}
+{"clause_id": 160364, "parts": [["O", 148455, 148455]]}
+{"clause_id": 160367, "parts": [["A", 148475, 148498]]}
+{"clause_id": 160378, "parts": [["O", 148557, 148557], ["A", 148564, 148567]]}
+{"clause_id": 160386, "parts": [["A", 148634, 148634]]}
+{"clause_id": 160404, "parts": [["S", 148792, 148792], ["V", 148793, 148794], ["O", 148795, 148804], ["A", 148805, 148813], ["O", 148817, 148817]]}
+{"clause_id": 160408, "parts": [["O", 148882, 148882], ["IO", 148886, 148886]]}
+{"clause_id": 160411, "parts": [["O", 148919, 148919]]}
+{"clause_id": 160416, "parts": [["O", 148957, 148967], ["A", 148968, 148973], ["O", 148974, 148981]], "note": "'a land that floweth' is an appositive of 'the land', added as a second O"}
+{"clause_id": 160418, "parts": [["A", 148982, 148996]], "note": "'keep' has no written object here; the commanded clause is given as adverbial setting"}
+{"clause_id": 160431, "parts": [["O", 149076, 149076], ["C", 149077, 149092]]}
+{"clause_id": 160435, "parts": [["S", 149111, 149116]]}
+{"clause_id": 160438, "parts": [["O", 149125, 149125]], "note": "'you' (existing O) is really the indirect object; cannot change existing parts"}
+{"clause_id": 160439, "parts": [["A", 149154, 149166], ["S", 149168, 149168], ["V", 149169, 149170], ["A", 149171, 149172], ["O", 149173, 149178], ["A", 149179, 149183], ["A", 149184, 149216]], "note": "clause merges 'it shall be ... that thou shalt set' and 'thou shalt write'; existing parts left as is"}
+{"clause_id": 160441, "parts": [["O", 149147, 149147]]}
+{"clause_id": 160445, "parts": [["A", 149189, 149198], ["A", 149199, 149206], ["A", 149207, 149216]]}
+{"clause_id": 160446, "parts": [["O", 149192, 149192]]}
+{"clause_id": 160448, "parts": [["C", 149227, 149242]]}
+{"clause_id": 160450, "parts": [["O", 149232, 149239], ["A", 149240, 149242]]}
+{"clause_id": 160452, "parts": [["A", 149251, 149251], ["V", 149252, 149252], ["S", 149253, 149253], ["O", 149262, 149265], ["S", 149266, 149266], ["V", 149267, 149269], ["O", 149271, 149273], ["A", 149274, 149275]]}
+{"clause_id": 160453, "parts": [["O", 149279, 149285], ["A", 149286, 149288]]}
+{"clause_id": 160462, "parts": [["O", 149376, 149386]]}
+{"clause_id": 160463, "parts": [["O", 149381, 149381]], "note": "'thee' (existing O) is really the indirect object; cannot change existing parts"}
+{"clause_id": 160466, "parts": [["A", 149402, 149405], ["A", 149406, 149411], ["S", 149412, 149422]], "note": "tribe names are appositive to 'These', added as a second S"}
+{"clause_id": 160470, "parts": [["O", 149458, 149488]]}
+{"clause_id": 160482, "parts": [["O", 149537, 149538], ["C", 149539, 149544]]}
+{"clause_id": 160506, "parts": [["A", 149692, 149692], ["O", 149693, 149698]]}
+{"clause_id": 288063, "parts": [["A", 149715, 149757]]}
+{"clause_id": 160514, "parts": [["V", 149782, 149782], ["S", 149783, 149783], ["V", 149784, 149784], ["C", 149785, 149787]], "note": "existing V 'Blessed' (149781) is really a complement; cannot change"}
+{"clause_id": 160519, "parts": [["C", 149844, 149844], ["S", 149846, 149846]]}
+{"clause_id": 160523, "parts": [["O", 149887, 149888], ["A", 149889, 149890]]}
+{"clause_id": 160524, "parts": []}
+{"clause_id": 160526, "parts": [["O", 149911, 149911]]}
+{"clause_id": 160527, "parts": [["C", 149923, 149925]]}
+{"clause_id": 160533, "parts": [["O", 149980, 149980], ["C", 149981, 149981], ["A", 149982, 149983], ["A", 149984, 149989], ["A", 149991, 149996], ["A", 149998, 150003], ["A", 150004, 150016]]}
+{"clause_id": 160534, "parts": [["S", 150008, 150009], ["V", 150010, 150010], ["IO", 150011, 150013]]}
+{"clause_id": 160542, "parts": [["O", 150095, 150095], ["C", 150101, 150106]], "note": "existing O 'thee' is really the indirect object; cannot change"}
+{"clause_id": 160544, "parts": [["A", 150113, 150123], ["A", 150124, 150131]]}
+{"clause_id": 160547, "parts": [["S", 150147, 150147], ["V", 150148, 150150], ["A", 150151, 150158], ["A", 150159, 150174], ["S", 150176, 150178], ["V", 150179, 150180], ["A", 150181, 150182]], "note": "clause merges the if-clause and the 'that' clause; existing parts left as is"}
+{"clause_id": 160553, "parts": [["C", 150243, 150243], ["V", 150244, 150244], ["S", 150245, 150245]]}
+{"clause_id": 160555, "parts": [["O", 150257, 150260], ["A", 150261, 150271], ["A", 150272, 150292]]}
+{"clause_id": 160556, "parts": []}
+{"clause_id": 160561, "parts": [["O", 150297, 150298], ["C", 150299, 150301], ["A", 150302, 150316]]}
+{"clause_id": 160578, "parts": [["A", 150485, 150485], ["V", 150487, 150487], ["V", 150489, 150490]]}
+{"clause_id": 160595, "parts": [["C", 150652, 150653]]}
+{"clause_id": 160597, "parts": [["C", 150689, 150689]]}
+{"clause_id": 160608, "parts": [["O", 150799, 150800]]}
+{"clause_id": 160626, "parts": [["A", 150952, 150952], ["A", 150953, 150960], ["A", 150961, 150971]]}
+{"clause_id": 160628, "parts": [["O", 150968, 150968]], "note": "existing O 'thee' is really the indirect object; cannot change"}
+{"clause_id": 160630, "parts": [["S", 150992, 150992], ["V", 150993, 150993], ["A", 150994, 150994], ["O", 150995, 150998], ["A", 150999, 151000], ["A", 151002, 151005], ["A", 151006, 151011]], "note": "clause merges 'Because thou servedst not' and 'Therefore shalt thou serve'; existing parts left as is"}
+{"clause_id": 160634, "parts": [["A", 151063, 151064], ["A", 151065, 151070], ["O", 151077, 151084], ["O", 151085, 151104]], "note": "the two later 'a nation' phrases are appositives of the object"}
+{"clause_id": 160639, "parts": []}
+{"clause_id": 160648, "parts": [["O", 151188, 151188]]}
+{"clause_id": 160649, "parts": [["A", 151236, 151316]]}
+{"clause_id": 160650, "parts": [["O", 151215, 151215], ["IO", 151222, 151222]]}
+{"clause_id": 160656, "parts": [["A", 151347, 151352], ["A", 151354, 151356], ["A", 151358, 151360], ["A", 151362, 151372], ["A", 151374, 151380], ["A", 151381, 151405]]}
+{"clause_id": 160657, "parts": [["C", 151328, 151341]]}
+{"clause_id": 160662, "parts": [["O", 151443, 151444], ["C", 151445, 151445], ["O", 151447, 151454], ["C", 151456, 151458], ["O", 151460, 151461], ["C", 151463, 151465]]}
+{"clause_id": 160663, "parts": [["C", 151411, 151424], ["A", 151425, 151437]]}
+{"clause_id": 160667, "parts": [["C", 151480, 151481]]}
+{"clause_id": 160669, "parts": [["O", 151489, 151504]]}
+{"clause_id": 160673, "parts": [["C", 151526, 151530]]}
+{"clause_id": 160684, "parts": [["A", 151637, 151639], ["V", 151640, 151640], ["S", 151641, 151641], ["V", 151642, 151642], ["O", 151643, 151644], ["S", 151699, 151699], ["O", 151702, 151706]], "note": "clause merges 'shalt thou find no ease' and 'thou shalt say'; existing parts left as is"}
+{"clause_id": 160689, "parts": [["V", 151702, 151702], ["S", 151704, 151704], ["C", 151706, 151706]], "note": "existing V 'were' with S 'God' is mismatched; cannot change"}
+{"clause_id": 160691, "parts": [["S", 151715, 151715], ["V", 151716, 151716], ["C", 151717, 151717]]}
+{"clause_id": 160692, "parts": [["A", 151724, 151724]]}

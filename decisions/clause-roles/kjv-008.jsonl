@@ -1,0 +1,75 @@
+{"clause_id": 149455, "parts": []}
+{"clause_id": 149473, "parts": [["C", 29712, 29718]]}
+{"clause_id": 149476, "parts": []}
+{"clause_id": 149480, "parts": []}
+{"clause_id": 149490, "parts": [["C", 29883, 29887]]}
+{"clause_id": 149492, "parts": [["V", 29890, 29892], ["O", 29895, 29903]]}
+{"clause_id": 149497, "parts": [["O", 29927, 30031]]}
+{"clause_id": 149498, "parts": []}
+{"clause_id": 149500, "parts": [["C", 29969, 29988]]}
+{"clause_id": 149504, "parts": [["C", 30026, 30027]]}
+{"clause_id": 149510, "parts": [["C", 30088, 30094]]}
+{"clause_id": 149516, "parts": [["S", 30116, 30119], ["V", 30120, 30120], ["C", 30121, 30122]], "note": "'the dream is one' not covered"}
+{"clause_id": 149523, "parts": [["C", 30169, 30176]]}
+{"clause_id": 149539, "parts": [["C", 30361, 30362], ["A", 30363, 30365]]}
+{"clause_id": 149545, "parts": [["A", 30435, 30442], ["C", 30445, 30452]]}
+{"clause_id": 149548, "parts": [["S", 30486, 30486]]}
+{"clause_id": 149553, "parts": [["O", 30530, 30530], ["C", 30531, 30539]]}
+{"clause_id": 149556, "parts": [["C", 30552, 30558]]}
+{"clause_id": 149563, "parts": [["C", 30618, 30620]]}
+{"clause_id": 149572, "parts": [["S", 30727, 30728], ["A", 30729, 30734]], "note": "relative clause 'which Asenath ... bare unto him' left without a part"}
+{"clause_id": 149574, "parts": [["O", 30750, 30754], ["C", 30755, 30755]]}
+{"clause_id": 149576, "parts": [["O", 30762, 30762], ["C", 30763, 30771]]}
+{"clause_id": 149577, "parts": [["O", 30773, 30777], ["S", 30779, 30779], ["C", 30780, 30780], ["A", 30781, 30794]]}
+{"clause_id": 149580, "parts": [["C", 30817, 30818]]}
+{"clause_id": 149582, "parts": [["C", 30840, 30840]]}
+{"clause_id": 149589, "parts": [["C", 30899, 30899]]}
+{"clause_id": 149595, "parts": [["C", 30934, 30934]]}
+{"clause_id": 149596, "parts": [["A", 30946, 30948]]}
+{"clause_id": 149598, "parts": [["C", 30959, 30961]]}
+{"clause_id": 149599, "parts": [["A", 30965, 30965]]}
+{"clause_id": 149600, "parts": [["IO", 30968, 30969]]}
+{"clause_id": 149607, "parts": [["S", 31005, 31005]]}
+{"clause_id": 149611, "parts": [["S", 31039, 31040]]}
+{"clause_id": 149614, "parts": [["O", 31058, 31058]]}
+{"clause_id": 149617, "parts": [["O", 31078, 31078], ["C", 31079, 31081]]}
+{"clause_id": 149619, "parts": [["O", 31092, 31094]]}
+{"clause_id": 149621, "parts": [["O", 31098, 31105]]}
+{"clause_id": 149632, "parts": [["S", 31159, 31159], ["V", 31160, 31160], ["C", 31161, 31164]], "note": "'we are true men' not covered"}
+{"clause_id": 149646, "parts": [["A", 31364, 31364]]}
+{"clause_id": 149652, "parts": [["V", 31414, 31414]]}
+{"clause_id": 149653, "parts": [["S", 31423, 31423], ["A", 31424, 31424], ["IO", 31425, 31426]]}
+{"clause_id": 149675, "parts": [["IO", 31544, 31545], ["A", 31547, 31549]]}
+{"clause_id": 149678, "parts": [["A", 31576, 31576], ["C", 31577, 31579]]}
+{"clause_id": 149681, "parts": [["A", 31590, 31592]]}
+{"clause_id": 149682, "parts": [["C", 31593, 31593], ["S", 31595, 31601]]}
+{"clause_id": 149692, "parts": [["S", 31653, 31653], ["C", 31655, 31656]], "note": "first half 'we are true men' has no V in this clause and is not covered"}
+{"clause_id": 149694, "parts": [["O", 31693, 31757]]}
+{"clause_id": 149703, "parts": [["A", 31763, 31767]]}
+{"clause_id": 149708, "parts": [["A", 31814, 31814]]}
+{"clause_id": 149717, "parts": [["A", 31879, 31890]]}
+{"clause_id": 149719, "parts": [["C", 31908, 31908], ["A", 31909, 31911]]}
+{"clause_id": 149720, "parts": [["A", 31917, 31930], ["S", 31931, 31932], ["O", 31936, 31942]]}
+{"clause_id": 149737, "parts": [["O", 32018, 32035]]}
+{"clause_id": 149741, "parts": [["IO", 32042, 32042]]}
+{"clause_id": 149742, "parts": [["A", 32055, 32055], ["C", 32056, 32056]]}
+{"clause_id": 149743, "parts": [["S", 32058, 32058]]}
+{"clause_id": 149748, "parts": [["C", 32121, 32121], ["A", 32122, 32123]], "note": "clause span holds several later statements not covered"}
+{"clause_id": 149756, "parts": [["A", 32261, 32270]]}
+{"clause_id": 149759, "parts": [["A", 32275, 32277]]}
+{"clause_id": 149765, "parts": [["O", 32313, 32313], ["A", 32314, 32315]]}
+{"clause_id": 149768, "parts": [["C", 32332, 32332], ["A", 32333, 32341]]}
+{"clause_id": 149771, "parts": [["O", 32373, 32409]]}
+{"clause_id": 149772, "parts": [["A", 32373, 32386]], "note": "span also swallows 'are we brought in'; only the fronted because-phrase is added"}
+{"clause_id": 149775, "parts": [["A", 32405, 32409]]}
+{"clause_id": 149779, "parts": []}
+{"clause_id": 149783, "parts": [["S", 32464, 32466], ["V", 32467, 32467], ["C", 32468, 32473]], "note": "'our money in full weight' left without a part"}
+{"clause_id": 149785, "parts": [["S", 32501, 32501], ["V", 32502, 32503]], "note": "span also holds 'other money have we brought down'; existing O belongs to 'cannot tell'"}
+{"clause_id": 149795, "parts": [["C", 32573, 32573], ["O", 32574, 32575], ["A", 32576, 32580], ["A", 32581, 32589]]}
+{"clause_id": 149804, "parts": []}
+{"clause_id": 149806, "parts": [["A", 32638, 32638], ["C", 32639, 32639]]}
+{"clause_id": 149807, "parts": [["O", 32643, 32654]]}
+{"clause_id": 149816, "parts": [["C", 32696, 32698]]}
+{"clause_id": 149819, "parts": [["O", 32716, 32718]]}
+{"clause_id": 149827, "parts": [["IO", 32748, 32749], ["A", 32750, 32751], ["IO", 32753, 32754], ["A", 32755, 32756], ["IO", 32758, 32767]]}
+{"clause_id": 149834, "parts": [["C", 32826, 32833]]}

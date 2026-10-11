@@ -4,8 +4,6 @@ One open database of the standard works: the Bible, Book of Mormon, Doctrine and
 
 ## What's inside
 
-The text and original-language data are complete. The rest is being tagged chapter by chapter.
-
 - **Text:** every verse, word by word, with the Hebrew and Greek originals linked to the English.
 - **Original words:** headwords, Strong's numbers, meanings, and full grammar for each word.
 - **People, places, and things:** every person, group, city, land, event, and topic, tagged everywhere the text names or refers to them, pronouns included.

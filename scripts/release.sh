@@ -27,12 +27,17 @@ done
 
 zip -q -j "$dist/scripture-db.zip" "$work/scripture.db" "$root/LICENSE-DATA.txt" "$root/CREDITS.md"
 zip -q -j "$dist/scripture-json.zip" "$work"/json/*.json "$root/LICENSE-DATA.txt" "$root/CREDITS.md"
+python3 "$root/scripts/conversations.py" "$root" "$dist"
 ls -lh "$dist"
 
 [ "${1:-}" = "--no-upload" ] && exit 0
 
 commit=$(git -C "$root" rev-parse HEAD)
 tag="data-$(date -u +%Y-%m-%d-%H%M%S)"
-gh release create "$tag" "$dist/scripture-db.zip" "$dist/scripture-json.zip" \
+set -- "$dist/scripture-db.zip" "$dist/scripture-json.zip" "$dist/conversations-manifest.json"
+[ -f "$dist/conversations.zip" ] && set -- "$@" "$dist/conversations.zip"
+gh release create "$tag" "$@" \
     --repo mikaelweiss/standard-works-corpus --target "$commit" --title "$tag" \
-    --notes "scripture.db and a JSON export of every table, as of $commit. The data is CC BY 4.0: CREDITS.md, inside each zip, lists the credit every source requires."
+    --notes "scripture.db and a JSON export of every table, as of $commit. The data is CC BY 4.0: CREDITS.md, inside each zip, lists the credit every source requires.
+
+conversations.zip holds the Claude Code and Cursor agent transcripts that built the data, added since the previous release, with secrets redacted. A transcript that continues an earlier session holds only its new lines, so append it to the copy from earlier releases."

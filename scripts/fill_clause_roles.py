@@ -10,9 +10,9 @@ predicate phrases C, and adverbs, prepositional phrases, and adverbial clauses A
 A part is added where both parsers give the same role and words. Where one parser splits a phrase the other gives
 whole under the same role, Adverbials take the split and other roles the whole. In the KJV the roles of the matched Hebrew or Greek
 words decide a part only one parser gives. Parts never overlap the parts already there or cut through a child clause.
-A clause with an O, IO, C, or A part neither parser gives was annotated by hand and is left alone. Parts already there
-are not added twice, so a run can be repeated and finds the same disagreements. Hebrew and Greek clauses
-and clause spans are never changed.
+A clause with an O, IO, C, or A part neither parser gives was annotated by hand and is left alone. Each clause is
+decided again until nothing changes, so a second run adds nothing and finds the same disagreements. Hebrew and Greek
+clauses and clause spans are never changed.
 
 --book limits the pass to one book, for example "1 Nephi". --packets writes the clauses the parsers disagree on as
 review packets, one per chapter, with index.tsv and slices.tsv. --decisions applies reviewed lines from a .jsonl file
@@ -444,7 +444,8 @@ class Store:
         for n in range(part[1], part[2] + 1):
             for o in self.matches.get(n, ()):
                 if a <= o <= b:
-                    roles[next((r for r, x, y in self.parts[original] if x <= o <= y), None)] += 1
+                    held = {r for r, x, y in self.parts[original] if x <= o <= y}
+                    roles[part[0] if part[0] in held else min(held, default=None)] += 1
         if not roles:
             return None
         role, n = roles.most_common(1)[0]
@@ -478,7 +479,7 @@ class Decider:
         agreed = proposals[0] & proposals[1]
         accepted = {p: "agreed" for p in agreed if not any(overlaps(p, q) for q in agreed if q != p)}
         for x, y in ((proposals[0], proposals[1]), (proposals[1], proposals[0])):
-            for whole in y - set(accepted):
+            for whole in sorted(y - set(accepted)):
                 pieces = sorted((p for p in x - set(accepted) if p[0] == whole[0] and whole[1] <= p[1] and p[2] <= whole[2]), key=lambda p: p[1])
                 if len(pieces) < 2 or pieces[0][1] != whole[1] or pieces[-1][2] != whole[2]:
                     continue
@@ -490,8 +491,8 @@ class Decider:
         rest = (proposals[0] | proposals[1]) - set(accepted)
         original = None
         if store.edition[a] == KJV and rest:
-            verbs = [n for r, x, y in store.parts[clause] | set(accepted) if r == V for n in range(x, y + 1)]
-            verbs = verbs or [n for r, x, y in rest if r == V for n in range(x, y + 1)]
+            verbs = sorted(n for r, x, y in store.parts[clause] | set(accepted) if r == V for n in range(x, y + 1))
+            verbs = verbs or sorted(n for r, x, y in rest if r == V for n in range(x, y + 1))
             original = store.original_clause(verbs)
         if original is not None:
             supported = [p for p in rest if store.vote(original, p) == p[0]]
@@ -707,11 +708,14 @@ def main(path, parses_folder, book=None, packets=None, decisions=None, dry_run=F
             report[edition, "clauses"] += 1
             if not store.parts[clause]:
                 report[edition, "clauses with no parts"] += 1
-            accepted, dispute = decider.clause(clause)
-            accepted = [(p, source) for p, source in accepted if p not in store.parts[clause]]
-            for part, source in accepted:
-                sources[edition, source] += 1
-            write_parts(db, store, clause, [p for p, _ in accepted], report, edition)
+            while True:
+                accepted, dispute = decider.clause(clause)
+                accepted = [(p, source) for p, source in accepted if p not in store.parts[clause]]
+                if not accepted:
+                    break
+                for part, source in accepted:
+                    sources[edition, source] += 1
+                write_parts(db, store, clause, [p for p, _ in accepted], report, edition)
             if dispute:
                 disputes.append(dispute)
                 report[edition, "clauses for review"] += 1

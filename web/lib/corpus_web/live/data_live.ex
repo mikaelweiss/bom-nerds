@@ -3,7 +3,7 @@ defmodule CorpusWeb.DataLive do
 
   import SaladUI.Helpers, only: [button_variant: 1]
 
-  alias Corpus.{Browser, Database, Query, RateLimit, Versions}
+  alias Corpus.{Browser, Database, Query, RateLimit, Scripture, Versions}
 
   @control ~w(order cursor row)
   @shown_rows 1_000
@@ -185,20 +185,12 @@ defmodule CorpusWeb.DataLive do
   Where the reader shows `location`, a map of edition and book names, chapter
   number, and verse number.
   """
-  def read_path(%{edition: edition, book: book, chapter: chapter, verse: verse}) do
-    path = "/read/#{slug(edition)}/#{slug(book)}/#{chapter}"
-    if verse, do: path <> "?v=#{verse}", else: path
-  end
-
-  @doc ~S|The reader's address segment for an edition or book name, like "book-of-mormon".|
-  def slug("King James Version" <> _), do: "kjv"
-
-  def slug(name) do
-    name
-    |> String.replace(~r/\s*\(.*\)\s*$/, "")
-    |> String.downcase()
-    |> String.replace(~r/[^a-z0-9]+/, "-")
-    |> String.trim("-")
+  def read_path(%{edition: edition, book: book} = location) do
+    CorpusWeb.Scripture.reader_path(%{
+      location
+      | edition: Scripture.edition_slug(edition),
+        book: Scripture.book_slug(book)
+    })
   end
 
   defp data_path(state, changes) do

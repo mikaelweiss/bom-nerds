@@ -7,7 +7,7 @@ defmodule Corpus.Highlights do
   never shows a zero for something the release does not contain.
   """
 
-  alias Corpus.{Cache, Database, Query}
+  alias Corpus.{Cache, Database, Query, Scripture}
 
   @version "v1"
 
@@ -352,11 +352,7 @@ defmodule Corpus.Highlights do
   end
 
   defp reader_path(edition, book, chapter, verse),
-    do: "/read/#{edition}/#{slug(book)}/#{chapter}?v=#{verse}"
-
-  defp slug(name) do
-    name |> String.downcase() |> String.replace(~r/[^a-z0-9]+/, "-") |> String.trim("-")
-  end
+    do: "/read/#{edition}/#{Scripture.book_slug(book)}/#{chapter}?v=#{verse}"
 
   defp sum(rows, key), do: rows |> Enum.map(& &1[key]) |> Enum.sum()
 

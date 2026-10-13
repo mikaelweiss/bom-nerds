@@ -54,6 +54,24 @@ defmodule Corpus.Scripture do
   @doc "The edition with `slug`, or nil."
   def edition(slug), do: Enum.find(editions(), &(&1.slug == slug))
 
+  @doc ~S|The reader's address segment for an edition name, like "kjv" or "book-of-mormon".|
+  def edition_slug(name) do
+    Map.get_lazy(@edition_slugs, name, fn ->
+      name |> String.replace(~r/\s*\(.*\)/, "") |> slugify()
+    end)
+  end
+
+  @doc ~S|The reader's address segment for a book name, like "1-nephi".|
+  def book_slug(name), do: slugify(name)
+
+  defp slugify(text) do
+    text
+    |> :unicode.characters_to_nfd_binary()
+    |> String.downcase()
+    |> String.replace(~r/[^a-z0-9]+/, "-")
+    |> String.trim("-")
+  end
+
   @doc """
   The chapter at `edition_slug`, `book_slug`, `number`, or nil when there is
   none. Holds the `edition`, `book`, `number`, an optional `heading` verse, the
@@ -271,20 +289,6 @@ defmodule Corpus.Scripture do
 
   defp one(db, sql, params), do: db |> all(sql, params) |> List.first()
 
-  defp slug(name) do
-    Map.get_lazy(@edition_slugs, name, fn ->
-      name |> String.replace(~r/\s*\(.*\)/, "") |> slugify()
-    end)
-  end
-
-  defp slugify(text) do
-    text
-    |> :unicode.characters_to_nfd_binary()
-    |> String.downcase()
-    |> String.replace(~r/[^a-z0-9]+/, "-")
-    |> String.trim("-")
-  end
-
   defp load_editions(db) do
     db
     |> all("""
@@ -303,7 +307,7 @@ defmodule Corpus.Scripture do
       %{
         id: first.edition_id,
         name: first.edition,
-        slug: slug(first.edition),
+        slug: edition_slug(first.edition),
         work: first.work,
         language: first.language,
         rtl: first.language in @right_to_left,
@@ -314,7 +318,7 @@ defmodule Corpus.Scripture do
             %{
               id: book.book_id,
               name: book.book,
-              slug: slugify(book.book),
+              slug: book_slug(book.book),
               chapters: Enum.map(chapters, &%{id: &1.chapter_id, number: &1.chapter})
             }
           end)
@@ -396,7 +400,7 @@ defmodule Corpus.Scripture do
   defp location(row) do
     %{
       edition: edition_summary(row.edition_id).slug,
-      book: slugify(row.book_name),
+      book: book_slug(row.book_name),
       book_name: row.book_name,
       chapter: row.chapter,
       verse: row.verse

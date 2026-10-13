@@ -161,11 +161,26 @@ defmodule CorpusWeb.DataLiveTest do
     refute Enum.any?(examples, fn {label, _sql} -> String.ends_with?(label, ":") end)
   end
 
-  test "slugs match the reader's addresses" do
-    assert DataLive.slug("King James Version (1769)") == "kjv"
-    assert DataLive.slug("Book of Mormon (2013)") == "book-of-mormon"
-    assert DataLive.slug("Doctrine and Covenants (2013)") == "doctrine-and-covenants"
-    assert DataLive.slug("1 Nephi") == "1-nephi"
-    assert DataLive.slug("Song of Solomon") == "song-of-solomon"
+  test "reader links use the reader's edition and book slugs" do
+    path = fn edition, book ->
+      DataLive.read_path(%{edition: edition, book: book, chapter: 1, verse: 2})
+    end
+
+    assert path.("King James Version (1769)", "Song of Solomon") ==
+             "/read/kjv/song-of-solomon/1?v=2"
+
+    assert path.("Westminster Leningrad Codex", "Genesis") == "/read/wlc/genesis/1?v=2"
+    assert path.("SBL Greek New Testament", "Matthew") == "/read/sblgnt/matthew/1?v=2"
+    assert path.("Book of Mormon (2013)", "1 Nephi") == "/read/book-of-mormon/1-nephi/1?v=2"
+
+    assert path.("Pearl of Great Price (2013)", "Joseph Smith\u2014Matthew") ==
+             "/read/pearl-of-great-price/joseph-smith-matthew/1?v=2"
+
+    assert DataLive.read_path(%{
+             edition: "Doctrine and Covenants (2013)",
+             book: "Doctrine and Covenants",
+             chapter: 76,
+             verse: nil
+           }) == "/read/doctrine-and-covenants/doctrine-and-covenants/76"
   end
 end

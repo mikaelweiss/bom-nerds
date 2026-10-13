@@ -29,6 +29,9 @@ defmodule CorpusWeb.Router do
     live "/build", BuildLive
     live "/examples", ExamplesLive
     live "/examples/:slug", ExampleLive
+    live "/read", ReadLive
+    live "/read/:edition/:book/:chapter", ChapterLive
+    live "/entities/:id", EntityLive
   end
 
   defp allow_any_origin(conn, _opts),

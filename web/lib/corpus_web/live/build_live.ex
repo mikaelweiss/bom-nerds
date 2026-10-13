@@ -29,52 +29,33 @@ defmodule CorpusWeb.BuildLive do
     <Layouts.app>
       <section class="mx-auto max-w-5xl px-6 py-20 sm:py-28">
         <h1 class="max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-6xl">
-          Build with the data.
+          Query the scriptures from your code.
         </h1>
         <p class="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Download the whole database, or send it read-only SQL over HTTP from any website or
-          script. Both hold the same tables.
+          Send read-only SQL over HTTP from any website or script and get the latest data back as
+          JSON. There is nothing to download and no key to get.
         </p>
-      </section>
-
-      <section class="border-t">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <h2 class="font-serif text-3xl font-semibold">Download</h2>
-          <p class="mt-4 max-w-2xl text-lg text-muted-foreground">
-            Each release is a SQLite database and a set of JSON files.
-          </p>
-          <ul class="mt-6 space-y-2 text-lg">
-            <li>
-              <a href={@release} class="underline">scripture-db.zip</a> holds the SQLite database.
-            </li>
-            <li>
-              <a href={@release} class="underline">scripture-json.zip</a> holds the same data as JSON.
-            </li>
-          </ul>
-          <div class="mt-6">
-            <a href={@release} class={button_variant(%{size: "lg"})}>
-              Get the latest release
-            </a>
-          </div>
-        </div>
       </section>
 
       <section class="border-t bg-muted/40">
         <div class="mx-auto max-w-5xl px-6 py-20">
-          <h2 class="font-serif text-3xl font-semibold">Query it</h2>
+          <h2 class="font-serif text-3xl font-semibold">Use the API</h2>
           <p class="mt-4 max-w-2xl text-lg text-muted-foreground">
             The API takes one read-only SQL statement and always serves the latest release.
-            The same query works in the SQLite file, in the browser, and from the command line.
+            You can also try queries in the browser in the <.link
+              id="sql-editor"
+              navigate={~p"/sql"}
+              class="underline"
+            >SQL editor</.link>.
           </p>
 
-          <.tabs id="usage" default="sqlite" class="mt-10">
+          <.tabs id="usage" default="fetch" class="mt-10">
             <.tabs_list>
-              <.tabs_trigger value="sqlite">SQLite</.tabs_trigger>
               <.tabs_trigger value="fetch">JavaScript</.tabs_trigger>
               <.tabs_trigger value="curl">curl</.tabs_trigger>
             </.tabs_list>
             <.tabs_content
-              :for={{value, code} <- [sqlite: @sqlite, fetch: @fetch, curl: @curl]}
+              :for={{value, code} <- [fetch: @fetch, curl: @curl]}
               value={"#{value}"}
             >
               <pre class="overflow-x-auto rounded-lg border bg-muted p-4 text-sm"><code>{code}</code></pre>
@@ -120,6 +101,30 @@ defmodule CorpusWeb.BuildLive do
             >
               See the examples
             </.link>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="border-t bg-muted/40">
+        <div class="mx-auto max-w-5xl px-6 py-20">
+          <h2 class="font-serif text-3xl font-semibold">Prefer to download it?</h2>
+          <p class="mt-4 max-w-2xl text-lg text-muted-foreground">
+            If you want the whole database offline, or would rather not use the API, each release
+            is a SQLite database and a set of JSON files with the same tables.
+          </p>
+          <ul class="mt-6 space-y-2 text-lg">
+            <li>
+              <a href={@release} class="underline">scripture-db.zip</a> holds the SQLite database.
+            </li>
+            <li>
+              <a href={@release} class="underline">scripture-json.zip</a> holds the same data as JSON.
+            </li>
+          </ul>
+          <pre class="mt-6 overflow-x-auto rounded-lg border bg-muted p-4 text-sm"><code>{@sqlite}</code></pre>
+          <div class="mt-6">
+            <a href={@release} class={button_variant(%{variant: "outline", size: "lg"})}>
+              Get the latest release
+            </a>
           </div>
         </div>
       </section>

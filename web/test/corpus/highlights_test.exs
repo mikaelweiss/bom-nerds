@@ -23,7 +23,8 @@ defmodule Corpus.HighlightsTest do
   insert into edition_book values (1, 900, 2);
   insert into chapter values (900, 1, 900, 40);
   insert into verse values (900, 900, 1);
-  insert into word values (9001, 900, 1, 9001, 'Comfort', '', ' ');
+  insert into word (id, verse_id, position, sequence, text, before, after)
+    values (9001, 900, 1, 9001, 'Comfort', '', ' ');
   insert into passage_link values
     (1, 1, #{Fixture.word(16)}, #{Fixture.word(17)}, 9001, 9001),
     (2, 2, #{Fixture.word(16)}, #{Fixture.word(17)}, 9001, 9001);
@@ -50,7 +51,12 @@ defmodule Corpus.HighlightsTest do
     end
 
     test "leaves out tables the release lacks", %{tmp_dir: tmp_dir} do
-      install(tmp_dir, "drop table if exists summary; drop table if exists word_match;")
+      install(tmp_dir, """
+      drop table if exists summary;
+      drop table if exists word_match;
+      drop table if exists passage_link;
+      drop table if exists link_kind;
+      """)
 
       scholars = Highlights.scholars()
 

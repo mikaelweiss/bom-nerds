@@ -222,6 +222,7 @@ defmodule Corpus.BrowserTest do
 
   defp titles(database, filters) do
     {:ok, page} = Browser.page(database, "entity", filters: filters)
-    Enum.map(page.rows, fn {_rowid, [_id, title, _latitude]} -> title end)
+    title = Enum.find_index(page.columns, &(&1 == "title"))
+    Enum.map(page.rows, fn {_rowid, values} -> Enum.at(values, title) end)
   end
 end

@@ -26,6 +26,7 @@ defmodule CorpusWeb.Router do
     pipe_through :browser
 
     live "/", HomeLive
+    live "/build", BuildLive
     live "/examples", ExamplesLive
     live "/examples/:slug", ExampleLive
   end

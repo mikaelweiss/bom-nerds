@@ -7,6 +7,13 @@ defmodule CorpusWeb.Examples do
 
   use Phoenix.Component
 
+  use Phoenix.VerifiedRoutes,
+    endpoint: CorpusWeb.Endpoint,
+    router: CorpusWeb.Router,
+    statics: CorpusWeb.static_paths()
+
+  import SaladUI.Card
+
   alias Corpus.{Database, Query, Versions}
 
   @callback slug() :: String.t()
@@ -26,6 +33,8 @@ defmodule CorpusWeb.Examples do
 
   def all, do: @examples
 
+  def with_rows, do: for(example <- @examples, do: {example, rows(example)})
+
   def get(slug), do: Enum.find(@examples, &(&1.slug() == slug))
 
   attr :example, :atom, required: true
@@ -33,6 +42,30 @@ defmodule CorpusWeb.Examples do
   attr :preview, :boolean, default: false
 
   def chart(assigns), do: assigns.example.chart(assigns)
+
+  attr :examples, :list, required: true, doc: "`{example, rows}` pairs, as `with_rows/0` returns"
+  attr :class, :string, default: nil
+
+  def card_grid(assigns) do
+    ~H"""
+    <div class={["grid gap-6 sm:grid-cols-2 lg:grid-cols-3", @class]}>
+      <.link
+        :for={{example, rows} <- @examples}
+        navigate={~p"/examples/#{example.slug()}"}
+        class="group rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        <.card class="h-full overflow-hidden transition-shadow group-hover:shadow-md">
+          <div class="aspect-[8/5] overflow-hidden border-b bg-muted/30 p-4">
+            <.chart example={example} rows={rows} preview />
+          </div>
+          <.card_header>
+            <.card_title class="text-lg">{example.title()}</.card_title>
+          </.card_header>
+        </.card>
+      </.link>
+    </div>
+    """
+  end
 
   @doc """
   A chart you can drag to pan and scroll or pinch to zoom, driven by the
@@ -120,7 +153,7 @@ defmodule CorpusWeb.Examples do
     """
   end
 
-  @doc "The example's rows from the latest release, or none when no release is installed."
+  @doc "The example's rows from the latest release, or none when no release is installed or the release lacks what the query reads."
   def rows(example) do
     case Database.get(Versions.latest()) do
       nil ->
@@ -129,8 +162,10 @@ defmodule CorpusWeb.Examples do
       database ->
         {_status, rows} =
           Cachex.fetch(Corpus.Cache, {:example, example}, fn ->
-            {:ok, %{rows: rows}} = Query.run(database, example.sql())
-            {:commit, rows}
+            case Query.run(database, example.sql()) do
+              {:ok, %{rows: rows}} -> {:commit, rows}
+              {:error, _reason} -> {:ignore, []}
+            end
           end)
 
         rows

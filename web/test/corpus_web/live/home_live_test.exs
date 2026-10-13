@@ -4,6 +4,7 @@ defmodule CorpusWeb.HomeLiveTest do
   import Phoenix.LiveViewTest
 
   alias Corpus.Fixture
+  alias CorpusWeb.Examples
 
   @moduletag :tmp_dir
 
@@ -43,6 +44,31 @@ defmodule CorpusWeb.HomeLiveTest do
 
       assert has_element?(view, ~s(#start-reading[href="/read"]), "Start reading")
       assert has_element?(view, ~s(#browse-data[href="/data"]), "Browse the data")
+    end
+
+    test "the six example cards link to their pages", %{conn: conn} do
+      {:ok, view, _html} = live(conn, "/")
+
+      assert length(Examples.all()) == 6
+
+      for example <- Examples.all() do
+        assert has_element?(
+                 view,
+                 ~s(#examples a[href="/examples/#{example.slug()}"]),
+                 example.title()
+               )
+      end
+    end
+
+    test "the example cards come before the hero verse", %{conn: conn} do
+      {:ok, _view, html} = live(conn, "/")
+
+      {examples, _} = :binary.match(html, ~s(id="examples"))
+      {hero, _} = :binary.match(html, ~s(id="hero-verse"))
+      {study, _} = :binary.match(html, ~s(id="study"))
+
+      assert examples < hero
+      assert hero < study
     end
 
     test "the hero verse opens with a word selected", %{conn: conn} do
@@ -123,6 +149,7 @@ defmodule CorpusWeb.HomeLiveTest do
     assert has_element?(view, "h1", "The Scriptures Demystified")
     assert has_element?(view, ~s(#start-reading[href="/read"]))
     assert has_element?(view, ~s(#browse-data[href="/data"]))
+    assert has_element?(view, ~s(#examples a[href^="/examples/"]))
     refute has_element?(view, "#hero-verse")
     refute has_element?(view, "#study")
     refute has_element?(view, "#scholars")

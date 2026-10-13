@@ -6,6 +6,7 @@ defmodule CorpusWeb.HomeLive do
   import CorpusWeb.Scripture, only: [verse_card: 1, reader_path: 1]
 
   alias Corpus.{Highlights, Scripture}
+  alias CorpusWeb.Examples
 
   # John 3:16 shows a speaker, a listener, a setting, and the Greek under every
   # word. The later entries cover releases that lack it.
@@ -31,6 +32,7 @@ defmodule CorpusWeb.HomeLive do
     socket =
       assign(socket,
         page_title: "The Scriptures Demystified",
+        examples: Examples.with_rows(),
         verse: verse,
         findings: Highlights.findings(),
         scholars: Highlights.scholars(),
@@ -70,16 +72,11 @@ defmodule CorpusWeb.HomeLive do
   def render(assigns) do
     ~H"""
     <Layouts.app>
-      <section class="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+      <section class="mx-auto max-w-5xl px-6 pb-8 pt-16 sm:pt-24">
         <h1 class="max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-6xl">
           The Scriptures Demystified
         </h1>
-        <p class="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Click any word or verse to see who is speaking, where it happens, the Hebrew or Greek
-          underneath, and every verse that points to it. It covers the Bible, the Book of Mormon,
-          the Doctrine and Covenants, and the Pearl of Great Price.
-        </p>
-        <div class="mt-10 flex flex-wrap gap-3">
+        <div class="mt-8 flex flex-wrap gap-3">
           <.link id="start-reading" navigate={~p"/read"} class={button_variant(%{size: "lg"})}>
             Start reading
           </.link>
@@ -91,8 +88,19 @@ defmodule CorpusWeb.HomeLive do
             Browse the data
           </.link>
         </div>
+      </section>
 
-        <div :if={@verse} id="hero-verse" class="mt-14 rounded-xl border bg-card p-5 sm:p-8">
+      <section id="examples" class="mx-auto max-w-5xl px-6 py-8">
+        <Examples.card_grid examples={@examples} />
+      </section>
+
+      <section :if={@verse} id="hero" class="mx-auto max-w-5xl px-6 pb-16 pt-8 sm:pb-24">
+        <p class="max-w-2xl text-lg text-muted-foreground">
+          Click any word or verse to see who is speaking, where it happens, the Hebrew or Greek
+          underneath, and every verse that points to it. It covers the Bible, the Book of Mormon,
+          the Doctrine and Covenants, and the Pearl of Great Price.
+        </p>
+        <div id="hero-verse" class="mt-8 rounded-xl border bg-card p-5 sm:p-8">
           <p class="mb-6 text-sm text-muted-foreground">
             Click any word, or the verse number for the whole verse.
           </p>

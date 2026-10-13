@@ -4,9 +4,11 @@ defmodule CorpusWeb.GuideController do
   alias Corpus.Versions
   alias CorpusWeb.CacheControl
 
+  def index(conn, _params), do: redirect(conn, to: "/#{Versions.latest()}")
+
   def show(conn, %{"version" => version}) do
     if Versions.exists?(version) do
-      guide = String.replace(Versions.guide(version), "{{origin}}", CorpusWeb.Endpoint.url())
+      guide = String.replace(Versions.guide(version), "{{origin}}", CorpusWeb.api_url())
 
       conn
       |> CacheControl.cache()

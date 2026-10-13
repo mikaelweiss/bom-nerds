@@ -23,6 +23,8 @@ One open database of the standard works: the Bible, Book of Mormon, Doctrine and
 - **Search the originals:** find every use of a Hebrew or Greek word, whatever the English says.
 - **Build:** power a study app, a game, a chatbot, or a research project.
 
+See [examples](https://standardworkscorpus.org/examples) of what the data can draw.
+
 ## Get it
 
 Download the latest [release](https://github.com/mikaelweiss/standard-works-corpus/releases/latest):

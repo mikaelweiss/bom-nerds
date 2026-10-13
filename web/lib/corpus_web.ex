@@ -3,6 +3,12 @@ defmodule CorpusWeb do
 
   def static_paths, do: ~w(assets)
 
+  @doc "A URL on the API's host, which is the site's host under `api.`."
+  def api_url(path \\ "") do
+    url = CorpusWeb.Endpoint.struct_url()
+    URI.to_string(%{url | host: "api." <> url.host, path: path})
+  end
+
   def router do
     quote do
       use Phoenix.Router, helpers: false

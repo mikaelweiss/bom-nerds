@@ -6,6 +6,6 @@ defmodule CorpusWeb.HomeLiveTest do
   test "links to the latest API guide", %{conn: conn} do
     {:ok, view, _html} = live(conn, "/")
 
-    assert has_element?(view, ~s(a[href="/v2"]), "Read the API guide")
+    assert has_element?(view, ~s(a[href="#{CorpusWeb.api_url("/v2")}"]), "Read the API guide")
   end
 end

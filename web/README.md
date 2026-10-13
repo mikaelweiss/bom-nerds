@@ -1,6 +1,8 @@
 # Standard Works Corpus Web
 
-The project's website and its API, read-only SQL over the latest data release. The home page is `/`. The API guide is [`priv/versions/v1/guide.md`](priv/versions/v1/guide.md), served at `/v1`.
+The project's website and its API, read-only SQL over the latest data release. The site serves its own host and the API serves `api.` under it, so in development the site is `localhost:4000` and the API is `api.localhost:4000`. The API guide is [`priv/versions/v1/guide.md`](priv/versions/v1/guide.md), served at `/v1`.
+
+Each example in `lib/corpus_web/examples` is a query and the SVG chart drawn from its rows.
 
 ## Run
 

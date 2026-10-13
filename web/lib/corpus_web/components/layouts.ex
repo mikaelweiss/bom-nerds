@@ -21,7 +21,13 @@ defmodule CorpusWeb.Layouts do
           Standard Works Corpus
         </.link>
         <div class="flex items-center gap-1">
-          <a href={~p"/#{Corpus.Versions.latest()}"} class={button_variant(%{variant: "ghost"})}>
+          <.link navigate={~p"/examples"} class={button_variant(%{variant: "ghost"})}>
+            Examples
+          </.link>
+          <a
+            href={CorpusWeb.api_url("/#{Corpus.Versions.latest()}")}
+            class={button_variant(%{variant: "ghost"})}
+          >
             API
           </a>
           <a href={repository()} class={button_variant(%{variant: "ghost"})}>GitHub</a>

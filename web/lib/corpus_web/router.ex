@@ -14,17 +14,20 @@ defmodule CorpusWeb.Router do
     plug :allow_any_origin
   end
 
+  scope "/", CorpusWeb, host: "api." do
+    pipe_through :api
+
+    get "/", GuideController, :index
+    get "/:version", GuideController, :show
+    get "/:version/sql", SqlController, :run
+  end
+
   scope "/", CorpusWeb do
     pipe_through :browser
 
     live "/", HomeLive
-  end
-
-  scope "/", CorpusWeb do
-    pipe_through :api
-
-    get "/:version", GuideController, :show
-    get "/:version/sql", SqlController, :run
+    live "/examples", ExamplesLive
+    live "/examples/:slug", ExampleLive
   end
 
   defp allow_any_origin(conn, _opts),

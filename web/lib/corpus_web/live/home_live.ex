@@ -35,8 +35,7 @@ defmodule CorpusWeb.HomeLive do
   ]
 
   def mount(_params, _session, socket) do
-    origin = CorpusWeb.Endpoint.url()
-    guide = "/#{Corpus.Versions.latest()}"
+    guide = CorpusWeb.api_url("/#{Corpus.Versions.latest()}")
 
     {:ok,
      assign(socket,
@@ -47,10 +46,10 @@ defmodule CorpusWeb.HomeLive do
        sqlite: ~s(sqlite3 scripture.db "#{@query}"),
        fetch: """
        const sql = "#{@query}"
-       const response = await fetch("#{origin}#{guide}/sql?q=" + encodeURIComponent(sql))
+       const response = await fetch("#{guide}/sql?q=" + encodeURIComponent(sql))
        const { rows } = await response.json()\
        """,
-       curl: ~s(curl -G #{origin}#{guide}/sql --data-urlencode "q=#{@query}")
+       curl: ~s(curl -G #{guide}/sql --data-urlencode "q=#{@query}")
      )}
   end
 

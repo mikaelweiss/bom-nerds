@@ -3,6 +3,8 @@ defmodule CorpusWeb.ApiTest do
 
   @moduletag :tmp_dir
 
+  setup %{conn: conn}, do: {:ok, conn: %{conn | host: "api.example.com"}}
+
   @slow """
   with recursive n(x) as (select 1 union all select x + 1 from n where x < 1000000000)
   select count(*) from n
@@ -11,10 +13,14 @@ defmodule CorpusWeb.ApiTest do
   describe "with a release installed" do
     setup :serve_fixture
 
+    test "the root redirects to the latest version", %{conn: conn} do
+      assert redirected_to(get(conn, "/")) == "/v2"
+    end
+
     test "a version serves its guide", %{conn: conn} do
       conn = get(conn, "/v1")
 
-      assert response(conn, 200) == "# Test guide\n\nQuery #{CorpusWeb.Endpoint.url()}/v1/sql.\n"
+      assert response(conn, 200) == "# Test guide\n\nQuery #{CorpusWeb.api_url()}/v1/sql.\n"
       assert response_content_type(conn, :markdown)
       assert get_resp_header(conn, "cache-control") == ["public, max-age=300, s-maxage=31536000"]
     end

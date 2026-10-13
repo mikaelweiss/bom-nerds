@@ -50,7 +50,8 @@ defmodule CorpusWeb.SqlController do
 
   defp error(status, message), do: {status, Jason.encode!(%{error: message})}
 
-  defp client(conn) do
+  @doc "The address that rate limits key on: the proxy's client header when set, else the peer."
+  def client(conn) do
     with header when is_binary(header) <- Application.get_env(:corpus, :client_ip_header),
          [ip | _] <- get_req_header(conn, header) do
       ip

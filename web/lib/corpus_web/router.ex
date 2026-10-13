@@ -32,6 +32,12 @@ defmodule CorpusWeb.Router do
     live "/read", ReadLive
     live "/read/:edition/:book/:chapter", ChapterLive
     live "/entities/:id", EntityLive
+
+    live_session :data, session: {CorpusWeb.DataLive, :session, []} do
+      live "/data", DataLive, :table
+      live "/data/:table", DataLive, :table
+      live "/sql", DataLive, :sql
+    end
   end
 
   defp allow_any_origin(conn, _opts),

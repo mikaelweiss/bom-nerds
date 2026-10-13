@@ -22,14 +22,17 @@ defmodule CorpusWeb.ConnCase do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 
-  @doc "Installs the fixture release into the test's data directory and serves it."
-  def serve_fixture(%{tmp_dir: tmp_dir}) do
+  @doc """
+  Installs the fixture release into the test's data directory and serves it.
+  Tag a test or module `:reader` to install the reader's fixture.
+  """
+  def serve_fixture(%{tmp_dir: tmp_dir} = context) do
     previous = Application.fetch_env!(:corpus, :data_dir)
     Application.put_env(:corpus, :data_dir, Path.join(tmp_dir, "data"))
 
     tmp_dir
     |> Path.join("scripture.db")
-    |> Fixture.database!()
+    |> Fixture.database!(reader: Map.get(context, :reader, false))
     |> Fixture.zip!()
     |> then(&Fixture.publish("data-1", &1))
 

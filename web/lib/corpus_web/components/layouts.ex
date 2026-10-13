@@ -21,8 +21,8 @@ defmodule CorpusWeb.Layouts do
           Standard Works Corpus
         </.link>
         <div class="flex flex-wrap items-center gap-1">
-          <.link navigate="/read" class={button_variant(%{variant: "ghost"})}>Read</.link>
-          <.link navigate="/data" class={button_variant(%{variant: "ghost"})}>Data</.link>
+          <.link navigate={~p"/read"} class={button_variant(%{variant: "ghost"})}>Read</.link>
+          <.link navigate={~p"/data"} class={button_variant(%{variant: "ghost"})}>Data</.link>
           <.link navigate={~p"/examples"} class={button_variant(%{variant: "ghost"})}>
             Examples
           </.link>

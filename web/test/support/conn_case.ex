@@ -24,7 +24,8 @@ defmodule CorpusWeb.ConnCase do
 
   @doc """
   Installs the fixture release into the test's data directory and serves it.
-  Tag a test or module `:reader` to install the reader's fixture.
+  Tag a test or module `:reader` to install the reader's fixture, and
+  `fixture_sql: sql` to run `sql` against the fixture before it is published.
   """
   def serve_fixture(%{tmp_dir: tmp_dir} = context) do
     previous = Application.fetch_env!(:corpus, :data_dir)
@@ -33,6 +34,7 @@ defmodule CorpusWeb.ConnCase do
     tmp_dir
     |> Path.join("scripture.db")
     |> Fixture.database!(reader: Map.get(context, :reader, false))
+    |> tap(&execute(&1, context[:fixture_sql]))
     |> Fixture.zip!()
     |> then(&Fixture.publish("data-1", &1))
 
@@ -45,6 +47,14 @@ defmodule CorpusWeb.ConnCase do
     end)
 
     :ok
+  end
+
+  defp execute(_path, nil), do: :ok
+
+  defp execute(path, sql) do
+    {:ok, db} = Exqlite.Sqlite3.open(path)
+    :ok = Exqlite.Sqlite3.execute(db, sql)
+    :ok = Exqlite.Sqlite3.close(db)
   end
 
   def restart_database do

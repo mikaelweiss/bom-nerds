@@ -16,20 +16,17 @@ defmodule CorpusWeb.Layouts do
   def app(assigns) do
     ~H"""
     <header class="border-b">
-      <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <nav class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 py-4">
         <.link navigate={~p"/"} class="font-serif text-lg font-semibold">
           Standard Works Corpus
         </.link>
-        <div class="flex items-center gap-1">
+        <div class="flex flex-wrap items-center gap-1">
+          <.link navigate="/read" class={button_variant(%{variant: "ghost"})}>Read</.link>
+          <.link navigate="/data" class={button_variant(%{variant: "ghost"})}>Data</.link>
           <.link navigate={~p"/examples"} class={button_variant(%{variant: "ghost"})}>
             Examples
           </.link>
-          <a
-            href={CorpusWeb.api_url("/#{Corpus.Versions.latest()}")}
-            class={button_variant(%{variant: "ghost"})}
-          >
-            API
-          </a>
+          <.link navigate={~p"/build"} class={button_variant(%{variant: "ghost"})}>Build</.link>
           <a href={repository()} class={button_variant(%{variant: "ghost"})}>GitHub</a>
         </div>
       </nav>

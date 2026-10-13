@@ -68,7 +68,7 @@ A span's reference comes from its first and last words: `word.verse_id` to `vers
 
 - `headword`: a dictionary entry with `language_id`, `text`, `strongs` (such as "H7225" or "G3056"), and `gloss`. English words have headwords too.
 - `meaning`: a numbered sense of a headword, with `gloss` and `definition`.
-- `word_match`: aligns words. `word_id` is a KJV word and `other_word_id` is the Hebrew, Aramaic, or Greek word it translates, or the matching word where the Book of Mormon, Doctrine and Covenants, or Pearl of Great Price quote the Bible.
+- `word_match`: aligns words. `word_id` is a KJV word and `other_word_id` is the Hebrew, Aramaic, or Greek word it translates, or the matching word where the Book of Mormon, Doctrine and Covenants, or Pearl of Great Price quote the Bible. Today the table holds only the KJV-to-Hebrew and Greek alignment. The rows that match the Book of Mormon, Doctrine and Covenants, and Pearl of Great Price to the Bible are coming soon.
 - `hebrew_word` and `greek_word`: grammar for each original word, keyed by `word_id`. Each grammatical feature points at a small lookup table: `word_type`, `stem`, `verb_form`, `tense`, `voice`, `mood`, `person` (a number), `gender`, `grammatical_number`, `grammatical_case`, `state`, `degree`.
 
 ### People, places, and things
@@ -108,6 +108,8 @@ A span's reference comes from its first and last words: `word.verse_id` to `vers
 ### Study notes
 
 - `summary`: notes on a chapter, book, or `verse_range`, with `text`. `summary_kind` names the kind (Doctrine, Key verses, Symbols, Setting, and more) and `summary_kind_work` lists which kinds each work has.
+
+The table exists, but this release has no rows in it. Study notes are coming soon.
 
 The full table definitions:
 

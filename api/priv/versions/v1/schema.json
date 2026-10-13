@@ -1,0 +1,329 @@
+{
+  "book": [
+    "id",
+    "work_id",
+    "name"
+  ],
+  "chapter": [
+    "id",
+    "edition_id",
+    "book_id",
+    "number"
+  ],
+  "clause": [
+    "id",
+    "sentence_id",
+    "parent_id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "clause_part": [
+    "id",
+    "clause_id",
+    "clause_role_id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "clause_role": [
+    "id",
+    "name"
+  ],
+  "counting_system": [
+    "id",
+    "name",
+    "needs_evidence"
+  ],
+  "date": [
+    "id",
+    "first_word_id",
+    "last_word_id",
+    "entity_id",
+    "relationship_id",
+    "counting_system_id",
+    "from_year",
+    "from_month",
+    "from_day",
+    "to_year",
+    "to_month",
+    "to_day",
+    "evidence_first_word_id",
+    "evidence_last_word_id"
+  ],
+  "degree": [
+    "id",
+    "name"
+  ],
+  "edition": [
+    "id",
+    "work_id",
+    "language_id",
+    "name"
+  ],
+  "edition_book": [
+    "edition_id",
+    "book_id",
+    "work_id",
+    "position"
+  ],
+  "entity": [
+    "id",
+    "entity_type_id",
+    "name",
+    "description",
+    "tipnr",
+    "latitude",
+    "longitude"
+  ],
+  "entity_name": [
+    "entity_id",
+    "name",
+    "is_title"
+  ],
+  "entity_type": [
+    "id",
+    "parent_id",
+    "name"
+  ],
+  "gender": [
+    "id",
+    "name"
+  ],
+  "grammatical_case": [
+    "id",
+    "name"
+  ],
+  "grammatical_number": [
+    "id",
+    "name"
+  ],
+  "greek_word": [
+    "word_id",
+    "word_type_id",
+    "tense_id",
+    "second_form",
+    "voice_id",
+    "mood_id",
+    "person",
+    "grammatical_case_id",
+    "gender_id",
+    "grammatical_number_id",
+    "possessor_number_id",
+    "degree_id",
+    "indeclinable",
+    "crasis",
+    "attic_form",
+    "transliterated_from_id"
+  ],
+  "headword": [
+    "id",
+    "language_id",
+    "text",
+    "strongs",
+    "gloss"
+  ],
+  "hebrew_word": [
+    "word_id",
+    "word_type_id",
+    "stem_id",
+    "verb_form_id",
+    "person",
+    "gender_id",
+    "grammatical_number_id",
+    "state_id"
+  ],
+  "journey": [
+    "id",
+    "traveler_id",
+    "from_id",
+    "to_id",
+    "days",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "language": [
+    "id",
+    "name",
+    "iso_code"
+  ],
+  "link_kind": [
+    "id",
+    "name",
+    "two_way"
+  ],
+  "meaning": [
+    "id",
+    "headword_id",
+    "number",
+    "gloss",
+    "definition"
+  ],
+  "mention": [
+    "id",
+    "entity_id",
+    "mention_kind_id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "mention_kind": [
+    "id",
+    "name"
+  ],
+  "mood": [
+    "id",
+    "name"
+  ],
+  "part_of_speech": [
+    "id",
+    "name"
+  ],
+  "passage_link": [
+    "id",
+    "link_kind_id",
+    "from_first_word_id",
+    "from_last_word_id",
+    "to_first_word_id",
+    "to_last_word_id"
+  ],
+  "relationship": [
+    "id",
+    "subject_id",
+    "relationship_kind_id",
+    "object_id"
+  ],
+  "relationship_evidence": [
+    "relationship_id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "relationship_kind": [
+    "id",
+    "name",
+    "reverse_name",
+    "two_way"
+  ],
+  "sentence": [
+    "id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "setting": [
+    "id",
+    "place_id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "speech": [
+    "id",
+    "through_id",
+    "speech_mode_id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "speech_listener": [
+    "speech_id",
+    "entity_id"
+  ],
+  "speech_mode": [
+    "id",
+    "name"
+  ],
+  "speech_speaker": [
+    "speech_id",
+    "entity_id"
+  ],
+  "state": [
+    "id",
+    "name"
+  ],
+  "stem": [
+    "id",
+    "name"
+  ],
+  "structure": [
+    "id",
+    "structure_kind_id",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "structure_kind": [
+    "id",
+    "name"
+  ],
+  "structure_part": [
+    "id",
+    "structure_id",
+    "parent_id",
+    "position",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "structure_part_pair": [
+    "part_id",
+    "other_part_id"
+  ],
+  "summary": [
+    "id",
+    "summary_kind_id",
+    "chapter_id",
+    "book_id",
+    "verse_range_id",
+    "text"
+  ],
+  "summary_kind": [
+    "id",
+    "name",
+    "description"
+  ],
+  "summary_kind_work": [
+    "summary_kind_id",
+    "work_id"
+  ],
+  "tense": [
+    "id",
+    "name"
+  ],
+  "verb_form": [
+    "id",
+    "name"
+  ],
+  "verse": [
+    "id",
+    "chapter_id",
+    "number"
+  ],
+  "verse_range": [
+    "id",
+    "name",
+    "first_word_id",
+    "last_word_id"
+  ],
+  "voice": [
+    "id",
+    "name"
+  ],
+  "word": [
+    "id",
+    "verse_id",
+    "position",
+    "sequence",
+    "text",
+    "before",
+    "after",
+    "supplied",
+    "headword_id",
+    "part_of_speech_id",
+    "meaning_id"
+  ],
+  "word_match": [
+    "word_id",
+    "other_word_id"
+  ],
+  "word_type": [
+    "id",
+    "name"
+  ],
+  "work": [
+    "id",
+    "name"
+  ]
+}

@@ -1,0 +1,3 @@
+## SQLite runs on dirty IO threads. Keep more of them than database
+## connections, so slow queries never starve other work.
++SDio 128

@@ -30,6 +30,8 @@ Download the latest [release](https://github.com/mikaelweiss/standard-works-corp
 - `scripture-db.zip` is a SQLite database.
 - `scripture-json.zip` is every table as JSON.
 
+Or query the latest release from any website through the [API](https://api.standardworkscorpus.org).
+
 ```sh
 sqlite3 scripture.db "select name, description from entity where name = 'Nephi'"
 ```

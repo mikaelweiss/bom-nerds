@@ -1,0 +1,4 @@
+{
+  "entity": ["id", "name"],
+  "word": ["id", "sequence", "text"]
+}

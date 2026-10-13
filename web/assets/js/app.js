@@ -3,6 +3,7 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import {hooks as colocatedHooks} from "phoenix-colocated/corpus"
 import topbar from "../vendor/topbar"
+import PanZoom from "./hooks/pan_zoom"
 import SaladUI from "salad_ui"
 import "salad_ui/components/dialog"
 import "salad_ui/components/select"
@@ -23,7 +24,7 @@ const csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute
 const liveSocket = new LiveSocket("/live", Socket, {
   longPollFallbackMs: 2500,
   params: {_csrf_token: csrfToken},
-  hooks: {...colocatedHooks, SaladUI: SaladUI.SaladUIHook},
+  hooks: {...colocatedHooks, SaladUI: SaladUI.SaladUIHook, PanZoom},
 })
 
 topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})

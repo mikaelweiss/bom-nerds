@@ -27,6 +27,8 @@ The dataset adapts every source below: it reshapes them into its own tables and 
 
 English headwords, parts of speech, and parses are produced with [spaCy](https://spacy.io) (MIT), [Stanza](https://stanfordnlp.github.io/stanza/) (Apache 2.0), and [MorphAdorner](https://morphadorner.northwestern.edu) (NCSA open source license). Word matches between the KJV and the Hebrew and Greek are extended with [eflomal](https://github.com/robertostling/eflomal) (GPL 3.0).
 
+The website's map of Paul's journeys draws its land and lakes from [Natural Earth](https://www.naturalearthdata.com) 1:10m data, which is public domain. Made with Natural Earth.
+
 The Glyssen character data and the DataWar dictionary cleanup are used under this notice:
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

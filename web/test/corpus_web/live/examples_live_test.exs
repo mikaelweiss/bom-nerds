@@ -13,6 +13,21 @@ defmodule CorpusWeb.ExamplesLiveTest do
     end
   end
 
+  test "the list shows static previews", %{conn: conn} do
+    {:ok, view, _html} = live(conn, "/examples")
+
+    refute has_element?(view, "[phx-hook=PanZoom]")
+  end
+
+  for slug <- ["abrahams-family", "pauls-journeys"] do
+    test "#{slug} pans and zooms", %{conn: conn} do
+      {:ok, view, _html} = live(conn, "/examples/#{unquote(slug)}")
+
+      assert has_element?(view, "[phx-hook=PanZoom][data-view] svg [data-pan-zoom-layer]")
+      assert has_element?(view, "[phx-hook=PanZoom] button[data-zoom=reset]")
+    end
+  end
+
   test "an example links back to the list", %{conn: conn} do
     {:ok, view, _html} = live(conn, "/examples/pauls-journeys")
 

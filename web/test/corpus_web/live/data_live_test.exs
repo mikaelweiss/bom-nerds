@@ -102,6 +102,7 @@ defmodule CorpusWeb.DataLiveTest do
       assert_patch(view, "/sql?q=select+id%2C+title+from+entity+order+by+id")
       assert has_element?(view, "#sql-results th", "title")
       assert has_element?(view, "#sql-results td", "Moses")
+      assert render(view) =~ ~r/\d+ rows in \d+\.\d{3} seconds/
     end
 
     test "a shared query runs when the page opens", %{conn: conn} do

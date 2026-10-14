@@ -156,9 +156,9 @@ defmodule CorpusWeb.DataLive do
     %{database: database, client: client} = socket.assigns
 
     result =
-      case RateLimit.run(client, fn -> :timer.tc(Query, :run, [database, q]) end) do
-        {:ok, {micros, {:ok, result}}} -> {:ok, Map.put(result, :seconds, micros / 1_000_000)}
-        {:ok, {_micros, {_status, message}}} -> {:error, message}
+      case RateLimit.run(client, fn -> :timer.tc(Query, :run, [database, q], :nanosecond) end) do
+        {:ok, {nanos, {:ok, result}}} -> {:ok, Map.put(result, :seconds, nanos / 1_000_000_000)}
+        {:ok, {_nanos, {_status, message}}} -> {:error, message}
         {:deny, message} -> {:error, message}
       end
 
@@ -667,7 +667,7 @@ defmodule CorpusWeb.DataLive do
     ~H"""
     <div class="space-y-2">
       <p class="text-xs text-muted-foreground">
-        {delimit(length(@result.rows))} rows in {:erlang.float_to_binary(@result.seconds, decimals: 3)} seconds{if @result.truncated,
+        {delimit(length(@result.rows))} rows in {:erlang.float_to_binary(@result.seconds, decimals: 8)} seconds{if @result.truncated,
           do: ", cut off at the row limit"}.
         <span :if={length(@result.rows) > @limit}>
           Showing the first {delimit(@limit)}. Add a limit, or use the API for every row.
